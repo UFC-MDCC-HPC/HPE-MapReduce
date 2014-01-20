@@ -1,0 +1,7 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/bin/Debug/br.ufc.mdcc.farm.Work.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/bin/Debug/br.ufc.mdcc.farm.Work.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/obj/Debug/br.ufc.mdcc.farm.Work.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/obj/Debug/br.ufc.mdcc.farm.Work.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Work/br.ufc.mdcc.farm.Work/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb

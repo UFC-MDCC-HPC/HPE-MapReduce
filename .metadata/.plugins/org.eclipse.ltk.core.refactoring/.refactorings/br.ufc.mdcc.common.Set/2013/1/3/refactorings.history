@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;br.ufc.mdcc.common.Set/Iterator.hpe&apos; to &apos;Set.hpe&apos;" description="Rename resource &apos;Iterator.hpe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Iterator.hpe" name="Set.hpe" stamp="1358625515316" updateReferences="true"/>
+</session>

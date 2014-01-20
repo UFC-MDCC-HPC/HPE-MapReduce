@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="312" key="DIALOG_WIDTH"/>
+		<item value="94" key="DIALOG_Y_ORIGIN"/>
+		<item value="517" key="DIALOG_X_ORIGIN"/>
+		<item value="437" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="Set" key="selection"/>
+		<list key="findhistory">
+			<item value="Iterator"/>
+			<item value="Collector"/>
+			<item value="ictio"/>
+			<item value="iction"/>
+			<item value="OMAP"/>
+			<item value="Dictionary"/>
+			<item value="par_data"/>
+			<item value="ParallelData"/>
+		</list>
+		<list key="replacehistory">
+			<item value="Set"/>
+			<item value="Combiner"/>
+			<item value="IteratorDictionary"/>
+			<item value="data"/>
+			<item value="Data"/>
+			<item value="IData"/>
+			<item value="br.ufc.mdcc.common.PartitionStrategy"/>
+			<item value="br.ufc.mdcc.common.Platform"/>
+		</list>
+	</section>
+</section>

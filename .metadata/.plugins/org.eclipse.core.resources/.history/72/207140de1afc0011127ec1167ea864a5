@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003d2c821c1ef6125890787b2544a3d89c876fd09c034ff0f07c985bf90ba636549d839aef33a87c613b5b18ef10ed73ce67c8da29b116d62e8029ce2f9d3e7103eb99d8373b888da7c5e3e996721c73056ea837869eb54ff3537ea3c1ae66aedfbbeaff07ebed5c2f4b9cfc36d83744809bcf0c20377ce8fbe35cfa07c8776e9e" isAbstract="true" kind="Synchronizer" name="Partitioner" packagePath="br.ufc.mdcc.mapreduce">
+    <baseType>
+      <extensionType>
+        <extends>true</extends>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bab4cc083bb0b22df71ee0fed5b32475f9bd4499e73612417f425eb0acf69eb295cb92d5a9fdb63917d61817dc4d57415df5cdbc2b6ec3bd25d347d038ba9f03bec361e9436b271c818fe4030ce3eb37e4e23912c83bfd7f35145b30bcfbaf21a6f8e185481d082e68124e92bec2a41f490d93bbcc5cdce49952e3e023e49af" localRef="base" location="br.ufc.mdcc.farm.Gather/Gather.hpe" name="Gather" package="br.ufc.mdcc.farm" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="287" y="278">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="input_type" varName="I"/>
+        <parameter formFieldId="output_type" varName="O"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="49" w="235" x="171" y="148">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="42" w="228" x="313" y="364">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="true" uRef="source">
+          <visualDescription h="20" w="20" x="9" y="21"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="target">
+          <visualDescription h="20" w="20" x="70" y="19"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="data_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="data_key_type" exposed="false">
+      <visualDescription h="60" w="153" x="48" y="255">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="data_value_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="data_value_type" exposed="false">
+      <visualDescription h="60" w="130" x="109" y="334">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="partition_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="partition_key_type" exposed="false">
+      <visualDescription h="60" w="209" x="162" y="486">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="partition_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="true" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="partition_function" exposed="false">
+      <visualDescription h="60" w="147" x="226" y="461">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key" varName="OMK"/>
+      <parameter formFieldId="output_partition_key" varName="OPK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="3" y="210">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="38" w="111" x="35" y="435">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="partition_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000c1928eedef626dc43811424482a90a6479ef3a5aa84c92d24ec11c7fbe7c21b31abbf383a58d9d9cd244ad83a3d3ae813f560a4312369c53d93b4dfe0b4eae201933a27cabd3543e84805c0184a4521f0b3f27fce887266c23bb506adaf871d533ef3935a621d154bb2896627a67b308131c96f42e1ec80b64c692bc48a9549b" localRef="feed_partition" location="br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning/FeedPartitioning.hpe" multiple="true" name="FeedPartitioning" package="br.ufc.mdcc.mapreduce.partitioner" exposed="false">
+      <visualDescription h="66" w="128" x="52" y="34">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="partition_key_type" varName="OPK"/>
+      <parameter formFieldId="data_key_type" varName="OMK"/>
+      <parameter formFieldId="data_value_type" varName="OMV"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000553ead412eab368dbe39aded26981989567570f0aae5946d98569627b45cbd46ac8df0cb15c83706866c59e7cc063234b7d9bb2f46d39e1d9d6b5d0f75708859163bfa8c2953add7533e6a6f6a676f237a10a8173f42e252339a7e64891b90370805c3817c0a5e4e6265541c1fe7bd2c2becc14b8a6b45340cabb485d41b38e4" localRef="data" location="br.ufc.mdcc.common.IteratorDictionary/IteratorDictionary.hpe" multiple="false" name="IteratorDictionary" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="44" w="100" x="195" y="141">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="OMV"/>
+        <parameter formFieldId="key_type" varName="OMK"/>
+        <unitBounds parallel="false" uRef="iterator_dictionary">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000553ead412eab368dbe39aded26981989567570f0aae5946d98569627b45cbd46ac8df0cb15c83706866c59e7cc063234b7d9bb2f46d39e1d9d6b5d0f75708859163bfa8c2953add7533e6a6f6a676f237a10a8173f42e252339a7e64891b90370805c3817c0a5e4e6265541c1fe7bd2c2becc14b8a6b45340cabb485d41b38e4" localRef="partition_info" location="br.ufc.mdcc.common.IteratorDictionary/IteratorDictionary.hpe" multiple="false" name="IteratorDictionary" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="37" w="239" x="278" y="53">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="OPK"/>
+        <parameter formFieldId="key_type" varName="OMK"/>
+        <unitBounds parallel="false" uRef="iterator_dictionary">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="data_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="34" w="102" x="0" y="291">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="partition_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="148" x="14" y="458">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="feed_partitioning">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000553ead412eab368dbe39aded26981989567570f0aae5946d98569627b45cbd46ac8df0cb15c83706866c59e7cc063234b7d9bb2f46d39e1d9d6b5d0f75708859163bfa8c2953add7533e6a6f6a676f237a10a8173f42e252339a7e64891b90370805c3817c0a5e4e6265541c1fe7bd2c2becc14b8a6b45340cabb485d41b38e4" localRef="input" location="br.ufc.mdcc.common.IteratorDictionary/IteratorDictionary.hpe" multiple="false" name="IteratorDictionary" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="379" y="130">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="OMV"/>
+      <parameter formFieldId="key_type" varName="OMK"/>
+      <unitBounds parallel="false" uRef="iterator_dictionary">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000553ead412eab368dbe39aded26981989567570f0aae5946d98569627b45cbd46ac8df0cb15c83706866c59e7cc063234b7d9bb2f46d39e1d9d6b5d0f75708859163bfa8c2953add7533e6a6f6a676f237a10a8173f42e252339a7e64891b90370805c3817c0a5e4e6265541c1fe7bd2c2becc14b8a6b45340cabb485d41b38e4" localRef="output" location="br.ufc.mdcc.common.IteratorDictionary/IteratorDictionary.hpe" multiple="false" name="IteratorDictionary" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="408" y="360">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="OPK"/>
+      <parameter formFieldId="key_type" varName="OMK"/>
+      <unitBounds parallel="false" uRef="iterator_dictionary">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cf4565ee1b5d9003fca7eef036509a88351a6fa76ec935b70896579c1877d84814b3c9943958534a1a449c7d9611f9a2a56715af8ce8ce84c4aadced539483f213769237e0ba4d1b284de65c4d6cd5e3bbbb6adbd1469b380e31816dbb4cc8e7c08ed99b580cf9b4bebfe260915027ea4f2fb07d8b20290b4b76d448a438e697" localRef="gather_partition_info" location="br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo/GatherPartitionInfo.hpe" multiple="false" name="GatherPartitionInfo" package="br.ufc.mdcc.mapreduce.partitioner" exposed="false">
+      <visualDescription h="60" w="100" x="302" y="194">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="partition_key_type" varName="OPK"/>
+      <parameter formFieldId="data_key_type" varName="OMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="248" x="265" y="68">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="40" w="234" x="242" y="411">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="false" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="output" varName="O"/>
+    <supplyParameter cRef="input" varName="I"/>
+    <parameter componentRef="data_key_type" formFieldId="data_key_type" varName="OMK"/>
+    <parameter componentRef="data_value_type" formFieldId="data_value_type" varName="OMV"/>
+    <parameter componentRef="partition_key_type" formFieldId="partition_key_type" varName="OPK"/>
+    <parameter componentRef="partition_function" formFieldId="partition_function" varName="P"/>
+    <innerRenaming cNewName="input_data" cOldName="data" cRef="feed_partition"/>
+    <innerRenaming cNewName="data_key" cOldName="input_key" cRef="partition_function"/>
+    <innerRenaming cNewName="output_partition_info_target" cOldName="target_data" cRef="base"/>
+    <innerRenaming cNewName="input_data" cOldName="source_data" cRef="base"/>
+    <innerRenaming cNewName="partition_key" cOldName="output_key" cRef="partition_function"/>
+    <innerRenaming cNewName="output_partition_info_source" cOldName="partition_info" cRef="feed_partition"/>
+    <innerRenaming cNewName="output_partition_info_target" cOldName="target_data" cRef="gather_partition_info"/>
+    <innerRenaming cNewName="output_partition_info_source" cOldName="source_data" cRef="gather_partition_info"/>
+    <fusion>
+      <cRefs>feed_partition</cRefs>
+      <cRefs>partition_function</cRefs>
+      <pRef>partition_key</pRef>
+    </fusion>
+    <fusion>
+      <cRefs>base</cRefs>
+      <cRefs>feed_partition</cRefs>
+      <pRef>input_data</pRef>
+    </fusion>
+    <fusion>
+      <cRefs>feed_partition</cRefs>
+      <cRefs>gather_partition_info</cRefs>
+      <pRef>output_partition_info_source</pRef>
+    </fusion>
+    <fusion>
+      <cRefs>feed_partition</cRefs>
+      <cRefs>partition_function</cRefs>
+      <pRef>data_key</pRef>
+    </fusion>
+    <interface iRef="ISourcePartition" nArgs="4">
+      <slice isRef="feed_partition">
+        <originRef cRef="feed_partition" iRef="IFeedPartitioning"/>
+        <visualDescription h="10" w="10" x="13" y="7"/>
+      </slice>
+      <slice isRef="partition_function">
+        <originRef cRef="partition_function" iRef="IPartitionFunction"/>
+        <visualDescription h="10" w="10" x="50" y="26"/>
+      </slice>
+      <slice isRef="gather_partition_info">
+        <originRef cRef="gather_partition_info" iRef="ISourceGatherPartitionInfo"/>
+        <visualDescription h="10" w="10" x="61" y="9"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0"/>
+      <visualDescription h="40" w="80" x="134" y="105">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <port name="partition_info">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="partition_info" sRef="feed_partition"/>
+      </port>
+      <port name="data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="data" sRef="feed_partition"/>
+      </port>
+      <port name="partition_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="partition_key" sRef="feed_partition"/>
+      </port>
+      <port name="data_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="data_key" sRef="feed_partition"/>
+      </port>
+      <port name="input_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_key" sRef="partition_function"/>
+      </port>
+      <port name="output_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_key" sRef="partition_function"/>
+      </port>
+      <parameter iname="IData" order="0" parid="data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IData" order="1" parid="partition_key_type" uname="data" varid="OPK"/>
+      <parameter iname="IData" order="2" parid="data_value_type" uname="data" varid="OMV"/>
+      <parameter iname="IPartitionFunction" order="3" parid="partition_function" uname="partition_function" varid="P"/>
+    </interface>
+    <interface iRef="ITargetPartition" nArgs="0">
+      <slice isRef="gather_partition_info">
+        <originRef cRef="gather_partition_info" iRef="ITargetGatherPartitionInfo"/>
+        <visualDescription h="10" w="10" x="66" y="13"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0"/>
+      <visualDescription h="40" w="80" x="476" y="179">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+    </interface>
+    <unit iRef="ISourcePartition" multiple="true" private="false" replica="0" uRef="source" visibleInterface="true">
+      <super cRef="base" uRef="source"/>
+      <slices cRef="input_data" replica="0" uRef="data" sliceName="source_data" transitive="false">
+        <visualDescription h="10" w="10" x="9" y="22"/>
+      </slices>
+      <slices cRef="data_key" replica="0" uRef="data" sliceName="data_key" transitive="true">
+        <visualDescription h="10" w="10" x="7" y="10"/>
+      </slices>
+      <slices cRef="partition_key" replica="0" uRef="data" sliceName="partition_key" transitive="true">
+        <visualDescription h="10" w="10" x="20" y="21"/>
+      </slices>
+      <slices cRef="input_data" replica="0" uRef="iterator_dictionary" sliceName="data" transitive="true">
+        <visualDescription h="10" w="10" x="42" y="3"/>
+      </slices>
+      <slices cRef="output_partition_info_source" replica="0" uRef="iterator_dictionary" sliceName="partition_info" transitive="true">
+        <visualDescription h="10" w="10" x="109" y="25"/>
+      </slices>
+      <slices cRef="data_key" replica="0" uRef="data" sliceName="input_key" transitive="true">
+        <visualDescription h="10" w="10" x="12" y="6"/>
+      </slices>
+      <slices cRef="partition_key" replica="0" uRef="data" sliceName="output_key" transitive="true">
+        <visualDescription h="10" w="10" x="147" y="28"/>
+      </slices>
+      <slices cRef="output_partition_info_source" replica="0" uRef="data" sliceName="source_data" transitive="true">
+        <visualDescription h="10" w="10" x="9" y="22"/>
+      </slices>
+      <slices cRef="feed_partition" replica="0" uRef="feed_partitioning" sliceName="feed_partition" transitive="false">
+        <visualDescription h="10" w="10" x="13" y="7"/>
+        <port>data_key</port>
+        <port>partition_key</port>
+        <port>data</port>
+        <port>partition_info</port>
+      </slices>
+      <slices cRef="partition_function" replica="0" uRef="partition_function" sliceName="partition_function" transitive="false">
+        <visualDescription h="10" w="10" x="50" y="26"/>
+        <port>input_key</port>
+        <port>output_key</port>
+      </slices>
+      <slices cRef="gather_partition_info" replica="0" uRef="source" sliceName="gather_partition_info" transitive="false">
+        <visualDescription h="10" w="10" x="61" y="9"/>
+        <port>source_data</port>
+      </slices>
+      <visualDescription h="40" w="80" x="145" y="215"/>
+    </unit>
+    <unit iRef="ITargetPartition" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
+      <super cRef="base" uRef="target"/>
+      <slices cRef="output_partition_info_target" replica="0" uRef="data" sliceName="target_data" transitive="false">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
+      <slices cRef="output_partition_info_target" replica="0" uRef="data" sliceName="target_data" transitive="true">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
+      <slices cRef="gather_partition_info" replica="0" uRef="target" sliceName="gather_partition_info" transitive="false">
+        <visualDescription h="10" w="10" x="66" y="13"/>
+        <port>target_data</port>
+      </slices>
+      <visualDescription h="40" w="80" x="463" y="296"/>
+    </unit>
+  </componentInfo>
+</component:component>

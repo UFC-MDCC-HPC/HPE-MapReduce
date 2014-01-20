@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/heron/hpe/heron/cache" default="all" name="Shuffler">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="Shuffler-1.0.0.0">
+    <ifnot targetexists="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0">
+      <mkdir dir="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/BaseISourceShuffler.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/BaseISourceShuffler.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/BaseIScatterSource.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/ISourceShuffler.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/ISourceShuffler.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/BaseISourceShuffler.dll"/>
+        <include name="br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterSource.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/BaseITargetShuffler.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/BaseITargetShuffler.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/BaseIScatterTarget.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/ITargetShuffler.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/ITargetShuffler.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/BaseITargetShuffler.dll"/>
+        <include name="br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterTarget.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="Shuffler-1.0.0.0" name="all"/>
+</project>

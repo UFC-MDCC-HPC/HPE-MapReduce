@@ -1,0 +1,5 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/br.ufc.mdcc.common.Platform.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/br.ufc.mdcc.common.Platform.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/obj/Debug/br.ufc.mdcc.common.Platform.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/obj/Debug/br.ufc.mdcc.common.Platform.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/DGAC.dll

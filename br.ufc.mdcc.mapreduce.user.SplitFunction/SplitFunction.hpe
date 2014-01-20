@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007931dc9275a2f81d350920c3d07f09350893cc79f24924a02452fce0ea251e36e79b7de37606055b0e2e925c1391848635f7ed158b01dcf53e0ce6a742eb48facfe9c046e97fdacf1fa3601e77f7726984494fbc09011093d6e6fcd47affdcbf92c7fd66fbee6e86a832d71ea710e03ee31e8e7dcba49e884348159ee5ec89ac" isAbstract="true" kind="Computation" name="SplitFunction" packagePath="br.ufc.mdcc.mapreduce.user">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="input_type" exposed="true">
+      <visualDescription h="60" w="100" x="133" y="427">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000db223b24fbafbaf33330864ecc1c104f1a0c0503435b9fe7eb5d4354edada8b168b77818e60fc7200b68a5a5f03dbc0060f10f7ca202c8df0f230183377c1cda65c4f87adceeccaa866ce5f7250c0d2bf3463497eab0be3e55fbf3f990d5d6893dd5e24c6c497f8d7455d616e405fcadcf0f52760a6cf2b0e171143c0f7185ab" localRef="output_data" location="br.ufc.mdcc.common.Set/Set.hpe" multiple="false" name="Set" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="169" x="323" y="434">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="T"/>
+      <unitBounds parallel="false" uRef="set">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="bin_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="bin_type" exposed="false">
+      <visualDescription h="60" w="100" x="412" y="258">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <parameter componentRef="input_data" formFieldId="input_type" varName="I"/>
+    <parameter componentRef="bin_type" formFieldId="bin_type" varName="T"/>
+    <interface iRef="ISplitFunction" nArgs="2">
+      <slice isRef="input_data">
+        <originRef cRef="input_data" iRef="IData"/>
+        <visualDescription h="10" w="10" x="9" y="19"/>
+      </slice>
+      <slice isRef="output_data">
+        <originRef cRef="output_data" iRef="ISet"/>
+        <visualDescription h="10" w="10" x="133" y="24"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Set;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.user.SplitFunction { &#xA;&#xA;public interface BaseISplitFunction&lt;I, T> : IComputationKind &#xA;where I:IData&#xA;where T:IData&#xA;{&#xA;&#xA;&#x9;I Input_data {get;}&#xA;&#x9;ISet&lt;T> Output_data {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISplitFunction.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/BaseISplitFunction.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Set/bin/1.0.0.0/ISet.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.user.SplitFunction { &#xA;&#xA;public interface ISplitFunction&lt;I, T> : BaseISplitFunction&lt;I, T>&#xA;where I:IData&#xA;where T:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ISplitFunction.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/BaseISplitFunction.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="151" x="149" y="200">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="input_data"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="output_data"/>
+      </port>
+      <parameter iname="IData" order="0" parid="input_type" uname="data" varid="I"/>
+      <parameter iname="IData" order="1" parid="bin_type" uname="data" varid="T"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ISplitFunction" multiple="false" private="false" replica="0" uRef="split_function" visibleInterface="true">
+      <slices cRef="input_data" replica="0" uRef="data" sliceName="input_data" transitive="false">
+        <visualDescription h="10" w="10" x="9" y="19"/>
+      </slices>
+      <slices cRef="output_data" replica="0" uRef="set" sliceName="output_data" transitive="false">
+        <visualDescription h="10" w="10" x="133" y="24"/>
+      </slices>
+      <visualDescription h="40" w="151" x="149" y="280"/>
+    </unit>
+  </componentInfo>
+</component:component>

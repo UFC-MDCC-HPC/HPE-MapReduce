@@ -1,0 +1,17 @@
+using br.ufc.pargo.hpe.kinds;
+using br.ufc.mdcc.ParallelData;
+using br.ufc.mdcc.PartitionStrategy;
+
+namespace br.ufc.mdcc.Work { 
+
+public interface IWork<I, Pi, O, Po> : BaseIWork<I, Pi, O, Po>
+where I:IParData<Pi>
+where Pi:IPartition
+where O:IParData<Po>
+where Po:IPartition
+{
+
+
+} // end main interface 
+
+} // end namespace 

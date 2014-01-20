@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;br.ufc.mdcc.mapreduce.Reducer/Reduce.hpe&apos; to &apos;Reducer.hpe&apos;" description="Rename resource &apos;Reduce.hpe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Reduce.hpe" name="Reducer.hpe" stamp="1347379687162" updateReferences="true"/>
+</session>

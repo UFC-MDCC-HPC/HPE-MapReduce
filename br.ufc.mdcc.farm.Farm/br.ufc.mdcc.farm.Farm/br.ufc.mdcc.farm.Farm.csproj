@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1CADCC4-1603-426B-B1A5-B60F310897C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.farm.Farm</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.farm.Farm</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Farm.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIManager.cs">
+      <Link>BaseIManager.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\BaseIWorker.cs">
+      <Link>BaseIWorker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\IManager.cs">
+      <Link>IManager.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\IWorker.cs">
+      <Link>IWorker.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Gather\br.ufc.mdcc.farm.Gather\br.ufc.mdcc.farm.Gather.csproj">
+      <Project>{9DA059EA-4AA4-405C-99FF-0885C76C4F13}</Project>
+      <Name>br.ufc.mdcc.farm.Gather</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Scatter\br.ufc.mdcc.farm.Scatter\br.ufc.mdcc.farm.Scatter.csproj">
+      <Project>{2AE129B3-F4A5-4FD3-8993-E509EA33B483}</Project>
+      <Name>br.ufc.mdcc.farm.Scatter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Work\br.ufc.mdcc.farm.Work\br.ufc.mdcc.farm.Work.csproj">
+      <Project>{C95BA7E0-8C6A-460F-99AB-288939D2E2F8}</Project>
+      <Name>br.ufc.mdcc.farm.Work</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform.csproj">
+      <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
+      <Name>br.ufc.mdcc.common.Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BF252CF-4C94-4C0C-ACEA-BB10000BCFEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.Shuffler</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.Shuffler</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\Shuffler.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseISourceShuffler.cs">
+      <Link>BaseISourceShuffler.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\BaseITargetShuffler.cs">
+      <Link>BaseITargetShuffler.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\ISourceShuffler.cs">
+      <Link>ISourceShuffler.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\ITargetShuffler.cs">
+      <Link>ITargetShuffler.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Scatter\br.ufc.mdcc.farm.Scatter\br.ufc.mdcc.farm.Scatter.csproj">
+      <Project>{2AE129B3-F4A5-4FD3-8993-E509EA33B483}</Project>
+      <Name>br.ufc.mdcc.farm.Scatter</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

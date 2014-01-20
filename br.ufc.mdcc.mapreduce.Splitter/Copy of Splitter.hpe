@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000004dc5df375927e5aa478c47bab623e97b9c1a39e69d1b982be324d28743f74b12e0f125379a8ebda608806a0d8e9f0f9e2b4552b84d202e9aecd4972d70eb595a06b52c42b57b10f5fd440cb8363ff00deb88fec0aa60aebd62f51bda4984a5403cb551701ed4c7ea24766162648d0adcb617bc6ae4742b9c28f1df45c87cbd94" isAbstract="true" kind="Synchronizer" name="Splitter" packagePath="br.ufc.mdcc.mapreduce">
+    <baseType>
+      <extensionType>
+        <extends>true</extends>
+      </extensionType>
+      <component hash_component_UID="002400000480000094000000060200000024000052534131000400001100000055294a0c7f1fff13882dae495773a18378690f70c8084ef010c42895ec25ab4bb8eeeb18a6603d09c31b0f828c5f3689ac55c7b2ee809d0528009af42a91cec01d3c8e716faf7e6405a10dd06e0c4a78ce0206f736e493166f2c4fdcb66ac58d4c52f0af406ea34824d04b1d57573a03a6801453dc56aacd5efbfca4287e3382" localRef="base" location="br.ufc.mdcc.farm.Scatter/Scatter.hpe" name="Scatter" package="br.ufc.mdcc.farm" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="227" y="245">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="input_type" varName="I"/>
+        <parameter formFieldId="output_type" varName="O"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="59" w="126" x="509" y="488">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="40" y="54"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="57" y="53">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="41" y="53"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="source">
+          <visualDescription h="20" w="20" x="6" y="19"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="target">
+          <visualDescription h="20" w="20" x="70" y="19"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007931dc9275a2f81d350920c3d07f09350893cc79f24924a02452fce0ea251e36e79b7de37606055b0e2e925c1391848635f7ed158b01dcf53e0ce6a742eb48facfe9c046e97fdacf1fa3601e77f7726984494fbc09011093d6e6fcd47affdcbf92c7fd66fbee6e86a832d71ea710e03ee31e8e7dcba49e884348159ee5ec89ac" localRef="split_function" location="br.ufc.mdcc.mapreduce.user.SplitFunction/SplitFunction.hpe" multiple="false" name="SplitFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="split_function" exposed="false">
+      <visualDescription h="60" w="169" x="0" y="181">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="output_value_type" varName="IMV"/>
+      <parameter formFieldId="input_type" varName="I"/>
+      <parameter formFieldId="output_key_type" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="57" y="53">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000553ead412eab368dbe39aded26981989567570f0aae5946d98569627b45cbd46ac8df0cb15c83706866c59e7cc063234b7d9bb2f46d39e1d9d6b5d0f75708859163bfa8c2953add7533e6a6f6a676f237a10a8173f42e252339a7e64891b90370805c3817c0a5e4e6265541c1fe7bd2c2becc14b8a6b45340cabb485d41b38e4" localRef="output_data" location="br.ufc.mdcc.common.IteratorDictionary/IteratorDictionary.hpe" multiple="false" name="IteratorDictionary" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="120" x="44" y="359">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="IMV"/>
+        <parameter formFieldId="key_type" varName="IMK"/>
+        <unitBounds parallel="false" uRef="iterator_dictionary">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="split_function">
+        <visualDescription h="20" w="20" x="133" y="20"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="input_type" exposed="false">
+      <visualDescription h="60" w="100" x="65" y="227">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000553ead412eab368dbe39aded26981989567570f0aae5946d98569627b45cbd46ac8df0cb15c83706866c59e7cc063234b7d9bb2f46d39e1d9d6b5d0f75708859163bfa8c2953add7533e6a6f6a676f237a10a8173f42e252339a7e64891b90370805c3817c0a5e4e6265541c1fe7bd2c2becc14b8a6b45340cabb485d41b38e4" localRef="output" location="br.ufc.mdcc.common.IteratorDictionary/IteratorDictionary.hpe" multiple="false" name="IteratorDictionary" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="80" y="218">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="IMV"/>
+      <parameter formFieldId="key_type" varName="IMK"/>
+      <unitBounds parallel="false" uRef="iterator_dictionary">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value_item_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="output_value_item_type" exposed="false">
+      <visualDescription h="60" w="100" x="369" y="322">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_key_item_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="output_key_item_type" exposed="false">
+      <visualDescription h="60" w="100" x="364" y="213">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000533be815ec115a2299b6d8fc41b733d6299a1323839737592e531ff6877c6e0b3eb0d1acf68934bb49568a0af7092ae3a2333d41cfc601bd1d13c2e9d3005465b2fe9e554a8c7ab0930b879f9ac1c2cf406a2be06d4b4b24ed94cc5fccd80ac77342e8a5cee2e2ba9a8b11f76ff77d4a311fd04fde2fe76180efc1ea8487b686" localRef="scatter_split_data" location="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe" multiple="false" name="ScatterSplitData" package="br.ufc.mdcc.mapreduce.splitter" exposed="false">
+      <visualDescription h="60" w="173" x="202" y="420">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_value_type" varName="IMV"/>
+      <parameter formFieldId="type ?" varName="T"/>
+      <parameter formFieldId="type ?" varName="T"/>
+      <parameter formFieldId="item_key_type" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="59" w="126" x="509" y="488">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="40" y="54"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="120" x="44" y="359">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="41" y="53"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="source">
+        <visualDescription h="20" w="20" x="65" y="4"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="target">
+        <visualDescription h="20" w="20" x="103" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="output" varName="O"/>
+    <parameter componentRef="split_function" formFieldId="split_function" varName="Sf"/>
+    <parameter componentRef="input_data_type" formFieldId="input_type" varName="I"/>
+    <parameter componentRef="output_value_item_type" formFieldId="output_value_item_type" varName="IMV"/>
+    <parameter componentRef="output_key_item_type" formFieldId="output_key_item_type" varName="IMK"/>
+    <innerRenaming cNewName="split_data" cOldName="output_data" cRef="split_function"/>
+    <innerRenaming cNewName="split_data" cOldName="source_data" cRef="scatter_split_data"/>
+    <innerRenaming cNewName="source_data" cOldName="input_data" cRef="split_function"/>
+    <fusion>
+      <cRefs>base</cRefs>
+      <cRefs>split_function</cRefs>
+      <pRef>source_data</pRef>
+    </fusion>
+    <fusion>
+      <cRefs>split_function</cRefs>
+      <cRefs>scatter_split_data</cRefs>
+      <pRef>split_data</pRef>
+    </fusion>
+    <fusion>
+      <cRefs>base</cRefs>
+      <cRefs>scatter_split_data</cRefs>
+      <pRef>target_data</pRef>
+    </fusion>
+    <interface iRef="ISourceSplitter" nArgs="4">
+      <slice isRef="split_function">
+        <originRef cRef="split_function" iRef="ISplitFunction"/>
+        <visualDescription h="10" w="10" x="19" y="23"/>
+      </slice>
+      <slice isRef="scatter_split_data">
+        <originRef cRef="scatter_split_data" iRef="ISourceScatterSplitData"/>
+        <visualDescription h="10" w="10" x="52" y="24"/>
+      </slice>
+      <visualDescription h="40" w="80" x="287" y="68">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="source_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="split_function"/>
+      </port>
+      <port name="split_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="split_function"/>
+      </port>
+      <parameter iname="IData" order="0" parid="input_type" uname="data" varid="I"/>
+      <parameter iname="ISplitFunction" order="1" parid="split_function" uname="split_function" varid="Sf"/>
+      <parameter iname="IData" order="2" parid="output_key_item_type" uname="data" varid="IMK"/>
+      <parameter iname="IData" order="3" parid="output_value_item_type" uname="data" varid="IMV"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ITargetSplitter" nArgs="0">
+      <slice isRef="scatter_split_data">
+        <originRef cRef="scatter_split_data" iRef="ITargetScatterSplitData"/>
+        <visualDescription h="10" w="10" x="44" y="17"/>
+      </slice>
+      <visualDescription h="40" w="80" x="453" y="104">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ISourceSplitter" multiple="false" private="false" replica="0" uRef="source" visibleInterface="true">
+      <super cRef="base" uRef="source"/>
+      <slices cRef="source_data" replica="0" uRef="data" sliceName="source_data" transitive="false">
+        <visualDescription h="10" w="10" x="43" y="4"/>
+      </slices>
+      <slices cRef="split_data" replica="0" uRef="iterator_dictionary" sliceName="split_data" transitive="true">
+        <visualDescription h="10" w="10" x="133" y="24"/>
+      </slices>
+      <slices cRef="split_function" replica="0" uRef="split_function" sliceName="split_function" transitive="false">
+        <visualDescription h="10" w="10" x="19" y="23"/>
+        <port>source_data</port>
+        <port>split_data</port>
+      </slices>
+      <slices cRef="scatter_split_data" replica="0" uRef="source" sliceName="scatter_split_data" transitive="false">
+        <visualDescription h="10" w="10" x="52" y="24"/>
+        <port>split_data</port>
+      </slices>
+      <visualDescription h="40" w="80" x="286" y="134"/>
+    </unit>
+    <unit iRef="ITargetSplitter" multiple="true" private="false" replica="0" uRef="target" visibleInterface="true">
+      <super cRef="base" uRef="target"/>
+      <slices cRef="target_data" replica="0" uRef="data" sliceName="target_data" transitive="false">
+        <visualDescription h="10" w="10" x="6" y="8"/>
+      </slices>
+      <slices cRef="scatter_split_data" replica="0" uRef="target" sliceName="scatter_split_data" transitive="false">
+        <visualDescription h="10" w="10" x="44" y="17"/>
+        <port>target_data</port>
+      </slices>
+      <visualDescription h="40" w="80" x="421" y="203"/>
+    </unit>
+  </componentInfo>
+</component:component>

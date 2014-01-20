@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;br.ufc.mdcc.mapreduce.MapReduce/Copy of Copy (3) of MapReduce.hpe&apos; to &apos;MapReduce.hpe&apos;" description="Rename resource &apos;Copy of Copy (3) of MapReduce.hpe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Copy of Copy (3) of MapReduce.hpe" name="MapReduce.hpe" stamp="1355277355924" updateReferences="true"/>
+</session>
