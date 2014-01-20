@@ -1,0 +1,4 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/MapReduce-for-HPE/MapReduce-for-HPE/bin/Debug/MapReduce-for-HPE.exe.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/MapReduce-for-HPE/MapReduce-for-HPE/bin/Debug/MapReduce-for-HPE.exe
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/MapReduce-for-HPE/MapReduce-for-HPE/obj/x86/Debug/MapReduce-for-HPE.exe
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/MapReduce-for-HPE/MapReduce-for-HPE/obj/x86/Debug/MapReduce-for-HPE.exe.mdb
