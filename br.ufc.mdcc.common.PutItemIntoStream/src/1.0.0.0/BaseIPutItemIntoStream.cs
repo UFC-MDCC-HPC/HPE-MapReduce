@@ -11,7 +11,7 @@ where T:IData
 {
 
 	T Item_type {get;}
-	IInterator<T> Stream {get;}
+	IIterator<T> Stream {get;}
 
 
 } // end main interface 

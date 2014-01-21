@@ -12,7 +12,7 @@ where OMV:IData
 where ORV:IData
 {
 
-	IInterator<OMV> Input_values {get;}
+	IIterator<OMV> Input_values {get;}
 	ORV Output_value {get;}
 	OMK Input_key {get;}
 

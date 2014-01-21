@@ -1,6 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.Reducer/src/1.0.0.0/BaseIReducer.cs">
+    <Files>
+      <File FileName="../br.ufc.mdcc.mapreduce.Reducer/src/1.0.0.0/BaseIReducer.cs" Line="12" Column="18" />
+      <File FileName="../br.ufc.mdcc.farm.Work/src/1.0.0.0/BaseIWork.cs" Line="10" Column="14" />
+      <File FileName="../br.ufc.mdcc.common.Iterator/src/1.0.0.0/IIterator.cs" Line="6" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.ReduceFunction/src/1.0.0.0/BaseIReduceFunction.cs" Line="15" Column="4" />
+      <File FileName="../br.ufc.mdcc.mapreduce.Reducer/src/1.0.0.0/IReducer.cs" Line="11" Column="52" />
+      <File FileName="../br.ufc.mdcc.common.Iterator/src/1.0.0.0/BaseIIterator.cs" Line="8" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

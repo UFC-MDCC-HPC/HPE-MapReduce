@@ -3,7 +3,7 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.KVPair { 
 
-public interface IKVPair<K, V> : BaseIKVPair<K, V>
+public interface IKVPair<K, V> : IData, BaseIKVPair<K, V>
 where K:IData
 where V:IData
 {

@@ -142,12 +142,12 @@
     <parameter componentRef="job_type" formFieldId="job_type" varName="J"/>
     <parameter componentRef="result_type" formFieldId="result_type" varName="R"/>
     <parameter componentRef="platform" formFieldId="platform" varName="P"/>
-    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
-    <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
     <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
-    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
     <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
     <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
+    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
+    <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
+    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
     <fusion>
       <cRefs>work</cRefs>
       <cRefs>gather</cRefs>
@@ -215,11 +215,11 @@
       </slice>
       <slice isRef="gather">
         <originRef cRef="gather" iRef="IGatherSource"/>
-        <visualDescription h="10" w="10" x="13" y="38"/>
+        <visualDescription h="10" w="10" x="13" y="62"/>
       </slice>
       <slice isRef="work">
         <originRef cRef="work" iRef="IWork"/>
-        <visualDescription h="10" w="10" x="82" y="27"/>
+        <visualDescription h="10" w="10" x="111" y="54"/>
       </slice>
       <slice isRef="platform">
         <originRef cRef="platform" iRef="IPlatform"/>
@@ -244,16 +244,16 @@
           <dependency>%WORKSPACE/br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIWorker.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="55" w="123" x="365" y="90">
+      <visualDescription h="95" w="127" x="375" y="61">
         <color b="81" g="81" r="228"/>
       </visualDescription>
       <port name="job">
-        <visualDescription h="10" w="10" x="0" y="0"/>
+        <visualDescription h="10" w="10" x="97" y="13"/>
         <slice pRef="target_data" sRef="scatter"/>
         <slice pRef="input" sRef="work"/>
       </port>
       <port name="result">
-        <visualDescription h="10" w="10" x="0" y="0"/>
+        <visualDescription h="10" w="10" x="88" y="66"/>
         <slice pRef="source_data" sRef="gather"/>
         <slice pRef="output" sRef="work"/>
       </port>

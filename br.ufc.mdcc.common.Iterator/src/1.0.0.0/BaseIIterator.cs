@@ -5,7 +5,7 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.Iterator { 
 
-public interface BaseIIterator<T> : IDataStructureKind 
+public interface BaseIIterator<T> : BaseIData, IDataStructureKind 
 where T:IData
 {
 

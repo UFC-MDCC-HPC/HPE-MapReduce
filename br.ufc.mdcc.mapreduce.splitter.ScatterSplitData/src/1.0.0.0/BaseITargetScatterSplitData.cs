@@ -9,7 +9,7 @@ namespace br.ufc.mdcc.mapreduce.splitter.ScatterSplitData {
 public interface BaseITargetScatterSplitData : ISynchronizerKind 
 {
 
-	IInterator<IData> Target_data {get;}
+	IIterator<IData> Target_data {get;}
 
 
 } // end main interface 

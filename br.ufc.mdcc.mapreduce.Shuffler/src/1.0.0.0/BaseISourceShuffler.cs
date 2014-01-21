@@ -2,10 +2,17 @@
 
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.farm.Scatter;
+using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.KVPair;
+
 
 namespace br.ufc.mdcc.mapreduce.Shuffler { 
 
-public interface BaseISourceShuffler : BaseIScatterSource, ISynchronizerKind 
+public interface BaseISourceShuffler<OPK,OMK> : 
+	BaseIScatterSource<IIterator<IKVPair<OMK,OPK>>>, ISynchronizerKind 
+where OPK:IData
+where OMK:IData
 {
 
 

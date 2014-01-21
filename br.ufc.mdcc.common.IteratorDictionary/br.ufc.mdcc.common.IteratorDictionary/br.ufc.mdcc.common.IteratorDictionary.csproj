@@ -39,11 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\br.ufc.mdcc.common.Iterator\src\1.0.0.0\BaseIInterator.cs">
-      <Link>BaseIInterator.cs</Link>
+    <Compile Include="..\src\1.0.0.0\BaseIIteratorDictionary.cs">
+      <Link>BaseIIteratorDictionary.cs</Link>
     </Compile>
-    <Compile Include="..\..\br.ufc.mdcc.common.Iterator\src\1.0.0.0\IInterator.cs">
-      <Link>IInterator.cs</Link>
+    <Compile Include="..\src\1.0.0.0\IIteratorDictionary.cs">
+      <Link>IIteratorDictionary.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

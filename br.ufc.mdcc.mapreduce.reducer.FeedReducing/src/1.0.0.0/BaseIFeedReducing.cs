@@ -11,8 +11,8 @@ where OMV:IData
 where OMK:IData
 {
 
-	IInterator<OMV> Output_value {get;}
-	IInterator<IData> Input {get;}
+	IIterator<OMV> Output_value {get;}
+	IIterator<IData> Input {get;}
 	OMK Output_key {get;}
 
 

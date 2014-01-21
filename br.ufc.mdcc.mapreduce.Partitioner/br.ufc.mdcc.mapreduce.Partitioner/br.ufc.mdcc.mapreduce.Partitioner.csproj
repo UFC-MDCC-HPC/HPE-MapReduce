@@ -70,5 +70,9 @@
       <Project>{9DA059EA-4AA4-405C-99FF-0885C76C4F13}</Project>
       <Name>br.ufc.mdcc.farm.Gather</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

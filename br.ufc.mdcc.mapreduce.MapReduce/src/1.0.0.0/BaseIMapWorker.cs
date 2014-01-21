@@ -3,6 +3,7 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.mapreduce.user.MapFunction;
 using br.ufc.mdcc.common.Platform;
@@ -18,9 +19,6 @@ where IMK:IData
 where IMV:IData
 where PLATFORM:IPlatform
 {
-
-	IInterator<IData> Input {get;}
-	IInterator<IData> Input {get;}
 
 
 } // end main interface 

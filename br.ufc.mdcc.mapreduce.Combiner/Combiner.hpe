@@ -10,7 +10,7 @@
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_type" varName="I"/>
-        <parameter formFieldId="output_type" varName="O"/>
+        <parameter formFieldId="output_type" varName="ORED"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
           <visualDescription h="60" w="198" x="107" y="348">
             <color b="255" g="255" r="255"/>
@@ -46,6 +46,9 @@
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="item_type" varName="ORV"/>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
       <unitBounds parallel="false" uRef="iterator">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
@@ -62,10 +65,10 @@
     <parameter componentRef="result_item_type" formFieldId="result_item_type" varName="ORV"/>
     <interface iRef="ISourceCombiner" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface BaseISourceCombiner : BaseISource, ISynchronizerKind &#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISourceCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseISourceCombiner.dll" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface BaseISourceCombiner&lt;ORV> : &#xA;&#x9;BaseIGatherSource&lt;IIterator&lt;ORV>>, &#xA;&#x9;ISynchronizerKind &#xA;where ORV:IData&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISourceCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseISourceCombiner.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/BaseISource.dll</dependency>
         </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface ISourceCombiner : BaseISourceCombiner, ISource&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ISourceCombiner.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ISourceCombiner.dll" versionId="1.0.0.0">
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface ISourceCombiner&lt;ORV> : &#xA;&#x9;BaseISourceCombiner&lt;ORV>, IGatherSource&lt;IIterator&lt;ORV>>&#xA;where ORV:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ISourceCombiner.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ISourceCombiner.dll" versionId="1.0.0.0">
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseISourceCombiner.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/ISource.dll</dependency>
         </file>
@@ -79,10 +82,10 @@
     </interface>
     <interface iRef="ITargetCombiner" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface BaseITargetCombiner : BaseITarget, ISynchronizerKind &#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseITargetCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface BaseITargetCombiner&lt;O> : &#xA;&#x9;BaseIGatherTarget&lt;O>, &#xA;&#x9;ISynchronizerKind &#xA;where O:IData&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseITargetCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/BaseITarget.dll</dependency>
         </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface ITargetCombiner : BaseITargetCombiner, ITarget&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ITargetCombiner.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ITargetCombiner.dll" versionId="1.0.0.0">
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface ITargetCombiner&lt;O> : &#xA;&#x9;BaseITargetCombiner&lt;O>, &#xA;&#x9;IGatherTarget&lt;O>&#xA;where O:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ITargetCombiner.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ITargetCombiner.dll" versionId="1.0.0.0">
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/ITarget.dll</dependency>
         </file>

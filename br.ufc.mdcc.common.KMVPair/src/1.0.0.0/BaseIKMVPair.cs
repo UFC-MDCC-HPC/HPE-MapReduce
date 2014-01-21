@@ -5,7 +5,7 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.KMVPair { 
 
-public interface BaseIKMVPair<K, V> : IDataStructureKind 
+public interface BaseIKMVPair<K, V> : BaseIData, IDataStructureKind 
 where K:IData
 where V:IData
 {

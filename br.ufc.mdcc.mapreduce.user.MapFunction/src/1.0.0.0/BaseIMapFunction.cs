@@ -11,7 +11,7 @@ where IMK:IData
 where IMV:IData
 {
 
-	IInterator<IData> Output_data {get;}
+	IIterator<IData> Output_data {get;}
 	IMK Input_key {get;}
 	IMV Input_value {get;}
 

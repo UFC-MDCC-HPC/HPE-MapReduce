@@ -2,6 +2,8 @@
 
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.mapreduce.MapReduce { 
@@ -12,8 +14,9 @@ where PLATFORM:IPlatform
 where ORED:IData
 {
 
-	ORED Target_data {get;}
-	IMAP Source_data {get;}
+	IMAP Input_data {get;}
+		//IIterator<IKVPair<OMK,OPK>> Partition_data {get;}
+	ORED Output_data {get;}
 
 
 } // end main interface 
