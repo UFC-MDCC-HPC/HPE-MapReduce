@@ -3,15 +3,19 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.KVPair;
+
 
 namespace br.ufc.mdcc.mapreduce.user.MapFunction { 
 
-public interface BaseIMapFunction<IMK, IMV> : IComputationKind 
-where IMK:IData
-where IMV:IData
+public interface BaseIMapFunction<IMK, IMV, OMK, OMV> : IComputationKind 
+		where IMK:IData
+		where IMV:IData
+		where OMK:IData
+		where OMV:IData
 {
 
-	IIterator<IData> Output_data {get;}
+	IIterator<IKVPair<OMK,OMV>> Output_data {get;}
 	IMK Input_key {get;}
 	IMV Input_value {get;}
 

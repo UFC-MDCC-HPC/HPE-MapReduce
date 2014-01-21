@@ -6,11 +6,12 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.mapreduce.MapReduce { 
 
-public interface IMapWorker<OPK, OMK, Pf, Mf, IMK, IMV, PLATFORM> : BaseIMapWorker<OPK, OMK, Pf, Mf, IMK, IMV, PLATFORM>
+	public interface IMapWorker<OPK, OMK, OMV, Pf, Mf, IMK, IMV, PLATFORM> : BaseIMapWorker<OPK, OMK, OMV, Pf, Mf, IMK, IMV, PLATFORM>
 where OPK:IData
 where OMK:IData
+where OMV:IData
 where Pf:IPartitionFunction<OMK, OPK>
-where Mf:IMapFunction<IMK, IMV>
+where Mf:IMapFunction<IMK, IMV, OMK, OMV>
 where IMK:IData
 where IMV:IData
 where PLATFORM:IPlatform

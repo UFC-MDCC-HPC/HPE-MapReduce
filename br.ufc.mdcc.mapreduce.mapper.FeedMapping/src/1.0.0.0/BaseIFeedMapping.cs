@@ -3,6 +3,7 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.mapper.FeedMapping { 
 
@@ -11,7 +12,7 @@ where IMV:IData
 where IMK:IData
 {
 
-	IIterator<IData> Input {get;}
+	IIterator<IKVPair<IMK,IMV>> Input {get;}
 	IMK Output_key {get;}
 	IMV Output_value {get;}
 

@@ -39,11 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\br.ufc.mdcc.mapreduce.mapper.FeedMapping\src\1.0.0.0\BaseIFeedMapping.cs">
-      <Link>BaseIFeedMapping.cs</Link>
+    <Compile Include="..\src\1.0.0.0\BaseIMapper.cs">
+      <Link>BaseIMapper.cs</Link>
     </Compile>
-    <Compile Include="..\..\br.ufc.mdcc.mapreduce.mapper.FeedMapping\src\1.0.0.0\IFeedMapping.cs">
-      <Link>IFeedMapping.cs</Link>
+    <Compile Include="..\src\1.0.0.0\IMapper.cs">
+      <Link>IMapper.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -55,6 +55,18 @@
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
       <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
       <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction.csproj">
+      <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Work\br.ufc.mdcc.farm.Work\br.ufc.mdcc.farm.Work.csproj">
+      <Project>{C95BA7E0-8C6A-460F-99AB-288939D2E2F8}</Project>
+      <Name>br.ufc.mdcc.farm.Work</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
