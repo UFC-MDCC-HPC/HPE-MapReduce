@@ -7,14 +7,15 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning { 
 
-public interface BaseIFeedPartitioning<OPK, OMK> : IComputationKind 
-where OPK:IData
-where OMK:IData
+	public interface BaseIFeedPartitioning<OMK, OPK, OMV> : IComputationKind 
+		where OPK:IData
+		where OMK:IData
+		where OMV:IData
 {
 
 	OPK Partition_key {get;}
-	IIterator<IIterator<IKVPair<OMK,OPK>>> Partition_info {get;}
-	IIterator<IIterator<IKVPair<OMK,OPK>>> Data {get;}
+	IIterator<IKVPair<OMK,OPK>> Partition_info {get;}
+		IIterator<IKVPair<OMK,OMV>> Data {get;}
 	OMK Data_key {get;}
 
 

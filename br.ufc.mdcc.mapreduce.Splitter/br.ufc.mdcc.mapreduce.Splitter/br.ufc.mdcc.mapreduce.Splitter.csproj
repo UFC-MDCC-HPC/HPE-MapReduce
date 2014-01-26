@@ -74,5 +74,9 @@
       <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
       <Name>br.ufc.mdcc.common.KVPair</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction.csproj">
+      <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

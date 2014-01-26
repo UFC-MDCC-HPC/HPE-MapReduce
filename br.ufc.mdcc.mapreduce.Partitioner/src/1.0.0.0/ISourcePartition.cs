@@ -7,8 +7,8 @@ using br.ufc.mdcc.farm.Gather;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-	public interface ISourcePartition<OPK, OMK, OMV, P> : 
-	BaseISourcePartition<OPK, OMK, OMV, P>, IGatherSource<IIterator<IKVPair<OMK,OMV>>>
+	public interface ISourcePartition<OMK, OMV, OPK, P> : 
+	BaseISourcePartition<OMK, OMV, OPK, P>, IGatherSource<IIterator<IKVPair<OMK,OMV>>>
 where OPK:IData
 where OMK:IData
 where OMV:IData

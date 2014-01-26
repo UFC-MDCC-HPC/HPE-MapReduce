@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{828FE7DF-3B54-46CE-98B5-F8D12121906A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.impl.MapperImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.impl.MapperImpl</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\MapperImpl.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIMapperImpl.cs">
+      <Link>BaseIMapperImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\IMapperImpl.cs">
+      <Link>IMapperImpl.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.mapper.FeedMapping\br.ufc.mdcc.mapreduce.mapper.FeedMapping\br.ufc.mdcc.mapreduce.mapper.FeedMapping.csproj">
+      <Project>{2C73347B-04B4-450C-B2AB-C6F6E5B7A366}</Project>
+      <Name>br.ufc.mdcc.mapreduce.mapper.FeedMapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction.csproj">
+      <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.Mapper\br.ufc.mdcc.mapreduce.Mapper\br.ufc.mdcc.mapreduce.Mapper.csproj">
+      <Project>{D3192533-E713-4440-8057-D28B1C88E5FE}</Project>
+      <Name>br.ufc.mdcc.mapreduce.Mapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Work\br.ufc.mdcc.farm.Work\br.ufc.mdcc.farm.Work.csproj">
+      <Project>{C95BA7E0-8C6A-460F-99AB-288939D2E2F8}</Project>
+      <Name>br.ufc.mdcc.farm.Work</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

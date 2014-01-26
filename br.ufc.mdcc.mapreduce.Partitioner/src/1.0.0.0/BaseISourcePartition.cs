@@ -9,7 +9,7 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-public interface BaseISourcePartition<OPK, OMK, OMV, P> : 
+	public interface BaseISourcePartition<OMK, OMV, OPK, P> : 
 	BaseIGatherSource<IIterator<IKVPair<OMK,OMV>>>, ISynchronizerKind 
 where OPK:IData
 where OMK:IData

@@ -2,15 +2,17 @@
 
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Set;
+using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.splitter.ScatterSplitData { 
 
-public interface BaseISourceScatterSplitData<B> : ISynchronizerKind 
-where B:IData
+	public interface BaseISourceScatterSplitData<IMK,IMV> : ISynchronizerKind 
+		where IMK:IData
+		where IMV:IData
 {
 
-	ISet<B> Bins {get;}
+		ISet<IKVPair<IMK,IMV>> Bins {get;}
 
 
 } // end main interface 

@@ -3,7 +3,7 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.common.KMVPair;
 
 namespace br.ufc.mdcc.mapreduce.reducer.FeedReducing { 
 
@@ -13,7 +13,7 @@ where OMK:IData
 {
 
 	IIterator<OMV> Output_value {get;}
-	IIterator<IKVPair<OMK,OMV>> Input {get;}
+		IIterator<IKMVPair<OMK,OMV>> Input {get;}
 	OMK Output_key {get;}
 
 

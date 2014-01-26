@@ -7,7 +7,7 @@ using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.Reducer { 
 
-public interface IReducer<R, ORV, OMK, OMV> : BaseIReducer<R, ORV, OMK, OMV>, 
+	public interface IReducer<OMK, OMV, ORV, R> : BaseIReducer<OMK, OMV, ORV, R>, 
 	IWork<IIterator<IKMVPair<OMK,OMV>>,IIterator<ORV>>
 where R:IReduceFunction<ORV, OMK, OMV>
 where ORV:IData

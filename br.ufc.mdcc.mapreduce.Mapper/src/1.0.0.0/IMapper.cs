@@ -7,14 +7,14 @@ using br.ufc.mdcc.farm.Work;
 
 namespace br.ufc.mdcc.mapreduce.Mapper { 
 
-public interface IMapper<M, IMK, IMV, OMK, OMV> : 
-	BaseIMapper<M, IMK, IMV,OMK,OMV>, 
+	public interface IMapper<IMK, IMV, OMK, OMV, M> : 
+	BaseIMapper<IMK, IMV, OMK, OMV, M>, 
 	IWork<IIterator<IKVPair<IMK,IMV>>,IIterator<IKVPair<OMK,OMV>>>
-		where M:IMapFunction<IMK, IMV, OMK, OMV>
 		where IMK:IData
 		where IMV:IData
 		where OMK:IData
 		where OMV:IData
+		where M:IMapFunction<IMK, IMV, OMK, OMV>
 {
 
 

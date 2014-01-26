@@ -9,7 +9,7 @@ using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-public interface BaseITargetPartition<OPK, OMK> : 
+	public interface BaseITargetPartition<OMK, OPK> : 
 	BaseIGatherTarget<IIterator<IKVPair<OMK,OPK>>>, ISynchronizerKind 
 	where OPK:IData
 	where OMK:IData

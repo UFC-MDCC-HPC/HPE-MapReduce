@@ -6,8 +6,8 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-	public interface ITargetPartition<OPK, OMK> : 
-	BaseITargetPartition<OPK,OMK>, IGatherTarget<IIterator<IKVPair<OMK,OPK>>>
+	public interface ITargetPartition<OMK, OPK> : 
+	BaseITargetPartition<OMK,OPK>, IGatherTarget<IIterator<IKVPair<OMK,OPK>>>
 		where OPK:IData
 		where OMK:IData
 {

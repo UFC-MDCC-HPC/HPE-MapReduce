@@ -3,9 +3,10 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning { 
 
-public interface IFeedPartitioning<OPK, OMK> : BaseIFeedPartitioning<OPK, OMK>
-where OPK:IData
-where OMK:IData
+	public interface IFeedPartitioning<OMK, OPK, OMV> : BaseIFeedPartitioning<OMK, OPK, OMV>
+		where OPK:IData
+		where OMK:IData
+		where OMV:IData
 {
 
 

@@ -10,6 +10,8 @@
     <RootNamespace>br.ufc.mdcc.mapreduce.MapReduce</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.MapReduce</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\MapReduce.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

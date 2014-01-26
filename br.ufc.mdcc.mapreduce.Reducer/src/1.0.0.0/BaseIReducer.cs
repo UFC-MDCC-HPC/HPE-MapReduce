@@ -9,7 +9,7 @@ using br.ufc.mdcc.common.KMVPair;
 
 namespace br.ufc.mdcc.mapreduce.Reducer { 
 
-public interface BaseIReducer<R, ORV, OMK, OMV> : 
+	public interface BaseIReducer<OMK, OMV, ORV, R> : 
 	BaseIWork<IIterator<IKMVPair<OMK,OMV>>,IIterator<ORV>>, IComputationKind 
 		where R:IReduceFunction<ORV, OMK, OMV>	
 where ORV:IData

@@ -2,19 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="312" key="DIALOG_WIDTH"/>
-		<item value="94" key="DIALOG_Y_ORIGIN"/>
+		<item value="339" key="DIALOG_Y_ORIGIN"/>
+		<item value="731" key="DIALOG_X_ORIGIN"/>
 		<item value="437" key="DIALOG_HEIGHT"/>
-		<item value="517" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="true" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="farm_map" key="selection"/>
+		<item value="bin_type" key="selection"/>
 		<list key="findhistory">
+			<item value="bin_type"/>
 			<item value="farm_map"/>
 			<item value="innerRenaming"/>
 			<item value="Iterator"/>
@@ -22,7 +23,6 @@
 			<item value="ictio"/>
 			<item value="iction"/>
 			<item value="OMAP"/>
-			<item value="Dictionary"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Set"/>

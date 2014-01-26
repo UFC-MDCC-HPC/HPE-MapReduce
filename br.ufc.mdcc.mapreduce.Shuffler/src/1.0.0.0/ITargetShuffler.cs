@@ -6,8 +6,8 @@ using br.ufc.mdcc.common.KMVPair;
 
 namespace br.ufc.mdcc.mapreduce.Shuffler { 
 
-public interface ITargetShuffler<OMV,OMK> : 
-	BaseITargetShuffler<OMV,OMK>, 
+	public interface ITargetShuffler<OMK,OMV> : 
+	BaseITargetShuffler<OMK,OMV>, 
 	IScatterTarget<IIterator<IKMVPair<OMK,OMV>>>
 where OMV:IData
 where OMK:IData

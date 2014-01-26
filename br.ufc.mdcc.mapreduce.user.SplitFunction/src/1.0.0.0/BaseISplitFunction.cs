@@ -3,16 +3,18 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Set;
+using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.user.SplitFunction { 
 
-public interface BaseISplitFunction<I, T> : IComputationKind 
-where I:IData
-where T:IData
+	public interface BaseISplitFunction<I, IMK, IMV> : IComputationKind 
+		where I:IData
+		where IMK:IData
+		where IMV:IData
 {
 
-	I Input_data {get;}
-	ISet<T> Output_data {get;}
+		I Input_data {get;}
+		ISet<IKVPair<IMK,IMV>> Output_data {get;}
 
 
 } // end main interface 

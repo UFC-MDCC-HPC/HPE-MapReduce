@@ -9,7 +9,7 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.mapreduce.MapReduce { 
 
-public interface BaseIReduceWorker<Rf, ORV, OMK, OMV, PLATFORM> : IComputationKind 
+	public interface BaseIReduceWorker<OMK, ORV, Rf, OMV, PLATFORM> : IComputationKind 
 where Rf:IReduceFunction<ORV, OMK, OMV>
 where ORV:IData
 where OMK:IData

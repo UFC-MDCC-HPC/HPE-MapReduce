@@ -56,5 +56,9 @@
       <Project>{60EDE424-4D6C-4204-B926-93A2CFF58C8C}</Project>
       <Name>br.ufc.mdcc.common.Set</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.Shuffler { 
 
-public interface BaseISourceShuffler<OPK,OMK> : 
+	public interface BaseISourceShuffler<OMK,OPK> : 
 	BaseIScatterSource<IIterator<IKVPair<OMK,OPK>>>, ISynchronizerKind 
 where OPK:IData
 where OMK:IData
