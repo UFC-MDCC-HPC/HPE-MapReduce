@@ -5,7 +5,6 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.mapreduce.mapper.FeedMapping;
 using br.ufc.mdcc.mapreduce.user.MapFunction;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
@@ -24,15 +23,7 @@ where M:IMapFunction<IMK, IMV, OMK, OMV>
 
 
 
-private IFeedMapping<IMV, IMK> feed_mapping = null;
 
-protected IFeedMapping<IMV, IMK> Feed_mapping {
-	get {
-		if (this.feed_mapping == null)
-			this.feed_mapping = (IFeedMapping<IMV, IMK>) Services.getPort("feed_mapping");
-		return this.feed_mapping;
-	}
-}
 
 private M map_function = default(M);
 

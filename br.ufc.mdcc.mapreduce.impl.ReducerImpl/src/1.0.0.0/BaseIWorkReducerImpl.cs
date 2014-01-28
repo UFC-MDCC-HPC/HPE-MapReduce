@@ -7,8 +7,6 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KMVPair;
 using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.common.PutItemIntoStream;
-using br.ufc.mdcc.mapreduce.reducer.FeedReducing;
 using br.ufc.mdcc.mapreduce.user.ReduceFunction;
 using br.ufc.mdcc.mapreduce.Reducer;
 
@@ -52,25 +50,6 @@ public IIterator<ORV> Output {
 	}
 }
 
-private IPutItemIntoStream<IData> put_item = null;
-
-protected IPutItemIntoStream<IData> Put_item {
-	get {
-		if (this.put_item == null)
-			this.put_item = (IPutItemIntoStream<IData>) Services.getPort("put_item");
-		return this.put_item;
-	}
-}
-
-private IFeedReducing<OMV, OMK> feed_reducing = null;
-
-protected IFeedReducing<OMV, OMK> Feed_reducing {
-	get {
-		if (this.feed_reducing == null)
-			this.feed_reducing = (IFeedReducing<OMV, OMK>) Services.getPort("feed_reducing");
-		return this.feed_reducing;
-	}
-}
 
 private R reduce_function = default(R);
 

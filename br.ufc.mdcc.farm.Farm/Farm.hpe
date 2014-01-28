@@ -142,20 +142,20 @@
     <parameter componentRef="job_type" formFieldId="job_type" varName="J"/>
     <parameter componentRef="result_type" formFieldId="result_type" varName="R"/>
     <parameter componentRef="platform" formFieldId="platform" varName="P"/>
-    <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
     <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
-    <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
-    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
-    <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
+    <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
     <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
+    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
+    <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
+    <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
     <fusion>
-      <cRefs>work</cRefs>
       <cRefs>gather</cRefs>
+      <cRefs>work</cRefs>
       <pRef>result</pRef>
     </fusion>
     <fusion>
-      <cRefs>scatter</cRefs>
       <cRefs>work</cRefs>
+      <cRefs>scatter</cRefs>
       <pRef>job</pRef>
     </fusion>
     <interface iRef="IManager" nArgs="5">
@@ -188,7 +188,7 @@
           <dependency>%WORKSPACE/br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIManager.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="58" w="118" x="34" y="105">
+      <visualDescription h="58" w="118" x="72" y="455">
         <color b="255" g="144" r="30"/>
       </visualDescription>
       <port name="input">
@@ -244,7 +244,7 @@
           <dependency>%WORKSPACE/br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIWorker.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="95" w="127" x="375" y="61">
+      <visualDescription h="95" w="127" x="359" y="471">
         <color b="81" g="81" r="228"/>
       </visualDescription>
       <port name="job">

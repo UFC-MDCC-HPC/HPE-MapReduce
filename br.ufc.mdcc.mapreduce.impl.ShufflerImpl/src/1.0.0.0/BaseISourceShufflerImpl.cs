@@ -18,12 +18,12 @@ where OMK:IData
 where OPK:IData
 {
 
-		private IIterator<IKVPair<OPK,OMK>> source_data = null;
+		private IIterator<IKVPair<OMK,OPK>> source_data = null;
 
-		public IIterator<IKVPair<OPK,OMK>> Source_data {
+		public IIterator<IKVPair<OMK,OPK>> Source_data {
 	get {
 		if (this.source_data == null)
-					this.source_data = (IIterator<IKVPair<OPK,OMK>>) Services.getPort("source_data");
+					this.source_data = (IIterator<IKVPair<OMK,OPK>>) Services.getPort("source_data");
 		return this.source_data;
 	}
 }

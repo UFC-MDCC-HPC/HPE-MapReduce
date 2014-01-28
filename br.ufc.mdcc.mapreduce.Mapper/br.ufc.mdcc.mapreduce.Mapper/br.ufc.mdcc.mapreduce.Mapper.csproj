@@ -10,7 +10,7 @@
     <RootNamespace>br.ufc.mdcc.mapreduce.Mapper</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.Mapper</AssemblyName>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\br.ufc.mdcc.mapreduce.mapper.FeedMapping\FeedMapping.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\Mapper.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

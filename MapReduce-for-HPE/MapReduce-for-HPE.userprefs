@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.reducer.impl.FeedReducingImpl/src/1.0.0.0/BaseIFeedReducingImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/BaseIMapperImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.user.ReduceFunction/src/1.0.0.0/IReduceFunction.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.user.ReduceFunction/src/1.0.0.0/BaseIReduceFunction.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.reducer.FeedReducing/src/1.0.0.0/BaseIFeedReducing.cs" Line="16" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.reducer.impl.FeedReducingImpl/src/1.0.0.0/BaseIFeedReducingImpl.cs" Line="30" Column="3" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/BaseIMapperImpl.cs" Line="8" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseISourcePartitionerImpl.cs" Line="9" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseITargetPartitionerImpl.cs" Line="7" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/BaseISourceShufflerImpl.cs" Line="10" Column="33" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/BaseIWorkReducerImpl.cs" Line="9" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

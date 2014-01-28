@@ -4,10 +4,8 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
-using br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.Partitioner;
@@ -22,15 +20,6 @@ where OPK:IData
 where P:IPartitionFunction<OMK, OPK>
 {
 
-private ISourceGatherPartitionInfo<OMK, OPK> gather_partition_info = null;
-
-protected ISourceGatherPartitionInfo<OMK, OPK> Gather_partition_info {
-	get {
-		if (this.gather_partition_info == null)
-			this.gather_partition_info = (ISourceGatherPartitionInfo<OMK, OPK>) Services.getPort("gather_partition_info");
-		return this.gather_partition_info;
-	}
-}
 
 
 private OPK partition_key = default(OPK);
@@ -53,15 +42,7 @@ protected P Partition_function {
 	}
 }
 
-private IFeedPartitioning<OMK, OPK, OMV> feed_partition = null;
 
-protected IFeedPartitioning<OMK, OPK, OMV> Feed_partition {
-	get {
-		if (this.feed_partition == null)
-			this.feed_partition = (IFeedPartitioning<OMK, OPK, OMV>) Services.getPort("feed_partition");
-		return this.feed_partition;
-	}
-}
 
 private OMK data_key = default(OMK);
 

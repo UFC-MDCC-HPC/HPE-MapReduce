@@ -52,10 +52,6 @@
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.mapper.FeedMapping\br.ufc.mdcc.mapreduce.mapper.FeedMapping\br.ufc.mdcc.mapreduce.mapper.FeedMapping.csproj">
-      <Project>{2C73347B-04B4-450C-B2AB-C6F6E5B7A366}</Project>
-      <Name>br.ufc.mdcc.mapreduce.mapper.FeedMapping</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction.csproj">
       <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>

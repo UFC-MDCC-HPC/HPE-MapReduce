@@ -58,17 +58,9 @@
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo\br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo\br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo.csproj">
-      <Project>{52D5507D-A9F7-4C73-A25B-1DCF772917C4}</Project>
-      <Name>br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
       <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning\br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning\br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning.csproj">
-      <Project>{1A6F0292-3E20-43B7-A685-9B2253145BDA}</Project>
-      <Name>br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
       <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>

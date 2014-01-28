@@ -4,7 +4,6 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
@@ -18,15 +17,7 @@ where OMK:IData
 where OPK:IData
 {
 
-private ITargetGatherPartitionInfo<OMK, OPK> gather_partition_info = null;
 
-protected ITargetGatherPartitionInfo<OMK, OPK> Gather_partition_info {
-	get {
-		if (this.gather_partition_info == null)
-			this.gather_partition_info = (ITargetGatherPartitionInfo<OMK, OPK>) Services.getPort("gather_partition_info");
-		return this.gather_partition_info;
-	}
-}
 
 private IIterator<IKVPair<OMK, OPK>> target_data = null;
 
