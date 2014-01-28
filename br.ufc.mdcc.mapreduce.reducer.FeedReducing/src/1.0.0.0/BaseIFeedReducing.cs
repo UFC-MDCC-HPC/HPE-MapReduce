@@ -12,9 +12,8 @@ where OMV:IData
 where OMK:IData
 {
 
-	IIterator<OMV> Output_value {get;}
 		IIterator<IKMVPair<OMK,OMV>> Input {get;}
-	OMK Output_key {get;}
+		IKMVPair<OMK,OMV> Output_values {get;}
 
 
 } // end main interface 

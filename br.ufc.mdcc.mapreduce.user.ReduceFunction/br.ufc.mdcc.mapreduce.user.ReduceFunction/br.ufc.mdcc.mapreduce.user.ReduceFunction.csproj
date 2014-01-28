@@ -56,5 +56,9 @@
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair.csproj">
+      <Project>{2ADF1A46-51E2-4AB0-915D-EE7F4331BD04}</Project>
+      <Name>br.ufc.mdcc.common.KMVPair</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -16,34 +16,24 @@ where OMV:IData
 where OMK:IData
 {
 
-private IIterator<OMV> output_value = null;
+	private IKMVPair<OMK,OMV> output_values = null;
 
-public IIterator<OMV> Output_value {
-	get {
-		if (this.output_value == null)
-			this.output_value = (IIterator<OMV>) Services.getPort("output_value");
-		return this.output_value;
+	public IKMVPair<OMK,OMV> Output_values {
+		get {
+			if (this.output_values == null)
+					this.output_values = (IKMVPair<OMK,OMV>) Services.getPort("output_values");
+			return this.output_values;
+		}
 	}
-}
-
-private OMK output_key = default(OMK);
-
-public OMK Output_key {
-	get {
-		if (this.output_key == null)
-			this.output_key = (OMK) Services.getPort("output_key");
-		return this.output_key;
-	}
-}
 
 	private IIterator<IKMVPair<OMK, OMV>> input = null;
 
 	public IIterator<IKMVPair<OMK, OMV>> Input {
-	get {
-		if (this.input == null)
-					this.input = (IIterator<IKMVPair<OMK, OMV>>) Services.getPort("input");
-		return this.input;
-	}
+		get {
+			if (this.input == null)
+						this.input = (IIterator<IKMVPair<OMK, OMV>>) Services.getPort("input");
+			return this.input;
+		}
 }
 
 

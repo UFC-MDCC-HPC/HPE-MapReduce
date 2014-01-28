@@ -3,6 +3,8 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.KMVPair;
+
 
 namespace br.ufc.mdcc.mapreduce.user.ReduceFunction { 
 
@@ -12,9 +14,8 @@ where OMV:IData
 where ORV:IData
 {
 
-	IIterator<OMV> Input_values {get;}
+	IKMVPair<OMK,OMV> Input_values {get;}
 	ORV Output_value {get;}
-	OMK Input_key {get;}
 
 
 } // end main interface 

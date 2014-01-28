@@ -12,7 +12,7 @@
         <parameter formFieldId="input_type" varName="I"/>
         <parameter formFieldId="output_type" varName="O"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="28" y="133">
+          <visualDescription h="60" w="100" x="24" y="157">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -20,7 +20,7 @@
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="611" y="121">
+          <visualDescription h="60" w="100" x="543" y="108">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -45,28 +45,21 @@
       <parameter formFieldId="input_key_type" varName="OMK"/>
       <parameter formFieldId="input_value_type" varName="OMV"/>
       <parameter formFieldId="output_type" varName="ORV"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="100" x="107" y="540">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_values" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="143" x="170" y="391">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <parameter formFieldId="item_type" varName="OMV"/>
-        <unitBounds parallel="false" uRef="iterator">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="120" x="274" y="492">
+        <visualDescription h="60" w="163" x="340" y="463">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009fb4d2d313b8052f34899d0f4c8138e078fe7e96c129c10b785a1771af6508d61a848410cf8d5208ba0a971653b6fbee42ade860727082895bb12353d97e2a6841a9be458b8339e5d681f95168c1289388e69394117c763ce6665b68e275d1d6b166a34143d073530df2a4f5d1e60d372c6170f399f5b5fb6e067cd6c315048b" localRef="input_values" location="br.ufc.mdcc.common.KMVPair/KMVPair.hpe" multiple="false" name="KMVPair" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="123" x="104" y="434">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="OMV"/>
+        <parameter formFieldId="key_type" varName="OMK"/>
+        <unitBounds parallel="false" uRef="kmv_pair">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
@@ -117,39 +110,32 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000077fd6dbbff96751494dece3debb03afb55179873a6e0d0be1c528db5f17151f05baee7b81ab202508bf9b9c2caa786103c77d6610dd78e57b9bc8d9a2fa997be15eee5b7ef5380db84485d9afa3a3255519d283bda33f7546538a9ba1adbb810a96091f639a482a0e7762b1aa3ca27a1ff19afc985d54aecb4b8dc968888dc98" localRef="feed_reducing" location="br.ufc.mdcc.mapreduce.reducer.FeedReducing/FeedReducing.hpe" multiple="true" name="FeedReducing" package="br.ufc.mdcc.mapreduce.reducer" exposed="false">
-      <visualDescription h="60" w="140" x="48" y="294">
+      <visualDescription h="91" w="140" x="48" y="294">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="output_value_item_type" varName="OMV"/>
       <parameter formFieldId="output_key_type" varName="OMK"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="28" y="133">
+        <visualDescription h="60" w="100" x="24" y="157">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1389891901169"/>
+        <parameter formFieldId="item_type" varName="X###1390911606604"/>
         <unitBounds parallel="false" uRef="iterator">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+          <visualDescription h="20" w="20" x="87" y="19"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="100" x="107" y="540">
+      <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009fb4d2d313b8052f34899d0f4c8138e078fe7e96c129c10b785a1771af6508d61a848410cf8d5208ba0a971653b6fbee42ade860727082895bb12353d97e2a6841a9be458b8339e5d681f95168c1289388e69394117c763ce6665b68e275d1d6b166a34143d073530df2a4f5d1e60d372c6170f399f5b5fb6e067cd6c315048b" localRef="output_values" location="br.ufc.mdcc.common.KMVPair/KMVPair.hpe" multiple="false" name="KMVPair" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="123" x="104" y="434">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_value" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="143" x="170" y="391">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <parameter formFieldId="item_type" varName="OMV"/>
-        <unitBounds parallel="false" uRef="iterator">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+        <parameter formFieldId="value_type" varName="OMV"/>
+        <parameter formFieldId="key_type" varName="OMK"/>
+        <unitBounds parallel="false" uRef="kmv_pair">
+          <visualDescription h="20" w="20" x="96" y="7"/>
         </unitBounds>
       </port>
       <unitBounds parallel="false" uRef="feed_reducing">
-        <visualDescription h="20" w="20" x="5" y="2"/>
+        <visualDescription h="20" w="20" x="60" y="13"/>
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ff6e1d77315954b92d1884dacd956a628816e46c53d875488f25fe99d8b0ff43f19d3e152cd8096e747c49a4ecdaa60c5b61d9845399efe0ced254222ee2896dd51270605c0add1dd1ee104b62c57350ef1ffe463b41b2b3a9bd4ea74ebc5811219969f18fb085e3f8d5680e82a409da4dfa5c1275156e6a2dd6d9b77472d0ac" localRef="put_item" location="br.ufc.mdcc.common.PutItemIntoStream/PutItemIntoStream.hpe" multiple="true" name="PutItemIntoStream" package="br.ufc.mdcc.common" exposed="false">
@@ -158,7 +144,7 @@
       </visualDescription>
       <parameter formFieldId="item_type" varName="ORV"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="stream" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="611" y="121">
+        <visualDescription h="60" w="100" x="543" y="108">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="item_type" varName="ORV"/>
@@ -167,7 +153,7 @@
         </unitBounds>
       </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="item_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="120" x="274" y="492">
+        <visualDescription h="60" w="163" x="340" y="463">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -191,7 +177,7 @@
     <supplyParameter cRef="kmv_pair_input" varName="T"/>
     <supplyParameter cRef="output" varName="O"/>
     <supplyParameter cRef="input" varName="I"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009fb4d2d313b8052f34899d0f4c8138e078fe7e96c129c10b785a1771af6508d61a848410cf8d5208ba0a971653b6fbee42ade860727082895bb12353d97e2a6841a9be458b8339e5d681f95168c1289388e69394117c763ce6665b68e275d1d6b166a34143d073530df2a4f5d1e60d372c6170f399f5b5fb6e067cd6c315048b" localRef="C###1389891901169" location="br.ufc.mdcc.common.KMVPair/KMVPair.hpe" multiple="false" name="KMVPair" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009fb4d2d313b8052f34899d0f4c8138e078fe7e96c129c10b785a1771af6508d61a848410cf8d5208ba0a971653b6fbee42ade860727082895bb12353d97e2a6841a9be458b8339e5d681f95168c1289388e69394117c763ce6665b68e275d1d6b166a34143d073530df2a4f5d1e60d372c6170f399f5b5fb6e067cd6c315048b" localRef="C###1390911606603" location="br.ufc.mdcc.common.KMVPair/KMVPair.hpe" multiple="false" name="KMVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="62" y="251">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -201,42 +187,35 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1389891901169" varName="X###1389891901169"/>
+    <supplyParameter cRef="C###1390911606603" varName="X###1390911606604"/>
     <parameter componentRef="reduce_function" formFieldId="reduce_function" varName="R"/>
     <parameter componentRef="input_key_type" formFieldId="input_key_type" varName="OMK"/>
     <parameter componentRef="input_value_type" formFieldId="input_value_type" varName="OMV"/>
     <parameter componentRef="output_value_type" formFieldId="output_value_type" varName="ORV"/>
-    <innerRenaming cNewName="values" cOldName="input_values" cRef="reduce_function"/>
-    <innerRenaming cNewName="values" cOldName="output_value" cRef="feed_reducing"/>
-    <innerRenaming cNewName="output_item" cOldName="output_value" cRef="reduce_function"/>
-    <innerRenaming cNewName="key" cOldName="input_key" cRef="reduce_function"/>
-    <innerRenaming cNewName="key" cOldName="output_key" cRef="feed_reducing"/>
-    <innerRenaming cNewName="output_item" cOldName="item_type" cRef="put_item"/>
     <innerRenaming cNewName="output" cOldName="stream" cRef="put_item"/>
-    <fusion>
-      <cRefs>reduce_function</cRefs>
-      <cRefs>put_item</cRefs>
-      <pRef>output_item</pRef>
-    </fusion>
+    <innerRenaming cNewName="output_reduce" cOldName="output_value" cRef="reduce_function"/>
+    <innerRenaming cNewName="input_reduce" cOldName="output_values" cRef="feed_reducing"/>
+    <innerRenaming cNewName="input_reduce" cOldName="input_values" cRef="reduce_function"/>
+    <innerRenaming cNewName="output_reduce" cOldName="item_type" cRef="put_item"/>
     <fusion>
       <cRefs>base</cRefs>
       <cRefs>feed_reducing</cRefs>
       <pRef>input</pRef>
     </fusion>
     <fusion>
-      <cRefs>reduce_function</cRefs>
       <cRefs>feed_reducing</cRefs>
-      <pRef>values</pRef>
+      <cRefs>reduce_function</cRefs>
+      <pRef>input_reduce</pRef>
     </fusion>
     <fusion>
+      <cRefs>reduce_function</cRefs>
       <cRefs>put_item</cRefs>
-      <cRefs>base</cRefs>
-      <pRef>output</pRef>
+      <pRef>output_reduce</pRef>
     </fusion>
     <fusion>
-      <cRefs>reduce_function</cRefs>
-      <cRefs>feed_reducing</cRefs>
-      <pRef>key</pRef>
+      <cRefs>base</cRefs>
+      <cRefs>put_item</cRefs>
+      <pRef>output</pRef>
     </fusion>
     <interface iRef="IReducer" nArgs="4">
       <slice isRef="reduce_function">
@@ -252,7 +231,7 @@
         <visualDescription h="10" w="10" x="47" y="21"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.farm.Work;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Reducer { &#xA;&#xA;public interface BaseIReducer&lt;R, ORV, OMK, OMV> : BaseIWork&lt;R, ORV, OMK, OMV>, IComputationKind &#xA;where R:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where ORV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;{&#xA;&#xA;&#x9;IInterator&lt;IData> Input {get;}&#xA;&#x9;IInterator&lt;ORV> Output {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIReducer.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/BaseIReducer.dll" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.KMVPair;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Reducer { &#xA;&#xA;&#x9;public interface BaseIReducer&lt;OMK, OMV, ORV, R> : &#xA;&#x9;BaseIWork&lt;IIterator&lt;IKMVPair&lt;OMK,OMV>>,IIterator&lt;ORV>>, IComputationKind &#xA;&#x9;&#x9;where R:IReduceFunction&lt;ORV, OMK, OMV>&#x9;&#xA;where ORV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;{&#xA;&#xA;&#x9;&#x9;// BUG: J&#xe1; s&#xe3;o herdados de BaseIWork (esse c&#xf3;digo n&#xe3;o deveria ter sido gerado)&#xA;&#x9;&#x9;//IIterator&lt;IKMVPair&lt;OMK,OMV>> Input {get;}&#xA;&#x9;&#x9;//IIterator&lt;IIterator&lt;ORV>> Output {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIReducer.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/BaseIReducer.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IInterator.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IInterator.dll</dependency>
@@ -265,7 +244,7 @@
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Work/bin/1.0.0.0/BaseIWork.dll</dependency>
         </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Work;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Reducer { &#xA;&#xA;public interface IReducer&lt;R, ORV, OMK, OMV> : BaseIReducer&lt;R, ORV, OMK, OMV>, IWork&lt;R, ORV, OMK, OMV>&#xA;where R:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where ORV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IReducer.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/IReducer.dll" versionId="1.0.0.0">
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.KMVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Reducer { &#xA;&#xA;&#x9;public interface IReducer&lt;OMK, OMV, ORV, R> : BaseIReducer&lt;OMK, OMV, ORV, R>, &#xA;&#x9;IWork&lt;IIterator&lt;IKMVPair&lt;OMK,OMV>>,IIterator&lt;ORV>>&#xA;where R:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where ORV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IReducer.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/IReducer.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/BaseIReducer.dll</dependency>
@@ -275,69 +254,56 @@
       <visualDescription h="40" w="80" x="69" y="75">
         <color b="0" g="0" r="255"/>
       </visualDescription>
-      <port name="key">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_key" sRef="reduce_function"/>
-        <slice pRef="output_key" sRef="feed_reducing"/>
-      </port>
-      <port name="output_item">
+      <port name="output_reduce">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output_value" sRef="reduce_function"/>
         <slice pRef="item_type" sRef="put_item"/>
       </port>
-      <port name="values">
+      <port name="input_reduce">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_values" sRef="reduce_function"/>
-        <slice pRef="output_value" sRef="feed_reducing"/>
-      </port>
-      <port name="input">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="feed_reducing"/>
+        <slice pRef="output_values" sRef="feed_reducing"/>
       </port>
       <port name="output">
         <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="feed_reducing"/>
         <slice pRef="stream" sRef="put_item"/>
       </port>
-      <parameter iname="IReduceFunction" order="0" parid="reduce_function" uname="reduce_function" varid="R"/>
-      <parameter iname="IData" order="1" parid="output_value_type" uname="data" varid="ORV"/>
-      <parameter iname="IData" order="2" parid="input_key_type" uname="data" varid="OMK"/>
-      <parameter iname="IData" order="3" parid="input_value_type" uname="data" varid="OMV"/>
+      <parameter iname="IData" order="0" parid="input_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IData" order="1" parid="input_value_type" uname="data" varid="OMV"/>
+      <parameter iname="IData" order="2" parid="output_value_type" uname="data" varid="ORV"/>
+      <parameter iname="IReduceFunction" order="3" parid="reduce_function" uname="reduce_function" varid="R"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
     <unit iRef="IReducer" multiple="true" private="false" replica="0" uRef="work" visibleInterface="true">
       <super cRef="base" uRef="work"/>
-      <slices cRef="output_item" replica="0" uRef="data" sliceName="output_item" transitive="true">
-        <visualDescription h="10" w="10" x="112" y="26"/>
-      </slices>
       <slices cRef="input" replica="0" uRef="data" sliceName="input" transitive="false">
         <visualDescription h="10" w="10" x="9" y="12"/>
       </slices>
-      <slices cRef="values" replica="0" uRef="iterator" sliceName="values" transitive="true">
-        <visualDescription h="10" w="10" x="79" y="25"/>
+      <slices cRef="input_reduce" replica="0" uRef="kmv_pair" sliceName="input_reduce" transitive="true">
+        <visualDescription h="10" w="10" x="33" y="0"/>
+      </slices>
+      <slices cRef="output_reduce" replica="0" uRef="data" sliceName="output_reduce" transitive="true">
+        <visualDescription h="10" w="10" x="112" y="26"/>
       </slices>
       <slices cRef="output" replica="0" uRef="data" sliceName="output" transitive="false">
         <visualDescription h="10" w="10" x="59" y="19"/>
       </slices>
-      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="true">
-        <visualDescription h="10" w="10" x="5" y="17"/>
-      </slices>
       <slices cRef="reduce_function" replica="0" uRef="reduce_function" sliceName="reduce_function" transitive="false">
         <visualDescription h="10" w="10" x="1" y="17"/>
-        <port>output_item</port>
-        <port>values</port>
-        <port>key</port>
+        <port>input_reduce</port>
+        <port>output_reduce</port>
       </slices>
       <slices cRef="feed_reducing" replica="0" uRef="feed_reducing" sliceName="feed_reducing" transitive="false">
         <visualDescription h="10" w="10" x="17" y="25"/>
         <port>input</port>
-        <port>values</port>
-        <port>key</port>
+        <port>input_reduce</port>
       </slices>
       <slices cRef="put_item" replica="0" uRef="put_item" sliceName="put_item" transitive="false">
         <visualDescription h="10" w="10" x="47" y="21"/>
-        <port>output_item</port>
+        <port>output_reduce</port>
         <port>output</port>
       </slices>
       <visualDescription h="40" w="80" x="194" y="218"/>

@@ -1,17 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/BaseITargetShuffler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.reducer.impl.FeedReducingImpl/src/1.0.0.0/BaseIFeedReducingImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/BaseIReduceWorkerImpl.cs" Line="29" Column="3" />
-      <File FileName="../br.ufc.mdcc.farm.Farm/src/1.0.0.0/IWorker.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/BaseIManagerImpl.cs" Line="77" Column="26" />
-      <File FileName="../br.ufc.mdcc.farm.Scatter/src/1.0.0.0/IScatterTarget.cs" Line="10" Column="3" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/BaseIMapWorkerImpl.cs" Line="30" Column="2" />
-      <File FileName="../br.ufc.mdcc.farm.Farm/src/1.0.0.0/IManager.cs" Line="13" Column="10" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/ISourceShuffler.cs" Line="9" Column="41" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/ITargetShuffler.cs" Line="11" Column="25" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/BaseITargetShuffler.cs" Line="11" Column="4" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/BaseISourceShuffler.cs" Line="12" Column="45" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.ReduceFunction/src/1.0.0.0/IReduceFunction.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.ReduceFunction/src/1.0.0.0/BaseIReduceFunction.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.reducer.FeedReducing/src/1.0.0.0/BaseIFeedReducing.cs" Line="16" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.reducer.impl.FeedReducingImpl/src/1.0.0.0/BaseIFeedReducingImpl.cs" Line="30" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
