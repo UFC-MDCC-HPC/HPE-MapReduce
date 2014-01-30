@@ -18,6 +18,11 @@ public ISourceShufflerImpl() {
 
 public override void main()
 {
+			/* 1. Ler os pares de chaves (OMK, OPK) de Source_data
+			 * 2. Enviar cada chave OMK para o reducer (unidade target)
+			 *    determinada pela chave OPK.
+			 */
+
 }
 
 }

@@ -2,7 +2,7 @@
 
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.common.Set;
+using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.user.SplitFunction { 
@@ -14,7 +14,7 @@ namespace br.ufc.mdcc.mapreduce.user.SplitFunction {
 {
 
 		I Input_data {get;}
-		ISet<IKVPair<IMK,IMV>> Output_data {get;}
+		IIterator<IKVPair<IMK,IMV>> Output_data {get;}
 
 
 } // end main interface 

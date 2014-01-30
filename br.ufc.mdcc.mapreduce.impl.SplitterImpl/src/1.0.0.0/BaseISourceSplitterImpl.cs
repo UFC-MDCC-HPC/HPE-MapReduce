@@ -41,12 +41,12 @@ public I Source_data {
 	}
 }
 
-private ISet<IKVPair<IMK, IMV>> bins = null;
+private IIterator<IKVPair<IMK, IMV>> bins = null;
 
-protected ISet<IKVPair<IMK, IMV>> Bins {
+protected IIterator<IKVPair<IMK, IMV>> Bins {
 	get {
 		if (this.bins == null)
-			this.bins = (ISet<IKVPair<IMK, IMV>>) Services.getPort("bins");
+				this.bins = (IIterator<IKVPair<IMK, IMV>>) Services.getPort("bins");
 		return this.bins;
 	}
 }

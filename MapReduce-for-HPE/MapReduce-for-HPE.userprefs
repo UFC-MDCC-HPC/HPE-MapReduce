@@ -1,12 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/BaseIMapperImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/IWorkReducerImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/BaseIMapperImpl.cs" Line="8" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseISourcePartitionerImpl.cs" Line="9" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseITargetPartitionerImpl.cs" Line="7" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/BaseISourceShufflerImpl.cs" Line="10" Column="33" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/BaseIWorkReducerImpl.cs" Line="9" Column="31" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/IWorkReducerImpl.cs" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

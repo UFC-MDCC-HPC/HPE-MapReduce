@@ -19,7 +19,14 @@ where P:IPartitionFunction<OMK, OPK>
 
 		} 
 
-		public override void main() { 
+		public override void main() 
+		{
+			/* 1. Ler os elementos de Source_data, um a um, e 
+			 *    copiar a chave (OMK) em Data_key.
+			 * 2. A cada chave de Source_data, chamar Partition_function.go();
+			 * 3. Enviar o resultado de Partition_function.go(), via MPI,
+			 *    para o gerente (unidade target).
+			 */
 
 		}
 

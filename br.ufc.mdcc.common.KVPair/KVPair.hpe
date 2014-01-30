@@ -20,7 +20,7 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="key_type" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="key_type" exposed="true">
       <visualDescription h="60" w="100" x="148" y="444">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -28,7 +28,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="value_type" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="value_type" exposed="true">
       <visualDescription h="60" w="100" x="308" y="410">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -50,16 +50,24 @@
       <visualDescription h="63" w="142" x="200" y="101">
         <color b="144" g="238" r="144"/>
       </visualDescription>
+      <port name="key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="key" sRef="key"/>
+      </port>
+      <port name="value">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="value" sRef="value"/>
+      </port>
       <parameter iname="IData" order="0" parid="key_type" uname="data" varid="K"/>
       <parameter iname="IData" order="1" parid="value_type" uname="data" varid="V"/>
     </interface>
     <unit iRef="IKVPair" multiple="false" private="false" replica="0" uRef="kv_pair" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="false">
-        <visualDescription h="10" w="10" x="6" y="24"/>
-      </slices>
       <slices cRef="value" replica="0" uRef="data" sliceName="value" transitive="false">
         <visualDescription h="10" w="10" x="61" y="25"/>
+      </slices>
+      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="false">
+        <visualDescription h="10" w="10" x="6" y="24"/>
       </slices>
       <visualDescription h="40" w="80" x="412" y="333"/>
     </unit>

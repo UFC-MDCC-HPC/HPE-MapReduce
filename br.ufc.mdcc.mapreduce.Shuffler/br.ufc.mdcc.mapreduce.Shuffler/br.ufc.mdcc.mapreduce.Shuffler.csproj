@@ -66,10 +66,6 @@
       <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
       <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair.csproj">
-      <Project>{2ADF1A46-51E2-4AB0-915D-EE7F4331BD04}</Project>
-      <Name>br.ufc.mdcc.common.KMVPair</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
       <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
       <Name>br.ufc.mdcc.common.KVPair</Name>

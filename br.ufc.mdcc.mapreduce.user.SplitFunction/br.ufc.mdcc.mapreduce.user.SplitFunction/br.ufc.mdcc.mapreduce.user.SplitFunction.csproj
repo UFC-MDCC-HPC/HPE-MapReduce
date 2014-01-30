@@ -52,13 +52,13 @@
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.Set\br.ufc.mdcc.common.Set\br.ufc.mdcc.common.Set.csproj">
-      <Project>{60EDE424-4D6C-4204-B926-93A2CFF58C8C}</Project>
-      <Name>br.ufc.mdcc.common.Set</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
       <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
       <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

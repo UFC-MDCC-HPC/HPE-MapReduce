@@ -20,8 +20,11 @@ public ISourceSplitterImpl() {
 
 } 
 
-public override void main() { 
+public override void main() 
+{ 
 
+			// 1. Criar uma thread para executar Split_function.go();
+			// 2. Criar uma thread para executar Send_bins.go()
 }
 
 }

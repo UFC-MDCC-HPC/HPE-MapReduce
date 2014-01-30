@@ -31,26 +31,52 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009fb4d2d313b8052f34899d0f4c8138e078fe7e96c129c10b785a1771af6508d61a848410cf8d5208ba0a971653b6fbee42ade860727082895bb12353d97e2a6841a9be458b8339e5d681f95168c1289388e69394117c763ce6665b68e275d1d6b166a34143d073530df2a4f5d1e60d372c6170f399f5b5fb6e067cd6c315048b" localRef="input_values" location="br.ufc.mdcc.common.KMVPair/KMVPair.hpe" multiple="false" name="KMVPair" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="60" w="100" x="139" y="143">
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="100" x="147" y="131">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="OMV"/>
+      <parameter formFieldId="value_type" varName="O"/>
       <parameter formFieldId="key_type" varName="OMK"/>
-      <unitBounds parallel="false" uRef="kmv_pair">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="148" y="444">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="308" y="410">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="value" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="104" y="364">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="OMV"/>
+      <unitBounds parallel="false" uRef="iterator">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="value" varName="O"/>
     <parameter componentRef="input_key" formFieldId="input_key_type" varName="OMK"/>
     <parameter componentRef="value_type" formFieldId="input_value_type" varName="OMV"/>
     <parameter componentRef="output_value" formFieldId="output_type" varName="ORV"/>
-    <interface iRef="IReduceFunction" nArgs="3">
+    <interface iRef="IReduceFunction" nArgs="2">
       <slice isRef="output_value">
         <originRef cRef="output_value" iRef="IData"/>
         <visualDescription h="10" w="10" x="112" y="26"/>
       </slice>
       <slice isRef="input_values">
-        <originRef cRef="input_values" iRef="IKMVPair"/>
+        <originRef cRef="input_values" iRef="IKVPair"/>
         <visualDescription h="10" w="10" x="33" y="0"/>
       </slice>
       <visualDescription h="40" w="141" x="320" y="192">
@@ -62,11 +88,18 @@
       </port>
       <port name="input_values">
         <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="input"/>
+        <slice pRef="input_values" sRef="input_values"/>
+      </port>
+      <port name="value">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="value" sRef="input_values"/>
+      </port>
+      <port name="key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="key" sRef="input_values"/>
       </port>
       <parameter iname="IData" order="0" parid="output_type" uname="data" varid="ORV"/>
       <parameter iname="IData" order="1" parid="input_key_type" uname="data" varid="OMK"/>
-      <parameter iname="IData" order="2" parid="input_value_type" uname="data" varid="OMV"/>
       <action id="main">
         <protocol/>
       </action>
@@ -75,8 +108,16 @@
       <slices cRef="output_value" replica="0" uRef="data" sliceName="output_value" transitive="false">
         <visualDescription h="10" w="10" x="112" y="26"/>
       </slices>
-      <slices cRef="input_values" replica="0" uRef="kmv_pair" sliceName="input_values" transitive="false">
+      <slices cRef="input_values" replica="0" uRef="kv_pair" sliceName="input_values" transitive="false">
         <visualDescription h="10" w="10" x="33" y="0"/>
+        <port>value</port>
+        <port>key</port>
+      </slices>
+      <slices cRef="value" replica="0" uRef="data" sliceName="value" transitive="true">
+        <visualDescription h="10" w="10" x="61" y="25"/>
+      </slices>
+      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="true">
+        <visualDescription h="10" w="10" x="6" y="24"/>
       </slices>
       <visualDescription h="40" w="141" x="310" y="329"/>
     </unit>

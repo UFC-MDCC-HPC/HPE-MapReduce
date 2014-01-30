@@ -21,10 +21,6 @@ where OMV:IData
 where M:IMapFunction<IMK, IMV, OMK, OMV>
 {
 
-
-
-
-
 private M map_function = default(M);
 
 protected M Map_function {

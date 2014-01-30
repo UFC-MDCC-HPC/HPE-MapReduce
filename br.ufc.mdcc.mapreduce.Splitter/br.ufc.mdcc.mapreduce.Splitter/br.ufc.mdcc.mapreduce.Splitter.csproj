@@ -62,10 +62,6 @@
       <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
       <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.Set\br.ufc.mdcc.common.Set\br.ufc.mdcc.common.Set.csproj">
-      <Project>{60EDE424-4D6C-4204-B926-93A2CFF58C8C}</Project>
-      <Name>br.ufc.mdcc.common.Set</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.farm.Scatter\br.ufc.mdcc.farm.Scatter\br.ufc.mdcc.farm.Scatter.csproj">
       <Project>{2AE129B3-F4A5-4FD3-8993-E509EA33B483}</Project>
       <Name>br.ufc.mdcc.farm.Scatter</Name>

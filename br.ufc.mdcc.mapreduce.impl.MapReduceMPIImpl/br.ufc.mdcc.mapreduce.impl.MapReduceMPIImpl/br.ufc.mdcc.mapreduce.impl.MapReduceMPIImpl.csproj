@@ -124,10 +124,6 @@
       <Project>{E7A8C1A8-33A9-466A-8964-C9935E8776BF}</Project>
       <Name>br.ufc.mdcc.mapreduce.Combiner</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair.csproj">
-      <Project>{2ADF1A46-51E2-4AB0-915D-EE7F4331BD04}</Project>
-      <Name>br.ufc.mdcc.common.KMVPair</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.farm.Gather\br.ufc.mdcc.farm.Gather\br.ufc.mdcc.farm.Gather.csproj">
       <Project>{9DA059EA-4AA4-405C-99FF-0885C76C4F13}</Project>
       <Name>br.ufc.mdcc.farm.Gather</Name>

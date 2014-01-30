@@ -4,7 +4,7 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Set;
+using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
@@ -16,12 +16,12 @@ where IMK:IData
 where IMV:IData
 {
 
-private ISet<IKVPair<IMK, IMV>> bins = null;
+private IIterator<IKVPair<IMK, IMV>> bins = null;
 
-public ISet<IKVPair<IMK, IMV>> Bins {
+public IIterator<IKVPair<IMK, IMV>> Bins {
 	get {
 		if (this.bins == null)
-			this.bins = (ISet<IKVPair<IMK, IMV>>) Services.getPort("bins");
+				this.bins = (IIterator<IKVPair<IMK, IMV>>) Services.getPort("bins");
 		return this.bins;
 	}
 }

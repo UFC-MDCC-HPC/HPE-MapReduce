@@ -19,6 +19,12 @@ public ITargetShufflerImpl() {
 
 public override void main()
 {
+		/* 1. Receber as chaves OMK enviadas pelo gerente (unidade source).
+		 * 2. Buscar nos mappers (que unidade ?) os valores.
+		 * 	  (buscando ainda solução para comunicação com os mappers)
+		 */
+
+
 }
 
 

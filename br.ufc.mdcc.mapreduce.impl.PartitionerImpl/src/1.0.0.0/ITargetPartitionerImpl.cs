@@ -16,7 +16,11 @@ where OPK:IData
 
 		} 
 
-		public override void main() { 
+		public override void main() 
+		{
+			/* receber o par de chaves (OMK, OPK) dos mappers (unidade source)
+			 * e copiar no iterator Target_data.
+			 */
 
 		}
 

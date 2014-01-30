@@ -20,7 +20,13 @@ where M:IMapFunction<IMK, IMV, OMK, OMV>
 
 	} 
 
-	public override void main() { 
+	public override void main() 
+	{ 
+			/* 1. Ler os elementos do iterator Input, um a um;
+			 * 2. Para cada par, atribuir a chave a Map_key e o valor a Map_value;
+			 * 3. Chamar Map_function.go()
+			 */
+
 
 	}
 

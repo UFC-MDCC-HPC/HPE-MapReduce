@@ -52,9 +52,5 @@
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.IteratorDictionary\br.ufc.mdcc.common.IteratorDictionary\br.ufc.mdcc.common.IteratorDictionary.csproj">
-      <Project>{7C3402A6-BC58-4ABE-BEC9-F10285F02622}</Project>
-      <Name>br.ufc.mdcc.common.IteratorDictionary</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>

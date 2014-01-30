@@ -19,12 +19,12 @@ where ORV:IData
 where R:IReduceFunction<ORV, OMK, OMV>
 {
 
-	private IIterator<IKMVPair<OMK,OMV>> input = null;
+		private IIterator<IKVPair<OMK,IIterator<OMV>>> input = null;
 
-	public IIterator<IKMVPair<OMK,OMV>> Input {
+		public IIterator<IKVPair<OMK,IIterator<OMV>>> Input {
 	get {
 		if (this.input == null)
-					this.input = (IIterator<IKMVPair<OMK,OMV>>) Services.getPort("input");
+					this.input = (IIterator<IKVPair<OMK,IIterator<OMV>>>) Services.getPort("input");
 		return this.input;
 	}
 }

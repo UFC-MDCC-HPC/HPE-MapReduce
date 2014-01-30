@@ -11,7 +11,7 @@ using br.ufc.mdcc.mapreduce.Combiner;
 using br.ufc.mdcc.mapreduce.Reducer;
 using br.ufc.mdcc.mapreduce.user.ReduceFunction;
 using br.ufc.mdcc.common.Iterator;
-using br.ufc.mdcc.common.KMVPair;
+using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.MapReduce;
 
@@ -25,12 +25,12 @@ where OMV:IData
 where PLATFORM:IPlatform
 {
 
-		private IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKMVPair<OMK,OMV>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> farm_reduce = null;
+		private IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> farm_reduce = null;
 
-		protected IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKMVPair<OMK,OMV>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> Farm_reduce {
+		protected IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> Farm_reduce {
 	get {
 		if (this.farm_reduce == null)
-					this.farm_reduce = (IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKMVPair<OMK,OMV>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM>) Services.getPort("farm_reduce");
+					this.farm_reduce = (IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM>) Services.getPort("farm_reduce");
 		return this.farm_reduce;
 	}
 }

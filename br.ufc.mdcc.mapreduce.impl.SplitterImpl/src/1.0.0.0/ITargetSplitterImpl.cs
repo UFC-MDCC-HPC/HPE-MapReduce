@@ -16,8 +16,9 @@ public ITargetSplitterImpl() {
 
 } 
 
-		public override void main() { 
-
+		public override void main() 
+		{ 
+			// Executar Send_bins.go()
 		}
 
 }

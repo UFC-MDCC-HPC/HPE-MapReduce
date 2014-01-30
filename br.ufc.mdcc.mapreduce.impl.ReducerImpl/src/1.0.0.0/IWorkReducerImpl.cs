@@ -22,6 +22,11 @@ public IWorkReducerImpl() {
 
 public override void main() 
 { 
+			/* 1. Ler pares chave (OMK) e valores (OMV) de Input.
+			 * 2. Para cada par, atribuir a Key e Values e chamar Reduce_function.go();
+			 * 3. Pegar o resultado de Reduction_function.go() de Output_reduce (ORV) 
+			 *    e colocar no iterator Output.
+			 */
 }
 
 }

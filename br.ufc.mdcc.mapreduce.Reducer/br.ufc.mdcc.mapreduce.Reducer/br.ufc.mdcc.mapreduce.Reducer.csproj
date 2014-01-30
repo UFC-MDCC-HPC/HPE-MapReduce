@@ -64,9 +64,9 @@
       <Project>{F5906E26-64FC-4968-9A30-8C57BF44A4D7}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.ReduceFunction</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair\br.ufc.mdcc.common.KMVPair.csproj">
-      <Project>{2ADF1A46-51E2-4AB0-915D-EE7F4331BD04}</Project>
-      <Name>br.ufc.mdcc.common.KMVPair</Name>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

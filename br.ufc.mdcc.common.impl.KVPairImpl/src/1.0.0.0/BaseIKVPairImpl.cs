@@ -16,7 +16,7 @@ where V:IData
 
 private V value = default(V);
 
-protected V Value {
+public V Value {
 	get {
 		if (this.value == null)
 			this.value = (V) Services.getPort("value");
@@ -26,7 +26,7 @@ protected V Value {
 
 private K key = default(K);
 
-protected K Key {
+public K Key {
 	get {
 		if (this.key == null)
 			this.key = (K) Services.getPort("key");
