@@ -5,10 +5,10 @@ using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.Combiner { 
 
-public interface ITargetCombiner<O> : 
-	BaseITargetCombiner<O>, 
-	IGatherTarget<O>
-where O:IData
+	public interface ITargetCombiner<ORV> : 
+	BaseITargetCombiner<ORV>, 
+	IGatherTarget<IIterator<ORV>>
+		where ORV:IData
 {
 
 

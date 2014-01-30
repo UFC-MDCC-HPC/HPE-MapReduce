@@ -3,13 +3,14 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.farm.Gather;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.Combiner { 
 
-public interface BaseITargetCombiner<O> : 
-	BaseIGatherTarget<O>, 
+	public interface BaseITargetCombiner<ORV> : 
+	BaseIGatherTarget<IIterator<ORV>>, 
 	ISynchronizerKind 
-where O:IData
+		where ORV:IData
 {
 
 
