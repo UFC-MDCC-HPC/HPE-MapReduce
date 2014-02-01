@@ -22,10 +22,11 @@ public IManagerImpl() {
 
 } 
 
-public override int go() { 
+public override void main() 
+{ 
 
-	 return 0
 }
+
 
 }
 

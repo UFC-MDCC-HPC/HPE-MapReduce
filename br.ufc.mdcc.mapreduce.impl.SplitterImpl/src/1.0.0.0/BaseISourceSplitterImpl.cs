@@ -6,10 +6,11 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.mapreduce.user.SplitFunction;
 using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.common.Set;
+using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
 using br.ufc.mdcc.mapreduce.Splitter;
+using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { 
 
@@ -61,6 +62,17 @@ protected ISourceScatterSplitData<IMK, IMV> Send_bins {
 	}
 }
 
+private  IMPIDirect mpi_comm = null;
+
+protected IMPIDirect Mpi_comm {
+	get {
+		if (this.mpi_comm == null) 
+		{
+			this.mpi_comm = (IMPIDirect) Services.getPort("mpi_comm");
+		}
+		return this.mpi_comm;
+	}
+}
 
 
 

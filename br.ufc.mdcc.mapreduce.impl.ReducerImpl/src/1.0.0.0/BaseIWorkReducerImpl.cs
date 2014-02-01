@@ -5,7 +5,7 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
-using br.ufc.mdcc.common.KMVPair;
+using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.user.ReduceFunction;
 using br.ufc.mdcc.mapreduce.Reducer;

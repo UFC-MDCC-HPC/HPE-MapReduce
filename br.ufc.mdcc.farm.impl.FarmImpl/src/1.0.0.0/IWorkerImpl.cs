@@ -24,9 +24,8 @@ public IWorkerImpl() {
 
 } 
 
-public override int go() { 
+public override void main() { 
 
-	 return 0
 }
 
 }

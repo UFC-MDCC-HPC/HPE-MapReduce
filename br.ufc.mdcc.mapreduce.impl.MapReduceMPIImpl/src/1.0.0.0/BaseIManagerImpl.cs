@@ -18,15 +18,15 @@ using br.ufc.mdcc.mapreduce.MapReduce;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { 
 
-	public abstract class BaseIManagerImpl<IMAP, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED>: Computation, BaseIManagerMapReduce<IMAP, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED>
-where IMAP:IData
-where IMK:IData
-where IMV:IData
+	public abstract class BaseIManagerImpl<IMAP, IMK, IMV, Sf, OMK, OPK, ORV, PLATFORM>: Computation, BaseIManagerMapReduce<IMAP, IMK, IMV, Sf, OMK, OPK, ORV, PLATFORM>
+		where IMAP:IData
+		where IMK:IData
+		where IMV:IData
 		where Sf:ISplitFunction<IMAP, IMK, IMV>
-where OMK:IData
-where OPK:IData
-where PLATFORM:IPlatform
-where ORED:IData
+		where OMK:IData
+		where OPK:IData
+		where ORV:IData
+		where PLATFORM:IPlatform
 {
 
 	private IMAP input_data = default(IMAP);
@@ -49,12 +49,12 @@ public IData Partition_mapping {
 	}
 }
 
-		private ORED output_data = default(ORED);
+		private IIterator<ORV> output_data = null;
 
-	public ORED Output_data {
+		public IIterator<ORV> Output_data {
 	get {
 		if (this.output_data == null)
-				this.output_data = (ORED) Services.getPort("output_data");
+					this.output_data = (IIterator<ORV>) Services.getPort("output_data");
 		return this.output_data;
 	}
 }
@@ -69,12 +69,12 @@ public IData Partition_mapping {
 	}
 }
 
-		private IManager<ISourceShuffler<OMK, OPK>, IIterator<IKVPair<OMK,OPK>>, ITargetCombiner<ORED>, ORED, PLATFORM> farm_reduce = null;
+		private IManager<ISourceShuffler<OMK, OPK>, IIterator<IKVPair<OMK,OPK>>, ITargetCombiner<ORV>, IIterator<ORV>, PLATFORM> farm_reduce = null;
 
-		protected IManager<ISourceShuffler<OMK, OPK>, IIterator<IKVPair<OMK,OPK>>, ITargetCombiner<ORED>, ORED, PLATFORM> Farm_reduce {
+		protected IManager<ISourceShuffler<OMK, OPK>, IIterator<IKVPair<OMK,OPK>>, ITargetCombiner<ORV>, IIterator<ORV>, PLATFORM> Farm_reduce {
 	get {
 		if (this.farm_reduce == null)
-					this.farm_reduce = (IManager<ISourceShuffler<OMK, OPK>, IIterator<IKVPair<OMK,OPK>>, ITargetCombiner<ORED>, ORED, PLATFORM>) Services.getPort("farm_reduce");
+					this.farm_reduce = (IManager<ISourceShuffler<OMK, OPK>, IIterator<IKVPair<OMK,OPK>>, ITargetCombiner<ORV>, IIterator<ORV>, PLATFORM>) Services.getPort("farm_reduce");
 		return this.farm_reduce;
 	}
 }

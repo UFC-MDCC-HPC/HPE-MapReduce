@@ -1,7 +1,6 @@
 /* AUTOMATICALLY GENERATE CODE */
 
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Set;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.farm.Scatter;

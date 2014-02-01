@@ -70,12 +70,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.split
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.impl.KVPairImpl", "..\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl.csproj", "{9A02D2DD-0967-4810-A845-3EDE50DDE195}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "environment.MPIDirect", "..\environment.MPIDirect\environment.MPIDirect\environment.MPIDirect.csproj", "{1F563648-2878-4A44-B98C-BBED70407F5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "impl.environment.MPIDirectImpl", "..\impl.environment.MPIDirectImpl\impl.environment.MPIDirectImpl\impl.environment.MPIDirectImpl.csproj", "{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F563648-2878-4A44-B98C-BBED70407F5D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1F563648-2878-4A44-B98C-BBED70407F5D}.Debug|x86.Build.0 = Debug|Any CPU
+		{1F563648-2878-4A44-B98C-BBED70407F5D}.Release|x86.ActiveCfg = Release|Any CPU
+		{1F563648-2878-4A44-B98C-BBED70407F5D}.Release|x86.Build.0 = Release|Any CPU
 		{1FC35A17-C8A1-4E38-8B78-26E9197BD14B}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1FC35A17-C8A1-4E38-8B78-26E9197BD14B}.Debug|x86.Build.0 = Debug|Any CPU
 		{1FC35A17-C8A1-4E38-8B78-26E9197BD14B}.Release|x86.ActiveCfg = Release|Any CPU
@@ -152,6 +160,10 @@ Global
 		{ADBC203E-3234-489B-B8D3-57D8484C99E3}.Debug|x86.Build.0 = Debug|Any CPU
 		{ADBC203E-3234-489B-B8D3-57D8484C99E3}.Release|x86.ActiveCfg = Release|Any CPU
 		{ADBC203E-3234-489B-B8D3-57D8484C99E3}.Release|x86.Build.0 = Release|Any CPU
+		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Debug|x86.Build.0 = Debug|Any CPU
+		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Release|x86.ActiveCfg = Release|Any CPU
+		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Release|x86.Build.0 = Release|Any CPU
 		{BCB96804-B787-4ED7-BB0F-127F3649E5D7}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{BCB96804-B787-4ED7-BB0F-127F3649E5D7}.Debug|x86.Build.0 = Debug|Any CPU
 		{BCB96804-B787-4ED7-BB0F-127F3649E5D7}.Release|x86.ActiveCfg = Release|Any CPU

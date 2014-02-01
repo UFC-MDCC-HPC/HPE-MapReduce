@@ -7,6 +7,7 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.mapreduce.Combiner;
+using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { 
 
@@ -24,6 +25,19 @@ where ORV:IData
 			return this.source_data;
 		}
 	}
+
+	private  IMPIDirect mpi_comm = null;
+
+	protected IMPIDirect Mpi_comm {
+		get {
+			if (this.mpi_comm == null) 
+			{
+				this.mpi_comm = (IMPIDirect) Services.getPort("mpi_comm");
+			}
+			return this.mpi_comm;
+		}
+	}
+
 
 }
 }
