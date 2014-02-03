@@ -1,4 +1,4 @@
-﻿<Properties>
+﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.MapReduce/src/1.0.0.0/BaseIManagerMapReduce.cs">
     <Files>
@@ -19,6 +19,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="../../../../../../hash-programming-environment/DGAC/DGAC.cs" line="1045" offsetX="363" offsetY="18342" expression="e" liveUpdate="False" />
+    <Watch file="hash-programming-environment/DGAC/DGAC.cs" line="1045" offsetX="363" offsetY="18342" expression="e" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>

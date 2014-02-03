@@ -8,25 +8,23 @@ using br.ufc.mdcc.mapreduce.Splitter;
 
 namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { 
 
-public class ISourceSplitterImpl<I, IMK, IMV, Sf> : 
-	BaseISourceSplitterImpl<I, IMK, IMV, Sf>, ISourceSplitter<I, IMK, IMV, Sf>
-where I:IData
-where IMK:IData
-where IMV:IData
-where Sf:ISplitFunction<I, IMK, IMV>
-{
+	public class ISourceSplitterImpl<I, IMK, IMV, Sf> : BaseISourceSplitterImpl<I, IMK, IMV, Sf>, ISourceSplitter<I, IMK, IMV, Sf>
+    where I:IData
+    where IMK:IData
+    where IMV:IData
+    where Sf:ISplitFunction<I, IMK, IMV>
+    {
 
-public ISourceSplitterImpl() { 
+        public ISourceSplitterImpl() { 
 
-} 
+        } 
 
-public override void main() 
-{ 
+        public override void main() { 
 
 			// 1. Criar uma thread para executar Split_function.go();
 			// 2. Criar uma thread para executar Send_bins.go()
-}
+        }
 
-}
+    }
 
 }
