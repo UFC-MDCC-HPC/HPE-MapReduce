@@ -62,15 +62,6 @@ protected R Result {
 	}
 }
 
-private R result = default(R);
-
-protected R Result {
-	get {
-		if (this.result == null)
-			this.result = (R) Services.getPort("result");
-		return this.result;
-	}
-}
 
 private C gather = default(C);
 
@@ -92,19 +83,7 @@ protected J Job {
 	}
 }
 
-private J job = default(J);
-
-protected J Job {
-	get {
-		if (this.job == null)
-			this.job = (J) Services.getPort("job");
-		return this.job;
-	}
-}
-
-
-abstract public int go(); 
-
+	
 
 }
 

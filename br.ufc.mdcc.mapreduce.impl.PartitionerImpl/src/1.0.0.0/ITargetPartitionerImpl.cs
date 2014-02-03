@@ -4,6 +4,7 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Partitioner;
+using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 

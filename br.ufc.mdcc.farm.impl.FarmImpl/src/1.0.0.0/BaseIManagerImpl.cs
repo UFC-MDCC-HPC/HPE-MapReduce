@@ -70,9 +70,7 @@ public I Input {
 	}
 }
 
-
-abstract public int go(); 
-
+	
 
 }
 

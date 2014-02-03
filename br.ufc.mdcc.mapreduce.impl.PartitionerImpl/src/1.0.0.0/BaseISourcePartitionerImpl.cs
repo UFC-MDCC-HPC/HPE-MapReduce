@@ -9,6 +9,7 @@ using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.Partitioner;
+using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 
@@ -74,6 +75,17 @@ protected IIterator<IKVPair<OMK, OPK>> Output_partition_info_source {
 	}
 }
 
+private  IMPIDirect mpi_comm = null;
+
+protected IMPIDirect Mpi_comm {
+	get {
+		if (this.mpi_comm == null) 
+		{
+			this.mpi_comm = (IMPIDirect) Services.getPort("mpi_comm");
+		}
+		return this.mpi_comm;
+	}
+}
 
 
 }

@@ -1,3 +1,7 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.farm.Farm.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.farm.Farm.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/obj/Debug/br.ufc.mdcc.farm.Farm.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/obj/Debug/br.ufc.mdcc.farm.Farm.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/DGAC.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.farm.Gather.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.farm.Gather.dll.mdb
@@ -9,7 +13,3 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.common.Platform.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.common.Platform.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.farm.Farm.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/bin/Debug/br.ufc.mdcc.farm.Farm.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/obj/Debug/br.ufc.mdcc.farm.Farm.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Farm/br.ufc.mdcc.farm.Farm/obj/Debug/br.ufc.mdcc.farm.Farm.dll.mdb

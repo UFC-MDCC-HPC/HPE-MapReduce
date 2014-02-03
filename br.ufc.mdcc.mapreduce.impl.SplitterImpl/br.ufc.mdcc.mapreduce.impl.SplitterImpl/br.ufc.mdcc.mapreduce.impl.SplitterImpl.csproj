@@ -82,5 +82,9 @@
       <Project>{2AE129B3-F4A5-4FD3-8993-E509EA33B483}</Project>
       <Name>br.ufc.mdcc.farm.Scatter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\environment.MPIDirect\environment.MPIDirect\environment.MPIDirect.csproj">
+      <Project>{1F563648-2878-4A44-B98C-BBED70407F5D}</Project>
+      <Name>environment.MPIDirect</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
