@@ -2,14 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../impl.environment.MPIDirectImpl/src/1.0.0.0/BaseIMPIDirectImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.farm.impl.FarmImpl/src/1.0.0.0/IManagerImpl.cs" Line="15" Column="14" />
-      <File FileName="../br.ufc.mdcc.farm.impl.FarmImpl/src/1.0.0.0/BaseIWorkerImpl.cs" Line="86" Column="2" />
-      <File FileName="../br.ufc.mdcc.farm.impl.FarmImpl/src/1.0.0.0/BaseIManagerImpl.cs" Line="73" Column="2" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/BaseIManagerImpl.cs" Line="52" Column="45" />
+      <File FileName="../br.ufc.mdcc.farm.impl.FarmImpl/src/1.0.0.0/IManagerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.farm.impl.FarmImpl/src/1.0.0.0/BaseIWorkerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.farm.impl.FarmImpl/src/1.0.0.0/BaseIManagerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/BaseIManagerImpl.cs" Line="1" Column="1" />
       <File FileName="../br.ufc.mdcc.mapreduce.MapReduce/src/1.0.0.0/BaseIManagerMapReduce.cs" Line="1" Column="1" />
       <File FileName="../br.ufc.mdcc.mapreduce.Combiner/src/1.0.0.0/ITargetCombiner.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/IManagerImpl.cs" Line="31" Column="2" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/BaseIWorkReducerImpl.cs" Line="8" Column="26" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/src/1.0.0.0/IManagerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/BaseIWorkReducerImpl.cs" Line="1" Column="1" />
       <File FileName="../impl.environment.MPIDirectImpl/src/1.0.0.0/BaseIMPIDirectImpl.cs" Line="7" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
