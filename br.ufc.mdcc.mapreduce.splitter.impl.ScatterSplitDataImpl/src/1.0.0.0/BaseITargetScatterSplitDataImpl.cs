@@ -8,6 +8,7 @@ using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
+using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl { 
 
@@ -27,6 +28,17 @@ public IIterator<IKVPair<IMK, IMV>> Target_data {
 }
 
 
+private  IMPIDirect mpi_comm = null;
+
+protected IMPIDirect Mpi_comm {
+	get {
+		if (this.mpi_comm == null) 
+		{
+			this.mpi_comm = (IMPIDirect) Services.getPort("mpi_comm");
+		}
+		return this.mpi_comm;
+	}
+}
 
 
 

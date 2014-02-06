@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="10" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="65" y="24">
 <fastViewData fastViewLocation="1024">
@@ -27,7 +27,7 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.emonic.base.editors.CSharpEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.HPEVersionEditor" itemType="typePlaceholder" x="96" y="30"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -81,10 +81,16 @@
 <filter element="*.class" isEnabled="false"/>
 </filters>
 <expanded>
+<element path="/br.ufc.mdcc.farm.Farm"/>
+<element path="/br.ufc.mdcc.farm.Scatter"/>
 <element path="/br.ufc.mdcc.mapreduce.MapReduce"/>
+<element path="/br.ufc.mdcc.mapreduce.Partitioner"/>
+<element path="/br.ufc.mdcc.mapreduce.Splitter"/>
+<element path="/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData"/>
+<element path="/environment.MPIDirect"/>
 </expanded>
 <selection>
-<element path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
+<element path="/br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe"/>
 </selection>
 </viewState>
 </view>
@@ -458,8 +464,23 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Splitter.hpe" tooltip="br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="ScatterSplitData.hpe" tooltip="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Scatter.hpe" tooltip="br.ufc.mdcc.farm.Scatter/Scatter.hpe">
+<persistable path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Farm.hpe" tooltip="br.ufc.mdcc.farm.Farm/Farm.hpe">
+<persistable path="/br.ufc.mdcc.farm.Farm/Farm.hpe"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="MapReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Partitioner.hpe" tooltip="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Reducer.hpe" tooltip="br.ufc.mdcc.mapreduce.Reducer/Reducer.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.Reducer/Reducer.hpe"/>
@@ -476,9 +497,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="KMVPair.hpe" tooltip="br.ufc.mdcc.common.KMVPair/KMVPair.hpe">
 <persistable path="/br.ufc.mdcc.common.KMVPair/KMVPair.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="ScatterSplitData.hpe" tooltip="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="PartitionFunction.hpe" tooltip="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe"/>
 </file>
@@ -490,18 +508,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Combiner.hpe" tooltip="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Shuffler.hpe" tooltip="br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Splitter.hpe" tooltip="br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Partitioner.hpe" tooltip="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Mapper.hpe" tooltip="br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe"/>
 </file>
 </mruList>
 </workbench>
