@@ -9,11 +9,10 @@ using br.ufc.mdcc.mapreduce.user.SplitFunction;
 
 namespace br.ufc.mdcc.mapreduce.MapReduce { 
 
-	public interface BaseIManagerMapReduce<IMAP, IMK, IMV, Sf, OMK, OPK, ORV, PLATFORM> : IComputationKind 
+	public interface BaseIManagerMapReduce<IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM> : IComputationKind 
 		where IMAP:IData
 		where IMK:IData
 		where IMV:IData
-		where OPK:IData
 		where OMK:IData
 		where ORV:IData
 		where Sf:ISplitFunction<IMAP, IMK, IMV>

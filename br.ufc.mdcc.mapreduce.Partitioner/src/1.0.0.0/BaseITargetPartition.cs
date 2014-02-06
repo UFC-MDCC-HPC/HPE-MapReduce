@@ -3,15 +3,15 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.farm.Gather;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-	public interface BaseITargetPartition<OMK, OPK> : 
-	BaseIGatherTarget<IIterator<IKVPair<OMK,OPK>>>, ISynchronizerKind 
-	where OPK:IData
+	public interface BaseITargetPartition<OMK> : 
+	BaseIGatherTarget<IIterator<IKVPair<OMK, IInteger>>>, ISynchronizerKind 
 	where OMK:IData
 {
 

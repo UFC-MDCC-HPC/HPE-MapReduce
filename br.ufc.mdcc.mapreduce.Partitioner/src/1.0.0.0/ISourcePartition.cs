@@ -7,12 +7,11 @@ using br.ufc.mdcc.farm.Gather;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-	public interface ISourcePartition<OMK, OMV, OPK, P> : 
-	BaseISourcePartition<OMK, OMV, OPK, P>, IGatherSource<IIterator<IKVPair<OMK,OMV>>>
-where OPK:IData
+	public interface ISourcePartition<OMK, OMV, P> : 
+	BaseISourcePartition<OMK, OMV, P>, IGatherSource<IIterator<IKVPair<OMK,OMV>>>
 where OMK:IData
 where OMV:IData
-where P:IPartitionFunction<OMK, OPK>
+where P:IPartitionFunction<OMK>
 {
 
 

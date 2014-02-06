@@ -7,7 +7,9 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
+using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using environment.MPIDirect;
 
 
@@ -40,6 +42,41 @@ protected IMPIDirect Mpi_comm {
 	}
 }
 
+private  IPartitionFunction<IMK> bin_function = null;
+
+protected IPartitionFunction<IMK> Bin_function {
+	get {
+		if (this.bin_function == null) 
+		{
+			this.bin_function = (IPartitionFunction<IMK>) Services.getPort("bin_function");
+		}
+		return this.bin_function;
+	}
+}
+
+private  IMK input_key = default(IMK);
+
+protected IMK Input_key {
+	get {
+		if (this.input_key == null) 
+		{
+			this.input_key = (IMK) Services.getPort("input_key");
+		}
+		return this.input_key;
+	}
+}
+
+private  IInteger output_key = null;
+
+protected IInteger Output_key {
+	get {
+		if (this.output_key == null) 
+		{
+			this.output_key = (IInteger) Services.getPort("output_key");
+		}
+		return this.output_key;
+	}
+}
 
 }
 

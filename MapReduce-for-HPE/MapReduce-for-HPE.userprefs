@@ -2,10 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/BaseISourceScatterSplitDataImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.SplitterImpl/src/1.0.0.0/ISourceSplitterImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.SplitterImpl/src/1.0.0.0/BaseISourceSplitterImpl.cs" Line="75" Column="2" />
-      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/BaseISourceScatterSplitDataImpl.cs" Line="12" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/BaseITargetScatterSplitDataImpl.cs" Line="11" Column="18" />
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/BaseISourceScatterSplitDataImpl.cs" Line="65" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

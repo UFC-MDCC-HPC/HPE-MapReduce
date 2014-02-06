@@ -6,13 +6,13 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bab4cc083bb0b22df71ee0fed5b32475f9bd4499e73612417f425eb0acf69eb295cb92d5a9fdb63917d61817dc4d57415df5cdbc2b6ec3bd25d347d038ba9f03bec361e9436b271c818fe4030ce3eb37e4e23912c83bfd7f35145b30bcfbaf21a6f8e185481d082e68124e92bec2a41f490d93bbcc5cdce49952e3e023e49af" localRef="base" location="br.ufc.mdcc.farm.Gather/Gather.hpe" name="Gather" package="br.ufc.mdcc.farm" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="284" y="392">
+        <visualDescription h="60" w="100" x="249" y="403">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_type" varName="II"/>
         <parameter formFieldId="output_type" varName="OO"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="49" w="159" x="111" y="493">
+          <visualDescription h="49" w="159" x="32" y="310">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -57,20 +57,11 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="partition_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="partition_key_type" exposed="false">
-      <visualDescription h="60" w="209" x="162" y="486">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="partition_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="true" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="partition_function" exposed="false">
       <visualDescription h="60" w="147" x="80" y="150">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="input_key" varName="OMK"/>
-      <parameter formFieldId="output_partition_key" varName="OPK"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
         <visualDescription h="60" w="100" x="20" y="45">
           <color b="255" g="255" r="255"/>
@@ -79,7 +70,7 @@
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eba667eec4f234a1ce55ec2ce431855c19b971f281bd045f4f983e5cfd2466ef5399122a4845f7a4c77d8ef34ffa511ade82cd65b19770a16be72d637369333e229f2128a3b478fe386a382c545147589ebefa5502ad3a65afc567d9abadd418bab28da49342cdc07db13278b2cd0946cc1c0e02aef80dd76b54cc8b52d68c99" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
         <visualDescription h="38" w="123" x="164" y="79">
           <color b="255" g="255" r="255"/>
         </visualDescription>
@@ -161,17 +152,25 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eba667eec4f234a1ce55ec2ce431855c19b971f281bd045f4f983e5cfd2466ef5399122a4845f7a4c77d8ef34ffa511ade82cd65b19770a16be72d637369333e229f2128a3b478fe386a382c545147589ebefa5502ad3a65afc567d9abadd418bab28da49342cdc07db13278b2cd0946cc1c0e02aef80dd76b54cc8b52d68c99" localRef="partition_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="59" y="503">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
     <supplyParameter cRef="input" varName="II"/>
+    <supplyParameter cRef="partition_key_type" varName="OPK"/>
     <supplyParameter cRef="kv_pair_1" varName="T1"/>
     <supplyParameter cRef="output" varName="OO"/>
     <supplyParameter cRef="kv_pair_2" varName="T2"/>
     <parameter componentRef="data_key_type" formFieldId="data_key_type" varName="OMK"/>
     <parameter componentRef="data_value_type" formFieldId="data_value_type" varName="OMV"/>
-    <parameter componentRef="partition_key_type" formFieldId="partition_key_type" varName="OPK"/>
     <parameter componentRef="partition_function" formFieldId="partition_function" varName="P"/>
     <innerRenaming cNewName="data_key" cOldName="input_key" cRef="partition_function"/>
     <innerRenaming cNewName="partition_key" cOldName="output_key" cRef="partition_function"/>
-    <interface iRef="ISourcePartition" nArgs="3">
+    <interface iRef="ISourcePartition" nArgs="2">
       <slice isRef="partition_function">
         <originRef cRef="partition_function" iRef="IPartitionFunction"/>
         <visualDescription h="10" w="10" x="50" y="26"/>
@@ -196,17 +195,16 @@
       <visualDescription h="40" w="80" x="327" y="102">
         <color b="203" g="192" r="255"/>
       </visualDescription>
-      <port name="partition_key">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output_key" sRef="partition_function"/>
-      </port>
       <port name="data_key">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_key" sRef="partition_function"/>
       </port>
+      <port name="partition_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_key" sRef="partition_function"/>
+      </port>
       <parameter iname="IPartitionFunction" order="0" parid="partition_function" uname="partition_function" varid="P"/>
       <parameter iname="IData" order="1" parid="data_key_type" uname="data" varid="OMK"/>
-      <parameter iname="IData" order="2" parid="partition_key_type" uname="data" varid="OPK"/>
       <action id="main">
         <protocol/>
       </action>

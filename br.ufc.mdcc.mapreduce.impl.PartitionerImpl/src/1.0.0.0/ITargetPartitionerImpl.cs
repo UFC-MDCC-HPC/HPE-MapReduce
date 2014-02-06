@@ -8,9 +8,8 @@ using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 
-public class ITargetPartitionerImpl<OMK, OPK> : BaseITargetPartitionerImpl<OMK, OPK>, ITargetPartition<OMK, OPK>
+public class ITargetPartitionerImpl<OMK> : BaseITargetPartitionerImpl<OMK>, ITargetPartition<OMK>
 where OMK:IData
-where OPK:IData
 {
 
 		public ITargetPartitionerImpl() { 

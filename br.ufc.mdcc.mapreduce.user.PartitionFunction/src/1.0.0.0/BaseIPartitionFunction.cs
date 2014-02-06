@@ -2,15 +2,15 @@
 
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Integer;
 
 namespace br.ufc.mdcc.mapreduce.user.PartitionFunction { 
 
-public interface BaseIPartitionFunction<OMK, OPK> : IComputationKind 
+public interface BaseIPartitionFunction<OMK> : IComputationKind 
 where OMK:IData
-where OPK:IData
 {
 
-	OPK Output_key {get;}
+	IInteger Output_key {get;}
 	OMK Input_key {get;}
 
 

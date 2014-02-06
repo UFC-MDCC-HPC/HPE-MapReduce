@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FC3836A0-1FD7-466F-B415-18B344E424C2}</ProjectGuid>
+    <ProjectGuid>{D5FF2BDE-BA64-4F4C-A2C8-12E8829170A7}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>br.ufc.mdcc.mapreduce.Partitioner</RootNamespace>
-    <AssemblyName>br.ufc.mdcc.mapreduce.Partitioner</AssemblyName>
+    <RootNamespace>br.ufc.mdcc.common.impl.IntegerImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.common.impl.IntegerImpl</AssemblyName>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\Partitioner.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\IntegerImpl.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,17 +39,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\src\1.0.0.0\BaseISourcePartition.cs">
-      <Link>BaseISourcePartition.cs</Link>
+    <Compile Include="..\src\1.0.0.0\BaseIntegerImpl.cs">
+      <Link>BaseIIntegerImpl.cs</Link>
     </Compile>
-    <Compile Include="..\src\1.0.0.0\BaseITargetPartition.cs">
-      <Link>BaseITargetPartition.cs</Link>
-    </Compile>
-    <Compile Include="..\src\1.0.0.0\ISourcePartition.cs">
-      <Link>ISourcePartition.cs</Link>
-    </Compile>
-    <Compile Include="..\src\1.0.0.0\ITargetPartition.cs">
-      <Link>ITargetPartition.cs</Link>
+    <Compile Include="..\src\1.0.0.0\IntegerImpl.cs">
+      <Link>IIntegerImpl.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -57,22 +51,6 @@
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
-      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
-      <Name>br.ufc.mdcc.common.Iterator</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
-      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
-      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.farm.Gather\br.ufc.mdcc.farm.Gather\br.ufc.mdcc.farm.Gather.csproj">
-      <Project>{9DA059EA-4AA4-405C-99FF-0885C76C4F13}</Project>
-      <Name>br.ufc.mdcc.farm.Gather</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
-      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
-      <Name>br.ufc.mdcc.common.KVPair</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
       <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>

@@ -9,11 +9,10 @@ using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 
-public class ISourcePartitionerImpl<OMK, OMV, OPK, P> : BaseISourcePartitionerImpl<OMK, OMV, OPK, P>, ISourcePartition<OMK, OMV, OPK, P>
+public class ISourcePartitionerImpl<OMK, OMV, P> : BaseISourcePartitionerImpl<OMK, OMV, P>, ISourcePartition<OMK, OMV, P>
 where OMK:IData
 where OMV:IData
-where OPK:IData
-where P:IPartitionFunction<OMK, OPK>
+where P:IPartitionFunction<OMK>
 {
 
 		public ISourcePartitionerImpl() { 

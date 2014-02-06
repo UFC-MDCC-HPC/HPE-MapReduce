@@ -9,13 +9,12 @@ using br.ufc.mdcc.mapreduce.MapReduce;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { 
 
-	public class IManagerImpl<IMAP, IMK, IMV, Sf, OMK, OPK, ORV, PLATFORM> : BaseIManagerImpl<IMAP, IMK, IMV, Sf, OMK, OPK, ORV, PLATFORM>, IManagerMapReduce<IMAP, IMK, IMV, Sf, OMK, OPK, ORV, PLATFORM>
+	public class IManagerImpl<IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM> : BaseIManagerImpl<IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM>, IManagerMapReduce<IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM>
 		where IMAP:IData
 		where IMK:IData
 		where IMV:IData
 		where Sf:ISplitFunction<IMAP, IMK, IMV>
 		where OMK:IData
-		where OPK:IData
 		where PLATFORM:IPlatform
 		where ORV:IData
 {

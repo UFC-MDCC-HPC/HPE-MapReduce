@@ -5,6 +5,7 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
@@ -13,22 +14,21 @@ using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 
-public abstract class BaseISourcePartitionerImpl<OMK, OMV, OPK, P>: 
-	Synchronizer, BaseISourcePartition<OMK, OMV, OPK, P>
+public abstract class BaseISourcePartitionerImpl<OMK, OMV, P>: 
+	Synchronizer, BaseISourcePartition<OMK, OMV, P>
 where OMK:IData
 where OMV:IData
-where OPK:IData
-where P:IPartitionFunction<OMK, OPK>
+where P:IPartitionFunction<OMK>
 {
 
 
 
-private OPK partition_key = default(OPK);
+private IInteger partition_key = default(IInteger);
 
-protected OPK Partition_key {
+protected IInteger Partition_key {
 	get {
 		if (this.partition_key == null)
-			this.partition_key = (OPK) Services.getPort("partition_key");
+				this.partition_key = (IInteger) Services.getPort("partition_key");
 		return this.partition_key;
 	}
 }
@@ -65,12 +65,12 @@ public IIterator<IKVPair<OMK, OMV>> Source_data {
 	}
 }
 
-private IIterator<IKVPair<OMK, OPK>> output_partition_info_source = null;
+private IIterator<IKVPair<OMK, IInteger>> output_partition_info_source = null;
 
-protected IIterator<IKVPair<OMK, OPK>> Output_partition_info_source {
+protected IIterator<IKVPair<OMK, IInteger>> Output_partition_info_source {
 	get {
 		if (this.output_partition_info_source == null)
-			this.output_partition_info_source = (IIterator<IKVPair<OMK, OPK>>) Services.getPort("output_partition_info_source");
+			this.output_partition_info_source = (IIterator<IKVPair<OMK, IInteger>>) Services.getPort("output_partition_info_source");
 		return this.output_partition_info_source;
 	}
 }

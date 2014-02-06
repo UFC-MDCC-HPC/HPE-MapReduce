@@ -9,15 +9,14 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
-	public interface BaseISourcePartition<OMK, OMV, OPK, P> : 
+	public interface BaseISourcePartition<OMK, OMV, P> : 
 	BaseIGatherSource<IIterator<IKVPair<OMK,OMV>>>, ISynchronizerKind 
-where OPK:IData
 where OMK:IData
 where OMV:IData
-where P:IPartitionFunction<OMK, OPK>
+where P:IPartitionFunction<OMK>
 {
 
-		IIterator<IKVPair<OMK,OMV>> Source_data {get;}
+		//IIterator<IKVPair<OMK,OMV>> Source_data {get;}
 
 
 } // end main interface 

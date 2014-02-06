@@ -7,9 +7,8 @@ using br.ufc.mdcc.mapreduce.Shuffler;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl { 
 
-public class ISourceShufflerImpl<OMK, OPK> : BaseISourceShufflerImpl<OMK, OPK>, ISourceShuffler<OMK, OPK>
+public class ISourceShufflerImpl<OMK> : BaseISourceShufflerImpl<OMK>, ISourceShuffler<OMK>
 where OMK:IData
-where OPK:IData
 {
 
 public ISourceShufflerImpl() { 
