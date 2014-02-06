@@ -34,10 +34,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="MPI">
-      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\MPI\MPI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\opt\local\lib\MPI.dll</HintPath>
     </Reference>
     <Reference Include="DGAC">
-      <HintPath>..\..\..\..\..\..\..\..\usr\lib\mono\DGAC\DGAC.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
