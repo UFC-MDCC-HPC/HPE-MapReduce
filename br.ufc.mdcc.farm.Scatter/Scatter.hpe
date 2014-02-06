@@ -7,7 +7,17 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" parameter_id="output_type" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000059fdc60f0095a1142aef66ff82b5e8659158d29c9ae6eedd576a96e33ae1faaddaf78b57c8cab897deeb79b165ed011c3cd25deeeed69da38fc30a1143e39fa67ab658c278a82203de07eafa3dafe7704a84c1fffc42035b92d09563efdfe7b59862d01f598f626efa5cd4eef962fb18970112f8a530495c2a482922a19258b" localRef="mpi_comm" location="environment.MPIDirect/MPIDirect.hpe" multiple="false" name="MPIDirect" package="environment" exposed="false">
+      <visualDescription h="83" w="149" x="211" y="318">
+        <color b="240" g="32" r="160" />
+      </visualDescription>
+      <unitBounds parallel="false" replica="0" uRef="mpi">
+        <visualDescription h="20" w="20" x="5" y="31" />
+      </unitBounds>
+      <unitBounds parallel="true" replica="1" uRef="mpi">
+        <visualDescription h="20" w="20" x="119" y="32" />
+      </unitBounds>
+    </innerComponent><innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" parameter_id="output_type" exposed="true">
       <visualDescription h="81" w="100" x="383" y="69">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -23,17 +33,7 @@
         <visualDescription h="20" w="20" x="41" y="53"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000059fdc60f0095a1142aef66ff82b5e8659158d29c9ae6eedd576a96e33ae1faaddaf78b57c8cab897deeb79b165ed011c3cd25deeeed69da38fc30a1143e39fa67ab658c278a82203de07eafa3dafe7704a84c1fffc42035b92d09563efdfe7b59862d01f598f626efa5cd4eef962fb18970112f8a530495c2a482922a19258b" localRef="mpi_comm" location="environment.MPIDirect/MPIDirect.hpe" multiple="false" name="MPIDirect" package="environment" exposed="false">
-      <visualDescription h="83" w="149" x="211" y="318">
-        <color b="240" g="32" r="160"/>
-      </visualDescription>
-      <unitBounds parallel="false" replica="0" uRef="mpi">
-        <visualDescription h="20" w="20" x="5" y="31"/>
-      </unitBounds>
-      <unitBounds parallel="true" replica="1" uRef="mpi">
-        <visualDescription h="20" w="20" x="119" y="32"/>
-      </unitBounds>
-    </innerComponent>
+    
     <parameter componentRef="target_data" formFieldId="output_type" varName="O"/>
     <parameter componentRef="source_data" formFieldId="input_type" varName="I"/>
     <interface iRef="IScatterSource" nArgs="1">
