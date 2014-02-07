@@ -43,7 +43,7 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000039eb51c943d51c313362bb93b224fba03af8b3a04784e52471ed853a0632525957fea25dae132a8ef4cb86cd0c222793072b023f88095c24d4345eb22fbb217a908bb3a5fa11cdb1ae05a6e6761ac6057e9483305532909aa4f8b2ad10856a7f641b7f73c1dde8bc65fbc7107bc3c4b904194f0050bfa8d6a60f00783ed85296" localRef="farm_reduce" location="br.ufc.mdcc.farm.Farm/Farm.hpe" multiple="false" name="Farm" package="br.ufc.mdcc.farm" exposed="false">
-      <visualDescription h="60" w="185" x="402" y="264">
+      <visualDescription h="60" w="185" x="412" y="263">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="work" varName="WRED"/>
@@ -52,7 +52,7 @@
       <parameter formFieldId="job_type" varName="JRED"/>
       <parameter formFieldId="scatter_strategy" varName="SRED"/>
       <parameter formFieldId="input_type" varName="OMAP"/>
-      <parameter formFieldId="output_type" varName="ORED"/>
+      <parameter formFieldId="output_type" varName="Out"/>
       <parameter formFieldId="gather_strategy" varName="CRED"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="47" w="159" x="277" y="407">
@@ -83,7 +83,7 @@
       </visualDescription>
       <parameter formFieldId="input_key_type" varName="OMK"/>
       <parameter formFieldId="input_value_type" varName="OMV"/>
-      <parameter formFieldId="output_type" varName="ORV"/>
+      <parameter formFieldId="output_type" varName="Out"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="100" x="209" y="558">
           <color b="255" g="255" r="255"/>
@@ -96,7 +96,7 @@
         <visualDescription h="60" w="100" x="135" y="535">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="value_type" varName="X###1391718393297"/>
+        <parameter formFieldId="value_type" varName="X###1391735350739"/>
         <parameter formFieldId="key_type" varName="OMK"/>
         <unitBounds parallel="false" uRef="kv_pair">
           <visualDescription h="20" w="20" x="5" y="2"/>
@@ -159,7 +159,7 @@
         <visualDescription h="69" w="188" x="287" y="440">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1391718393297"/>
+        <parameter formFieldId="item_type" varName="X###1391735350739"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -334,12 +334,13 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f9bcb37397554596c09a2ab103595158e54862dad72cb754b73354c60a9d1ce936f4373dc57c5a4072a2951c1ec0f0320e4a319f465ab3ebadc084975f59fb133a73fbfef736d3d4188eda4fd0c085eb85ed6381efa25418cae63874e15501f2ffa9b0f80f09bfc9eb593def7fd9decbc69487ede20331b27368038556557ba5" localRef="collector" location="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe" multiple="false" name="Combiner" package="br.ufc.mdcc.mapreduce" exposed="false">
-      <visualDescription h="60" w="100" x="573" y="679">
+      <visualDescription h="60" w="100" x="241" y="635">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="type ?" varName="ORED"/>
+      <parameter formFieldId="type ?" varName="T"/>
       <parameter formFieldId="result_item_type" varName="ORV"/>
-      <parameter formFieldId="type ?" varName="ORED"/>
+      <parameter formFieldId="output_type" varName="Out"/>
+      <parameter formFieldId="combine_function" varName="Cf"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="false">
         <visualDescription h="60" w="198" x="648" y="582">
           <color b="255" g="255" r="255"/>
@@ -381,14 +382,6 @@
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="intermediate_data_value_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="intermediate_data_value_type" exposed="false">
       <visualDescription h="60" w="100" x="357" y="740">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="partition_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="100" x="588" y="746">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
@@ -438,7 +431,7 @@
         <visualDescription h="60" w="169" x="323" y="434">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1391718393301"/>
+        <parameter formFieldId="item_type" varName="X###1391735350743"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -472,13 +465,48 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003bb8cde9cdaf37a9334c439fcee37e98f23ec8f770a0dd398d69a02afa9b0b6d92cdd358fbef3d31c98c25b423e71aa3f82f5a9fa45c4e07fb936dcdb2d354ac190e6336e4ef093d9066eabb47aae1535f63d42c132b240292498296152c4a2135644a69593f84cc8e1d5d7d6d377e5b296d103e4e1180058b3d3a1aa61d78b4" localRef="combine_function" location="br.ufc.mdcc.mapreduce.user.CombineFunction/CombineFunction.hpe" multiple="false" name="CombineFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="combine_function" exposed="false">
+      <visualDescription h="60" w="100" x="228" y="634">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_item_type" varName="ORV"/>
+      <parameter formFieldId="output_type" varName="Out"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="353" y="465">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="169" x="71" y="498">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="ORV"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="combine_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="output_type" exposed="false">
+      <visualDescription h="60" w="100" x="141" y="378">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
     <supplyParameter cRef="partitioner" varName="CMAP"/>
     <supplyParameter cRef="mapper" varName="WMAP"/>
     <supplyParameter cRef="reducer" varName="WRED"/>
     <supplyParameter cRef="shuffler" varName="SRED"/>
     <supplyParameter cRef="collector" varName="CRED"/>
     <supplyParameter cRef="splitter" varName="SMAP"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1391718393297" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1391735350739" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="104" y="364">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -487,8 +515,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1391718393297" varName="X###1391718393297"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1391718393297" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1391735350739" varName="X###1391735350739"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1391735350739" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="93" y="410">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -514,8 +542,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1391718393297" varName="X###1391718393297"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1391718393301" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1391735350739" varName="X###1391735350739"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1391735350743" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="69" w="126" x="362" y="160">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -541,7 +569,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1391718393301" varName="X###1391718393301"/>
+    <supplyParameter cRef="C###1391735350743" varName="X###1391735350743"/>
     <parameter componentRef="reduce_function" formFieldId="reduce_function" varName="Rf"/>
     <parameter componentRef="partition_function" formFieldId="partition_function" varName="Pf"/>
     <parameter componentRef="map_function" formFieldId="map_function" varName="Mf"/>
@@ -554,16 +582,18 @@
     <parameter componentRef="reduce_output_type" formFieldId="reduce_output_type" varName="ORV"/>
     <parameter componentRef="split_function" formFieldId="split_function" varName="Sf"/>
     <parameter componentRef="bin_function" formFieldId="bin_function" varName="Bf"/>
-    <innerRenaming cNewName="input_data" cOldName="input" cRef="farm_map"/>
-    <innerRenaming cNewName="partition_mapping" cOldName="input" cRef="farm_reduce"/>
-    <innerRenaming cNewName="partition_mapping" cOldName="output" cRef="farm_map"/>
+    <parameter componentRef="combine_function" formFieldId="combine_function" varName="Cf"/>
+    <parameter componentRef="output_type" formFieldId="output_type" varName="Out"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="farm_reduce"/>
+    <innerRenaming cNewName="partition_mapping" cOldName="output" cRef="farm_map"/>
+    <innerRenaming cNewName="partition_mapping" cOldName="input" cRef="farm_reduce"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="farm_map"/>
     <fusion>
       <cRefs>farm_reduce</cRefs>
       <cRefs>farm_map</cRefs>
       <pRef>partition_mapping</pRef>
     </fusion>
-    <interface iRef="IManagerMapReduce" nArgs="5">
+    <interface iRef="IManagerMapReduce" nArgs="7">
       <slice isRef="farm_map">
         <originRef cRef="farm_map" iRef="IManager"/>
         <visualDescription h="10" w="10" x="8" y="38"/>
@@ -588,14 +618,14 @@
       <visualDescription h="124" w="179" x="562" y="51">
         <color b="255" g="0" r="0"/>
       </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="72" y="82"/>
+        <slice pRef="input" sRef="farm_map"/>
+      </port>
       <port name="partition_mapping">
         <visualDescription h="10" w="10" x="45" y="15"/>
         <slice pRef="output" sRef="farm_map"/>
         <slice pRef="input" sRef="farm_reduce"/>
-      </port>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="72" y="82"/>
-        <slice pRef="input" sRef="farm_map"/>
       </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="117" y="25"/>
@@ -606,6 +636,8 @@
       <parameter iname="IData" order="2" parid="input_data_key_type" uname="data" varid="IMK"/>
       <parameter iname="ISplitFunction" order="3" parid="split_function" uname="split_function" varid="Sf"/>
       <parameter iname="IPlatform" order="4" parid="platform_type" uname="platform" varid="PLATFORM"/>
+      <parameter iname="IData" order="5" parid="output_type" uname="data" varid="Out"/>
+      <parameter iname="ICombineFunction" order="6" parid="combine_function" uname="combine_function" varid="Cf"/>
       <action id="main">
         <protocol/>
       </action>

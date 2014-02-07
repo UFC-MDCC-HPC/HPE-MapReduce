@@ -7,7 +7,8 @@ using br.ufc.mdcc.mapreduce.Combiner;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { 
 
-public class ITargetCombinerImpl<ORV> : BaseITargetCombinerImpl<ORV>, ITargetCombiner<ORV>
+	public class ITargetCombinerImpl<ORV,O> : BaseITargetCombinerImpl<ORV,O>, ITargetCombiner<ORV,O>
+		where O:IData
 		where ORV:IData
 {
 

@@ -5,9 +5,9 @@ using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.Combiner { 
 
-public interface ISourceCombiner<ORV> : 
+	public interface ISourceCombiner<ORV> : 
 	BaseISourceCombiner<ORV>, IGatherSource<IIterator<ORV>>
-where ORV:IData
+		where ORV:IData
 {
 
 

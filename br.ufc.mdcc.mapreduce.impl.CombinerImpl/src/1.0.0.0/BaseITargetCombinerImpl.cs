@@ -11,19 +11,31 @@ using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { 
 
-	public abstract class BaseITargetCombinerImpl<ORV>: Synchronizer, BaseITargetCombiner<ORV>
+	public abstract class BaseITargetCombinerImpl<ORV,O>: Synchronizer, BaseITargetCombiner<ORV,O>
 		where ORV:IData
+		where O:IData
 {
 
-private IIterator<ORV> target_data = null;
+private O target_data = default(O);
 
-public IIterator<ORV> Target_data {
+public O Target_data {
 	get {
 		if (this.target_data == null)
-					this.target_data = (IIterator<ORV>) Services.getPort("target_data");
+					this.target_data = (O) Services.getPort("target_data");
 		return this.target_data;
 	}
 }
+
+private IIterator<ORV> combine_input_data = null;
+
+protected IIterator<ORV> Combine_input_data {
+	get {
+		if (this.combine_input_data == null)
+				this.combine_input_data = (IIterator<ORV>) Services.getPort("combine_input_data");
+			return this.combine_input_data;
+	}
+}
+
 
 private  IMPIDirect mpi_comm = null;
 

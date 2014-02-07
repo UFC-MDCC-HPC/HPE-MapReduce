@@ -6,11 +6,11 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bab4cc083bb0b22df71ee0fed5b32475f9bd4499e73612417f425eb0acf69eb295cb92d5a9fdb63917d61817dc4d57415df5cdbc2b6ec3bd25d347d038ba9f03bec361e9436b271c818fe4030ce3eb37e4e23912c83bfd7f35145b30bcfbaf21a6f8e185481d082e68124e92bec2a41f490d93bbcc5cdce49952e3e023e49af" localRef="base" location="br.ufc.mdcc.farm.Gather/Gather.hpe" name="Gather" package="br.ufc.mdcc.farm" version="1.0.0.0">
-        <visualDescription h="60" w="157" x="216" y="139">
+        <visualDescription h="60" w="157" x="220" y="129">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_type" varName="T"/>
-        <parameter formFieldId="output_type" varName="T"/>
+        <parameter formFieldId="output_type" varName="O"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
           <visualDescription h="60" w="198" x="107" y="348">
             <color b="255" g="255" r="255"/>
@@ -20,7 +20,7 @@
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="475" y="288">
+          <visualDescription h="60" w="100" x="442" y="305">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -58,8 +58,52 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003bb8cde9cdaf37a9334c439fcee37e98f23ec8f770a0dd398d69a02afa9b0b6d92cdd358fbef3d31c98c25b423e71aa3f82f5a9fa45c4e07fb936dcdb2d354ac190e6336e4ef093d9066eabb47aae1535f63d42c132b240292498296152c4a2135644a69593f84cc8e1d5d7d6d377e5b296d103e4e1180058b3d3a1aa61d78b4" localRef="combine_function" location="br.ufc.mdcc.mapreduce.user.CombineFunction/CombineFunction.hpe" multiple="false" name="CombineFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="combine_function" exposed="false">
+      <visualDescription h="60" w="221" x="328" y="475">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_item_type" varName="ORV"/>
+      <parameter formFieldId="output_type" varName="O"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="442" y="305">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="169" x="62" y="473">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="ORV"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="combine_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="output_type" exposed="false">
+      <visualDescription h="60" w="100" x="99" y="261">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
     <supplyParameter cRef="input_output_type" varName="T"/>
     <parameter componentRef="result_item_type" formFieldId="result_item_type" varName="ORV"/>
+    <parameter componentRef="combine_function" formFieldId="combine_function" varName="Cf"/>
+    <parameter componentRef="output_type" formFieldId="output_type" varName="O"/>
+    <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
+    <innerRenaming cNewName="combine_input_data" cOldName="input_data" cRef="combine_function"/>
+    <fusion>
+      <cRefs>base</cRefs>
+      <cRefs>combine_function</cRefs>
+      <pRef>target_data</pRef>
+    </fusion>
     <interface iRef="ISourceCombiner" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
         <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface BaseISourceCombiner&lt;ORV> : &#xA;&#x9;BaseIGatherSource&lt;IIterator&lt;ORV>>, &#xA;&#x9;ISynchronizerKind &#xA;where ORV:IData&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISourceCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseISourceCombiner.dll" versionId="1.0.0.0">
@@ -77,12 +121,16 @@
         <protocol/>
       </action>
     </interface>
-    <interface iRef="ITargetCombiner" nArgs="0">
+    <interface iRef="ITargetCombiner" nArgs="2">
+      <slice isRef="combine_function">
+        <originRef cRef="combine_function" iRef="ICombineFunction"/>
+        <visualDescription h="10" w="10" x="14" y="18"/>
+      </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface BaseITargetCombiner&lt;O> : &#xA;&#x9;BaseIGatherTarget&lt;O>, &#xA;&#x9;ISynchronizerKind &#xA;where O:IData&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseITargetCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;&#x9;public interface BaseITargetCombiner&lt;ORV> : &#xA;&#x9;BaseIGatherTarget&lt;IIterator&lt;ORV>>, &#xA;&#x9;ISynchronizerKind &#xA;&#x9;&#x9;where ORV:IData&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseITargetCombiner.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/BaseITarget.dll</dependency>
         </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;public interface ITargetCombiner&lt;O> : &#xA;&#x9;BaseITargetCombiner&lt;O>, &#xA;&#x9;IGatherTarget&lt;O>&#xA;where O:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ITargetCombiner.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ITargetCombiner.dll" versionId="1.0.0.0">
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.Combiner { &#xA;&#xA;&#x9;public interface ITargetCombiner&lt;ORV> : &#xA;&#x9;BaseITargetCombiner&lt;ORV>, &#xA;&#x9;IGatherTarget&lt;IIterator&lt;ORV>>&#xA;&#x9;&#x9;where ORV:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ITargetCombiner.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ITargetCombiner.dll" versionId="1.0.0.0">
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/ITarget.dll</dependency>
         </file>
@@ -90,6 +138,16 @@
       <visualDescription h="40" w="143" x="409" y="73">
         <color b="230" g="216" r="173"/>
       </visualDescription>
+      <port name="target_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="combine_function"/>
+      </port>
+      <port name="combine_input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="combine_function"/>
+      </port>
+      <parameter iname="IData" order="0" parid="output_type" uname="data" varid="O"/>
+      <parameter iname="ICombineFunction" order="1" parid="combine_function" uname="combine_function" varid="Cf"/>
       <action id="main">
         <protocol/>
       </action>
@@ -100,6 +158,17 @@
     </unit>
     <unit iRef="ITargetCombiner" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
       <super cRef="base" uRef="target"/>
+      <slices cRef="combine_input_data" replica="0" uRef="iterator" sliceName="combine_input_data" transitive="true">
+        <visualDescription h="10" w="10" x="14" y="61"/>
+      </slices>
+      <slices cRef="target_data" replica="0" uRef="data" sliceName="target_data" transitive="false">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
+      <slices cRef="combine_function" replica="0" uRef="combine_function" sliceName="combine_function" transitive="false">
+        <visualDescription h="10" w="10" x="14" y="18"/>
+        <port>combine_input_data</port>
+        <port>target_data</port>
+      </slices>
       <visualDescription h="40" w="80" x="476" y="186"/>
     </unit>
   </componentInfo>

@@ -140,5 +140,9 @@
       <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
       <Name>br.ufc.mdcc.common.Integer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj">
+      <Project>{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.CombineFunction</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

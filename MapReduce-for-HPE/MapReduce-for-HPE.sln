@@ -78,12 +78,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.Integer"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.impl.IntegerImpl", "..\br.ufc.mdcc.common.impl.IntegerImpl\br.ufc.mdcc.common.impl.IntegerImpl\br.ufc.mdcc.common.impl.IntegerImpl.csproj", "{D5FF2BDE-BA64-4F4C-A2C8-12E8829170A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.user.CombineFunction", "..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj", "{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Debug|x86.Build.0 = Debug|Any CPU
+		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Release|x86.ActiveCfg = Release|Any CPU
+		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Release|x86.Build.0 = Release|Any CPU
 		{1F563648-2878-4A44-B98C-BBED70407F5D}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1F563648-2878-4A44-B98C-BBED70407F5D}.Debug|x86.Build.0 = Debug|Any CPU
 		{1F563648-2878-4A44-B98C-BBED70407F5D}.Release|x86.ActiveCfg = Release|Any CPU

@@ -92,5 +92,9 @@
       <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
       <Name>br.ufc.mdcc.common.KVPair</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj">
+      <Project>{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.CombineFunction</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

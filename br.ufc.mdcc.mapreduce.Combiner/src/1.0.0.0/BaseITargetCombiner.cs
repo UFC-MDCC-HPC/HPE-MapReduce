@@ -7,10 +7,11 @@ using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.Combiner { 
 
-	public interface BaseITargetCombiner<ORV> : 
-	BaseIGatherTarget<IIterator<ORV>>, 
+	public interface BaseITargetCombiner<ORV,O> : 
+	BaseIGatherTarget<O>, 
 	ISynchronizerKind 
 		where ORV:IData
+		where O:IData
 {
 
 
