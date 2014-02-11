@@ -49,11 +49,13 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                     }
                     else {
                         i = j;
+                        requests.Add(worldcomm.ImmediateSend<int>(listOMK.Count, (int)(Object)opk, tag+1));
                         requests.Add(worldcomm.ImmediateSend<OMK>(listOMK.ToArray(), (int)(Object)opk, tag));
                         break; 
                     }
                 }
                 if (j == sourceList.Count) {
+                    requests.Add(worldcomm.ImmediateSend<int>(listOMK.Count, (int)(Object)opk, tag + 1));
                     requests.Add(worldcomm.ImmediateSend<OMK>(listOMK.ToArray(), (int)(Object)opk, tag)); 
                     i = j; 
                 }
