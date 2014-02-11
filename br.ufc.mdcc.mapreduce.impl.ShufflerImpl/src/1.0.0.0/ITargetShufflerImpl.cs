@@ -33,7 +33,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         public void receive() {
             while (true) {
                 OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
-                if (omk.Equals(null)) { break; }
+                //if (omk.Equals(null)) { break; }
                 omks.Add(omk);
             }
         }
