@@ -57,6 +57,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl.csproj">
+      <Project>{bcb96804-b787-4ed7-bb0f-127f3649e5d7}</Project>
+      <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler.csproj">
       <Project>{9BF252CF-4C94-4C0C-ACEA-BB10000BCFEE}</Project>
       <Name>br.ufc.mdcc.mapreduce.Shuffler</Name>
