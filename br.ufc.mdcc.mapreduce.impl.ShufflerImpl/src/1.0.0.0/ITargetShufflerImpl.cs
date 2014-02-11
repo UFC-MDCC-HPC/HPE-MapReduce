@@ -4,12 +4,15 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Shuffler;
+using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
     public class ITargetShufflerImpl<OMK, OMV>: BaseITargetShufflerImpl<OMK, OMV>, ITargetShuffler<OMK, OMV>
         where OMK: IData
         where OMV: IData {
         private MPI.Intracommunicator worldcomm = null;
+        private int tag = 345;
+        private OMK[] omks;
         public ITargetShufflerImpl() {
         }
 
@@ -18,15 +21,12 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
              * 2. Buscar nos mappers (que unidade ?) os valores.
              * 	  (buscando ainda solução para comunicação com os mappers)
              */
+            receive();
         }
         public void receive() {
-            while (!Source_data.HasFinished) {
-                IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
-                Object opk = kvpair.Value;
-                worldcomm.ImmediateSend<OMK>(kvpair.Key, (int)opk, 0);
-            }
-
-
+            MPI.Request[] requests = new MPI.Request[1];
+            requests[0] = worldcomm.ImmediateReceive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag, omks);
+            requests[0].Wait();
         }
     }
 }
