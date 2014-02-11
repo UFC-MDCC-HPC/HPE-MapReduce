@@ -7,3 +7,11 @@
 /home/jmhal/hpe/Map-Reduce-in-HPE/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.common.Data.dll
 /home/jmhal/hpe/Map-Reduce-in-HPE/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
 /home/jmhal/hpe/Map-Reduce-in-HPE/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/MPI.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.farm.Scatter.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.farm.Scatter.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/obj/Debug/br.ufc.mdcc.farm.Scatter.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/obj/Debug/br.ufc.mdcc.farm.Scatter.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb

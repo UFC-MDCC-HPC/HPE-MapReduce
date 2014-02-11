@@ -134,6 +134,8 @@
     <parameter componentRef="item_key_type" formFieldId="item_key_type" varName="IMK"/>
     <parameter componentRef="item_value_type" formFieldId="item_value_type" varName="IMV"/>
     <parameter componentRef="bin_function" formFieldId="bin_function" varName="Bf"/>
+    <innerRenaming cNewName="key" cOldName="input_key" cRef="bin_function"/>
+    <innerRenaming cNewName="rank" cOldName="output_key" cRef="bin_function"/>
     <interface iRef="ISourceScatterSplitData" nArgs="2">
       <slice isRef="bins">
         <originRef cRef="bins" iRef="IIterator"/>
@@ -165,12 +167,12 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="bins" sRef="bins"/>
       </port>
-      <port name="input_key">
+      <port name="key">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_key" sRef="bin_function"/>
       </port>
-      <port name="output_key">
-        <visualDescription h="10" w="10" x="0" y="0"/>
+      <port name="rank">
+        <visualDescription h="10" w="10" x="8" y="22"/>
         <slice pRef="output_key" sRef="bin_function"/>
       </port>
       <parameter iname="IPartitionFunction" order="0" parid="bin_function" uname="partition_function" varid="Bf"/>
@@ -209,22 +211,22 @@
       </action>
     </interface>
     <unit iRef="ISourceScatterSplitData" multiple="false" private="false" replica="0" uRef="source" visibleInterface="true">
-      <slices cRef="input_key" replica="0" uRef="data" sliceName="input_key" transitive="true">
-        <visualDescription h="10" w="10" x="12" y="6"/>
+      <slices cRef="rank" replica="0" uRef="data" sliceName="rank" transitive="true">
+        <visualDescription h="10" w="10" x="147" y="28"/>
       </slices>
       <slices cRef="bins" replica="0" uRef="iterator" sliceName="bins" transitive="false">
         <visualDescription h="10" w="10" x="69" y="21"/>
       </slices>
-      <slices cRef="output_key" replica="0" uRef="data" sliceName="output_key" transitive="true">
-        <visualDescription h="10" w="10" x="147" y="28"/>
+      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="true">
+        <visualDescription h="10" w="10" x="12" y="6"/>
       </slices>
       <slices cRef="mpi_comm" replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="43" y="22"/>
       </slices>
       <slices cRef="bin_function" replica="0" uRef="partition_function" sliceName="bin_function" transitive="false">
         <visualDescription h="10" w="10" x="62" y="6"/>
-        <port>input_key</port>
-        <port>output_key</port>
+        <port>rank</port>
+        <port>key</port>
       </slices>
       <visualDescription h="40" w="80" x="62" y="233"/>
     </unit>

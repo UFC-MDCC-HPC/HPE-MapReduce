@@ -5,3 +5,9 @@
 /home/jmhal/hpe/Map-Reduce-in-HPE/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/obj/Debug/br.ufc.mdcc.common.Platform.dll.mdb
 /home/jmhal/hpe/Map-Reduce-in-HPE/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/DGAC.dll
 /home/jmhal/hpe/Map-Reduce-in-HPE/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/MPI.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/br.ufc.mdcc.common.Platform.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/br.ufc.mdcc.common.Platform.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/obj/Debug/br.ufc.mdcc.common.Platform.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/obj/Debug/br.ufc.mdcc.common.Platform.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/br.ufc.mdcc.common.Platform/bin/Debug/DGAC.dll

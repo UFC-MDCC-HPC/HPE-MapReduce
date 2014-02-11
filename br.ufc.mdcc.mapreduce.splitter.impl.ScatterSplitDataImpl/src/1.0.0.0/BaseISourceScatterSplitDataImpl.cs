@@ -54,27 +54,27 @@ protected IPartitionFunction<IMK> Bin_function {
 	}
 }
 
-private  IMK input_key = default(IMK);
+private  IMK key = default(IMK);
 
-protected IMK Input_key {
+protected IMK Key {
 	get {
-		if (this.input_key == null) 
+		if (this.key == null) 
 		{
-			this.input_key = (IMK) Services.getPort("input_key");
+			this.key = (IMK) Services.getPort("key");
 		}
-		return this.input_key;
+		return this.key;
 	}
 }
 
-private  IInteger output_key = null;
+private  IInteger rank = null;
 
-protected IInteger Output_key {
+	protected IInteger Rank {
 	get {
-		if (this.output_key == null) 
+		if (this.rank == null) 
 		{
-			this.output_key = (IInteger) Services.getPort("output_key");
+			this.rank = (IInteger) Services.getPort("rank");
 		}
-		return this.output_key;
+		return this.rank;
 	}
 }
 
