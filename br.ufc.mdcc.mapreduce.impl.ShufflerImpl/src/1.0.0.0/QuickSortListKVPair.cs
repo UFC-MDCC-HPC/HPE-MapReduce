@@ -6,8 +6,8 @@ using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
-    public static class QuickSortKVPair {
-        public static int particione(List<IKVPair<IData, IData>> A, int p, int r, bool byValue=false) {
+    public static class QuickSortListKVPair {
+        private static int particione(List<IKVPair<IData, IData>> A, int p, int r, bool byValue=false) {
             IKVPair<IData, IData> pivo = A[r]; //int pivo = A[r];
             int i = -1;
             if (!byValue) {
@@ -38,11 +38,18 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
             A[i + 1] = pivo;
             return i + 1;
         }
-        public static void sort(List<IKVPair<IData, IData>> A, int p, int r, bool byValue=false) {
+        private static void sortStart(List<IKVPair<IData, IData>> A, int p, int r, bool byValue=false) {
             if (p < r) {
                 int q = particione(A, p, r, byValue);
-                sort(A, p, q - 1, byValue);
-                sort(A, q + 1, r, byValue);
+                sortStart(A, p, q - 1, byValue);
+                sortStart(A, q + 1, r, byValue);
+            }
+        }
+        public static void sort(List<IKVPair<IData, IData>> A, bool byValue=false) {
+            int n = A.Count - 1; // A.Length - 1;
+            QuickSortListKVPair.sortStart(A, 0, n, byValue);
+            for (int i = 0; i < A.Count; i++) {
+                System.Console.WriteLine(A[i]);
             }
         }
     }

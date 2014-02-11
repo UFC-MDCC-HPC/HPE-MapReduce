@@ -54,7 +54,7 @@
     <Compile Include="..\src\1.0.0.0\ITargetShufflerImpl.cs">
       <Link>ITargetShufflerImpl.cs</Link>
     </Compile>
-    <Compile Include="..\src\1.0.0.0\QuickSortKVPair.cs" />
+    <Compile Include="..\src\1.0.0.0\QuickSortListKVPair.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
