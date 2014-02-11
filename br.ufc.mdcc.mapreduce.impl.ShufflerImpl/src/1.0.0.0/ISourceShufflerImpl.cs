@@ -12,7 +12,7 @@ using System.Collections.Generic;
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
     public class ISourceShufflerImpl<OMK>: BaseISourceShufflerImpl<OMK>, ISourceShuffler<OMK>
     where OMK: IData {
-        //private List<IKVPair<OMK, IInteger>> sourceList = new List<IKVPair<OMK, IInteger>>();
+        private List<IKVPair<OMK, IInteger>> sourceList = new List<IKVPair<OMK, IInteger>>();
         private MPI.Intracommunicator worldcomm = null;
         public ISourceShufflerImpl() {
             worldcomm = Mpi_comm.worldComm();
@@ -23,14 +23,22 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
              * 2. Enviar cada chave OMK para o reducer (unidade target)
              *    determinada pela chave OPK.
              */
-            readSend();
+            read();
+            orderingByOPK();
+            send();
         }
-        public void readSend() {
+        private void read() {
             while (!Source_data.HasFinished) {
                 IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
-                Object opk = kvpair.Value;
-                worldcomm.ImmediateSend<OMK>(kvpair.Key, (int) opk, 0);
+                sourceList.Add(kvpair);
             }
+        }
+        private void orderingByOPK() {
+
+        }
+        private void send() {
+            //Object opk = kvpair.Value;
+            //worldcomm.ImmediateSend<OMK>(kvpair.Key, (int)opk, 0);
         }
     }
 }

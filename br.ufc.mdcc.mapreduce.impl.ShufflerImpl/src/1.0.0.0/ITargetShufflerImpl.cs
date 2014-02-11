@@ -9,7 +9,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
     public class ITargetShufflerImpl<OMK, OMV>: BaseITargetShufflerImpl<OMK, OMV>, ITargetShuffler<OMK, OMV>
         where OMK: IData
         where OMV: IData {
-
+        private MPI.Intracommunicator worldcomm = null;
         public ITargetShufflerImpl() {
         }
 
@@ -18,6 +18,15 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
              * 2. Buscar nos mappers (que unidade ?) os valores.
              * 	  (buscando ainda solução para comunicação com os mappers)
              */
+        }
+        public void receive() {
+            while (!Source_data.HasFinished) {
+                IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
+                Object opk = kvpair.Value;
+                worldcomm.ImmediateSend<OMK>(kvpair.Key, (int)opk, 0);
+            }
+
+
         }
     }
 }
