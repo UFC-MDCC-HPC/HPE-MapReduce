@@ -17,11 +17,9 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 
         private MPI.Intracommunicator worldcomm;
         private int tag = 345;
-        //HashSet<int> opks;
         
         public ISourceShufflerImpl() {
             worldcomm = Mpi_comm.worldComm();
-            //opks = new HashSet<int>();
         }
 
         public override void main() {
@@ -34,25 +32,12 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
             tRead.Join();
         }
         private void readSend() {
-            //MPI.RequestList requestList = new MPI.RequestList();
-            //List<MPI.Request> requests = new List<MPI.Request>();
-            //bool finish = Source_data.HasFinished;
             while (!Source_data.HasFinished) {
                 IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
                 OMK omk = kvpair.Key;
                 int opk = (int) (Object) kvpair.Value;
                 worldcomm.Send<OMK>(omk, opk, tag);
-                //opks.Add(opk);
-                //finish = Source_data.HasFinished;
-                /*
-                //if (finish) {
-                //    foreach(int i in opks) requests.Add(worldcomm.ImmediateSend<OMK>(null, i, tag));
-                //    foreach (MPI.Request request in requests.ToArray()) requestList.Add(request);
-                //    requestList.WaitAll();
-                //}
-                 **/
             }
-            //opks = new HashSet<int>();
         }
     }
 }
