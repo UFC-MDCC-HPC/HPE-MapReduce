@@ -22,8 +22,6 @@ public override void main()
 			// 1. Ler os bins, um a um, do iterator, e enviá-los a 
 			//    cada mapper (unidades target) usando MPI.
 
-
-
 }
 
 }

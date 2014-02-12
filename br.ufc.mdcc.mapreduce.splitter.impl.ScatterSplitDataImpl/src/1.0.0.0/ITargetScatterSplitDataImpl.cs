@@ -16,7 +16,8 @@ public ITargetScatterSplitDataImpl() {
 
 } 
 
-public override void main() { 
+public override void main() 
+{ 
 
 			// 1. recebe os bins enviados pelo gerente (unidade source),
 			//    através do MPI, e os insere no Target_data.

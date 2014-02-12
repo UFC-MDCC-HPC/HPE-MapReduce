@@ -16,7 +16,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         private MPI.Intracommunicator worldcomm = null;
         private int tag = 345;
         public ISourceShufflerImpl() {
-            worldcomm = Mpi_comm.worldComm();
+			worldcomm = Mpi_comm.WorldComm;
         }
 
         public override void main() {
