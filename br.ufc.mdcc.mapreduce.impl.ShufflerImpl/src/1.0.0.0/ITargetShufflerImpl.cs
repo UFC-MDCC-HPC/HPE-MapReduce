@@ -5,7 +5,10 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Shuffler;
+using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.impl.IteratorImpl;
+using br.ufc.mdcc.common.impl.KVPairImpl;
 using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
@@ -16,6 +19,9 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         private MPI.Intracommunicator worldcomm = null;
         private int tag = 345;
         private List<OMK> omks;
+        private object lock_omk = new object();
+        private int start = 0;
+        private int end = 0;
 
         public ITargetShufflerImpl() {
             worldcomm = Mpi_comm.worldComm();
@@ -42,11 +48,34 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         public void receiveOMK() {
             while (true) {
                 OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag); //if (omk.Equals(null)) { break; }
-                omks.Add(omk);
+                lock (lock_omk) { 
+                    omks.Add(omk);
+                }
             }
         }
-        public void receiveOMV() {
 
+        //Primeiramente configura a faixa de leitura da Lista omks (start/end). Para isso, adquire o lock_omk
+        //para que não ocorra alterações pela outra thread. Após isso, efeturar RPC para adquirir os OMVs, com base 
+        //na faixa start/end da Lista omks.
+        public void receiveOMV() {
+            while (true) {
+                lock (lock_omk) {
+                    start = end;
+                    end = omks.Count;
+                }
+                for (int i = start; i < end; i++) {
+                    IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
+                    kvpair.setKey(omks[i]);             //Teríamos um setKey   no IKVPair?
+                    kvpair.setValue(RPC(omks[i]));      //Teríamos um setValue no IKVPair?
+                    Target_data.put(kvpair);
+                }
+            }
+        }
+
+        private IIterator<OMV> RPC(OMK k) {
+            //A implementar
+
+            return default(IIterator<OMV>);
         }
     }
 }
