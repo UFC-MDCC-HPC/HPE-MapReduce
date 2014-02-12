@@ -27,11 +27,20 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
              * 2. Enviar cada chave OMK para o reducer (unidade target)
              *    determinada pela chave OPK.
              */
-            Thread tRead = new Thread(new ThreadStart(readKVPairSendOMK));
-            tRead.Start();
-            tRead.Join();
+			startThreads();
         }
-        private void readKVPairSendOMK() {
+
+		//Iniciar Threads
+		private void startThreads(){
+			Thread tRead = new Thread(new ThreadStart(readKVPairSendOMK));
+			tRead.Start();
+			tRead.Join();
+		}
+
+		//Ler pares KV do Iterator, separar omks de opks e enviar por MPI ao target
+		//No caso, Loop infinito, onde a thread dorme em Source_data.fetch_next(); aguardando
+		//dados, caso não exista.
+		private void readKVPairSendOMK() {
             while (!Source_data.HasFinished) {
                 IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
                 OMK omk = kvpair.Key;

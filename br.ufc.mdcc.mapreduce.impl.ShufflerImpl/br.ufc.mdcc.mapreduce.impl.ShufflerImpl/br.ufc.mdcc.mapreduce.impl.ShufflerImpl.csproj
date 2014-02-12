@@ -31,13 +31,12 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=29b4a045737654fe, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="DGAC">
       <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI">
+      <HintPath>..\..\..\..\..\..\..\..\usr\local\lib\MPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -58,7 +57,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl.csproj">
-      <Project>{bcb96804-b787-4ed7-bb0f-127f3649e5d7}</Project>
+      <Project>{BCB96804-B787-4ED7-BB0F-127F3649E5D7}</Project>
       <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler.csproj">

@@ -26,13 +26,19 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
              * 2. Buscar nos mappers (que unidade ?) os valores.
              * 	  (buscando ainda solução para comunicação com os mappers)
              */
-            Thread tReceiveOMK = new Thread(new ThreadStart(receiveOMK));
-            Thread tReceiveOMV = new Thread(new ThreadStart(receiveOMV));
-            tReceiveOMK.Start();
-            tReceiveOMV.Start();
-            tReceiveOMK.Join();
-            tReceiveOMV.Join();
+			startThreads ();
         }
+		private void startThreads(){
+			Thread tReceiveOMK = new Thread(new ThreadStart(receiveOMK));
+			Thread tReceiveOMV = new Thread(new ThreadStart(receiveOMV));
+			tReceiveOMK.Start();
+			tReceiveOMV.Start();
+			tReceiveOMK.Join();
+			tReceiveOMV.Join();
+		}
+
+		//Recebimento das OMKs, adicionando em lista para uso posterior no receiveOMV
+		//onde serão obtidos OMVs de acordo com cada chave OMK.
         public void receiveOMK() {
             while (true) {
                 OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag); //if (omk.Equals(null)) { break; }
