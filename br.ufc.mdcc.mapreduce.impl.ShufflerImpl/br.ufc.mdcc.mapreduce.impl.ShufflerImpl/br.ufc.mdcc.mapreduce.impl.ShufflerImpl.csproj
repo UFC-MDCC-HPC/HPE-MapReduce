@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="MPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=29b4a045737654fe, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\MPI.NET\Lib\MPI.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="DGAC">
