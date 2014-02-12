@@ -13,15 +13,12 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
     where I:IData
     where IMK:IData
     where IMV:IData
-    where Sf:ISplitFunction<I, IMK, IMV>
-    {
-
+	where Sf:ISplitFunction<I, IMK, IMV>     {
         public ISourceSplitterImpl() { 
 
         } 
 
         public override void main() { 
-
 			// 1. Criar uma thread para executar Split_function.go();
 			Task split_function_task = new Task (delegate {
 				Split_function.go ();
@@ -32,8 +29,6 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
 				Send_bins.go();
 			});
 			send_bins_task.Start ();
-
         }
     }
-
 }
