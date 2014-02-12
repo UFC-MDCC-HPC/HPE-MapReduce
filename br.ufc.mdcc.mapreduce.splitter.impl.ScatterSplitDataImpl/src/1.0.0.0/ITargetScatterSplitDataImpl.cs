@@ -25,7 +25,7 @@ public class ITargetScatterSplitDataImpl<IMK, IMV> : BaseITargetScatterSplitData
 
 			// Recebe o bin enviado pelo gerente.
 			MPI.Request request = new MPI.Request ();
-			IKVPair<IMK, IMV>[] bin = new IKVPair<IMK, IMV>()[1];
+			IKVPair<IMK, IMV>[] bin = new IKVPair<IMK, IMV>[1];
 			request = worldcomm.ImmediateReceive<IKVPair<IMK, IMV>> (MPI.Unsafe.MPI_ANY_SOURCE, tag, bin);
 			request.Wait ();
 

@@ -16,7 +16,12 @@ where V:IData
 
 		} 
 
-
+		void IData.readFrom (IData o)
+		{
+			IKVPair<K,V> okv = (IKVPair<K,V>)o;
+			this.Key.readFrom(okv.Key);
+			this.Value.readFrom(okv.Value);
+		}
 }
 
 }

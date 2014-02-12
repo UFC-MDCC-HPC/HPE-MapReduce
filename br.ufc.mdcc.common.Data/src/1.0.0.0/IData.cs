@@ -4,7 +4,7 @@ namespace br.ufc.mdcc.common.Data {
 
 public interface IData : BaseIData
 {
-
+	 void readFrom (IData o);
 
 } // end main interface 
 

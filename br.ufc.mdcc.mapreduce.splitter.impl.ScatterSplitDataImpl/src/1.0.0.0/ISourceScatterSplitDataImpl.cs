@@ -37,13 +37,13 @@ public class ISourceScatterSplitDataImpl<IMK, IMV> : BaseISourceScatterSplitData
 				IKVPair<IMK, IMV> bin = Bins.fetch_next ();
 
 				// Recuperar a chave do bin.
-				Key = bin.Key;
+				Key.readFrom(bin.Key);
 
 				// Descobre o rank do Mapper.
-				Rank = Bin_function.go ();
+				Bin_function.go ();
 
 				// Inicia o envio do bin para o Mapper.
-				requests.Add (worldcomm.ImmediateSend<IKVPair<IMK, IMV>> (bin, Rank, tag));
+				requests.Add (worldcomm.ImmediateSend<IKVPair<IMK, IMV>> (bin, Rank.Value, tag));
 			}
 
 			// Espera todas os envios terminarem.

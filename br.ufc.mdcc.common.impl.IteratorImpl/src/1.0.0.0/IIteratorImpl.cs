@@ -73,6 +73,13 @@ where T:IData
 			get { return this.items[front].IsNone; }
 		}
 
+
+
+		public void readFrom (IData o)
+		{
+			throw new NotImplementedException ();
+		}
+
 		public class FinishedIteratorException : Exception
 		{
 		}
