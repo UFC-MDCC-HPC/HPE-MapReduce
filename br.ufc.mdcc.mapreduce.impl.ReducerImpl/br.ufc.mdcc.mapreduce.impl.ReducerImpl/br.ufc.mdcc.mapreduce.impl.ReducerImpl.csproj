@@ -36,7 +36,7 @@
       <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
     </Reference>
     <Reference Include="MPI">
-      <HintPath>..\..\..\..\..\..\..\..\..\usr\lib\mono\MPI.NET\MPI.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\..\..\..\usr\lib\mono\MySql.Data\MySql.Data.dll</HintPath>
