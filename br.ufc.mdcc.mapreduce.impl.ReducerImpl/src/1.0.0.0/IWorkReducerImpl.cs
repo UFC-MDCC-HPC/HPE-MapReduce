@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
@@ -26,10 +27,28 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
              * 3. Pegar o resultado de Reduction_function.go() de Output_reduce (ORV) 
              *    e colocar no iterator Output.
              */
+            startThreads();
         }
 
-        private void readPairOMKOMV() {
-            IKVPair<OMK, IIterator<OMV>>[] kvpair = new IKVPair<OMK, IIterator<OMV>>[1];
+        private void readPair_OMK_OMVs() {
+            while (!Input.HasFinished) {
+                IKVPair<OMK, IIterator<OMV>> kvpair = Input.fetch_next();
+                Key.readFrom(kvpair.Key);
+                Values.readFrom(kvpair.Value);
+                int rf = Reduce_function.go();
+                Output.put(Output_item);
+            }
+        }
+
+        private void startThreads() {
+            /*Instancias*/
+            Thread treadPairOMKOMV = new Thread(new ThreadStart(readPair_OMK_OMVs));
+
+            /*Starting*/
+            treadPairOMKOMV.Start();
+
+            /* Joins*/
+            treadPairOMKOMV.Join();
         }
     }
 }
