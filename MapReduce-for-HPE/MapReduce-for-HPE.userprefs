@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ISourceShufflerImpl.cs">
+    <Files>
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/ISourceScatterSplitDataImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.Data/src/1.0.0.0/IData.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.Iterator/src/1.0.0.0/IIterator.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.impl.KVPairImpl/src/1.0.0.0/BaseIKVPairImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.impl.KVPairImpl/src/1.0.0.0/IKVPairImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.KVPair/src/1.0.0.0/BaseIKVPair.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.KVPair/src/1.0.0.0/IKVPair.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.impl.IntegerImpl/src/1.0.0.0/IntegerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.Integer/src/1.0.0.0/IInteger.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.impl.IteratorImpl/src/1.0.0.0/IIteratorImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/ITargetScatterSplitDataImpl.cs" Line="29" Column="45" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ITargetShufflerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ISourceShufflerImpl.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

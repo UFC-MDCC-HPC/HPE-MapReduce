@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/heron/hpe/heron/cache" default="all" name="SplitFunction">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="SplitFunction-1.0.0.0">
+    <ifnot targetexists="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0">
+      <mkdir dir="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/SplitFunction.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/BaseISplitFunction.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/src/1.0.0.0/BaseISplitFunction.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.common.Set/bin/1.0.0.0/ISet.dll"/>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/SplitFunction.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.user.SplitFunction/src/1.0.0.0/ISplitFunction.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/BaseISplitFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="SplitFunction-1.0.0.0" name="all"/>
+</project>

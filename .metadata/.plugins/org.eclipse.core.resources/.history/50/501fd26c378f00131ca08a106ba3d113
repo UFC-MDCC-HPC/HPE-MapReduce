@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cbb1a77b89e800ddadb496a90386a3b550bae8d5a6e027aefcddef1cd078569bb612f1908d81ccf9ed1252a179d436681a3c6aa902fd93b367d78173aeb3106fa49d7426816c75476294e3f2b635f417354f5b4401eb57781869123f709baf1c3591a51689e6ef0e896e8a208b2edd6bd1b5ccd5a6b9a2575362df5dddf3638e" isAbstract="false" kind="Synchronizer" name="PartitionerImpl" packagePath="br.ufc.mdcc.mapreduce.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003d2c821c1ef6125890787b2544a3d89c876fd09c034ff0f07c985bf90ba636549d839aef33a87c613b5b18ef10ed73ce67c8da29b116d62e8029ce2f9d3e7103eb99d8373b888da7c5e3e996721c73056ea837869eb54ff3537ea3c1ae66aedfbbeaff07ebed5c2f4b9cfc36d83744809bcf0c20377ce8fbe35cfa07c8776e9e" localRef="base" location="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe" name="Partitioner" package="br.ufc.mdcc.mapreduce" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="106" y="163">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="partition_function" varName="P"/>
+        <parameter formFieldId="type ?" varName="II"/>
+        <parameter formFieldId="data_key_type" varName="OMK"/>
+        <parameter formFieldId="data_value_type" varName="OMV"/>
+        <parameter formFieldId="type ?" varName="OO"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="49" w="235" x="396" y="236">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="42" w="228" x="326" y="471">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="true" uRef="source">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="target">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="partition_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
+      <visualDescription h="60" w="100" x="143" y="84">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key" varName="OMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="73" y="356">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eba667eec4f234a1ce55ec2ce431855c19b971f281bd045f4f983e5cfd2466ef5399122a4845f7a4c77d8ef34ffa511ade82cd65b19770a16be72d637369333e229f2128a3b478fe386a382c545147589ebefa5502ad3a65afc567d9abadd418bab28da49342cdc07db13278b2cd0946cc1c0e02aef80dd76b54cc8b52d68c99" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="168" y="459">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="partition_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent localRef="partition_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="350" y="80">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="data_value_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="321" y="123">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="data_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="309" y="146">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="partition_key_type" varName="OPK"/>
+    <supplyParameter cRef="partition_function" varName="P"/>
+    <supplyParameter cRef="data_key_type" varName="OMK"/>
+    <supplyParameter cRef="data_value_type" varName="OMV"/>
+    <interface iRef="ISourcePartitionerImpl" nArgs="2">
+      <slice isRef="partition_function">
+        <originRef cRef="partition_function" iRef="IPartitionFunction"/>
+        <visualDescription h="10" w="10" x="50" y="26"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using environment.MPIDirect;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { &#xA;&#xA;public abstract class BaseISourcePartitionerImpl&lt;OMK, OMV, OPK, P>: &#xA;&#x9;Synchronizer, BaseISourcePartition&lt;OMK, OMV, OPK, P>&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where OPK:IData&#xA;where P:IPartitionFunction&lt;OMK, OPK>&#xA;{&#xA;&#xA;&#xA;&#xA;private OPK partition_key = default(OPK);&#xA;&#xA;protected OPK Partition_key {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.partition_key == null)&#xA;&#x9;&#x9;&#x9;this.partition_key = (OPK) Services.getPort(&quot;partition_key&quot;);&#xA;&#x9;&#x9;return this.partition_key;&#xA;&#x9;}&#xA;}&#xA;&#xA;private P partition_function = default(P);&#xA;&#xA;protected P Partition_function {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.partition_function == null)&#xA;&#x9;&#x9;&#x9;this.partition_function = (P) Services.getPort(&quot;partition_function&quot;);&#xA;&#x9;&#x9;return this.partition_function;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;private OMK data_key = default(OMK);&#xA;&#xA;protected OMK Data_key {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.data_key == null)&#xA;&#x9;&#x9;&#x9;this.data_key = (OMK) Services.getPort(&quot;data_key&quot;);&#xA;&#x9;&#x9;return this.data_key;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;IKVPair&lt;OMK, OMV>> source_data = null;&#xA;&#xA;public IIterator&lt;IKVPair&lt;OMK, OMV>> Source_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.source_data == null)&#xA;&#x9;&#x9;&#x9;this.source_data = (IIterator&lt;IKVPair&lt;OMK, OMV>>) Services.getPort(&quot;source_data&quot;);&#xA;&#x9;&#x9;return this.source_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;IKVPair&lt;OMK, OPK>> output_partition_info_source = null;&#xA;&#xA;protected IIterator&lt;IKVPair&lt;OMK, OPK>> Output_partition_info_source {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output_partition_info_source == null)&#xA;&#x9;&#x9;&#x9;this.output_partition_info_source = (IIterator&lt;IKVPair&lt;OMK, OPK>>) Services.getPort(&quot;output_partition_info_source&quot;);&#xA;&#x9;&#x9;return this.output_partition_info_source;&#xA;&#x9;}&#xA;}&#xA;&#xA;private  IMPIDirect mpi_comm = null;&#xA;&#xA;protected IMPIDirect Mpi_comm {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.mpi_comm == null) &#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;this.mpi_comm = (IMPIDirect) Services.getPort(&quot;mpi_comm&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return this.mpi_comm;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseISourcePartitionerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/1.0.0.0/BaseISourcePartitionerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo/bin/1.0.0.0/ISourceGatherPartitionInfo.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning/bin/1.0.0.0/IFeedPartitioning.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Partitioner/bin/1.0.0.0/BaseISourcePartition.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using environment.MPIDirect;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { &#xA;&#xA;public class ISourcePartitionerImpl&lt;OMK, OMV, OPK, P> : BaseISourcePartitionerImpl&lt;OMK, OMV, OPK, P>, ISourcePartition&lt;OMK, OMV, OPK, P>&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where OPK:IData&#xA;where P:IPartitionFunction&lt;OMK, OPK>&#xA;{&#xA;&#xA;&#x9;&#x9;public ISourcePartitionerImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;/* 1. Ler os elementos de Source_data, um a um, e &#xA;&#x9;&#x9;&#x9; *    copiar a chave (OMK) em Data_key.&#xA;&#x9;&#x9;&#x9; * 2. A cada chave de Source_data, chamar Partition_function.go();&#xA;&#x9;&#x9;&#x9; * 3. Enviar o resultado de Partition_function.go(), via MPI,&#xA;&#x9;&#x9;&#x9; *    para o gerente (unidade target).&#xA;&#x9;&#x9;&#x9; */&#xA;&#xA;&#x9;&#x9;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ISourcePartitionerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/1.0.0.0/ISourcePartitionerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/1.0.0.0/BaseISourcePartitionerImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Partitioner/bin/1.0.0.0/ISourcePartition.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="174" x="239" y="87">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <port name="data_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_key" sRef="partition_function"/>
+      </port>
+      <port name="partition_key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_key" sRef="partition_function"/>
+      </port>
+      <parameter iname="IPartitionFunction" order="0" parid="partition_function" uname="partition_function" varid="P"/>
+      <parameter iname="IData" order="1" parid="data_key_type" uname="data" varid="OMK"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ITargetPartitionerImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using environment.MPIDirect;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { &#xA;&#xA;public abstract class BaseITargetPartitionerImpl&lt;OMK, OPK>: &#xA;&#x9;Synchronizer, BaseITargetPartition&lt;OMK, OPK>&#xA;where OMK:IData&#xA;where OPK:IData&#xA;{&#xA;&#xA;&#xA;&#xA;&#x9;private IIterator&lt;IKVPair&lt;OMK, OPK>> target_data = null;&#xA;&#xA;&#x9;public IIterator&lt;IKVPair&lt;OMK, OPK>> Target_data {&#xA;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;if (this.target_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;this.target_data = (IIterator&lt;IKVPair&lt;OMK, OPK>>) Services.getPort(&quot;target_data&quot;);&#xA;&#x9;&#x9;&#x9;return this.target_data;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;&#x9;private  IMPIDirect mpi_comm = null;&#xA;&#xA;&#x9;protected IMPIDirect Mpi_comm {&#xA;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;if (this.mpi_comm == null) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;this.mpi_comm = (IMPIDirect) Services.getPort(&quot;mpi_comm&quot;);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;return this.mpi_comm;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseITargetPartitionerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/1.0.0.0/BaseITargetPartitionerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo/bin/1.0.0.0/ITargetGatherPartitionInfo.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Partitioner/bin/1.0.0.0/BaseITargetPartition.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using environment.MPIDirect;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { &#xA;&#xA;public class ITargetPartitionerImpl&lt;OMK, OPK> : BaseITargetPartitionerImpl&lt;OMK, OPK>, ITargetPartition&lt;OMK, OPK>&#xA;where OMK:IData&#xA;where OPK:IData&#xA;{&#xA;&#xA;&#x9;&#x9;public ITargetPartitionerImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;/* receber o par de chaves (OMK, OPK) dos mappers (unidade source)&#xA;&#x9;&#x9;&#x9; * e copiar no iterator Target_data.&#xA;&#x9;&#x9;&#x9; */&#xA;&#xA;&#x9;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ITargetPartitionerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/1.0.0.0/ITargetPartitionerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/1.0.0.0/BaseITargetPartitionerImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Partitioner/bin/1.0.0.0/ITargetPartition.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="182" x="444" y="82">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ISourcePartitionerImpl" multiple="true" private="false" replica="0" uRef="source" visibleInterface="true">
+      <super cRef="base" uRef="source"/>
+      <visualDescription h="40" w="80" x="64" y="484"/>
+    </unit>
+    <unit iRef="ITargetPartitionerImpl" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
+      <super cRef="base" uRef="target"/>
+      <visualDescription h="40" w="80" x="636" y="319"/>
+    </unit>
+  </componentInfo>
+</component:component>

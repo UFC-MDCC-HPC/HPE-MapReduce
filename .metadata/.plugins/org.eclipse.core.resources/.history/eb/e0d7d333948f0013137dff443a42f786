@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000817cb950256d33a1df51ca7f01fc16eb199f6ecbaa51fd4746567d2c1d968d8c6d647fe390c7b7b50a31d4aaef59cdbcd693a79a60104fbd5ac8b94c8da0160a3f65af724b646031207e04db36b674f23e4242113c7347ca1b0887bc0e6ec71d408a0e9243b6e74f1332b5c9f50c288c143fde2fdbe59a68e79284c2b9984185" isAbstract="true" kind="Computation" name="MapReduce" packagePath="br.ufc.mdcc.mapreduce">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000039eb51c943d51c313362bb93b224fba03af8b3a04784e52471ed853a0632525957fea25dae132a8ef4cb86cd0c222793072b023f88095c24d4345eb22fbb217a908bb3a5fa11cdb1ae05a6e6761ac6057e9483305532909aa4f8b2ad10856a7f641b7f73c1dde8bc65fbc7107bc3c4b904194f0050bfa8d6a60f00783ed85296" localRef="farm_map" location="br.ufc.mdcc.farm.Farm/Farm.hpe" multiple="false" name="Farm" package="br.ufc.mdcc.farm" exposed="false">
+      <visualDescription h="60" w="192" x="208" y="270">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="work" varName="WMAP"/>
+      <parameter formFieldId="result_type" varName="RMAP"/>
+      <parameter formFieldId="platform" varName="PLATFORM"/>
+      <parameter formFieldId="job_type" varName="JMAP"/>
+      <parameter formFieldId="scatter_strategy" varName="SMAP"/>
+      <parameter formFieldId="input_type" varName="IMAP"/>
+      <parameter formFieldId="output_type" varName="OMAP"/>
+      <parameter formFieldId="gather_strategy" varName="CMAP"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="45" w="104" x="65" y="86">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="41" y="53"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="47" w="159" x="277" y="407">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="manager">
+        <visualDescription h="20" w="20" x="85" y="4"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="worker">
+        <visualDescription h="20" w="20" x="13" y="22"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000039eb51c943d51c313362bb93b224fba03af8b3a04784e52471ed853a0632525957fea25dae132a8ef4cb86cd0c222793072b023f88095c24d4345eb22fbb217a908bb3a5fa11cdb1ae05a6e6761ac6057e9483305532909aa4f8b2ad10856a7f641b7f73c1dde8bc65fbc7107bc3c4b904194f0050bfa8d6a60f00783ed85296" localRef="farm_reduce" location="br.ufc.mdcc.farm.Farm/Farm.hpe" multiple="false" name="Farm" package="br.ufc.mdcc.farm" exposed="false">
+      <visualDescription h="60" w="185" x="402" y="264">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="work" varName="WRED"/>
+      <parameter formFieldId="result_type" varName="RRED"/>
+      <parameter formFieldId="platform" varName="PLATFORM"/>
+      <parameter formFieldId="job_type" varName="JRED"/>
+      <parameter formFieldId="scatter_strategy" varName="SRED"/>
+      <parameter formFieldId="input_type" varName="OMAP"/>
+      <parameter formFieldId="output_type" varName="ORED"/>
+      <parameter formFieldId="gather_strategy" varName="CRED"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="47" w="159" x="277" y="407">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="41" y="53"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="47" w="109" x="589" y="346">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="manager">
+        <visualDescription h="20" w="20" x="85" y="3"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="worker">
+        <visualDescription h="20" w="20" x="150" y="21"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002348db9a72b5d2aeca968f2613edf0d8af60afefb00066e70ed09bd547f22b3e26b2f0bfe2d1d6ec8d1393e192c076c06426ed9d87ac969a38198e0872c27b08d12b9e88b28f256756d4e23f00298e2edb0bba025c9247f6304b0774c37ee31f2e6596d85e943e9a3b240a4393e20d6926bbcfb1fa7399afb0cf242c9fb2e8c6" localRef="reduce_function" location="br.ufc.mdcc.mapreduce.user.ReduceFunction/ReduceFunction.hpe" multiple="false" name="ReduceFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="reduce_function" exposed="false">
+      <visualDescription h="39" w="133" x="85" y="601">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key_type" varName="OMK"/>
+      <parameter formFieldId="input_value_type" varName="OMV"/>
+      <parameter formFieldId="output_type" varName="Out"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="209" y="558">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="135" y="535">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="X###1391735196755"/>
+        <parameter formFieldId="key_type" varName="OMK"/>
+        <unitBounds parallel="false" uRef="kv_pair">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="reduce_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="partition_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="partition_function" exposed="false">
+      <visualDescription h="60" w="100" x="396" y="573">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key" varName="OMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="73" y="356">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eba667eec4f234a1ce55ec2ce431855c19b971f281bd045f4f983e5cfd2466ef5399122a4845f7a4c77d8ef34ffa511ade82cd65b19770a16be72d637369333e229f2128a3b478fe386a382c545147589ebefa5502ad3a65afc567d9abadd418bab28da49342cdc07db13278b2cd0946cc1c0e02aef80dd76b54cc8b52d68c99" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="168" y="459">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="partition_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ed9cf24ee54909dbdab6b9b2f55d31712a25881da84150226a43bd3b30d9adc0cfdf66db67f1a1daa69b9c7c49066ce5104db88e863c07758326b7fbbc660dbc53fa7f5c692a9d7e9a655fd1fb0b1c873f338538061f68aa3fb83cee564f3a015a13d3eb850c7900d0929b72e15ee64b5085583d7247861a0fcd292ce4730bcc" localRef="map_function" location="br.ufc.mdcc.mapreduce.user.MapFunction/MapFunction.hpe" multiple="false" name="MapFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="map_function" exposed="false">
+      <visualDescription h="60" w="100" x="416" y="515">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key_type" varName="IMK"/>
+      <parameter formFieldId="output_item_value_type" varName="OMV"/>
+      <parameter formFieldId="input_value_type" varName="IMV"/>
+      <parameter formFieldId="output_item_key_type" varName="OMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="57" y="154">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="59" y="275">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="69" w="188" x="287" y="440">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="X###1391735196756"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="map_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000c9627e0c6319733b1fed04ed52ce9bc9b85eefcf358a9ba2e0c3425477e68678b607471d56aa0207ea6d7003e6a896b4fab7c7ff10dc78c3018ceb257c39fd6a52502f3ab8735c3afc5c758a3ac99ef594f5f8dad06cd8c4c5c26c121c4b1cd9afa332265e8b1b17ddb69d5075869456888630af7b76312677322d604c262086" localRef="mapper" location="br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe" multiple="false" name="Mapper" package="br.ufc.mdcc.mapreduce" exposed="false">
+      <visualDescription h="60" w="100" x="790" y="333">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="output_value_type" varName="OMV"/>
+      <parameter formFieldId="input_key_type" varName="IMK"/>
+      <parameter formFieldId="map_function" varName="Mf"/>
+      <parameter formFieldId="input_value_type" varName="IMV"/>
+      <parameter formFieldId="type ?" varName="JMAP"/>
+      <parameter formFieldId="type ?" varName="O"/>
+      <parameter formFieldId="output_key_type" varName="OMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="768" y="444">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="816" y="223">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="work">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a98ccd7045027ed37e1425ee8dfaae04d700a73d36d2238a160534507b317679b99e4975ee789b5376d066ccb41b0d2c1918402124afc445f5c328d70491aaa0dcfc96f5bba10d1f0a4ab283373048a3fa40873daceaccf3d965ef87851ae9d581de7a09f4e87d7820567b0af95fc743e7861e9dacafa46f9e48cb0b4a204f81" localRef="reducer" location="br.ufc.mdcc.mapreduce.Reducer/Reducer.hpe" multiple="false" name="Reducer" package="br.ufc.mdcc.mapreduce" exposed="false">
+      <visualDescription h="60" w="100" x="708" y="437">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="output_value_type" varName="ORV"/>
+      <parameter formFieldId="input_key_type" varName="OMK"/>
+      <parameter formFieldId="input_value_type" varName="OMV"/>
+      <parameter formFieldId="type ?" varName="JRED"/>
+      <parameter formFieldId="type ?" varName="RRED"/>
+      <parameter formFieldId="reduce_function" varName="Rf"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="28" y="133">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="757" y="151">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="work">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000004dc5df375927e5aa478c47bab623e97b9c1a39e69d1b982be324d28743f74b12e0f125379a8ebda608806a0d8e9f0f9e2b4552b84d202e9aecd4972d70eb595a06b52c42b57b10f5fd440cb8363ff00deb88fec0aa60aebd62f51bda4984a5403cb551701ed4c7ea24766162648d0adcb617bc6ae4742b9c28f1df45c87cbd94" localRef="splitter" location="br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe" multiple="false" name="Splitter" package="br.ufc.mdcc.mapreduce" exposed="false">
+      <visualDescription h="60" w="100" x="770" y="677">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="output_key_item_type" varName="IMK"/>
+      <parameter formFieldId="bin_function" varName="Bf"/>
+      <parameter formFieldId="input_type" varName="IMAP"/>
+      <parameter formFieldId="type ?" varName="O"/>
+      <parameter formFieldId="split_function" varName="Sf"/>
+      <parameter formFieldId="output_value_item_type" varName="IMV"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="59" w="126" x="754" y="797">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="40" y="54"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="803" y="527">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="41" y="53"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003d2c821c1ef6125890787b2544a3d89c876fd09c034ff0f07c985bf90ba636549d839aef33a87c613b5b18ef10ed73ce67c8da29b116d62e8029ce2f9d3e7103eb99d8373b888da7c5e3e996721c73056ea837869eb54ff3537ea3c1ae66aedfbbeaff07ebed5c2f4b9cfc36d83744809bcf0c20377ce8fbe35cfa07c8776e9e" localRef="partitioner" location="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe" multiple="false" name="Partitioner" package="br.ufc.mdcc.mapreduce" exposed="false">
+      <visualDescription h="60" w="100" x="138" y="765">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="partition_function" varName="Pf"/>
+      <parameter formFieldId="type ?" varName="RMAP"/>
+      <parameter formFieldId="data_key_type" varName="OMK"/>
+      <parameter formFieldId="data_value_type" varName="OMV"/>
+      <parameter formFieldId="type ?" varName="OMAP"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="49" w="235" x="165" y="497">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="42" w="88" x="236" y="668">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="false" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009128c01b911632cb9262b0971275140b1b7ba05b184fe1935d55f82e80f66731a5c510d6e653def4e979e68ccb864cc53ad70c4cd0196c1ae68f77251de06d00cce14c4b07156282fa713969ff2da65db03ed79155fb73ab50c418365b56a89226fe194590bc108eaebce66b52d2f93be3c481e624070f19fae6d28dbdfebea0" localRef="shuffler" location="br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe" multiple="false" name="Shuffler" package="br.ufc.mdcc.mapreduce" exposed="false">
+      <visualDescription h="60" w="100" x="496" y="664">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="intermediate_value_type" varName="OMV"/>
+      <parameter formFieldId="type ?" varName="I"/>
+      <parameter formFieldId="intermediate_key_type" varName="OMK"/>
+      <parameter formFieldId="type ?" varName="O"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="81" w="100" x="623" y="606">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="40" y="54"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="82" w="100" x="394" y="771">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="41" y="53"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform_type" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" parameter_id="platform_type" exposed="false">
+      <visualDescription h="60" w="100" x="201" y="184">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f9bcb37397554596c09a2ab103595158e54862dad72cb754b73354c60a9d1ce936f4373dc57c5a4072a2951c1ec0f0320e4a319f465ab3ebadc084975f59fb133a73fbfef736d3d4188eda4fd0c085eb85ed6381efa25418cae63874e15501f2ffa9b0f80f09bfc9eb593def7fd9decbc69487ede20331b27368038556557ba5" localRef="collector" location="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe" multiple="false" name="Combiner" package="br.ufc.mdcc.mapreduce" exposed="false">
+      <visualDescription h="60" w="100" x="573" y="679">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="type ?" varName="T"/>
+      <parameter formFieldId="result_item_type" varName="ORV"/>
+      <parameter formFieldId="output_type" varName="O"/>
+      <parameter formFieldId="combine_function" varName="Cf"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="198" x="648" y="582">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="190" y="547">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="false" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="input_data_key_type" exposed="false">
+      <visualDescription h="60" w="100" x="402" y="617">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data_value_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="input_data_value_type" exposed="false">
+      <visualDescription h="60" w="100" x="601" y="628">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="intermediate_data_value_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="intermediate_data_value_type" exposed="false">
+      <visualDescription h="60" w="100" x="357" y="740">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="intermediate_data_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="intermediate_data_key_type" exposed="false">
+      <visualDescription h="60" w="100" x="211" y="657">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="input_data_type" exposed="false">
+      <visualDescription h="60" w="100" x="326" y="692">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="reduce_output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="reduce_output_type" exposed="false">
+      <visualDescription h="60" w="100" x="671" y="615">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007931dc9275a2f81d350920c3d07f09350893cc79f24924a02452fce0ea251e36e79b7de37606055b0e2e925c1391848635f7ed158b01dcf53e0ce6a742eb48facfe9c046e97fdacf1fa3601e77f7726984494fbc09011093d6e6fcd47affdcbf92c7fd66fbee6e86a832d71ea710e03ee31e8e7dcba49e884348159ee5ec89ac" localRef="split_function" location="br.ufc.mdcc.mapreduce.user.SplitFunction/SplitFunction.hpe" multiple="false" name="SplitFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="split_function" exposed="false">
+      <visualDescription h="60" w="100" x="157" y="328">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="IMV"/>
+      <parameter formFieldId="input_type" varName="IMAP"/>
+      <parameter formFieldId="key_type" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="133" y="427">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="169" x="323" y="434">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="X###1391735196759"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="split_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="bin_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="bin_function" exposed="false">
+      <visualDescription h="60" w="100" x="181" y="376">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="73" y="356">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eba667eec4f234a1ce55ec2ce431855c19b971f281bd045f4f983e5cfd2466ef5399122a4845f7a4c77d8ef34ffa511ade82cd65b19770a16be72d637369333e229f2128a3b478fe386a382c545147589ebefa5502ad3a65afc567d9abadd418bab28da49342cdc07db13278b2cd0946cc1c0e02aef80dd76b54cc8b52d68c99" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="168" y="459">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="partition_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003bb8cde9cdaf37a9334c439fcee37e98f23ec8f770a0dd398d69a02afa9b0b6d92cdd358fbef3d31c98c25b423e71aa3f82f5a9fa45c4e07fb936dcdb2d354ac190e6336e4ef093d9066eabb47aae1535f63d42c132b240292498296152c4a2135644a69593f84cc8e1d5d7d6d377e5b296d103e4e1180058b3d3a1aa61d78b4" localRef="combining_function" location="br.ufc.mdcc.mapreduce.user.CombineFunction/CombineFunction.hpe" multiple="false" name="CombineFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="combining_function" exposed="false">
+      <visualDescription h="60" w="100" x="228" y="634">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_item_type" varName="ORV"/>
+      <parameter formFieldId="output_type" varName="Out"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="353" y="465">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="169" x="71" y="498">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="ORV"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="combine_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="output_type" exposed="false">
+      <visualDescription h="60" w="100" x="141" y="378">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="partitioner" varName="CMAP"/>
+    <supplyParameter cRef="mapper" varName="WMAP"/>
+    <supplyParameter cRef="reducer" varName="WRED"/>
+    <supplyParameter cRef="shuffler" varName="SRED"/>
+    <supplyParameter cRef="splitter" varName="SMAP"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1391735196755" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="104" y="364">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="OMV"/>
+      <unitBounds parallel="false" uRef="iterator">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###1391735196755" varName="X###1391735196755"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1391735196755" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="93" y="410">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="OMV"/>
+      <parameter formFieldId="key_type" varName="OMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="148" y="444">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="308" y="410">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="kv_pair">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###1391735196755" varName="X###1391735196756"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1391735196759" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="69" w="126" x="362" y="160">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="IMV"/>
+      <parameter formFieldId="key_type" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="148" y="444">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="308" y="410">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="kv_pair">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###1391735196759" varName="X###1391735196759"/>
+    <parameter componentRef="reduce_function" formFieldId="reduce_function" varName="Rf"/>
+    <parameter componentRef="partition_function" formFieldId="partition_function" varName="Pf"/>
+    <parameter componentRef="map_function" formFieldId="map_function" varName="Mf"/>
+    <parameter componentRef="platform_type" formFieldId="platform_type" varName="PLATFORM"/>
+    <parameter componentRef="input_data_key_type" formFieldId="input_data_key_type" varName="IMK"/>
+    <parameter componentRef="input_data_value_type" formFieldId="input_data_value_type" varName="IMV"/>
+    <parameter componentRef="intermediate_data_value_type" formFieldId="intermediate_data_value_type" varName="OMV"/>
+    <parameter componentRef="intermediate_data_key_type" formFieldId="intermediate_data_key_type" varName="OMK"/>
+    <parameter componentRef="input_data_type" formFieldId="input_data_type" varName="IMAP"/>
+    <parameter componentRef="reduce_output_type" formFieldId="reduce_output_type" varName="ORV"/>
+    <parameter componentRef="split_function" formFieldId="split_function" varName="Sf"/>
+    <parameter componentRef="bin_function" formFieldId="bin_function" varName="Bf"/>
+    <parameter componentRef="combining_function" formFieldId="combining_function" varName="Cf"/>
+    <parameter componentRef="output_type" formFieldId="output_type" varName="Out"/>
+    <innerRenaming cNewName="output_data" cOldName="output" cRef="farm_reduce"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="farm_map"/>
+    <innerRenaming cNewName="partition_mapping" cOldName="output" cRef="farm_map"/>
+    <innerRenaming cNewName="partition_mapping" cOldName="input" cRef="farm_reduce"/>
+    <fusion>
+      <cRefs>farm_map</cRefs>
+      <cRefs>farm_reduce</cRefs>
+      <pRef>partition_mapping</pRef>
+    </fusion>
+    <interface iRef="IManagerMapReduce" nArgs="5">
+      <slice isRef="farm_map">
+        <originRef cRef="farm_map" iRef="IManager"/>
+        <visualDescription h="10" w="10" x="8" y="38"/>
+      </slice>
+      <slice isRef="farm_reduce">
+        <originRef cRef="farm_reduce" iRef="IManager"/>
+        <visualDescription h="10" w="10" x="84" y="37"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.MapReduce { &#xA;&#xA;&#x9;public interface BaseIManagerMapReduce&lt;IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM> : IComputationKind &#xA;&#x9;&#x9;where IMAP:IData&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where ORV:IData&#xA;&#x9;&#x9;where Sf:ISplitFunction&lt;IMAP, IMK, IMV>&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;IMAP Input_data {get;}&#xA;&#x9;&#x9;//IIterator&lt;IKVPair&lt;OMK,OPK>> Partition_data {get;}&#xA;&#x9;IIterator&lt;ORV> Output_data {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIManagerMapReduce.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIManagerMapReduce.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.MapReduce { &#xA;&#xA;&#x9;public interface IManagerMapReduce&lt;IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM> : &#xA;&#x9;BaseIManagerMapReduce&lt;IMAP, IMK, IMV, Sf, OMK, ORV, PLATFORM>&#xA;&#x9;&#x9;where IMAP:IData&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where ORV:IData&#xA;&#x9;&#x9;where Sf:ISplitFunction&lt;IMAP, IMK, IMV>&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IManagerMapReduce.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIManagerMapReduce.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="124" w="179" x="562" y="51">
+        <color b="255" g="0" r="0"/>
+      </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="72" y="82"/>
+        <slice pRef="input" sRef="farm_map"/>
+      </port>
+      <port name="partition_mapping">
+        <visualDescription h="10" w="10" x="45" y="15"/>
+        <slice pRef="output" sRef="farm_map"/>
+        <slice pRef="input" sRef="farm_reduce"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="117" y="25"/>
+        <slice pRef="output" sRef="farm_reduce"/>
+      </port>
+      <parameter iname="IData" order="0" parid="input_data_type" uname="data" varid="IMAP"/>
+      <parameter iname="IPartitionFunction" order="1" parid="bin_function" uname="partition_function" varid="Bf"/>
+      <parameter iname="IData" order="2" parid="input_data_key_type" uname="data" varid="IMK"/>
+      <parameter iname="ISplitFunction" order="3" parid="split_function" uname="split_function" varid="Sf"/>
+      <parameter iname="IPlatform" order="4" parid="platform_type" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IReduceWorker" nArgs="4">
+      <slice isRef="farm_reduce">
+        <originRef cRef="farm_reduce" iRef="IWorker"/>
+        <visualDescription h="10" w="10" x="15" y="43"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.MapReduce { &#xA;&#xA;&#x9;public interface BaseIReduceWorker&lt;OMK, ORV, Rf, OMV, PLATFORM> : IComputationKind &#xA;where Rf:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where ORV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIReduceWorker.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIReduceWorker.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/&lt;unamed>.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.MapReduce { &#xA;&#xA;&#x9;public interface IReduceWorker&lt;OMK, ORV, Rf, OMV, PLATFORM> : BaseIReduceWorker&lt;OMK, ORV, Rf, OMV, PLATFORM>&#xA;where Rf:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where ORV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IReduceWorker.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IReduceWorker.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIReduceWorker.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="82" w="168" x="400" y="493">
+        <color b="0" g="0" r="255"/>
+      </visualDescription>
+      <parameter iname="IReduceFunction" order="0" parid="reduce_function" uname="reduce_function" varid="Rf"/>
+      <parameter iname="IData" order="1" parid="reduce_output_type" uname="data" varid="ORV"/>
+      <parameter iname="IData" order="2" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IPlatform" order="3" parid="platform_type" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IMapWorker" nArgs="6">
+      <slice isRef="farm_map">
+        <originRef cRef="farm_map" iRef="IWorker"/>
+        <visualDescription h="10" w="10" x="74" y="39"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.MapReduce { &#xA;&#xA;&#x9;public interface BaseIMapWorker&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM> : IComputationKind &#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where OMV:IData&#xA;&#x9;&#x9;where Pf:IPartitionFunction&lt;OMK>&#xA;&#x9;&#x9;where Mf:IMapFunction&lt;IMK, IMV,OMK,OMV>&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;&#x9;&#x9;{&#xA;&#xA;&#xA;&#x9;&#x9;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIMapWorker.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIMapWorker.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.MapFunction/bin/1.0.0.0/IMapFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.MapReduce { &#xA;&#xA;&#x9;public interface IMapWorker&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM> : &#xA;&#x9;BaseIMapWorker&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM>&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where OMV:IData&#xA;&#x9;&#x9;where Pf:IPartitionFunction&lt;OMK>&#xA;&#x9;&#x9;where Mf:IMapFunction&lt;IMK, IMV, OMK, OMV>&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;&#x9;&#x9;{&#xA;&#xA;&#xA;&#x9;&#x9;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IMapWorker.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.MapFunction/bin/1.0.0.0/IMapFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIMapWorker.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="120" w="177" x="52" y="483">
+        <color b="0" g="0" r="255"/>
+      </visualDescription>
+      <parameter iname="IPartitionFunction" order="0" parid="partition_function" uname="partition_function" varid="Pf"/>
+      <parameter iname="IData" order="1" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IMapFunction" order="2" parid="map_function" uname="map_function" varid="Mf"/>
+      <parameter iname="IData" order="3" parid="input_data_key_type" uname="data" varid="IMK"/>
+      <parameter iname="IData" order="4" parid="input_data_value_type" uname="data" varid="IMV"/>
+      <parameter iname="IPlatform" order="5" parid="platform_type" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IManagerMapReduce" multiple="false" private="false" replica="0" uRef="manager" visibleInterface="true">
+      <slices cRef="source_data" replica="0" uRef="data" sliceName="source_data" transitive="true">
+        <visualDescription h="10" w="10" x="43" y="4"/>
+      </slices>
+      <slices cRef="target_data" replica="0" uRef="data" sliceName="target_data" transitive="true">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
+      <slices cRef="output_data" replica="0" uRef="data" sliceName="output_data" transitive="true">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
+      <slices cRef="farm_map" replica="0" uRef="manager" sliceName="farm_map" transitive="false">
+        <visualDescription h="10" w="10" x="8" y="38"/>
+        <port>source_data</port>
+        <port>target_data</port>
+      </slices>
+      <slices cRef="farm_reduce" replica="0" uRef="manager" sliceName="farm_reduce" transitive="false">
+        <visualDescription h="10" w="10" x="84" y="37"/>
+        <port>source_data</port>
+        <port>output_data</port>
+      </slices>
+      <visualDescription h="55" w="103" x="276" y="54"/>
+    </unit>
+    <unit iRef="IReduceWorker" multiple="true" private="false" replica="0" uRef="reduce_worker" visibleInterface="true">
+      <slices cRef="target_data" replica="0" uRef="data" sliceName="target_data" transitive="true">
+        <visualDescription h="10" w="10" x="6" y="8"/>
+      </slices>
+      <slices cRef="farm_reduce" replica="0" uRef="worker" sliceName="farm_reduce" transitive="false">
+        <visualDescription h="10" w="10" x="15" y="43"/>
+        <port>target_data</port>
+      </slices>
+      <visualDescription h="56" w="116" x="410" y="153"/>
+    </unit>
+    <unit iRef="IMapWorker" multiple="true" private="false" replica="0" uRef="map_worker" visibleInterface="true">
+      <slices cRef="source_data" replica="0" uRef="data" sliceName="source_data" transitive="true">
+        <visualDescription h="10" w="10" x="9" y="22"/>
+      </slices>
+      <slices cRef="target_data" replica="0" uRef="data" sliceName="target_data" transitive="true">
+        <visualDescription h="10" w="10" x="6" y="8"/>
+      </slices>
+      <slices cRef="farm_map" replica="0" uRef="worker" sliceName="farm_map" transitive="false">
+        <visualDescription h="10" w="10" x="74" y="39"/>
+        <port>source_data</port>
+        <port>target_data</port>
+      </slices>
+      <visualDescription h="53" w="121" x="63" y="205"/>
+    </unit>
+  </componentInfo>
+</component:component>

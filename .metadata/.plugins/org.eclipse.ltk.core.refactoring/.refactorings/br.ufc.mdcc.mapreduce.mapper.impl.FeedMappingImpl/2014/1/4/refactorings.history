@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;br.ufc.mdcc.mapreduce.mapper.impl.FeedMappingImpl/br.ufc.mdcc.mapreduce.mapper.impl.mpi.FeedMappingImpl.build&apos; to &apos;build.xml&apos;" description="Rename resource &apos;br.ufc.mdcc.mapreduce.mapper.impl.mpi.FeedMappingImpl.build&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="br.ufc.mdcc.mapreduce.mapper.impl.mpi.FeedMappingImpl.build" name="build.xml" stamp="1390531545170" updateReferences="true"/>
+</session>

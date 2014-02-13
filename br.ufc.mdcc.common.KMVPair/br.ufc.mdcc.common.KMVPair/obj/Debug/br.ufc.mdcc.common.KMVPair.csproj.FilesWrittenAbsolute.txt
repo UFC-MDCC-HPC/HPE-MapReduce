@@ -1,0 +1,7 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/bin/Debug/br.ufc.mdcc.common.KMVPair.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/bin/Debug/br.ufc.mdcc.common.KMVPair.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/obj/Debug/br.ufc.mdcc.common.KMVPair.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/obj/Debug/br.ufc.mdcc.common.KMVPair.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.KMVPair/br.ufc.mdcc.common.KMVPair/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb

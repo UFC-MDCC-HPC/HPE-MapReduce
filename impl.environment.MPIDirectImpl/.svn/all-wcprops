@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/736/branches/hpe_version/impl.environment.MPIDirectImpl
+END
+MPIDirectImpl.snk
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/736/branches/hpe_version/impl.environment.MPIDirectImpl/MPIDirectImpl.snk
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/736/branches/hpe_version/impl.environment.MPIDirectImpl/build.xml
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/736/branches/hpe_version/impl.environment.MPIDirectImpl/.project
+END
+MPIDirectImpl.hpe
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/790/branches/hpe_version/impl.environment.MPIDirectImpl/MPIDirectImpl.hpe
+END
+MPIDirectImpl.pub
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/736/branches/hpe_version/impl.environment.MPIDirectImpl/MPIDirectImpl.pub
+END

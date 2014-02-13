@@ -1,0 +1,5 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/environment.MPIDirect/bin/1.0.0.0/IMPIDirect.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/environment.MPIDirect/bin/1.0.0.0/IMPIDirect.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/environment.MPIDirect/environment.MPIDirect/obj/Debug/IMPIDirect.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/environment.MPIDirect/environment.MPIDirect/obj/Debug/IMPIDirect.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/environment.MPIDirect/environment.MPIDirect/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs

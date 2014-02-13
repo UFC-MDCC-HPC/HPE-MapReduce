@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cfd0ce9a3a7c11c0f75f81daf628b57da75a0947f5df98197dba08bcd5c08eab50b7a7167f1b1ef74ef525ac59f748e8873cefe04e25d7a22a52f0a64f99d12c1b42aff9a58817ba10922446de246ff37ef1c867e4b957ee1c30bc7d7181b127779699d947cce5017d354aaf44baa769adc0f12c09370637e8af187c5a479c90" isAbstract="false" kind="Computation" name="FarmImpl" packagePath="br.ufc.mdcc.farm.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="002400000480000094000000060200000024000052534131000400001100000039eb51c943d51c313362bb93b224fba03af8b3a04784e52471ed853a0632525957fea25dae132a8ef4cb86cd0c222793072b023f88095c24d4345eb22fbb217a908bb3a5fa11cdb1ae05a6e6761ac6057e9483305532909aa4f8b2ad10856a7f641b7f73c1dde8bc65fbc7107bc3c4b904194f0050bfa8d6a60f00783ed85296" localRef="base" location="br.ufc.mdcc.farm.Farm/Farm.hpe" name="Farm" package="br.ufc.mdcc.farm" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="269" y="333">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="work" varName="W"/>
+        <parameter formFieldId="result_type" varName="R"/>
+        <parameter formFieldId="platform" varName="P"/>
+        <parameter formFieldId="job_type" varName="J"/>
+        <parameter formFieldId="scatter_strategy" varName="S"/>
+        <parameter formFieldId="input_type" varName="I"/>
+        <parameter formFieldId="output_type" varName="O"/>
+        <parameter formFieldId="gather_strategy" varName="C"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="45" w="75" x="35" y="78">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="41" y="53"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="47" w="73" x="30" y="358">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="manager">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="worker">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="322" y="527">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="115" y="507">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="result_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="351" y="464">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="job_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="430" y="329">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000055294a0c7f1fff13882dae495773a18378690f70c8084ef010c42895ec25ab4bb8eeeb18a6603d09c31b0f828c5f3689ac55c7b2ee809d0528009af42a91cec01d3c8e716faf7e6405a10dd06e0c4a78ce0206f736e493166f2c4fdcb66ac58d4c52f0af406ea34824d04b1d57573a03a6801453dc56aacd5efbfca4287e3382" localRef="scatter_strategy" location="br.ufc.mdcc.farm.Scatter/Scatter.hpe" multiple="false" name="Scatter" package="br.ufc.mdcc.farm" exposed="false">
+      <visualDescription h="60" w="100" x="190" y="427">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_type" varName="I"/>
+      <parameter formFieldId="output_type" varName="J"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="81" w="100" x="383" y="69">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="40" y="54"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="82" w="100" x="171" y="66">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="41" y="53"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bab4cc083bb0b22df71ee0fed5b32475f9bd4499e73612417f425eb0acf69eb295cb92d5a9fdb63917d61817dc4d57415df5cdbc2b6ec3bd25d347d038ba9f03bec361e9436b271c818fe4030ce3eb37e4e23912c83bfd7f35145b30bcfbaf21a6f8e185481d082e68124e92bec2a41f490d93bbcc5cdce49952e3e023e49af" localRef="gather_strategy" location="br.ufc.mdcc.farm.Gather/Gather.hpe" multiple="false" name="Gather" package="br.ufc.mdcc.farm" exposed="false">
+      <visualDescription h="60" w="100" x="69" y="192">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_type" varName="R"/>
+      <parameter formFieldId="output_type" varName="O"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="198" x="289" y="385">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="466" y="266">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="source">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="false" uRef="target">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e3c49eae8dc01ab05854b5526a4a1e7903b6729b4b041de703815f87fac74b8e081e57b4be2cb75f5eb41c86fc711f3e7110f757003db7a7ea3fbfd3596f9aeccf272c0dd0814da0d4b6b6882e58a283a30bc3b5cdd24f5ecf036c74ea8352ebb5b91588e77dae0e23bbe82630ca925967fdd5c310812d412b06ed8fd57e0da3" localRef="work" location="br.ufc.mdcc.farm.Work/Work.hpe" multiple="false" name="Work" package="br.ufc.mdcc.farm" exposed="false">
+      <visualDescription h="60" w="100" x="226" y="472">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_type" varName="J"/>
+      <parameter formFieldId="output_type" varName="R"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="46" y="267">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="429" y="233">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="true" uRef="work">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="33" y="427">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="work" varName="W"/>
+    <supplyParameter cRef="platform" varName="P"/>
+    <supplyParameter cRef="scatter_strategy" varName="S"/>
+    <supplyParameter cRef="gather_strategy" varName="C"/>
+    <supplyParameter cRef="result_type" varName="R"/>
+    <supplyParameter cRef="output_type" varName="O"/>
+    <supplyParameter cRef="input_type" varName="I"/>
+    <supplyParameter cRef="job_type" varName="J"/>
+    <interface iRef="IManagerImpl" nArgs="5">
+      <slice isRef="scatter">
+        <originRef cRef="scatter" iRef="IScatterSource"/>
+        <visualDescription h="10" w="10" x="94" y="14"/>
+      </slice>
+      <slice isRef="gather">
+        <originRef cRef="gather" iRef="IGatherTarget"/>
+        <visualDescription h="10" w="10" x="102" y="39"/>
+      </slice>
+      <slice isRef="platform">
+        <originRef cRef="platform" iRef="IPlatform"/>
+        <visualDescription h="10" w="10" x="97" y="23"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public abstract class BaseIManagerImpl&lt;S, I, C, O, P>: Computation, BaseIManager&lt;S, I, C, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;private P platform = default(P);&#xA;&#xA;protected P Platform {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.platform == null)&#xA;&#x9;&#x9;&#x9;this.platform = (P) Services.getPort(&quot;platform&quot;);&#xA;&#x9;&#x9;return this.platform;&#xA;&#x9;}&#xA;}&#xA;&#xA;private S scatter = default(S);&#xA;&#xA;protected S Scatter {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.scatter == null)&#xA;&#x9;&#x9;&#x9;this.scatter = (S) Services.getPort(&quot;scatter&quot;);&#xA;&#x9;&#x9;return this.scatter;&#xA;&#x9;}&#xA;}&#xA;&#xA;private C gather = default(C);&#xA;&#xA;protected C Gather {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.gather == null)&#xA;&#x9;&#x9;&#x9;this.gather = (C) Services.getPort(&quot;gather&quot;);&#xA;&#x9;&#x9;return this.gather;&#xA;&#x9;}&#xA;}&#xA;&#xA;private O output = default(O);&#xA;&#xA;public O Output {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output == null)&#xA;&#x9;&#x9;&#x9;this.output = (O) Services.getPort(&quot;output&quot;);&#xA;&#x9;&#x9;return this.output;&#xA;&#x9;}&#xA;}&#xA;&#xA;private I input = default(I);&#xA;&#xA;public I Input {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input == null)&#xA;&#x9;&#x9;&#x9;this.input = (I) Services.getPort(&quot;input&quot;);&#xA;&#x9;&#x9;return this.input;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIManagerImpl.cs" srcType="base" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIManagerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterSource.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherTarget.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIManager.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IManagerImpl&lt;S, I, C, O, P> : BaseIManagerImpl&lt;S, I, C, O, P>, IManager&lt;S, I, C, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;public IManagerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterSource.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherTarget.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIManagerImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/IManager.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="58" w="118" x="94" y="81">
+        <color b="255" g="144" r="30"/>
+      </visualDescription>
+      <port name="input">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="source_data" sRef="scatter"/>
+      </port>
+      <port name="output">
+        <visualDescription h="10" w="10" x="10" y="30"/>
+        <slice pRef="target_data" sRef="gather"/>
+      </port>
+      <parameter iname="IScatterSource" order="0" parid="scatter_strategy" uname="source" varid="S"/>
+      <parameter iname="IData" order="1" parid="input_type" uname="data" varid="I"/>
+      <parameter iname="IGatherTarget" order="2" parid="gather_strategy" uname="target" varid="C"/>
+      <parameter iname="IData" order="3" parid="output_type" uname="data" varid="O"/>
+      <parameter iname="IPlatform" order="4" parid="platform" uname="platform" varid="P"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IWorkerImpl" nArgs="6">
+      <slice isRef="scatter">
+        <originRef cRef="scatter" iRef="IScatterTarget"/>
+        <visualDescription h="10" w="10" x="8" y="12"/>
+      </slice>
+      <slice isRef="gather">
+        <originRef cRef="gather" iRef="IGatherSource"/>
+        <visualDescription h="10" w="10" x="13" y="62"/>
+      </slice>
+      <slice isRef="work">
+        <originRef cRef="work" iRef="IWork"/>
+        <visualDescription h="10" w="10" x="111" y="54"/>
+      </slice>
+      <slice isRef="platform">
+        <originRef cRef="platform" iRef="IPlatform"/>
+        <visualDescription h="10" w="10" x="12" y="28"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public abstract class BaseIWorkerImpl&lt;S, J, C, R, W, P>: Computation, BaseIWorker&lt;S, J, C, R, W, P>&#xA;where S:IScatterTarget&lt;J>&#xA;where J:IData&#xA;where C:IGatherSource&lt;R>&#xA;where R:IData&#xA;where W:IWork&lt;J, R>&#xA;where P:IPlatform&#xA;{&#xA;&#xA;private W work = default(W);&#xA;&#xA;protected W Work {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.work == null)&#xA;&#x9;&#x9;&#x9;this.work = (W) Services.getPort(&quot;work&quot;);&#xA;&#x9;&#x9;return this.work;&#xA;&#x9;}&#xA;}&#xA;&#xA;private P platform = default(P);&#xA;&#xA;protected P Platform {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.platform == null)&#xA;&#x9;&#x9;&#x9;this.platform = (P) Services.getPort(&quot;platform&quot;);&#xA;&#x9;&#x9;return this.platform;&#xA;&#x9;}&#xA;}&#xA;&#xA;private S scatter = default(S);&#xA;&#xA;protected S Scatter {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.scatter == null)&#xA;&#x9;&#x9;&#x9;this.scatter = (S) Services.getPort(&quot;scatter&quot;);&#xA;&#x9;&#x9;return this.scatter;&#xA;&#x9;}&#xA;}&#xA;&#xA;private R result = default(R);&#xA;&#xA;protected R Result {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.result == null)&#xA;&#x9;&#x9;&#x9;this.result = (R) Services.getPort(&quot;result&quot;);&#xA;&#x9;&#x9;return this.result;&#xA;&#x9;}&#xA;}&#xA;&#xA;private R result = default(R);&#xA;&#xA;protected R Result {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.result == null)&#xA;&#x9;&#x9;&#x9;this.result = (R) Services.getPort(&quot;result&quot;);&#xA;&#x9;&#x9;return this.result;&#xA;&#x9;}&#xA;}&#xA;&#xA;private C gather = default(C);&#xA;&#xA;protected C Gather {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.gather == null)&#xA;&#x9;&#x9;&#x9;this.gather = (C) Services.getPort(&quot;gather&quot;);&#xA;&#x9;&#x9;return this.gather;&#xA;&#x9;}&#xA;}&#xA;&#xA;private J job = default(J);&#xA;&#xA;protected J Job {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.job == null)&#xA;&#x9;&#x9;&#x9;this.job = (J) Services.getPort(&quot;job&quot;);&#xA;&#x9;&#x9;return this.job;&#xA;&#x9;}&#xA;}&#xA;&#xA;private J job = default(J);&#xA;&#xA;protected J Job {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.job == null)&#xA;&#x9;&#x9;&#x9;this.job = (J) Services.getPort(&quot;job&quot;);&#xA;&#x9;&#x9;return this.job;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIWorkerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.farm.Work/bin/1.0.0.0/IWork.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterTarget.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherSource.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIWorker.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IWorkerImpl&lt;S, J, C, R, W, P> : BaseIWorkerImpl&lt;S, J, C, R, W, P>, IWorker&lt;S, J, C, R, W, P>&#xA;where S:IScatterTarget&lt;J>&#xA;where J:IData&#xA;where C:IGatherSource&lt;R>&#xA;where R:IData&#xA;where W:IWork&lt;J, R>&#xA;where P:IPlatform&#xA;{&#xA;&#xA;public IWorkerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IWorkerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterTarget.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherSource.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Work/bin/1.0.0.0/IWork.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIWorkerImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/IWorker.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="95" w="127" x="375" y="61">
+        <color b="81" g="81" r="228"/>
+      </visualDescription>
+      <port name="job">
+        <visualDescription h="10" w="10" x="97" y="13"/>
+        <slice pRef="target_data" sRef="scatter"/>
+      </port>
+      <port name="result">
+        <visualDescription h="10" w="10" x="88" y="66"/>
+        <slice pRef="source_data" sRef="gather"/>
+      </port>
+      <port name="result">
+        <visualDescription h="10" w="10" x="88" y="66"/>
+        <slice pRef="output" sRef="work"/>
+      </port>
+      <port name="job">
+        <visualDescription h="10" w="10" x="97" y="13"/>
+        <slice pRef="input" sRef="work"/>
+      </port>
+      <parameter iname="IScatterTarget" order="0" parid="scatter_strategy" uname="target" varid="S"/>
+      <parameter iname="IData" order="1" parid="job_type" uname="data" varid="J"/>
+      <parameter iname="IGatherSource" order="2" parid="gather_strategy" uname="source" varid="C"/>
+      <parameter iname="IData" order="3" parid="result_type" uname="data" varid="R"/>
+      <parameter iname="IWork" order="4" parid="work" uname="work" varid="W"/>
+      <parameter iname="IPlatform" order="5" parid="platform" uname="platform" varid="P"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IManagerImpl" multiple="false" private="false" replica="0" uRef="manager" visibleInterface="true">
+      <super cRef="base" uRef="manager"/>
+      <visualDescription h="58" w="118" x="55" y="250"/>
+    </unit>
+    <unit iRef="IWorkerImpl" multiple="true" private="false" replica="0" uRef="worker" visibleInterface="true">
+      <super cRef="base" uRef="worker"/>
+      <visualDescription h="55" w="123" x="414" y="201"/>
+    </unit>
+  </componentInfo>
+</component:component>

@@ -1,0 +1,5 @@
+#Wed Jan 22 16:28:21 BRT 2014
+eclipse.preferences.version=1
+org.emonic.base.build.file=br.ufc.mdcc.mapreduce.mapper.impl.mpi.FeedMappingImpl.build
+org.emonic.base.build.mechanism=nant
+org.emonic.base.project.copyright=(c) 2013 by Francisco Heron de Carvalho Junior, Cenez Ara\u00FAjo de Rezende & Jo\u00E3o Marcelo Uch\u00F4a de Alencar\nAll rights reserved.

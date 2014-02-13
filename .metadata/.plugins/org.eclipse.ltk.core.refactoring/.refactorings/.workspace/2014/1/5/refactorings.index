@@ -1,0 +1,14 @@
+1390906142548	Delete 5 resources
+1390906196239	Delete resource 'br.ufc.mdcc.mapreduce.Splitter/Copy of Splitter.hpe'
+1390936014737	Delete resource 'br.ufc.mdcc.mapreduce.mapper.FeedMapping'
+1390936026607	Delete resource 'br.ufc.mdcc.mapreduce.mapper.impl.FeedMappingImpl'
+1390936884260	Delete resource 'br.ufc.mdcc.mapreduce.partitioner.FeedPartitioning'
+1390936973628	Delete resource 'br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo'
+1390936992376	Delete 2 resources
+1390939637136	Delete 2 resources
+1390939773224	Delete 2 resources
+1390996192886	Delete resource 'br.ufc.mdcc.common.impl.IteractorDictionaryImpl'
+1390996196017	Delete resource 'br.ufc.mdcc.common.IteratorDictionary'
+1391006759599	Delete 2 resources
+1391008755721	Delete resource 'br.ufc.mdcc.common.KMVPair'
+1391008761984	Delete resource 'br.ufc.mdcc.common.impl.KMVPairImpl'

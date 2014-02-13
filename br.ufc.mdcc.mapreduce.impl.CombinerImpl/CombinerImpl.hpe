@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000d2c5eefca8dc4591f7434a5393074e081e8d2bb7f4b0d4a6a72d1e6905eae01d28e52bd791e07f8cc71e3b49d4c2b160992a23bac5537d901df483f37671bd54f19919463d39d924a7bac0ca5f3b8e11b19b9d49be9f07f0971af6f05cdeeabff558be021ddf7a3d5e9bd4106ee64b4ca0aa783f74d2981423333a4fd2db980" isAbstract="false" kind="Synchronizer" name="CombinerImpl" packagePath="br.ufc.mdcc.mapreduce.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f9bcb37397554596c09a2ab103595158e54862dad72cb754b73354c60a9d1ce936f4373dc57c5a4072a2951c1ec0f0320e4a319f465ab3ebadc084975f59fb133a73fbfef736d3d4188eda4fd0c085eb85ed6381efa25418cae63874e15501f2ffa9b0f80f09bfc9eb593def7fd9decbc69487ede20331b27368038556557ba5" localRef="base" location="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe" name="Combiner" package="br.ufc.mdcc.mapreduce" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="161" y="215">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="type ?" varName="I"/>
+        <parameter formFieldId="result_item_type" varName="ORV"/>
+        <parameter formFieldId="output_type" varName="ORED"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="198" x="107" y="371">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="459" y="317">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="true" uRef="source">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="target">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="item_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="51" y="146">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="211" y="421">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="output_type" varName="ORED"/>
+    <supplyParameter cRef="item_type" varName="ORV"/>
+    <interface iRef="ISourceCombinerImpl" nArgs="1">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { &#xA;&#xA;public abstract class BaseISourceCombinerImpl&lt;ORV>: Synchronizer, BaseISourceCombiner&lt;ORV>&#xA;where ORV:IData&#xA;{&#xA;&#xA;private IData source_data = null;&#xA;&#xA;public IData Source_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.source_data == null)&#xA;&#x9;&#x9;&#x9;this.source_data = (IData) Services.getPort(&quot;source_data&quot;);&#xA;&#x9;&#x9;return this.source_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseISourceCombinerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.CombinerImpl/bin/1.0.0.0/BaseISourceCombinerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseISourceCombiner.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { &#xA;&#xA;public class ISourceCombinerImpl&lt;ORV> : BaseISourceCombinerImpl&lt;ORV>, ISourceCombiner&lt;ORV>&#xA;where ORV:IData&#xA;{&#xA;&#xA;public ISourceCombinerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ISourceCombinerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.CombinerImpl/bin/1.0.0.0/ISourceCombinerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.CombinerImpl/bin/1.0.0.0/BaseISourceCombinerImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ISourceCombiner.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="194" x="44" y="84">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <parameter iname="IData" order="0" parid="result_item_type" uname="data" varid="ORV"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ITargetCombinerImpl" nArgs="1">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { &#xA;&#xA;public abstract class BaseITargetCombinerImpl&lt;ORED>: Synchronizer, BaseITargetCombiner&lt;ORED>&#xA;where ORED:IData&#xA;{&#xA;&#xA;private ORED target_data = default(ORED);&#xA;&#xA;public ORED Target_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.target_data == null)&#xA;&#x9;&#x9;&#x9;this.target_data = (ORED) Services.getPort(&quot;target_data&quot;);&#xA;&#x9;&#x9;return this.target_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseITargetCombinerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.CombinerImpl/bin/1.0.0.0/BaseITargetCombinerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/BaseITargetCombiner.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl { &#xA;&#xA;public class ITargetCombinerImpl&lt;ORED> : BaseITargetCombinerImpl&lt;ORED>, ITargetCombiner&lt;ORED>&#xA;where ORED:IData&#xA;{&#xA;&#xA;public ITargetCombinerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ITargetCombinerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.CombinerImpl/bin/1.0.0.0/ITargetCombinerImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.CombinerImpl/bin/1.0.0.0/BaseITargetCombinerImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ITargetCombiner.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="182" x="315" y="60">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <parameter iname="IData" order="0" parid="output_type" uname="data" varid="ORED"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ISourceCombinerImpl" multiple="true" private="false" replica="0" uRef="source" visibleInterface="true">
+      <super cRef="base" uRef="source"/>
+      <visualDescription h="40" w="80" x="43" y="169"/>
+    </unit>
+    <unit iRef="ITargetCombinerImpl" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
+      <super cRef="base" uRef="target"/>
+      <visualDescription h="40" w="80" x="337" y="162"/>
+    </unit>
+  </componentInfo>
+</component:component>

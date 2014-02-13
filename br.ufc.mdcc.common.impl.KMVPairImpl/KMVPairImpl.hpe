@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005969912d7293f9270217ae390d542a7b82cb35552083acf8916804f3d20255c59735c3307ccab4f1d7aa476064d86367a35383b951a2af6e1c40073d3b3ae8f43dbe009089e302689ff653518b6370debd5896996540756cb6914f4a81c141971ffe1df38cdce4bd1f7a3d5b71ac418ea37440209868e2cc9ae34dd3a1e4a1c0" isAbstract="false" kind="Data" name="KMVPairImpl" packagePath="br.ufc.mdcc.common.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009fb4d2d313b8052f34899d0f4c8138e078fe7e96c129c10b785a1771af6508d61a848410cf8d5208ba0a971653b6fbee42ade860727082895bb12353d97e2a6841a9be458b8339e5d681f95168c1289388e69394117c763ce6665b68e275d1d6b166a34143d073530df2a4f5d1e60d372c6170f399f5b5fb6e067cd6c315048b" localRef="base" location="br.ufc.mdcc.common.KMVPair/KMVPair.hpe" name="KMVPair" package="br.ufc.mdcc.common" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="170" y="319">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="V"/>
+        <parameter formFieldId="key_type" varName="K"/>
+        <unitBounds parallel="false" uRef="kmv_pair">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="282" y="307">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="148" y="385">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="value_type" varName="V"/>
+    <supplyParameter cRef="key_type" varName="K"/>
+    <interface iRef="IKVMPairImpl" nArgs="2">
+      <slice isRef="key">
+        <originRef cRef="key" iRef="IData"/>
+        <visualDescription h="10" w="10" x="14" y="25"/>
+      </slice>
+      <slice isRef="values">
+        <originRef cRef="values" iRef="IIterator"/>
+        <visualDescription h="10" w="10" x="57" y="28"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KMVPair;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.KMVPairImpl { &#xA;&#xA;public abstract class BaseIKVMPairImpl&lt;K, V>: DataStructure, BaseIKMVPair&lt;K, V>&#xA;where K:IData&#xA;where V:IData&#xA;{&#xA;&#xA;private IIterator&lt;V> values = null;&#xA;&#xA;protected IIterator&lt;V> Values {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.values == null)&#xA;&#x9;&#x9;&#x9;this.values = (IIterator&lt;V>) Services.getPort(&quot;values&quot;);&#xA;&#x9;&#x9;return this.values;&#xA;&#x9;}&#xA;}&#xA;&#xA;private K key = default(K);&#xA;&#xA;protected K Key {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.key == null)&#xA;&#x9;&#x9;&#x9;this.key = (K) Services.getPort(&quot;key&quot;);&#xA;&#x9;&#x9;return this.key;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIKVMPairImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.KMVPairImpl/bin/1.0.0.0/BaseIKVMPairImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KMVPair/bin/1.0.0.0/BaseIKMVPair.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KMVPair;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.KMVPairImpl { &#xA;&#xA;public class IKVMPairImpl&lt;K, V> : BaseIKVMPairImpl&lt;K, V>, IKMVPair&lt;K, V>&#xA;where K:IData&#xA;where V:IData&#xA;{&#xA;&#xA;public IKVMPairImpl() { &#xA;&#xA;} &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IKVMPairImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.KMVPairImpl/bin/1.0.0.0/IKVMPairImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.common.impl.KMVPairImpl/bin/1.0.0.0/BaseIKVMPairImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KMVPair/bin/1.0.0.0/IKMVPair.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="226" x="256" y="140">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IData" order="0" parid="key_type" uname="data" varid="K"/>
+      <parameter iname="IData" order="1" parid="value_type" uname="data" varid="V"/>
+    </interface>
+    <unit iRef="IKVMPairImpl" multiple="false" private="false" replica="0" uRef="kmv_pair" visibleInterface="true">
+      <super cRef="base" uRef="kmv_pair"/>
+      <visualDescription h="40" w="80" x="353" y="460"/>
+    </unit>
+  </componentInfo>
+</component:component>

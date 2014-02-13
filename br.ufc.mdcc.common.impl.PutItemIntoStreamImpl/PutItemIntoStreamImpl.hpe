@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000039bb8261368817909c88b2ce0a2aa7cc81aac2a513c34bb6b66d30b5f2ff3d9cedfc268bd8277f9f20428672b684ed7fb9d548c4f48c201a49b4da87e124809f890085bb8cd51bbe25f7745e062addb1c4ab271836f80c1fc75bf3fc25d216762677cedcd4c7787ca2db1e91f76a67b4eed42f2929296fc411e4b1c382f3369f" isAbstract="false" kind="Computation" name="PutItemIntoStreamImpl" packagePath="br.ufc.mdcc.common.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ff6e1d77315954b92d1884dacd956a628816e46c53d875488f25fe99d8b0ff43f19d3e152cd8096e747c49a4ecdaa60c5b61d9845399efe0ced254222ee2896dd51270605c0add1dd1ee104b62c57350ef1ffe463b41b2b3a9bd4ea74ebc5811219969f18fb085e3f8d5680e82a409da4dfa5c1275156e6a2dd6d9b77472d0ac" localRef="base" location="br.ufc.mdcc.common.PutItemIntoStream/PutItemIntoStream.hpe" name="PutItemIntoStream" package="br.ufc.mdcc.common" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="116" y="160">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="T"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="stream" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="389" y="293">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="T"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="item_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="94" y="337">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="put_item">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="item_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="269" y="348">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="item_type" varName="T"/>
+    <interface iRef="IPutItemImpl" nArgs="1">
+      <slice isRef="stream">
+        <originRef cRef="stream" iRef="IIterator"/>
+        <visualDescription h="10" w="10" x="46" y="30"/>
+      </slice>
+      <slice isRef="item_type">
+        <originRef cRef="item_type" iRef="IData"/>
+        <visualDescription h="10" w="10" x="3" y="25"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.PutItemIntoStream;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.PutItemIntoStreamImpl { &#xA;&#xA;public abstract class BaseIPutItemImpl&lt;T>: Computation, BaseIPutItemIntoStream&lt;T>&#xA;where T:IData&#xA;{&#xA;&#xA;private T item_type = default(T);&#xA;&#xA;public T Item_type {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.item_type == null)&#xA;&#x9;&#x9;&#x9;this.item_type = (T) Services.getPort(&quot;item_type&quot;);&#xA;&#x9;&#x9;return this.item_type;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;T> stream = null;&#xA;&#xA;public IIterator&lt;T> Stream {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.stream == null)&#xA;&#x9;&#x9;&#x9;this.stream = (IIterator&lt;T>) Services.getPort(&quot;stream&quot;);&#xA;&#x9;&#x9;return this.stream;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPutItemImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.PutItemIntoStreamImpl/bin/1.0.0.0/BaseIPutItemImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.PutItemIntoStream/bin/1.0.0.0/BaseIPutItemIntoStream.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.PutItemIntoStream;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.PutItemIntoStreamImpl { &#xA;&#xA;public class IPutItemImpl&lt;T> : BaseIPutItemImpl&lt;T>, IPutItemIntoStream&lt;T>&#xA;where T:IData&#xA;{&#xA;&#xA;public IPutItemImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IPutItemImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.PutItemIntoStreamImpl/bin/1.0.0.0/IPutItemImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.common.impl.PutItemIntoStreamImpl/bin/1.0.0.0/BaseIPutItemImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.common.PutItemIntoStream/bin/1.0.0.0/IPutItemIntoStream.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="155" x="245" y="111">
+        <color b="144" g="238" r="144"/>
+      </visualDescription>
+      <port name="stream">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="stream" sRef="stream"/>
+      </port>
+      <port name="item_type">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="item_type" sRef="item_type"/>
+      </port>
+      <parameter iname="IData" order="0" parid="item_type" uname="data" varid="T"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IPutItemImpl" multiple="false" private="false" replica="0" uRef="put_item" visibleInterface="true">
+      <super cRef="base" uRef="put_item"/>
+      <visualDescription h="40" w="80" x="272" y="324"/>
+    </unit>
+  </componentInfo>
+</component:component>

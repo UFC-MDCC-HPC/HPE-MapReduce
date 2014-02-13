@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000067c434d6ac6d4fac87e6e70b30b95afb798e89784df3361e3ee20b79ea3041263010f8c90712560b5c3d4ef295278eb24a1bdb609f9bdab49a4d00c2ba51a86146ac81b4e3cb0b16ca7eaa1bdd79186fa50b57aa0b9742b09bd7bec28ee2048100ccadf6d81e5c9cf532312e333c17c7d5b13a5aaa70e6502e837688427d9191" isAbstract="false" kind="Synchronizer" name="GatherPartitionInfoImpl" packagePath="br.ufc.mdcc.mapreduce.partitioner.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cf4565ee1b5d9003fca7eef036509a88351a6fa76ec935b70896579c1877d84814b3c9943958534a1a449c7d9611f9a2a56715af8ce8ce84c4aadced539483f213769237e0ba4d1b284de65c4d6cd5e3bbbb6adbd1469b380e31816dbb4cc8e7c08ed99b580cf9b4bebfe260915027ea4f2fb07d8b20290b4b76d448a438e697" localRef="base" location="br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo/GatherPartitionInfo.hpe" name="GatherPartitionInfo" package="br.ufc.mdcc.mapreduce.partitioner" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="76" y="438">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="partition_key_type" varName="OPK"/>
+        <parameter formFieldId="type ?" varName="I"/>
+        <parameter formFieldId="data_key_type" varName="OMK"/>
+        <parameter formFieldId="type ?" varName="O"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="198" x="262" y="332">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="433" y="245">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="true" uRef="source">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="target">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="partition_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="56" y="263">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="data_key_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="87" y="350">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="partition_key_type" varName="OPK"/>
+    <supplyParameter cRef="data_key_type" varName="OMK"/>
+    <interface iRef="ISourceGatherPartitionInfoImpl" nArgs="2">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.partitioner.impl.GatherPartitionInfoImpl { &#xA;&#xA;public abstract class BaseISourceGatherPartitionInfoImpl&lt;OMK, OPK>: Synchronizer, BaseISourceGatherPartitionInfo&lt;OMK, OPK>&#xA;where OMK:IData&#xA;where OPK:IData&#xA;{&#xA;&#xA;private IData source_data = null;&#xA;&#xA;public IData Source_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.source_data == null)&#xA;&#x9;&#x9;&#x9;this.source_data = (IData) Services.getPort(&quot;source_data&quot;);&#xA;&#x9;&#x9;return this.source_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseISourceGatherPartitionInfoImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.partitioner.impl.GatherPartitionInfoImpl/bin/1.0.0.0/BaseISourceGatherPartitionInfoImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo/bin/1.0.0.0/BaseISourceGatherPartitionInfo.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.partitioner.impl.GatherPartitionInfoImpl { &#xA;&#xA;public class ISourceGatherPartitionInfoImpl&lt;OMK, OPK> : BaseISourceGatherPartitionInfoImpl&lt;OMK, OPK>, ISourceGatherPartitionInfo&lt;OMK, OPK>&#xA;where OMK:IData&#xA;where OPK:IData&#xA;{&#xA;&#xA;public ISourceGatherPartitionInfoImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ISourceGatherPartitionInfoImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.partitioner.impl.GatherPartitionInfoImpl/bin/1.0.0.0/ISourceGatherPartitionInfoImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.partitioner.impl.GatherPartitionInfoImpl/bin/1.0.0.0/BaseISourceGatherPartitionInfoImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.partitioner.GatherPartitionInfo/bin/1.0.0.0/ISourceGatherPartitionInfo.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="299" x="52" y="70">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <parameter iname="IData" order="0" parid="data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IData" order="1" parid="partition_key_type" uname="data" varid="OPK"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ITargetGatherPartitionInfoImpl" nArgs="2">
+      <visualDescription h="40" w="220" x="571" y="84">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <parameter iname="IData" order="0" parid="data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IData" order="1" parid="partition_key_type" uname="data" varid="OPK"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ISourceGatherPartitionInfoImpl" multiple="true" private="false" replica="0" uRef="source" visibleInterface="true">
+      <super cRef="base" uRef="source"/>
+      <visualDescription h="40" w="80" x="99" y="274"/>
+    </unit>
+    <unit iRef="ITargetGatherPartitionInfoImpl" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
+      <super cRef="base" uRef="target"/>
+      <visualDescription h="40" w="80" x="476" y="186"/>
+    </unit>
+  </componentInfo>
+</component:component>

@@ -1,0 +1,16 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.mapreduce.Mapper.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.mapreduce.Mapper.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/obj/Debug/br.ufc.mdcc.mapreduce.Mapper.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/obj/Debug/br.ufc.mdcc.mapreduce.Mapper.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.Iterator.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.Iterator.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.mapreduce.user.MapFunction.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.mapreduce.user.MapFunction.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.farm.Work.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.farm.Work.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.KVPair.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.KVPair.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs

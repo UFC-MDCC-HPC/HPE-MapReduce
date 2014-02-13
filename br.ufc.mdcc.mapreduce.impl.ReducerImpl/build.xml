@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/heron/hpe/heron/cache" default="all" name="ReducerImpl">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="ReducerImpl-1.0.0.0">
+    <ifnot targetexists="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/bin/1.0.0.0">
+      <mkdir dir="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/ReducerImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/bin/1.0.0.0/BaseIWorkReducerImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/BaseIWorkReducerImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
+        <include name="br.ufc.mdcc.common.KMVPair/bin/1.0.0.0/IKMVPair.dll"/>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.common.PutItemIntoStream/bin/1.0.0.0/IPutItemIntoStream.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.reducer.FeedReducing/bin/1.0.0.0/IFeedReducing.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/BaseIReducer.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/ReducerImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/bin/1.0.0.0/IWorkReducerImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/IWorkReducerImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.impl.ReducerImpl/bin/1.0.0.0/BaseIWorkReducerImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.Reducer/bin/1.0.0.0/IReducer.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="ReducerImpl-1.0.0.0" name="all"/>
+</project>

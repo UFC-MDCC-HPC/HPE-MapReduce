@@ -1,0 +1,4 @@
+#Wed Jan 22 16:28:21 BRT 2014
+eclipse.preferences.version=1
+org.emonic.base.build.file=br.ufc.mdcc.mapreduce.mapper.impl.mpi.FeedMappingImpl.build
+org.emonic.base.build.mechanism=nant

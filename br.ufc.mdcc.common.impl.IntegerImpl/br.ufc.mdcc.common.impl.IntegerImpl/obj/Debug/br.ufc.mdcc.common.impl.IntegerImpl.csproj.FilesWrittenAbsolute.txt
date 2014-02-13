@@ -1,0 +1,10 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/br.ufc.mdcc.common.impl.IntegerImpl.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/br.ufc.mdcc.common.impl.IntegerImpl.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/obj/Debug/br.ufc.mdcc.common.impl.IntegerImpl.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/obj/Debug/br.ufc.mdcc.common.impl.IntegerImpl.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.IntegerImpl/br.ufc.mdcc.common.impl.IntegerImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll.mdb
