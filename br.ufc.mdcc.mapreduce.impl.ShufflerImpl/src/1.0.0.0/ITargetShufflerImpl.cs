@@ -67,8 +67,8 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         }
 
         /* 2. Primeiramente se configura a faixa de leitura da Lista-omks (start/end). Para isso, adquire o lock_omk
-              para que não ocorra alterações pela outra thread. Após isso, efetura-se RPC para adquirir os OMVs, com base 
-              na faixa start/end da Lista omks.*/
+              para que não ocorram alterações pela outra thread. Após isso, efetua-se RPC para adquirir os OMVs de cada
+         *    chave omk, com base na faixa start/end da Lista-omks.*/
         public void receiveOMV() {
             while (!anuncieFinished) {
                 counter_sem.WaitOne();

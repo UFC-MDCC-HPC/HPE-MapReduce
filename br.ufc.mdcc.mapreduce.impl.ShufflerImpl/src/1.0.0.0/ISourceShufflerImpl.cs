@@ -38,9 +38,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 			tRead.Join();
 		}
 
-		/* 2. Ler pares KV do Iterator, separar omks de opks e enviar por MPI ao target
-		      No caso, Loop infinito, onde a thread dorme em Source_data.fetch_next(); aguardando
-		      dados, caso não exista. */
+		/* 2. Ler pares KV do KVPair do Iterator, separar omks de opks em KVPair, e enviar omks por MPI ao target */
 		private void readKVPairSendOMK() {
             while (!Source_data.HasFinished) {
                 IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
