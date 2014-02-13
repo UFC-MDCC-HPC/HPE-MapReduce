@@ -43,8 +43,8 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 			tReceiveOMV.Join();
 		}
 
-		//Recebimento das OMKs, adicionando em lista para uso posterior no receiveOMV
-		//onde serão obtidos OMVs de acordo com cada chave OMK.
+		/* 1.Recebimento das OMKs, adicionando em lista para uso posterior no receiveOMV
+		     onde serão obtidos OMVs de acordo com cada chave OMK. */
         public void receiveOMK() {
             while (true) {
                 OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag); //if (omk.Equals(null)) { break; }
@@ -54,9 +54,9 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
             }
         }
 
-        //Primeiramente configura a faixa de leitura da Lista omks (start/end). Para isso, adquire o lock_omk
-        //para que não ocorra alterações pela outra thread. Após isso, efeturar RPC para adquirir os OMVs, com base 
-        //na faixa start/end da Lista omks.
+        /* 2. Primeiramente se configura a faixa de leitura da Lista-omks (start/end). Para isso, adquire o lock_omk
+              para que não ocorra alterações pela outra thread. Após isso, efetura-se RPC para adquirir os OMVs, com base 
+              na faixa start/end da Lista omks.*/
         public void receiveOMV() {
             while (true) {
                 lock (lock_omk) {
@@ -65,13 +65,15 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                 }
                 for (int i = start; i < end; i++) {
                     IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
-                    kvpair.setKey(omks[i]);             //Teríamos um setKey   no IKVPair?
-                    kvpair.setValue(RPC(omks[i]));      //Teríamos um setValue no IKVPair?
+                    IIterator<OMV> iteratorOMV = RPC(omks[i]);
+                    kvpair.Key.readFrom(omks[i]);
+                    kvpair.Value.readFrom(iteratorOMV);
                     Target_data.put(kvpair);
                 }
             }
         }
 
+        /* 3. Essa função modulariza a operação de recebimento de OMVs. Talvez por RPC. */
         private IIterator<OMV> RPC(OMK k) {
             //A implementar
 
