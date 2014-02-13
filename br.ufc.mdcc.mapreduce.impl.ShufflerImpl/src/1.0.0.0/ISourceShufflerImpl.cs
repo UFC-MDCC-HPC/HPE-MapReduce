@@ -17,6 +17,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 
         private MPI.Intracommunicator worldcomm;
         private int tag = 345;
+        private bool anuncieFinished;
         
         public ISourceShufflerImpl() {
 			worldcomm = Mpi_comm.WorldComm;
@@ -30,16 +31,16 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 			startThreads();
         }
 
-		//Iniciar Threads
+		/* 1. Iniciar Threads */
 		private void startThreads(){
 			Thread tRead = new Thread(new ThreadStart(readKVPairSendOMK));
 			tRead.Start();
 			tRead.Join();
 		}
 
-		//Ler pares KV do Iterator, separar omks de opks e enviar por MPI ao target
-		//No caso, Loop infinito, onde a thread dorme em Source_data.fetch_next(); aguardando
-		//dados, caso não exista.
+		/* 2. Ler pares KV do Iterator, separar omks de opks e enviar por MPI ao target
+		      No caso, Loop infinito, onde a thread dorme em Source_data.fetch_next(); aguardando
+		      dados, caso não exista. */
 		private void readKVPairSendOMK() {
             while (!Source_data.HasFinished) {
                 IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
@@ -47,6 +48,8 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                 int opk = (int) (Object) kvpair.Value;
                 worldcomm.Send<OMK>(omk, opk, tag);
             }
+            anuncieFinished = true;
+            worldcomm.Broadcast<bool>(ref anuncieFinished, 0);
         }
     }
 }
