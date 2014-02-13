@@ -7,7 +7,6 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Shuffler;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
-using br.ufc.mdcc.common.impl.IteratorImpl;
 using br.ufc.mdcc.common.Integer;
 using System.Collections.Generic;
 

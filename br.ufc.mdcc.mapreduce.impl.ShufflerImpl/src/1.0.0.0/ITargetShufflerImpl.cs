@@ -7,8 +7,6 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Shuffler;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.common.impl.IteratorImpl;
-using br.ufc.mdcc.common.impl.KVPairImpl;
 using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
@@ -41,7 +39,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
             /*Instancias*/
 			Thread tReceiveOMK = new Thread(new ThreadStart(receiveOMK));
 			Thread tReceiveOMV = new Thread(new ThreadStart(receiveOMV));
-            Thread tanuncieFinishedListen = new Thread(new ThreadStart(anuncieFinishedListen);
+            Thread tanuncieFinishedListen = new Thread(new ThreadStart(anuncieFinishedListen));
 			
             /*Starting*/
             tReceiveOMK.Start();
@@ -58,7 +56,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 		     onde serão obtidos OMVs de acordo com cada chave OMK. */
         public void receiveOMK() {
             while (!anuncieFinished) {
-                OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag); //if (omk.Equals(null)) { break; }
+                OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
                 lock (lock_omk) { 
                     if (!anuncieFinished) omks.Add(omk);
                 }
@@ -77,11 +75,11 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                     end = omks.Count;
                 }
                 for (int i = start; i < end; i++) {
-                    IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
+                    IKVPair<OMK, IIterator<OMV>>[] kvpair = new IKVPair<OMK, IIterator<OMV>>[1];
                     IIterator<OMV> iteratorOMV = RPC(omks[i]);
-                    kvpair.Key.readFrom(omks[i]);
-                    kvpair.Value.readFrom(iteratorOMV);
-                    Target_data.put(kvpair);
+                    kvpair[0].Key.readFrom(omks[i]);
+                    kvpair[0].Value.readFrom(iteratorOMV);
+                    Target_data.put(kvpair[0]);
                 }
             }
         }
