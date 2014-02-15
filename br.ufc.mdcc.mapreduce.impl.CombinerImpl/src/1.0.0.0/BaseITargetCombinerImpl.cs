@@ -33,14 +33,14 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
             }
         }
 
-        ?private ICombineFunction<ORV, O> combine_function = default(ICombineFunction<ORV, O>);
-        ?protected ICombineFunction<ORV, O> Combine_function {
-        ?    get {
-        ?        if (this.combine_function == null)
-        ?            this.combine_function = (ICombineFunction<ORV, O>)Services.getPort("combine_function");
-        ?        return this.combine_function;
-        ?    }
-        ?}
+        private ICombineFunction<ORV, O> combine_function = default(ICombineFunction<ORV, O>);
+		protected ICombineFunction<ORV, O> Combine_function {
+            get {
+                if (this.combine_function == null)
+                    this.combine_function = (ICombineFunction<ORV, O>)Services.getPort("combine_function");
+                return this.combine_function;
+            }
+        }
 
         private IMPIDirect mpi_comm = null;
         protected IMPIDirect Mpi_comm {

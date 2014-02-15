@@ -10,3 +10,4 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Combiner/br.ufc.mdcc.mapreduce.Combiner/bin/Debug/br.ufc.mdcc.common.Iterator.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Combiner/br.ufc.mdcc.mapreduce.Combiner/bin/Debug/br.ufc.mdcc.common.Iterator.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Combiner/br.ufc.mdcc.mapreduce.Combiner/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Combiner/br.ufc.mdcc.mapreduce.Combiner/bin/Debug/MPI.dll

@@ -11,3 +11,4 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Data/br.ufc.mdcc.common.Data/obj/Debug/br.ufc.mdcc.common.Data.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Data/br.ufc.mdcc.common.Data/obj/Debug/br.ufc.mdcc.common.Data.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Data/br.ufc.mdcc.common.Data/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Data/br.ufc.mdcc.common.Data/bin/Debug/MPI.dll
