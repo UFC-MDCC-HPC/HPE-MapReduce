@@ -20,6 +20,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         private object lock_omk = new object();
         private int start = 0;
         private int end = 0;
+        private int gerente = 0;
         private bool anuncieFinished = false;
         private Semaphore counter_sem;
 
@@ -75,11 +76,11 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                     end = omks.Count;
                 }
                 for (int i = start; i < end; i++) {
-                    IKVPair<OMK, IIterator<OMV>>[] kvpair = new IKVPair<OMK, IIterator<OMV>>[1];
+                    IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPair<OMK, IIterator<OMV>>;
                     IIterator<OMV> iteratorOMV = RPC(omks[i]);
-                    kvpair[0].Key.readFrom(omks[i]);
-                    kvpair[0].Value.readFrom(iteratorOMV);
-                    Target_data.put(kvpair[0]);
+                    kvpair.Key.readFrom(omks[i]);
+                    kvpair.Value.readFrom(iteratorOMV);
+                    Target_data.put(kvpair);
                 }
             }
         }
@@ -94,7 +95,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         /* 4. Escuta broadcast de finalização do master 0. Destrava o "receiveOMK" enviando a si (my rank) 
          * um valor default(OMK). */
         private void anuncieFinishedListen() {
-            worldcomm.Broadcast<bool>(ref anuncieFinished, 0);
+            worldcomm.Broadcast<bool>(ref anuncieFinished, gerente);
             worldcomm.Send<OMK>(default(OMK), rank, tag);
         }
     }
