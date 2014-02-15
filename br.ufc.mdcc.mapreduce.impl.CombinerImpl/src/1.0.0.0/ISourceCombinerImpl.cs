@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
@@ -9,12 +10,35 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
     public class ISourceCombinerImpl<ORV> : BaseISourceCombinerImpl<ORV>, ISourceCombiner<ORV>
     where ORV : IData {
 
-        public ISourceCombinerImpl() {
+        private MPI.Intracommunicator worldcomm;
+        private int tag = 347;
+        private int gerente = 0;
 
+        public ISourceCombinerImpl() {
+            worldcomm = Mpi_comm.WorldComm;
         }
 
         public override void main() {
 
+            startThreads();
+        }
+
+        public void sendValuesToTarget() {
+            while (!Source_data.HasFinished) {
+                ORV orv = Source_data.fetch_next();
+                worldcomm.Send<ORV>(orv, gerente, tag);
+            }
+        }
+
+        private void startThreads() {
+            /*Instancias*/
+            Thread tSend = new Thread(new ThreadStart(sendValuesToTarget));
+
+            /*Starting*/
+            tSend.Start();
+
+            /* Joins*/
+            tSend.Join();
         }
     }
 }
