@@ -23,7 +23,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
             startThreads();
         }
 
-        public void sendValuesToTarget() {
+        public void sendORVsToTarget() {
             while (!Source_data.HasFinished) {
                 ORV orv = Source_data.fetch_next();
                 worldcomm.Send<ORV>(orv, gerente, tag);
@@ -32,7 +32,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         private void startThreads() {
             /*Instancias*/
-            Thread tSend = new Thread(new ThreadStart(sendValuesToTarget));
+            Thread tSend = new Thread(new ThreadStart(sendORVsToTarget));
 
             /*Starting*/
             tSend.Start();

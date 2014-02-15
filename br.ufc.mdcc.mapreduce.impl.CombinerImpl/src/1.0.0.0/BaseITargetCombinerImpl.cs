@@ -6,6 +6,8 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.mapreduce.Combiner;
+using br.ufc.mdcc.mapreduce.user.CombineFunction;
+
 using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
@@ -28,6 +30,15 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
                 if (this.combine_input_data == null)
                     this.combine_input_data = (IIterator<ORV>)Services.getPort("combine_input_data");
                 return this.combine_input_data;
+            }
+        }
+
+        private ICombineFunction<ORV, O> combine_function = default(ICombineFunction<ORV, O>);
+        protected ICombineFunction<ORV, O> Combine_function {
+            get {
+                if (this.combine_function == null)
+                    this.combine_function = (ICombineFunction<ORV, O>)Services.getPort("combine_function");
+                return this.combine_function;
             }
         }
 

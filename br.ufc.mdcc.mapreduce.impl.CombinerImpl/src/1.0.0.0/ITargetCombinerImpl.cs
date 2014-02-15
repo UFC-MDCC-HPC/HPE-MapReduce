@@ -33,9 +33,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         /* Método da Thread que chama o CombineFunction */
         public void performCombineFunction() {
-            /* Como adquirir uma instância de CombineFunction?*/
-            ICombineFunction<ORV, O> combineFunctionCall = default(ICombineFunction<ORV, O>);
-            combineFunctionCall.go();
+            Combine_function.go();
         }
 
         /*Threads start*/
