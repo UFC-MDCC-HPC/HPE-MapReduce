@@ -35,6 +35,9 @@
     <Reference Include="DGAC">
       <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
     </Reference>
+    <Reference Include="MPI">
+      <HintPath>..\..\..\..\..\..\opt\mpi.net\lib\MPI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

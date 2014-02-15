@@ -36,7 +36,7 @@
       <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
     </Reference>
     <Reference Include="MPI">
-      <HintPath>..\..\..\..\..\..\opt\mpi.net\lib\MPI.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

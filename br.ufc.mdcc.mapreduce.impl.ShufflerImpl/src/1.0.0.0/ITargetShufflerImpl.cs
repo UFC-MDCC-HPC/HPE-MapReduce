@@ -7,8 +7,6 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Shuffler;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.common.impl.IteratorImpl;
-using br.ufc.mdcc.common.impl.KVPairImpl;
 using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
@@ -22,10 +20,14 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         private object lock_omk = new object();
         private int start = 0;
         private int end = 0;
+        private int gerente = 0;
+        private bool anuncieFinished = false;
+        private Semaphore counter_sem;
 
         public ITargetShufflerImpl() {
             worldcomm = Mpi_comm.worldComm();
             omks = new List<OMK>();
+            counter_sem = new Semaphore(0,int.MaxValue);
         }
         public override void main() {
             /* 1. Receber as chaves OMK enviadas pelo gerente (unidade source).
@@ -35,10 +37,18 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 			startThreads ();
         }
 		private void startThreads(){
+            /*Instancias*/
 			Thread tReceiveOMK = new Thread(new ThreadStart(receiveOMK));
 			Thread tReceiveOMV = new Thread(new ThreadStart(receiveOMV));
-			tReceiveOMK.Start();
+            Thread tanuncieFinishedListen = new Thread(new ThreadStart(anuncieFinishedListen));
+			
+            /*Starting*/
+            tReceiveOMK.Start();
 			tReceiveOMV.Start();
+            tanuncieFinishedListen.Start();
+
+            /* Joins*/
+            tanuncieFinishedListen.Join();
 			tReceiveOMK.Join();
 			tReceiveOMV.Join();
 		}
@@ -46,25 +56,27 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 		/* 1.Recebimento das OMKs, adicionando em lista para uso posterior no receiveOMV
 		     onde serão obtidos OMVs de acordo com cada chave OMK. */
         public void receiveOMK() {
-            while (true) {
-                OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag); //if (omk.Equals(null)) { break; }
+            while (!anuncieFinished) {
+                OMK omk  = worldcomm.Receive<OMK>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
                 lock (lock_omk) { 
-                    omks.Add(omk);
+                    if (!anuncieFinished) omks.Add(omk);
                 }
+                counter_sem.Release();
             }
         }
 
         /* 2. Primeiramente se configura a faixa de leitura da Lista-omks (start/end). Para isso, adquire o lock_omk
-              para que não ocorra alterações pela outra thread. Após isso, efetura-se RPC para adquirir os OMVs, com base 
-              na faixa start/end da Lista omks.*/
+              para que não ocorram alterações pela outra thread. Após isso, efetua-se RPC para adquirir os OMVs de cada
+         *    chave omk, com base na faixa start/end da Lista-omks.*/
         public void receiveOMV() {
-            while (true) {
+            while (!anuncieFinished) {
+                counter_sem.WaitOne();
                 lock (lock_omk) {
                     start = end;
                     end = omks.Count;
                 }
                 for (int i = start; i < end; i++) {
-                    IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
+                    ?IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPair<OMK, IIterator<OMV>>;
                     IIterator<OMV> iteratorOMV = RPC(omks[i]);
                     kvpair.Key.readFrom(omks[i]);
                     kvpair.Value.readFrom(iteratorOMV);
@@ -78,6 +90,13 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
             //A implementar
 
             return default(IIterator<OMV>);
+        }
+
+        /* 4. Escuta broadcast de finalização do master 0. Destrava o "receiveOMK" enviando a si (my rank) 
+         * um valor default(OMK). */
+        private void anuncieFinishedListen() {
+            worldcomm.Broadcast<bool>(ref anuncieFinished, gerente);
+            worldcomm.Send<OMK>(default(OMK), rank, tag);
         }
     }
 }
