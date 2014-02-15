@@ -7,6 +7,7 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Shuffler;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.common.impl.KVPairImpl;
 using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
@@ -76,7 +77,9 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                     end = omks.Count;
                 }
                 for (int i = start; i < end; i++) {
-                    ?IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPair<OMK, IIterator<OMV>>;
+                    /*Considerações: com o kvpair abaixo, introduz-se uma dependência com a implementação específica
+                     * de IKVPair. Que é IKVPairImpl */
+                    IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
                     IIterator<OMV> iteratorOMV = RPC(omks[i]);
                     kvpair.Key.readFrom(omks[i]);
                     kvpair.Value.readFrom(iteratorOMV);
@@ -86,6 +89,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         }
 
         /* 3. Essa função modulariza a operação de recebimento de OMVs. Talvez por RPC. */
+        /* Considerações: como vamoes implementar isso? */
         private IIterator<OMV> RPC(OMK k) {
             //A implementar
 

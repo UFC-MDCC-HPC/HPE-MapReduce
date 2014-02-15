@@ -33,7 +33,9 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         /* Método da Thread que chama o CombineFunction */
         public void performCombineFunction() {
-            Combine_function.go();
+            while (true) {
+                Combine_function.go();
+            }
         }
 
         /*Threads start*/
