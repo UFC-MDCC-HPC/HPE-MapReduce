@@ -89,7 +89,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         }
 
         /* 3. Essa função modulariza a operação de recebimento de OMVs. Talvez por RPC. */
-        /* Considerações: como vamoes implementar isso? */
+        /* Considerações: como vamos implementar isso? */
         private IIterator<OMV> RPC(OMK k) {
             //A implementar
 
