@@ -8,8 +8,6 @@ using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 using System.Collections.Generic;
 
-
-
 namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl { 
 
 public class ISourceScatterSplitDataImpl<IMK, IMV> : BaseISourceScatterSplitDataImpl<IMK, IMV>, ISourceScatterSplitData<IMK, IMV>
