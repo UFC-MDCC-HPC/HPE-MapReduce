@@ -76,7 +76,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                     end = omks.Count;
                 }
                 for (int i = start; i < end; i++) {
-                    IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPair<OMK, IIterator<OMV>>;
+                    ?IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPair<OMK, IIterator<OMV>>;
                     IIterator<OMV> iteratorOMV = RPC(omks[i]);
                     kvpair.Key.readFrom(omks[i]);
                     kvpair.Value.readFrom(iteratorOMV);
