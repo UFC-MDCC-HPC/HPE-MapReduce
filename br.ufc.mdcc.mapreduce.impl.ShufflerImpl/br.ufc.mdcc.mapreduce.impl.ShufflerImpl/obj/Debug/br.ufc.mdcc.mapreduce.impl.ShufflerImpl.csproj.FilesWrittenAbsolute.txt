@@ -19,3 +19,5 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/bin/Debug/br.ufc.mdcc.common.impl.IteratorImpl.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/br.ufc.mdcc.mapreduce.impl.ShufflerImpl/bin/Debug/br.ufc.mdcc.common.impl.IteratorImpl.dll.mdb

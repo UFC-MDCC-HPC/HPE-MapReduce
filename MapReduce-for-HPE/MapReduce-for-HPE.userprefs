@@ -1,15 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/BaseITargetCombinerImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ITargetCombinerImpl.cs">
     <Files>
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ITargetPartitionerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ISourcePartitionerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ISourceShufflerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ITargetShufflerImpl.cs" Line="90" Column="3" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/IWorkReducerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ISourceCombinerImpl.cs" Line="1" Column="1" />
       <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ITargetCombinerImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ISourceCombinerImpl.cs" Line="1" Column="14" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/BaseITargetCombinerImpl.cs" Line="5" Column="28" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/BaseISourceCombinerImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Combiner/src/1.0.0.0/BaseISourceCombiner.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Combiner/src/1.0.0.0/BaseITargetCombiner.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Combiner/src/1.0.0.0/ISourceCombiner.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Combiner/src/1.0.0.0/ITargetCombiner.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

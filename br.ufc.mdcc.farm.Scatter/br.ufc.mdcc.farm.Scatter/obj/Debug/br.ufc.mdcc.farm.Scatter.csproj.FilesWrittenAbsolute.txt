@@ -15,3 +15,4 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/DGAC.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.common.Data.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/br.ufc.mdcc.farm.Scatter/bin/Debug/MPI.dll

@@ -40,7 +40,7 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl {
 			// 1. Ler os elementos de Source_data, um a um, e copiar a chave (OMK) em Data_key.
 			while (!Source_data.HasFinished) {
 				IKVPair<OMK, OMV> item = Source_data.fetch_next ();
-				Data_key = item.Key;
+				Data_key.readFrom(item.Key);
 
 				// 2. A cada chave de Source_data, chamar Partition_function.go();
 				// Dúvida: cada invocação de .go() vai preenchendo o iterador Output_partition_info_source?

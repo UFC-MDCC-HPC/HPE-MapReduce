@@ -1,4 +1,0 @@
-#Thu Feb 06 10:47:45 BRT 2014
-eclipse.preferences.version=1
-org.emonic.base.build.file=build.xml
-org.emonic.base.build.mechanism=nant
