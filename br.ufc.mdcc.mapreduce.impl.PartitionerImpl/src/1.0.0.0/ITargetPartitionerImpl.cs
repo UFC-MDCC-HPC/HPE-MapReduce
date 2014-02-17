@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Iterator;
 
+// Essa é a unidade manager. Existe apenas uma.
+// Precisa receber os valores dos iteradores de todos os mappers (unidades source do Partitioner).
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 public class ITargetPartitionerImpl<OMK> : BaseITargetPartitionerImpl<OMK>, ITargetPartition<OMK>
 	where OMK:IData {

@@ -7,10 +7,13 @@ using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.mapreduce.Partitioner;
 using environment.MPIDirect;
 using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.common.impl.KVPairImpl;
 using System.Collections.Generic;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Iterator;
 
+// Essa é a unidade Mapper. Existem várias.
+// Criar uma thread em para ler Source_data elemento a elemento e enviar para o target.
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 	public class ISourcePartitionerImpl<OMK, OMV, P> : BaseISourcePartitionerImpl<OMK, OMV, P>, ISourcePartition<OMK, OMV, P>
     where OMK:IData
@@ -43,10 +46,10 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl {
 				Data_key = item.Key;
 
 				// 2. A cada chave de Source_data, chamar Partition_function.go();
-				// Dúvida: cada invocação de .go() vai preenchendo o iterador Output_partition_info_source?
-				// Primeira opção) Caso seja assim, posso chamar .go() várias vezes e só depois do while enviar o iterator via MPI.
-				// Segunda opção) Caso a cada invocação crie um iterator diferente, devo enviar dentro do while.
-				Partition_function.go ();
+				IInteger omv = Partition_function.go ();
+				IKVPair<OMK, IInteger> result = new IKVPairImpl<OMK, IInteger> ();
+				result.Key = Data_key;
+				result.Value = omv;
 			}
 			// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
 			// Dúvida 1: como saber o rank da unidade target? Ou não precisa?
