@@ -14,7 +14,7 @@ using br.ufc.mdcc.common.Iterator;
 // Essa é a unidade manager. Existe apenas uma.
 // Precisa receber os valores dos iteradores de todos os mappers (unidades source do Partitioner).
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
-public class ITargetPartitionerImpl<OMK> : BaseITargetPartitionerImpl<OMK>, ITargetPartition<OMK>
+	public class ITargetPartitionerImpl<OMK> : BaseITargetPartitionerImpl<OMK>, ITargetPartition<OMK>
 	where OMK:IData {
 		// Variáveis do Ambiente MPI.
 		private MPI.Intracommunicator worldcomm = null;
@@ -24,14 +24,24 @@ public class ITargetPartitionerImpl<OMK> : BaseITargetPartitionerImpl<OMK>, ITar
 		} 
 
 		public override void main() {
-			/* 1. Receber o par de chaves (OMK, OPK) dos mappers (unidade source) e copiar no iterator Target_data.
-			 * Dúvida: é só um par?
-			 */
+			// Vou ter que receber number_of_mappers jokers até finalizar.
+			int number_of_mappers = this.UnitSize["source"];
+			int jokers = 0;
 
-			// Recebe o iterator enviado pelo source.
-			MPI.Request request = new MPI.Request ();
-			request = worldcomm.ImmediateReceive<IIterator<IKVPair<OMK, IInteger>>> (MPI.Unsafe.MPI_ANY_SOURCE, tag, Target_data);
-			request.Wait ();
+			while (jokers != number_of_mappers) {
+				// Recebe o par do mapper
+				MPI.Request request = new MPI.Request ();
+				IKVPair<OMK, IInteger> pair = new IKVPairImpl<OMK, IInteger> ();
+				request = worldcomm.ImmediateReceive<IKVPair<OMK, IInteger>> (MPI.Unsafe.MPI_ANY_SOURCE, tag, pair);
+				request.Wait ();
+
+				// Verifica se é um joker. Caso contrário, adiciona em target_data.
+				if (pair.Key == -1) {
+					jokers++;
+				} else {
+					Target_data.put (pair);
+				}
+			}
 		}
 	}
 }

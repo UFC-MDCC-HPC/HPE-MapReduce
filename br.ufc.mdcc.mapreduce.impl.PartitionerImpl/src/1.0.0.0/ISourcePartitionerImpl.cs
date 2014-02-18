@@ -22,16 +22,10 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl {
 		// Variáveis do Ambiente MPI.
 		private MPI.Intracommunicator worldcomm = null;
 		private int tag = 345;
-		MPI.RequestList requestList;
-		List<MPI.Request> requests;
 
 		public ISourcePartitionerImpl() { 
 			// Inicializar o comunicador MPI. 
 			worldcomm = Mpi_comm.worldComm();
-
-			// Lista de requisições para controlar o progresso da comunicação.
-			requestList = new MPI.RequestList();
-			requests = new List<MPI.Request>();
 		} 
 
 		public override void main() {
@@ -50,12 +44,16 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl {
 				IKVPair<OMK, IInteger> result = new IKVPairImpl<OMK, IInteger> ();
 				result.Key = Data_key;
 				result.Value = omv;
+
+				// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
+				worldcomm.Send<IKVPair<OMK, IInteger>> (result, 0, tag);
 			}
-			// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
-			// Dúvida 1: como saber o rank da unidade target? Ou não precisa?
-			// Dúvida 2: posso mandar logo todo o iterator?
-			requestList.Add(worldcomm.ImmediateSend<IIterator<IKVPair<OMK, IInteger>>> (Output_partition_info_source, worldcomm.Rank, tag));
-			requestList.WaitAll ();
+
+			// 4. Após o final do iterador, envia um par coringa para confirmar o fim.
+			IKVPair<OMK, IInteger> joker = new IKVPairImpl<OMK, IInteger> ();
+			joker.Key = -1;
+			joker.Value = -1;
+			worldcomm.Send<IKVPair<OMK, IInteger>> (joker, 0, tag);
 		}
     }
 }
