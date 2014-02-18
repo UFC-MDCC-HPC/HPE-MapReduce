@@ -60,6 +60,10 @@
       <Project>{BCB96804-B787-4ED7-BB0F-127F3649E5D7}</Project>
       <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl.csproj">
+      <Project>{9a02d2dd-0967-4810-a845-3ede50dde195}</Project>
+      <Name>br.ufc.mdcc.common.impl.KVPairImpl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler.csproj">
       <Project>{9BF252CF-4C94-4C0C-ACEA-BB10000BCFEE}</Project>
       <Name>br.ufc.mdcc.mapreduce.Shuffler</Name>

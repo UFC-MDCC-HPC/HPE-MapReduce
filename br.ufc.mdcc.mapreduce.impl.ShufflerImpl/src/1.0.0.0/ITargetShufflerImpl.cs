@@ -79,7 +79,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                 for (int i = start; i < end; i++) {
                     /*Considerações: com o kvpair abaixo, introduz-se uma dependência com a implementação específica
                      * de IKVPair. Que é IKVPairImpl */
-					?IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
+					IKVPair<OMK, IIterator<OMV>> kvpair = new IKVPairImpl<OMK, IIterator<OMV>>();
                     IIterator<OMV> iteratorOMV = RPC(omks[i]);
                     kvpair.Key.readFrom(omks[i]);
                     kvpair.Value.readFrom(iteratorOMV);
