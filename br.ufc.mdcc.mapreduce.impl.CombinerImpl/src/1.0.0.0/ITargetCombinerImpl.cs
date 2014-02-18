@@ -14,9 +14,13 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         private MPI.Intracommunicator worldcomm;
         private int tag = 347;
+        private int listenFinished = 0;
+        private int size = 0;
+        private bool finalizeCombine = false;
 
         public ITargetCombinerImpl() {
             worldcomm = Mpi_comm.WorldComm;
+            size = worldcomm.Size;
         }
 
         public override void main() {
@@ -24,16 +28,24 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         }
 
         /* Recebimento de ORVs das unidades source */
-        public void receiveORVs() {
-            while (true) {
+        public void receiveCombineORVs() {
+            while (listenFinished != (size - 1)) {
                 ORV orv = worldcomm.Receive<ORV>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
-                Combine_input_data.put(orv);
+                if (listenFinished != (size - 1)) Combine_input_data.put(orv);
             }
+            finalizeCombine = true;
+        }
+
+        private void anuncieFinishedListen() {
+            while (listenFinished != (size - 1)) {
+                listenFinished = listenFinished + worldcomm.Receive<int>(MPI.Unsafe.MPI_ANY_SOURCE, tag + 1);
+            }
+            worldcomm.Send<ORV>(default(ORV), worldcomm.Rank, tag);
         }
 
         /* Método da Thread que chama o CombineFunction */
         public void performCombineFunction() {
-            while (true) {
+            while (!finalizeCombine) {
                 Combine_function.go();
             }
         }
@@ -41,16 +53,19 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         /*Threads start*/
         private void startThreads() {
             /*Instancias*/
-            Thread tReceive = new Thread(new ThreadStart(receiveORVs));
-            Thread tPerformCombineFunction = new Thread(new ThreadStart(performCombineFunction));
+            Thread tReceive = new Thread(new ThreadStart(receiveCombineORVs));
+            Thread tanuncieFinishedListen = new Thread(new ThreadStart(anuncieFinishedListen));
+            Thread tperformCombine = new Thread(new ThreadStart(performCombineFunction));
 
             /*Starting*/
             tReceive.Start();
-            tPerformCombineFunction.Start();
+            tanuncieFinishedListen.Start();
+            tperformCombine.Start();
 
             /* Joins*/
             tReceive.Join();
-            tPerformCombineFunction.Join();
+            tanuncieFinishedListen.Join();
+            tperformCombine.Join();
         }
     }
 }

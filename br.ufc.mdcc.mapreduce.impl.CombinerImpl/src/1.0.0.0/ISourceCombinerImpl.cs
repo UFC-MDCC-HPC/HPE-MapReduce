@@ -28,6 +28,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
                 ORV orv = Source_data.fetch_next();
                 worldcomm.Send<ORV>(orv, gerente, tag);
             }
+            worldcomm.Send<int>(1, gerente, tag+1);
         }
 
         private void startThreads() {
