@@ -46,7 +46,7 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl {
 				result.Value = omv;
 
 				// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
-				worldcomm.Send<IKVPair<OMK, IInteger>> (result, 0, tag);
+				worldcomm.Send<IKVPair<OMK, IInteger>> (result, this.UnitRanks["target"][0], tag);
 			}
 
 			// 4. Após o final do iterador, envia um par coringa para confirmar o fim.
