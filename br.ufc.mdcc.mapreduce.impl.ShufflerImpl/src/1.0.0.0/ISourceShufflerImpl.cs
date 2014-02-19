@@ -16,7 +16,6 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 
         private MPI.Intracommunicator worldcomm;
         private int tag = 345;
-        private bool anuncieFinished;
         private int gerente = 0;
         
         public ISourceShufflerImpl() {
@@ -46,7 +45,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                 int opk = (int) (Object) kvpair.Value;
                 worldcomm.Send<OMK>(omk, opk, tag);
             }
-            anuncieFinished = true;
+            bool anuncieFinished = true;
             worldcomm.Broadcast<bool>(ref anuncieFinished, gerente);
         }
     }
