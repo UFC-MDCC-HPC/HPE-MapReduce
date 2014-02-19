@@ -14,43 +14,57 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         private MPI.Intracommunicator worldcomm;
         private int tag = 347;
-        private int listenFinished = 0;
         private int size = 0;
         private bool finalizeCombine = false;
+        private int listenFinished = 0;
+        private Semaphore semCombineFunction;
 
         public ITargetCombinerImpl() {
             worldcomm = Mpi_comm.WorldComm;
             size = worldcomm.Size;
+            semCombineFunction = new Semaphore(0, int.MaxValue);
         }
 
-        public override void main() {
-            startThreads();
+        public override void main() { 
+            startThreads(); 
         }
 
         /* Recebimento de ORVs das unidades source */
         public void receiveCombineORVs() {
-            while (listenFinished != (size - 1)) {
-                ORV orv = worldcomm.Receive<ORV>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
-                if (listenFinished != (size - 1)) Combine_input_data.put(orv);
+            ORV orv;
+            Object o;
+            while (!finalizeCombine) {
+                o = worldcomm.Receive<Object>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
+                try { 
+                    orv = (ORV) o; 
+                } 
+                catch {
+                    finalizeCombine = true;
+                    break;
+                }
+                Combine_input_data.put(orv);
+                semCombineFunction.Release();
             }
-            finalizeCombine = true;
+            semCombineFunction.Release();
         }
 
+        /* Escuta todos os anúncios dos reducers finalizados e destrava o método receiveCombineORVs */
         private void anuncieFinishedListen() {
             while (listenFinished != (size - 1)) {
                 listenFinished = listenFinished + worldcomm.Receive<int>(MPI.Unsafe.MPI_ANY_SOURCE, tag + 1);
             }
-            worldcomm.Send<ORV>(default(ORV), worldcomm.Rank, tag);
+            worldcomm.Send<Object>(new Object(), worldcomm.Rank, tag);
         }
 
         /* Método da Thread que chama o CombineFunction */
         public void performCombineFunction() {
             while (!finalizeCombine) {
-                Combine_function.go();
+                semCombineFunction.WaitOne();
+                if (!finalizeCombine) Combine_function.go();
             }
         }
 
-        /*Threads start*/
+        /* Threads start */
         private void startThreads() {
             /*Instancias*/
             Thread tReceive = new Thread(new ThreadStart(receiveCombineORVs));

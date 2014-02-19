@@ -19,7 +19,6 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         }
 
         public override void main() {
-
             startThreads();
         }
 
