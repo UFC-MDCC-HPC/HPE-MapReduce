@@ -15,7 +15,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         private MPI.Intracommunicator worldcomm;
         private int tag = 347;
         private int size = 0;
-        private bool finalizeCombine = false;
+        private bool finalize = false;
         private int listenFinished = 0;
         private Semaphore semCombineFunction;
 
@@ -33,13 +33,13 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         public void receiveCombineORVs() {
             ORV orv;
             Object o;
-            while (!finalizeCombine) {
+            while (!finalize) {
                 o = worldcomm.Receive<Object>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
                 try { 
                     orv = (ORV) o; 
                 } 
                 catch {
-                    finalizeCombine = true;
+                    finalize = true;
                     break;
                 }
                 Combine_input_data.put(orv);
@@ -58,9 +58,9 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         /* Método da Thread que chama o CombineFunction */
         public void performCombineFunction() {
-            while (!finalizeCombine) {
+            while (!finalize) {
                 semCombineFunction.WaitOne();
-                if (!finalizeCombine) Combine_function.go();
+                if (!finalize) Combine_function.go();
             }
         }
 
