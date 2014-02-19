@@ -50,7 +50,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         /* Escuta todos os anúncios dos reducers finalizados e destrava o método receiveCombineORVs */
         private void anuncieFinishedListen() {
-            while (listenFinished != (size - 1)) {
+            ?(como saber a quantidade de reducers)while (listenFinished != (size - 1)) {
                 listenFinished = listenFinished + worldcomm.Receive<int>(MPI.Unsafe.MPI_ANY_SOURCE, tag + 1);
             }
             worldcomm.Send<Object>(new Object(), worldcomm.Rank, tag);
