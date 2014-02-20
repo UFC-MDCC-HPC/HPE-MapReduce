@@ -14,14 +14,14 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         private MPI.Intracommunicator worldcomm;
         private int tag = 347;
-        private int size = 0;
+        private int size_reducers = 0;
         private bool finalize = false;
-        private int listenFinished = 0;
+        private int listenFinishedObject = 0;
         private Semaphore semCombineFunction;
 
         public ITargetCombinerImpl() {
             worldcomm = Mpi_comm.WorldComm;
-            size = worldcomm.Size;
+            size_reducers = this.UnitSize["source"];
             semCombineFunction = new Semaphore(0, int.MaxValue);
         }
 
@@ -31,29 +31,25 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
         /* Recebimento de ORVs das unidades source */
         public void receiveCombineORVs() {
-            ORV orv;
+            ORV orv = default(ORV);
             Object o;
-            while (!finalize) {
+            while (listenFinishedObject != size_reducers) {
+                bool put = true;
                 o = worldcomm.Receive<Object>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
                 try { 
                     orv = (ORV) o; 
                 } 
                 catch {
-                    finalize = true;
-                    break;
+                    listenFinishedObject = listenFinishedObject + 1;
+                    put = false;
                 }
-                Combine_input_data.put(orv);
-                semCombineFunction.Release();
+                if (put) {
+                    Combine_input_data.put(orv);
+                    semCombineFunction.Release();
+                }
             }
+            finalize = true;
             semCombineFunction.Release();
-        }
-
-        /* Escuta todos os anúncios dos reducers finalizados e destrava o método receiveCombineORVs */
-        private void anuncieFinishedListen() {
-            ?(como saber a quantidade de reducers)while (listenFinished != (size - 1)) {
-                listenFinished = listenFinished + worldcomm.Receive<int>(MPI.Unsafe.MPI_ANY_SOURCE, tag + 1);
-            }
-            worldcomm.Send<Object>(new Object(), worldcomm.Rank, tag);
         }
 
         /* Método da Thread que chama o CombineFunction */
@@ -68,17 +64,14 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         private void startThreads() {
             /*Instancias*/
             Thread tReceive = new Thread(new ThreadStart(receiveCombineORVs));
-            Thread tanuncieFinishedListen = new Thread(new ThreadStart(anuncieFinishedListen));
             Thread tperformCombine = new Thread(new ThreadStart(performCombineFunction));
 
             /*Starting*/
             tReceive.Start();
-            tanuncieFinishedListen.Start();
             tperformCombine.Start();
 
             /* Joins*/
             tReceive.Join();
-            tanuncieFinishedListen.Join();
             tperformCombine.Join();
         }
     }
