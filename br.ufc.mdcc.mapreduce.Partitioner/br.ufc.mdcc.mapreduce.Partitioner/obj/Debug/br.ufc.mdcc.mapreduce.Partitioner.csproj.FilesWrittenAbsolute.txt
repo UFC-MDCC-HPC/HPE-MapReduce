@@ -16,3 +16,6 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/br.ufc.mdcc.mapreduce.Partitioner/bin/Debug/br.ufc.mdcc.common.Integer.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/br.ufc.mdcc.mapreduce.Partitioner/bin/Debug/br.ufc.mdcc.common.Integer.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/br.ufc.mdcc.mapreduce.Partitioner/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/br.ufc.mdcc.mapreduce.Partitioner/bin/Debug/MPI.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/br.ufc.mdcc.mapreduce.Partitioner/bin/Debug/br.ufc.mdcc.mapreduce.FetchValues.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/br.ufc.mdcc.mapreduce.Partitioner/bin/Debug/br.ufc.mdcc.mapreduce.FetchValues.dll.mdb

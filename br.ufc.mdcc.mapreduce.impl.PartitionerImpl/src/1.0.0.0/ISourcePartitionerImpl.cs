@@ -42,7 +42,7 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl {
 				// 2. A cada chave de Source_data, chamar Partition_function.go();
 				IInteger omv = Partition_function.go ();
 				IKVPair<OMK, IInteger> result = new IKVPairImpl<OMK, IInteger> ();
-				result.Key = Data_key;
+				result.Key.readFrom(Data_key);
 				result.Value = omv;
 
 				// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).

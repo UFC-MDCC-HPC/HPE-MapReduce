@@ -21,3 +21,7 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/Debug/br.ufc.mdcc.common.impl.KVPairImpl.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/Debug/br.ufc.mdcc.common.impl.KVPairImpl.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/Debug/br.ufc.mdcc.mapreduce.FetchValues.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/bin/Debug/br.ufc.mdcc.mapreduce.FetchValues.dll.mdb

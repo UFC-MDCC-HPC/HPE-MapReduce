@@ -11,6 +11,7 @@ using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.Partitioner;
 using environment.MPIDirect;
+using br.ufc.mdcc.mapreduce.FetchValues;
 
 namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl { 
 
@@ -87,6 +88,16 @@ protected IMPIDirect Mpi_comm {
 	}
 }
 
+		private IFetchValuesMapper<OMK,OMV> fetch_values = null;
+
+		public IFetchValuesMapper<OMK,OMV> Fetch_values {
+			get {
+				if (this.fetch_values == null)
+					this.fetch_values = (IFetchValuesMapper<OMK,OMV>) Services.getPort("fetch_values");
+				return this.fetch_values;
+			}
+
+		}
 
 }
 

@@ -8,6 +8,8 @@ using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.Shuffler;
 using environment.MPIDirect;
+using br.ufc.mdcc.mapreduce.FetchValues;
+
 
 namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
     public abstract class BaseITargetShufflerImpl<OMK, OMV>: Synchronizer, BaseITargetShuffler<OMK, OMV>
@@ -32,5 +34,16 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
                 return this.mpi_comm;
             }
         }
+
+		private IFetchValuesReducer<OMK,OMV> fetch_values = null;
+
+		public IFetchValuesReducer<OMK,OMV> Fetch_values {
+			get {
+				if (this.fetch_values == null)
+					this.fetch_values = (IFetchValuesReducer<OMK,OMV>) Services.getPort("fetch_values");
+				return this.fetch_values;
+			}
+
+		}
     }
 }

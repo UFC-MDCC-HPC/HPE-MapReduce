@@ -31,13 +31,12 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=29b4a045737654fe, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="DGAC">
       <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+    <Reference Include="MPI">
+      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +73,7 @@
       <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj">
-      <Project>{0d693c58-97fa-4f3f-a3f7-c5ccb105ecea}</Project>
+      <Project>{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.CombineFunction</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\environment.MPIDirect\environment.MPIDirect\environment.MPIDirect.csproj">

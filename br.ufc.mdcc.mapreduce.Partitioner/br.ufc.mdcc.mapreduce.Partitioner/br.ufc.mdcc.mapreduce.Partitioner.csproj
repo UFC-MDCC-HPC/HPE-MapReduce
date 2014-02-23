@@ -77,5 +77,9 @@
       <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
       <Name>br.ufc.mdcc.common.Integer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.FetchValues\br.ufc.mdcc.mapreduce.FetchValues\br.ufc.mdcc.mapreduce.FetchValues.csproj">
+      <Project>{FAC1315A-F501-4C5C-99CE-CE0AA2F71A69}</Project>
+      <Name>br.ufc.mdcc.mapreduce.FetchValues</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

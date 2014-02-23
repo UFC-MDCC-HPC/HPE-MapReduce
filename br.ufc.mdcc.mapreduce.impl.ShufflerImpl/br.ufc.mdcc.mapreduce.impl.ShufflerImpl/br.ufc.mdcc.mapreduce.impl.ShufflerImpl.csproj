@@ -61,7 +61,7 @@
       <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl.csproj">
-      <Project>{9a02d2dd-0967-4810-a845-3ede50dde195}</Project>
+      <Project>{9A02D2DD-0967-4810-A845-3EDE50DDE195}</Project>
       <Name>br.ufc.mdcc.common.impl.KVPairImpl</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler\br.ufc.mdcc.mapreduce.Shuffler.csproj">
@@ -91,6 +91,10 @@
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
       <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
       <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.FetchValues\br.ufc.mdcc.mapreduce.FetchValues\br.ufc.mdcc.mapreduce.FetchValues.csproj">
+      <Project>{FAC1315A-F501-4C5C-99CE-CE0AA2F71A69}</Project>
+      <Name>br.ufc.mdcc.mapreduce.FetchValues</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

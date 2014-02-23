@@ -6,6 +6,7 @@ using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.farm.Gather;
 using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.mapreduce.FetchValues;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 
@@ -16,7 +17,7 @@ where OMV:IData
 where P:IPartitionFunction<OMK>
 {
 
-		//IIterator<IKVPair<OMK,OMV>> Source_data {get;}
+		IFetchValuesMapper<OMK,OMV> Fetch_values {get;}
 
 
 } // end main interface 
