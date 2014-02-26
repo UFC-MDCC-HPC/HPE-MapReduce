@@ -14,3 +14,4 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.KVPair.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/br.ufc.mdcc.common.KVPair.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Mapper/br.ufc.mdcc.mapreduce.Mapper/bin/Debug/MPI.dll

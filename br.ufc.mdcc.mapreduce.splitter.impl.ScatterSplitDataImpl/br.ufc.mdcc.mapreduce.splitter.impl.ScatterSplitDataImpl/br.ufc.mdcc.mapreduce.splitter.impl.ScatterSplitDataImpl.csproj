@@ -32,11 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="DGAC">
-      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
-    </Reference>
     <Reference Include="MPI">
       <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
+    </Reference>
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

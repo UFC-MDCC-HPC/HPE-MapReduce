@@ -25,15 +25,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
             }
         }
 
-        private IIterator<OMV> values = null;
-        protected IIterator<OMV> Values {
-            get {
-                if (this.values == null)
-                    this.values = (IIterator<OMV>)Services.getPort("values");
-                return this.values;
-            }
-        }
-
+   
         private IIterator<ORV> output = null;
         public IIterator<ORV> Output {
             get {
@@ -61,13 +53,6 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
             }
         }
 
-        private OMK key = default(OMK);
-        protected OMK Key {
-            get {
-                if (this.key == null)
-                    this.key = (OMK)Services.getPort("key");
-                return this.key;
-            }
-        }
+   
     }
 }

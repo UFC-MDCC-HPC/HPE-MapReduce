@@ -13,8 +13,15 @@ public abstract class BaseIIteratorImpl<T>: DataStructure, BaseIIterator<T>
 where T:IData
 {
 
+		private T item_factory = default(T);
 
-
+		protected T Item_factory {
+			get {
+				if (this.item_factory == null)
+					this.item_factory = (T) Services.getPort("item_factory");
+				return this.item_factory;
+			}
+		}
 
 }
 

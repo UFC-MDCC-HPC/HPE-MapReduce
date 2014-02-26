@@ -21,14 +21,26 @@ namespace br.ufc.mdcc.common.impl.IntegerImpl {
 				return value_;
 			}
 			set {
-				value = value;
+				value_ = value;
 			}
 		}
 
-		void readFrom (IData o)
+		public void loadFrom (IData o)
 		{
 			IInteger i = (IInteger)o;
 			this.Value = i.Value;
+		}
+
+		public IData newInstance()
+		{
+			return new IIntegerImpl ();
+		}
+
+		public IData clone ()
+		{
+			IData instance = newInstance();
+			instance.loadFrom(this);
+			return instance;
 		}
 }
 

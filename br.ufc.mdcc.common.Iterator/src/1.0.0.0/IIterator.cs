@@ -8,6 +8,8 @@ where T:IData
 {
 		// consumer:
 
+		T createItem ();
+
 		// - raises exception if has finished
 		void put(T item);
 

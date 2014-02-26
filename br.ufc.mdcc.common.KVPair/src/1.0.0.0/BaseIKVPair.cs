@@ -9,8 +9,7 @@ public interface BaseIKVPair<K, V> : BaseIData, IDataStructureKind
 where K:IData
 where V:IData
 {
-		K Key {get;}
-		V Value {get;}
+
 
 } // end main interface 
 

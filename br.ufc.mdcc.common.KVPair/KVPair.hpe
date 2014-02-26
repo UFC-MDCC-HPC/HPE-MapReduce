@@ -63,12 +63,6 @@
     </interface>
     <unit iRef="IKVPair" multiple="false" private="false" replica="0" uRef="kv_pair" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <slices cRef="value" replica="0" uRef="data" sliceName="value" transitive="false">
-        <visualDescription h="10" w="10" x="61" y="25"/>
-      </slices>
-      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="false">
-        <visualDescription h="10" w="10" x="6" y="24"/>
-      </slices>
       <visualDescription h="40" w="80" x="412" y="333"/>
     </unit>
   </componentInfo>

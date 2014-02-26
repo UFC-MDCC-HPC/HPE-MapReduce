@@ -4,7 +4,9 @@ namespace br.ufc.mdcc.common.Data {
 
 public interface IData : BaseIData
 {
-	 void readFrom (IData o);
+	 	void loadFrom (IData o);
+		IData newInstance ();
+		IData clone();
 
 } // end main interface 
 

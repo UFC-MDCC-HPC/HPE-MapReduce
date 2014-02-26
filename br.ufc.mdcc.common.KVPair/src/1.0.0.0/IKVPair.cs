@@ -7,7 +7,9 @@ public interface IKVPair<K, V> : IData, BaseIKVPair<K, V>
 where K:IData
 where V:IData
 {
-
+	
+		K Key { get; set;}
+		V Value { get; set;}
 
 } // end main interface 
 

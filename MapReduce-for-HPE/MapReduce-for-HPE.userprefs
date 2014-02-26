@@ -1,14 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ISourcePartitionerImpl.cs">
-    <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.Shuffler/src/1.0.0.0/BaseITargetShuffler.cs" Line="9" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.Partitioner/src/1.0.0.0/BaseISourcePartition.cs" Line="9" Column="29" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseISourcePartitionerImpl.cs" Line="96" Column="45" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/BaseITargetShufflerImpl.cs" Line="48" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ISourcePartitionerImpl.cs" Line="44" Column="15" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

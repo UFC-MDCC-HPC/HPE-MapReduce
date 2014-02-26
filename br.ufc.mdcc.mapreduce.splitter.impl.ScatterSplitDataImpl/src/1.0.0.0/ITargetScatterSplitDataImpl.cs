@@ -13,24 +13,39 @@ public class ITargetScatterSplitDataImpl<IMK, IMV> : BaseITargetScatterSplitData
 	where IMV:IData {
 		// Variáveis do Ambiente MPI.
 		private MPI.Intracommunicator worldcomm = null;
-		private int tag = 345;
-		public ITargetScatterSplitDataImpl() { 
+		private int TAG_SPLITTER_IMK = 245;
+		private int TAG_SPLITTER_IMV = 246;
+		private int TAG_SPLITTER_IMK_FINISH = 247;
+
+		public ITargetScatterSplitDataImpl() { } 
+
+		override public void initialize()
+		{
 			worldcomm = Mpi_comm.worldComm();
-		} 
+		}
 
-		public override void main() { 
-
+		public override void main() 
+		{ 
 			// 1. recebe os bins enviados pelo gerente (unidade source),
 			//    através do MPI, e os insere no Target_data.
 
-			// Recebe o bin enviado pelo gerente.
-			MPI.Request request = new MPI.Request ();
-			IKVPair<IMK, IMV>[] bin = new IKVPair<IMK, IMV>[1];
-			request = worldcomm.ImmediateReceive<IKVPair<IMK, IMV>> (MPI.Unsafe.MPI_ANY_SOURCE, tag, bin);
-			request.Wait ();
+			MPI.CompletedStatus status;
+			int source_rank = this.SingletonUnitRank["source"];
+			IMK bin_key; 
+			IMV bin_value;
 
-			// Inserir no target_data.
-			Target_data.put (bin [0]);
+			worldcomm.Receive<IMK> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
+			while (status.Tag != TAG_SPLITTER_IMK_FINISH)
+			{
+				worldcomm.Receive<IMV> (source_rank, TAG_SPLITTER_IMV, out bin_value, out status);
+
+				IKVPair<IMK, IMV> bin = Target_data.createItem();
+				bin.Key.loadFrom(bin_key);
+				bin.Value.loadFrom(bin_value);
+
+				worldcomm.Receive<IMK> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
+			}
+
 		}
 	}
 }

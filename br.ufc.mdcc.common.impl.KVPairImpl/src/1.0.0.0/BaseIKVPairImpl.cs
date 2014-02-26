@@ -14,27 +14,26 @@ where K:IData
 where V:IData
 {
 
-private V value = default(V);
+		/*		private V value = default(V);
 
-public V Value {
-	get {
-		if (this.value == null)
-			this.value = (V) Services.getPort("value");
-		return this.value;
-	}
-}
+		public V Value {
+			get {
+				if (this.value == null)
+					this.value = (V) Services.getPort("value");
+				return this.value;
+			}
+		}
 
-private K key = default(K);
+		private K key = default(K);
 
-public K Key {
-	get {
-		if (this.key == null)
-			this.key = (K) Services.getPort("key");
-		return this.key;
-	}
-}
-
-
+		public K Key {
+			get {
+				if (this.key == null)
+					this.key = (K) Services.getPort("key");
+				return this.key;
+			}
+		}
+*/
 
 }
 

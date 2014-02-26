@@ -15,14 +15,20 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
     where OMK: IData {
 
         private MPI.Intracommunicator worldcomm;
-        private int tag = 345;
+		static private int TAG_SHUFFLER_OMV = 445;
+		static private int TAG_SHUFFLER_OMV_FINISH = 446;
         private int gerente = 0;
         
-        public ISourceShufflerImpl() {
-			worldcomm = Mpi_comm.WorldComm;
-        }
+        public ISourceShufflerImpl() {   }
 
-        public override void main() {
+		override public void initialize()
+		{
+			// Inicializar o comunicador MPI. 
+			worldcomm = Mpi_comm.worldComm();
+		}
+
+        public override void main() 
+		{
             /* 1. Ler os pares de chaves (OMK, OPK) de Source_data
              * 2. Enviar cada chave OMK para o reducer (unidade target)
              *    determinada pela chave OPK.
@@ -31,22 +37,35 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
         }
 
 		/* 1. Iniciar Threads */
-		private void startThreads(){
-			Thread tRead = new Thread(new ThreadStart(readKVPairSendOMK));
-			tRead.Start();
-			tRead.Join();
+		private void startThreads()
+		{
+			//Thread tRead = new Thread(new ThreadStart(readKVPairSendOMK));
+			//tRead.Start();
+			//tRead.Join();
+
+			readKVPairSendOMK ();
 		}
 
 		/* 2. Ler pares KV do KVPair do Iterator, separar omks de opks em KVPair, e enviar omks por MPI ao target */
-		private void readKVPairSendOMK() {
-            while (!Source_data.HasFinished) {
+		private void readKVPairSendOMK() 
+		{
+            while (!Source_data.HasFinished) 
+			{
                 IKVPair<OMK, IInteger> kvpair = Source_data.fetch_next();
                 OMK omk = kvpair.Key;
-                int opk = (int) (Object) kvpair.Value;
-                worldcomm.Send<OMK>(omk, opk, tag);
+				int opk = (int) kvpair.Value.Value;
+				worldcomm.Send<OMK>(omk, opk, TAG_SHUFFLER_OMV);
             }
-            bool anuncieFinished = true;
-            worldcomm.Broadcast<bool>(ref anuncieFinished, gerente);
+
+			// 3. SEND "finish" message
+			MPI.RequestList requests = new MPI.RequestList();
+			int size_workers = this.UnitSize["target"];
+			for (int i=0; i<size_workers;i++) 
+			{
+				MPI.Request request = worldcomm.ImmediateSend<OMK> (default(OMK), i, TAG_SHUFFLER_OMV_FINISH);
+				requests.Add(request);
+			}
+			requests.WaitAll();
         }
     }
 }

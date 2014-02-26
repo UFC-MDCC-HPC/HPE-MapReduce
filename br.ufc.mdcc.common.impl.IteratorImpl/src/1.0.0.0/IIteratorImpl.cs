@@ -20,6 +20,18 @@ where T:IData
 			rear=-1; front=0;
 		} 
 
+		public IData newInstance()
+		{
+			return new IIteratorImpl<T> ();
+		}
+
+		public IData clone ()
+		{
+			IData instance = newInstance();
+			instance.loadFrom(this);
+			return instance;
+		}
+
 		private object lock_put = new object();
 		private object lock_fetch = new object();
 
@@ -28,6 +40,18 @@ where T:IData
 		private int rear, front;
 
 		private Semaphore counter_sem = null;
+
+		public T createItem ()
+		{
+			T item = (T) Item_factory.newInstance ();
+			this.put (item);
+			return item;
+		}
+
+		public void loadFrom (IData o)
+		{
+			throw new NotImplementedException ();
+		}
 
 		public void put (T item)
 		{
@@ -75,10 +99,6 @@ where T:IData
 
 
 
-		public void readFrom (IData o)
-		{
-			throw new NotImplementedException ();
-		}
 
 		public class FinishedIteratorException : Exception
 		{

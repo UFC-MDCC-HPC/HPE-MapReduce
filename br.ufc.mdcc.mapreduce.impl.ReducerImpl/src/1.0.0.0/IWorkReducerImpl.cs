@@ -8,18 +8,19 @@ using br.ufc.mdcc.mapreduce.user.ReduceFunction;
 using br.ufc.mdcc.mapreduce.Reducer;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
+using System.Threading.Tasks;
 
-namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
+namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl 
+{
     public class IWorkReducerImpl<OMK, OMV, ORV, R> :
     BaseIWorkReducerImpl<OMK, OMV, ORV, R>, IReducer<OMK, OMV, ORV, R>
         where OMK : IData
         where OMV : IData
         where ORV : IData
-        where R : IReduceFunction<ORV, OMK, OMV> {
+        where R : IReduceFunction<ORV, OMK, OMV> 
+	{
 
-        public IWorkReducerImpl() {
-
-        }
+        public IWorkReducerImpl() { }
 
         public override void main() {
             /* 1. Ler pares chave (OMK) e valores (OMV) de Input.
@@ -30,13 +31,16 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
             startThreads();
         }
 
-        private void readPair_OMK_OMVs() {
-            while (!Input.HasFinished) {
+        private void readPair_OMK_OMVs() 
+		{
+            while (!Input.HasFinished) 
+			{
                 IKVPair<OMK, IIterator<OMV>> kvpair = Input.fetch_next();
-                Key.readFrom(kvpair.Key);
-                Values.readFrom(kvpair.Value);
-                int rf = Reduce_function.go();
-                Output.put(Output_item);
+				Input.loadFrom (kvpair);
+
+				Reduce_function.go();
+
+				Output.put(Output.clone());
             }
         }
 

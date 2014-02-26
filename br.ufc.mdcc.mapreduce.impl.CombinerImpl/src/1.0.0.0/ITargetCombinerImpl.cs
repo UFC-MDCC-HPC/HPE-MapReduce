@@ -13,51 +13,46 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         where ORV : IData {
 
         private MPI.Intracommunicator worldcomm;
-        private int tag = 347;
         private int size_reducers = 0;
-        private bool finalize = false;
         private int listenFinishedObject = 0;
-        private Semaphore semCombineFunction;
+		private int TAG_COMBINER_ORV = 547;
+		private int TAG_COMBINER_ORV_FINISH = 548;
 
-        public ITargetCombinerImpl() {
-            worldcomm = Mpi_comm.WorldComm;
-            size_reducers = this.UnitSize["source"];
-            semCombineFunction = new Semaphore(0, int.MaxValue);
-        }
+		public ITargetCombinerImpl() { }
 
-        public override void main() { 
+		override public void initialize()
+		{
+			// Inicializar o comunicador MPI. 
+			worldcomm = Mpi_comm.worldComm();
+			size_reducers = this.UnitSize["source"];
+		}
+
+        public override void main() 
+		{ 
             startThreads(); 
         }
 
         /* Recebimento de ORVs das unidades source */
-        public void receiveCombineORVs() {
-            ORV orv = default(ORV);
-            Object o;
-            while (listenFinishedObject != size_reducers) {
-                bool put = true;
-                o = worldcomm.Receive<Object>(MPI.Unsafe.MPI_ANY_SOURCE, tag);
-                try { 
-                    orv = (ORV) o; 
-                } 
-                catch {
-                    listenFinishedObject = listenFinishedObject + 1;
-                    put = false;
-                }
-                if (put) {
-                    Combine_input_data.put(orv);
-                    semCombineFunction.Release();
-                }
+        public void receiveCombineORVs() 
+		{
+            ORV orv;
+            MPI.CompletedStatus status;
+            while (listenFinishedObject != size_reducers) 
+			{
+                worldcomm.Receive<ORV>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out orv, out status);
+				Combine_input_data.put(orv);
+
+				if (status.Tag == TAG_COMBINER_ORV_FINISH) {
+					listenFinishedObject = listenFinishedObject + 1;
+				}
             }
-            finalize = true;
-            semCombineFunction.Release();
+            
         }
 
         /* Método da Thread que chama o CombineFunction */
-        public void performCombineFunction() {
-            while (!finalize) {
-                semCombineFunction.WaitOne();
-                if (!finalize) Combine_function.go();
-            }
+        public void performCombineFunction() 
+		{
+             Combine_function.go();            
         }
 
         /* Threads start */

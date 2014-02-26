@@ -8,37 +8,50 @@ using br.ufc.mdcc.mapreduce.Combiner;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
     public class ISourceCombinerImpl<ORV> : BaseISourceCombinerImpl<ORV>, ISourceCombiner<ORV>
-    where ORV : IData {
-
+    where ORV : IData 
+{
         private MPI.Intracommunicator worldcomm;
-        private int tag = 347;
+		private int TAG_COMBINER_ORV = 547;
+		private int TAG_COMBINER_ORV_FINISH = 548;
         private int gerente = 0;
 
-        public ISourceCombinerImpl() {
-            worldcomm = Mpi_comm.WorldComm;
-        }
+		public ISourceCombinerImpl() { }
 
-        public override void main() {
+		override public void initialize()
+		{
+			// Inicializar o comunicador MPI. 
+			worldcomm = Mpi_comm.worldComm();
+		}
+
+
+		public override void main() 
+		{
             startThreads();
         }
 
-        public void sendORVsToTarget() {
-            while (!Source_data.HasFinished) {
+		private void startThreads() 
+		{
+			/*			Instancias*/
+			Thread tSend = new Thread(new ThreadStart(sendORVsToTarget));
+
+			/*			Starting*/
+			tSend.Start();
+
+			/*			 Joins*/
+			tSend.Join();
+		}
+
+        public void sendORVsToTarget() 
+		{
+            while (!Source_data.HasFinished) 
+			{
                 ORV orv = Source_data.fetch_next();
-                worldcomm.Send<ORV>(orv, gerente, tag);
-            }
-            worldcomm.Send<Object>(new Object(), gerente, tag);
+				if (Source_data.HasFinished) 
+					worldcomm.Send<ORV>(orv, gerente, TAG_COMBINER_ORV);
+				else
+					worldcomm.Send<ORV>(orv, gerente, TAG_COMBINER_ORV_FINISH);
+            }            
         }
 
-        private void startThreads() {
-            /*Instancias*/
-            Thread tSend = new Thread(new ThreadStart(sendORVsToTarget));
-
-            /*Starting*/
-            tSend.Start();
-
-            /* Joins*/
-            tSend.Join();
-        }
     }
 }
