@@ -8,6 +8,7 @@ using br.ufc.mdcc.farm.Gather;
 using br.ufc.mdcc.farm.Work;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.farm.Farm;
+using System.Threading.Tasks;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
@@ -20,13 +21,22 @@ where W:IWork<J, R>
 where P:IPlatform
 {
 
-public IWorkerImpl() { 
+	public IWorkerImpl() { } 
 
-} 
+	public override void main() 
+	{ 
+			Task scatter_task = new Task(delegate {this.Scatter.go();});
+			Task work_task  = new Task(delegate {this.Work.go();});
+			Task gather_task = new Task(delegate {this.Gather.go();});
 
-public override void main() { 
+			scatter_task.Start();
+			work_task.Start();
+			gather_task.Start();
 
-}
+			gather_task.Wait();
+			work_task.Wait();
+			scatter_task.Wait();
+	}
 
 }
 

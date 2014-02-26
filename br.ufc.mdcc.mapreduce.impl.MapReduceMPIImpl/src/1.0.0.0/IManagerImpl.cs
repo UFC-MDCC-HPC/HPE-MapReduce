@@ -8,6 +8,7 @@ using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.MapReduce;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.mapreduce.user.CombineFunction;
+using System.Threading.Tasks;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { 
 
@@ -24,14 +25,18 @@ namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl {
 		where Out:IData
 {
 
-public IManagerImpl() { 
-
-} 
+		public IManagerImpl() { } 
 
 	public override void main() 
 	{ 
+			Task farm_map_task = new Task(delegate {this.Farm_map.go();});
+			Task farm_reduce_task = new Task(delegate {this.Farm_reduce.go();});
 
-	 
+			farm_map_task.Start();
+			farm_reduce_task.Start();
+
+			farm_reduce_task.Wait();
+			farm_map_task.Wait();	
 	}
 
 }

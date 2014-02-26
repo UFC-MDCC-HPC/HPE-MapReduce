@@ -7,6 +7,7 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.farm.Gather;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.farm.Farm;
+using System.Threading.Tasks;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
@@ -18,13 +19,18 @@ where O:IData
 where P:IPlatform
 {
 
-public IManagerImpl() { 
-
-} 
+public IManagerImpl() {} 
 
 public override void main() 
 { 
+	Task scatter_task = new Task(delegate {this.Scatter.go();});
+	Task gather_task = new Task(delegate {this.Gather.go();});
 
+	scatter_task.Start();
+	gather_task.Start();
+
+	gather_task.Wait();
+	scatter_task.Wait();
 }
 
 

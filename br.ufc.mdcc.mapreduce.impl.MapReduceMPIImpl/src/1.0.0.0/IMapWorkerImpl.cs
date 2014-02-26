@@ -20,12 +20,12 @@ where Mf:IMapFunction<IMK, IMV, OMK, OMV>
 where PLATFORM:IPlatform
 {
 
-public IMapWorkerImpl() { 
+		public IMapWorkerImpl() { } 
 
-} 
-
-		public override void main() { 
-}
+		public override void main() 
+		{ 
+			Farm_map.go();
+		}
 
 }
 

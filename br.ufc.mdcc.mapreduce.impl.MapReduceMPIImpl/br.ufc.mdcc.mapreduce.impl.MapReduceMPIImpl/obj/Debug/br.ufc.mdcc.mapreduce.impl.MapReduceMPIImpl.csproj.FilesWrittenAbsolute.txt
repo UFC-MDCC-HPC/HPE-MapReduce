@@ -46,3 +46,6 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/Debug/br.ufc.mdcc.mapreduce.user.CombineFunction.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/Debug/br.ufc.mdcc.mapreduce.user.CombineFunction.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/Debug/MPI.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/Debug/br.ufc.mdcc.mapreduce.FetchValues.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/Debug/br.ufc.mdcc.mapreduce.FetchValues.dll.mdb

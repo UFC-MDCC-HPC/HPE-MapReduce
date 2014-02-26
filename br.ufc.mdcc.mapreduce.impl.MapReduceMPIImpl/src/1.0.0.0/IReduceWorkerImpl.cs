@@ -17,13 +17,12 @@ where OMV:IData
 where PLATFORM:IPlatform
 {
 
-public IReduceWorkerImpl() 
-{ 
-} 
+		public IReduceWorkerImpl() { } 
 
 		public override void main() 
-{ 
-}
+		{ 
+			Farm_reduce.go();
+		}
 
 }
 
