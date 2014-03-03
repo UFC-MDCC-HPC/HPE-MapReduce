@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IReducerFetchValuesImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ISourcePartitionerImpl.cs" Line="57" Column="4" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseISourcePartitionerImpl.cs" Line="27" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/BaseIMapperFetchValuesImpl.cs" Line="19" Column="34" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs" Line="12" Column="109" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs" Line="90" Column="31" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/BaseIMapperFetchValuesImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.SplitterImpl/src/1.0.0.0/ISourceSplitterImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IReducerFetchValuesImpl.cs" Line="52" Column="5" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/BaseIReducerFetchValuesImpl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

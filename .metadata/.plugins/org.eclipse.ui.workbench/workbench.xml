@@ -46,14 +46,14 @@
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.HPEVersionEditor" name="FetchValues.hpe" partName="FetchValues.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe" title="FetchValues.hpe" tooltip="br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
+</editor>
 <editor id="org.eclipse.HPEVersionEditor" name="Partitioner.hpe" partName="Partitioner.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe" title="Partitioner.hpe" tooltip="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
 </editor>
-<editor id="org.eclipse.HPEVersionEditor" name="Shuffler.hpe" partName="Shuffler.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe" title="Shuffler.hpe" tooltip="br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.HPEVersionEditor" name="MapReduce.hpe" partName="MapReduce.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe" title="MapReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
+<editor id="org.eclipse.HPEVersionEditor" name="Scatter.hpe" partName="Scatter.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.farm.Scatter/Scatter.hpe" title="Scatter.hpe" tooltip="br.ufc.mdcc.farm.Scatter/Scatter.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
 </editor>
 </editors>
 <views>
@@ -94,25 +94,10 @@
 <filter element="*.class" isEnabled="false"/>
 </filters>
 <expanded>
-<element path="/br.ufc.mdcc.common.Iterator"/>
-<element path="/br.ufc.mdcc.common.KVPair"/>
-<element path="/br.ufc.mdcc.farm.Farm"/>
-<element path="/br.ufc.mdcc.farm.Gather"/>
 <element path="/br.ufc.mdcc.farm.Scatter"/>
-<element path="/br.ufc.mdcc.mapreduce.Combiner"/>
-<element path="/br.ufc.mdcc.mapreduce.FetchValues"/>
-<element path="/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl"/>
-<element path="/br.ufc.mdcc.mapreduce.impl.SplitterImpl"/>
-<element path="/br.ufc.mdcc.mapreduce.Mapper"/>
-<element path="/br.ufc.mdcc.mapreduce.MapReduce"/>
-<element path="/br.ufc.mdcc.mapreduce.Partitioner"/>
-<element path="/br.ufc.mdcc.mapreduce.Reducer"/>
-<element path="/br.ufc.mdcc.mapreduce.Shuffler"/>
-<element path="/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData"/>
-<element path="/br.ufc.mdcc.mapreduce.user.PartitionFunction"/>
 </expanded>
 <selection>
-<element path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
+<element path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
 </selection>
 </viewState>
 </view>
@@ -467,12 +452,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/FetchValuesImpl.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/FetchValuesImpl.hpe"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
@@ -495,69 +474,71 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
 </editors>
-<item historyLabel="FetchValues.hpe" index="2"/>
-<item historyLabel="Partitioner.hpe" index="1"/>
-<item historyLabel="FetchValues.hpe" index="2"/>
-<item historyLabel="Partitioner.hpe" index="1"/>
-<item historyLabel="FetchValues.hpe" index="2"/>
-<item historyLabel="Partitioner.hpe" index="1"/>
-<item historyLabel="FetchValues.hpe" index="2"/>
-<item historyLabel="Partitioner.hpe" index="1"/>
-<item historyLabel="Shuffler.hpe" index="3"/>
-<item historyLabel="MapReduce.hpe" index="0"/>
-<item historyLabel="FetchValuesImpl.hpe" index="4">
+<item historyLabel="Scatter.hpe" index="2"/>
+<item historyLabel="FetchValues.hpe" index="0"/>
+<item historyLabel="Scatter.hpe" index="2"/>
+<item historyLabel="FetchValues.hpe" index="0"/>
+<item historyLabel="Farm.hpe" index="3"/>
+<item historyLabel="FetchValues.hpe" index="0"/>
+<item historyLabel="Mapper.hpe" index="4"/>
+<item historyLabel="FetchValues.hpe" index="0"/>
+<item historyLabel="Shuffler.hpe" index="1"/>
+<item historyLabel="MapReduce.hpe" index="5"/>
+<item historyLabel="Splitter.hpe" index="6"/>
+<item historyLabel="ScatterSplitData.hpe" index="7"/>
+<item historyLabel="Iterator.hpe" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="IMapperFetchValuesImpl.cs" index="5"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Shuffler.hpe" index="7"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Shuffler.hpe" index="7"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Scatter.hpe" index="8"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Scatter.hpe" index="8"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Farm.hpe" index="9"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Mapper.hpe" index="10"/>
-<item historyLabel="FetchValues.hpe" index="6"/>
-<item historyLabel="Shuffler.hpe" index="7"/>
-<item historyLabel="MapReduce.hpe" index="11"/>
-<item historyLabel="Splitter.hpe" index="12"/>
-<item historyLabel="ScatterSplitData.hpe" index="13"/>
-<item historyLabel="Iterator.hpe" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Iterator.hpe" index="14">
+<item historyLabel="Iterator.hpe" index="8">
 <position info="not_deleted" x="2395" y="0"/>
 </item>
-<item historyLabel="Iterator.hpe" index="15">
+<item historyLabel="Iterator.hpe" index="9">
 <position info="not_deleted" x="2252" y="0"/>
 </item>
-<item historyLabel="Iterator.hpe" index="15">
+<item historyLabel="Iterator.hpe" index="9">
 <position info="not_deleted" x="2390" y="0"/>
 </item>
-<item historyLabel="Iterator.hpe" index="16"/>
-<item historyLabel="Partitioner.hpe" index="17"/>
-<item historyLabel="PartitionFunction.hpe" index="18"/>
-<item historyLabel="Partitioner.hpe" index="17"/>
-<item historyLabel="KVPair.hpe" index="19">
+<item historyLabel="Iterator.hpe" index="10"/>
+<item historyLabel="Partitioner.hpe" index="11"/>
+<item historyLabel="PartitionFunction.hpe" index="12"/>
+<item historyLabel="Partitioner.hpe" index="11"/>
+<item historyLabel="KVPair.hpe" index="13">
 <position info="not_deleted" x="4377" y="0"/>
 </item>
-<item historyLabel="KVPair.hpe" index="19"/>
+<item historyLabel="KVPair.hpe" index="13"/>
+<item historyLabel="Shuffler.hpe" index="14"/>
+<item historyLabel="Reducer.hpe" index="15"/>
+<item historyLabel="Mapper.hpe" index="16"/>
+<item historyLabel="Reducer.hpe" index="15"/>
+<item historyLabel="KVPair.hpe" index="17"/>
+<item historyLabel="Reducer.hpe" index="15"/>
+<item historyLabel="Combiner.hpe" index="18"/>
+<item historyLabel="Partitioner.hpe" index="19"/>
 <item historyLabel="Shuffler.hpe" index="20"/>
-<item historyLabel="Reducer.hpe" index="21"/>
-<item historyLabel="Mapper.hpe" index="22"/>
-<item historyLabel="Reducer.hpe" index="21"/>
-<item historyLabel="KVPair.hpe" index="23"/>
-<item historyLabel="Reducer.hpe" index="21"/>
-<item historyLabel="Combiner.hpe" index="24"/>
-<item historyLabel="Partitioner.hpe" index="25"/>
-<item historyLabel="Shuffler.hpe" index="26"/>
-<item historyLabel="Partitioner.hpe" index="25"/>
-<item active="true" historyLabel="MapReduce.hpe" index="27"/>
+<item historyLabel="Partitioner.hpe" index="19"/>
+<item historyLabel="MapReduce.hpe" index="21"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="FetchValues.hpe" index="23"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="FetchValues.hpe" index="23"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="FetchValues.hpe" index="23"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="FetchValues.hpe" index="23"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="MapReduce.hpe" index="21"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="FetchValues.hpe" index="24"/>
+<item historyLabel="Partitioner.hpe" index="22"/>
+<item historyLabel="FetchValues.hpe" index="24"/>
+<item historyLabel="Scatter.hpe" index="25"/>
+<item active="true" historyLabel="FetchValues.hpe" index="24"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -579,14 +560,20 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Scatter.hpe" tooltip="br.ufc.mdcc.farm.Scatter/Scatter.hpe">
+<persistable path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Partitioner.hpe" tooltip="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="FetchValues.hpe" tooltip="br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="MapReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Shuffler.hpe" tooltip="br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.Shuffler/Shuffler.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Partitioner.hpe" tooltip="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Combiner.hpe" tooltip="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe"/>
@@ -615,14 +602,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Farm.hpe" tooltip="br.ufc.mdcc.farm.Farm/Farm.hpe">
 <persistable path="/br.ufc.mdcc.farm.Farm/Farm.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Scatter.hpe" tooltip="br.ufc.mdcc.farm.Scatter/Scatter.hpe">
-<persistable path="/br.ufc.mdcc.farm.Scatter/Scatter.hpe"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IFetchValuesReducer.cs" tooltip="br.ufc.mdcc.mapreduce.FetchValues/src/1.0.0.0/IFetchValuesReducer.cs">
 <persistable path="/br.ufc.mdcc.mapreduce.FetchValues/src/1.0.0.0/IFetchValuesReducer.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IFetchValuesMapper.cs" tooltip="br.ufc.mdcc.mapreduce.FetchValues/src/1.0.0.0/IFetchValuesMapper.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.FetchValues/src/1.0.0.0/IFetchValuesMapper.cs"/>
 </file>
 </mruList>
 </workbench>
