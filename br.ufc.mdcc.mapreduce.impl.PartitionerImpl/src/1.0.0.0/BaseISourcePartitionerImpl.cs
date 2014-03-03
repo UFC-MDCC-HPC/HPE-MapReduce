@@ -23,48 +23,16 @@ where P:IPartitionFunction<OMK>
 {
 
 
+		private IIterator<IKVPair<OMK, OMV>> source_data = null;
 
-private IInteger partition_key = default(IInteger);
+		public IIterator<IKVPair<OMK, OMV>> Source_data {
+			get {
+				if (this.source_data == null)
+					this.source_data = (IIterator<IKVPair<OMK, OMV>>) Services.getPort("source_data");
+				return this.source_data;
+			}
+		}
 
-protected IInteger Partition_key {
-	get {
-		if (this.partition_key == null)
-				this.partition_key = (IInteger) Services.getPort("partition_key");
-		return this.partition_key;
-	}
-}
-
-private P partition_function = default(P);
-
-protected P Partition_function {
-	get {
-		if (this.partition_function == null)
-			this.partition_function = (P) Services.getPort("partition_function");
-		return this.partition_function;
-	}
-}
-
-
-
-private OMK data_key = default(OMK);
-
-protected OMK Data_key {
-	get {
-		if (this.data_key == null)
-			this.data_key = (OMK) Services.getPort("data_key");
-		return this.data_key;
-	}
-}
-
-private IIterator<IKVPair<OMK, OMV>> source_data = null;
-
-public IIterator<IKVPair<OMK, OMV>> Source_data {
-	get {
-		if (this.source_data == null)
-			this.source_data = (IIterator<IKVPair<OMK, OMV>>) Services.getPort("source_data");
-		return this.source_data;
-	}
-}
 
 private IIterator<IKVPair<OMK, IInteger>> output_partition_info_source = null;
 
@@ -88,12 +56,12 @@ protected IMPIDirect Mpi_comm {
 	}
 }
 
-		private IFetchValuesMapper<OMK,OMV> fetch_values = null;
+		private IFetchValuesMapper<P,OMK,OMV> fetch_values = null;
 
-		public IFetchValuesMapper<OMK,OMV> Fetch_values {
+		public IFetchValuesMapper<P,OMK,OMV> Fetch_values {
 			get {
 				if (this.fetch_values == null)
-					this.fetch_values = (IFetchValuesMapper<OMK,OMV>) Services.getPort("fetch_values");
+					this.fetch_values = (IFetchValuesMapper<P,OMK,OMV>) Services.getPort("fetch_values");
 				return this.fetch_values;
 			}
 

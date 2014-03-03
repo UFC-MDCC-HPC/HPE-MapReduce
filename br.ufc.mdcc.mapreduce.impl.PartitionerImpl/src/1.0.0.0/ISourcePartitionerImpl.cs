@@ -25,9 +25,6 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl
 	{
 		// Variáveis do Ambiente MPI.
 		private MPI.Intracommunicator worldcomm = null;
-		static private int TAG_PARTITIONER_OPK = 345;
-		static private int TAG_PARTITIONER_OPK_FINISH = 347;
-		static private int TAG_PARTITIONER_OMK = 346;
 
 		public ISourcePartitionerImpl() { } 
 
@@ -54,19 +51,19 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl
 			 */
 
 			// 1. Ler os elementos de Source_data, um a um, e copiar a chave (OMK) em Data_key.
-			while (!Source_data.HasFinished) 
-			{
-				IKVPair<OMK, OMV> item = Source_data.fetch_next ();
-				Data_key.loadFrom(item.Key);
+			//			while (!Source_data.HasFinished) 
+			//			{
+			//				IKVPair<OMK, OMV> item = Source_data.fetch_next ();
+			//				Data_key.loadFrom(item.Key);
 
-				// 2. A cada chave de Source_data, chamar Partition_function.go();
-				Partition_function.go ();
+			//				// 2. A cada chave de Source_data, chamar Partition_function.go();
+			//				Partition_function.go ();
 
-				// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
-				int tag = Source_data.HasFinished ? TAG_PARTITIONER_OPK_FINISH : TAG_PARTITIONER_OPK;
-				worldcomm.Send<int> (Partition_key.Value, this.SingletonUnitRank["target"], tag);
-				worldcomm.Send<OMK> (Data_key, this.SingletonUnitRank["target"], TAG_PARTITIONER_OMK);
-			}
+			//				// 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
+			//				int tag = Source_data.HasFinished ? TAG_PARTITIONER_OPK_FINISH : TAG_PARTITIONER_OPK;
+			//				worldcomm.Send<int> (Partition_key.Value, this.SingletonUnitRank["target"], tag);
+			//				worldcomm.Send<OMK> (Data_key, this.SingletonUnitRank["target"], TAG_PARTITIONER_OMK);
+			//			}
 
 			fetch_values_task.Wait();
 		}

@@ -1,6 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs">
+    <Files>
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ISourcePartitionerImpl.cs" Line="57" Column="4" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/BaseISourcePartitionerImpl.cs" Line="27" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/BaseIMapperFetchValuesImpl.cs" Line="19" Column="34" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs" Line="12" Column="109" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

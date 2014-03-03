@@ -17,7 +17,7 @@ where OMV:IData
 where P:IPartitionFunction<OMK>
 {
 
-		IFetchValuesMapper<OMK,OMV> Fetch_values {get;}
+		IFetchValuesMapper<P,OMK,OMV> Fetch_values {get;}
 
 
 } // end main interface 
