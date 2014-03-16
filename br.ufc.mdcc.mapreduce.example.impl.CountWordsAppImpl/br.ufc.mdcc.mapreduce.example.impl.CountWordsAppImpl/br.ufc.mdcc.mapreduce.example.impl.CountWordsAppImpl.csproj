@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9291557-38EA-449C-AF14-483A7EEB2AEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\CountWordsAppImpl.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIMasterProcessImpl.cs">
+      <Link>BaseIMasterProcessImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\BaseITallierProcessImpl.cs">
+      <Link>BaseITallierProcessImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\BaseIWordCounterProcessImpl.cs">
+      <Link>BaseIWordCounterProcessImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\IMasterProcessImpl.cs">
+      <Link>IMasterProcessImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\ITallierProcessImpl.cs">
+      <Link>ITallierProcessImpl.cs</Link>
+    </Compile>
+    <Compile Include="..\src\1.0.0.0\IWordCounterProcessImpl.cs">
+      <Link>IWordCounterProcessImpl.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.CountWords\br.ufc.mdcc.mapreduce.example.CountWords\br.ufc.mdcc.mapreduce.example.CountWords.csproj">
+      <Project>{8C66CF4C-3275-406B-9B80-81DE15258B98}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.CountWords</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.CountWordsApp\br.ufc.mdcc.mapreduce.example.CountWordsApp\br.ufc.mdcc.mapreduce.example.CountWordsApp.csproj">
+      <Project>{9CC55D68-4251-4EEA-95A1-409C645C55B6}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.CountWordsApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform.csproj">
+      <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
+      <Name>br.ufc.mdcc.common.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

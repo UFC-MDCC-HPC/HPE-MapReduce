@@ -35,6 +35,8 @@ public class ISourceScatterSplitDataImpl<IMK, IMV> : BaseISourceScatterSplitData
 
 		public override void main() 
 		{ 
+			Bin_function.NumberOfPartitions = this.UnitSize["target"];
+
 			// 1. Ler os bins, um a um, do iterator, e enviá-los a cada mapper (unidades target) usando MPI.
 			while (!Bins.HasFinished) 
 			{

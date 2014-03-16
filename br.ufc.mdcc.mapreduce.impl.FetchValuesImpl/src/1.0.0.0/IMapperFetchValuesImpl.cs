@@ -56,6 +56,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 				task_factory.StartNew(delegate { send_values(reducer_rank); });
 			}
 
+			Partition_function.NumberOfPartitions = nr;
 
 			// 1. Ler os elementos de Source_data, um a um, e copiar a chave (OMK) em Data_key.
 			while (!Map_result.HasFinished) 

@@ -16,13 +16,9 @@ namespace br.ufc.mdcc.common.impl.IntegerImpl {
 
 		private int value_;
 
-		public int Value {
-			get {
-				return value_;
-			}
-			set {
-				value_ = value;
-			}
+		public int Value { 
+			get { return value_;  }
+			set { value_ = value; }
 		}
 
 		public void loadFrom (IData o)
