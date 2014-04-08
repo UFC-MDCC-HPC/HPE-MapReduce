@@ -114,6 +114,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl", "..\br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl\br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl\br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl.csproj", "{E9291557-38EA-449C-AF14-483A7EEB2AEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.Double", "..\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double.csproj", "{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.impl.DoubleImpl", "..\br.ufc.mdcc.common.impl.DoubleImpl\br.ufc.mdcc.common.impl.DoubleImpl\br.ufc.mdcc.common.impl.DoubleImpl.csproj", "{54724BA1-5A80-4BF3-90A8-532DDF130BFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -132,6 +136,10 @@ Global
 		{133DC369-9996-4F82-8363-7CCBC5C2FE06}.Debug|x86.Build.0 = Debug|Any CPU
 		{133DC369-9996-4F82-8363-7CCBC5C2FE06}.Release|x86.ActiveCfg = Release|Any CPU
 		{133DC369-9996-4F82-8363-7CCBC5C2FE06}.Release|x86.Build.0 = Release|Any CPU
+		{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}.Release|x86.Build.0 = Release|Any CPU
 		{1F563648-2878-4A44-B98C-BBED70407F5D}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1F563648-2878-4A44-B98C-BBED70407F5D}.Debug|x86.Build.0 = Debug|Any CPU
 		{1F563648-2878-4A44-B98C-BBED70407F5D}.Release|x86.ActiveCfg = Release|Any CPU
@@ -172,6 +180,10 @@ Global
 		{4B301646-384F-4CAB-AC51-88C108657382}.Debug|x86.Build.0 = Debug|Any CPU
 		{4B301646-384F-4CAB-AC51-88C108657382}.Release|x86.ActiveCfg = Release|Any CPU
 		{4B301646-384F-4CAB-AC51-88C108657382}.Release|x86.Build.0 = Release|Any CPU
+		{54724BA1-5A80-4BF3-90A8-532DDF130BFB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54724BA1-5A80-4BF3-90A8-532DDF130BFB}.Debug|x86.Build.0 = Debug|Any CPU
+		{54724BA1-5A80-4BF3-90A8-532DDF130BFB}.Release|x86.ActiveCfg = Release|Any CPU
+		{54724BA1-5A80-4BF3-90A8-532DDF130BFB}.Release|x86.Build.0 = Release|Any CPU
 		{561084B3-8A82-4356-806E-0C1888ADA93C}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{561084B3-8A82-4356-806E-0C1888ADA93C}.Debug|x86.Build.0 = Debug|Any CPU
 		{561084B3-8A82-4356-806E-0C1888ADA93C}.Release|x86.ActiveCfg = Release|Any CPU
