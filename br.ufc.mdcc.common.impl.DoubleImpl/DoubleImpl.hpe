@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f7d5efe6373d603c4cb75331a7dbec768d459fa7786d25888904bbe176ed99a6566c5ce03df770eb46e51e70c01806eb3ac4e64ee74ab8d4266bc4f455bbb1912c1dc83a9d46c772094777090e2663a044c60ef2e763ef644d9978fd992cc7e386868de8c31a749bb85da6d8d7d62c8bb1f333ebafc244b72399e1afb587a09f" isAbstract="false" kind="Data" name="DoubleImpl" packagePath="br.ufc.mdcc.common.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eb454d927c1a3d4da740913b44a189b89000ab0c3fbb03a2f502cd036c4be350034756c5cae38b4b363a6f69cc27719889eb4324a024738a023bdc3ca334b37ac75bb49ef01242503b4f88d08dbcfdbd74fa560ffec156a78fa80d6940f7b2f7a63a9488102f986a5effc7f8b9a0ffa5e527e636621ab21e83908da03df9479c" localRef="base" location="br.ufc.mdcc.common.Double/Double.hpe" name="Double" package="br.ufc.mdcc.common" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="300" y="302">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IDoubleImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Double;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.DoubleImpl { &#xA;&#xA;public abstract class BaseIDoubleImpl: DataStructure, BaseIData&#xA;{&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIDoubleImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.DoubleImpl/bin/1.0.0.0/BaseIDoubleImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/BaseIData.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Double;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.DoubleImpl { &#xA;&#xA;public class IDoubleImpl : BaseIDoubleImpl, IData&#xA;{&#xA;&#xA;public IDoubleImpl() { &#xA;&#xA;} &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IDoubleImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.DoubleImpl/bin/1.0.0.0/IDoubleImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.common.impl.DoubleImpl/bin/1.0.0.0/BaseIDoubleImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="119" x="77" y="110">
+        <color b="255" g="128" r="0"/>
+      </visualDescription>
+    </interface>
+    <unit iRef="IDoubleImpl" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
+      <super cRef="base" uRef="data"/>
+      <visualDescription h="40" w="80" x="194" y="207"/>
+    </unit>
+  </componentInfo>
+</component:component>

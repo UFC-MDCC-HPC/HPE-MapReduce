@@ -5,8 +5,7 @@ namespace br.ufc.mdcc.common.Double {
 
 public interface IDouble : BaseIDouble, IData
 {
-
-		int Value { get; set; }
+		double Value { get; set; }
 
 } // end main interface 
 
