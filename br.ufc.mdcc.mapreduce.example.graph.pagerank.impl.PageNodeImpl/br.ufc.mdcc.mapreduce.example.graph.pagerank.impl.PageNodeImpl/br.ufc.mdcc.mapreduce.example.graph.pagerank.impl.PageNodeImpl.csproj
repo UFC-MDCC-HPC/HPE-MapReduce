@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{646F5612-6327-4E9E-B595-8155ED940B45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\IPageNodeImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIPageNodeImpl.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode.csproj">
+      <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
+      <Name>br.ufc.mdcc.common.graph.DataNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank.csproj">
+      <Project>{4AD4939D-8437-4ADA-8FA8-545D5E28A5A8}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode.csproj">
+      <Project>{906916BC-305E-4738-B147-6EBE4F25C7CB}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

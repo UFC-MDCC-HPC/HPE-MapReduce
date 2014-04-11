@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f96af2d63ddbe487edba4d38c3d5fbf7ab520e3ec4c064fe35db3f4d54e372ceb9dc492b1e151aa3d4b83a567b68207f0a7207fdf3f28cdacc46b2c7defad54e9959f1f833c245960f38c9cd6fe556c415cd4a9626ee07e6435ba84f809e2f53c5bb39dab86deca24b9de7a694d311b6a2cd69e4cda1109ff9e9d54b73187697" isAbstract="false" kind="Data" name="CliqueNodeImpl" packagePath="br.ufc.mdcc.common.graph.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003de45bf4c318dc3dd39282d2976e2277450bfe09d7c9c18096aa63e36d1902a1dbc5c3397f465bf2f80045565c08aa4b4c1540f05bbb891a258185ba3142533c1e22da7bb549a35684af27c0a8d30bd51be53a4948ab7cdc8e28eeea0c39377290602f9c2dddcb4611b10f7ab8ebd7579ca75a2c040cdd5f631a2dae22b9fd97" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/CliqueNode.hpe" name="CliqueNode" package="br.ufc.mdcc.common.graph" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="279" y="393">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="id_type" varName="T"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="95" w="138" x="364" y="390">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="T"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="clique_node">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="id_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="363" y="305">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="id_type" varName="T"/>
+    <interface iRef="ICliqueNodeImpl" nArgs="1">
+      <slice isRef="neighbors">
+        <originRef cRef="neighbors" iRef="IIterator"/>
+        <visualDescription h="10" w="10" x="90" y="18"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl { &#xA;&#xA;public abstract class BaseICliqueNodeImpl&lt;T>: DataStructure, BaseICliqueNode&lt;T>&#xA;where T:IData&#xA;{&#xA;&#xA;private T id = default(T);&#xA;&#xA;protected T Id {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.id == null)&#xA;&#x9;&#x9;&#x9;this.id = (T) Services.getPort(&quot;id&quot;);&#xA;&#x9;&#x9;return this.id;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;T> neighbors = null;&#xA;&#xA;public IIterator&lt;T> Neighbors {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.neighbors == null)&#xA;&#x9;&#x9;&#x9;this.neighbors = (IIterator&lt;T>) Services.getPort(&quot;neighbors&quot;);&#xA;&#x9;&#x9;return this.neighbors;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseICliqueNodeImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl/bin/1.0.0.0/BaseICliqueNodeImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/BaseICliqueNode.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl { &#xA;&#xA;public class ICliqueNodeImpl&lt;T> : BaseICliqueNodeImpl&lt;T>, ICliqueNode&lt;T>&#xA;where T:IData&#xA;{&#xA;&#xA;public ICliqueNodeImpl() { &#xA;&#xA;} &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ICliqueNodeImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl/bin/1.0.0.0/ICliqueNodeImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl/bin/1.0.0.0/BaseICliqueNodeImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="71" w="149" x="96" y="180">
+        <color b="0" g="128" r="0"/>
+      </visualDescription>
+      <port name="neighbors">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="neighbors" sRef="neighbors"/>
+      </port>
+      <parameter iname="IData" order="0" parid="id_type" uname="data" varid="T"/>
+    </interface>
+    <unit iRef="ICliqueNodeImpl" multiple="false" private="false" replica="0" uRef="clique_node" visibleInterface="true">
+      <super cRef="base" uRef="clique_node"/>
+      <visualDescription h="40" w="117" x="149" y="298"/>
+    </unit>
+  </componentInfo>
+</component:component>

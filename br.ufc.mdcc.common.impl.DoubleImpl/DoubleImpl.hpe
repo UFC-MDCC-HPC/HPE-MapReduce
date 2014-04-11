@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f7d5efe6373d603c4cb75331a7dbec768d459fa7786d25888904bbe176ed99a6566c5ce03df770eb46e51e70c01806eb3ac4e64ee74ab8d4266bc4f455bbb1912c1dc83a9d46c772094777090e2663a044c60ef2e763ef644d9978fd992cc7e386868de8c31a749bb85da6d8d7d62c8bb1f333ebafc244b72399e1afb587a09f" isAbstract="false" kind="Data" name="DoubleImpl" packagePath="br.ufc.mdcc.common.impl">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f34084da487c1c6931f9192c282dd63720d21c295915e203ba679e3c1f9083623437d45ea196dc196f38ed2c85b2c246c5797fe6d15acb382dd64409342c6a9b9b7ecde9b14361fbb071057e95cf183d13e75c954ddcbd406f10267ecea7bfca61a5bdbb85512e84307a5582e6622e9e401129677df6036805e6aeda2d1d7e99" isAbstract="false" kind="Data" name="DoubleImpl" packagePath="br.ufc.mdcc.common.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eb454d927c1a3d4da740913b44a189b89000ab0c3fbb03a2f502cd036c4be350034756c5cae38b4b363a6f69cc27719889eb4324a024738a023bdc3ca334b37ac75bb49ef01242503b4f88d08dbcfdbd74fa560ffec156a78fa80d6940f7b2f7a63a9488102f986a5effc7f8b9a0ffa5e527e636621ab21e83908da03df9479c" localRef="base" location="br.ufc.mdcc.common.Double/Double.hpe" name="Double" package="br.ufc.mdcc.common" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="300" y="302">
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="base" location="br.ufc.mdcc.common.Double/Double.hpe" name="Double" package="br.ufc.mdcc.common" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="315" y="350">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -30,13 +30,13 @@
           <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IData.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="119" x="77" y="110">
+      <visualDescription h="40" w="130" x="52" y="149">
         <color b="255" g="128" r="0"/>
       </visualDescription>
     </interface>
     <unit iRef="IDoubleImpl" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <visualDescription h="40" w="80" x="194" y="207"/>
+      <visualDescription h="40" w="80" x="195" y="266"/>
     </unit>
   </componentInfo>
 </component:component>

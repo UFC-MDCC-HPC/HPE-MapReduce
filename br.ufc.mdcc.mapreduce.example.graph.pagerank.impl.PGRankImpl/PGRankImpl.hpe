@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000254887b0ac2fe81915a46a3bb48491cdd57fc5bbf261452f59f6f2ac7cc91159f5c624400dcabe7a7de1c03c9e09e5069e73117c9f129739d9eb33c1b5cb99b9ca31b93eed1b8f8d100670f5e72fd56757d653eaacbe75de16c186ae3540570fa1c646121e0a4ab06f654efad95236eb4c5f3f486d6272236225f3aca7d32097" isAbstract="false" kind="Data" name="PGRankImpl" packagePath="br.ufc.mdcc.common.graph.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" name="PGRank" package="br.ufc.mdcc.common.graph" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="319" y="291">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IPGRankImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl { &#xA;&#xA;public abstract class BaseIPGRankImpl: DataStructure, BaseIData&#xA;{&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPGRankImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl/bin/1.0.0.0/BaseIPGRankImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/bin/1.0.0.0/BaseIData.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl { &#xA;&#xA;public class IPGRankImpl : BaseIPGRankImpl, IData&#xA;{&#xA;&#xA;public IPGRankImpl() { &#xA;&#xA;} &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IPGRankImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl/bin/1.0.0.0/IPGRankImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl/bin/1.0.0.0/BaseIPGRankImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="214" x="71" y="153">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+    </interface>
+    <unit iRef="IPGRankImpl" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
+      <super cRef="base" uRef="data"/>
+      <visualDescription h="40" w="80" x="94" y="282"/>
+    </unit>
+  </componentInfo>
+</component:component>
