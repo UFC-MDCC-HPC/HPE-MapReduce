@@ -8,12 +8,12 @@ using br.ufc.mdcc.common.graph.DataNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode { 
 
-public interface BaseIPageNode<T> : BaseIDataNode<T>, IDataStructureKind 
-where T:IData
+public interface BaseIPageNode<TID> : BaseIDataNode<TID>, IDataStructureKind 
+where TID:IData
 {
 
 	IPGRank Pgrank {get;}
-	IIterator<T> Neighbors {get;}
+	IIterator<TID> Neighbors {get;}
 
 
 } // end main interface 

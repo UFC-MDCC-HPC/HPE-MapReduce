@@ -7,11 +7,11 @@ using br.ufc.mdcc.common.graph.DataNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode { 
 
-public interface BaseICliqueNode<T> : BaseIDataNode<T>, IDataStructureKind 
-where T:IData
+public interface BaseICliqueNode<TID> : BaseIDataNode<TID>, IDataStructureKind 
+where TID:IData
 {
 
-	IIterator<T> Neighbors {get;}
+	IIterator<TID> Neighbors {get;}
 
 
 } // end main interface 

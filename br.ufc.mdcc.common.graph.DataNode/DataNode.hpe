@@ -6,7 +6,7 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="base" location="br.ufc.mdcc.common.Data/Data.hpe" name="Data" package="br.ufc.mdcc.common" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="134" y="411">
+        <visualDescription h="60" w="100" x="133" y="429">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data_node">
@@ -21,34 +21,34 @@
   </header>
   <componentInfo>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="id" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="id_type" exposed="true">
-      <visualDescription h="60" w="100" x="361" y="430">
+      <visualDescription h="60" w="100" x="392" y="405">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
         <visualDescription h="20" w="20" x="15" y="11"/>
       </unitBounds>
     </innerComponent>
-    <parameter componentRef="id" formFieldId="id_type" varName="T"/>
+    <parameter componentRef="id" formFieldId="id_type" varName="TID"/>
     <interface iRef="IDataNode" nArgs="1">
       <slice isRef="id">
         <originRef cRef="id" iRef="IData"/>
         <visualDescription h="10" w="10" x="54" y="14"/>
       </slice>
-      <visualDescription h="71" w="149" x="140" y="209">
+      <visualDescription h="71" w="149" x="158" y="209">
         <color b="0" g="128" r="0"/>
       </visualDescription>
       <port name="id">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="id" sRef="id"/>
       </port>
-      <parameter iname="IData" order="0" parid="id_type" uname="data" varid="T"/>
+      <parameter iname="IData" order="0" parid="id_type" uname="data" varid="TID"/>
     </interface>
     <unit iRef="IDataNode" multiple="false" private="false" replica="0" uRef="data_node" visibleInterface="true">
       <super cRef="base" uRef="data"/>
       <slices cRef="id" replica="0" uRef="data" sliceName="id" transitive="false">
         <visualDescription h="10" w="10" x="54" y="14"/>
       </slices>
-      <visualDescription h="40" w="80" x="253" y="342"/>
+      <visualDescription h="40" w="80" x="227" y="349"/>
     </unit>
   </componentInfo>
 </component:component>

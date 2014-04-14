@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8CE8A639-0920-4E00-A901-67774EB0110F}</ProjectGuid>
+    <ProjectGuid>{E8907839-CC48-4EBD-B31F-E8FF94256450}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode</AssemblyName>

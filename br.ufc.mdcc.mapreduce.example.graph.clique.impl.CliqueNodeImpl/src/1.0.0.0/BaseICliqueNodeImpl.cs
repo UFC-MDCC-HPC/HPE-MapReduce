@@ -6,30 +6,31 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl { 
 
-public abstract class BaseICliqueNodeImpl<T>: DataStructure, BaseICliqueNode<T>
-where T:IData
+public abstract class BaseICliqueNodeImpl<TID>: DataStructure, BaseICliqueNode<TID>
+where TID:IInteger
 {
 
-private T id = default(T);
+private TID id = default(TID);
 
-public T Id {
+public TID Id {
 	get {
 		if (this.id == null)
-			this.id = (T) Services.getPort("id");
+			this.id = (TID) Services.getPort("id");
 		return this.id;
 	}
 }
 
-private IIterator<T> neighbors = null;
+private IIterator<TID> neighbors = null;
 
-public IIterator<T> Neighbors {
+public IIterator<TID> Neighbors {
 	get {
 		if (this.neighbors == null)
-			this.neighbors = (IIterator<T>) Services.getPort("neighbors");
+			this.neighbors = (IIterator<TID>) Services.getPort("neighbors");
 		return this.neighbors;
 	}
 }

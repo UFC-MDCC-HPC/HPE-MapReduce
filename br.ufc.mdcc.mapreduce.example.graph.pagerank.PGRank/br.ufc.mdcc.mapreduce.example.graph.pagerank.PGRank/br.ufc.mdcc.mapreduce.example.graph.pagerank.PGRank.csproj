@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4AD4939D-8437-4ADA-8FA8-545D5E28A5A8}</ProjectGuid>
+    <ProjectGuid>{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</AssemblyName>
@@ -44,10 +44,6 @@
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double.csproj">
-      <Project>{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}</Project>
-      <Name>br.ufc.mdcc.common.Double</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

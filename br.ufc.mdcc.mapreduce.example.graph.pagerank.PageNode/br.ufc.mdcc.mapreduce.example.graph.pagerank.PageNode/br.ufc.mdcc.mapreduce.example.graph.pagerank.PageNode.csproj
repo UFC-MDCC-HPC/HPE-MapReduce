@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{906916BC-305E-4738-B147-6EBE4F25C7CB}</ProjectGuid>
+    <ProjectGuid>{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode</AssemblyName>
@@ -54,7 +54,7 @@
       <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank.csproj">
-      <Project>{4AD4939D-8437-4ADA-8FA8-545D5E28A5A8}</Project>
+      <Project>{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</Name>
     </ProjectReference>
   </ItemGroup>

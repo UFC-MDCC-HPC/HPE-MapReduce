@@ -7,20 +7,21 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
 using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl { 
 
-public abstract class BaseIPageNodeImpl<T>: DataStructure, BaseIPageNode<T>
-where T:IData
+public abstract class BaseIPageNodeImpl<TID>: DataStructure, BaseIPageNode<TID>
+where TID:IInteger
 {
 
-private T id = default(T);
+private TID id = default(TID);
 
-public T Id {
+public TID Id {
 	get {
 		if (this.id == null)
-			this.id = (T) Services.getPort("id");
+			this.id = (TID) Services.getPort("id");
 		return this.id;
 	}
 }
@@ -35,12 +36,12 @@ public IPGRank Pgrank {
 	}
 }
 
-private IIterator<T> neighbors = null;
+private IIterator<TID> neighbors = null;
 
-public IIterator<T> Neighbors {
+public IIterator<TID> Neighbors {
 	get {
 		if (this.neighbors == null)
-			this.neighbors = (IIterator<T>) Services.getPort("neighbors");
+			this.neighbors = (IIterator<TID>) Services.getPort("neighbors");
 		return this.neighbors;
 	}
 }

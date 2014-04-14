@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" isAbstract="true" kind="Data" name="PageNode" packagePath="br.ufc.mdcc.common.graph">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" isAbstract="true" kind="Data" name="PageNode" packagePath="br.ufc.mdcc.mapreduce.example.graph.pagerank">
     <baseType>
       <extensionType>
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000177c1959f3cad21c0e4ecb98af6a5c0f964455ba63cdd5ff6852cfec06139d05257b95d9eb43d9c481556aed366f2ee4f6d16dbd08f2477579e41e08966192992b5b2a6829def56724fdd7a484072d053a8a5139338e12d4515210e1f3f832b2c4ebc66c2588ba84a97094193e69a3ac69ddc9775be082efa5a3632f680844c6" localRef="base" location="br.ufc.mdcc.common.graph.DataNode/DataNode.hpe" name="DataNode" package="br.ufc.mdcc.common.graph" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="84" y="337">
+        <visualDescription h="60" w="100" x="105" y="338">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="id_type" varName="T"/>
+        <parameter formFieldId="id_type" varName="TID"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="id" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="54" y="214">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="15" y="11"/>
+          </unitBounds>
+        </port>
         <unitBounds parallel="false" uRef="page_node">
-          <visualDescription h="20" w="20" x="66" y="18"/>
+          <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
     </baseType>
@@ -21,56 +29,42 @@
     </visualAttributes>
   </header>
   <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="id_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="id_type" exposed="false">
+      <visualDescription h="60" w="100" x="501" y="242">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="true">
+      <visualDescription h="60" w="100" x="304" y="371">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data_pgrank">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="105" w="145" x="444" y="324">
+      <visualDescription h="60" w="127" x="460" y="352">
         <color b="203" g="192" r="255"/>
       </visualDescription>
-      <parameter formFieldId="item_type" varName="T"/>
+      <parameter formFieldId="item_type" varName="TID"/>
       <unitBounds parallel="false" uRef="iterator">
-        <visualDescription h="20" w="20" x="59" y="9"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="id_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="id_type" exposed="false">
-      <visualDescription h="60" w="100" x="258" y="380">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.common.graph" exposed="true">
-      <visualDescription h="60" w="100" x="269" y="393">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <parameter componentRef="id_type" formFieldId="id_type" varName="T"/>
+    <parameter componentRef="id_type" formFieldId="id_type" varName="TID"/>
     <interface iRef="IPageNode" nArgs="1">
       <slice isRef="neighbors">
         <originRef cRef="neighbors" iRef="IIterator"/>
-        <visualDescription h="10" w="10" x="52" y="21"/>
+        <visualDescription h="10" w="10" x="65" y="12"/>
       </slice>
       <slice isRef="pgrank">
         <originRef cRef="pgrank" iRef="IPGRank"/>
-        <visualDescription h="10" w="10" x="20" y="25"/>
+        <visualDescription h="10" w="10" x="38" y="18"/>
       </slice>
-      <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.graph.DataNode;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode { &#xA;&#xA;public interface BaseIPageNode&lt;T> : BaseIDataNode&lt;T>, IDataStructureKind &#xA;where T:IData&#xA;{&#xA;&#xA;&#x9;IPGRank Pgrank {get;}&#xA;&#x9;IIterator&lt;T> Neighbors {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIPageNode.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/BaseIPageNode.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/bin/1.0.0.0/IPGRank.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll</dependency>
-        </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.graph.DataNode;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode { &#xA;&#xA;public interface IPageNode&lt;T> : BaseIPageNode&lt;T>, IDataNode&lt;T>&#xA;where T:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IPageNode.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/BaseIPageNode.dll</dependency>
-          <dependency>br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/IDataNode.dll</dependency>
-        </file>
-      </sources>
-      <visualDescription h="71" w="149" x="221" y="106">
+      <visualDescription h="71" w="149" x="198" y="125">
         <color b="0" g="128" r="0"/>
       </visualDescription>
       <port name="neighbors">
@@ -81,17 +75,17 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="pgrank" sRef="pgrank"/>
       </port>
-      <parameter iname="IData" order="0" parid="id_type" uname="data" varid="T"/>
+      <parameter iname="IData" order="0" parid="id_type" uname="data" varid="TID"/>
     </interface>
     <unit iRef="IPageNode" multiple="false" private="false" replica="0" uRef="page_node" visibleInterface="true">
       <super cRef="base" uRef="data_node"/>
       <slices cRef="neighbors" replica="0" uRef="iterator" sliceName="neighbors" transitive="false">
-        <visualDescription h="10" w="10" x="52" y="21"/>
+        <visualDescription h="10" w="10" x="65" y="12"/>
       </slices>
-      <slices cRef="pgrank" replica="0" uRef="data" sliceName="pgrank" transitive="false">
-        <visualDescription h="10" w="10" x="20" y="25"/>
+      <slices cRef="pgrank" replica="0" uRef="data_pgrank" sliceName="pgrank" transitive="false">
+        <visualDescription h="10" w="10" x="38" y="18"/>
       </slices>
-      <visualDescription h="40" w="80" x="278" y="289"/>
+      <visualDescription h="40" w="80" x="343" y="272"/>
     </unit>
   </componentInfo>
 </component:component>

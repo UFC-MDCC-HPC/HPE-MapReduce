@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{646F5612-6327-4E9E-B595-8155ED940B45}</ProjectGuid>
+    <ProjectGuid>{21235990-D9C7-4E4A-9B0B-758CAB4B5210}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl</AssemblyName>
@@ -49,17 +49,21 @@
       <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
       <Name>br.ufc.mdcc.common.graph.DataNode</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
       <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
       <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank.csproj">
-      <Project>{4AD4939D-8437-4ADA-8FA8-545D5E28A5A8}</Project>
-      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode.csproj">
-      <Project>{906916BC-305E-4738-B147-6EBE4F25C7CB}</Project>
+      <Project>{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank.csproj">
+      <Project>{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

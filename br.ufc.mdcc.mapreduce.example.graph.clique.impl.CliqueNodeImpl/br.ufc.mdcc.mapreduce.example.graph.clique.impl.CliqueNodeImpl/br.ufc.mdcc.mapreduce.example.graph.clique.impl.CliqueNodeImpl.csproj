@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4D605BD2-3B87-4257-97B8-BC2D6CB3E203}</ProjectGuid>
+    <ProjectGuid>{61329410-AB74-45B2-839E-0B490AC499A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl</RootNamespace>
     <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl</AssemblyName>
@@ -41,21 +41,25 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode.csproj">
+      <Project>{E8907839-CC48-4EBD-B31F-E8FF94256450}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode.csproj">
-      <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
-      <Name>br.ufc.mdcc.common.graph.DataNode</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
       <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
       <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode.csproj">
-      <Project>{8CE8A639-0920-4E00-A901-67774EB0110F}</Project>
-      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode</Name>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode.csproj">
+      <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
+      <Name>br.ufc.mdcc.common.graph.DataNode</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

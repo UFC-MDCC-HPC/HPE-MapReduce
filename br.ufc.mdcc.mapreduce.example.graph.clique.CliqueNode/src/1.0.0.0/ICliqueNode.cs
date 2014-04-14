@@ -4,8 +4,8 @@ using br.ufc.mdcc.common.graph.DataNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode { 
 
-public interface ICliqueNode<T> : BaseICliqueNode<T>, IDataNode<T>
-where T:IData
+public interface ICliqueNode<TID> : BaseICliqueNode<TID>, IDataNode<TID>
+where TID:IData
 {
 
 

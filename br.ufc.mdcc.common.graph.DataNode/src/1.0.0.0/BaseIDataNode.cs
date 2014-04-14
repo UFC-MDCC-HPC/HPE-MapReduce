@@ -5,11 +5,11 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.graph.DataNode { 
 
-public interface BaseIDataNode<T> : BaseIData, IDataStructureKind 
-where T:IData
+public interface BaseIDataNode<TID> : BaseIData, IDataStructureKind 
+where TID:IData
 {
 
-	T Id {get;}
+	TID Id {get;}
 
 
 } // end main interface 

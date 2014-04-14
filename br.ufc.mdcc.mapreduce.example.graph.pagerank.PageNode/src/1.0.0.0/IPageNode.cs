@@ -4,8 +4,8 @@ using br.ufc.mdcc.common.graph.DataNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode { 
 
-public interface IPageNode<T> : BaseIPageNode<T>, IDataNode<T>
-where T:IData
+public interface IPageNode<TID> : BaseIPageNode<TID>, IDataNode<TID>
+where TID:IData
 {
 
 
