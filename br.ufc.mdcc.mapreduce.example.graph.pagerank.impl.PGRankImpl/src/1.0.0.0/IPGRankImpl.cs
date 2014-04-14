@@ -7,7 +7,7 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl { 
 
-public class IPGRankImpl : BaseIPGRankImpl, IData
+public class IPGRankImpl : BaseIPGRankImpl, IPGRank
 {
 private double pgrank;
 private double error;
@@ -23,7 +23,7 @@ public IPGRankImpl() {
 				pgrank = value;
             }
         }
-        public double Error { get { return error; } }
+		public double Error { get { return error; } }
         
         public void loadFrom(IData o) {
             IPGRank i = (IPGRank)o;

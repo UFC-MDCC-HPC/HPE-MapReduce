@@ -9,7 +9,6 @@ public interface BaseIPGRank : BaseIData, IDataStructureKind
 {
 
 
-
 } // end main interface 
 
 } // end namespace 

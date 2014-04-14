@@ -8,11 +8,11 @@ using br.ufc.mdcc.common.Double;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap { 
 
-	public interface BaseIVoteMap<IMK, IMV, OMK, OMV> : BaseIMapFunction<IMK, IMV, OMK, OMV>, IComputationKind 
-where IMK:IInteger
-where IMV:IPageNode<IInteger>
-where OMK: IInteger
-where OMV: IDouble
+	public interface BaseIVoteMap: BaseIMapFunction<IInteger, IPageNode<IInteger>, IInteger, IDouble>, IComputationKind 
+	//where IMK:IInteger
+	//where IMV:IPageNode<IInteger>
+	//where OMK: IInteger
+	//where OMV: IDouble
 {
 
 
