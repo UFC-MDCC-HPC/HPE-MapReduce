@@ -136,6 +136,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl.csproj", "{69BCF22A-32E0-434C-A9FA-D72EE2D0681C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce.csproj", "{2CFC22C2-D614-4F83-BFE8-B387454386F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl.csproj", "{57A8CC43-63E7-4F57-90E4-AE665A857DB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -186,6 +190,10 @@ Global
 		{2AE129B3-F4A5-4FD3-8993-E509EA33B483}.Debug|x86.Build.0 = Debug|Any CPU
 		{2AE129B3-F4A5-4FD3-8993-E509EA33B483}.Release|x86.ActiveCfg = Release|Any CPU
 		{2AE129B3-F4A5-4FD3-8993-E509EA33B483}.Release|x86.Build.0 = Release|Any CPU
+		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Debug|x86.Build.0 = Debug|Any CPU
+		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Release|x86.ActiveCfg = Release|Any CPU
+		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Release|x86.Build.0 = Release|Any CPU
 		{33EFECF4-F0AF-4B9F-A2D7-96664950DCF9}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{33EFECF4-F0AF-4B9F-A2D7-96664950DCF9}.Debug|x86.Build.0 = Debug|Any CPU
 		{33EFECF4-F0AF-4B9F-A2D7-96664950DCF9}.Release|x86.ActiveCfg = Release|Any CPU
@@ -218,6 +226,10 @@ Global
 		{561084B3-8A82-4356-806E-0C1888ADA93C}.Debug|x86.Build.0 = Debug|Any CPU
 		{561084B3-8A82-4356-806E-0C1888ADA93C}.Release|x86.ActiveCfg = Release|Any CPU
 		{561084B3-8A82-4356-806E-0C1888ADA93C}.Release|x86.Build.0 = Release|Any CPU
+		{57A8CC43-63E7-4F57-90E4-AE665A857DB7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57A8CC43-63E7-4F57-90E4-AE665A857DB7}.Debug|x86.Build.0 = Debug|Any CPU
+		{57A8CC43-63E7-4F57-90E4-AE665A857DB7}.Release|x86.ActiveCfg = Release|Any CPU
+		{57A8CC43-63E7-4F57-90E4-AE665A857DB7}.Release|x86.Build.0 = Release|Any CPU
 		{5A92B566-5783-44E5-A395-03CB4BFB9DA1}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{5A92B566-5783-44E5-A395-03CB4BFB9DA1}.Debug|x86.Build.0 = Debug|Any CPU
 		{5A92B566-5783-44E5-A395-03CB4BFB9DA1}.Release|x86.ActiveCfg = Release|Any CPU
