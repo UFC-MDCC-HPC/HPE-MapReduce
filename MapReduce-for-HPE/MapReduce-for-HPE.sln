@@ -140,6 +140,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl.csproj", "{57A8CC43-63E7-4F57-90E4-AE665A857DB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes.csproj", "{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -322,6 +324,10 @@ Global
 		{9DA059EA-4AA4-405C-99FF-0885C76C4F13}.Debug|x86.Build.0 = Debug|Any CPU
 		{9DA059EA-4AA4-405C-99FF-0885C76C4F13}.Release|x86.ActiveCfg = Release|Any CPU
 		{9DA059EA-4AA4-405C-99FF-0885C76C4F13}.Release|x86.Build.0 = Release|Any CPU
+		{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}.Debug|x86.Build.0 = Debug|Any CPU
+		{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}.Release|x86.ActiveCfg = Release|Any CPU
+		{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}.Release|x86.Build.0 = Release|Any CPU
 		{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}.Debug|x86.Build.0 = Debug|Any CPU
 		{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}.Release|x86.ActiveCfg = Release|Any CPU
