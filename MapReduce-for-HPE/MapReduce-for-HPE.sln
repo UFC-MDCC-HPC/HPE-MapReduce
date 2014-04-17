@@ -142,6 +142,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes.csproj", "{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl.csproj", "{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -192,6 +194,10 @@ Global
 		{2AE129B3-F4A5-4FD3-8993-E509EA33B483}.Debug|x86.Build.0 = Debug|Any CPU
 		{2AE129B3-F4A5-4FD3-8993-E509EA33B483}.Release|x86.ActiveCfg = Release|Any CPU
 		{2AE129B3-F4A5-4FD3-8993-E509EA33B483}.Release|x86.Build.0 = Release|Any CPU
+		{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}.Debug|x86.Build.0 = Debug|Any CPU
+		{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}.Release|x86.Build.0 = Release|Any CPU
 		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Debug|x86.Build.0 = Debug|Any CPU
 		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Release|x86.ActiveCfg = Release|Any CPU
