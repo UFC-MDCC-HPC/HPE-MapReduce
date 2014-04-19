@@ -9,7 +9,7 @@
         <visualDescription h="60" w="100" x="315" y="350">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <unitBounds parallel="false" uRef="data">
+        <unitBounds parallel="false" uRef="double">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -21,21 +21,12 @@
   </header>
   <componentInfo>
     <interface iRef="IDoubleImpl" nArgs="0">
-      <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Double;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.DoubleImpl { &#xA;&#xA;public abstract class BaseIDoubleImpl: DataStructure, BaseIData&#xA;{&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIDoubleImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.DoubleImpl/bin/1.0.0.0/BaseIDoubleImpl.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/BaseIData.dll</dependency>
-        </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Double;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.DoubleImpl { &#xA;&#xA;public class IDoubleImpl : BaseIDoubleImpl, IData&#xA;{&#xA;&#xA;public IDoubleImpl() { &#xA;&#xA;} &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IDoubleImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.DoubleImpl/bin/1.0.0.0/IDoubleImpl.dll" versionId="1.0.0.0">
-          <dependency>%WORKSPACE/br.ufc.mdcc.common.impl.DoubleImpl/bin/1.0.0.0/BaseIDoubleImpl.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IData.dll</dependency>
-        </file>
-      </sources>
       <visualDescription h="40" w="130" x="52" y="149">
         <color b="255" g="128" r="0"/>
       </visualDescription>
     </interface>
-    <unit iRef="IDoubleImpl" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
-      <super cRef="base" uRef="data"/>
+    <unit iRef="IDoubleImpl" multiple="false" private="false" replica="0" uRef="double" visibleInterface="true">
+      <super cRef="base" uRef="double"/>
       <visualDescription h="40" w="80" x="195" y="266"/>
     </unit>
   </componentInfo>
