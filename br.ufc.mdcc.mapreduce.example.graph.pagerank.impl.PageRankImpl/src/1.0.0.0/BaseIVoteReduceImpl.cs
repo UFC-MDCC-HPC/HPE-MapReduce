@@ -6,7 +6,6 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.mapreduce.MapReduce;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
-using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;

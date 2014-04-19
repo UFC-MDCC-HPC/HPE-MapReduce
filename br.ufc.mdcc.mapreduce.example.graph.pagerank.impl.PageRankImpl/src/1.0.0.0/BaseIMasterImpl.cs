@@ -32,11 +32,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 			}
 		}
 
-		private IIterator<IKVPair<IString,IInteger>> output_data = null;
-		public IIterator<IKVPair<IString,IInteger>> Output_data {
+		private IIterator<IKVPair<IInteger,IDouble>> output_data = null;
+		public IIterator<IKVPair<IInteger,IDouble>> Output_data {
 			get {
 				if (this.output_data == null)
-					this.output_data = (IIterator<IKVPair<IString,IInteger>>) Services.getPort("output_data");
+					this.output_data = (IIterator<IKVPair<IInteger,IDouble>>) Services.getPort("output_data");
 				return this.output_data;
 			}
 		}
@@ -52,7 +52,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 	}
 }
 
-/*Info:
+/*Obs:
  * In, IString
  * IMK, IInteger
  * IMV, IPageNode<IInteger>,

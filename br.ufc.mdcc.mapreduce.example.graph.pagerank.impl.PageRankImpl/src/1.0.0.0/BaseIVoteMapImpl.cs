@@ -9,7 +9,6 @@ using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;
-using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Integer;
 
