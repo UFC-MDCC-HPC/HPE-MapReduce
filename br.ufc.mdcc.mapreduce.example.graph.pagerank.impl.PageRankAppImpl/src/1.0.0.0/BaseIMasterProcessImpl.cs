@@ -7,8 +7,9 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
 using br.ufc.mdcc.common.Platform;
-using br.ufc.mdcc.common.String;
+//using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
@@ -18,11 +19,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 	public abstract class BaseIMasterProcessImpl<PLATFORM>: Application, BaseIMasterProcess<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private IString input_data = null;
-		public IString Input_data {
+		private IIterator<IPageNode<IInteger>> input_data = null;
+		public IIterator<IPageNode<IInteger>> Input_data {
 			get {
 				if (this.input_data == null)
-					this.input_data = (IString) Services.getPort("input_data");
+					this.input_data = (IIterator<IPageNode<IInteger>>) Services.getPort("input_data");
 				return this.input_data;
 			}
 		}

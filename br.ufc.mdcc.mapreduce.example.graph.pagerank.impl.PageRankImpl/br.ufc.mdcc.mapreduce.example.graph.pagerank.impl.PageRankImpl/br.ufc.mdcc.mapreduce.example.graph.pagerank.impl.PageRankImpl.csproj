@@ -65,10 +65,6 @@
       <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
       <Name>br.ufc.mdcc.common.Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
-      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
-      <Name>br.ufc.mdcc.common.String</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes.csproj">
       <Project>{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes</Name>

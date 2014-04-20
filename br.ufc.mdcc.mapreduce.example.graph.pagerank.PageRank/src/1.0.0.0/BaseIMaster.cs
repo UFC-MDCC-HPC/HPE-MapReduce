@@ -7,13 +7,13 @@ using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Integer;
-using br.ufc.mdcc.common.String;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank { 
 
 	public interface BaseIMaster<PLATFORM> : IComputationKind 
 		where PLATFORM:IPlatform{
 		IIterator<IKVPair<IInteger,IDouble>> Output_data {get;}
-		IString Input_data {get;}
+		IIterator<IPageNode<IInteger>> Input_data {get;}//IString Input_data {get;}
 	} // end main interface 
 } // end namespace 

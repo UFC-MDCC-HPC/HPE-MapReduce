@@ -65,13 +65,17 @@
       <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
       <Name>br.ufc.mdcc.common.Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
-      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
-      <Name>br.ufc.mdcc.common.String</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double.csproj">
       <Project>{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}</Project>
       <Name>br.ufc.mdcc.common.Double</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode.csproj">
+      <Project>{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode.csproj">
+      <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
+      <Name>br.ufc.mdcc.common.graph.DataNode</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
