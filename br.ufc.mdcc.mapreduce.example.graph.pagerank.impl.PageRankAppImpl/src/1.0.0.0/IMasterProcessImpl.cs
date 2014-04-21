@@ -88,9 +88,9 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 					W.Neighbors.put (alternativeID);
 					PAGENODES [W.Id] = W;
 				}
-				V = referenceV[KEY[0]];
-				W = referenceW[KEY[1]];
 				if (!referenceV.TryGetValue (KEY [1], out temp)) {/*Verifica se existe o vizinho W*/
+					V = referenceV[KEY[0]];
+					W = referenceW[KEY[1]];
 					referenceV [KEY [1]] = W;
 					V.Neighbors.put (W.Id);
 				}
