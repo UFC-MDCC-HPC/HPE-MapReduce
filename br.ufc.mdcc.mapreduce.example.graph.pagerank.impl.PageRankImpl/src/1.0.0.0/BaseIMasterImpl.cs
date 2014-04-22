@@ -15,7 +15,7 @@ using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.user.CombineFunction;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { 
@@ -41,11 +41,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 			}
 		}
 
-		private IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>,	IIterator<IKVPair<IInteger, IDouble>>, PLATFORM> page_rank = null;
-		protected IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, IIterator<IKVPair<IInteger, IDouble>>, PLATFORM> Page_rank {
+		private IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInPageNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>,	IIterator<IKVPair<IInteger, IDouble>>, PLATFORM> page_rank = null;
+		protected IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInPageNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, IIterator<IKVPair<IInteger, IDouble>>, PLATFORM> Page_rank {
 			get {
 				if (this.page_rank == null)
-					this.page_rank = (IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, IIterator<IKVPair<IInteger, IDouble>>, PLATFORM>) Services.getPort("page_rank");
+					this.page_rank = (IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInPageNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, IIterator<IKVPair<IInteger, IDouble>>, PLATFORM>) Services.getPort("page_rank");
 				return this.page_rank;
 			}
 		}

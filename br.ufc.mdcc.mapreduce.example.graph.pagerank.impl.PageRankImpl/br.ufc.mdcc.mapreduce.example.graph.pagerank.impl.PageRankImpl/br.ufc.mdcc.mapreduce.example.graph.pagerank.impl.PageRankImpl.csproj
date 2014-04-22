@@ -65,10 +65,6 @@
       <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
       <Name>br.ufc.mdcc.common.Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes.csproj">
-      <Project>{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}</Project>
-      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank.csproj">
       <Project>{51DD2F20-1C31-40D7-8772-806BF4D199D9}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank</Name>
@@ -116,6 +112,10 @@
     <ProjectReference Include="..\..\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double.csproj">
       <Project>{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}</Project>
       <Name>br.ufc.mdcc.common.Double</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes.csproj">
+      <Project>{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

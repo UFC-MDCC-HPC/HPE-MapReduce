@@ -140,9 +140,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl.csproj", "{57A8CC43-63E7-4F57-90E4-AE665A857DB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes.csproj", "{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes.csproj", "{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl.csproj", "{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl.csproj", "{2B32BB70-D4B6-43CB-AB6A-4C79CBF4E735}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank.csproj", "{51DD2F20-1C31-40D7-8772-806BF4D199D9}"
 EndProject
