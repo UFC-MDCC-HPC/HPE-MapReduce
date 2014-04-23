@@ -22,7 +22,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl {
 			}
 		}
 
-		private IInteger input_key = default(IInteger);
+		private IInteger input_key = null;
 		public IInteger Input_key {
 			get {
 				if (this.input_key == null)
@@ -31,7 +31,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl {
 			}
 		}
 
-		private ICliqueNode<IInteger> input_value = default(ICliqueNode<IInteger>);
+		private ICliqueNode<IInteger> input_value = null;
 		public ICliqueNode<IInteger> Input_value {
 			get {
 				if (this.input_value == null)

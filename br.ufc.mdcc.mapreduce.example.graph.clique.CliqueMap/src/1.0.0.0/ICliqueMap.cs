@@ -6,11 +6,11 @@ using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap { 
-	public interface ICliqueMap: BaseICliqueMap, IMapFunction<IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IInteger>>> {
+	public interface ICliqueMap: BaseICliqueMap, IMapFunction<IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IInteger>>>{
 
 	} // end main interface 
 } // end namespace 
-
+//<IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IInteger>>>
 //where IMK:IInteger
 //where IMV:ICliqueNode<IInteger>
 //where OMK: IInteger

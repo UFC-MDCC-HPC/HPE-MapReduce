@@ -12,7 +12,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap {
 
 	} // end main interface 
 } // end namespace 
-
+//<IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IInteger>>>
 //where IMK:IInteger
 //where IMV:ICliqueNode<IInteger>
 //where OMK: IInteger
