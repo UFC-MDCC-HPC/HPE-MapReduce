@@ -73,5 +73,13 @@
       <Project>{5F99AAE7-BB0A-4DFF-93DD-54EB8347B149}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl.csproj">
+      <Project>{BCB96804-B787-4ED7-BB0F-127F3649E5D7}</Project>
+      <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IntegerImpl\br.ufc.mdcc.common.impl.IntegerImpl\br.ufc.mdcc.common.impl.IntegerImpl.csproj">
+      <Project>{D5FF2BDE-BA64-4F4C-A2C8-12E8829170A7}</Project>
+      <Name>br.ufc.mdcc.common.impl.IntegerImpl</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

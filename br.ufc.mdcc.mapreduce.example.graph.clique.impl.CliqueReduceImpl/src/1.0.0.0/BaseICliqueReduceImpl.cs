@@ -12,11 +12,11 @@ using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce;
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl { 
 	public abstract class BaseICliqueReduceImpl: Computation, BaseICliqueReduce{
 
-		private IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>> output_value = null;
-		public IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>> Output_value {
+		private IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>> output_value = null;
+		public IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>> Output_value {
 			get {
 				if (this.output_value == null)
-					this.output_value = (IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>>) Services.getPort("output_value");
+					this.output_value = (IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>) Services.getPort("output_value");
 				return this.output_value;
 			}
 		}
@@ -31,3 +31,10 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 		}
 	}
 }
+//<IInteger, IKVPair<IInteger, IIterator<IInteger>>, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>
+//where OMK: IInteger
+//where OMV: IKVPair<IInteger, IIterator<IInteger>>
+//where ORV: IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>
+
+
+
