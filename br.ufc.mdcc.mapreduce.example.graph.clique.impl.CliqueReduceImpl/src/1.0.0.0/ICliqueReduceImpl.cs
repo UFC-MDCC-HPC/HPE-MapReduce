@@ -18,6 +18,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 		} 
 
 		private IIterator<IKVPair<IInteger, IIterator<IInteger>>> outputIteratorValues = null;
+		private IDictionary<IInteger, IIterator<IInteger>> bigCliques = null;
+		private int bigger=0;
 
 		public override void main() { 
 			IDictionary<int, IInteger> P = new Dictionary<int, IInteger>();
@@ -25,11 +27,20 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 			IDictionary<int, IIterator<IInteger>> dicValues = pivotKEY(Input_values.Value, Input_values.Key, P, X);
 
 			outputIteratorValues = new IIteratorImpl<IKVPair<IInteger, IIterator<IInteger>>>();
+			bigCliques = new Dictionary<IInteger, IIterator<IInteger>>();
+			bigger = 0;
 
 			IIterator<IInteger> R = new IIteratorImpl<IInteger>();
 			R.put(Input_values.Key);
 
 			bronKerboschAlgorithm(1, dicValues, P, R, X);
+
+			IEnumerator<IInteger> iterator = bigCliques.Keys.GetEnumerator ();
+			while (iterator.MoveNext ()) {
+				IKVPair<IInteger, IIterator<IInteger>> kv = (IKVPair<IInteger, IIterator<IInteger>>)outputIteratorValues.createItem();
+				kv.Key = iterator.Current;
+				kv.Value = bigCliques [kv.Key];
+			}
 
 			outputIteratorValues.finish();
 			Output_value.Key = Input_values.Key;
@@ -49,11 +60,15 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 		}
 		public void bronKerboschAlgorithm(int SIZE, IDictionary<int, IIterator<IInteger>> dicValues, IDictionary<int, IInteger> P, IIterator<IInteger> R, IDictionary<int, IInteger> X) {
 			if (P.Count == 0 && X.Count == 0) {
-				IKVPair<IInteger, IIterator<IInteger>> kv = outputIteratorValues.createItem ();
 				IInteger SIZEID = new IIntegerImpl();
 				SIZEID.Value = SIZE;
-				kv.Key = SIZEID;
-				kv.Value = R;
+				if (SIZE >= bigger) {
+					if (SIZE > bigger) {
+						bigCliques.Clear ();
+					}
+					bigCliques [SIZEID] = R;
+					bigger = SIZE;
+				} 
 				R.finish();
 			}
 			while (P.Count>0){
@@ -77,7 +92,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 			}
 		}
 		private void intersect(IIterator<IInteger> neighbors, IDictionary<int, IInteger> P, IDictionary<int, IInteger> X, ref IDictionary<int, IInteger> p, ref IDictionary<int, IInteger> x) {
-			IIterator<IInteger> iterator = (IIterator<IInteger>)neighbors.clone(); /* ideal: reset method or implement IDictonary as Neighbors type of CliqueNode */
+			IIterator<IInteger> iterator = (IIterator<IInteger>)neighbors.clone();
 			for (; !iterator.HasFinished; ) {
 				IInteger n = iterator.fetch_next();
 				if (P.ContainsKey(n.Value)){
