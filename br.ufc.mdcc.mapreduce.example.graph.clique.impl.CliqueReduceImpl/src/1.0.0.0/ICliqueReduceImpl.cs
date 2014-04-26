@@ -42,7 +42,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				kv.Value = bigCliques [kv.Key];
 			}
 
-			outputIteratorValues.finish();
+			//outputIteratorValues.finish();
 			Output_value.Key = Input_values.Key;
 			Output_value.Value = outputIteratorValues;
 		}
@@ -69,7 +69,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 					bigCliques [SIZEID] = R;
 					bigger = SIZE;
 				} 
-				R.finish();
+				//R.finish();
 			}
 			while (P.Count>0){
 				IEnumerator<IInteger> iteratorPValues = P.Values.GetEnumerator();
