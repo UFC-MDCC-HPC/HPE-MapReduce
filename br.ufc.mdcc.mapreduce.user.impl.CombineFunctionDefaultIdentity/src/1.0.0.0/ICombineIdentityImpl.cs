@@ -16,10 +16,13 @@ namespace br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity {
 
 		public override void main() 
 		{ 
-			while (!Input_data.HasFinished)
+			IIteratorInstance<ORV> input_data_instance = (IIteratorInstance<ORV>) Input_data.Instance;
+			IIteratorInstance<ORV> output_data_instance = (IIteratorInstance<ORV>) Output_data.Instance;
+
+			while (!input_data_instance.HasFinished)
 			{
-				ORV item = Input_data.fetch_next();
-				Output_data.put(item);
+				ORV item = (ORV) input_data_instance.fetch_next();
+				output_data_instance.put(item);
 			}
 		}
 	}

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.example.impl.WordCounterImpl { 
 
@@ -17,7 +18,10 @@ namespace br.ufc.mdcc.mapreduce.example.impl.WordCounterImpl {
 
 		public override void main() 
 		{ 
-			string input_string = Input_value.Value;
+			IStringInstance input_value_instance = (IStringInstance) Input_value.Instance;
+			IIteratorInstance<IKVPair<IString,IInteger>> output_value_instance = (IIteratorInstance<IKVPair<IString,IInteger>>) Output_data.Instance;
+
+			string input_string = input_value_instance.Value;
 			string[] words = input_string.Split(new char[] {' '});
 
 			IDictionary<string, int> index = new Dictionary<string,int>();
@@ -33,9 +37,10 @@ namespace br.ufc.mdcc.mapreduce.example.impl.WordCounterImpl {
 
 			foreach (KeyValuePair<string,int> occurrences in index)
 			{
-				IKVPair<IString,IInteger> item = Output_data.createItem();
-				item.Key.Value = occurrences.Key;
-				item.Value.Value = occurrences.Value;
+				IKVPairInstance<IString,IInteger> item = (IKVPairInstance<IString,IInteger>) Output_data.createItem();
+				((IStringInstance)item.Key).Value = occurrences.Key;
+				((IIntegerInstance)item.Value).Value = occurrences.Value;
+				output_value_instance.put(item);
 			}
 		}
 

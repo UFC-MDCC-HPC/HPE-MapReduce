@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000008b384e73f6f3be651084d11971673ad090456cd9967ed9b018b2450991286af8e4457204e7b71376481805f5b865b3e2bda81319ae42c4d846d2316f8946427564ec968c5307a784054b245c148db353664ff806250ec8f6d1ef36a7a51d756ab2e01f3afaee9b744be9bd209be1ed5ab17126803b23dfc45cb00286ff9063a0" isAbstract="false" kind="Synchronizer" name="SplitterImpl" packagePath="br.ufc.mdcc.mapreduce.impl">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003396c19e2346cbe0d8bbaca24f56290f8d6eeb46cca8a255aa54c7c72d0813b9391f3137b94bc5ea436b0e7bef0b2e45abdfbc886d4bd4e29d110270190d5db7294290676d06e2058d89613e3d86d0b827e10a48a2ddcde577521f2d4bc24644dd958bb04733181990c513569ef8e84b22a018b86c53b210915af559a688208c" isAbstract="false" kind="Synchronizer" name="SplitterImpl" packagePath="br.ufc.mdcc.mapreduce.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
       </extensionType>
       <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000004dc5df375927e5aa478c47bab623e97b9c1a39e69d1b982be324d28743f74b12e0f125379a8ebda608806a0d8e9f0f9e2b4552b84d202e9aecd4972d70eb595a06b52c42b57b10f5fd440cb8363ff00deb88fec0aa60aebd62f51bda4984a5403cb551701ed4c7ea24766162648d0adcb617bc6ae4742b9c28f1df45c87cbd94" localRef="base" location="br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe" name="Splitter" package="br.ufc.mdcc.mapreduce" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="215" y="257">
+        <visualDescription h="60" w="100" x="229" y="273">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="output_key_item_type" varName="IMK"/>
+        <parameter formFieldId="bin_function" varName="Bf"/>
         <parameter formFieldId="input_type" varName="IMAP"/>
-        <parameter formFieldId="type ?" varName="O"/>
         <parameter formFieldId="split_function" varName="Sf"/>
         <parameter formFieldId="output_value_item_type" varName="IMV"/>
-        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="59" w="126" x="433" y="380">
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="target_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="80" y="218">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <unitBounds parallel="false" uRef="data">
-            <visualDescription h="20" w="20" x="40" y="54"/>
+          <parameter formFieldId="item_type" varName="X###1915651874"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
@@ -51,20 +52,20 @@
       <parameter formFieldId="value_type" varName="IMV"/>
       <parameter formFieldId="input_type" varName="IMAP"/>
       <parameter formFieldId="key_type" varName="IMK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="133" y="427">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="249" y="256">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000db223b24fbafbaf33330864ecc1c104f1a0c0503435b9fe7eb5d4354edada8b168b77818e60fc7200b68a5a5f03dbc0060f10f7ca202c8df0f230183377c1cda65c4f87adceeccaa866ce5f7250c0d2bf3463497eab0be3e55fbf3f990d5d6893dd5e24c6c497f8d7455d616e405fcadcf0f52760a6cf2b0e171143c0f7185ab" localRef="output_data" location="br.ufc.mdcc.common.Set/Set.hpe" multiple="false" name="Set" package="br.ufc.mdcc.common" exposed="true">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="169" x="315" y="451">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1390598553685"/>
-        <unitBounds parallel="false" uRef="set">
+        <parameter formFieldId="item_type" varName="X###1566595444"/>
+        <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
@@ -96,11 +97,37 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="split_function" varName="Sf"/>
-    <supplyParameter cRef="input_type" varName="IMAP"/>
-    <supplyParameter cRef="key_type" varName="IMK"/>
-    <supplyParameter cRef="value_type" varName="IMV"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1390598553685" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="bin_function_type" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
+      <visualDescription h="60" w="100" x="228" y="374">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="193" y="202">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="168" y="459">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="partition_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="split_function" direct="true" varName="Sf"/>
+    <supplyParameter cRef="bin_function_type" direct="true" varName="Bf"/>
+    <supplyParameter cRef="input_type" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="key_type" direct="true" varName="IMK"/>
+    <supplyParameter cRef="value_type" direct="true" varName="IMV"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1566595444" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="69" w="126" x="362" y="160">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -110,8 +137,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1390598553685" varName="X###1390598553685"/>
-    <interface iRef="ISourceSplitterImpl" nArgs="4">
+    <supplyParameter cRef="C###1566595444" varName="X###1566595444"/>
+    <interface iRef="ISourceSplitterImpl" nArgs="5">
       <slice isRef="send_bins">
         <originRef cRef="send_bins" iRef="ISourceScatterSplitData"/>
         <visualDescription h="10" w="10" x="27" y="26"/>
@@ -121,7 +148,7 @@
         <visualDescription h="10" w="10" x="5" y="22"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Set;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;public abstract class BaseISourceSplitterImpl&lt;IData, IMK, IMV, Sf>: Synchronizer, BaseISourceSplitter&lt;IData, IMK, IMV, Sf>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where Sf:ISplitFunction&lt;IData, IMK, IMV>&#xA;{&#xA;&#xA;private Sf split_function = default(Sf);&#xA;&#xA;protected Sf Split_function {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.split_function == null)&#xA;&#x9;&#x9;&#x9;this.split_function = (Sf) Services.getPort(&quot;split_function&quot;);&#xA;&#x9;&#x9;return this.split_function;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IMAP source_data = null;&#xA;&#xA;public IMAP Source_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.source_data == null)&#xA;&#x9;&#x9;&#x9;this.source_data = (IMAP) Services.getPort(&quot;source_data&quot;);&#xA;&#x9;&#x9;return this.source_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private ISet&lt;IKVPair&lt;IMK, IMV>> bins = null;&#xA;&#xA;protected ISet&lt;IKVPair&lt;IMK, IMV>> Bins {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.bins == null)&#xA;&#x9;&#x9;&#x9;this.bins = (ISet&lt;IKVPair&lt;IMK, IMV>>) Services.getPort(&quot;bins&quot;);&#xA;&#x9;&#x9;return this.bins;&#xA;&#x9;}&#xA;}&#xA;&#xA;private ISourceScatterSplitData&lt;IMK, IMV> send_bins = null;&#xA;&#xA;protected ISourceScatterSplitData&lt;IMK, IMV> Send_bins {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.send_bins == null)&#xA;&#x9;&#x9;&#x9;this.send_bins = (ISourceScatterSplitData&lt;IMK, IMV>) Services.getPort(&quot;send_bins&quot;);&#xA;&#x9;&#x9;return this.send_bins;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseISourceSplitterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseISourceSplitterImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using environment.MPIDirect;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;&#x9;public abstract class BaseISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf>: &#xA;&#x9;Synchronizer, BaseISourceSplitter&lt;I, IMK, IMV, Sf, Bf>&#xA;&#x9;where I:IData&#xA;&#x9;where IMK:IData&#xA;&#x9;where IMV:IData&#xA;&#x9;where Sf:ISplitFunction&lt;I, IMK, IMV>&#xA;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;{&#xA;&#xA;private Sf split_function = default(Sf);&#xA;&#xA;protected Sf Split_function {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.split_function == null)&#xA;&#x9;&#x9;&#x9;this.split_function = (Sf) Services.getPort(&quot;split_function&quot;);&#xA;&#x9;&#x9;return this.split_function;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#x9;private I source_data = default(I);&#xA;&#xA;public I Source_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.source_data == null)&#xA;&#x9;&#x9;&#x9;this.source_data = (I) Services.getPort(&quot;source_data&quot;);&#xA;&#x9;&#x9;return this.source_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;IKVPair&lt;IMK, IMV>> bins = null;&#xA;&#xA;protected IIterator&lt;IKVPair&lt;IMK, IMV>> Bins {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.bins == null)&#xA;&#x9;&#x9;&#x9;&#x9;this.bins = (IIterator&lt;IKVPair&lt;IMK, IMV>>) Services.getPort(&quot;bins&quot;);&#xA;&#x9;&#x9;return this.bins;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#x9;private ISourceScatterSplitData&lt;IMK, IMV, Bf> send_bins = null;&#xA;&#xA;&#x9;&#x9;protected ISourceScatterSplitData&lt;IMK, IMV, Bf> Send_bins {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.send_bins == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.send_bins = (ISourceScatterSplitData&lt;IMK, IMV, Bf>) Services.getPort(&quot;send_bins&quot;);&#xA;&#x9;&#x9;return this.send_bins;&#xA;&#x9;}&#xA;}&#xA;&#xA;private  IMPIDirect mpi_comm = null;&#xA;&#xA;protected IMPIDirect Mpi_comm {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.mpi_comm == null) &#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;this.mpi_comm = (IMPIDirect) Services.getPort(&quot;mpi_comm&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return this.mpi_comm;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseISourceSplitterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseISourceSplitterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Set/bin/1.0.0.0/ISet.dll</dependency>
@@ -129,7 +156,7 @@
           <dependency>br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/ISourceScatterSplitData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/BaseISourceSplitter.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;public class ISourceSplitterImpl&lt;IData, IMK, IMV, Sf> : BaseISourceSplitterImpl&lt;IData, IMK, IMV, Sf>, ISourceSplitter&lt;IData, IMK, IMV, Sf>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where Sf:ISplitFunction&lt;IData, IMK, IMV>&#xA;{&#xA;&#xA;public ISourceSplitterImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ISourceSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ISourceSplitterImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using System.Threading.Tasks;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;&#x9;public class ISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf> : BaseISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf>, ISourceSplitter&lt;I, IMK, IMV, Sf, Bf>&#xA;    where I:IData&#xA;    where IMK:IData&#xA;    where IMV:IData&#xA;&#x9;where Sf:ISplitFunction&lt;I, IMK, IMV>  &#xA;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;&#x9;   &#xA;&#x9;{&#xA;&#x9;&#x9;public ISourceSplitterImpl() { } &#xA;&#xA;        public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;// 1. Criar uma thread para executar Split_function.go();&#xA;&#x9;&#x9;&#x9;Task split_function_task = new Task (delegate {&#xA;&#x9;&#x9;&#x9;&#x9;Split_function.go ();&#xA;&#x9;&#x9;&#x9;});&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;// 2. Criar uma thread para executar Send_bins.go()&#xA;&#x9;&#x9;&#x9;Task send_bins_task = new Task (delegate {&#xA;&#x9;&#x9;&#x9;&#x9;Send_bins.go();&#xA;&#x9;&#x9;&#x9;});&#xA;&#xA;&#x9;&#x9;&#x9;split_function_task.Start ();&#xA;&#x9;&#x9;&#x9;send_bins_task.Start ();&#xA;&#xA;&#x9;&#x9;&#x9;split_function_task.Wait ();&#xA;&#x9;&#x9;&#x9;send_bins_task.Wait ();&#xA;        }&#xA;    }&#xA;}&#xA;" fileType="library" name="ISourceSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ISourceSplitterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseISourceSplitterImpl.dll</dependency>
@@ -143,17 +170,18 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="bins" sRef="send_bins"/>
       </port>
-      <port name="source_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_data" sRef="split_function"/>
-      </port>
       <port name="bins">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output_data" sRef="split_function"/>
       </port>
+      <port name="source_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="split_function"/>
+      </port>
       <parameter iname="IData" order="0" parid="input_type" uname="data" varid="I"/>
-      <parameter iname="IData" order="1" parid="output_key_item_type" uname="data" varid="IMK"/>
       <parameter iname="IData" order="2" parid="output_value_item_type" uname="data" varid="IMV"/>
+      <parameter iname="IData" order="1" parid="output_key_item_type" uname="data" varid="IMK"/>
+      <parameter iname="IPartitionFunction" order="4" parid="bin_function" uname="partition_function" varid="Bf"/>
       <parameter iname="ISplitFunction" order="3" parid="split_function" uname="split_function" varid="Sf"/>
       <action id="main">
         <protocol/>
@@ -165,14 +193,14 @@
         <visualDescription h="10" w="10" x="54" y="23"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;public abstract class BaseITargetSplitterImpl&lt;IMK, IMV>: Synchronizer, BaseITargetSplitter&lt;IMK, IMV>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;{&#xA;&#xA;private ITargetScatterSplitData&lt;IMK, IMV> send_bins = null;&#xA;&#xA;protected ITargetScatterSplitData&lt;IMK, IMV> Send_bins {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.send_bins == null)&#xA;&#x9;&#x9;&#x9;this.send_bins = (ITargetScatterSplitData&lt;IMK, IMV>) Services.getPort(&quot;send_bins&quot;);&#xA;&#x9;&#x9;return this.send_bins;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IData target_data = null;&#xA;&#xA;public IData Target_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.target_data == null)&#xA;&#x9;&#x9;&#x9;this.target_data = (IData) Services.getPort(&quot;target_data&quot;);&#xA;&#x9;&#x9;return this.target_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;IKVPair&lt;IMK, IMV>> target_data = null;&#xA;&#xA;public IIterator&lt;IKVPair&lt;IMK, IMV>> Target_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.target_data == null)&#xA;&#x9;&#x9;&#x9;this.target_data = (IIterator&lt;IKVPair&lt;IMK, IMV>>) Services.getPort(&quot;target_data&quot;);&#xA;&#x9;&#x9;return this.target_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseITargetSplitterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseITargetSplitterImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using environment.MPIDirect;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;public abstract class BaseITargetSplitterImpl&lt;IMK, IMV>: Synchronizer, BaseITargetSplitter&lt;IMK, IMV>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;{&#xA;&#xA;private ITargetScatterSplitData&lt;IMK, IMV> send_bins = null;&#xA;&#xA;protected ITargetScatterSplitData&lt;IMK, IMV> Send_bins {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.send_bins == null)&#xA;&#x9;&#x9;&#x9;this.send_bins = (ITargetScatterSplitData&lt;IMK, IMV>) Services.getPort(&quot;send_bins&quot;);&#xA;&#x9;&#x9;return this.send_bins;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;private IIterator&lt;IKVPair&lt;IMK, IMV>> target_data = null;&#xA;&#xA;public IIterator&lt;IKVPair&lt;IMK, IMV>> Target_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.target_data == null)&#xA;&#x9;&#x9;&#x9;this.target_data = (IIterator&lt;IKVPair&lt;IMK, IMV>>) Services.getPort(&quot;target_data&quot;);&#xA;&#x9;&#x9;return this.target_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private  IMPIDirect mpi_comm = null;&#xA;&#xA;protected IMPIDirect Mpi_comm {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.mpi_comm == null) &#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;this.mpi_comm = (IMPIDirect) Services.getPort(&quot;mpi_comm&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return this.mpi_comm;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseITargetSplitterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseITargetSplitterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/ITargetScatterSplitData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/BaseITargetSplitter.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;public class ITargetSplitterImpl&lt;IMK, IMV> : BaseITargetSplitterImpl&lt;IMK, IMV>, ITargetSplitter&lt;IMK, IMV>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;{&#xA;&#xA;public ITargetSplitterImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ITargetSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ITargetSplitterImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#x9;public class ITargetSplitterImpl&lt;IMK, IMV> : BaseITargetSplitterImpl&lt;IMK, IMV>, ITargetSplitter&lt;IMK, IMV>&#xA;&#x9;where IMK:IData&#xA;&#x9;where IMV:IData &#xA;&#x9;{&#xA;&#x9;&#x9;public ITargetSplitterImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;// Executar Send_bins.go()&#xA;&#x9;&#x9;&#x9;Send_bins.go ();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="ITargetSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ITargetSplitterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseITargetSplitterImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/ITargetSplitter.dll</dependency>
@@ -185,8 +213,8 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="target_data" sRef="send_bins"/>
       </port>
-      <parameter iname="IData" order="0" parid="output_key_item_type" uname="data" varid="IMK"/>
       <parameter iname="IData" order="1" parid="output_value_item_type" uname="data" varid="IMV"/>
+      <parameter iname="IData" order="0" parid="output_key_item_type" uname="data" varid="IMK"/>
       <action id="main">
         <protocol/>
       </action>

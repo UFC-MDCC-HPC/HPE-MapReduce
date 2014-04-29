@@ -9,32 +9,32 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.common.impl.KVPairImpl { 
 
-public abstract class BaseIKVPairImpl<K, V>: DataStructure, BaseIKVPair<K, V>
-where K:IData
-where V:IData
-{
+	public abstract class BaseIKVPairImpl<K, V>: DataStructure, BaseIKVPair<K, V>
+	where K:IData
+	where V:IData
+	{
 
-		/*		private V value = default(V);
+		private V value_type = default(V);
 
-		public V Value {
+		public V Value_type {
 			get {
-				if (this.value == null)
-					this.value = (V) Services.getPort("value");
-				return this.value;
+				if (this.value_type == null)
+					this.value_type = (V) Services.getPort("value_type");
+				return this.value_type;
 			}
 		}
 
-		private K key = default(K);
+		private K key_type = default(K);
 
-		public K Key {
+		public K Key_type {
 			get {
-				if (this.key == null)
-					this.key = (K) Services.getPort("key");
-				return this.key;
+				if (this.key_type == null)
+					this.key_type = (K) Services.getPort("key_type");
+				return this.key_type;
 			}
 		}
-*/
 
-}
+
+	}
 
 }

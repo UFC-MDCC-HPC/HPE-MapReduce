@@ -7,8 +7,10 @@
     </visualAttributes>
   </header>
   <componentInfo>
+    <parameter componentRef="input" formFieldId="input_type" order="0" varName="I"/>
+    <parameter componentRef="output" formFieldId="output_type" order="1" varName="O"/>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="true" name="Data" package="br.ufc.mdcc.common" parameter_id="input_type" exposed="true">
-      <visualDescription h="60" w="100" x="74" y="206">
+      <visualDescription h="60" w="100" x="82" y="245">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
@@ -23,8 +25,6 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <parameter componentRef="input" formFieldId="input_type" varName="I"/>
-    <parameter componentRef="output" formFieldId="output_type" varName="O"/>
     <interface iRef="IWork" nArgs="2">
       <slice isRef="input">
         <originRef cRef="input" iRef="IData"/>
@@ -45,7 +45,7 @@
           <dependency>%WORKSPACE/br.ufc.mdcc.farm.Work/bin/1.0.0.0/BaseIWork.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="80" x="285" y="136">
+      <visualDescription h="40" w="80" x="227" y="105">
         <color b="0" g="0" r="255"/>
       </visualDescription>
       <port name="input">
@@ -63,10 +63,10 @@
       </action>
     </interface>
     <unit iRef="IWork" multiple="true" private="false" replica="0" uRef="work" visibleInterface="true">
-      <slices cRef="input" replica="0" uRef="data" sliceName="input" transitive="false">
+      <slices cRef="input" slice_replica="0" uRef="data" sliceName="input" transitive="false">
         <visualDescription h="10" w="10" x="9" y="12"/>
       </slices>
-      <slices cRef="output" replica="0" uRef="data" sliceName="output" transitive="false">
+      <slices cRef="output" slice_replica="0" uRef="data" sliceName="output" transitive="false">
         <visualDescription h="10" w="10" x="59" y="19"/>
       </slices>
       <visualDescription h="40" w="80" x="275" y="224"/>

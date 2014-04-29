@@ -6,14 +6,17 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.user.SplitFunction;
 using br.ufc.mdcc.mapreduce.Splitter;
+using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { 
 
-	public class ISourceSplitterImpl<I, IMK, IMV, Sf> : BaseISourceSplitterImpl<I, IMK, IMV, Sf>, ISourceSplitter<I, IMK, IMV, Sf>
+	public class ISourceSplitterImpl<I, IMK, IMV, Sf, Bf> : BaseISourceSplitterImpl<I, IMK, IMV, Sf, Bf>, ISourceSplitter<I, IMK, IMV, Sf, Bf>
     where I:IData
     where IMK:IData
     where IMV:IData
-	where Sf:ISplitFunction<I, IMK, IMV>     
+	where Sf:ISplitFunction<I, IMK, IMV>  
+	where Bf:IPartitionFunction<IMK>
+	   
 	{
 		public ISourceSplitterImpl() { } 
 

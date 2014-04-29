@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="9" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="65" y="24">
 <fastViewData fastViewLocation="1024">
@@ -12,10 +12,8 @@
 <coolItem id="group.file" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="30"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="48" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.photran.cdtinterface.FortranElementCreationActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -27,40 +25,53 @@
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.emonic.base.editors.CSharpEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.HPEVersionEditor" itemType="typePlaceholder" x="96" y="30"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.HPEVersionEditor" itemType="typeToolBarContribution" x="96" y="30"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1347278837682" focus="true" label="Workspace - Hash Programming Environment">
+<page aggregateWorkingSetId="Aggregate for window 1395372491311" focus="true" label="Workspace - Hash Programming Environment">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.HPEVersionEditor" name="Topology.hpe" partName="Topology.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Topology/Topology.hpe" title="Topology.hpe" tooltip="br.ufc.mdcc.mapreduce.Topology/Topology.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
+</editor>
+<editor id="org.eclipse.HPEVersionEditor" name="CountWordsApp.hpe" partName="CountWordsApp.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe" title="CountWordsApp.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
+</editor>
+<editor id="org.eclipse.HPEVersionEditor" name="CountWordsAppImpl.hpe" partName="CountWordsAppImpl.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe" title="CountWordsAppImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.HPEVersionEditor" name="CountWords.hpe" partName="CountWords.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" title="CountWords.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
+</editor>
+<editor id="org.eclipse.HPEVersionEditor" name="Platform.hpe" partName="Platform.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/Platform.hpe" title="Platform.hpe" tooltip="br.ufc.mdcc.common.Platform/Platform.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.Platform/Platform.hpe"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="NullPlatform.hpe" partName="NullPlatform.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" title="NullPlatform.hpe" tooltip="br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+</editor>
+<editor id="org.eclipse.HPEVersionEditor" name="NullPlatform.hpe" partName="NullPlatform.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" title="NullPlatform.hpe" tooltip="br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+</editor>
 </editors>
 <views>
-<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.BookmarkView" partName="Bookmarks"/>
-<view id="org.eclipse.photran.ui.VPGProblemView" partName="Fortran Analysis/Refactoring Problems"/>
 <view id="org.eclipse.ve.internal.java.codegen.editorpart.XMLViewPart" partName="VE Model: XMI View"/>
-<view id="org.eclipse.pde.runtime.LogView" partName="Error Log">
-<viewState activate="true" allSessions="true" column2="300" column3="150" column4="150" error="true" groupBy="0" info="true" limit="50" ok="true" orderType="2" orderValue="-1" show_filter_text="true" useLimit="true" warning="true"/>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
-<view id="hPE.library.HPEComponentLibraryView" partName="Repository">
-<viewState/>
-</view>
-<view id="org.eclipse.photran.ui.DeclarationView" partName="Fortran Declaration"/>
-<view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <columnWidths org.eclipse.ui.ide.locationField="73" org.eclipse.ui.ide.markerType="108" org.eclipse.ui.ide.pathField="143" org.eclipse.ui.ide.resourceField="108" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
@@ -75,30 +86,21 @@
 <viewState LINK_NAVIGATOR_TO_EDITOR="0" sorter="1">
 <filters>
 <filter element="*.class" isEnabled="false"/>
-<filter element="RemoteSystemsConnections" isEnabled="false"/>
-<filter element="RemoteSystemsTempFiles" isEnabled="false"/>
+<filter element="RemoteSystemsConnections" isEnabled="true"/>
+<filter element="RemoteSystemsTempFiles" isEnabled="true"/>
 <filter element=".*" isEnabled="false"/>
 <filter element="*.class" isEnabled="false"/>
 </filters>
 <expanded>
-<element path="/br.ufc.mdcc.common.Platform"/>
 <element path="/br.ufc.mdcc.mapreduce.example.CountWords"/>
-<element path="/br.ufc.mdcc.mapreduce.example.CountWordsApp"/>
-<element path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl"/>
-<element path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl"/>
-<element path="/br.ufc.mdcc.mapreduce.FetchValues"/>
-<element path="/br.ufc.mdcc.mapreduce.impl.PartitionerImpl"/>
-<element path="/br.ufc.mdcc.mapreduce.Partitioner"/>
-<element path="/br.ufc.mdcc.mapreduce.Splitter"/>
-<element path="/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData"/>
 </expanded>
 <selection>
-<element path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
+<element path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
 </selection>
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1347278837682">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1395372491311">
 <customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
@@ -127,14 +129,6 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
-<view id="org.eclipse.photran.ui.FortranView" partName="Fortran Projects">
-<viewState horizontalPosition="0" verticalPosition="0">
-<customFilters userDefinedPatternsEnabled="false"/>
-</viewState>
-</view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
 <viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
 <sorter groupBy="CATEGORY_QUERY">&#x0A;<sorter>&#x0A;<sort0 sortDirection="1" sortKey="PRIORITY"/>
@@ -150,28 +144,26 @@
 <filteredTreeFindHistory/>
 </viewState>
 </view>
-<view id="hPE.core.library.LocationView" partName="Location&apos;s Server List">
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
-<viewState/>
-</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="hPE.HPEResourceNavigator" activePerspective="hPE.HPEPerspective">
+<perspectives activePart="org.eclipse.HPEVersionEditor" activePerspective="hPE.HPEPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.ptp.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ptp.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
@@ -237,7 +229,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@2b42fb92" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@38b33d2b" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
@@ -258,12 +250,12 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@a604dd8" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.gef.ui.palette_view">&#x0A;<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@14cc3cb7" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.gef.ui.palette_view">&#x0A;<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.5" ratioLeft="240" ratioRight="240" relationship="4" relative="org.eclipse.ui.internal.ViewStack@a604dd8">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="right" ratio="0.5" ratioLeft="240" ratioRight="240" relationship="4" relative="org.eclipse.ui.internal.ViewStack@14cc3cb7">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
@@ -276,114 +268,18 @@
 </layout>
 </perspective>
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
-<descriptor class="org.eclipse.photran.internal.cdtinterface.ui.FortranPerspectiveFactory" id="org.eclipse.photran.ui.FortranPerspective" label="Fortran"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.ptp.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
-<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
-<alwaysOnActionSet id="org.eclipse.cdt.ui.SearchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.photran.ui.SearchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.photran.cdtinterface.FortranElementCreationActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
-<alwaysOnActionSet id="org.eclipse.cdt.make.ui.makeTargetActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.cdt.ui.buildConfigActionSet"/>
-<alwaysOnActionSet id="org.eclipse.cdt.ui.NavigationActionSet"/>
-<alwaysOnActionSet id="org.eclipse.cdt.ui.OpenActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
-<alwaysOnActionSet id="org.eclipse.photran.ui.RefactoringActionSet"/>
-<alwaysOnActionSet id="org.eclipse.rephraserengine.ui.DebugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
-<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
-<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
-<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
-<show_view_action id="org.eclipse.ui.views.ProblemView"/>
-<show_view_action id="org.eclipse.photran.ui.FortranView"/>
-<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
-<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
-<show_view_action id="org.eclipse.cdt.make.ui.views.MakeView"/>
-<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<show_view_action id="org.eclipse.cdt.ui.includeBrowser"/>
-<new_wizard_action id="org.eclipse.photran.ui.wizards.CDT4FortranProjectWizard"/>
-<new_wizard_action id="org.eclipse.photran.ui.wizards.NewSourceFolderCreationWizard"/>
-<new_wizard_action id="org.eclipse.photran.ui.wizards.NewFolderCreationWizard"/>
-<new_wizard_action id="org.eclipse.photran.ui.wizards.NewSourceFileCreationWizard"/>
-<new_wizard_action id="org.eclipse.photran.ui.wizards.NewFileCreationWizard"/>
-<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
-<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
-<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.photran.ui.FortranView"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.photran.ui.DeclarationView"/>
-<view id="org.eclipse.photran.ui.VPGProblemView"/>
-<view id="org.eclipse.ui.views.BookmarkView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
-<view id="org.eclipse.ui.views.ProgressView"/>
-<fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.photran.ui.FortranView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.photran.ui.FortranView" label="Fortran Projects"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
-<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-</folder>
-</info>
-<info part="org.eclipse.ui.editorss" ratio="0.24950495" ratioLeft="252" ratioRight="758" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.74882996" ratioLeft="480" ratioRight="161" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.photran.ui.DeclarationView" label="Fortran Declaration"/>
-<page content="org.eclipse.photran.ui.VPGProblemView" label="Fortran Analysis/Refactoring Problems"/>
-<page content="org.eclipse.ui.views.BookmarkView" label="Bookmarks"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="topRight" ratio="0.74934036" ratioLeft="568" ratioRight="190" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Target"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-<part id="1"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="bottomLeft" ratio="0.74882996" ratioLeft="480" ratioRight="161" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ProgressView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-</presentation>
-</folder>
-</info>
-</mainWindow>
-</layout>
-</perspective>
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="hPE.HPEPerspective" id="hPE.HPEPerspective" label="Hash Programming Environment"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.ptp.debug.ui.debugActionSet"/>
-<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ptp.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <show_view_action id="hPE.HPEResourceNavigator"/>
@@ -395,20 +291,7 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="hPE.HPEResourceNavigator"/>
-<fastViewBars>
-<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="hPE.core.library.LocationView" style="0">
-<fastViews>
-<view id="hPE.core.library.LocationView" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.pde.runtime.LogView" style="0">
-<fastViews>
-<view id="hPE.library.HPEComponentLibraryView" ratio="0.3"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
-<view id="org.eclipse.pde.runtime.LogView" ratio="0.29923275"/>
-</fastViews>
-</fastViewBar>
-</fastViewBars>
+<fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
@@ -426,18 +309,22 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2811966" ratioLeft="329" ratioRight="841" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.41112956" ratioLeft="495" ratioRight="709" relationship="2" relative="left"/>
 <info folder="true" part="right" ratio="0.75" ratioLeft="606" ratioRight="202" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="hPE.library.HPEComponentLibraryView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
-<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.6988543" ratioLeft="427" ratioRight="184" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.698908" ratioLeft="448" ratioRight="193" relationship="4" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="hPE.core.library.LocationView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@56cf66a2" ratio="0.49950248" ratioLeft="502" ratioRight="503" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
@@ -446,15 +333,74 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.common.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.common.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.common.Platform/Platform.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+</editors>
+<item historyLabel="Topology.hpe" index="0"/>
+<item historyLabel="Topology.hpe" index="0"/>
+<item historyLabel="Topology.hpe" index="1"/>
+<item historyLabel="Topology.hpe" index="2">
+<position/>
+</item>
+<item historyLabel="Topology.hpe" index="1"/>
+<item historyLabel="Topology.hpe" index="3"/>
+<item historyLabel="Topology.hpe" index="2">
+<position/>
+</item>
+<item historyLabel="Topology.hpe" index="4">
+<position info="not_deleted" x="39" y="0"/>
+</item>
+<item historyLabel="Topology.hpe" index="4">
+<position info="not_deleted" x="562" y="0"/>
+</item>
+<item historyLabel="Topology.hpe" index="1"/>
+<item historyLabel="Topology.hpe" index="2"/>
+<item historyLabel="Topology.hpe" index="3"/>
+<item historyLabel="Topology.hpe" index="3"/>
+<item historyLabel="Topology.hpe" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Topology.hpe" index="4">
+<position info="not_deleted" x="562" y="0"/>
+</item>
+<item historyLabel="Topology.hpe" index="3"/>
+<item historyLabel="Topology.hpe" index="5"/>
+<item historyLabel="Topology.hpe" index="3"/>
+<item historyLabel="Topology.hpe" index="6"/>
+<item historyLabel="Topology.hpe" index="3"/>
+<item historyLabel="Topology.hpe" index="7"/>
+<item historyLabel="Topology.hpe" index="7"/>
+<item historyLabel="CountWordsApp.hpe" index="8"/>
+<item historyLabel="CountWordsAppImpl.hpe" index="9"/>
+<item historyLabel="CountWords.hpe" index="10"/>
+<item historyLabel="CountWordsApp.hpe" index="8"/>
+<item historyLabel="CountWordsAppImpl.hpe" index="9"/>
+<item historyLabel="CountWordsApp.hpe" index="8"/>
+<item historyLabel="Platform.hpe" index="11"/>
+<item historyLabel="NullPlatform.hpe" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="NullPlatform.hpe" index="12"/>
+<item active="true" historyLabel="CountWords.hpe" index="10"/>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="right"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -462,55 +408,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IWordCounterProcessImpl.cs" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="INullPlatform.cs" tooltip="br.ufc.mdcc.common.impl.NullPlatform/src/1.0.0.0/INullPlatform.cs">
+<persistable path="/br.ufc.mdcc.common.impl.NullPlatform/src/1.0.0.0/INullPlatform.cs"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsAppImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="NullPlatform.hpe" tooltip="br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe">
+<persistable path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="ITallierProcessImpl.cs" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/ITallierProcessImpl.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/ITallierProcessImpl.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="ITallierProcess.cs" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/src/1.0.0.0/ITallierProcess.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/src/1.0.0.0/ITallierProcess.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IMasterProcess.cs" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/src/1.0.0.0/IMasterProcess.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/src/1.0.0.0/IMasterProcess.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IMasterProcessImpl.cs" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IMasterProcessImpl.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IMasterProcessImpl.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IWordCounterProcess.cs" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/src/1.0.0.0/IWordCounterProcess.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/src/1.0.0.0/IWordCounterProcess.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/CountWordsImpl.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/CountWordsImpl.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsApp.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="Platform.hpe" tooltip="br.ufc.mdcc.common.Platform/Platform.hpe">
+<persistable path="/br.ufc.mdcc.common.Platform/Platform.hpe"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWords.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="FetchValues.hpe" tooltip="br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.FetchValues/FetchValues.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsAppImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Partitioner.hpe" tooltip="br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Partitioner/Partitioner.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsApp.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="PartitionerImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.impl.PartitionerImpl/PartitionerImpl.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.impl.PartitionerImpl/PartitionerImpl.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Topology.hpe" tooltip="br.ufc.mdcc.mapreduce.Topology/Topology.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="ScatterSplitData.hpe" tooltip="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/ScatterSplitData.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Topology.hpe" tooltip="br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Splitter.hpe" tooltip="br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Splitter/Splitter.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Topology.hpe" tooltip="br.ufc.mdcc.common.Topology/Topology.hpe">
+<persistable path="/br.ufc.mdcc.common.Topology/Topology.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="run.sp.S.xml" tooltip="/home/heron/hash-programming-environment/run.sp.S.xml">
+<persistable uri="file:/home/heron/hash-programming-environment/run.sp.S.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IWordCounterProcessImpl.cs" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs">
+<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CombinerImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.impl.CombinerImpl/CombinerImpl.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.impl.CombinerImpl/CombinerImpl.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="Mapper.hpe" tooltip="br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Combiner.hpe" tooltip="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="MapReduceMPIImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/MapReduceMPIImpl.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/MapReduceMPIImpl.hpe"/>
 </file>
 </mruList>
 </workbench>

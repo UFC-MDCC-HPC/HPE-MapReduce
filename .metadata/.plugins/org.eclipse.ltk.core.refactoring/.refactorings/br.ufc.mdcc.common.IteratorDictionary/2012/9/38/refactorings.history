@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;br.ufc.mdcc.common.IteratorDictionary/Dictionary.hpe&apos; to &apos;IteratorDictionary.hpe&apos;" description="Rename resource &apos;Dictionary.hpe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Dictionary.hpe" name="IteratorDictionary.hpe" stamp="1347307136603" updateReferences="true"/>
-</session>

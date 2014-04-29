@@ -7,6 +7,14 @@
     </visualAttributes>
   </header>
   <componentInfo>
+    <parameter componentRef="scatter" formFieldId="scatter_strategy" order="0" varName="S"/>
+    <parameter componentRef="work" formFieldId="work" order="1" varName="W"/>
+    <parameter componentRef="gather" formFieldId="gather_strategy" order="2" varName="C"/>
+    <parameter componentRef="input_type" formFieldId="input_type" order="3" varName="I"/>
+    <parameter componentRef="output_type" formFieldId="output_type" order="4" varName="O"/>
+    <parameter componentRef="job_type" formFieldId="job_type" order="5" varName="J"/>
+    <parameter componentRef="result_type" formFieldId="result_type" order="6" varName="R"/>
+    <parameter componentRef="platform" formFieldId="platform" order="7" varName="P"/>
     <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000055294a0c7f1fff13882dae495773a18378690f70c8084ef010c42895ec25ab4bb8eeeb18a6603d09c31b0f828c5f3689ac55c7b2ee809d0528009af42a91cec01d3c8e716faf7e6405a10dd06e0c4a78ce0206f736e493166f2c4fdcb66ac58d4c52f0af406ea34824d04b1d57573a03a6801453dc56aacd5efbfca4287e3382" localRef="scatter" location="br.ufc.mdcc.farm.Scatter/Scatter.hpe" multiple="false" name="Scatter" package="br.ufc.mdcc.farm" parameter_id="scatter_strategy" exposed="false">
       <visualDescription h="60" w="142" x="212" y="71">
         <color b="255" g="255" r="255"/>
@@ -22,7 +30,7 @@
         </unitBounds>
       </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="45" w="75" x="35" y="78">
+        <visualDescription h="45" w="75" x="26" y="79">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -127,27 +135,19 @@
       <visualDescription h="60" w="151" x="207" y="204">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <unitBounds parallel="false" replica="0" uRef="platform">
+      <unitBounds parallel="false" slice_replica="0" unit_replica="0" uRef="platform">
         <visualDescription h="20" w="20" x="14" y="20"/>
       </unitBounds>
-      <unitBounds parallel="true" replica="1" uRef="platform">
+      <unitBounds parallel="true" slice_replica="1" unit_replica="0" uRef="platform">
         <visualDescription h="20" w="20" x="112" y="20"/>
       </unitBounds>
     </innerComponent>
-    <parameter componentRef="scatter" formFieldId="scatter_strategy" varName="S"/>
-    <parameter componentRef="work" formFieldId="work" varName="W"/>
-    <parameter componentRef="gather" formFieldId="gather_strategy" varName="C"/>
-    <parameter componentRef="input_type" formFieldId="input_type" varName="I"/>
-    <parameter componentRef="output_type" formFieldId="output_type" varName="O"/>
-    <parameter componentRef="job_type" formFieldId="job_type" varName="J"/>
-    <parameter componentRef="result_type" formFieldId="result_type" varName="R"/>
-    <parameter componentRef="platform" formFieldId="platform" varName="P"/>
-    <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
-    <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
-    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
-    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
     <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
+    <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
     <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
+    <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
+    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
+    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
     <fusion>
       <cRefs>gather</cRefs>
       <cRefs>work</cRefs>
@@ -200,8 +200,8 @@
         <slice pRef="target_data" sRef="gather"/>
       </port>
       <parameter iname="IScatterSource" order="0" parid="scatter_strategy" uname="source" varid="S"/>
-      <parameter iname="IData" order="1" parid="input_type" uname="data" varid="I"/>
-      <parameter iname="IGatherTarget" order="2" parid="gather_strategy" uname="target" varid="C"/>
+      <parameter iname="IData" order="2" parid="input_type" uname="data" varid="I"/>
+      <parameter iname="IGatherTarget" order="1" parid="gather_strategy" uname="target" varid="C"/>
       <parameter iname="IData" order="3" parid="output_type" uname="data" varid="O"/>
       <parameter iname="IPlatform" order="4" parid="platform" uname="platform" varid="P"/>
       <action id="main">
@@ -258,56 +258,56 @@
         <slice pRef="output" sRef="work"/>
       </port>
       <parameter iname="IScatterTarget" order="0" parid="scatter_strategy" uname="target" varid="S"/>
-      <parameter iname="IData" order="1" parid="job_type" uname="data" varid="J"/>
+      <parameter iname="IData" order="3" parid="job_type" uname="data" varid="J"/>
       <parameter iname="IGatherSource" order="2" parid="gather_strategy" uname="source" varid="C"/>
-      <parameter iname="IData" order="3" parid="result_type" uname="data" varid="R"/>
-      <parameter iname="IWork" order="4" parid="work" uname="work" varid="W"/>
+      <parameter iname="IData" order="4" parid="result_type" uname="data" varid="R"/>
+      <parameter iname="IWork" order="1" parid="work" uname="work" varid="W"/>
       <parameter iname="IPlatform" order="5" parid="platform" uname="platform" varid="P"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
     <unit iRef="IManager" multiple="false" private="false" replica="0" uRef="manager" visibleInterface="true">
-      <slices cRef="input" replica="0" uRef="data" sliceName="input" transitive="true">
+      <slices cRef="input" slice_replica="0" uRef="data" sliceName="input" transitive="true">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="output" replica="0" uRef="data" sliceName="output" transitive="true">
+      <slices cRef="output" slice_replica="0" uRef="data" sliceName="output" transitive="true">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="scatter" replica="0" uRef="source" sliceName="scatter" transitive="false">
+      <slices cRef="scatter" slice_replica="0" uRef="source" sliceName="scatter" transitive="false">
         <visualDescription h="10" w="10" x="94" y="14"/>
         <port>input</port>
       </slices>
-      <slices cRef="gather" replica="0" uRef="target" sliceName="gather" transitive="false">
+      <slices cRef="gather" slice_replica="0" uRef="target" sliceName="gather" transitive="false">
         <visualDescription h="10" w="10" x="102" y="39"/>
         <port>output</port>
       </slices>
-      <slices cRef="platform" replica="0" uRef="platform" sliceName="platform" transitive="false">
+      <slices cRef="platform" slice_replica="0" uRef="platform" sliceName="platform" transitive="false">
         <visualDescription h="10" w="10" x="97" y="23"/>
       </slices>
-      <visualDescription h="58" w="118" x="24" y="206"/>
+      <visualDescription h="58" w="118" x="16" y="199"/>
     </unit>
     <unit iRef="IWorker" multiple="true" private="false" replica="0" uRef="worker" visibleInterface="true">
-      <slices cRef="result" replica="0" uRef="data" sliceName="result" transitive="true">
+      <slices cRef="result" slice_replica="0" uRef="data" sliceName="result" transitive="true">
         <visualDescription h="10" w="10" x="9" y="22"/>
       </slices>
-      <slices cRef="job" replica="0" uRef="data" sliceName="job" transitive="true">
+      <slices cRef="job" slice_replica="0" uRef="data" sliceName="job" transitive="true">
         <visualDescription h="10" w="10" x="6" y="8"/>
       </slices>
-      <slices cRef="scatter" replica="0" uRef="target" sliceName="scatter" transitive="false">
+      <slices cRef="scatter" slice_replica="0" uRef="target" sliceName="scatter" transitive="false">
         <visualDescription h="10" w="10" x="8" y="12"/>
         <port>job</port>
       </slices>
-      <slices cRef="gather" replica="0" uRef="source" sliceName="gather" transitive="false">
+      <slices cRef="gather" slice_replica="0" uRef="source" sliceName="gather" transitive="false">
         <visualDescription h="10" w="10" x="13" y="38"/>
         <port>result</port>
       </slices>
-      <slices cRef="work" replica="0" uRef="work" sliceName="work" transitive="false">
+      <slices cRef="work" slice_replica="0" uRef="work" sliceName="work" transitive="false">
         <visualDescription h="10" w="10" x="99" y="25"/>
         <port>result</port>
         <port>job</port>
       </slices>
-      <slices cRef="platform" replica="1" uRef="platform" sliceName="platform" transitive="false">
+      <slices cRef="platform" slice_replica="1" uRef="platform" sliceName="platform" transitive="false">
         <visualDescription h="10" w="10" x="12" y="28"/>
       </slices>
       <visualDescription h="55" w="123" x="414" y="201"/>

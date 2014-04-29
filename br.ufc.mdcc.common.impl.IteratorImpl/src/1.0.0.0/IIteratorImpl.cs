@@ -6,99 +6,93 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Iterator;
 using System.Collections.Generic;
 using System.Threading;
+using System.Collections.Concurrent;
 
 namespace br.ufc.mdcc.common.impl.IteratorImpl 
 { 
 	
-public class IIteratorImpl<T> : BaseIIteratorImpl<T>, IIterator<T>
-where T:IData
-{
-		public IIteratorImpl() 
-		{ 
-			this.items = new List<Option<T>>();
-			counter_sem = new Semaphore(0,int.MaxValue);
-			rear=-1; front=0;
-		} 
+	public class IIteratorImpl<T> : BaseIIteratorImpl<T>, IIterator<T>
+	where T:IData
+	{
+		public IIteratorImpl() { newInstance (); } 
 
-		public IData newInstance()
+		public IIteratorInstance<T> newIteratorInstance ()
 		{
-			return new IIteratorImpl<T> ();
+			return (IIteratorInstance<T>) newInstance ();
 		}
 
-		public IData clone ()
+		public object newInstance ()
 		{
-			IData instance = newInstance();
-			instance.loadFrom(this);
-			return instance;
+			return this.Instance = new IIteratorInstanceImpl<T>();
 		}
 
-		private object lock_put = new object();
-		private object lock_fetch = new object();
+		private IIteratorInstance<T> instance;
 
-		private IList<Option<T>> items = null;
-
-		private int rear, front;
-
-		private Semaphore counter_sem = null;
-
-		public T createItem ()
-		{
-			T item = (T) Item_factory.newInstance ();
-			this.put (item);
-			return item;
+		public object Instance {
+			get { return instance; }
+			set { this.instance = (IIteratorInstance<T>) value; }
 		}
 
-		public void loadFrom (IData o)
+		public object createItem ()
 		{
-			throw new NotImplementedException ();
+			return Item_factory.newInstance ();
+		}
+	}
+
+
+	public class IIteratorInstanceImpl<T> : IIteratorInstance<T>
+		where T:IData
+	{
+
+		public IIteratorInstanceImpl() { } 
+
+		private ConcurrentQueue<Option<object>> items = null;
+
+		public void put (object item)
+		{
+			items.Enqueue(new Some<object>(item));
 		}
 
-		public void put (T item)
+		public void putAll (IIteratorInstance<T> items)
 		{
-			lock(lock_put)
-			{
-				if (this.HasFinished)
-					throw new FinishedIteratorException();
-
-				this.items.Insert(++rear,new Some<T>(item));
-				counter_sem.Release();
-			}
+			while (!items.HasFinished)
+				put(items.fetch_next());
 		}
 
 		public void finish ()
 		{
-			lock(lock_put) 
-			{
-				lock(lock_fetch)
-				{
-					if (this.HasFinished)
-						throw new FinishedIteratorException();
+			if (this.HasFinished)
+				throw new FinishedIteratorException();
 
-					this.items.Insert(++rear,new None<T>());
-					counter_sem.Release();
-				}
-			}
+			this.items.Enqueue(new None<object>());
 		}
 
-		public T fetch_next ()
+		public object fetch_next ()
 		{
-			lock (lock_fetch)
-			{
-				if (this.HasFinished)
-					throw new FinishedIteratorException();
+			if (this.HasFinished)
+				throw new FinishedIteratorException();
 
-				counter_sem.WaitOne();
-				return this.items[front++].Value;
-			}
+			Option<object> item;
+			items.TryDequeue(out item);
+
+			if (item.IsNone)
+				throw new FinishedIteratorException();
+
+			return item.Value;
 		}
 
 		public bool HasFinished
 		{
-			get { return this.items[front].IsNone; }
+			get 
+			{ 
+				Option<object> item;
+				items.TryPeek(out item);
+
+				return item.IsNone; 
+			}
 		}
 
-
-
+		}
 
 		public class FinishedIteratorException : Exception
 		{
@@ -107,7 +101,7 @@ where T:IData
 		public class NonRestartableIteratorException : Exception
 		{
 		}
-}
+
 
 // Used as return type from method
 	public abstract class Option<T>

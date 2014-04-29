@@ -3,11 +3,14 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.String { 
 
-public interface IString : BaseIString, IData
-{
+	public interface IString : BaseIString, IData
+	{
+		IStringInstance newInstance(string i);
+	} // end main interface 
 
-		string Value { get; set; }
-
-} // end main interface 
+	public interface IStringInstance
+	{
+		string Value { set; get; }
+	}
 
 } // end namespace 

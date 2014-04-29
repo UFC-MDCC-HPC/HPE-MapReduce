@@ -7,12 +7,16 @@ using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 using System.Collections.Generic;
+using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl { 
 
-public class ISourceScatterSplitDataImpl<IMK, IMV> : BaseISourceScatterSplitDataImpl<IMK, IMV>, ISourceScatterSplitData<IMK, IMV>
-	where IMK:IData
-	where IMV:IData {
+	public class ISourceScatterSplitDataImpl<IMK, IMV, Bf> : BaseISourceScatterSplitDataImpl<IMK, IMV, Bf>, ISourceScatterSplitData<IMK, IMV, Bf>
+		where IMK:IData
+		where IMV:IData 
+		where Bf:IPartitionFunction<IMK>
+	{
 		// Variáveis do Ambiente MPI.
 		private MPI.Intracommunicator worldcomm = null;
 		private int TAG_SPLITTER_IMK = 245;
@@ -37,22 +41,26 @@ public class ISourceScatterSplitDataImpl<IMK, IMV> : BaseISourceScatterSplitData
 		{ 
 			Bin_function.NumberOfPartitions = this.UnitSize["target"];
 
+			IIteratorInstance<IKVPair<IMK, IMV>> bins_instance = (IIteratorInstance<IKVPair<IMK, IMV>> ) Bins.Instance;
+
 			// 1. Ler os bins, um a um, do iterator, e enviá-los a cada mapper (unidades target) usando MPI.
-			while (!Bins.HasFinished) 
+			while (!bins_instance.HasFinished) 
 			{
 				// Ler um bin. 
-				IKVPair<IMK, IMV> bin = Bins.fetch_next ();
+				IKVPairInstance<IMK, IMV> bin = (IKVPairInstance<IMK, IMV>) bins_instance.fetch_next ();
 
 				// Recuperar a chave do bin.
-				Key.loadFrom(bin.Key);
+				Key.Instance = bin.Key;
 
 				// Descobre o rank do Mapper.
 				Bin_function.go ();
 
+				int rank = (int) ((IIntegerInstance)Rank.Instance).Value;
+
 				// Inicia o envio do bin para o Mapper.
 				//requestList.Add(worldcomm.ImmediateSend<IKVPair<IMK, IMV>> (bin, Rank.Value, tag));
-				worldcomm.Send<IMK> (bin.Key, Rank.Value, TAG_SPLITTER_IMK);
-				worldcomm.Send<IMV> (bin.Value, Rank.Value, TAG_SPLITTER_IMV);
+				worldcomm.Send<object> (bin.Key, rank, TAG_SPLITTER_IMK);
+				worldcomm.Send<object> (bin.Value, rank, TAG_SPLITTER_IMV);
 			}
 
 			// send "finish" message
@@ -60,7 +68,7 @@ public class ISourceScatterSplitDataImpl<IMK, IMV> : BaseISourceScatterSplitData
 			int size_workers = this.UnitSize["target"];
 			for (int i=0; i<size_workers;i++)
 			{
-				MPI.Request request = worldcomm.ImmediateSend<IMK> (default(IMK), i, TAG_SPLITTER_IMK_FINISH);
+				MPI.Request request = worldcomm.ImmediateSend<object> (0, i, TAG_SPLITTER_IMK_FINISH);
 				requests.Add(request);
 			}
 			requests.WaitAll();

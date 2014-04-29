@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;br.ufc.mdcc.mapreduce.Combiner/Collector.hpe&apos; to &apos;Combiner.hpe&apos;" description="Rename resource &apos;Collector.hpe&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Collector.hpe" name="Combiner.hpe" stamp="1357835877198" updateReferences="true"/>
-</session>

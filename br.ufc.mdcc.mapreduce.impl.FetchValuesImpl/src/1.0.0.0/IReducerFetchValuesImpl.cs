@@ -32,31 +32,30 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 		public override void main() 
 		{ 
 			MPI.CompletedStatus status;
-			KeyValuePair<OMK,OMV> kv;
+			IKVPairInstance<OMK,IIterator<OMV>> kv;
 
-			IDictionary<OMK,IIterator<OMV>> kv_cache = new Dictionary<OMK, IIterator<OMV>>();
+			IIteratorInstance<IKVPair<OMK,IIterator<OMV>>> reduce_job_instance = (IIteratorInstance<IKVPair<OMK,IIterator<OMV>>>) Reduce_job.Instance;
 
-			worldcomm.Receive<KeyValuePair<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
+			IDictionary<object,IIteratorInstance<OMV>> kv_cache = new Dictionary<object, IIteratorInstance<OMV>>();
+
+			worldcomm.Receive<IKVPairInstance<OMK,IIterator<OMV>>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
 			while (status.Tag != TAG_FETCHVALUES_OMV_FINISH)
 			{
-				IIterator<OMV> iterator;
+				IIteratorInstance<OMV> iterator = null;
 				if (!kv_cache.ContainsKey(kv.Key))
 				{
-					IKVPair<OMK, IIterator<OMV>> pair = Reduce_job.createItem();
-					pair.Key.loadFrom(kv.Key);
-					iterator = pair.Value;
-					kv_cache.Add(kv.Key, iterator);
+					iterator = Reduce_job_values_factory.newIteratorInstance ();
+
+					kv_cache.Add(kv.Key, (IIteratorInstance<OMV>) kv.Value);
+					reduce_job_instance.put (kv);
 				}
 				else 
 					kv_cache.TryGetValue(kv.Key, out iterator);
 								
-				iterator.put(kv.Value);
+				iterator.putAll((IIteratorInstance<OMV>) kv.Value);
 
-				worldcomm.Receive<KeyValuePair<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
+				worldcomm.Receive<IKVPairInstance<OMK,IIterator<OMV>>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
 			} 
-
-
-
 		}
 	}
 }

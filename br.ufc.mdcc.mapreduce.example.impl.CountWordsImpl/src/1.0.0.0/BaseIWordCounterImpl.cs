@@ -18,12 +18,12 @@ public abstract class BaseIWordCounterImpl<PLATFORM>: Computation, BaseIWordCoun
 where PLATFORM:IPlatform
 {
 
-private IReduceWorker<IString, IKVPair<IString,IInteger>, ITallier, IInteger, PLATFORM> count_words = null;
+		private IReduceWorker<IString, IInteger, IKVPair<IString,IInteger>, ITallier, PLATFORM> count_words = null;
 
-		protected IReduceWorker<IString, IKVPair<IString,IInteger>, ITallier, IInteger, PLATFORM> Count_words {
+		protected IReduceWorker<IString, IInteger, IKVPair<IString,IInteger>, ITallier, PLATFORM> Count_words {
 	get {
 		if (this.count_words == null)
-					this.count_words = (IReduceWorker<IString, IKVPair<IString,IInteger>, ITallier, IInteger, PLATFORM>) Services.getPort("count_words");
+					this.count_words = (IReduceWorker<IString, IInteger, IKVPair<IString,IInteger>, ITallier, PLATFORM>) Services.getPort("count_words");
 		return this.count_words;
 	}
 }

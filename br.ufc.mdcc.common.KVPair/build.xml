@@ -13,6 +13,7 @@
       </sources>
       <references>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/BaseIData.dll"/>
         <include/>
       </references>
     </csc>
@@ -23,6 +24,7 @@
       <references>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="/br.ufc.mdcc.common.KVPair/bin/1.0.0.0/BaseIKVPair.dll"/>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include/>
       </references>
     </csc>

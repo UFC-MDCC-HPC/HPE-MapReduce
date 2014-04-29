@@ -2,37 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="312" key="DIALOG_WIDTH"/>
-		<item value="339" key="DIALOG_Y_ORIGIN"/>
+		<item value="154" key="DIALOG_Y_ORIGIN"/>
+		<item value="77" key="DIALOG_X_ORIGIN"/>
 		<item value="437" key="DIALOG_HEIGHT"/>
-		<item value="731" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="true" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="OPK" key="selection"/>
+		<item value="example" key="selection"/>
 		<list key="findhistory">
-			<item value="OPK"/>
-			<item value="bin_type"/>
-			<item value="farm_map"/>
-			<item value="innerRenaming"/>
-			<item value="Iterator"/>
-			<item value="Collector"/>
-			<item value="ictio"/>
-			<item value="iction"/>
+			<item value="example"/>
+			<item value="ORED"/>
+			<item value="PI"/>
+			<item value="IMAP"/>
 		</list>
 		<list key="replacehistory">
-			<item value="Set"/>
-			<item value="Combiner"/>
-			<item value="IteratorDictionary"/>
-			<item value="data"/>
-			<item value="Data"/>
-			<item value="IData"/>
-			<item value="br.ufc.mdcc.common.PartitionStrategy"/>
-			<item value="br.ufc.mdcc.common.Platform"/>
+			<item value="I"/>
+			<item value="In"/>
 		</list>
 	</section>
 </section>

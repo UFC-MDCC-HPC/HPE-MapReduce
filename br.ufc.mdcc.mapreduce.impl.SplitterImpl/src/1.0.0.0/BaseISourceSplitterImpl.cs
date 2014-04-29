@@ -11,15 +11,17 @@ using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
 using br.ufc.mdcc.mapreduce.Splitter;
 using environment.MPIDirect;
+using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { 
 
-public abstract class BaseISourceSplitterImpl<I, IMK, IMV, Sf>: 
-	Synchronizer, BaseISourceSplitter<I, IMK, IMV, Sf>
-where I:IData
-where IMK:IData
-where IMV:IData
-where Sf:ISplitFunction<I, IMK, IMV>
+	public abstract class BaseISourceSplitterImpl<I, IMK, IMV, Sf, Bf>: 
+	Synchronizer, BaseISourceSplitter<I, IMK, IMV, Sf, Bf>
+	where I:IData
+	where IMK:IData
+	where IMV:IData
+	where Sf:ISplitFunction<I, IMK, IMV>
+	where Bf:IPartitionFunction<IMK>
 {
 
 private Sf split_function = default(Sf);
@@ -52,12 +54,12 @@ protected IIterator<IKVPair<IMK, IMV>> Bins {
 	}
 }
 
-private ISourceScatterSplitData<IMK, IMV> send_bins = null;
+		private ISourceScatterSplitData<IMK, IMV, Bf> send_bins = null;
 
-protected ISourceScatterSplitData<IMK, IMV> Send_bins {
+		protected ISourceScatterSplitData<IMK, IMV, Bf> Send_bins {
 	get {
 		if (this.send_bins == null)
-			this.send_bins = (ISourceScatterSplitData<IMK, IMV>) Services.getPort("send_bins");
+					this.send_bins = (ISourceScatterSplitData<IMK, IMV, Bf>) Services.getPort("send_bins");
 		return this.send_bins;
 	}
 }

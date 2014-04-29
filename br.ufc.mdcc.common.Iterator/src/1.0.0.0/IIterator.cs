@@ -3,26 +3,36 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.Iterator { 
 	
-public interface IIterator<T> : IData, BaseIIterator<T>
-where T:IData
-{
+	public interface IIterator<T> : IData, BaseIIterator<T>
+		where T:IData
+	{
+		IIteratorInstance<T> newIteratorInstance();
+		object createItem ();
+
+	} // end main interface 
+
+	public interface IIteratorInstance<T>
+		where T:IData
+	{
 		// consumer:
 
-		T createItem ();
 
 		// - raises exception if has finished
-		void put(T item);
+		void put(object item);
+
+		void putAll(IIteratorInstance<T> items);
 
 		// - raises exception if has finished and not restarted
 		void finish();
 
-	    // producer:
+		// producer:
 
 		// - raises exception if has finished
-		T fetch_next();
+		object fetch_next();
 
 		bool HasFinished { get; }
+	}
 
-} // end main interface 
+
 
 } // end namespace 

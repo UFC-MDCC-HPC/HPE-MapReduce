@@ -1,9 +1,0 @@
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/br.ufc.mdcc.common.IteratorDictionary.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/br.ufc.mdcc.common.IteratorDictionary.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/obj/Debug/br.ufc.mdcc.common.IteratorDictionary.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/obj/Debug/br.ufc.mdcc.common.IteratorDictionary.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/DGAC.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/br.ufc.mdcc.common.Data.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/br.ufc.mdcc.common.Iterator.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.IteratorDictionary/br.ufc.mdcc.common.IteratorDictionary/bin/Debug/br.ufc.mdcc.common.Iterator.dll.mdb

@@ -14,7 +14,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
         where OMK : IData
         where OMV : IData
         where ORV : IData
-        where R : IReduceFunction<ORV, OMK, OMV> {
+        where R : IReduceFunction<OMK, OMV, ORV> {
 
         private IIterator<IKVPair<OMK, IIterator<OMV>>> input = null;
         public IIterator<IKVPair<OMK, IIterator<OMV>>> Input {
@@ -44,12 +44,21 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl {
             }
         }
 
-        private ORV output_item = default(ORV);
-        protected ORV Output_item {
+		private IKVPair<OMK, IIterator<OMV>> input_reduce = null;
+		protected IKVPair<OMK, IIterator<OMV>> Input_reduce {
+			get {
+				if (this.input_reduce == null)
+					this.input_reduce = (IKVPair<OMK, IIterator<OMV>>)Services.getPort("input_reduce");
+				return this.input_reduce;
+			}
+		}
+
+		private ORV output_reduce = default(ORV);
+		protected ORV Output_reduce {
             get {
-                if (this.output_item == null)
-                    this.output_item = (ORV)Services.getPort("output_item");
-                return this.output_item;
+				if (this.output_reduce == null)
+					this.output_reduce = (ORV)Services.getPort("output_reduce");
+				return this.output_reduce;
             }
         }
 

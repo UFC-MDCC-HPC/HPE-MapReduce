@@ -10,10 +10,13 @@ using br.ufc.mdcc.mapreduce.user.CombineFunction;
 
 using environment.MPIDirect;
 
-namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
-    public abstract class BaseITargetCombinerImpl<ORV, O> : Synchronizer, BaseITargetCombiner<ORV, O>
+namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl 
+{
+	public abstract class BaseITargetCombinerImpl<ORV, O, Cf> : Synchronizer, BaseITargetCombiner<ORV, O, Cf>
         where ORV : IData
-        where O : IData {
+        where O : IData
+		where Cf: ICombineFunction<ORV, O> 
+	{
 
         private O target_data = default(O);
         public O Target_data {
@@ -33,11 +36,11 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
             }
         }
 
-        private ICombineFunction<ORV, O> combine_function = default(ICombineFunction<ORV, O>);
-		protected ICombineFunction<ORV, O> Combine_function {
+		private Cf combine_function = default(Cf);
+		protected Cf Combine_function {
             get {
                 if (this.combine_function == null)
-                    this.combine_function = (ICombineFunction<ORV, O>)Services.getPort("combine_function");
+					this.combine_function = (Cf)Services.getPort("combine_function");
                 return this.combine_function;
             }
         }

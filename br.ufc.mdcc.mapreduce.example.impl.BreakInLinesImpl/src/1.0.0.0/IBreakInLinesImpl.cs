@@ -6,6 +6,7 @@ using br.ufc.mdcc.mapreduce.example.BreakInLines;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.String;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl { 
 
@@ -16,16 +17,19 @@ namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl {
 
 		public override void main() 
 		{
-			string s = Input_data.Value;
+			IStringInstance input_data_instance =  (IStringInstance) Input_data.Instance;
+			IIteratorInstance<IKVPair<IInteger,IString>> output_data_instance = (IIteratorInstance<IKVPair<IInteger,IString>>) Output_data.Instance;
 
-			string[] lines = s.Split(new char[] {'\n'});
+			string s = input_data_instance.Value;
+
+			string[] lines = s.Split(new char[] {System.Environment.NewLine[0]});
 			int line_counter = 0;
 			foreach (string line in lines) 
 			{
-				IKVPair<IInteger,IString> line_pair = Output_data.createItem();
-				line_pair.Key.Value = line_counter;
-				line_pair.Value.Value = line;
-				line_counter++;
+				IKVPairInstance<IInteger,IString> line_pair = (IKVPairInstance<IInteger,IString>) Output_data.createItem() ;
+				((IIntegerInstance) line_pair.Key).Value = line_counter++;
+				((IStringInstance) line_pair.Value).Value = line;
+				output_data_instance.put(line_pair);
 			}
 		}
 

@@ -17,7 +17,7 @@
           <externalDependency>MPI</externalDependency>
         </file>
       </sources>
-      <visualDescription h="40" w="80" x="131" y="86">
+      <visualDescription h="40" w="80" x="136" y="88">
         <color b="0" g="165" r="255"/>
       </visualDescription>
       <externalReferences>MPI</externalReferences>

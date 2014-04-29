@@ -56,12 +56,12 @@ protected IMPIDirect Mpi_comm {
 	}
 }
 
-		private IFetchValuesMapper<P,OMK,OMV> fetch_values = null;
+		private IFetchValuesMapper<OMK,OMV,P> fetch_values = null;
 
-		public IFetchValuesMapper<P,OMK,OMV> Fetch_values {
+		public IFetchValuesMapper<OMK,OMV,P> Fetch_values {
 			get {
 				if (this.fetch_values == null)
-					this.fetch_values = (IFetchValuesMapper<P,OMK,OMV>) Services.getPort("fetch_values");
+					this.fetch_values = (IFetchValuesMapper<OMK,OMV,P>) Services.getPort("fetch_values");
 				return this.fetch_values;
 			}
 

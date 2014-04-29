@@ -1,45 +1,38 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000073caa5094a29fcfdf069b87206e4a6038296dc846702aa11a167c41a3eb894f98721bd789dc928812b76d6168b8ffa091200dbf107c2b5dd79655d517b1028a805c53eeb154b9d7ae31d3137465d70fdf5784895237686e2f8fc2f9ddd895ebd2c8e26cd03cb735356b22a6fb768d64ed50df86bee96108f000858feda050a95" isAbstract="false" kind="Computation" name="MapReduceMPIImpl" packagePath="br.ufc.mdcc.mapreduce.impl">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009b4feb5f26b3525daeaf190aaf939b90d37f98bce80d1744e6ff6920f331f1a9c97810a9909ed2315119115ab1c3308ef0e64fd9887e5a334a1deb71e13999d371fe8742365330b4e5e67efbf9e23b01bbe2228478404aac93ea2c178223853e2132d56f6e5686cfb27e7c5a90260b962b6f72101f161389e7dfe87876df0db1" isAbstract="false" kind="Computation" name="MapReduceMPIImpl" packagePath="br.ufc.mdcc.mapreduce.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000817cb950256d33a1df51ca7f01fc16eb199f6ecbaa51fd4746567d2c1d968d8c6d647fe390c7b7b50a31d4aaef59cdbcd693a79a60104fbd5ac8b94c8da0160a3f65af724b646031207e04db36b674f23e4242113c7347ca1b0887bc0e6ec71d408a0e9243b6e74f1332b5c9f50c288c143fde2fdbe59a68e79284c2b9984185" localRef="base" location="br.ufc.mdcc.mapreduce.MapReduce/MapReduce.hpe" name="MapReduce" package="br.ufc.mdcc.mapreduce" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="245" y="249">
+        <visualDescription h="60" w="100" x="288" y="333">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="partition_key_type" varName="OPK"/>
         <parameter formFieldId="reduce_output_type" varName="ORV"/>
         <parameter formFieldId="input_data_key_type" varName="IMK"/>
         <parameter formFieldId="intermediate_data_value_type" varName="OMV"/>
         <parameter formFieldId="reduce_function" varName="Rf"/>
         <parameter formFieldId="intermediate_data_key_type" varName="OMK"/>
-        <parameter formFieldId="output_value_type" varName="ORED"/>
-        <parameter formFieldId="input_data_type" varName="IMAP"/>
+        <parameter formFieldId="input_data_type" varName="In"/>
+        <parameter formFieldId="bin_function" varName="Bf"/>
         <parameter formFieldId="partition_function" varName="Pf"/>
         <parameter formFieldId="platform_type" varName="PLATFORM"/>
         <parameter formFieldId="map_function" varName="Mf"/>
+        <parameter formFieldId="output_type" varName="Out"/>
         <parameter formFieldId="split_function" varName="Sf"/>
+        <parameter formFieldId="combine_function" varName="Cf"/>
         <parameter formFieldId="input_data_value_type" varName="IMV"/>
-        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="45" w="104" x="35" y="103">
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="224" y="65">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
-            <visualDescription h="20" w="20" x="41" y="53"/>
+            <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="partition_mapping" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="47" w="159" x="277" y="407">
-            <color b="255" g="255" r="255"/>
-          </visualDescription>
-          <unitBounds parallel="false" uRef="data">
-            <visualDescription h="20" w="20" x="41" y="53"/>
-          </unitBounds>
-        </port>
-        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="47" w="109" x="567" y="323">
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="198" y="519">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -68,22 +61,22 @@
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="value_type" varName="IMV"/>
-      <parameter formFieldId="input_type" varName="IMAP"/>
+      <parameter formFieldId="input_type" varName="In"/>
       <parameter formFieldId="key_type" varName="IMK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="133" y="427">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="224" y="65">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000db223b24fbafbaf33330864ecc1c104f1a0c0503435b9fe7eb5d4354edada8b168b77818e60fc7200b68a5a5f03dbc0060f10f7ca202c8df0f230183377c1cda65c4f87adceeccaa866ce5f7250c0d2bf3463497eab0be3e55fbf3f990d5d6893dd5e24c6c497f8d7455d616e405fcadcf0f52760a6cf2b0e171143c0f7185ab" localRef="output_data" location="br.ufc.mdcc.common.Set/Set.hpe" multiple="false" name="Set" package="br.ufc.mdcc.common" exposed="true">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="169" x="323" y="434">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1390598664240"/>
-        <unitBounds parallel="false" uRef="set">
+        <parameter formFieldId="item_type" varName="X###332629188"/>
+        <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
@@ -92,34 +85,27 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002348db9a72b5d2aeca968f2613edf0d8af60afefb00066e70ed09bd547f22b3e26b2f0bfe2d1d6ec8d1393e192c076c06426ed9d87ac969a38198e0872c27b08d12b9e88b28f256756d4e23f00298e2edb0bba025c9247f6304b0774c37ee31f2e6596d85e943e9a3b240a4393e20d6926bbcfb1fa7399afb0cf242c9fb2e8c6" localRef="reduce_function" location="br.ufc.mdcc.mapreduce.user.ReduceFunction/ReduceFunction.hpe" multiple="false" name="ReduceFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
-      <visualDescription h="60" w="100" x="267" y="539">
+      <visualDescription h="60" w="100" x="318" y="449">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="input_key_type" varName="OMK"/>
       <parameter formFieldId="input_value_type" varName="OMV"/>
       <parameter formFieldId="output_type" varName="ORV"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="87" y="279">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="244" y="84">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_values" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+      <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="100" x="170" y="453">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="OMV"/>
-        <unitBounds parallel="false" uRef="iterator">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="398" y="432">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
+        <parameter formFieldId="value_type" varName="X###598829575"/>
+        <parameter formFieldId="key_type" varName="OMK"/>
+        <unitBounds parallel="false" uRef="kv_pair">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
@@ -128,20 +114,19 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="partition_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
-      <visualDescription h="60" w="100" x="392" y="516">
+      <visualDescription h="60" w="100" x="313" y="502">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="input_key" varName="OMK"/>
-      <parameter formFieldId="output_partition_key" varName="OPK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="73" y="356">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="228" y="68">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="100" x="168" y="459">
           <color b="255" g="255" r="255"/>
         </visualDescription>
@@ -161,16 +146,16 @@
       <parameter formFieldId="output_item_value_type" varName="OMV"/>
       <parameter formFieldId="input_value_type" varName="IMV"/>
       <parameter formFieldId="output_item_key_type" varName="OMK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="57" y="154">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="203" y="35">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="59" y="275">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="226" y="33">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -181,7 +166,7 @@
         <visualDescription h="69" w="188" x="251" y="439">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1390598664241"/>
+        <parameter formFieldId="item_type" varName="X###1420297183"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -262,20 +247,83 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="split_function" varName="Sf"/>
-    <supplyParameter cRef="partition_function" varName="Pf"/>
-    <supplyParameter cRef="output_value_type" varName="ORED"/>
-    <supplyParameter cRef="reduce_function" varName="Rf"/>
-    <supplyParameter cRef="input_data_type" varName="IMAP"/>
-    <supplyParameter cRef="reduce_output_type" varName="ORV"/>
-    <supplyParameter cRef="intermediate_type_value_type" varName="OMV"/>
-    <supplyParameter cRef="input_data_value_type" varName="IMV"/>
-    <supplyParameter cRef="map_function" varName="Mf"/>
-    <supplyParameter cRef="platform" varName="PLATFORM"/>
-    <supplyParameter cRef="partition_key_type" varName="OPK"/>
-    <supplyParameter cRef="intermediate_type_key_type" varName="OMK"/>
-    <supplyParameter cRef="input_data_key_type" varName="IMK"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1390598664240" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="198" y="519">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003bb8cde9cdaf37a9334c439fcee37e98f23ec8f770a0dd398d69a02afa9b0b6d92cdd358fbef3d31c98c25b423e71aa3f82f5a9fa45c4e07fb936dcdb2d354ac190e6336e4ef093d9066eabb47aae1535f63d42c132b240292498296152c4a2135644a69593f84cc8e1d5d7d6d377e5b296d103e4e1180058b3d3a1aa61d78b4" localRef="combinef" location="br.ufc.mdcc.mapreduce.user.CombineFunction/CombineFunction.hpe" multiple="false" name="CombineFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
+      <visualDescription h="60" w="100" x="154" y="614">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_item_type" varName="ORV"/>
+      <parameter formFieldId="output_type" varName="Out"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="198" y="519">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="169" x="96" y="504">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="ORV"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="combine_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="binf" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
+      <visualDescription h="60" w="100" x="92" y="600">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="input_key" varName="IMK"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="203" y="35">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+        <visualDescription h="60" w="100" x="168" y="459">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="partition_function">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="output_type" direct="true" varName="Out"/>
+    <supplyParameter cRef="split_function" direct="true" varName="Sf"/>
+    <supplyParameter cRef="partition_function" direct="true" varName="Pf"/>
+    <supplyParameter cRef="input_data_type" direct="true" varName="In"/>
+    <supplyParameter cRef="output_value_type" direct="true" varName="ORED"/>
+    <supplyParameter cRef="reduce_function" direct="true" varName="Rf"/>
+    <supplyParameter cRef="reduce_output_type" direct="true" varName="ORV"/>
+    <supplyParameter cRef="intermediate_type_value_type" direct="true" varName="OMV"/>
+    <supplyParameter cRef="input_data_value_type" direct="true" varName="IMV"/>
+    <supplyParameter cRef="map_function" direct="true" varName="Mf"/>
+    <supplyParameter cRef="binf" direct="true" varName="Bf"/>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
+    <supplyParameter cRef="intermediate_type_key_type" direct="true" varName="OMK"/>
+    <supplyParameter cRef="combinef" direct="true" varName="Cf"/>
+    <supplyParameter cRef="input_data_key_type" direct="true" varName="IMK"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###332629188" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="69" w="126" x="362" y="160">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -285,8 +333,18 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1390598664240" varName="X###1390598664240"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1390598664241" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###332629188" varName="X###332629188"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###598829575" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="104" y="364">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="OMV"/>
+      <unitBounds parallel="false" uRef="iterator">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###598829575" varName="X###598829575"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1420297183" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="93" y="410">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -296,8 +354,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1390598664241" varName="X###1390598664241"/>
-    <interface iRef="IManagerImpl" nArgs="8">
+    <supplyParameter cRef="C###1420297183" varName="X###1420297183"/>
+    <interface iRef="IManagerImpl" nArgs="10">
       <slice isRef="farm_map">
         <originRef cRef="farm_map" iRef="IManager"/>
         <visualDescription h="10" w="10" x="63" y="4"/>
@@ -307,7 +365,7 @@
         <visualDescription h="10" w="10" x="103" y="26"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.Shuffler;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public abstract class BaseIManagerImpl&lt;IData, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED>: Computation, BaseIManagerMapReduce&lt;IData, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED>&#xA;where IMAP:IData&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where Sf:ISplitFunction&lt;IData, IMK, IMV>&#xA;where OMK:IData&#xA;where OPK:IData&#xA;where PLATFORM:IPlatform&#xA;where ORED:IData&#xA;{&#xA;&#xA;private IData input_data = null;&#xA;&#xA;public IData Input_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;this.input_data = (IData) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;return this.input_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IData partition_mapping = null;&#xA;&#xA;public IData Partition_mapping {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.partition_mapping == null)&#xA;&#x9;&#x9;&#x9;this.partition_mapping = (IData) Services.getPort(&quot;partition_mapping&quot;);&#xA;&#x9;&#x9;return this.partition_mapping;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IData output_data = null;&#xA;&#xA;public IData Output_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;this.output_data = (IData) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;return this.output_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IManager&lt;ISourceSplitter&lt;IData, IMK, IMV, Sf>, IData, ITargetPartition&lt;OMK, OPK>, IIterator&lt;IKVPair&lt;OMK, OPK>>, PLATFORM> farm_map = null;&#xA;&#xA;protected IManager&lt;ISourceSplitter&lt;IData, IMK, IMV, Sf>, IData, ITargetPartition&lt;OMK, OPK>, IIterator&lt;IKVPair&lt;OMK, OPK>>, PLATFORM> Farm_map {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_map == null)&#xA;&#x9;&#x9;&#x9;this.farm_map = (IManager&lt;ISourceSplitter&lt;IData, IMK, IMV, Sf>, IData, ITargetPartition&lt;OMK, OPK>, IIterator&lt;IKVPair&lt;OMK, OPK>>, PLATFORM>) Services.getPort(&quot;farm_map&quot;);&#xA;&#x9;&#x9;return this.farm_map;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IManager&lt;ISourceShuffler&lt;OMK, OPK>, ITargetCombiner&lt;ORED>, ORED, PLATFORM> farm_reduce = null;&#xA;&#xA;protected IManager&lt;ISourceShuffler&lt;OMK, OPK>, ITargetCombiner&lt;ORED>, ORED, PLATFORM> Farm_reduce {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_reduce == null)&#xA;&#x9;&#x9;&#x9;this.farm_reduce = (IManager&lt;ISourceShuffler&lt;OMK, OPK>, ITargetCombiner&lt;ORED>, ORED, PLATFORM>) Services.getPort(&quot;farm_reduce&quot;);&#xA;&#x9;&#x9;return this.farm_reduce;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIManagerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/BaseIManagerImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.Shuffler;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;&#x9;public abstract class BaseIManagerImpl&lt;In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>: &#xA;&#x9;                             Computation, BaseIManagerMapReduce&lt;In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>&#xA;&#x9;&#x9;where In:IData&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where Sf:ISplitFunction&lt;In, IMK, IMV>&#xA;&#x9;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;&#x9;&#x9;where Cf:ICombineFunction&lt;ORV,Out>&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where ORV:IData&#xA;&#x9;&#x9;where Out:IData&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private In input_data = default(In);&#xA;&#xA;public In Input_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (In) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;return this.input_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IData partition_mapping = null;&#xA;&#xA;public IData Partition_mapping {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.partition_mapping == null)&#xA;&#x9;&#x9;&#x9;this.partition_mapping = (IData) Services.getPort(&quot;partition_mapping&quot;);&#xA;&#x9;&#x9;return this.partition_mapping;&#xA;&#x9;}&#xA;}&#xA;&#xA;private Out output_data = default(Out);&#xA;&#xA;public Out Output_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (Out) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;return this.output_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#x9;private IManager&lt;ISourceSplitter&lt;In, IMK, IMV, Sf, Bf>, In, ITargetPartition&lt;OMK>, IIterator&lt;IKVPair&lt;OMK, IInteger>>, PLATFORM> farm_map = null;&#xA;&#xA;&#x9;&#x9;protected IManager&lt;ISourceSplitter&lt;In, IMK, IMV, Sf, Bf>, In, ITargetPartition&lt;OMK>, IIterator&lt;IKVPair&lt;OMK, IInteger>>, PLATFORM> Farm_map {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_map == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.farm_map = (IManager&lt;ISourceSplitter&lt;In, IMK, IMV, Sf, Bf>, In, ITargetPartition&lt;OMK>, IIterator&lt;IKVPair&lt;OMK, IInteger>>, PLATFORM>) Services.getPort(&quot;farm_map&quot;);&#xA;&#x9;&#x9;return this.farm_map;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#x9;private IManager&lt;ISourceShuffler&lt;OMK>, IIterator&lt;IKVPair&lt;OMK,IInteger>>, ITargetCombiner&lt;ORV, Out, Cf>, Out, PLATFORM> farm_reduce = null;&#xA;&#xA;&#x9;&#x9;protected IManager&lt;ISourceShuffler&lt;OMK>, IIterator&lt;IKVPair&lt;OMK,IInteger>>, ITargetCombiner&lt;ORV, Out, Cf>, Out, PLATFORM> Farm_reduce {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_reduce == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.farm_reduce = (IManager&lt;ISourceShuffler&lt;OMK>, IIterator&lt;IKVPair&lt;OMK,IInteger>>, ITargetCombiner&lt;ORV, Out, Cf>, Out, PLATFORM>) Services.getPort(&quot;farm_reduce&quot;);&#xA;&#x9;&#x9;return this.farm_reduce;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIManagerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/BaseIManagerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/IManager.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/ISourceSplitter.dll</dependency>
@@ -320,7 +378,7 @@
           <dependency>br.ufc.mdcc.mapreduce.Combiner/bin/1.0.0.0/ITargetCombiner.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIManagerMapReduce.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public class IManagerImpl&lt;IData, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED> : BaseIManagerImpl&lt;IData, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED>, IManagerMapReduce&lt;IData, IMK, IMV, Sf, OMK, OPK, PLATFORM, ORED>&#xA;where IMAP:IData&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where Sf:ISplitFunction&lt;IData, IMK, IMV>&#xA;where OMK:IData&#xA;where OPK:IData&#xA;where PLATFORM:IPlatform&#xA;where ORED:IData&#xA;{&#xA;&#xA;public IManagerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;using System.Threading.Tasks;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;&#x9;public class IManagerImpl&lt;In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM> : BaseIManagerImpl&lt;In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>, IManagerMapReduce&lt;In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>&#xA;&#x9;&#x9;where In:IData&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where Sf:ISplitFunction&lt;In, IMK, IMV>&#xA;&#x9;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;&#x9;&#x9;where Cf:ICombineFunction&lt;ORV,Out>&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;&#x9;&#x9;where ORV:IData&#xA;&#x9;&#x9;where Out:IData&#xA;{&#xA;&#xA;&#x9;&#x9;public IManagerImpl() { } &#xA;&#xA;&#x9;public override void main() &#xA;&#x9;{ &#xA;&#x9;&#x9;&#x9;Task farm_map_task = new Task(delegate {this.Farm_map.go();});&#xA;&#x9;&#x9;&#x9;Task farm_reduce_task = new Task(delegate {this.Farm_reduce.go();});&#xA;&#xA;&#x9;&#x9;&#x9;farm_map_task.Start();&#xA;&#x9;&#x9;&#x9;farm_reduce_task.Start();&#xA;&#xA;&#x9;&#x9;&#x9;farm_reduce_task.Wait();&#xA;&#x9;&#x9;&#x9;farm_map_task.Wait();&#x9;&#xA;&#x9;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll</dependency>
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
@@ -331,7 +389,7 @@
       <visualDescription h="40" w="179" x="562" y="51">
         <color b="255" g="0" r="0"/>
       </visualDescription>
-      <port name="input_data">
+      <port name="input">
         <visualDescription h="10" w="10" x="72" y="82"/>
         <slice pRef="input" sRef="farm_map"/>
       </port>
@@ -339,22 +397,24 @@
         <visualDescription h="10" w="10" x="127" y="84"/>
         <slice pRef="output" sRef="farm_map"/>
       </port>
+      <port name="output">
+        <visualDescription h="10" w="10" x="117" y="25"/>
+        <slice pRef="output" sRef="farm_reduce"/>
+      </port>
       <port name="partition_mapping">
         <visualDescription h="10" w="10" x="127" y="84"/>
         <slice pRef="input" sRef="farm_reduce"/>
       </port>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="117" y="25"/>
-        <slice pRef="output" sRef="farm_reduce"/>
-      </port>
-      <parameter iname="IData" order="0" parid="input_data_type" uname="data" varid="IMAP"/>
-      <parameter iname="IData" order="1" parid="input_data_key_type" uname="data" varid="IMK"/>
+      <parameter iname="IData" order="0" parid="input_data_type" uname="data" varid="In"/>
       <parameter iname="IData" order="2" parid="input_data_value_type" uname="data" varid="IMV"/>
-      <parameter iname="ISplitFunction" order="3" parid="split_function" uname="split_function" varid="Sf"/>
-      <parameter iname="IData" order="4" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
-      <parameter iname="IData" order="5" parid="partition_key_type" uname="data" varid="OPK"/>
-      <parameter iname="IPlatform" order="6" parid="platform_type" uname="platform" varid="PLATFORM"/>
-      <parameter iname="IData" order="7" parid="output_value_type" uname="data" varid="ORED"/>
+      <parameter iname="IData" order="1" parid="input_data_key_type" uname="data" varid="IMK"/>
+      <parameter iname="IPartitionFunction" order="7" parid="bin_function" uname="partition_function" varid="Bf"/>
+      <parameter iname="ISplitFunction" order="6" parid="split_function" uname="split_function" varid="Sf"/>
+      <parameter iname="IData" order="3" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IPlatform" order="9" parid="platform_type" uname="platform" varid="PLATFORM"/>
+      <parameter iname="IData" order="5" parid="output_type" uname="data" varid="Out"/>
+      <parameter iname="ICombineFunction" order="8" parid="combine_function" uname="combine_function" varid="Cf"/>
+      <parameter iname="IData" order="4" parid="reduce_output_type" uname="data" varid="ORV"/>
       <action id="main">
         <protocol/>
       </action>
@@ -365,7 +425,7 @@
         <visualDescription h="10" w="10" x="15" y="43"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using br.ufc.mdcc.mapreduce.Shuffler;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;using br.ufc.mdcc.mapreduce.Reducer;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KMVPair;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public abstract class BaseIReduceWorkerImpl&lt;OMK, ORV, Rf, OMV, PLATFORM>: Computation, BaseIReduceWorker&lt;OMK, ORV, Rf, OMV, PLATFORM>&#xA;where OMK:IData&#xA;where ORV:IData&#xA;where Rf:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where OMV:IData&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private IWorker&lt;ITargetShuffler&lt;OMK, IData>, ISourceCombiner&lt;ORV>, IReducer&lt;OMK, IData, ORV, Rf>, IIterator&lt;IKMVPair&lt;OMK>>, IIterator&lt;ORV>, PLATFORM> farm_reduce = null;&#xA;&#xA;protected IWorker&lt;ITargetShuffler&lt;OMK, IData>, ISourceCombiner&lt;ORV>, IReducer&lt;OMK, IData, ORV, Rf>, IIterator&lt;IKMVPair&lt;OMK>>, IIterator&lt;ORV>, PLATFORM> Farm_reduce {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_reduce == null)&#xA;&#x9;&#x9;&#x9;this.farm_reduce = (IWorker&lt;ITargetShuffler&lt;OMK, IData>, ISourceCombiner&lt;ORV>, IReducer&lt;OMK, IData, ORV, Rf>, IIterator&lt;IKMVPair&lt;OMK>>, IIterator&lt;ORV>, PLATFORM>) Services.getPort(&quot;farm_reduce&quot;);&#xA;&#x9;&#x9;return this.farm_reduce;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIReduceWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/BaseIReduceWorkerImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using br.ufc.mdcc.mapreduce.Shuffler;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Combiner;&#xA;using br.ufc.mdcc.mapreduce.Reducer;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;&#x9;public abstract class BaseIReduceWorkerImpl&lt;OMK, OMV, ORV, Rf, PLATFORM>: Computation, BaseIReduceWorker&lt;OMK, OMV, ORV, Rf, PLATFORM>&#xA;&#x9;where OMK:IData&#xA;&#x9;where ORV:IData&#xA;&#x9;where Rf:IReduceFunction&lt;OMK,OMV,ORV>&#xA;&#x9;where OMV:IData&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;&#x9;private IWorker&lt;ITargetShuffler&lt;OMK, OMV>,  &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;    IIterator&lt;IKVPair&lt;OMK,IIterator&lt;OMV>>>,  &#xA;&#x9;&#x9;&#x9;                ISourceCombiner&lt;ORV>, &#xA;&#x9;&#x9;&#x9;                IIterator&lt;ORV>, &#xA;&#x9;&#x9;&#x9;                IReducer&lt;OMK, OMV, ORV, Rf>,&#xA;&#x9;&#x9;&#x9;                PLATFORM> farm_reduce = null;&#xA;&#xA;&#x9;&#x9;&#x9;protected IWorker&lt;ITargetShuffler&lt;OMK, OMV>,  IIterator&lt;IKVPair&lt;OMK,IIterator&lt;OMV>>>,  ISourceCombiner&lt;ORV>, IIterator&lt;ORV>, IReducer&lt;OMK, OMV, ORV, Rf>,PLATFORM> Farm_reduce {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.farm_reduce == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;this.farm_reduce = (IWorker&lt;ITargetShuffler&lt;OMK, OMV>,  IIterator&lt;IKVPair&lt;OMK,IIterator&lt;OMV>>>,  ISourceCombiner&lt;ORV>, IIterator&lt;ORV>, IReducer&lt;OMK, OMV, ORV, Rf>,PLATFORM>) Services.getPort(&quot;farm_reduce&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.farm_reduce;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIReduceWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/BaseIReduceWorkerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/IWorker.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Shuffler/bin/1.0.0.0/ITargetShuffler.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
@@ -377,7 +437,7 @@
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIReduceWorker.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public class IReduceWorkerImpl&lt;OMK, ORV, Rf, OMV, PLATFORM> : BaseIReduceWorkerImpl&lt;OMK, ORV, Rf, OMV, PLATFORM>, IReduceWorker&lt;OMK, ORV, Rf, OMV, PLATFORM>&#xA;where OMK:IData&#xA;where ORV:IData&#xA;where Rf:IReduceFunction&lt;ORV, OMK, OMV>&#xA;where OMV:IData&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public IReduceWorkerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IReduceWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/IReduceWorkerImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.ReduceFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;&#x9;public class IReduceWorkerImpl&lt;OMK, OMV, ORV, Rf, PLATFORM> : BaseIReduceWorkerImpl&lt;OMK, OMV, ORV, Rf, PLATFORM>, IReduceWorker&lt;OMK, OMV, ORV, Rf, PLATFORM>&#xA;&#x9;&#x9;where OMK:IData&#xA;&#x9;&#x9;where ORV:IData&#xA;&#x9;&#x9;where Rf:IReduceFunction&lt;OMK, OMV, ORV>&#xA;&#x9;&#x9;where OMV:IData&#xA;&#x9;&#x9;where PLATFORM:IPlatform&#xA;&#x9;&#x9;{&#xA;&#xA;&#x9;&#x9;&#x9;public IReduceWorkerImpl() { } &#xA;&#xA;&#x9;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;&#x9;Farm_reduce.go();&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IReduceWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/IReduceWorkerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll</dependency>
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
@@ -385,25 +445,25 @@
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IReduceWorker.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="82" w="168" x="400" y="493">
+      <visualDescription h="82" w="168" x="406" y="430">
         <color b="0" g="0" r="255"/>
       </visualDescription>
+      <parameter iname="IData" order="1" parid="intermediate_data_value_type" uname="data" varid="OMV"/>
       <parameter iname="IData" order="0" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
-      <parameter iname="IData" order="1" parid="reduce_output_type" uname="data" varid="ORV"/>
-      <parameter iname="IReduceFunction" order="2" parid="reduce_function" uname="reduce_function" varid="Rf"/>
-      <parameter iname="IData" order="3" parid="intermediate_data_value_type" uname="data" varid="OMV"/>
+      <parameter iname="IData" order="2" parid="reduce_output_type" uname="data" varid="ORV"/>
+      <parameter iname="IReduceFunction" order="3" parid="reduce_function" uname="reduce_function" varid="Rf"/>
       <parameter iname="IPlatform" order="4" parid="platform_type" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
-    <interface iRef="IMapWorkerImpl" nArgs="8">
+    <interface iRef="IMapWorkerImpl" nArgs="7">
       <slice isRef="farm_map">
         <originRef cRef="farm_map" iRef="IWorker"/>
         <visualDescription h="10" w="10" x="74" y="39"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.Mapper;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public abstract class BaseIMapWorkerImpl&lt;IMK, IMV, OMK, OMV, OPK, Pf, Mf, PLATFORM>: Computation, BaseIMapWorker&lt;IMK, IMV, OMK, OMV, OPK, Pf, Mf, PLATFORM>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where OPK:IData&#xA;where Pf:IPartitionFunction&lt;OMK, OPK>&#xA;where Mf:IMapFunction&lt;IMK, IMV, OMK, OMV>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private IWorker&lt;ITargetSplitter&lt;IMK, IMV>, ISourcePartition&lt;OMK, OMV, OPK, Pf>, IIterator&lt;IKVPair&lt;OMK, OMV>>, IMapper&lt;IMK, IMV, OMK, OMV, Mf>, IIterator&lt;IKVPair&lt;IMK, IMV>>, PLATFORM> farm_map = null;&#xA;&#xA;protected IWorker&lt;ITargetSplitter&lt;IMK, IMV>, ISourcePartition&lt;OMK, OMV, OPK, Pf>, IIterator&lt;IKVPair&lt;OMK, OMV>>, IMapper&lt;IMK, IMV, OMK, OMV, Mf>, IIterator&lt;IKVPair&lt;IMK, IMV>>, PLATFORM> Farm_map {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_map == null)&#xA;&#x9;&#x9;&#x9;this.farm_map = (IWorker&lt;ITargetSplitter&lt;IMK, IMV>, ISourcePartition&lt;OMK, OMV, OPK, Pf>, IIterator&lt;IKVPair&lt;OMK, OMV>>, IMapper&lt;IMK, IMV, OMK, OMV, Mf>, IIterator&lt;IKVPair&lt;IMK, IMV>>, PLATFORM>) Services.getPort(&quot;farm_map&quot;);&#xA;&#x9;&#x9;return this.farm_map;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;abstract public int go(); &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIMapWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/BaseIMapWorkerImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.Partitioner;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.Mapper;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public abstract class BaseIMapWorkerImpl&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM>: Computation, BaseIMapWorker&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where Pf:IPartitionFunction&lt;OMK>&#xA;where Mf:IMapFunction&lt;IMK, IMV, OMK, OMV>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;&#x9;private IWorker&lt;ITargetSplitter&lt;IMK, IMV>, IIterator&lt;IKVPair&lt;IMK, IMV>>, ISourcePartition&lt;OMK, OMV, Pf>, IIterator&lt;IKVPair&lt;OMK, OMV>>, IMapper&lt;IMK, IMV, OMK, OMV, Mf>, PLATFORM> farm_map = null;&#xA;&#xA;&#x9;&#x9;protected IWorker&lt;ITargetSplitter&lt;IMK, IMV>, IIterator&lt;IKVPair&lt;IMK, IMV>>, ISourcePartition&lt;OMK, OMV, Pf>, IIterator&lt;IKVPair&lt;OMK, OMV>>, IMapper&lt;IMK, IMV, OMK, OMV, Mf>, PLATFORM> Farm_map {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.farm_map == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.farm_map = (IWorker&lt;ITargetSplitter&lt;IMK, IMV>, IIterator&lt;IKVPair&lt;IMK, IMV>>, ISourcePartition&lt;OMK, OMV, Pf>, IIterator&lt;IKVPair&lt;OMK, OMV>>, IMapper&lt;IMK, IMV, OMK, OMV, Mf>, PLATFORM>) Services.getPort(&quot;farm_map&quot;);&#xA;&#x9;&#x9;return this.farm_map;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIMapWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/BaseIMapWorkerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/IWorker.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/ITargetSplitter.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
@@ -416,7 +476,7 @@
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/BaseIMapWorker.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public class IMapWorkerImpl&lt;IMK, IMV, OMK, OMV, OPK, Pf, Mf, PLATFORM> : BaseIMapWorkerImpl&lt;IMK, IMV, OMK, OMV, OPK, Pf, Mf, PLATFORM>, IMapWorker&lt;IMK, IMV, OMK, OMV, OPK, Pf, Mf, PLATFORM>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where OPK:IData&#xA;where Pf:IPartitionFunction&lt;OMK, OPK>&#xA;where Mf:IMapFunction&lt;IMK, IMV, OMK, OMV>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public IMapWorkerImpl() { &#xA;&#xA;} &#xA;&#xA;public override int go() { &#xA;&#xA;&#x9; return 0&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IMapWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/IMapWorkerImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { &#xA;&#xA;public class IMapWorkerImpl&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM> : BaseIMapWorkerImpl&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM>, IMapWorker&lt;IMK, IMV, OMK, OMV, Pf, Mf, PLATFORM>&#xA;where IMK:IData&#xA;where IMV:IData&#xA;where OMK:IData&#xA;where OMV:IData&#xA;where Pf:IPartitionFunction&lt;OMK>&#xA;where Mf:IMapFunction&lt;IMK, IMV, OMK, OMV>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;&#x9;public IMapWorkerImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;Farm_map.go();&#xA;&#x9;&#x9;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IMapWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/bin/1.0.0.0/IMapWorkerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.MapFunction/bin/1.0.0.0/IMapFunction.dll</dependency>
@@ -425,17 +485,16 @@
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="120" w="177" x="59" y="354">
+      <visualDescription h="120" w="177" x="16" y="326">
         <color b="0" g="0" r="255"/>
       </visualDescription>
-      <parameter iname="IData" order="0" parid="input_data_key_type" uname="data" varid="IMK"/>
       <parameter iname="IData" order="1" parid="input_data_value_type" uname="data" varid="IMV"/>
-      <parameter iname="IData" order="2" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IData" order="0" parid="input_data_key_type" uname="data" varid="IMK"/>
       <parameter iname="IData" order="3" parid="intermediate_data_value_type" uname="data" varid="OMV"/>
-      <parameter iname="IData" order="4" parid="partition_key_type" uname="data" varid="OPK"/>
-      <parameter iname="IPartitionFunction" order="5" parid="partition_function" uname="partition_function" varid="Pf"/>
-      <parameter iname="IMapFunction" order="6" parid="map_function" uname="map_function" varid="Mf"/>
-      <parameter iname="IPlatform" order="7" parid="platform_type" uname="platform" varid="PLATFORM"/>
+      <parameter iname="IData" order="2" parid="intermediate_data_key_type" uname="data" varid="OMK"/>
+      <parameter iname="IPartitionFunction" order="4" parid="partition_function" uname="partition_function" varid="Pf"/>
+      <parameter iname="IMapFunction" order="5" parid="map_function" uname="map_function" varid="Mf"/>
+      <parameter iname="IPlatform" order="6" parid="platform_type" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>
       </action>
@@ -450,7 +509,7 @@
     </unit>
     <unit iRef="IMapWorkerImpl" multiple="true" private="false" replica="0" uRef="map_worker" visibleInterface="true">
       <super cRef="base" uRef="map_worker"/>
-      <visualDescription h="53" w="121" x="22" y="245"/>
+      <visualDescription h="53" w="121" x="19" y="223"/>
     </unit>
   </componentInfo>
 </component:component>

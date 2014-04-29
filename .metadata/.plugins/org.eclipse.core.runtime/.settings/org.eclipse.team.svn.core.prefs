@@ -1,5 +1,5 @@
-#Fri Jan 31 22:53:49 BRT 2014
+#Fri Mar 21 08:30:10 BRT 2014
 eclipse.preferences.version=1
+repositories/002d3304ecb000131839c32a19fd73a6=002d3304ecb000131839c32a19fd73a6;https\://npb-for-hpe.googlecode.com/svn;https\://npb-for-hpe.googlecode.com/svn;branches;tags;trunk;true;03cb578e-1fec-11de-a108-cd2f117ce590;https\://npb-for-hpe.googlecode.com/svn;;false;;;0
 externalMigrateFromAuthorizationDatabase/isMigrated=true
-repositories/b0865aace38a0013127aaaabc0a32834=b0865aace38a0013127aaaabc0a32834;https\://npb-for-hpe.googlecode.com/svn;https\://npb-for-hpe.googlecode.com/svn;branches;tags;trunk;true;03cb578e-1fec-11de-a108-cd2f117ce590;https\://npb-for-hpe.googlecode.com/svn;;false;;;0
 migrateFromAuthorizationDatabase/isMigrated=true

@@ -17,23 +17,28 @@ using br.ufc.mdcc.mapreduce.MapReduce;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { 
 
-public abstract class BaseIReduceWorkerImpl<OMK, ORV, Rf, OMV, PLATFORM>: Computation, BaseIReduceWorker<OMK, ORV, Rf, OMV, PLATFORM>
-where OMK:IData
-where ORV:IData
-where Rf:IReduceFunction<ORV, OMK, OMV>
-where OMV:IData
-where PLATFORM:IPlatform
-{
+	public abstract class BaseIReduceWorkerImpl<OMK, OMV, ORV, Rf, PLATFORM>: Computation, BaseIReduceWorker<OMK, OMV, ORV, Rf, PLATFORM>
+	where OMK:IData
+	where ORV:IData
+	where Rf:IReduceFunction<OMK,OMV,ORV>
+	where OMV:IData
+	where PLATFORM:IPlatform
+	{
 
-		private IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> farm_reduce = null;
+			private IWorker<ITargetShuffler<OMK, OMV>,  
+						    IIterator<IKVPair<OMK,IIterator<OMV>>>,  
+			                ISourceCombiner<ORV>, 
+			                IIterator<ORV>, 
+			                IReducer<OMK, OMV, ORV, Rf>,
+			                PLATFORM> farm_reduce = null;
 
-		protected IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> Farm_reduce {
-	get {
-		if (this.farm_reduce == null)
-					this.farm_reduce = (IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM>) Services.getPort("farm_reduce");
-		return this.farm_reduce;
+			protected IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM> Farm_reduce {
+			get {
+				if (this.farm_reduce == null)
+							this.farm_reduce = (IWorker<ITargetShuffler<OMK, OMV>,  IIterator<IKVPair<OMK,IIterator<OMV>>>,  ISourceCombiner<ORV>, IIterator<ORV>, IReducer<OMK, OMV, ORV, Rf>,PLATFORM>) Services.getPort("farm_reduce");
+				return this.farm_reduce;
+			}
 	}
-}
 
 
 

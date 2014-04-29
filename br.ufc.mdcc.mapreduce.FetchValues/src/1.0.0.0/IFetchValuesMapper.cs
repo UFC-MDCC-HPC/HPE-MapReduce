@@ -5,7 +5,7 @@ using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.FetchValues { 
 
-	public interface IFetchValuesMapper<P,OMK,OMV> : BaseIFetchValuesMapper<P,OMK,OMV>
+	public interface IFetchValuesMapper<OMK,OMV,P> : BaseIFetchValuesMapper<OMK,OMV,P>
 		where OMK:IData
 		where OMV:IData
 		where P:IPartitionFunction<OMK>

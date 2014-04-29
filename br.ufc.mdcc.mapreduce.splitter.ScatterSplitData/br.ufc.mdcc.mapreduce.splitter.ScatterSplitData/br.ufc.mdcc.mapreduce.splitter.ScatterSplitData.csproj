@@ -65,5 +65,9 @@
       <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
       <Name>br.ufc.mdcc.common.KVPair</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
+      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

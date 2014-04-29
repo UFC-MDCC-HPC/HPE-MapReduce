@@ -7,6 +7,7 @@ using br.ufc.mdcc.mapreduce.example.CountWordsApp;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl { 
 
@@ -18,15 +19,16 @@ namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl {
 
 		public override void main() 
 		{			 
-			Input_data.Value = readInput();
+			((IStringInstance)Input_data.Instance).Value = readInput();
+			IIteratorInstance<IKVPair<IString,IInteger>> output_data_instance = (IIteratorInstance<IKVPair<IString,IInteger>> ) Output_data.Instance;
 
 			Count_words.go();
 
-			while (!Output_data.HasFinished) 
+			while (!output_data_instance.HasFinished) 
 			{
-				IKVPair<IString,IInteger> word = Output_data.fetch_next();
-				Console.Out.Write (word.Key + ":");
-				Console.Out.WriteLine (word.Value);
+				IKVPairInstance<IString,IInteger> word = (IKVPairInstance<IString,IInteger>) output_data_instance.fetch_next();
+				Console.Out.Write (((IStringInstance)word.Key).Value + ":");
+				Console.Out.WriteLine (((IIntegerInstance)word.Value).Value);
 			}
 
 		}

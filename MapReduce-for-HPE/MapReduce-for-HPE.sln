@@ -114,6 +114,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl", "..\br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl\br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl\br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl.csproj", "{E9291557-38EA-449C-AF14-483A7EEB2AEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.impl.NullPlatform", "..\br.ufc.mdcc.common.impl.NullPlatform\br.ufc.mdcc.common.impl.NullPlatform\br.ufc.mdcc.common.impl.NullPlatform.csproj", "{B940A4DA-1B89-478E-AC4B-CA0AEDC5DF90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -264,6 +266,10 @@ Global
 		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Debug|x86.Build.0 = Debug|Any CPU
 		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Release|x86.ActiveCfg = Release|Any CPU
 		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Release|x86.Build.0 = Release|Any CPU
+		{B940A4DA-1B89-478E-AC4B-CA0AEDC5DF90}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B940A4DA-1B89-478E-AC4B-CA0AEDC5DF90}.Debug|x86.Build.0 = Debug|Any CPU
+		{B940A4DA-1B89-478E-AC4B-CA0AEDC5DF90}.Release|x86.ActiveCfg = Release|Any CPU
+		{B940A4DA-1B89-478E-AC4B-CA0AEDC5DF90}.Release|x86.Build.0 = Release|Any CPU
 		{B96059D9-68BC-45A8-9CAD-B69B3F513EF0}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{B96059D9-68BC-45A8-9CAD-B69B3F513EF0}.Debug|x86.Build.0 = Debug|Any CPU
 		{B96059D9-68BC-45A8-9CAD-B69B3F513EF0}.Release|x86.ActiveCfg = Release|Any CPU

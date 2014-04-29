@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { 
 
-	public class IManagerImpl<In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM> : BaseIManagerImpl<In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM>, IManagerMapReduce<In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM>
+	public class IManagerImpl<In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM> : BaseIManagerImpl<In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>, IManagerMapReduce<In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>
 		where In:IData
 		where IMK:IData
 		where IMV:IData

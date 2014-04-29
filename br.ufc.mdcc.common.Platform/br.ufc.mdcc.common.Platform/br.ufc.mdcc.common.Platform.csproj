@@ -10,7 +10,7 @@
     <RootNamespace>br.ufc.mdcc.common.Platform</RootNamespace>
     <AssemblyName>br.ufc.mdcc.common.Platform</AssemblyName>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\br.ufc.mdcc.common.PutItemIntoStream\PutItemIntoStream.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\Platform.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="DGAC">
-      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\hash-programming-environment\bin\DGAC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

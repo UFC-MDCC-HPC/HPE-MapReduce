@@ -7,13 +7,13 @@ using br.ufc.mdcc.common.KVPair;
 
 namespace br.ufc.mdcc.mapreduce.user.SplitFunction { 
 
-	public interface BaseISplitFunction<I, IMK, IMV> : IComputationKind 
-		where I:IData
+	public interface BaseISplitFunction<IMAP, IMK, IMV> : IComputationKind 
+		where IMAP:IData
 		where IMK:IData
 		where IMV:IData
 {
 
-		I Input_data {get;}
+		IMAP Input_data {get;}
 		IIterator<IKVPair<IMK,IMV>> Output_data {get;}
 
 

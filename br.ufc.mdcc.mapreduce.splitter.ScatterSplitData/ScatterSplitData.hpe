@@ -7,6 +7,9 @@
     </visualAttributes>
   </header>
   <componentInfo>
+    <parameter componentRef="item_key_type" formFieldId="item_key_type" order="0" varName="IMK"/>
+    <parameter componentRef="item_value_type" formFieldId="item_value_type" order="1" varName="IMV"/>
+    <parameter componentRef="bin_function" formFieldId="bin_function" order="2" varName="Bf"/>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="target_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="true" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="93" w="130" x="317" y="482">
         <color b="255" g="255" r="255"/>
@@ -38,28 +41,12 @@
       </visualDescription>
       <parameter formFieldId="value_type" varName="IMV"/>
       <parameter formFieldId="key_type" varName="IMK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="148" y="444">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="308" y="410">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="bins" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="99" w="176" x="86" y="346">
+      <visualDescription h="99" w="176" x="83" y="353">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="item_type" varName="B"/>
@@ -73,22 +60,6 @@
       </visualDescription>
       <parameter formFieldId="value_type" varName="IMV"/>
       <parameter formFieldId="key_type" varName="IMK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="148" y="444">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="308" y="410">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
@@ -97,11 +68,11 @@
       <visualDescription h="60" w="100" x="281" y="300">
         <color b="240" g="32" r="160"/>
       </visualDescription>
-      <unitBounds parallel="false" replica="0" uRef="mpi">
-        <visualDescription h="20" w="20" x="13" y="2"/>
+      <unitBounds parallel="false" slice_replica="0" unit_replica="0" uRef="mpi">
+        <visualDescription h="20" w="20" x="19" y="25"/>
       </unitBounds>
-      <unitBounds parallel="true" replica="1" uRef="mpi">
-        <visualDescription h="20" w="20" x="57" y="4"/>
+      <unitBounds parallel="true" slice_replica="1" unit_replica="0" uRef="mpi">
+        <visualDescription h="20" w="20" x="60" y="21"/>
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="bin_function" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" parameter_id="bin_function" exposed="false">
@@ -110,14 +81,14 @@
       </visualDescription>
       <parameter formFieldId="input_key" varName="IMK"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_key" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="100" x="158" y="105">
+        <visualDescription h="60" w="100" x="145" y="101">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000eba667eec4f234a1ce55ec2ce431855c19b971f281bd045f4f983e5cfd2466ef5399122a4845f7a4c77d8ef34ffa511ade82cd65b19770a16be72d637369333e229f2128a3b478fe386a382c545147589ebefa5502ad3a65afc567d9abadd418bab28da49342cdc07db13278b2cd0946cc1c0e02aef80dd76b54cc8b52d68c99" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="output_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
         <visualDescription h="60" w="100" x="351" y="60">
           <color b="255" g="255" r="255"/>
         </visualDescription>
@@ -129,14 +100,11 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="bin_type" varName="B"/>
-    <supplyParameter cRef="kv_pair" varName="T2"/>
-    <parameter componentRef="item_key_type" formFieldId="item_key_type" varName="IMK"/>
-    <parameter componentRef="item_value_type" formFieldId="item_value_type" varName="IMV"/>
-    <parameter componentRef="bin_function" formFieldId="bin_function" varName="Bf"/>
+    <supplyParameter cRef="bin_type" direct="true" varName="B"/>
+    <supplyParameter cRef="kv_pair" direct="true" varName="T2"/>
     <innerRenaming cNewName="key" cOldName="input_key" cRef="bin_function"/>
     <innerRenaming cNewName="rank" cOldName="output_key" cRef="bin_function"/>
-    <interface iRef="ISourceScatterSplitData" nArgs="2">
+    <interface iRef="ISourceScatterSplitData" nArgs="3">
       <slice isRef="bins">
         <originRef cRef="bins" iRef="IIterator"/>
         <visualDescription h="10" w="10" x="69" y="21"/>
@@ -150,12 +118,12 @@
         <visualDescription h="10" w="10" x="62" y="6"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.splitter.ScatterSplitData { &#xA;&#xA;&#x9;public interface BaseISourceScatterSplitData&lt;IMK,IMV> : ISynchronizerKind &#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;{&#xA;&#xA;&#x9;&#x9;IIterator&lt;IKVPair&lt;IMK,IMV>> Bins {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISourceScatterSplitData.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/BaseISourceScatterSplitData.dll" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.splitter.ScatterSplitData { &#xA;&#xA;&#x9;public interface BaseISourceScatterSplitData&lt;IMK,IMV,Bf> : ISynchronizerKind &#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;{&#xA;&#xA;&#x9;&#x9;IIterator&lt;IKVPair&lt;IMK,IMV>> Bins {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISourceScatterSplitData.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/BaseISourceScatterSplitData.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Set/bin/1.0.0.0/ISet.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
         </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.splitter.ScatterSplitData { &#xA;&#xA;&#x9;public interface ISourceScatterSplitData&lt;IMK,IMV> : BaseISourceScatterSplitData&lt;IMK,IMV>&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;{&#xA;&#xA;&#xA;&#x9;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ISourceScatterSplitData.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/ISourceScatterSplitData.dll" versionId="1.0.0.0">
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.splitter.ScatterSplitData { &#xA;&#xA;&#x9;public interface ISourceScatterSplitData&lt;IMK,IMV,Bf> : BaseISourceScatterSplitData&lt;IMK,IMV,Bf>&#xA;&#x9;&#x9;where IMK:IData&#xA;&#x9;&#x9;where IMV:IData&#xA;&#x9;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;&#x9;{&#xA;&#xA;&#xA;&#x9;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ISourceScatterSplitData.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/ISourceScatterSplitData.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/BaseISourceScatterSplitData.dll</dependency>
         </file>
@@ -175,13 +143,14 @@
         <visualDescription h="10" w="10" x="8" y="22"/>
         <slice pRef="output_key" sRef="bin_function"/>
       </port>
-      <parameter iname="IPartitionFunction" order="0" parid="bin_function" uname="partition_function" varid="Bf"/>
-      <parameter iname="IData" order="1" parid="item_key_type" uname="data" varid="IMK"/>
+      <parameter iname="IData" order="1" parid="item_value_type" uname="data" varid="IMV"/>
+      <parameter iname="IData" order="0" parid="item_key_type" uname="data" varid="IMK"/>
+      <parameter iname="IPartitionFunction" order="2" parid="bin_function" uname="partition_function" varid="Bf"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
-    <interface iRef="ITargetScatterSplitData" nArgs="0">
+    <interface iRef="ITargetScatterSplitData" nArgs="2">
       <slice isRef="target_data">
         <originRef cRef="target_data" iRef="IIterator"/>
         <visualDescription h="10" w="10" x="23" y="27"/>
@@ -206,24 +175,26 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="target_data" sRef="target_data"/>
       </port>
+      <parameter iname="IData" order="1" parid="item_value_type" uname="data" varid="IMV"/>
+      <parameter iname="IData" order="0" parid="item_key_type" uname="data" varid="IMK"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
     <unit iRef="ISourceScatterSplitData" multiple="false" private="false" replica="0" uRef="source" visibleInterface="true">
-      <slices cRef="rank" replica="0" uRef="data" sliceName="rank" transitive="true">
+      <slices cRef="rank" slice_replica="0" uRef="data" sliceName="rank" transitive="true">
         <visualDescription h="10" w="10" x="147" y="28"/>
       </slices>
-      <slices cRef="bins" replica="0" uRef="iterator" sliceName="bins" transitive="false">
+      <slices cRef="bins" slice_replica="0" uRef="iterator" sliceName="bins" transitive="false">
         <visualDescription h="10" w="10" x="69" y="21"/>
       </slices>
-      <slices cRef="key" replica="0" uRef="data" sliceName="key" transitive="true">
+      <slices cRef="key" slice_replica="0" uRef="data" sliceName="key" transitive="true">
         <visualDescription h="10" w="10" x="12" y="6"/>
       </slices>
-      <slices cRef="mpi_comm" replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="43" y="22"/>
       </slices>
-      <slices cRef="bin_function" replica="0" uRef="partition_function" sliceName="bin_function" transitive="false">
+      <slices cRef="bin_function" slice_replica="0" uRef="partition_function" sliceName="bin_function" transitive="false">
         <visualDescription h="10" w="10" x="62" y="6"/>
         <port>rank</port>
         <port>key</port>
@@ -231,10 +202,10 @@
       <visualDescription h="40" w="80" x="62" y="233"/>
     </unit>
     <unit iRef="ITargetScatterSplitData" multiple="true" private="false" replica="0" uRef="target" visibleInterface="true">
-      <slices cRef="target_data" replica="0" uRef="iterator" sliceName="target_data" transitive="false">
+      <slices cRef="target_data" slice_replica="0" uRef="iterator" sliceName="target_data" transitive="false">
         <visualDescription h="10" w="10" x="23" y="27"/>
       </slices>
-      <slices cRef="mpi_comm" replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="3" y="20"/>
       </slices>
       <visualDescription h="40" w="80" x="421" y="203"/>

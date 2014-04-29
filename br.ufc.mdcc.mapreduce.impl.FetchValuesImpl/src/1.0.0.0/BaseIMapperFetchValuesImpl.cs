@@ -14,7 +14,7 @@ using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl { 
 
-	public abstract class BaseIMapperFetchValuesImpl<P,OMK,OMV>: Synchronizer, BaseIFetchValuesMapper<P,OMK,OMV>
+	public abstract class BaseIMapperFetchValuesImpl<OMK,OMV,P>: Synchronizer, BaseIFetchValuesMapper<OMK,OMV,P>
 		where OMK:IData
 		where OMV:IData
 		where P:IPartitionFunction<OMK>

@@ -5,6 +5,7 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
+
 namespace br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionIntegerKeyDefault { 
 
 	public class IPartitionIntegerKeyDefaultImpl<OMK> : BaseIPartitionIntegerKeyDefaultImpl<OMK>, IPartitionFunction<OMK>
@@ -20,8 +21,14 @@ namespace br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionIntegerKeyDefault {
 
 		public override void main() 
 		{ 
-			int value = Input_key.Value;
-			Output_key.Value = value % NumberOfPartitions;
+			IIntegerInstance input_string_instance = (IIntegerInstance) Input_key.Instance;
+			IIntegerInstance output_string_instance = (IIntegerInstance) Output_key.Instance;
+
+			int value = (int) input_string_instance.Value;
+
+			output_string_instance.Value = value % NumberOfPartitions;
+
+
 		}
 	}
 

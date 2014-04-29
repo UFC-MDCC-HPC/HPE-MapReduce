@@ -12,13 +12,15 @@
         <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Partitioner/src/1.0.0.0/BaseISourcePartition.cs"/>
       </sources>
       <references>
+        <include name="br.ufc.mdcc.mapreduce.FetchValues/bin/1.0.0.0/IFetchValuesMapper.dll"/>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
-        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IInterator.dll"/>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll"/>
+        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
+        <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll"/>
-        <include name="br.ufc.mdcc.farm.Gather/bin/1.0.0.0/BaseISource.dll"/>
+        <include name="br.ufc.mdcc.farm.Gather/bin/1.0.0.0/BaseIGatherSource.dll"/>
         <include/>
       </references>
     </csc>
@@ -30,7 +32,7 @@
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll"/>
         <include name="/br.ufc.mdcc.mapreduce.Partitioner/bin/1.0.0.0/BaseISourcePartition.dll"/>
-        <include name="br.ufc.mdcc.farm.Gather/bin/1.0.0.0/ISource.dll"/>
+        <include name="br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherSource.dll"/>
         <include/>
       </references>
     </csc>

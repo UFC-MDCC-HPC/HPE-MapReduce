@@ -3,39 +3,50 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.String;
+using System.Collections.Generic;
 
 namespace br.ufc.mdcc.common.impl.StringImpl { 
 
 	public class IStringImpl : BaseIStringImpl, IString
-{
+	{
 
-public IStringImpl() { 
+		public IStringImpl() { 		} 
 
-} 
-
-		private string value_ = null;
-
-		public string Value { 
-			get { return value_;  }
-			set { value_ = value; }
-		}
-
-		public void loadFrom (br.ufc.mdcc.common.Data.IData o)
+		public IStringInstance newInstance (string s)
 		{
-			IString s = (IString) o;
-			this.Value = s.Value;
+			IStringInstance instance = (IStringInstance)newInstance ();
+			instance.Value = s;
+			return instance;
 		}
-		public br.ufc.mdcc.common.Data.IData newInstance ()
+
+		public object newInstance ()
 		{
-			IString s = new IStringImpl();
-			return s;
+			this.instance = new IStringInstanceImpl ();
+			return this.Instance;
 		}
-		public br.ufc.mdcc.common.Data.IData clone ()
-		{
-			IString s = new IStringImpl();
-			s.Value = this.Value;
-			return s;
+
+		private IStringInstance instance;
+
+		public object Instance {
+			get { return instance;	}
+			set { this.instance = (IStringInstance) value; }
 		}
-}
+	}
+
+	public class IStringInstanceImpl : IStringInstance
+	{
+		#region IStringInstance implementation
+
+		private string val;
+
+		public string Value {
+			get { return val; }
+			set { this.val = value;	}
+		}
+
+		#endregion
+
+
+	}
 
 }

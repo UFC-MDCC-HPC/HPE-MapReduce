@@ -3,8 +3,8 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.user.SplitFunction 
 { 
-	public interface ISplitFunction<I, IMK, IMV> : BaseISplitFunction<I, IMK, IMV>
-		where I:IData
+	public interface ISplitFunction<IMAP, IMK, IMV> : BaseISplitFunction<IMAP, IMK, IMV>
+		where IMAP:IData
 		where IMK:IData
 		where IMV:IData
 		{

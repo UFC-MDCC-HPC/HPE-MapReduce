@@ -1,9 +1,0 @@
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/br.ufc.mdcc.common.impl.SetImpl.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/br.ufc.mdcc.common.impl.SetImpl.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/obj/Debug/br.ufc.mdcc.common.impl.SetImpl.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/obj/Debug/br.ufc.mdcc.common.impl.SetImpl.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/DGAC.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/br.ufc.mdcc.common.Data.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/br.ufc.mdcc.common.Set.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.SetImpl/br.ufc.mdcc.common.impl.SetImpl/bin/Debug/br.ufc.mdcc.common.Set.dll.mdb

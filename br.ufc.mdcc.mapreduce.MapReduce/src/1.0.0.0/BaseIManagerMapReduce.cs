@@ -11,7 +11,7 @@ using br.ufc.mdcc.mapreduce.user.CombineFunction;
 
 namespace br.ufc.mdcc.mapreduce.MapReduce { 
 
-	public interface BaseIManagerMapReduce<In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM> : IComputationKind 
+	public interface BaseIManagerMapReduce<In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM> : IComputationKind 
 		where In:IData
 		where IMK:IData
 		where IMV:IData

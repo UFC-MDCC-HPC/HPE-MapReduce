@@ -9,6 +9,7 @@ using br.ufc.mdcc.mapreduce.Reducer;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl 
 {
@@ -17,7 +18,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl
         where OMK : IData
         where OMV : IData
         where ORV : IData
-        where R : IReduceFunction<ORV, OMK, OMV> 
+        where R : IReduceFunction<OMK, OMV, ORV> 
 	{
 
         public IWorkReducerImpl() { }
@@ -33,14 +34,16 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl
 
         private void readPair_OMK_OMVs() 
 		{
-            while (!Input.HasFinished) 
+			IIteratorInstance<IKVPair<OMK, IIterator<OMV>>> input_instance = (IIteratorInstance<IKVPair<OMK, IIterator<OMV>>>) Input.Instance;
+			IIteratorInstance<ORV> output_instance = (IIteratorInstance<ORV>) Output.Instance;
+
+			while (!input_instance.HasFinished) 
 			{
-                IKVPair<OMK, IIterator<OMV>> kvpair = Input.fetch_next();
-				Input.loadFrom (kvpair);
+				IKVPairInstance<OMK, IIterator<OMV>> kvpair = (IKVPairInstance<OMK, IIterator<OMV>>) input_instance.fetch_next();
 
+				Input_reduce.Instance = kvpair;
 				Reduce_function.go();
-
-				Output.put(Output.clone());
+				output_instance.put(Output_reduce.Instance);
             }
         }
 

@@ -5,6 +5,7 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Combiner;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
     public class ISourceCombinerImpl<ORV> : BaseISourceCombinerImpl<ORV>, ISourceCombiner<ORV>
@@ -31,25 +32,27 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
 		private void startThreads() 
 		{
-			/*			Instancias*/
+			/* Instancias */
 			Thread tSend = new Thread(new ThreadStart(sendORVsToTarget));
 
-			/*			Starting*/
+			/* Starting */
 			tSend.Start();
 
-			/*			 Joins*/
+			/* Joins */
 			tSend.Join();
 		}
 
         public void sendORVsToTarget() 
 		{
-            while (!Source_data.HasFinished) 
+			IIteratorInstance<ORV> source_data_instance = (IIteratorInstance<ORV>) Source_data.Instance;
+
+			while (!source_data_instance.HasFinished) 
 			{
-                ORV orv = Source_data.fetch_next();
-				if (Source_data.HasFinished) 
-					worldcomm.Send<ORV>(orv, gerente, TAG_COMBINER_ORV);
+				object orv = source_data_instance.fetch_next();
+				if (source_data_instance.HasFinished) 
+					worldcomm.Send<object>(orv, gerente, TAG_COMBINER_ORV);
 				else
-					worldcomm.Send<ORV>(orv, gerente, TAG_COMBINER_ORV_FINISH);
+					worldcomm.Send<object>(orv, gerente, TAG_COMBINER_ORV_FINISH);
             }            
         }
 

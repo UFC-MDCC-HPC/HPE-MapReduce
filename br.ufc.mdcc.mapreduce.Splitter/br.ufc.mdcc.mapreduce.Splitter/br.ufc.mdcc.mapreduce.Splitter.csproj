@@ -73,5 +73,9 @@
       <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
+      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

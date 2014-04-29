@@ -5,6 +5,7 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.splitter.ScatterSplitData;
 using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl { 
 
@@ -31,19 +32,21 @@ public class ITargetScatterSplitDataImpl<IMK, IMV> : BaseITargetScatterSplitData
 
 			MPI.CompletedStatus status;
 			int source_rank = this.SingletonUnitRank["source"];
-			IMK bin_key; 
-			IMV bin_value;
+			object bin_key; 
+			object bin_value;
 
-			worldcomm.Receive<IMK> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
+			IIteratorInstance<IKVPair<IMK, IMV>> target_data_instance = (IIteratorInstance<IKVPair<IMK, IMV>>) Target_data.Instance;
+
+			worldcomm.Receive<object> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
 			while (status.Tag != TAG_SPLITTER_IMK_FINISH)
 			{
-				worldcomm.Receive<IMV> (source_rank, TAG_SPLITTER_IMV, out bin_value, out status);
+				worldcomm.Receive<object> (source_rank, TAG_SPLITTER_IMV, out bin_value, out status);
+				IKVPairInstance<IMK, IMV> pair = (IKVPairInstance<IMK, IMV>) Target_data.createItem();
+				pair.Key = bin_key;
+				pair.Value = bin_value;
+				target_data_instance.put(pair);
 
-				IKVPair<IMK, IMV> bin = Target_data.createItem();
-				bin.Key.loadFrom(bin_key);
-				bin.Value.loadFrom(bin_value);
-
-				worldcomm.Receive<IMK> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
+				worldcomm.Receive<object> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
 			}
 
 		}

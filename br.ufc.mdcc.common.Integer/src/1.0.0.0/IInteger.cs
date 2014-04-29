@@ -3,11 +3,14 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.Integer { 
 
-public interface IInteger : BaseIInteger, IData
-{
+	public interface IInteger : BaseIInteger, IData
+	{
+		IIntegerInstance newInstance(int i);
+	} // end main interface 
 
-		int Value { get; set; }
-
-} // end main interface 
+	public interface IIntegerInstance
+	{
+		int Value { set; get; }
+	}
 
 } // end namespace 

@@ -6,7 +6,6 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.Partitioner { 
 

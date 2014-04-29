@@ -41,14 +41,13 @@ public IIterator<IKVPair<IString,IInteger>> Output_data {
 		return this.output_data;
 	}
 }
+	
+private IManagerMapReduce<IString, IInteger, IString, IString, IKVPair<IString,IInteger>, IIterator<IKVPair<IString,IInteger>>, IBreakInLines, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IString,IInteger>, IIterator<IKVPair<IString,IInteger>>>, PLATFORM> count_words = null;
 
-private IManagerMapReduce
-		<IString, IInteger, IString, IBreakInLines, IPartitionFunction<IInteger>, IString, IKVPair<IString,IInteger>, ICombineFunction<IKVPair<IString,IInteger>,IIterator<IKVPair<IString,IInteger>>>, IIterator<IKVPair<IString,IInteger>>, PLATFORM> count_words = null;
-
-		protected IManagerMapReduce<IString, IInteger, IString, IBreakInLines, IPartitionFunction<IInteger>, IString, IKVPair<IString,IInteger>, ICombineFunction<IKVPair<IString,IInteger>,IIterator<IKVPair<IString,IInteger>>>, IIterator<IKVPair<IString,IInteger>>, PLATFORM> Count_words {
+		protected IManagerMapReduce<IString, IInteger, IString, IString, IKVPair<IString,IInteger>, IIterator<IKVPair<IString,IInteger>>, IBreakInLines, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IString,IInteger>, IIterator<IKVPair<IString,IInteger>>>, PLATFORM> Count_words {
 	get {
 		if (this.count_words == null)
-					this.count_words = (IManagerMapReduce<IString, IInteger, IString, IBreakInLines, IPartitionFunction<IInteger>, IString, IKVPair<IString,IInteger>, ICombineFunction<IKVPair<IString,IInteger>,IIterator<IKVPair<IString,IInteger>>>, IIterator<IKVPair<IString,IInteger>>, PLATFORM>) Services.getPort("count_words");
+					this.count_words = (IManagerMapReduce<IString, IInteger, IString, IString, IKVPair<IString,IInteger>, IIterator<IKVPair<IString,IInteger>>, IBreakInLines, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IString,IInteger>, IIterator<IKVPair<IString,IInteger>>>, PLATFORM>) Services.getPort("count_words");
 		return this.count_words;
 	}
 }

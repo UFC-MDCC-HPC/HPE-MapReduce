@@ -8,7 +8,7 @@ using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 
 namespace br.ufc.mdcc.mapreduce.FetchValues { 
 
-	public interface BaseIFetchValuesMapper<P,OMK,OMV> : ISynchronizerKind 
+	public interface BaseIFetchValuesMapper<OMK,OMV,P> : ISynchronizerKind 
 		where OMK:IData
 		where OMV:IData
 		where P:IPartitionFunction<OMK>

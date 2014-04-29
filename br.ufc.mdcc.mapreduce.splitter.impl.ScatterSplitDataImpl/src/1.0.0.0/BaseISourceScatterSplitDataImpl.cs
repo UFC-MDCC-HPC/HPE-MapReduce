@@ -15,9 +15,10 @@ using environment.MPIDirect;
 
 namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl { 
 
-public abstract class BaseISourceScatterSplitDataImpl<IMK, IMV>: Synchronizer, BaseISourceScatterSplitData<IMK, IMV>
-where IMK:IData
-where IMV:IData
+	public abstract class BaseISourceScatterSplitDataImpl<IMK, IMV, Bf>: Synchronizer, BaseISourceScatterSplitData<IMK, IMV, Bf>
+	where IMK:IData
+	where IMV:IData
+	where Bf:IPartitionFunction<IMK>
 {
 
 private IIterator<IKVPair<IMK, IMV>> bins = null;
@@ -42,16 +43,14 @@ protected IMPIDirect Mpi_comm {
 	}
 }
 
-private  IPartitionFunction<IMK> bin_function = null;
+		private Bf  bin_function = default(Bf);
 
-protected IPartitionFunction<IMK> Bin_function {
-	get {
-		if (this.bin_function == null) 
-		{
-			this.bin_function = (IPartitionFunction<IMK>) Services.getPort("bin_function");
+		protected Bf Bin_function {
+		get {
+			if (this.bin_function == null) 
+					this.bin_function = (Bf) Services.getPort("bin_function");
+			return this.bin_function;
 		}
-		return this.bin_function;
-	}
 }
 
 private  IMK key = default(IMK);

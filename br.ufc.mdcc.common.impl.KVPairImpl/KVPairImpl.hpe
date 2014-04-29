@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003de1e5850469c4e33d8215889f515e15611510076048b663c71586e05eceab64dfd59e3afe228ac77c5ae8a061adfc3abdda19ccab6a61095ff85af50b87113c9f0a8ad2ccd055a4619614b23a6b8b7a6e5d18848a7e2093367ddf18dce1a9f1452a5b75a6d9abe6beec602af232bf19186e2b65ffd7b113b800e8eaad40d396" isAbstract="false" kind="Data" name="KVPairImpl" packagePath="br.ufc.mdcc.common.impl">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e329d6a53643eb306dc48521dda023ef22d14fc08b6cade5b6154e4f2b541ed2eb55fc70981d5c219d1f2dd35bdb69a6d66b6ae21ecf991fcd2a1bb00af79ad34f2c031afa7ee1eed9dd012267c82dbd5ccf59714fc520d46b66336a07c2fbe1cec00608e5b216def3f332a11152e263a6ea3ca330d78122ea0ffd015ce4b2a9" isAbstract="false" kind="Data" name="KVPairImpl" packagePath="br.ufc.mdcc.common.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
@@ -38,33 +38,33 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="value_type" varName="V"/>
-    <supplyParameter cRef="key_type" varName="K"/>
+    <supplyParameter cRef="value_type" direct="true" varName="V"/>
+    <supplyParameter cRef="key_type" direct="true" varName="K"/>
     <interface iRef="IKVPairImpl" nArgs="2">
-      <slice isRef="key">
-        <originRef cRef="key" iRef="IData"/>
-        <visualDescription h="10" w="10" x="6" y="24"/>
+      <slice isRef="value_type">
+        <originRef cRef="value_type" iRef="IData"/>
+        <visualDescription h="10" w="10" x="63" y="17"/>
       </slice>
-      <slice isRef="value">
-        <originRef cRef="value" iRef="IData"/>
-        <visualDescription h="10" w="10" x="61" y="25"/>
+      <slice isRef="key_type">
+        <originRef cRef="key_type" iRef="IData"/>
+        <visualDescription h="10" w="10" x="9" y="25"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.KVPairImpl { &#xA;&#xA;public abstract class BaseIKVPairImpl&lt;K, V>: DataStructure, BaseIKVPair&lt;K, V>&#xA;where K:IData&#xA;where V:IData&#xA;{&#xA;&#xA;private V value = default(V);&#xA;&#xA;protected V Value {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.value == null)&#xA;&#x9;&#x9;&#x9;this.value = (V) Services.getPort(&quot;value&quot;);&#xA;&#x9;&#x9;return this.value;&#xA;&#x9;}&#xA;}&#xA;&#xA;private K key = default(K);&#xA;&#xA;protected K Key {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.key == null)&#xA;&#x9;&#x9;&#x9;this.key = (K) Services.getPort(&quot;key&quot;);&#xA;&#x9;&#x9;return this.key;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIKVPairImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.KVPairImpl/bin/1.0.0.0/BaseIKVPairImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.KVPairImpl { &#xA;&#xA;&#x9;public abstract class BaseIKVPairImpl&lt;K, V>: DataStructure, BaseIKVPair&lt;K, V>&#xA;&#x9;where K:IData&#xA;&#x9;where V:IData&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;private V value_type = default(V);&#xA;&#xA;&#x9;&#x9;public V Value_type {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.value_type == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.value_type = (V) Services.getPort(&quot;value_type&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.value_type;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private K key_type = default(K);&#xA;&#xA;&#x9;&#x9;public K Key_type {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.key_type == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.key_type = (K) Services.getPort(&quot;key_type&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.key_type;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIKVPairImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.KVPairImpl/bin/1.0.0.0/BaseIKVPairImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/BaseIKVPair.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.KVPairImpl { &#xA;&#xA;public class IKVPairImpl&lt;K, V> : BaseIKVPairImpl&lt;K, V>, IKVPair&lt;K, V>&#xA;where K:IData&#xA;where V:IData&#xA;{&#xA;&#xA;public IKVPairImpl() { &#xA;&#xA;} &#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IKVPairImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.KVPairImpl/bin/1.0.0.0/IKVPairImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using System.Collections.Generic;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.KVPairImpl { &#xA;&#xA;&#x9;public class IKVPairImpl&lt;K, V> : BaseIKVPairImpl&lt;K, V>, IKVPair&lt;K, V>&#xA;&#x9;where K:IData&#xA;&#x9;where V:IData&#xA;&#x9;{&#xA;&#x9;&#x9;public IKVPairImpl() { } &#xA;&#xA;&#x9;&#x9;public IKVPairInstance&lt;K,V> newInstance (object k, object v)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;K,V> instance = (IKVPairInstance&lt;K,V>) newInstance (k,v);&#xA;&#x9;&#x9;&#x9;return instance;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public object newInstance ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;object k = Key_type.newInstance();&#xA;&#x9;&#x9;&#x9;object v = Value_type.newInstance();&#xA;&#x9;&#x9;&#x9;return this.Instance = new IKVPairInstanceImpl&lt;K,V> (k,v);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPairInstance&lt;K,V> instance;&#xA;&#xA;&#x9;&#x9;public object Instance {&#xA;&#x9;&#x9;&#x9;get { return instance;&#x9;}&#xA;&#x9;&#x9;&#x9;set { this.instance = (IKVPairInstance&lt;K,V>) value;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;&#x9;public class IKVPairInstanceImpl&lt;K,V> : IKVPairInstance&lt;K,V>&#xA;&#x9;&#x9;where K:IData&#xA;&#x9;&#x9;where V:IData&#xA;&#x9;{&#xA;&#x9;&#x9;public IKVPairInstanceImpl(object k, object v)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;this.k = k;&#xA;&#x9;&#x9;&#x9;this.v = v;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#region IKVPairInstance implementation&#xA;&#xA;&#x9;&#x9;private object k;&#xA;&#x9;&#x9;private object v;&#xA;&#xA;&#x9;&#x9;public object Key {&#xA;&#x9;&#x9;&#x9;get { return k; }&#xA;&#x9;&#x9;&#x9;set { this.k = value; }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public object Value {&#xA;&#x9;&#x9;&#x9;get { return v; }&#xA;&#x9;&#x9;&#x9;set { this.v = value; }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#endregion&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IKVPairImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.KVPairImpl/bin/1.0.0.0/IKVPairImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.common.impl.KVPairImpl/bin/1.0.0.0/BaseIKVPairImpl.dll</dependency>
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="63" w="142" x="200" y="101">
+      <visualDescription h="63" w="142" x="294" y="83">
         <color b="144" g="238" r="144"/>
       </visualDescription>
-      <parameter iname="IData" order="0" parid="key_type" uname="data" varid="K"/>
       <parameter iname="IData" order="1" parid="value_type" uname="data" varid="V"/>
+      <parameter iname="IData" order="0" parid="key_type" uname="data" varid="K"/>
     </interface>
     <unit iRef="IKVPairImpl" multiple="false" private="false" replica="0" uRef="kv_pair" visibleInterface="true">
       <super cRef="base" uRef="kv_pair"/>

@@ -4,43 +4,65 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.KVPair;
+using System.Collections.Generic;
 
 namespace br.ufc.mdcc.common.impl.KVPairImpl { 
 
-public class IKVPairImpl<K, V> : BaseIKVPairImpl<K, V>, IKVPair<K, V>
-where K:IData
-where V:IData
-{
+	public class IKVPairImpl<K, V> : BaseIKVPairImpl<K, V>, IKVPair<K, V>
+	where K:IData
+	where V:IData
+	{
+		public IKVPairImpl() { } 
 
-		public IKVPairImpl() 
-		{ 
-
-		} 
-
-		private V value = default(V);
-		public V Value { get {return this.value; } set { this.value = value; }}
-
-		private K key = default(K);
-		public K Key { get { return this.key; } set { this.key = value; } }
-
-		public void loadFrom (IData o)
+		public IKVPairInstance<K,V> newInstance (object k, object v)
 		{
-			IKVPair<K,V> okv = (IKVPair<K,V>)o;
-			this.Key.loadFrom(okv.Key);
-			this.Value.loadFrom(okv.Value);
-		}
-
-		public IData newInstance()
-		{
-			return new IKVPairImpl<K,V>();
-		}
-
-		public IData clone ()
-		{
-			IData instance = newInstance();
-			instance.loadFrom(this);
+			IKVPairInstance<K,V> instance = (IKVPairInstance<K,V>) newInstance (k,v);
 			return instance;
 		}
-}
+
+		public object newInstance ()
+		{
+			object k = Key_type.newInstance();
+			object v = Value_type.newInstance();
+			return this.Instance = new IKVPairInstanceImpl<K,V> (k,v);
+		}
+
+		private IKVPairInstance<K,V> instance;
+
+		public object Instance {
+			get { return instance;	}
+			set { this.instance = (IKVPairInstance<K,V>) value;	}
+		}
+	}
+
+	public class IKVPairInstanceImpl<K,V> : IKVPairInstance<K,V>
+		where K:IData
+		where V:IData
+	{
+		public IKVPairInstanceImpl(object k, object v)
+		{
+			this.k = k;
+			this.v = v;
+		}
+
+		#region IKVPairInstance implementation
+
+		private object k;
+		private object v;
+
+		public object Key {
+			get { return k; }
+			set { this.k = value; }
+		}
+
+		public object Value {
+			get { return v; }
+			set { this.v = value; }
+		}
+
+		#endregion
+
+
+	}
 
 }

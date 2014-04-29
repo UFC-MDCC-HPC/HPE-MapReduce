@@ -7,6 +7,7 @@ using br.ufc.mdcc.mapreduce.user.MapFunction;
 using br.ufc.mdcc.mapreduce.Mapper;
 using br.ufc.mdcc.common.KVPair;
 using System.Threading.Tasks;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapperImpl { 
 
@@ -21,21 +22,19 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 
 	    public override void main() 
 		{ 
+			IIteratorInstance<IKVPair<IMK,IMV>> input_instance = (IIteratorInstance<IKVPair<IMK,IMV>>) Input.Instance;
 
 			// 1. Ler os elementos do iterator Input, um a um;
-			while (!Input.HasFinished) 
+			while (!input_instance.HasFinished) 
 			{
 				// 2. Para cada par, atribuir a chave a Map_key e o valor a Map_value;
-				IKVPair<IMK, IMV> bin = Input.fetch_next ();
-				Map_key.loadFrom(bin.Key);
-				Map_value.loadFrom(bin.Value);
+				IKVPairInstance<IMK,IMV> bin = (IKVPairInstance<IMK,IMV>) input_instance.fetch_next ();
+				Map_key.Instance = bin.Key;
+				Map_value.Instance = bin.Value;
 
 				// 3. Chamar Map_function.go()
 				Map_function.go ();
 			}
-
-
-
     	}
     }
 }
