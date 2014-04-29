@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="9" version="2.0">
+<workbench progressCount="14" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="65" y="24">
 <fastViewData fastViewLocation="1024">
@@ -26,7 +26,7 @@
 <coolItem id="org.emonic.base.editors.CSharpEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.HPEVersionEditor" itemType="typeToolBarContribution" x="96" y="30"/>
+<coolItem id="org.eclipse.HPEVersionEditor" itemType="typeToolBarContribution" x="264" y="30"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -48,26 +48,26 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.HPEVersionEditor" name="Topology.hpe" partName="Topology.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.Topology/Topology.hpe" title="Topology.hpe" tooltip="br.ufc.mdcc.mapreduce.Topology/Topology.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="VoteReduce.hpe" partName="VoteReduce.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe" title="VoteReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
 </editor>
-<editor id="org.eclipse.HPEVersionEditor" name="CountWordsApp.hpe" partName="CountWordsApp.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe" title="CountWordsApp.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="Double.hpe" partName="Double.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Double/Double.hpe" title="Double.hpe" tooltip="br.ufc.mdcc.common.Double/Double.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.Double/Double.hpe"/>
 </editor>
-<editor id="org.eclipse.HPEVersionEditor" name="CountWordsAppImpl.hpe" partName="CountWordsAppImpl.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe" title="CountWordsAppImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
+<editor id="org.eclipse.HPEVersionEditor" name="Double.hpe" partName="Double.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Double/Double.hpe" title="Double.hpe" tooltip="br.ufc.mdcc.common.Double/Double.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.Double/Double.hpe"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.HPEVersionEditor" name="CountWords.hpe" partName="CountWords.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" title="CountWords.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
+<editor id="org.eclipse.HPEVersionEditor" name="Integer.hpe" partName="Integer.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Integer/Integer.hpe" title="Integer.hpe" tooltip="br.ufc.mdcc.common.Integer/Integer.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.Integer/Integer.hpe"/>
 </editor>
-<editor id="org.eclipse.HPEVersionEditor" name="Platform.hpe" partName="Platform.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.Platform/Platform.hpe" title="Platform.hpe" tooltip="br.ufc.mdcc.common.Platform/Platform.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.Platform/Platform.hpe"/>
+<editor id="org.eclipse.HPEVersionEditor" name="VoteReduce.hpe" partName="VoteReduce.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe" title="VoteReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
 </editor>
-<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="NullPlatform.hpe" partName="NullPlatform.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" title="NullPlatform.hpe" tooltip="br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="VoteMap.hpe" partName="VoteMap.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe" title="VoteMap.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
 </editor>
-<editor id="org.eclipse.HPEVersionEditor" name="NullPlatform.hpe" partName="NullPlatform.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" title="NullPlatform.hpe" tooltip="br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+<editor activePart="true" focus="true" id="org.eclipse.HPEVersionEditor" name="VoteMap.hpe" partName="VoteMap.hpe" path="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe" title="VoteMap.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
 </editor>
 </editors>
 <views>
@@ -92,10 +92,17 @@
 <filter element="*.class" isEnabled="false"/>
 </filters>
 <expanded>
+<element path="/br.ufc.mdcc.common.Double"/>
+<element path="/br.ufc.mdcc.common.Integer"/>
 <element path="/br.ufc.mdcc.mapreduce.example.CountWords"/>
+<element path="/br.ufc.mdcc.mapreduce.example.graph.clique.Clique"/>
+<element path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode"/>
+<element path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank"/>
+<element path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap"/>
+<element path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce"/>
 </expanded>
 <selection>
-<element path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
+<element path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
 </selection>
 </viewState>
 </view>
@@ -335,66 +342,114 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.common.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.common.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.common.Platform/Platform.hpe"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/br.ufc.mdcc.common.Double/Double.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.common.Double/Double.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.common.Double/Double.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" path="/br.ufc.mdcc.common.Integer/Integer.hpe"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
 </editors>
-<item historyLabel="Topology.hpe" index="0"/>
-<item historyLabel="Topology.hpe" index="0"/>
-<item historyLabel="Topology.hpe" index="1"/>
-<item historyLabel="Topology.hpe" index="2">
+<item historyLabel="PGRank.hpe" index="4">
+<position info="not_deleted" x="1322" y="0"/>
+</item>
+<item historyLabel="PGRank.hpe" index="3"/>
+<item historyLabel="VoteReduce.hpe" index="1"/>
+<item historyLabel="PGRank.hpe" index="3"/>
+<item historyLabel="VoteMap.hpe" index="2"/>
+<item historyLabel="PageNode.hpe" index="5">
+<position info="not_deleted" x="120" y="0"/>
+</item>
+<item historyLabel="PageNode.hpe" index="6">
+<position info="not_deleted" x="2192" y="0"/>
+</item>
+<item historyLabel="PageNode.hpe" index="7">
+<position info="not_deleted" x="2192" y="0"/>
+</item>
+<item historyLabel="PageNode.hpe" index="7"/>
+<item historyLabel="PGRank.hpe" index="3"/>
+<item historyLabel="VoteMap.hpe" index="8"/>
+<item historyLabel="PGRank.hpe" index="3"/>
+<item historyLabel="VoteMap.hpe" index="2"/>
+<item historyLabel="VoteReduce.hpe" index="1"/>
+<item historyLabel="VoteReduce.hpe" index="9"/>
+<item historyLabel="PageNode.hpe" index="10"/>
+<item historyLabel="PGRank.hpe" index="11"/>
+<item historyLabel="VoteMap.hpe" index="12"/>
+<item historyLabel="PGRank.hpe" index="11"/>
+<item historyLabel="PageNode.hpe" index="10"/>
+<item historyLabel="VoteReduce.hpe" index="13">
+<position info="not_deleted" x="5868" y="0"/>
+</item>
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="5897" y="0"/>
+</item>
+<item historyLabel="VoteReduce.hpe" index="9">
 <position/>
 </item>
-<item historyLabel="Topology.hpe" index="1"/>
-<item historyLabel="Topology.hpe" index="3"/>
-<item historyLabel="Topology.hpe" index="2">
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="5111" y="0"/>
+</item>
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="4294" y="0"/>
+</item>
+<item historyLabel="VoteReduce.hpe" index="9">
 <position/>
 </item>
-<item historyLabel="Topology.hpe" index="4">
-<position info="not_deleted" x="39" y="0"/>
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="6684" y="0"/>
 </item>
-<item historyLabel="Topology.hpe" index="4">
-<position info="not_deleted" x="562" y="0"/>
+<item historyLabel="VoteReduce.hpe" index="9"/>
+<item historyLabel="Double.hpe" index="14">
+<position info="not_deleted" x="644" y="0"/>
 </item>
-<item historyLabel="Topology.hpe" index="1"/>
-<item historyLabel="Topology.hpe" index="2"/>
-<item historyLabel="Topology.hpe" index="3"/>
-<item historyLabel="Topology.hpe" index="3"/>
-<item historyLabel="Topology.hpe" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Double.hpe" index="15">
+<position info="not_deleted" x="1285" y="0"/>
 </item>
-<item historyLabel="Topology.hpe" index="4">
-<position info="not_deleted" x="562" y="0"/>
+<item historyLabel="Double.hpe" index="16"/>
+<item historyLabel="VoteReduce.hpe" index="9"/>
+<item historyLabel="Double.hpe" index="16"/>
+<item historyLabel="VoteReduce.hpe" index="9"/>
+<item historyLabel="Double.hpe" index="16"/>
+<item historyLabel="Integer.hpe" index="17"/>
+<item historyLabel="Double.hpe" index="16"/>
+<item historyLabel="Integer.hpe" index="17"/>
+<item historyLabel="VoteReduce.hpe" index="9"/>
+<item historyLabel="Integer.hpe" index="17"/>
+<item historyLabel="VoteReduce.hpe" index="13"/>
+<item historyLabel="Integer.hpe" index="17"/>
+<item historyLabel="VoteReduce.hpe" index="13">
+<position info="not_deleted" x="6684" y="0"/>
 </item>
-<item historyLabel="Topology.hpe" index="3"/>
-<item historyLabel="Topology.hpe" index="5"/>
-<item historyLabel="Topology.hpe" index="3"/>
-<item historyLabel="Topology.hpe" index="6"/>
-<item historyLabel="Topology.hpe" index="3"/>
-<item historyLabel="Topology.hpe" index="7"/>
-<item historyLabel="Topology.hpe" index="7"/>
-<item historyLabel="CountWordsApp.hpe" index="8"/>
-<item historyLabel="CountWordsAppImpl.hpe" index="9"/>
-<item historyLabel="CountWords.hpe" index="10"/>
-<item historyLabel="CountWordsApp.hpe" index="8"/>
-<item historyLabel="CountWordsAppImpl.hpe" index="9"/>
-<item historyLabel="CountWordsApp.hpe" index="8"/>
-<item historyLabel="Platform.hpe" index="11"/>
-<item historyLabel="NullPlatform.hpe" index="12">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="4294" y="0"/>
 </item>
-<item historyLabel="NullPlatform.hpe" index="12"/>
-<item active="true" historyLabel="CountWords.hpe" index="10"/>
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="6655" y="0"/>
+</item>
+<item historyLabel="VoteReduce.hpe" index="0">
+<position info="not_deleted" x="6684" y="0"/>
+</item>
+<item historyLabel="VoteReduce.hpe" index="9"/>
+<item historyLabel="VoteMap.hpe" index="12">
+<position info="not_deleted" x="4414" y="0"/>
+</item>
+<item historyLabel="VoteMap.hpe" index="18">
+<position info="not_deleted" x="7598" y="0"/>
+</item>
+<item active="true" historyLabel="VoteMap.hpe" index="12"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -412,50 +467,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="INullPlatform.cs" tooltip="br.ufc.mdcc.common.impl.NullPlatform/src/1.0.0.0/INullPlatform.cs">
-<persistable path="/br.ufc.mdcc.common.impl.NullPlatform/src/1.0.0.0/INullPlatform.cs"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="VoteMap.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/VoteMap.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="NullPlatform.hpe" tooltip="br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe">
-<persistable path="/br.ufc.mdcc.common.impl.NullPlatform/NullPlatform.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="VoteReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="Platform.hpe" tooltip="br.ufc.mdcc.common.Platform/Platform.hpe">
-<persistable path="/br.ufc.mdcc.common.Platform/Platform.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Integer.hpe" tooltip="br.ufc.mdcc.common.Integer/Integer.hpe">
+<persistable path="/br.ufc.mdcc.common.Integer/Integer.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Double.hpe" tooltip="br.ufc.mdcc.common.Double/Double.hpe">
+<persistable path="/br.ufc.mdcc.common.Double/Double.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="PGRank.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="PageNode.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="BaseICliqueMap.cs" tooltip="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/src/1.0.0.0/BaseICliqueMap.cs">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/src/1.0.0.0/BaseICliqueMap.cs"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="ICliqueMap.cs" tooltip="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/src/1.0.0.0/ICliqueMap.cs">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/src/1.0.0.0/ICliqueMap.cs"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWords.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe">
 <persistable path="/br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsAppImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CliqueReduce.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/CliqueReduce.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/CliqueReduce.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CountWordsApp.hpe" tooltip="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CliqueMap.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/CliqueMap.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/CliqueMap.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Topology.hpe" tooltip="br.ufc.mdcc.mapreduce.Topology/Topology.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Topology/Topology.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CliqueNode.hpe" tooltip="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/CliqueNode.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/CliqueNode.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Topology.hpe" tooltip="br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.example.Topology/Topology.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="DataNode.hpe" tooltip="br.ufc.mdcc.common.graph.DataNode/DataNode.hpe">
+<persistable path="/br.ufc.mdcc.common.graph.DataNode/DataNode.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Topology.hpe" tooltip="br.ufc.mdcc.common.Topology/Topology.hpe">
-<persistable path="/br.ufc.mdcc.common.Topology/Topology.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="MapFunction.hpe" tooltip="br.ufc.mdcc.mapreduce.user.MapFunction/MapFunction.hpe">
+<persistable path="/br.ufc.mdcc.mapreduce.user.MapFunction/MapFunction.hpe"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="run.sp.S.xml" tooltip="/home/heron/hash-programming-environment/run.sp.S.xml">
-<persistable uri="file:/home/heron/hash-programming-environment/run.sp.S.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="IWordCounterProcessImpl.cs" tooltip="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs">
-<persistable path="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="CombinerImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.impl.CombinerImpl/CombinerImpl.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.impl.CombinerImpl/CombinerImpl.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="Mapper.hpe" tooltip="br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Mapper/Mapper.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="Combiner.hpe" tooltip="br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.Combiner/Combiner.hpe"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.HPEVersionEditor" name="MapReduceMPIImpl.hpe" tooltip="br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/MapReduceMPIImpl.hpe">
-<persistable path="/br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl/MapReduceMPIImpl.hpe"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.emonic.base.editors.CSharpEditor" name="INullPlatform.cs" tooltip="br.ufc.mdcc.common.impl.NullPlatform/src/1.0.0.0/INullPlatform.cs">
+<persistable path="/br.ufc.mdcc.common.impl.NullPlatform/src/1.0.0.0/INullPlatform.cs"/>
 </file>
 </mruList>
 </workbench>

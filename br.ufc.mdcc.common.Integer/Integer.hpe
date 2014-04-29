@@ -36,7 +36,7 @@
     </interface>
     <unit iRef="IInteger" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <visualDescription h="40" w="80" x="0" y="0"/>
+      <visualDescription h="40" w="80" x="0" y="123"/>
     </unit>
   </componentInfo>
 </component:component>
