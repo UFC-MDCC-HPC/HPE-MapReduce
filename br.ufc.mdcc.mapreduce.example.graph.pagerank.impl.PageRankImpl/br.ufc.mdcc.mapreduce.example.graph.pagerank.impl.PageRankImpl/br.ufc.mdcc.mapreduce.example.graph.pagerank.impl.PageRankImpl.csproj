@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47DC8CF2-110A-42A1-AB03-0D5A22C21596}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\IMasterImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIMasterImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\IVoteReduceImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIVoteReduceImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\IVoteMapImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIVoteMapImpl.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform.csproj">
+      <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
+      <Name>br.ufc.mdcc.common.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank.csproj">
+      <Project>{51DD2F20-1C31-40D7-8772-806BF4D199D9}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce.csproj">
+      <Project>{2CFC22C2-D614-4F83-BFE8-B387454386F5}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap.csproj">
+      <Project>{8B65570E-CE32-4A41-959D-ADCB36356972}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.MapReduce\br.ufc.mdcc.mapreduce.MapReduce\br.ufc.mdcc.mapreduce.MapReduce.csproj">
+      <Project>{DE0E927C-B15F-4C8C-B26F-BC618F85F4C6}</Project>
+      <Name>br.ufc.mdcc.mapreduce.MapReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj">
+      <Project>{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.CombineFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction.csproj">
+      <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
+      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.ReduceFunction\br.ufc.mdcc.mapreduce.user.ReduceFunction\br.ufc.mdcc.mapreduce.user.ReduceFunction.csproj">
+      <Project>{F5906E26-64FC-4968-9A30-8C57BF44A4D7}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.ReduceFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction.csproj">
+      <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode.csproj">
+      <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
+      <Name>br.ufc.mdcc.common.graph.DataNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode.csproj">
+      <Project>{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double\br.ufc.mdcc.common.Double.csproj">
+      <Project>{1705F3C3-E163-493C-8BB9-F8A45D8D68AB}</Project>
+      <Name>br.ufc.mdcc.common.Double</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes\br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes.csproj">
+      <Project>{9F3A00A5-6E38-4438-A9FF-F60E051E8EEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

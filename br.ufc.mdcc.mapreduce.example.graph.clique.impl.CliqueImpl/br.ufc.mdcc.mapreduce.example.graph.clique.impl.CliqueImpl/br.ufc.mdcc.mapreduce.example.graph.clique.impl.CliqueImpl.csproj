@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{011FBE44-332B-4394-958F-F0CFFF8DDF57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseICliqueMapImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseICliqueReduceImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIMasterImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\ICliqueMapImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\ICliqueReduceImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\IMasterImpl.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode\br.ufc.mdcc.common.graph.DataNode.csproj">
+      <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
+      <Name>br.ufc.mdcc.common.graph.DataNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform.csproj">
+      <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
+      <Name>br.ufc.mdcc.common.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode.csproj">
+      <Project>{E8907839-CC48-4EBD-B31F-E8FF94256450}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.Clique\br.ufc.mdcc.mapreduce.example.graph.clique.Clique\br.ufc.mdcc.mapreduce.example.graph.clique.Clique.csproj">
+      <Project>{7A0F0E27-64F7-49AF-A571-E76E1AF9FC65}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.Clique</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes\br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes\br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes.csproj">
+      <Project>{A6BFDAF0-41FD-4CB9-B477-722F8275E8D1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap.csproj">
+      <Project>{1D6C24FA-7AD7-44E9-89F6-460FB0AA1929}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce\br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce.csproj">
+      <Project>{5F99AAE7-BB0A-4DFF-93DD-54EB8347B149}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.MapReduce\br.ufc.mdcc.mapreduce.MapReduce\br.ufc.mdcc.mapreduce.MapReduce.csproj">
+      <Project>{DE0E927C-B15F-4C8C-B26F-BC618F85F4C6}</Project>
+      <Name>br.ufc.mdcc.mapreduce.MapReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj">
+      <Project>{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.CombineFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction.csproj">
+      <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
+      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.ReduceFunction\br.ufc.mdcc.mapreduce.user.ReduceFunction\br.ufc.mdcc.mapreduce.user.ReduceFunction.csproj">
+      <Project>{F5906E26-64FC-4968-9A30-8C57BF44A4D7}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.ReduceFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction.csproj">
+      <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
