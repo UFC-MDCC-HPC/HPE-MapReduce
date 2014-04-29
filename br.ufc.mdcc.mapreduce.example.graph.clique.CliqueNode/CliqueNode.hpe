@@ -18,7 +18,7 @@
             <visualDescription h="20" w="20" x="15" y="11"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="clique_node">
+        <unitBounds parallel="false" uRef="data_node">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -29,6 +29,7 @@
     </visualAttributes>
   </header>
   <componentInfo>
+    <parameter componentRef="id_type" formFieldId="id_type" order="0" varName="TID"/>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="169" x="376" y="216">
         <color b="203" g="192" r="255"/>
@@ -46,7 +47,6 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <parameter componentRef="id_type" formFieldId="id_type" varName="TID"/>
     <interface iRef="ICliqueNode" nArgs="1">
       <slice isRef="neighbors">
         <originRef cRef="neighbors" iRef="IIterator"/>
@@ -63,10 +63,10 @@
     </interface>
     <unit iRef="ICliqueNode" multiple="false" private="false" replica="0" uRef="clique_node" visibleInterface="true">
       <super cRef="base" uRef="data_node"/>
-      <slices cRef="neighbors" replica="0" uRef="iterator" sliceName="neighbors" transitive="false">
+      <slices cRef="neighbors" slice_replica="0" uRef="iterator" sliceName="neighbors" transitive="false">
         <visualDescription h="10" w="10" x="86" y="17"/>
       </slices>
-      <visualDescription h="40" w="112" x="175" y="226"/>
+      <visualDescription h="40" w="112" x="148" y="242"/>
     </unit>
   </componentInfo>
 </component:component>

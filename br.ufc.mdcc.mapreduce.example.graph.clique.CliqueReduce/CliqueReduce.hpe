@@ -30,7 +30,7 @@
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="clique_reduce">
+        <unitBounds parallel="false" uRef="reduce_function">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
