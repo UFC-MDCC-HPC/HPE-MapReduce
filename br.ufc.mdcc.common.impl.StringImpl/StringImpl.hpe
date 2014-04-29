@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f11e70fc292f3a51c7f4a40d3f598790d3f151a598dec2a2399f0105116bc234b263aa2bc5132e4cbc4aa9e42da645f9b74367c5faf2ec9d141af9ae1527181fe4229e1b10f7d63b58f92037a4a20531fe6509327e3bea0f70cdded65e108ee9fdc635d497433bf20823c80b2afa32b2ee9d119b6031ee74bad90a9b0afa2a1" isAbstract="false" kind="Data" name="StringImpl" packagePath="br.ufc.mdcc.common.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="base" location="br.ufc.mdcc.common.String/String.hpe" name="String" package="br.ufc.mdcc.common" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="168" y="284">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IStringImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.String;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.StringImpl { &#xA;&#xA;&#x9;public abstract class BaseIStringImpl: DataStructure, BaseIString&#xA;{&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIStringImpl.cs" srcType="base" uri="br.ufc.mdcc.common.impl.StringImpl/bin/1.0.0.0/BaseIStringImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/BaseIData.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.String;&#xA;using System.Collections.Generic;&#xA;&#xA;namespace br.ufc.mdcc.common.impl.StringImpl { &#xA;&#xA;&#x9;public class IStringImpl : BaseIStringImpl, IString&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;public IStringImpl() { &#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public IStringInstance newInstance (string s)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;IStringInstance instance = (IStringInstance)newInstance ();&#xA;&#x9;&#x9;&#x9;instance.Value = s;&#xA;&#x9;&#x9;&#x9;return instance;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public object newInstance ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;this.instance = new IStringInstanceImpl ();&#xA;&#x9;&#x9;&#x9;return this.Instance;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IStringInstance instance;&#xA;&#xA;&#x9;&#x9;public object Instance {&#xA;&#x9;&#x9;&#x9;get { return instance;&#x9;}&#xA;&#x9;&#x9;&#x9;set { this.instance = (IStringInstance) value; }&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;&#x9;public class IStringInstanceImpl : IStringInstance&#xA;&#x9;{&#xA;&#x9;&#x9;#region IStringInstance implementation&#xA;&#xA;&#x9;&#x9;private string val;&#xA;&#xA;&#x9;&#x9;public string Value {&#xA;&#x9;&#x9;&#x9;get { return val; }&#xA;&#x9;&#x9;&#x9;set { this.val = value;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#endregion&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IStringImpl.cs" srcType="user" uri="br.ufc.mdcc.common.impl.StringImpl/bin/1.0.0.0/IStringImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.common.impl.StringImpl/bin/1.0.0.0/BaseIStringImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="138" x="135" y="85">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+    </interface>
+    <unit iRef="IStringImpl" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
+      <super cRef="base" uRef="data"/>
+      <visualDescription h="40" w="80" x="170" y="171"/>
+    </unit>
+  </componentInfo>
+</component:component>

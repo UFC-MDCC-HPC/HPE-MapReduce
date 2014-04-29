@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000004167f2aa91ff4c80a124e66ac3b931f08efef72476a703b9944ea11c761dad0d23abf851028f67110c5b0dc10fbee40a2e290ebc7cd7f47cf6927d65bca83ce64b5df2f83f8262160c5bdc49615e599c4c9263c0bebc4830486f3f218b5b04993809345ccd322e0c32fd3a7ac64b3a4f89d32b7e01324a334322a5b3651a1da2" isAbstract="true" kind="Computation" name="BreakInLines" packagePath="br.ufc.mdcc.mapreduce.example">
+    <baseType>
+      <extensionType>
+        <extends>true</extends>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007931dc9275a2f81d350920c3d07f09350893cc79f24924a02452fce0ea251e36e79b7de37606055b0e2e925c1391848635f7ed158b01dcf53e0ce6a742eb48facfe9c046e97fdacf1fa3601e77f7726984494fbc09011093d6e6fcd47affdcbf92c7fd66fbee6e86a832d71ea710e03ee31e8e7dcba49e884348159ee5ec89ac" localRef="base" location="br.ufc.mdcc.mapreduce.user.SplitFunction/SplitFunction.hpe" name="SplitFunction" package="br.ufc.mdcc.mapreduce.user" version="1.0.0.0">
+        <visualDescription h="60" w="207" x="227" y="186">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="IMV"/>
+        <parameter formFieldId="input_type" varName="IMAP"/>
+        <parameter formFieldId="key_type" varName="IMK"/>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="400" y="194">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="169" x="320" y="446">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###1096766389"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="split_function">
+          <visualDescription h="20" w="20" x="40" y="18"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="122" y="106">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="value_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="138" y="306">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="100" x="400" y="194">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="input_type" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="key_type" direct="true" varName="IMK"/>
+    <supplyParameter cRef="value_type" direct="true" varName="IMV"/>
+    <interface iRef="IBreakInLines" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.BreakInLines { &#xA;&#xA;&#x9;public interface BaseIBreakInLines : BaseISplitFunction&lt;IString,IInteger,IString>, IComputationKind &#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIBreakInLines.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.BreakInLines/bin/1.0.0.0/BaseIBreakInLines.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/BaseISplitFunction.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.BreakInLines { &#xA;&#xA;public interface IBreakInLines : BaseIBreakInLines, ISplitFunction&lt;IString,IInteger,IString>&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IBreakInLines.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.BreakInLines/bin/1.0.0.0/IBreakInLines.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.BreakInLines/bin/1.0.0.0/BaseIBreakInLines.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="151" x="27" y="70">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IBreakInLines" multiple="false" private="false" replica="0" uRef="split_function" visibleInterface="true">
+      <super cRef="base" uRef="split_function"/>
+      <visualDescription h="40" w="151" x="48" y="272"/>
+    </unit>
+  </componentInfo>
+</component:component>

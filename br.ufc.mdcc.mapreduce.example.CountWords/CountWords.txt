@@ -1,0 +1,33 @@
+* platform_type = PLATFORM: Platform, 
+
+* input_data_type = IMAP: Data,                    String (file contents)
+* input_data_key_type = IMK: Data,                 Integer (line number)
+* input_data_value_type = IMV: Data,               String  (line contents)
+* intermediate_data_key_type = OMK: Data,          String  (word)
+* intermediate_data_value_type = OMV: Data,        Integer (number of word occurrences)
+* reduce_output_type = ORV: Data,                  KVPair<String, Integer> (pares <w,c> onde c é o número de  ocorrências da palavra w)
+* output_type = Out: Data,                         Iterator<KVPair<String, Integer>> (merge dos resultados de cada reducer)
+
+* split_function = Sf: SplitFunction<value_type = IMV: Data, input_type = IMAP: Data, key_type = IMK: Data>, 
+  -- break the input string into lines 
+
+
+* bin_function = Bf: PartitionFunction<input_key = IMK: Data>, 
+  -- distribute the lines equally among the mappers (round-robing)
+  -- DEFAULT
+
+* map_function = Mf: MapFunction<input_key_type = IMK: Data, output_item_value_type = OMV: Data, input_value_type = IMV: Data, output_item_key_type = OMK: Data>, 
+  -- takes a line and returns a list of words and number of ocurrences in the line.
+
+* partition_function = Pf: PartitionFunction<input_key = OMK: Data>, 
+  -- distributes the words equally accross the reducers (round-robing).
+  -- DEFAULT
+
+* reduce_function = Rf: ReduceFunction<input_key_type = OMK: Data, input_value_type = OMV: Data, output_type = Out: Data>, 
+  -- sums the numbers of ocurrences of the word. <w,[n_1,n_2,...n_k]> -> <w,n_1+n+2+...+n_k>
+
+
+* combine_function = Cf: CombineFunction<input_item_type = ORV: Data, output_type = Out: Data>, 
+  -- identity 
+  -- DEFAULT
+

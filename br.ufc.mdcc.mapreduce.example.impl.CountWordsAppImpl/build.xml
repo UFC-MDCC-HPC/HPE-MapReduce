@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/heron/hpe/heron/cache" default="all" name="CountWordsAppImpl">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="CountWordsAppImpl-1.0.0.0">
+    <ifnot targetexists="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0">
+      <mkdir dir="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseIWordCounterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/BaseIWordCounterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWords/bin/1.0.0.0/IWordCounter.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIWordCounterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IWordCounterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseIWordCounterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/IWordCounterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IWordCounterProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IWordCounterProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IWordCounterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseITallierProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/BaseITallierProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWords/bin/1.0.0.0/ITallier.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseITallierProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/ITallierProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/ITallierProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseITallierProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/ITallierProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/ITallierProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/ITallierProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/ITallierProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/BaseIMasterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWords/bin/1.0.0.0/IMaster.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIMasterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IMasterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/IMasterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/CountWordsAppImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IMasterProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IMasterProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="CountWordsAppImpl-1.0.0.0" name="all"/>
+</project>

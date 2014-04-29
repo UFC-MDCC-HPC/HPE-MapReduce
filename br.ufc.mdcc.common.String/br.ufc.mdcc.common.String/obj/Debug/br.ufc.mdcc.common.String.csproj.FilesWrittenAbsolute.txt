@@ -1,0 +1,9 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/bin/Debug/br.ufc.mdcc.common.String.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/bin/Debug/br.ufc.mdcc.common.String.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/obj/Debug/br.ufc.mdcc.common.String.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/obj/Debug/br.ufc.mdcc.common.String.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.common.String/br.ufc.mdcc.common.String/bin/Debug/MPI.dll

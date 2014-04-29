@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000001700b3eb9d8cf3d085df319eae4c0a37253010e925b031d40b4e0d791f0d5a9b20948f94362a0407591a83c028368e6c7c5e37255565fce34252c37d93a6ecaa9bdf235d31f844f2947ce0b3db210f8e03ad082ef1a294ddf5e454d8adf7bbba01009b8787cceed604bd5425560b7c2aeef6284a688e1eeab2203916988b04ac" isAbstract="true" kind="Computation" name="Teste2" packagePath="teste">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ff93fdbdca5e479e1ced758109ca1375fac0c83db05bda741f9cf9e9b4c79cb02f78f465a32e56c25cc06c81c35368089400c7595e84b032ec388d9f45eb227b59442dc0cd21c48d616697948c7b35c728c12dc70cfa33571ac5f67d62f9ff66ab886ad15ca414923203421a052650113de43dc68b932e94b1082c0d894095ca" localRef="teste" location="teste.Teste/Teste.hpe" multiple="false" name="Teste" package="teste" exposed="false">
+      <visualDescription h="186" w="236" x="219" y="310">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" replica="0" replica_slice="0" slice_replica="0" unit_replica="0" uRef="x">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" replica="1" replica_slice="1" slice_replica="1" unit_replica="1" uRef="x">
+        <visualDescription h="20" w="20" x="28" y="34"/>
+      </unitBounds>
+      <unitBounds parallel="true" replica="2" replica_slice="2" slice_replica="2" unit_replica="2" uRef="x">
+        <visualDescription h="20" w="20" x="51" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" replica="3" replica_slice="1" slice_replica="3" unit_replica="1" uRef="x">
+        <visualDescription h="20" w="20" x="49" y="93"/>
+      </unitBounds>
+      <unitBounds parallel="false" uRef="y">
+        <visualDescription h="20" w="20" x="104" y="26"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="z">
+        <visualDescription h="20" w="20" x="97" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <interface iRef="IXX" nArgs="0">
+      <slice isRef="teste">
+        <originRef cRef="teste" iRef="IX0"/>
+        <visualDescription h="10" w="10" x="11" y="18"/>
+      </slice>
+      <visualDescription h="40" w="80" x="9" y="92">
+        <color b="144" g="238" r="144"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IYY" nArgs="0">
+      <slice isRef="teste">
+        <originRef cRef="teste" iRef="IX2"/>
+        <visualDescription h="10" w="10" x="19" y="19"/>
+      </slice>
+      <visualDescription h="40" w="80" x="245" y="59">
+        <color b="255" g="144" r="30"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IXX" multiple="true" private="false" replica="0" uRef="xx" visibleInterface="true">
+      <slices cRef="teste" slice_replica="0" uRef="x" sliceName="teste" transitive="false">
+        <visualDescription h="10" w="10" x="11" y="18"/>
+      </slices>
+      <visualDescription h="40" w="80" x="29" y="208"/>
+    </unit>
+    <unit iRef="IYY" multiple="true" private="false" replica="0" uRef="yy" visibleInterface="true">
+      <slices cRef="teste" slice_replica="2" uRef="x" sliceName="teste" transitive="false">
+        <visualDescription h="10" w="10" x="19" y="19"/>
+      </slices>
+      <visualDescription h="40" w="80" x="178" y="154"/>
+    </unit>
+    <unit multiple="true" private="false" replica="0" uRef="zz" visibleInterface="false">
+      <slices cRef="teste" slice_replica="3" uRef="x" sliceName="teste" transitive="false">
+        <visualDescription h="10" w="10" x="56" y="8"/>
+      </slices>
+      <visualDescription h="40" w="80" x="90" y="487"/>
+    </unit>
+    <unit multiple="true" private="false" replica="0" uRef="ww" visibleInterface="false">
+      <slices cRef="teste" slice_replica="1" uRef="x" sliceName="teste" transitive="false">
+        <visualDescription h="10" w="10" x="45" y="17"/>
+      </slices>
+      <visualDescription h="40" w="80" x="109" y="369"/>
+    </unit>
+  </componentInfo>
+</component:component>

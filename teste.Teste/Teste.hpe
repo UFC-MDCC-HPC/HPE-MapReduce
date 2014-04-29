@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ff93fdbdca5e479e1ced758109ca1375fac0c83db05bda741f9cf9e9b4c79cb02f78f465a32e56c25cc06c81c35368089400c7595e84b032ec388d9f45eb227b59442dc0cd21c48d616697948c7b35c728c12dc70cfa33571ac5f67d62f9ff66ab886ad15ca414923203421a052650113de43dc68b932e94b1082c0d894095ca" isAbstract="true" kind="Computation" name="Teste" packagePath="teste">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IX0" nArgs="0">
+      <visualDescription h="70" w="131" x="90" y="87">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IX1" nArgs="0">
+      <visualDescription h="70" w="131" x="245" y="84">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IX2" nArgs="0">
+      <visualDescription h="70" w="131" x="378" y="84">
+        <color b="255" g="0" r="0"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IY" nArgs="0">
+      <visualDescription h="40" w="80" x="358" y="337">
+        <color b="240" g="32" r="160"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IZ" nArgs="0">
+      <visualDescription h="40" w="80" x="140" y="375">
+        <color b="0" g="0" r="255"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IX0" multiple="true" private="false" replica="0" uRef="x" visibleInterface="true">
+      <visualDescription h="70" w="131" x="102" y="240"/>
+    </unit>
+    <unit iRef="IX1" multiple="true" private="false" replica="1" uRef="x" visibleInterface="true">
+      <visualDescription h="70" w="131" x="245" y="224"/>
+    </unit>
+    <unit iRef="IX2" multiple="true" private="false" replica="2" uRef="x" visibleInterface="true">
+      <visualDescription h="70" w="131" x="378" y="224"/>
+    </unit>
+    <unit iRef="IY" multiple="false" private="false" replica="0" uRef="y" visibleInterface="true">
+      <visualDescription h="40" w="80" x="358" y="417"/>
+    </unit>
+    <unit iRef="IZ" multiple="true" private="false" replica="0" uRef="z" visibleInterface="true">
+      <visualDescription h="40" w="80" x="140" y="455"/>
+    </unit>
+  </componentInfo>
+</component:component>

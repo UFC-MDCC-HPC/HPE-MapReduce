@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000001b4aed42810170124c4296acd882326d05f7155acb7e079746e5970cbd2bf4306becf9123765d22a42b4ce42c8670d7929a91e101f20b5d3b49284b84577e1e15cfc361daf5ab6cb4009ea4f58a8d607ee90c6e4384da185e043d2d677441d47a2cfee7d32a75960bc5d042bcbeaaba5ce244f5cc291573bfff05e4668047ae7" isAbstract="false" kind="Computation" name="CombineFunctionDefaultIdentity" packagePath="br.ufc.mdcc.mapreduce.user.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003bb8cde9cdaf37a9334c439fcee37e98f23ec8f770a0dd398d69a02afa9b0b6d92cdd358fbef3d31c98c25b423e71aa3f82f5a9fa45c4e07fb936dcdb2d354ac190e6336e4ef093d9066eabb47aae1535f63d42c132b240292498296152c4a2135644a69593f84cc8e1d5d7d6d377e5b296d103e4e1180058b3d3a1aa61d78b4" localRef="base" location="br.ufc.mdcc.mapreduce.user.CombineFunction/CombineFunction.hpe" name="CombineFunction" package="br.ufc.mdcc.mapreduce.user" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="272" y="155">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="input_item_type" varName="ORV"/>
+        <parameter formFieldId="output_type" varName="Out"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="94" y="106">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="ORV"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="169" x="105" y="436">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="ORV"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="combine_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="orv_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="212" y="72">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="out_type" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="100" x="94" y="106">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="ORV"/>
+      <unitBounds parallel="false" uRef="iterator">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="out_type" direct="true" varName="Out"/>
+    <supplyParameter cRef="orv_type" direct="true" varName="ORV"/>
+    <interface iRef="ICombineIdentityImpl" nArgs="2">
+      <slice isRef="input_data">
+        <originRef cRef="input_data" iRef="IIterator"/>
+        <visualDescription h="10" w="10" x="15" y="80"/>
+      </slice>
+      <slice isRef="output_data">
+        <originRef cRef="output_data" iRef="IData"/>
+        <visualDescription h="10" w="10" x="125" y="79"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity { &#xA;&#xA;public abstract class BaseICombineIdentityImpl&lt;ORV, Out>: Computation, BaseICombineFunction&lt;ORV, Out>&#xA;where ORV:IData&#xA;where Out:IIterator&lt;ORV>&#xA;{&#xA;&#xA;private Out output_data = default(Out);&#xA;&#xA;public Out Output_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;this.output_data = (Out) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;return this.output_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IIterator&lt;ORV> input_data = null;&#xA;&#xA;public IIterator&lt;ORV> Input_data {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;this.input_data = (IIterator&lt;ORV>) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;return this.input_data;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseICombineIdentityImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity/bin/1.0.0.0/BaseICombineIdentityImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/BaseICombineFunction.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity { &#xA;&#xA;&#x9;public class ICombineIdentityImpl&lt;ORV, Out> : BaseICombineIdentityImpl&lt;ORV, Out>, ICombineFunction&lt;ORV, Out>&#xA;&#x9;where ORV:IData&#xA;&#x9;where Out:IIterator&lt;ORV>&#xA;&#x9;{&#xA;&#x9;&#x9;public ICombineIdentityImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;ORV> input_data_instance = (IIteratorInstance&lt;ORV>) Input_data.Instance;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;ORV> output_data_instance = (IIteratorInstance&lt;ORV>) Output_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;while (!input_data_instance.HasFinished)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;ORV item = (ORV) input_data_instance.fetch_next();&#xA;&#x9;&#x9;&#x9;&#x9;output_data_instance.put(item);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="ICombineIdentityImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity/bin/1.0.0.0/ICombineIdentityImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity/bin/1.0.0.0/BaseICombineIdentityImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="102" w="151" x="68" y="86">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="input_data"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="96" y="0"/>
+        <slice pRef="output_data" sRef="output_data"/>
+      </port>
+      <parameter iname="IData" order="0" parid="input_item_type" uname="data" varid="ORV"/>
+      <parameter iname="IIterator" order="1" parid="output_type" uname="iterator" varid="Out"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ICombineIdentityImpl" multiple="false" private="false" replica="0" uRef="combine_function" visibleInterface="true">
+      <super cRef="base" uRef="combine_function"/>
+      <visualDescription h="79" w="151" x="82" y="312"/>
+    </unit>
+  </componentInfo>
+</component:component>

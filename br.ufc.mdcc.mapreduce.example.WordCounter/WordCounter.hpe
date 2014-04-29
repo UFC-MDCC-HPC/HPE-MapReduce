@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000276dfbff80da817e4793ffb57498577070167fa02ac7fa6bad0ecac194eb08f8bae2bd2eb3f57465403193e7691459fbd976dfd3bb49314c7b122b867e95d3a5af3f7c57a9c3757d7a4196482de592aacb993e6884d0de1bcecc98c4729f864ce6d58060093bfe4d320a91f91f71b6a4ff167df5452b24233fd6b454593c968a" isAbstract="true" kind="Computation" name="WordCounter" packagePath="br.ufc.mdcc.mapreduce.example">
+    <baseType>
+      <extensionType>
+        <extends>true</extends>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ed9cf24ee54909dbdab6b9b2f55d31712a25881da84150226a43bd3b30d9adc0cfdf66db67f1a1daa69b9c7c49066ce5104db88e863c07758326b7fbbc660dbc53fa7f5c692a9d7e9a655fd1fb0b1c873f338538061f68aa3fb83cee564f3a015a13d3eb850c7900d0929b72e15ee64b5085583d7247861a0fcd292ce4730bcc" localRef="base" location="br.ufc.mdcc.mapreduce.user.MapFunction/MapFunction.hpe" name="MapFunction" package="br.ufc.mdcc.mapreduce.user" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="328" y="245">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="input_key_type" varName="IMK"/>
+        <parameter formFieldId="output_item_value_type" varName="OMV"/>
+        <parameter formFieldId="input_value_type" varName="IMV"/>
+        <parameter formFieldId="output_item_key_type" varName="OMK"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="118" y="401">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_value" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="371" y="535">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="69" w="188" x="244" y="453">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###1519980950"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="map_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="100" x="118" y="401">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="output_item_value_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="219" y="321">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="output_item_key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="471" y="410">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_value_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="100" x="371" y="535">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="output_item_key_type" direct="true" varName="OMK"/>
+    <supplyParameter cRef="input_key_type" direct="true" varName="IMK"/>
+    <supplyParameter cRef="output_item_value_type" direct="true" varName="OMV"/>
+    <supplyParameter cRef="input_value_type" direct="true" varName="IMV"/>
+    <interface iRef="IWordCounter" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.String;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.WordCounter { &#xA;&#xA;&#x9;public interface BaseIWordCounter : BaseIMapFunction&lt;IInteger,IString,IString,IInteger>, IComputationKind &#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIWordCounter.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.WordCounter/bin/1.0.0.0/BaseIWordCounter.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.user.MapFunction/bin/1.0.0.0/BaseIMapFunction.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.String;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.WordCounter { &#xA;&#xA;&#x9;public interface IWordCounter : BaseIWordCounter, IMapFunction&lt;IInteger,IString,IString,IInteger>&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IWordCounter.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.WordCounter/bin/1.0.0.0/IWordCounter.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.WordCounter/bin/1.0.0.0/BaseIWordCounter.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.MapFunction/bin/1.0.0.0/IMapFunction.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="141" x="263" y="70">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IWordCounter" multiple="false" private="false" replica="0" uRef="map_function" visibleInterface="true">
+      <super cRef="base" uRef="map_function"/>
+      <visualDescription h="40" w="141" x="394" y="168"/>
+    </unit>
+  </componentInfo>
+</component:component>

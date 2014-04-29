@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/heron/hpe/heron/cache" default="all" name="BreakInLinesImpl">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="BreakInLinesImpl-1.0.0.0">
+    <ifnot targetexists="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/bin/1.0.0.0">
+      <mkdir dir="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/BreakInLinesImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/bin/1.0.0.0/BaseIBreakInLinesImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/src/1.0.0.0/BaseIBreakInLinesImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
+        <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.BreakInLines/bin/1.0.0.0/BaseISplitFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/BreakInLinesImpl.snk" optimize="true" output="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/bin/1.0.0.0/IBreakInLinesImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/src/1.0.0.0/IBreakInLinesImpl.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/bin/1.0.0.0/BaseIBreakInLinesImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.BreakInLines/bin/1.0.0.0/ISplitFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="BreakInLinesImpl-1.0.0.0" name="all"/>
+</project>

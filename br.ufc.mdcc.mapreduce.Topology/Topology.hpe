@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000334a7b4213609ca3531e22bf0e6eab5f1dc36895b64893a776fec2023a2c25043e0fbfbaa3dea5359466b5cd9cd9974658e047f3391afa643f565f5897054bd58f13673b89c47610aed4a3dc092f94899481d001fe3b537f2fefc655e6bec60f0ed828e9c5cd2893a019123bdf3ec493b7ccacef877e8d568d0ccc6bf9bfc49d" isAbstract="true" kind="Topology" name="Topology" packagePath="br.ufc.mdcc.mapreduce">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000bc2e46d4f6a0f36af71ca837389237ab6cd9205c57de9bceb5d9af4c8964bb526c3a94488dfda35bb03f3a28c6226a66babe041534f1ea67bd2ccdf562a0c8948629c71e968418c23a5021d7fdcdcd8d3582c2a94c0a33fdaf0efe197a5324b57f1a680383f55c7b7efac0d9fc05da4df15a03d3aad339721265d6d65e37ce8" localRef="base" location="br.ufc.mdcc.common.Topology/Topology.hpe" multiple="false" name="Topology" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="172" y="238">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="topology">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+  </componentInfo>
+</component:component>

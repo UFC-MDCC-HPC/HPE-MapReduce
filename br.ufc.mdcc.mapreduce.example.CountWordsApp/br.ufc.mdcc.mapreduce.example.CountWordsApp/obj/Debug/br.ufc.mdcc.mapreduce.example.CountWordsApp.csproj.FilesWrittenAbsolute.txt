@@ -1,0 +1,11 @@
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/br.ufc.mdcc.mapreduce.example.CountWordsApp.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/br.ufc.mdcc.mapreduce.example.CountWordsApp.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/obj/Debug/br.ufc.mdcc.mapreduce.example.CountWordsApp.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/obj/Debug/br.ufc.mdcc.mapreduce.example.CountWordsApp.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/DGAC.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/br.ufc.mdcc.common.Data.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/br.ufc.mdcc.common.Data.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/br.ufc.mdcc.common.Platform.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/br.ufc.mdcc.common.Platform.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.example.CountWordsApp/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/Debug/MPI.dll

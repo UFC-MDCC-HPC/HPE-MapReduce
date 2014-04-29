@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000006d638c9f6c0b925128b98c5a316e368c89eefeca434979c5dac769bed1e35dd8d05f5d64dee955837c87cbba023bfee2eddfca39058b3bb0b4ef94d94c2fbde3a4bb8406569fe9811cdcb7585b387c5601c8fc77796edf7bcb404e2b65701c584e9c027bc54a0c82967ef00f75ee120ab95cb4114afe1781d2b4e820694ecf8c" isAbstract="true" kind="Application" name="CountWordsApp" packagePath="br.ufc.mdcc.mapreduce.example">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <parameter componentRef="platform" formFieldId="platform" order="0" varName="PLATFORM"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003b9aad581d3c9e6c3be033e2504619a97b15caa53bdc8d67b6941462fd9b29ff3e8bd8ce3d68fc518d8d97b84e943c3b0b9f959710679a4709dcee635ff80706981b4c6d74c113c6e08e28c276b643235637b208a8164b29893ba552c722798606a9566c8d670bfdce28440fea89b6ad6e3aff922bb5924111e49f2d5139059d" localRef="count_words" location="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" multiple="false" name="CountWords" package="br.ufc.mdcc.mapreduce.example" exposed="false">
+      <visualDescription h="80" w="160" x="215" y="148">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="platform" varName="PLATFORM"/>
+      <unitBounds parallel="false" uRef="master">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="word_counter">
+        <visualDescription h="20" w="20" x="28" y="2"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="tallier">
+        <visualDescription h="20" w="20" x="51" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" parameter_id="platform" exposed="false">
+      <visualDescription h="60" w="100" x="79" y="184">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <interface iRef="IWordCounterProcess" nArgs="1">
+      <slice isRef="count_words">
+        <originRef cRef="count_words" iRef="IWordCounter"/>
+        <visualDescription h="10" w="10" x="151" y="12"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.CountWordsApp { &#xA;&#xA;public interface BaseIWordCounterProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIWordCounterProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIWordCounterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.CountWordsApp { &#xA;&#xA;public interface IWordCounterProcess&lt;PLATFORM> : BaseIWordCounterProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IWordCounterProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/IWordCounterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIWordCounterProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="50" w="195" x="16" y="157">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ITallierProcess" nArgs="1">
+      <slice isRef="count_words">
+        <originRef cRef="count_words" iRef="ITallier"/>
+        <visualDescription h="10" w="10" x="18" y="34"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.CountWordsApp { &#xA;&#xA;public interface BaseITallierProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseITallierProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseITallierProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.CountWordsApp { &#xA;&#xA;public interface ITallierProcess&lt;PLATFORM> : BaseITallierProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ITallierProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/ITallierProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseITallierProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="50" w="142" x="402" y="116">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IMasterProcess" nArgs="1">
+      <slice isRef="count_words">
+        <originRef cRef="count_words" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="8" y="24"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.CountWordsApp { &#xA;&#xA;public interface BaseIMasterProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIMasterProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIMasterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.CountWordsApp { &#xA;&#xA;public interface IMasterProcess&lt;PLATFORM> : BaseIMasterProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IMasterProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/IMasterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="144" x="368" y="36">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IWordCounterProcess" multiple="true" private="false" replica="0" uRef="word_counter_process" visibleInterface="true">
+      <slices cRef="count_words" slice_replica="0" uRef="word_counter" sliceName="count_words" transitive="false">
+        <visualDescription h="10" w="10" x="151" y="12"/>
+      </slices>
+      <visualDescription h="50" w="195" x="49" y="285"/>
+    </unit>
+    <unit iRef="ITallierProcess" multiple="true" private="false" replica="0" uRef="tallier_process" visibleInterface="true">
+      <slices cRef="count_words" slice_replica="0" uRef="tallier" sliceName="count_words" transitive="false">
+        <visualDescription h="10" w="10" x="18" y="34"/>
+      </slices>
+      <visualDescription h="50" w="142" x="402" y="216"/>
+    </unit>
+    <unit iRef="IMasterProcess" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <slices cRef="count_words" slice_replica="0" uRef="master" sliceName="count_words" transitive="false">
+        <visualDescription h="10" w="10" x="8" y="24"/>
+      </slices>
+      <visualDescription h="40" w="144" x="223" y="68"/>
+    </unit>
+  </componentInfo>
+</component:component>
