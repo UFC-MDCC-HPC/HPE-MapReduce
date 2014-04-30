@@ -9,7 +9,7 @@
         <visualDescription h="60" w="100" x="207" y="344">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <unitBounds parallel="false" uRef="data_pgrank">
+        <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
