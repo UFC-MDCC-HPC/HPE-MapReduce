@@ -112,7 +112,7 @@
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IBreakInPageNodes" multiple="false" private="false" replica="0" uRef="break_in_page_nodes" visibleInterface="true">
+    <unit iRef="IBreakInPageNodes" multiple="false" private="false" replica="0" uRef="split_function" visibleInterface="true">
       <super cRef="base" uRef="split_function"/>
       <visualDescription h="40" w="151" x="187" y="229"/>
     </unit>

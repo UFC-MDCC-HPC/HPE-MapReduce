@@ -52,7 +52,7 @@
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="vote_map">
+        <unitBounds parallel="false" uRef="map_function">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -71,8 +71,8 @@
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IVoteMapImpl" multiple="false" private="false" replica="0" uRef="vote_map" visibleInterface="true">
-      <super cRef="base" uRef="vote_map"/>
+    <unit iRef="IVoteMapImpl" multiple="false" private="false" replica="0" uRef="map_function" visibleInterface="true">
+      <super cRef="base" uRef="map_function"/>
       <visualDescription h="40" w="141" x="261" y="186"/>
     </unit>
   </componentInfo>

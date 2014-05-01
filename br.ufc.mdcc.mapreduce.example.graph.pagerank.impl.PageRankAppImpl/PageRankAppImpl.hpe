@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cba521266c79480bf687beb24d267c0a93a5e56c60901e0b51351c6f9c3772ef8660d446add8040e7dac589e846cd34996af1b7baf4af44144a6a2c92f0ec2da26d930b1f0864006e50368bb9d5b4f245cac2cff991135465cdd3f581d291368780da2f4139c41c383bf385545be9e83cf0e4881218e9e24db7e48bce8444a97" isAbstract="false" kind="Application" name="PageRankAppImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002bec06a8e9b86395353dbb42d5a11a06ec7f804d1657b9a5cac2346d8898871960f923d5d1ff5b7fd59828586f4fdbc454ebe73d4de35f6cfdda9814f6acfab2f82827b051c9cc82547413a6bef7279b2f48d5beb7b8aed6dbad371f38fff50da8e474b7aa6c2d9808ec80543395d40551f384332f0b0aa4fc4fa82f46397991" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp/PageRankApp.hpe" name="PageRankApp" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="264" y="290">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="platform" varName="PLATFORM"/>
+        <unitBounds parallel="false" uRef="master_process">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="vote_map_process">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="vote_reduce_process">
+          <visualDescription h="20" w="20" x="51" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="270" y="373">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <interface iRef="IMasterProcessImpl" nArgs="1">
+      <slice isRef="page_rank">
+        <originRef cRef="page_rank" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="133" y="20"/>
+      </slice>
+      <visualDescription h="40" w="173" x="237" y="69">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IVoteMapProcessImpl" nArgs="1">
+      <slice isRef="page_rank">
+        <originRef cRef="page_rank" iRef="IVoteMap"/>
+        <visualDescription h="10" w="10" x="131" y="23"/>
+      </slice>
+      <visualDescription h="72" w="168" x="70" y="219">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IVoteReduceProcessImpl" nArgs="1">
+      <slice isRef="page_rank">
+        <originRef cRef="page_rank" iRef="IVoteReduce"/>
+        <visualDescription h="10" w="10" x="143" y="17"/>
+      </slice>
+      <visualDescription h="72" w="180" x="433" y="214">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IMasterProcessImpl" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <super cRef="base" uRef="master_process"/>
+      <visualDescription h="40" w="173" x="175" y="175"/>
+    </unit>
+    <unit iRef="IVoteMapProcessImpl" multiple="true" private="false" replica="0" uRef="vote_map_process" visibleInterface="true">
+      <super cRef="base" uRef="vote_map_process"/>
+      <visualDescription h="72" w="168" x="70" y="363"/>
+    </unit>
+    <unit iRef="IVoteReduceProcessImpl" multiple="true" private="false" replica="0" uRef="vote_reduce_process" visibleInterface="true">
+      <super cRef="base" uRef="vote_reduce_process"/>
+      <visualDescription h="72" w="180" x="433" y="358"/>
+    </unit>
+  </componentInfo>
+</component:component>
