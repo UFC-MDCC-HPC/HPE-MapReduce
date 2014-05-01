@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000d1dd74930bb5731c1377deb7c0cbbbbd0302777a2776500a5a2218d67d081ad2b48e29984805d860c781007b1a1f56e8e3cfb12857d2524d7153643b2efbc5580c661463216a5d0d5eeb38d1a3811001414dcbe25dd96b5aca152731930593c2fa977b4540e29ee240ac08aa0990e339de906f6c5a2ba893e8a68153171a37a5" isAbstract="false" kind="Computation" name="BreakInNodesImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000d1dd74930bb5731c1377deb7c0cbbbbd0302777a2776500a5a2218d67d081ad2b48e29984805d860c781007b1a1f56e8e3cfb12857d2524d7153643b2efbc5580c661463216a5d0d5eeb38d1a3811001414dcbe25dd96b5aca152731930593c2fa977b4540e29ee240ac08aa0990e339de906f6c5a2ba893e8a68153171a37a5" isAbstract="false" kind="Computation" name="BreakInPageNodesImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000bf614e390c9c4598e6e1a6f4033d613bf81d36f0356f378d6c7a1c694b7789a151b3aedd19a642fabf5adaf52528aa8b72f2b5d917bf64b96a5b0c8bf6408dc882a84675788ec7a54ae7c389ed710b7273ae45e6a209a0b49e768be92caaf0bf600724fe55fa70cf7966950e45ed3074a6743cb14d7ce28beec91fe72855db92" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes/BreakInNodes.hpe" name="BreakInNodes" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000bf614e390c9c4598e6e1a6f4033d613bf81d36f0356f378d6c7a1c694b7789a151b3aedd19a642fabf5adaf52528aa8b72f2b5d917bf64b96a5b0c8bf6408dc882a84675788ec7a54ae7c389ed710b7273ae45e6a209a0b49e768be92caaf0bf600724fe55fa70cf7966950e45ed3074a6743cb14d7ce28beec91fe72855db92" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes/BreakInPageNodes.hpe" name="BreakInPageNodes" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
         <visualDescription h="60" w="100" x="237" y="416">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="value_type" varName="IMV"/>
-        <parameter formFieldId="input_type" varName="IMAP"/>
-        <parameter formFieldId="key_type" varName="IMK"/>
-        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="67" y="397">
-            <color b="255" g="255" r="255"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="140" x="329" y="135">
+            <color b="203" g="192" r="255"/>
           </visualDescription>
-          <unitBounds parallel="false" uRef="data">
+          <parameter formFieldId="item_type" varName="IMV"/>
+          <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
@@ -24,12 +22,12 @@
           <visualDescription h="60" w="169" x="350" y="345">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1397698894359"/>
+          <parameter formFieldId="item_type" varName="X###14900725"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="break_in_nodes">
+        <unitBounds parallel="false" uRef="break_in_page_nodes">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -40,85 +38,28 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" parameter_id="key_type" exposed="false">
-      <visualDescription h="60" w="100" x="359" y="200">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="tid_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="100" x="408" y="115">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" localRef="value_type" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe" multiple="false" name="PageNode" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" parameter_id="value_type" exposed="false">
-      <visualDescription h="60" w="100" x="521" y="142">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <parameter formFieldId="id_type" varName="TID"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="true">
-        <visualDescription h="60" w="100" x="412" y="72">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data_pgrank">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="127" x="587" y="57">
-          <color b="203" g="192" r="255"/>
-        </visualDescription>
-        <parameter formFieldId="item_type" varName="TID"/>
-        <unitBounds parallel="false" uRef="iterator">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <unitBounds parallel="false" uRef="page_node">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" parameter_id="input_type" exposed="false">
-      <visualDescription h="60" w="100" x="322" y="201">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <supplyParameter cRef="tid_type" varName="TID"/>
-    <parameter componentRef="key_type" formFieldId="key_type" order="0" varName="IMK"/>
-    <parameter componentRef="value_type" formFieldId="value_type" order="2" varName="IMV"/>
-    <parameter componentRef="input_type" formFieldId="input_type" order="2" varName="IMAP"/>
-    <interface iRef="IBreakInNodesImpl" nArgs="3">
+    <interface iRef="IBreakInPageNodesImpl" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl { &#xA;&#xA;&#x9;public abstract class BaseIBreakInNodesImpl: Computation, BaseIBreakInNodes{&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IInteger, IPageNode&lt;IInteger>>> output_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IKVPair&lt;IInteger, IPageNode&lt;IInteger>>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IInteger, IPageNode&lt;IInteger>>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString input_data = null;&#xA;&#x9;&#x9;public IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIBreakInNodesImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl/bin/1.0.0.0/BaseIBreakInNodesImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;//using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl { &#xA;&#xA;&#x9;public abstract class BaseIBreakInPageNodesImpl: Computation, BaseIBreakInPageNodes{&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IInteger, IPageNode&lt;IInteger>>> output_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IKVPair&lt;IInteger, IPageNode&lt;IInteger>>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IInteger, IPageNode&lt;IInteger>>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IPageNode&lt;IInteger>> input_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IPageNode&lt;IInteger>> Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IIterator&lt;IPageNode&lt;IInteger>>) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIBreakInPageNodesImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl/bin/1.0.0.0/BaseIBreakInPageNodesImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes/bin/1.0.0.0/BaseIBreakInNodes.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes/bin/1.0.0.0/BaseIBreakInPageNodes.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using System.Collections.Generic;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl { &#xA;&#x9;public class IBreakInNodesImpl: BaseIBreakInNodesImpl, IBreakInNodes{&#xA;&#x9;&#x9;public IBreakInNodesImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;IDictionary&lt;int, IDictionary&lt;int,IPageNode&lt;IInteger>>> dictionary = new Dictionary&lt;int, IDictionary&lt;int,IPageNode&lt;IInteger>>>();&#xA;&#xA;&#x9;&#x9;&#x9;string[] lines = Input_data.Value.Split(new char[] {'\n'});&#xA;&#x9;&#x9;&#x9;foreach (string line in lines){&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;IPageNode&lt;IInteger> v, n, temp = null;&#xA;&#x9;&#x9;&#x9;&#x9;IDictionary&lt;int,IPageNode&lt;IInteger>> dicRef0, dicRef1 = null;&#xA;&#x9;&#x9;&#x9;&#x9;string[] spl = line.Split(' ');&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;int[] Ids = new int[spl.Length];&#xA;&#x9;&#x9;&#x9;&#x9;int j = 0;&#xA;&#x9;&#x9;&#x9;&#x9;foreach(string i in spl){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Ids[j] = int.Parse(i);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;j++;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;if (!dictionary.TryGetValue (Ids [0], out dicRef0)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IKVPair&lt;IInteger,IPageNode&lt;IInteger>> pair = (IKVPair&lt;IInteger, IPageNode&lt;IInteger>>)Output_data.createItem();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key = pair.Value.Id;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key.Value = Ids[0];&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef0 = new Dictionary&lt;int,IPageNode&lt;IInteger>> ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dictionary [Ids [0]] = dicRef0;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef0 [Ids [0]] = pair.Value;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;if (!dictionary.TryGetValue (Ids [1], out dicRef1)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IKVPair&lt;IInteger,IPageNode&lt;IInteger>> pair = (IKVPair&lt;IInteger, IPageNode&lt;IInteger>>)Output_data.createItem();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key = pair.Value.Id;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key.Value = Ids[1];&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef1 = new Dictionary&lt;int,IPageNode&lt;IInteger>> ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dictionary [Ids [1]] = dicRef1;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef1 [Ids [1]] = pair.Value;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;v = dicRef0[Ids[0]];&#xA;&#x9;&#x9;&#x9;&#x9;n = dicRef1[Ids[1]];&#xA;&#x9;&#x9;&#x9;&#x9;if (!dicRef0.TryGetValue (Ids [1], out temp)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef0 [Ids [1]] = n;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;v.Neighbors.put (n.Id);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IBreakInNodesImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl/bin/1.0.0.0/IBreakInNodesImpl.dll" versionId="1.0.0.0">
-          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInNodesImpl/bin/1.0.0.0/BaseIBreakInNodesImpl.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInNodes/bin/1.0.0.0/IBreakInNodes.dll</dependency>
+        <file contents="using System;&#xA;using System.Collections.Generic;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl { &#xA;&#x9;public class IBreakInPageNodesImpl: BaseIBreakInPageNodesImpl, IBreakInPageNodes{&#xA;&#x9;&#x9;public IBreakInPageNodesImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;while (!Input_data.HasFinished) {&#xA;&#x9;&#x9;&#x9;&#x9;IKVPair&lt;IInteger,IPageNode&lt;IInteger>> pair = (IKVPair&lt;IInteger, IPageNode&lt;IInteger>>)Output_data.createItem ();&#xA;&#x9;&#x9;&#x9;&#x9;IPageNode&lt;IInteger> v = Input_data.fetch_next ();&#xA;&#x9;&#x9;&#x9;&#x9;pair.Key = v.Id;&#xA;&#x9;&#x9;&#x9;&#x9;pair.Value = v;&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;/*&#xA;&#x9;&#x9;&#x9;IDictionary&lt;int, IDictionary&lt;int,IPageNode&lt;IInteger>>> dictionary = new Dictionary&lt;int, IDictionary&lt;int,IPageNode&lt;IInteger>>>();&#xA;&#x9;&#x9;&#x9;IInteger alternativeID = null;&#xA;&#xA;&#x9;&#x9;&#x9;string[] lines = Input_data.Value.Split(new char[] {'\n'});&#xA;&#x9;&#x9;&#x9;foreach (string line in lines){&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;IPageNode&lt;IInteger> v, n, temp = null;&#xA;&#x9;&#x9;&#x9;&#x9;IDictionary&lt;int,IPageNode&lt;IInteger>> dicRef0, dicRef1 = null;&#xA;&#x9;&#x9;&#x9;&#x9;string[] spl = line.Split(' ');&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;int[] Ids = new int[spl.Length];&#xA;&#x9;&#x9;&#x9;&#x9;int j = 0;&#xA;&#x9;&#x9;&#x9;&#x9;foreach(string i in spl){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Ids[j] = int.Parse(i);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;j++;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;if (!dictionary.TryGetValue (Ids [0], out dicRef0)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IKVPair&lt;IInteger,IPageNode&lt;IInteger>> pair = (IKVPair&lt;IInteger, IPageNode&lt;IInteger>>)Output_data.createItem ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key = pair.Value.Id;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key.Value = Ids [0];&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef0 = new Dictionary&lt;int,IPageNode&lt;IInteger>> ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dictionary [Ids [0]] = dicRef0;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef0 [Ids [0]] = pair.Value;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (alternativeID == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;alternativeID = (IInteger)pair.Key.clone ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Value.Neighbors.put (alternativeID);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;if (!dictionary.TryGetValue (Ids [1], out dicRef1)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IKVPair&lt;IInteger,IPageNode&lt;IInteger>> pair = (IKVPair&lt;IInteger, IPageNode&lt;IInteger>>)Output_data.createItem();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key = pair.Value.Id;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Key.Value = Ids[1];&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef1 = new Dictionary&lt;int,IPageNode&lt;IInteger>> ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dictionary [Ids [1]] = dicRef1;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef1 [Ids [1]] = pair.Value;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (alternativeID == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;alternativeID = (IInteger)pair.Key.clone ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;pair.Value.Neighbors.put (alternativeID);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;v = dicRef0[Ids[0]];&#xA;&#x9;&#x9;&#x9;&#x9;n = dicRef1[Ids[1]];&#xA;&#x9;&#x9;&#x9;&#x9;if (!dicRef0.TryGetValue (Ids [1], out temp)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dicRef0 [Ids [1]] = n;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;v.Neighbors.put (n.Id);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;alternativeID.Value = dictionary.Count * -1;&#xA;&#x9;&#x9;&#x9;*/&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IBreakInPageNodesImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl/bin/1.0.0.0/IBreakInPageNodesImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl/bin/1.0.0.0/BaseIBreakInPageNodesImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes/bin/1.0.0.0/IBreakInPageNodes.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="151" x="112" y="114">
+      <visualDescription h="40" w="244" x="19" y="114">
         <color b="0" g="255" r="255"/>
       </visualDescription>
-      <parameter iname="IIterator" parid="input_type" uname="iterator" varid="IMAP"/>
-      <parameter iname="IPageNode" order="1" parid="value_type" uname="page_node" varid="IMV"/>
-      <parameter iname="IInteger" order="0" parid="key_type" uname="data" varid="IMK"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IBreakInNodesImpl" multiple="false" private="false" replica="0" uRef="break_in_nodes" visibleInterface="true">
-      <super cRef="base" uRef="break_in_nodes"/>
+    <unit iRef="IBreakInPageNodesImpl" multiple="false" private="false" replica="0" uRef="break_in_page_nodes" visibleInterface="true">
+      <super cRef="base" uRef="break_in_page_nodes"/>
       <visualDescription h="40" w="151" x="163" y="263"/>
     </unit>
   </componentInfo>
