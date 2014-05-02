@@ -6,7 +6,7 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000ed9cf24ee54909dbdab6b9b2f55d31712a25881da84150226a43bd3b30d9adc0cfdf66db67f1a1daa69b9c7c49066ce5104db88e863c07758326b7fbbc660dbc53fa7f5c692a9d7e9a655fd1fb0b1c873f338538061f68aa3fb83cee564f3a015a13d3eb850c7900d0929b72e15ee64b5085583d7247861a0fcd292ce4730bcc" localRef="base" location="br.ufc.mdcc.mapreduce.user.MapFunction/MapFunction.hpe" name="MapFunction" package="br.ufc.mdcc.mapreduce.user" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="372" y="268">
+        <visualDescription h="92" w="212" x="340" y="316">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_key_type" varName="IMK"/>
@@ -14,7 +14,7 @@
         <parameter formFieldId="input_value_type" varName="IMV"/>
         <parameter formFieldId="output_item_key_type" varName="OMK"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="61" w="147" x="712" y="125">
+          <visualDescription h="61" w="147" x="772" y="82">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -22,12 +22,12 @@
           </unitBounds>
         </port>
         <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003de45bf4c318dc3dd39282d2976e2277450bfe09d7c9c18096aa63e36d1902a1dbc5c3397f465bf2f80045565c08aa4b4c1540f05bbb891a258185ba3142533c1e22da7bb549a35684af27c0a8d30bd51be53a4948ab7cdc8e28eeea0c39377290602f9c2dddcb4611b10f7ab8ebd7579ca75a2c040cdd5f631a2dae22b9fd97" localRef="input_value" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/CliqueNode.hpe" multiple="false" name="CliqueNode" package="br.ufc.mdcc.mapreduce.example.graph.clique" exposed="true">
-          <visualDescription h="60" w="182" x="767" y="175">
+          <visualDescription h="60" w="182" x="745" y="187">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <parameter formFieldId="id_type" varName="IMK"/>
           <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-            <visualDescription h="52" w="127" x="622" y="110">
+            <visualDescription h="52" w="127" x="949" y="133">
               <color b="203" g="192" r="255"/>
             </visualDescription>
             <parameter formFieldId="item_type" varName="IMK"/>
@@ -40,16 +40,16 @@
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="69" w="188" x="465" y="366">
+          <visualDescription h="54" w="141" x="659" y="335">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###10395185"/>
+          <parameter formFieldId="item_type" varName="X###4129221"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
         <unitBounds parallel="false" uRef="map_function">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+          <visualDescription h="20" w="20" x="97" y="7"/>
         </unitBounds>
       </component>
     </baseType>
@@ -60,7 +60,7 @@
   </header>
   <componentInfo>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="imk" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="61" w="147" x="712" y="125">
+      <visualDescription h="61" w="147" x="772" y="82">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
@@ -68,12 +68,12 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003de45bf4c318dc3dd39282d2976e2277450bfe09d7c9c18096aa63e36d1902a1dbc5c3397f465bf2f80045565c08aa4b4c1540f05bbb891a258185ba3142533c1e22da7bb549a35684af27c0a8d30bd51be53a4948ab7cdc8e28eeea0c39377290602f9c2dddcb4611b10f7ab8ebd7579ca75a2c040cdd5f631a2dae22b9fd97" localRef="imv" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/CliqueNode.hpe" multiple="false" name="CliqueNode" package="br.ufc.mdcc.mapreduce.example.graph.clique" exposed="true">
-      <visualDescription h="60" w="182" x="767" y="175">
+      <visualDescription h="60" w="182" x="745" y="187">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="id_type" varName="IMK"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="52" w="127" x="622" y="110">
+        <visualDescription h="52" w="127" x="949" y="133">
           <color b="203" g="192" r="255"/>
         </visualDescription>
         <parameter formFieldId="item_type" varName="IMK"/>
@@ -86,7 +86,7 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="omk" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="249" x="710" y="193">
+      <visualDescription h="60" w="249" x="505" y="106">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
@@ -94,17 +94,17 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="omv" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="261" x="709" y="304">
+      <visualDescription h="60" w="261" x="594" y="199">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="V"/>
+      <parameter formFieldId="value_type" varName="OMVV"/>
       <parameter formFieldId="key_type" varName="IMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="omv_value_type" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="195" x="758" y="419">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="omvv" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="195" x="744" y="342">
         <color b="203" g="192" r="255"/>
       </visualDescription>
       <parameter formFieldId="item_type" varName="IMK"/>
@@ -112,7 +112,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="omv_value_type" direct="true" varName="V"/>
+    <supplyParameter cRef="omvv" direct="true" varName="OMVV"/>
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
     <supplyParameter cRef="omv" direct="true" varName="OMV"/>
@@ -131,7 +131,7 @@
           <dependency>br.ufc.mdcc.mapreduce.user.MapFunction/bin/1.0.0.0/IMapFunction.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="141" x="130" y="88">
+      <visualDescription h="83" w="226" x="334" y="93">
         <color b="0" g="255" r="0"/>
       </visualDescription>
       <action id="main">
@@ -140,7 +140,7 @@
     </interface>
     <unit iRef="ICliqueMap" multiple="false" private="false" replica="0" uRef="map_function" visibleInterface="true">
       <super cRef="base" uRef="map_function"/>
-      <visualDescription h="40" w="141" x="295" y="179"/>
+      <visualDescription h="48" w="141" x="376" y="221"/>
     </unit>
   </componentInfo>
 </component:component>

@@ -6,14 +6,14 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002348db9a72b5d2aeca968f2613edf0d8af60afefb00066e70ed09bd547f22b3e26b2f0bfe2d1d6ec8d1393e192c076c06426ed9d87ac969a38198e0872c27b08d12b9e88b28f256756d4e23f00298e2edb0bba025c9247f6304b0774c37ee31f2e6596d85e943e9a3b240a4393e20d6926bbcfb1fa7399afb0cf242c9fb2e8c6" localRef="base" location="br.ufc.mdcc.mapreduce.user.ReduceFunction/ReduceFunction.hpe" name="ReduceFunction" package="br.ufc.mdcc.mapreduce.user" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="258" y="357">
+        <visualDescription h="109" w="170" x="321" y="358">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_key_type" varName="OMK"/>
         <parameter formFieldId="input_value_type" varName="OMV"/>
         <parameter formFieldId="output_type" varName="ORV"/>
         <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_value" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="198" x="426" y="135">
+          <visualDescription h="60" w="198" x="522" y="199">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <parameter formFieldId="value_type" varName="ORVV"/>
@@ -23,17 +23,17 @@
           </unitBounds>
         </port>
         <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="141" x="53" y="385">
+          <visualDescription h="60" w="141" x="89" y="383">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="value_type" varName="X###28552842"/>
+          <parameter formFieldId="value_type" varName="X###12767905"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
         <unitBounds parallel="false" uRef="reduce_function">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+          <visualDescription h="20" w="20" x="73" y="12"/>
         </unitBounds>
       </component>
     </baseType>
@@ -44,15 +44,15 @@
   </header>
   <componentInfo>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="omk" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="176" x="500" y="264">
+      <visualDescription h="60" w="176" x="448" y="229">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="omv_value_type" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="246" x="693" y="208">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="omvv" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="246" x="745" y="226">
         <color b="203" g="192" r="255"/>
       </visualDescription>
       <parameter formFieldId="item_type" varName="OMK"/>
@@ -61,17 +61,17 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="omv" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="214" x="589" y="248">
+      <visualDescription h="60" w="214" x="510" y="210">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="V"/>
+      <parameter formFieldId="value_type" varName="OMVV"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="orv" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="60" w="198" x="426" y="135">
+      <visualDescription h="60" w="198" x="522" y="199">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="value_type" varName="ORVV"/>
@@ -80,8 +80,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_type_value_type" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="238" x="426" y="174">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="orvv" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="238" x="670" y="280">
         <color b="203" g="192" r="255"/>
       </visualDescription>
       <parameter formFieldId="item_type" varName="OMV"/>
@@ -89,10 +89,10 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="output_type_value_type" direct="true" varName="ORVV"/>
-    <supplyParameter cRef="omv_value_type" direct="true" varName="V"/>
-    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="orvv" direct="true" varName="ORVV"/>
+    <supplyParameter cRef="omvv" direct="true" varName="OMVV"/>
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
     <supplyParameter cRef="omv" direct="true" varName="OMV"/>
     <interface iRef="ICliqueReduce" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
@@ -106,7 +106,7 @@
           <dependency>br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="141" x="72" y="86">
+      <visualDescription h="95" w="175" x="316" y="105">
         <color b="0" g="255" r="0"/>
       </visualDescription>
       <action id="main">
@@ -115,7 +115,7 @@
     </interface>
     <unit iRef="ICliqueReduce" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
       <super cRef="base" uRef="reduce_function"/>
-      <visualDescription h="40" w="141" x="179" y="254"/>
+      <visualDescription h="40" w="141" x="333" y="267"/>
     </unit>
   </componentInfo>
 </component:component>

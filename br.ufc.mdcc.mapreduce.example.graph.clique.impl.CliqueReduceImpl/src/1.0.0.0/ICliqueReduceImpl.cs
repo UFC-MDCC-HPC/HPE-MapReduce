@@ -21,7 +21,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 		private IDictionary<IInteger, IIterator<IInteger>> bigCliques = null;
 		private int bigger=0;
 
-		private static IDictionary<int, List<IInteger>> iterators = new Dictionary<int, List<IInteger>> ();
+		private IDictionary<int, List<IInteger>> iterators = new Dictionary<int, List<IInteger>> ();
 
 		public override void main() { 
 			IDictionary<int, IInteger> P = new Dictionary<int, IInteger>();
