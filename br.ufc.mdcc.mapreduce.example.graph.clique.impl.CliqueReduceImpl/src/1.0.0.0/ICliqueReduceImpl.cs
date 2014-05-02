@@ -21,6 +21,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 		private IDictionary<IInteger, IIterator<IInteger>> bigCliques = null;
 		private int bigger=0;
 
+		private static IDictionary<int, List<IInteger>> iterators = new Dictionary<int, List<IInteger>> ();
+
 		public override void main() { 
 			IDictionary<int, IInteger> P = new Dictionary<int, IInteger>();
 			IDictionary<int, IInteger> X = new Dictionary<int, IInteger>();
@@ -82,8 +84,15 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				IIterator<IInteger> r = (IIterator<IInteger>)R.clone();
 				r.put(v);
 
-				IIterator<IInteger> value = dicValues [v.Value];
-				intersect(value, P, X, ref p, ref x);
+				List<IInteger> iterator;
+				if (!iterators.TryGetValue (v.Value, out iterator)) {
+					IIterator<IInteger> value = dicValues [v.Value];
+					iterator = new List<IInteger> ();
+					intersect (ref iterator, value, P, X, ref p, ref x);
+					iterators [v.Value] = iterator;
+				} else {
+					intersect2 (iterator, P, X, ref p, ref x);
+				}
 
 				bronKerboschAlgorithm(SIZE + 1, dicValues, p, r, x);
 
@@ -91,10 +100,23 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				X.Add(v.Value, v);
 			}
 		}
-		private void intersect(IIterator<IInteger> neighbors, IDictionary<int, IInteger> P, IDictionary<int, IInteger> X, ref IDictionary<int, IInteger> p, ref IDictionary<int, IInteger> x) {
-			IIterator<IInteger> iterator = (IIterator<IInteger>)neighbors.clone();
+		private void intersect(ref List<IInteger> neighbors2, IIterator<IInteger> neighbors, IDictionary<int, IInteger> P, IDictionary<int, IInteger> X, ref IDictionary<int, IInteger> p, ref IDictionary<int, IInteger> x) {
+			IIterator<IInteger> iterator = neighbors;
 			for (; !iterator.HasFinished; ) {
 				IInteger n = iterator.fetch_next();
+				if (P.ContainsKey(n.Value)){
+					p.Add(n.Value, n);
+				}
+				if (X.ContainsKey(n.Value)){
+					x.Add(n.Value, n);
+				}
+				neighbors2.Add (n);
+			}
+		}
+		private void intersect2(List<IInteger> neighbors, IDictionary<int, IInteger> P, IDictionary<int, IInteger> X, ref IDictionary<int, IInteger> p, ref IDictionary<int, IInteger> x) {
+			IEnumerator<IInteger> iterator = neighbors.GetEnumerator();
+			while (iterator.MoveNext()) {
+				IInteger n = iterator.Current;
 				if (P.ContainsKey(n.Value)){
 					p.Add(n.Value, n);
 				}
