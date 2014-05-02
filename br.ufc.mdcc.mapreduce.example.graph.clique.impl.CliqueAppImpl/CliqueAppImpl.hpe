@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000c702ffb6a2bd4c70fa845e0ed229bedf7c91a53ea55ff8c0f76d34879327ff4ee2d10269ecc9031261f9591abd54f5d37327675298942a0d412b1f651d650d464f550ef3a1cdc6e97091cf68ad8b3ae053d352ba52b8c442ae3ab6661536af7075a8b1b5eb8365141012d5d8aa4eb38c1faab18d1a9e1667073ea17d265d65a3" isAbstract="false" kind="Application" name="CliqueAppImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.clique.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000010b07281e36aff7dbce916468aff0612a0028679251fa0ce1588013adc48dd80422eccb01cac95d451b0fc01322beba64b9c799e30dcb16c3d04196843a1c996a00c89b2cce33bb4f107c6d2a5caeea8cf95c62a57d8aeb41297b2a0a7b8bbfc5a43b636c6a64ffb118d8c9f9c024f9be796a2951fe939631ec8931f77ca8a6" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/CliqueApp.hpe" name="CliqueApp" package="br.ufc.mdcc.mapreduce.example.graph.clique" version="1.0.0.0">
+        <visualDescription h="108" w="203" x="255" y="299">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="platform" varName="PLATFORM"/>
+        <unitBounds parallel="false" uRef="master_process">
+          <visualDescription h="20" w="20" x="90" y="10"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="clique_map_process">
+          <visualDescription h="20" w="20" x="19" y="43"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="clique_reduce_process">
+          <visualDescription h="20" w="20" x="160" y="45"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="78" y="201">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <interface iRef="IMasterProcessImpl" nArgs="1">
+      <slice isRef="clique">
+        <originRef cRef="clique" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="68" y="47"/>
+      </slice>
+      <visualDescription h="67" w="152" x="263" y="51">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ICliqueMapProcessImpl" nArgs="1">
+      <slice isRef="clique">
+        <originRef cRef="clique" iRef="ICliqueMap"/>
+        <visualDescription h="10" w="10" x="151" y="30"/>
+      </slice>
+      <visualDescription h="60" w="185" x="20" y="225">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="ICliqueReduceProcessImpl" nArgs="1">
+      <slice isRef="clique">
+        <originRef cRef="clique" iRef="ICliqueReduce"/>
+        <visualDescription h="10" w="10" x="16" y="50"/>
+      </slice>
+      <visualDescription h="75" w="180" x="517" y="185">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IMasterProcessImpl" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <super cRef="base" uRef="master_process"/>
+      <visualDescription h="67" w="152" x="263" y="184"/>
+    </unit>
+    <unit iRef="ICliqueMapProcessImpl" multiple="true" private="false" replica="0" uRef="clique_map_process" visibleInterface="true">
+      <super cRef="base" uRef="clique_map_process"/>
+      <visualDescription h="60" w="185" x="20" y="343"/>
+    </unit>
+    <unit iRef="ICliqueReduceProcessImpl" multiple="true" private="false" replica="0" uRef="clique_reduce_process" visibleInterface="true">
+      <super cRef="base" uRef="clique_reduce_process"/>
+      <visualDescription h="75" w="180" x="517" y="339"/>
+    </unit>
+  </componentInfo>
+</component:component>

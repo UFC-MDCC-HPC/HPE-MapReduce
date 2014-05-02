@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f940673bd7effadafad052e5ba4c6a5484aa95355c36c241fe8fc2e84728437152dd7849e71e452e105976596702720f608a4b622586964875bc0e20930cbda613f7ca050dc2e050f9a71391f6a92e546ca2623c268a810275706238ed29f1583521d107f6b6b511d4fbfd87f000ed5460732930d19a3e2a8f2684138b6a3ab0" isAbstract="false" kind="Computation" name="BreakInCliqueNodesImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.clique.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000171119ab23be394e7491fedb89e2e2496f7f076f6edfe165a0124a9a41081165c208ed786922882cfed1ffde1a0d9d55ab0123e8d10f7b4113b3228a53b88594a71a79d9d006f5a7f56ec15c0a0b94c48fbe9b98dea2828c07fce6c148359ca9ca1dbb491ea0d02ce34a3058434d0cb5ba2b32d001b3fac2c915fdbb5f0d158f" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes/BreakInCliqueNodes.hpe" name="BreakInCliqueNodes" package="br.ufc.mdcc.mapreduce.example.graph.clique" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="256" y="358">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="277" y="113">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="IMV"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="169" x="479" y="319">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###26886052"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="split_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IBreakInCliqueNodesImpl" nArgs="0">
+      <visualDescription h="69" w="211" x="120" y="104">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IBreakInCliqueNodesImpl" multiple="false" private="false" replica="0" uRef="split_function" visibleInterface="true">
+      <super cRef="base" uRef="split_function"/>
+      <visualDescription h="40" w="151" x="197" y="250"/>
+    </unit>
+  </componentInfo>
+</component:component>

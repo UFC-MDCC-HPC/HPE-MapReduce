@@ -29,7 +29,7 @@
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="vote_reduce">
+        <unitBounds parallel="false" uRef="reduce_function">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -59,8 +59,8 @@
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IVoteReduceImpl" multiple="false" private="false" replica="0" uRef="vote_reduce" visibleInterface="true">
-      <super cRef="base" uRef="vote_reduce"/>
+    <unit iRef="IVoteReduceImpl" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
+      <super cRef="base" uRef="reduce_function"/>
       <visualDescription h="40" w="141" x="219" y="238"/>
     </unit>
   </componentInfo>

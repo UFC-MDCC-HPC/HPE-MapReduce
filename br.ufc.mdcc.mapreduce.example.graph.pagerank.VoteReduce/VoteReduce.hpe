@@ -91,7 +91,7 @@
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IVoteReduce" multiple="false" private="false" replica="0" uRef="vote_reduce" visibleInterface="true">
+    <unit iRef="IVoteReduce" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
       <super cRef="base" uRef="reduce_function"/>
       <visualDescription h="40" w="141" x="175" y="281"/>
     </unit>
