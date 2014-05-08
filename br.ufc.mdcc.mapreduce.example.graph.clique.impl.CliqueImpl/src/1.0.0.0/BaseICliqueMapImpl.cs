@@ -17,11 +17,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl {
 	public abstract class BaseICliqueMapImpl<PLATFORM>: Computation, BaseICliqueMap<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private IReduceWorker<IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICliqueReduce, IKVPair<IInteger, IIterator<IInteger>>, PLATFORM> clique = null;
-		protected IReduceWorker<IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICliqueReduce, IKVPair<IInteger, IIterator<IInteger>>, PLATFORM> Clique {
+		private IReduceWorker<IInteger, IKVPair<IInteger, IIterator<IInteger>>, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICliqueReduce, PLATFORM> clique = null;
+		protected IReduceWorker<IInteger, IKVPair<IInteger, IIterator<IInteger>>, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICliqueReduce, PLATFORM> Clique {
 			get {
 				if (this.clique == null)
-					this.clique = (IReduceWorker<IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICliqueReduce, IKVPair<IInteger, IIterator<IInteger>>, PLATFORM>) Services.getPort("clique");
+					this.clique = (IReduceWorker<IInteger, IKVPair<IInteger, IIterator<IInteger>>, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICliqueReduce, PLATFORM>) Services.getPort("clique");
 				return this.clique;
 			}
 		}

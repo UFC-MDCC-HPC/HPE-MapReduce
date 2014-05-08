@@ -41,19 +41,19 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 			}
 		}
 
-		private IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInPageNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>,	IIterator<IKVPair<IInteger, IDouble>>, PLATFORM> page_rank = null;
-		protected IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInPageNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, IIterator<IKVPair<IInteger, IDouble>>, PLATFORM> Page_rank {
+		private IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM> page_rank = null;
+		protected IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM> Page_rank {
 			get {
 				if (this.page_rank == null)
-					this.page_rank = (IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IBreakInPageNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IDouble>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, IIterator<IKVPair<IInteger, IDouble>>, PLATFORM>) Services.getPort("page_rank");
+					this.page_rank = (IManagerMapReduce<IIterator<IPageNode<IInteger>>, IInteger, IPageNode<IInteger>, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM>) Services.getPort("page_rank");
 				return this.page_rank;
 			}
 		}
 	}
 }
 
-/*Obs:
- * In, IString
+/*Obs: <In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>
+ * In, IIterator<IPageNode<IInteger>>
  * IMK, IInteger
  * IMV, IPageNode<IInteger>,
  * Sf, IBreakInNodes

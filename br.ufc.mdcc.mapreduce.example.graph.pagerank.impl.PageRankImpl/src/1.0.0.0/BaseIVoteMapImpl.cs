@@ -17,14 +17,15 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 	public abstract class BaseIVoteMapImpl<PLATFORM>: Computation, BaseIVoteMap<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private IReduceWorker<IInteger, IKVPair<IInteger, IDouble>, IVoteReduce, IDouble, PLATFORM> page_rank = null;
-		protected IReduceWorker<IInteger, IKVPair<IInteger, IDouble>, IVoteReduce, IDouble, PLATFORM> Page_rank {
+		private IReduceWorker<IInteger, IDouble, IKVPair<IInteger, IDouble>, IVoteReduce, PLATFORM> page_rank = null;
+		protected IReduceWorker<IInteger, IDouble, IKVPair<IInteger, IDouble>, IVoteReduce, PLATFORM> Page_rank {
 			get {
 				if (this.page_rank == null)
-					this.page_rank = (IReduceWorker<IInteger, IKVPair<IInteger, IDouble>, IVoteReduce, IDouble, PLATFORM>) 
+					this.page_rank = (IReduceWorker<IInteger, IDouble, IKVPair<IInteger, IDouble>, IVoteReduce, PLATFORM>) 
 						Services.getPort("page_rank");
 				return this.page_rank;
 			}
 		}
 	}
 }
+//<OMK, OMV, ORV, Rf, PLATFORM>
