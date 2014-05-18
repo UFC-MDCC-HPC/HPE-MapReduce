@@ -16,7 +16,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl
         where OMV: IData 
 	{
         
-        private MPI.Intracommunicator worldcomm = null;
+        private MPI.Intracommunicator comm = null;
        	static private int TAG_SHUFFLER_OMV = 445;
 		static private int TAG_SHUFFLER_OMV_FINISH = 446;
 
@@ -25,7 +25,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
-			worldcomm = Mpi_comm.worldComm();
+			comm = this.Communicator;
 		}
 
         public override void main() 

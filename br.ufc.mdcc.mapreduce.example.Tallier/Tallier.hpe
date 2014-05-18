@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e50948bc123dc9efa22cd7c616d8008ed122b6eec63cba76be6ffa346391f2937d110c2dca1029fa20148ca2e228f42420bc515c54e85a1b48944e893e837f32ba51f67b9bd272d24209eaac9ed647ccb953c33cdab37026f4e926b4f61d94a3ea88e57906ffd04d3fdcc3ae782cb272bc20bc594e5cd35b4bcc0d6d7926e7af" isAbstract="true" kind="Computation" name="Tallier" packagePath="br.ufc.mdcc.mapreduce.example">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000b9069d8c0868c63e340d5359f76141a029280190caef343caaf2f2f41dee3bcaeb3c892982e58f9c13e84a6f10ae88a610c08e2850f2962f1297faceb0080533e01d40a8d3ea2a0a6c67c536a6a5bd7cfb6db744ffd7864dfb96e1a80c9a2d39c56b9c510549ec40ba3b736fc3ef96f744b0821317a2f4f263952fe59dfda4c8" isAbstract="true" kind="Computation" name="Tallier" packagePath="br.ufc.mdcc.mapreduce.example">
     <baseType>
       <extensionType>
         <extends>true</extends>
@@ -26,7 +26,7 @@
           <visualDescription h="60" w="100" x="69" y="122">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="value_type" varName="X###1620646622"/>
+          <parameter formFieldId="value_type" varName="X###1571564703"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>
@@ -51,7 +51,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="170" y="446">
         <color b="255" g="255" r="255"/>
       </visualDescription>

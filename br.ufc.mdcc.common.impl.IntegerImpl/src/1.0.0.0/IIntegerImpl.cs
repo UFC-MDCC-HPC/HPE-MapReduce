@@ -14,6 +14,12 @@ namespace br.ufc.mdcc.common.impl.IntegerImpl
 
 		public IIntegerImpl() { } 
 
+		override public void initialize()
+		{
+			newInstance(); 
+		}
+
+
 		public IIntegerInstance newInstance (int i)
 		{
 			IIntegerInstance instance = (IIntegerInstance)newInstance ();
@@ -35,6 +41,7 @@ namespace br.ufc.mdcc.common.impl.IntegerImpl
 		}
 	}
 
+	[Serializable]
 	public class IIntegerInstanceImpl : IIntegerInstance
 	{
 		#region IIntegerInstance implementation

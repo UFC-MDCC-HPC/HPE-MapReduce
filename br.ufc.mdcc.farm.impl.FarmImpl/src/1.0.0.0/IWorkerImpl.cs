@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
-public class IWorkerImpl<S, J, C, R, W, P> : BaseIWorkerImpl<S, J, C, R, W, P>, IWorker<S, J, C, R, W, P>
+public class IWorkerImpl<S, W, C, J, R, P> : BaseIWorkerImpl<S, W, C, J, R, P>, IWorker<S, W, C, J, R, P>
 where S:IScatterTarget<J>
 where J:IData
 where C:IGatherSource<R>

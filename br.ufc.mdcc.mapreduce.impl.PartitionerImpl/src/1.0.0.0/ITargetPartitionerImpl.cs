@@ -18,14 +18,14 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl
 	public class ITargetPartitionerImpl<OMK> : BaseITargetPartitionerImpl<OMK>, ITargetPartition<OMK>
 	where OMK:IData 
 	{
-		private MPI.Intracommunicator worldcomm = null;
+		private MPI.Intracommunicator comm = null;
 
 		public ITargetPartitionerImpl() { } 
 
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
-			worldcomm = Mpi_comm.worldComm();
+			comm = this.Communicator;
 		}
 
 		public override void main() 

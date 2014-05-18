@@ -12,7 +12,7 @@ using br.ufc.mdcc.farm.Farm;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
-public abstract class BaseIManagerImpl<S, I, C, O, P>: Computation, BaseIManager<S, I, C, O, P>
+public abstract class BaseIManagerImpl<S, C, I, O, P>: Computation, BaseIManager<S, C, I, O, P>
 where S:IScatterSource<I>
 where I:IData
 where C:IGatherTarget<O>

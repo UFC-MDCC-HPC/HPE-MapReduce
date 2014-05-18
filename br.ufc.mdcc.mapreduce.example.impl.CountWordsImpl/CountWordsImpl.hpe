@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003114cb0a0f85458cdaf9e8aaa8ca21091c17a2eaff1bfed3d1542ba9e6c6d4de32256e87830bf6734dbd0c1551510dd424a4c1b5fc6033597c7d910a8afab797f37da5e63bb3f76b640e0bf197274a218471ef006a6e36efe783f7fe0d0372f1748f3be23ecc9b2c5c285eb5406984ebdb129b703408ad56bdd22f94cbc57a85" isAbstract="false" kind="Computation" name="CountWordsImpl" packagePath="br.ufc.mdcc.mapreduce.example.impl">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a3601b774d6c1daebc036199f554dcb64176a72d37e39e0011cbb2a911139b0a0a672e1971cfb75fec4bd7bffdc6a6d41c32b920dd06c42c20c775059457bfa85cdf2a3892e4bf43397dc44d0c111688db9293447b8e61bc0d9b634c7519cc4e6bf62554bb2e75cd36e8565ad362c1b5c52ba1d89101d733917fd89a680a3cd2" isAbstract="false" kind="Computation" name="CountWordsImpl" packagePath="br.ufc.mdcc.mapreduce.example.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003b9aad581d3c9e6c3be033e2504619a97b15caa53bdc8d67b6941462fd9b29ff3e8bd8ce3d68fc518d8d97b84e943c3b0b9f959710679a4709dcee635ff80706981b4c6d74c113c6e08e28c276b643235637b208a8164b29893ba552c722798606a9566c8d670bfdce28440fea89b6ad6e3aff922bb5924111e49f2d5139059d" localRef="base" location="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" name="CountWords" package="br.ufc.mdcc.mapreduce.example" version="1.0.0.0">
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000004b80c2059ad2e967e33491e2a6f3a3d46e31402f9690fb4d047b5d3c24638ac4ede12af66e5464486fb2e4bdb55363161930a595e93c9c1c3707e98e216585f3bffac5125ce2f5321fa87a3a5557eb7d8e99eec33798cf91ae6a4e4ae2186ef6288de6d6ba5163d74f078aea8e92667e9b06341db44bf1ce41631a70f4849b84" localRef="base" location="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" name="CountWords" package="br.ufc.mdcc.mapreduce.example" version="1.0.0.0">
         <visualDescription h="60" w="100" x="218" y="204">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="platform" varName="PLATFORM"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="400" y="194">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="262" y="481">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###2066021783"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
         <unitBounds parallel="false" uRef="master">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -64,11 +81,11 @@
       <visualDescription h="40" w="80" x="155" y="51">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output">
+      <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="count_words"/>
       </port>
-      <port name="input">
+      <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input" sRef="count_words"/>
       </port>

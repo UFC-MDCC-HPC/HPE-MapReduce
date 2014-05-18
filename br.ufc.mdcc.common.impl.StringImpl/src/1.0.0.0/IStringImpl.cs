@@ -10,7 +10,12 @@ namespace br.ufc.mdcc.common.impl.StringImpl {
 	public class IStringImpl : BaseIStringImpl, IString
 	{
 
-		public IStringImpl() { 		} 
+		public IStringImpl() { 	} 
+
+		override public void initialize()
+		{
+			newInstance(); 
+		}
 
 		public IStringInstance newInstance (string s)
 		{
@@ -33,6 +38,7 @@ namespace br.ufc.mdcc.common.impl.StringImpl {
 		}
 	}
 
+	[Serializable]
 	public class IStringInstanceImpl : IStringInstance
 	{
 		#region IStringInstance implementation
@@ -42,6 +48,26 @@ namespace br.ufc.mdcc.common.impl.StringImpl {
 		public string Value {
 			get { return val; }
 			set { this.val = value;	}
+		}
+
+		public override int GetHashCode ()
+		{
+			return Value.GetHashCode();	
+		}
+
+		public override string ToString ()
+		{
+			return Value.ToString();
+		}
+		
+		public override bool Equals (object obj)
+		{
+			if (obj is IStringInstanceImpl)
+				return Value.Equals(((IStringInstanceImpl) obj).Value);
+			else if (obj is string)
+				return Value.Equals(obj);
+			else
+				return false;
 		}
 
 		#endregion

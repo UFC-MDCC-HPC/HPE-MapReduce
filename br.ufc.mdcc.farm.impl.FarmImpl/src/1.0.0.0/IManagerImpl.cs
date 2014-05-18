@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
-public class IManagerImpl<S, I, C, O, P> : BaseIManagerImpl<S, I, C, O, P>, IManager<S, I, C, O, P>
+public class IManagerImpl<S, C, I, O, P> : BaseIManagerImpl<S, C, I, O, P>, IManager<S, C, I, O, P>
 where S:IScatterSource<I>
 where I:IData
 where C:IGatherTarget<O>

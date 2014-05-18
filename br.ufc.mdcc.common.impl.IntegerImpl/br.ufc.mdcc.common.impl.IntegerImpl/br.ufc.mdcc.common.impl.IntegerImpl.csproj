@@ -38,10 +38,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\src\1.0.0.0\BaseIntegerImpl.cs">
+    <Compile Include="..\src\1.0.0.0\BaseIIntegerImpl.cs">
       <Link>BaseIIntegerImpl.cs</Link>
     </Compile>
-    <Compile Include="..\src\1.0.0.0\IntegerImpl.cs">
+    <Compile Include="..\src\1.0.0.0\IIntegerImpl.cs">
       <Link>IIntegerImpl.cs</Link>
     </Compile>
   </ItemGroup>

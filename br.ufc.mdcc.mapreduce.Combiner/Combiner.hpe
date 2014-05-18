@@ -6,7 +6,7 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bab4cc083bb0b22df71ee0fed5b32475f9bd4499e73612417f425eb0acf69eb295cb92d5a9fdb63917d61817dc4d57415df5cdbc2b6ec3bd25d347d038ba9f03bec361e9436b271c818fe4030ce3eb37e4e23912c83bfd7f35145b30bcfbaf21a6f8e185481d082e68124e92bec2a41f490d93bbcc5cdce49952e3e023e49af" localRef="base" location="br.ufc.mdcc.farm.Gather/Gather.hpe" name="Gather" package="br.ufc.mdcc.farm" version="1.0.0.0">
-        <visualDescription h="60" w="157" x="218" y="143">
+        <visualDescription h="60" w="157" x="211" y="155">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_type" varName="T"/>
@@ -98,11 +98,11 @@
       </unitBounds>
     </innerComponent>
     <supplyParameter cRef="input_output_type" direct="true" varName="T"/>
-    <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
     <innerRenaming cNewName="combine_input_data" cOldName="input_data" cRef="combine_function"/>
+    <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
     <fusion>
-      <cRefs>combine_function</cRefs>
       <cRefs>base</cRefs>
+      <cRefs>combine_function</cRefs>
       <pRef>target_data</pRef>
     </fusion>
     <interface iRef="ISourceCombiner" nArgs="1">

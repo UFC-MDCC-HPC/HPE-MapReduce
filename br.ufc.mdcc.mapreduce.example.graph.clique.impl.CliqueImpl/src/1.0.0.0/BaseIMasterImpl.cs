@@ -39,16 +39,17 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl {
 			}
 		}
 
-		private IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, PLATFORM> clique = null;
-		protected IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, PLATFORM> Clique {
+		private IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM> clique = null;
+		protected IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM> Clique {
 			get {
 				if (this.clique == null)
-					this.clique = (IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, PLATFORM>) Services.getPort("clique");
+					this.clique = (IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM>) Services.getPort("clique");
 				return this.clique;
 			}
 		}
 	}
 }
+//<In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>
 //ICombineFunction<ORV, O>
 //IManagerMapReduce<In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM> 
 //ISplitFunction<I, IMK, IMV>
@@ -57,17 +58,3 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl {
 //OMK: IInteger
 //OMV: IKVPair<IInteger, IIterator<IInteger>>
 //ORV: IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>
-
-/*Obs:
- * In, IIterator<ICliqueNode<IInteger>>
- * IMK, IInteger
- * IMV, ICliqueNode<IInteger>,
- * Sf, IBreakInCliqueNodes
- * Bf, IPartitionFunction<IInteger>,
- * OMK, IInteger
- * OMV, IDouble
- * ORV, IKVPair<IInteger, IDouble>, 
- * Cf, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>,	
- * Out, IIterator<IKVPair<IInteger, IDouble>>, 
- * PLATFORM> 
-*/

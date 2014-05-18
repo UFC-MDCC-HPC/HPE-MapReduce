@@ -6,7 +6,7 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.farm.Farm { 
 
-public interface IManager<S, I, C, O, P> : BaseIManager<S, I, C, O, P>
+public interface IManager<S, C, I, O, P> : BaseIManager<S, C, I, O, P>
 where S:IScatterSource<I>
 where I:IData
 where C:IGatherTarget<O>

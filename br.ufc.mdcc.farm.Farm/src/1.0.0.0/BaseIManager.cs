@@ -8,7 +8,7 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.farm.Farm { 
 
-public interface BaseIManager<S, I, C, O, P> : IComputationKind 
+public interface BaseIManager<S, C, I, O, P> : IComputationKind 
 where S:IScatterSource<I>
 where I:IData
 where C:IGatherTarget<O>

@@ -13,7 +13,7 @@ using br.ufc.mdcc.farm.Farm;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
-public abstract class BaseIWorkerImpl<S, J, C, R, W, P>: Computation, BaseIWorker<S, J, C, R, W, P>
+public abstract class BaseIWorkerImpl<S, W, C, J, R, P>: Computation, BaseIWorker<S, W, C, J, R, P>
 where S:IScatterTarget<J>
 where J:IData
 where C:IGatherSource<R>

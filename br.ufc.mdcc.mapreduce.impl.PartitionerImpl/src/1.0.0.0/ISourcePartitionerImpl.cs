@@ -24,14 +24,14 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl
 	where P:IPartitionFunction<OMK> 
 	{
 		// Variáveis do Ambiente MPI.
-		private MPI.Intracommunicator worldcomm = null;
+		private MPI.Intracommunicator comm = null;
 
 		public ISourcePartitionerImpl() { } 
 
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
-			worldcomm = Mpi_comm.worldComm();
+			comm = this.Communicator;
 		}
 
 		public override void main() 

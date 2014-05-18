@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000006d638c9f6c0b925128b98c5a316e368c89eefeca434979c5dac769bed1e35dd8d05f5d64dee955837c87cbba023bfee2eddfca39058b3bb0b4ef94d94c2fbde3a4bb8406569fe9811cdcb7585b387c5601c8fc77796edf7bcb404e2b65701c584e9c027bc54a0c82967ef00f75ee120ab95cb4114afe1781d2b4e820694ecf8c" isAbstract="true" kind="Application" name="CountWordsApp" packagePath="br.ufc.mdcc.mapreduce.example">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bb46e5d6375d6ca59a8c79e7eda2700caa7fe3cb0b6e7c34444e765e71b054a3e00b5ce2c602727af418605864f9af37c6bfb7cbce433a9080f6bf6ac98919007f27bc5d271794ca26a1af34247f6b05f69c0aa255815e63e6bbde57abd23ac90571d07d30778f3a9e32244d6680a2a8735aa17a25833db185d01084fd42ec5" isAbstract="true" kind="Application" name="CountWordsApp" packagePath="br.ufc.mdcc.mapreduce.example">
     <versions field1="1" field2="0" field3="0" field4="0"/>
     <visualAttributes>
       <color b="255" g="255" r="255"/>
@@ -8,11 +8,28 @@
   </header>
   <componentInfo>
     <parameter componentRef="platform" formFieldId="platform" order="0" varName="PLATFORM"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003b9aad581d3c9e6c3be033e2504619a97b15caa53bdc8d67b6941462fd9b29ff3e8bd8ce3d68fc518d8d97b84e943c3b0b9f959710679a4709dcee635ff80706981b4c6d74c113c6e08e28c276b643235637b208a8164b29893ba552c722798606a9566c8d670bfdce28440fea89b6ad6e3aff922bb5924111e49f2d5139059d" localRef="count_words" location="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" multiple="false" name="CountWords" package="br.ufc.mdcc.mapreduce.example" exposed="false">
-      <visualDescription h="80" w="160" x="215" y="148">
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000004b80c2059ad2e967e33491e2a6f3a3d46e31402f9690fb4d047b5d3c24638ac4ede12af66e5464486fb2e4bdb55363161930a595e93c9c1c3707e98e216585f3bffac5125ce2f5321fa87a3a5557eb7d8e99eec33798cf91ae6a4e4ae2186ef6288de6d6ba5163d74f078aea8e92667e9b06341db44bf1ce41631a70f4849b84" localRef="count_words" location="br.ufc.mdcc.mapreduce.example.CountWords/CountWords.hpe" multiple="false" name="CountWords" package="br.ufc.mdcc.mapreduce.example" exposed="false">
+      <visualDescription h="80" w="160" x="232" y="179">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="platform" varName="PLATFORM"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="400" y="194">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="262" y="481">
+          <color b="203" g="192" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="X###1559647410"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
       <unitBounds parallel="false" uRef="master">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
@@ -31,6 +48,35 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###808624588" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="135" y="350">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###808624588" varName="X###808624588"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###1276932300" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="170" y="446">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###1276932300" varName="X###1276932300"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1559647410" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="269" y="397">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="X###808624588"/>
+      <parameter formFieldId="key_type" varName="X###1276932300"/>
+      <unitBounds parallel="false" uRef="kv_pair">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###1559647410" varName="X###1559647410"/>
     <interface iRef="IWordCounterProcess" nArgs="1">
       <slice isRef="count_words">
         <originRef cRef="count_words" iRef="IWordCounter"/>
@@ -45,7 +91,7 @@
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIWordCounterProcess.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="50" w="195" x="16" y="157">
+      <visualDescription h="50" w="195" x="9" y="162">
         <color b="0" g="165" r="255"/>
       </visualDescription>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
@@ -93,6 +139,14 @@
       <visualDescription h="40" w="144" x="368" y="36">
         <color b="230" g="216" r="173"/>
       </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="36" y="0"/>
+        <slice pRef="input_data" sRef="count_words"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="53" y="4"/>
+        <slice pRef="output_data" sRef="count_words"/>
+      </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>
@@ -102,7 +156,7 @@
       <slices cRef="count_words" slice_replica="0" uRef="word_counter" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="151" y="12"/>
       </slices>
-      <visualDescription h="50" w="195" x="49" y="285"/>
+      <visualDescription h="50" w="195" x="48" y="318"/>
     </unit>
     <unit iRef="ITallierProcess" multiple="true" private="false" replica="0" uRef="tallier_process" visibleInterface="true">
       <slices cRef="count_words" slice_replica="0" uRef="tallier" sliceName="count_words" transitive="false">
@@ -111,8 +165,16 @@
       <visualDescription h="50" w="142" x="402" y="216"/>
     </unit>
     <unit iRef="IMasterProcess" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <slices cRef="input_data" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
+        <visualDescription h="10" w="10" x="43" y="4"/>
+      </slices>
+      <slices cRef="output_data" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
       <slices cRef="count_words" slice_replica="0" uRef="master" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="8" y="24"/>
+        <port>input_data</port>
+        <port>output_data</port>
       </slices>
       <visualDescription h="40" w="144" x="223" y="68"/>
     </unit>

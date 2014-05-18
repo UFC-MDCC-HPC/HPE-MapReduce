@@ -32,10 +32,39 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\..\..\..\..\..\..\..\usr\lib\mono\DGAC\DGAC.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.impl.FetchValuesImpl\br.ufc.mdcc.mapreduce.impl.FetchValuesImpl\br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.csproj">
+      <Project>{94F904F9-4D3F-4879-8307-33FF74112458}</Project>
+      <Name>br.ufc.mdcc.mapreduce.impl.FetchValuesImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
+      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.FetchValues\br.ufc.mdcc.mapreduce.FetchValues\br.ufc.mdcc.mapreduce.FetchValues.csproj">
+      <Project>{FAC1315A-F501-4C5C-99CE-CE0AA2F71A69}</Project>
+      <Name>br.ufc.mdcc.mapreduce.FetchValues</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

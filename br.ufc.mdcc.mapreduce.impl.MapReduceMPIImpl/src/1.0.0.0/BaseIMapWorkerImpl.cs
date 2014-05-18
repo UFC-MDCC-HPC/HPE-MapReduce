@@ -29,12 +29,12 @@ where Mf:IMapFunction<IMK, IMV, OMK, OMV>
 where PLATFORM:IPlatform
 {
 
-		private IWorker<ITargetSplitter<IMK, IMV>, IIterator<IKVPair<IMK, IMV>>, ISourcePartition<OMK, OMV, Pf>, IIterator<IKVPair<OMK, OMV>>, IMapper<IMK, IMV, OMK, OMV, Mf>, PLATFORM> farm_map = null;
+		private IWorker<ITargetSplitter<IMK, IMV>, IMapper<IMK, IMV, OMK, OMV, Mf>, ISourcePartition<OMK, OMV, Pf>, IIterator<IKVPair<IMK, IMV>>, IIterator<IKVPair<OMK, OMV>>, PLATFORM> farm_map = null;
 
-		protected IWorker<ITargetSplitter<IMK, IMV>, IIterator<IKVPair<IMK, IMV>>, ISourcePartition<OMK, OMV, Pf>, IIterator<IKVPair<OMK, OMV>>, IMapper<IMK, IMV, OMK, OMV, Mf>, PLATFORM> Farm_map {
+		protected IWorker<ITargetSplitter<IMK, IMV>, IMapper<IMK, IMV, OMK, OMV, Mf>, ISourcePartition<OMK, OMV, Pf>, IIterator<IKVPair<IMK, IMV>>, IIterator<IKVPair<OMK, OMV>>, PLATFORM> Farm_map {
 	get {
 		if (this.farm_map == null)
-					this.farm_map = (IWorker<ITargetSplitter<IMK, IMV>, IIterator<IKVPair<IMK, IMV>>, ISourcePartition<OMK, OMV, Pf>, IIterator<IKVPair<OMK, OMV>>, IMapper<IMK, IMV, OMK, OMV, Mf>, PLATFORM>) Services.getPort("farm_map");
+					this.farm_map = (IWorker<ITargetSplitter<IMK, IMV>, IMapper<IMK, IMV, OMK, OMV, Mf>, ISourcePartition<OMK, OMV, Pf>, IIterator<IKVPair<IMK, IMV>>, IIterator<IKVPair<OMK, OMV>>, PLATFORM>) Services.getPort("farm_map");
 		return this.farm_map;
 	}
 }

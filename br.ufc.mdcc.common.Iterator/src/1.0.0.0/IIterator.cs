@@ -28,7 +28,7 @@ namespace br.ufc.mdcc.common.Iterator {
 		// producer:
 
 		// - raises exception if has finished
-		object fetch_next();
+		bool fetch_next (out object result);
 
 		bool HasFinished { get; }
 	}

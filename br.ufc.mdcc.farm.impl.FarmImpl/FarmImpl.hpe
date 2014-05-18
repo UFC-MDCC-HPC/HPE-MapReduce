@@ -85,14 +85,6 @@
       </visualDescription>
       <parameter formFieldId="input_type" varName="I"/>
       <parameter formFieldId="output_type" varName="J"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="430" y="329">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="100" x="322" y="527">
           <color b="255" g="255" r="255"/>
@@ -114,14 +106,6 @@
       </visualDescription>
       <parameter formFieldId="input_type" varName="R"/>
       <parameter formFieldId="output_type" varName="O"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="351" y="464">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
         <visualDescription h="60" w="100" x="115" y="507">
           <color b="255" g="255" r="255"/>
@@ -143,22 +127,6 @@
       </visualDescription>
       <parameter formFieldId="input_type" varName="J"/>
       <parameter formFieldId="output_type" varName="R"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="430" y="329">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="351" y="464">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <unitBounds parallel="true" uRef="work">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
@@ -193,14 +161,14 @@
         <visualDescription h="10" w="10" x="97" y="23"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public abstract class BaseIManagerImpl&lt;S, I, C, O, P>: Computation, BaseIManager&lt;S, I, C, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;private P platform = default(P);&#xA;&#xA;protected P Platform {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.platform == null)&#xA;&#x9;&#x9;&#x9;this.platform = (P) Services.getPort(&quot;platform&quot;);&#xA;&#x9;&#x9;return this.platform;&#xA;&#x9;}&#xA;}&#xA;&#xA;private S scatter = default(S);&#xA;&#xA;protected S Scatter {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.scatter == null)&#xA;&#x9;&#x9;&#x9;this.scatter = (S) Services.getPort(&quot;scatter&quot;);&#xA;&#x9;&#x9;return this.scatter;&#xA;&#x9;}&#xA;}&#xA;&#xA;private C gather = default(C);&#xA;&#xA;protected C Gather {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.gather == null)&#xA;&#x9;&#x9;&#x9;this.gather = (C) Services.getPort(&quot;gather&quot;);&#xA;&#x9;&#x9;return this.gather;&#xA;&#x9;}&#xA;}&#xA;&#xA;private O output = default(O);&#xA;&#xA;public O Output {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output == null)&#xA;&#x9;&#x9;&#x9;this.output = (O) Services.getPort(&quot;output&quot;);&#xA;&#x9;&#x9;return this.output;&#xA;&#x9;}&#xA;}&#xA;&#xA;private I input = default(I);&#xA;&#xA;public I Input {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input == null)&#xA;&#x9;&#x9;&#x9;this.input = (I) Services.getPort(&quot;input&quot;);&#xA;&#x9;&#x9;return this.input;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIManagerImpl.cs" srcType="base" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIManagerImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public abstract class BaseIManagerImpl&lt;S, C, I, O, P>: Computation, BaseIManager&lt;S, C, I, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;private P platform = default(P);&#xA;&#xA;protected P Platform {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.platform == null)&#xA;&#x9;&#x9;&#x9;this.platform = (P) Services.getPort(&quot;platform&quot;);&#xA;&#x9;&#x9;return this.platform;&#xA;&#x9;}&#xA;}&#xA;&#xA;private S scatter = default(S);&#xA;&#xA;protected S Scatter {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.scatter == null)&#xA;&#x9;&#x9;&#x9;this.scatter = (S) Services.getPort(&quot;scatter&quot;);&#xA;&#x9;&#x9;return this.scatter;&#xA;&#x9;}&#xA;}&#xA;&#xA;private C gather = default(C);&#xA;&#xA;protected C Gather {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.gather == null)&#xA;&#x9;&#x9;&#x9;this.gather = (C) Services.getPort(&quot;gather&quot;);&#xA;&#x9;&#x9;return this.gather;&#xA;&#x9;}&#xA;}&#xA;&#xA;private O output = default(O);&#xA;&#xA;public O Output {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output == null)&#xA;&#x9;&#x9;&#x9;this.output = (O) Services.getPort(&quot;output&quot;);&#xA;&#x9;&#x9;return this.output;&#xA;&#x9;}&#xA;}&#xA;&#xA;private I input = default(I);&#xA;&#xA;public I Input {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input == null)&#xA;&#x9;&#x9;&#x9;this.input = (I) Services.getPort(&quot;input&quot;);&#xA;&#x9;&#x9;return this.input;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIManagerImpl.cs" srcType="base" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIManagerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterSource.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherTarget.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIManager.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using System.Threading.Tasks;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IManagerImpl&lt;S, I, C, O, P> : BaseIManagerImpl&lt;S, I, C, O, P>, IManager&lt;S, I, C, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;public IManagerImpl() {} &#xA;&#xA;public override void main() &#xA;{ &#xA;&#x9;Task scatter_task = new Task(delegate {this.Scatter.go();});&#xA;&#x9;Task gather_task = new Task(delegate {this.Gather.go();});&#xA;&#xA;&#x9;scatter_task.Start();&#xA;&#x9;gather_task.Start();&#xA;&#xA;&#x9;gather_task.Wait();&#xA;&#x9;scatter_task.Wait();&#xA;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using System.Threading.Tasks;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IManagerImpl&lt;S, C, I, O, P> : BaseIManagerImpl&lt;S, C, I, O, P>, IManager&lt;S, C, I, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;public IManagerImpl() {} &#xA;&#xA;public override void main() &#xA;{ &#xA;&#x9;Task scatter_task = new Task(delegate {this.Scatter.go();});&#xA;&#x9;Task gather_task = new Task(delegate {this.Gather.go();});&#xA;&#xA;&#x9;scatter_task.Start();&#xA;&#x9;gather_task.Start();&#xA;&#xA;&#x9;gather_task.Wait();&#xA;&#x9;scatter_task.Wait();&#xA;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterSource.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherTarget.dll</dependency>
@@ -209,7 +177,7 @@
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/IManager.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="58" w="118" x="115" y="81">
+      <visualDescription h="58" w="118" x="111" y="70">
         <color b="255" g="144" r="30"/>
       </visualDescription>
       <port name="input">
@@ -247,7 +215,7 @@
         <visualDescription h="10" w="10" x="12" y="28"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public abstract class BaseIWorkerImpl&lt;S, J, C, R, W, P>: Computation, BaseIWorker&lt;S, J, C, R, W, P>&#xA;where S:IScatterTarget&lt;J>&#xA;where J:IData&#xA;where C:IGatherSource&lt;R>&#xA;where R:IData&#xA;where W:IWork&lt;J, R>&#xA;where P:IPlatform&#xA;{&#xA;&#xA;private W work = default(W);&#xA;&#xA;protected W Work {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.work == null)&#xA;&#x9;&#x9;&#x9;this.work = (W) Services.getPort(&quot;work&quot;);&#xA;&#x9;&#x9;return this.work;&#xA;&#x9;}&#xA;}&#xA;&#xA;private P platform = default(P);&#xA;&#xA;protected P Platform {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.platform == null)&#xA;&#x9;&#x9;&#x9;this.platform = (P) Services.getPort(&quot;platform&quot;);&#xA;&#x9;&#x9;return this.platform;&#xA;&#x9;}&#xA;}&#xA;&#xA;private S scatter = default(S);&#xA;&#xA;protected S Scatter {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.scatter == null)&#xA;&#x9;&#x9;&#x9;this.scatter = (S) Services.getPort(&quot;scatter&quot;);&#xA;&#x9;&#x9;return this.scatter;&#xA;&#x9;}&#xA;}&#xA;&#xA;private R result = default(R);&#xA;&#xA;protected R Result {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.result == null)&#xA;&#x9;&#x9;&#x9;this.result = (R) Services.getPort(&quot;result&quot;);&#xA;&#x9;&#x9;return this.result;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;private C gather = default(C);&#xA;&#xA;protected C Gather {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.gather == null)&#xA;&#x9;&#x9;&#x9;this.gather = (C) Services.getPort(&quot;gather&quot;);&#xA;&#x9;&#x9;return this.gather;&#xA;&#x9;}&#xA;}&#xA;&#xA;private J job = default(J);&#xA;&#xA;protected J Job {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.job == null)&#xA;&#x9;&#x9;&#x9;this.job = (J) Services.getPort(&quot;job&quot;);&#xA;&#x9;&#x9;return this.job;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIWorkerImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public abstract class BaseIWorkerImpl&lt;S, W, C, J, R, P>: Computation, BaseIWorker&lt;S, W, C, J, R, P>&#xA;where S:IScatterTarget&lt;J>&#xA;where J:IData&#xA;where C:IGatherSource&lt;R>&#xA;where R:IData&#xA;where W:IWork&lt;J, R>&#xA;where P:IPlatform&#xA;{&#xA;&#xA;private W work = default(W);&#xA;&#xA;protected W Work {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.work == null)&#xA;&#x9;&#x9;&#x9;this.work = (W) Services.getPort(&quot;work&quot;);&#xA;&#x9;&#x9;return this.work;&#xA;&#x9;}&#xA;}&#xA;&#xA;private P platform = default(P);&#xA;&#xA;protected P Platform {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.platform == null)&#xA;&#x9;&#x9;&#x9;this.platform = (P) Services.getPort(&quot;platform&quot;);&#xA;&#x9;&#x9;return this.platform;&#xA;&#x9;}&#xA;}&#xA;&#xA;private S scatter = default(S);&#xA;&#xA;protected S Scatter {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.scatter == null)&#xA;&#x9;&#x9;&#x9;this.scatter = (S) Services.getPort(&quot;scatter&quot;);&#xA;&#x9;&#x9;return this.scatter;&#xA;&#x9;}&#xA;}&#xA;&#xA;private R result = default(R);&#xA;&#xA;protected R Result {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.result == null)&#xA;&#x9;&#x9;&#x9;this.result = (R) Services.getPort(&quot;result&quot;);&#xA;&#x9;&#x9;return this.result;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;private C gather = default(C);&#xA;&#xA;protected C Gather {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.gather == null)&#xA;&#x9;&#x9;&#x9;this.gather = (C) Services.getPort(&quot;gather&quot;);&#xA;&#x9;&#x9;return this.gather;&#xA;&#x9;}&#xA;}&#xA;&#xA;private J job = default(J);&#xA;&#xA;protected J Job {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.job == null)&#xA;&#x9;&#x9;&#x9;this.job = (J) Services.getPort(&quot;job&quot;);&#xA;&#x9;&#x9;return this.job;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#x9;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIWorkerImpl.cs" srcType="base" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/BaseIWorkerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Work/bin/1.0.0.0/IWork.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
@@ -255,7 +223,7 @@
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherSource.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIWorker.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using System.Threading.Tasks;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IWorkerImpl&lt;S, J, C, R, W, P> : BaseIWorkerImpl&lt;S, J, C, R, W, P>, IWorker&lt;S, J, C, R, W, P>&#xA;where S:IScatterTarget&lt;J>&#xA;where J:IData&#xA;where C:IGatherSource&lt;R>&#xA;where R:IData&#xA;where W:IWork&lt;J, R>&#xA;where P:IPlatform&#xA;{&#xA;&#xA;&#x9;public IWorkerImpl() { } &#xA;&#xA;&#x9;public override void main() &#xA;&#x9;{ &#xA;&#x9;&#x9;&#x9;Task scatter_task = new Task(delegate {this.Scatter.go();});&#xA;&#x9;&#x9;&#x9;Task work_task  = new Task(delegate {this.Work.go();});&#xA;&#x9;&#x9;&#x9;Task gather_task = new Task(delegate {this.Gather.go();});&#xA;&#xA;&#x9;&#x9;&#x9;scatter_task.Start();&#xA;&#x9;&#x9;&#x9;work_task.Start();&#xA;&#x9;&#x9;&#x9;gather_task.Start();&#xA;&#xA;&#x9;&#x9;&#x9;gather_task.Wait();&#xA;&#x9;&#x9;&#x9;work_task.Wait();&#xA;&#x9;&#x9;&#x9;scatter_task.Wait();&#xA;&#x9;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IWorkerImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.farm.Work;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using System.Threading.Tasks;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IWorkerImpl&lt;S, W, C, J, R, P> : BaseIWorkerImpl&lt;S, W, C, J, R, P>, IWorker&lt;S, W, C, J, R, P>&#xA;where S:IScatterTarget&lt;J>&#xA;where J:IData&#xA;where C:IGatherSource&lt;R>&#xA;where R:IData&#xA;where W:IWork&lt;J, R>&#xA;where P:IPlatform&#xA;{&#xA;&#xA;&#x9;public IWorkerImpl() { } &#xA;&#xA;&#x9;public override void main() &#xA;&#x9;{ &#xA;&#x9;&#x9;&#x9;Task scatter_task = new Task(delegate {this.Scatter.go();});&#xA;&#x9;&#x9;&#x9;Task work_task  = new Task(delegate {this.Work.go();});&#xA;&#x9;&#x9;&#x9;Task gather_task = new Task(delegate {this.Gather.go();});&#xA;&#xA;&#x9;&#x9;&#x9;scatter_task.Start();&#xA;&#x9;&#x9;&#x9;work_task.Start();&#xA;&#x9;&#x9;&#x9;gather_task.Start();&#xA;&#xA;&#x9;&#x9;&#x9;gather_task.Wait();&#xA;&#x9;&#x9;&#x9;work_task.Wait();&#xA;&#x9;&#x9;&#x9;scatter_task.Wait();&#xA;&#x9;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IWorkerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IWorkerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterTarget.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherSource.dll</dependency>
@@ -276,13 +244,13 @@
         <visualDescription h="10" w="10" x="88" y="66"/>
         <slice pRef="source_data" sRef="gather"/>
       </port>
-      <port name="result">
-        <visualDescription h="10" w="10" x="88" y="66"/>
-        <slice pRef="output" sRef="work"/>
-      </port>
       <port name="job">
         <visualDescription h="10" w="10" x="97" y="13"/>
         <slice pRef="input" sRef="work"/>
+      </port>
+      <port name="result">
+        <visualDescription h="10" w="10" x="88" y="66"/>
+        <slice pRef="output" sRef="work"/>
       </port>
       <parameter iname="IScatterTarget" order="0" parid="scatter_strategy" uname="target" varid="S"/>
       <parameter iname="IData" order="3" parid="job_type" uname="data" varid="J"/>

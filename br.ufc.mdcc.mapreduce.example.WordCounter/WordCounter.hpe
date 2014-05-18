@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000276dfbff80da817e4793ffb57498577070167fa02ac7fa6bad0ecac194eb08f8bae2bd2eb3f57465403193e7691459fbd976dfd3bb49314c7b122b867e95d3a5af3f7c57a9c3757d7a4196482de592aacb993e6884d0de1bcecc98c4729f864ce6d58060093bfe4d320a91f91f71b6a4ff167df5452b24233fd6b454593c968a" isAbstract="true" kind="Computation" name="WordCounter" packagePath="br.ufc.mdcc.mapreduce.example">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f5059ab5c24a489eac62ac8f467d8d2a475001261c39479d7e893834a17eaa6dce885b800f1c480c7b4eaa45d3900d09451c5cf7cc01d1c3f4ddd5ec44449bb636df562c83288c42a530f579575f37b251a2172d53b92fb3de52832c2be2b15d3ff6c3932eeab1dfa16fdf7ee21a0a492d225d793fcf95f4989b84b971e70985" isAbstract="true" kind="Computation" name="WordCounter" packagePath="br.ufc.mdcc.mapreduce.example">
     <baseType>
       <extensionType>
         <extends>true</extends>
@@ -21,7 +21,7 @@
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_value" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_value" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
           <visualDescription h="60" w="100" x="371" y="535">
             <color b="255" g="255" r="255"/>
           </visualDescription>
@@ -33,7 +33,7 @@
           <visualDescription h="69" w="188" x="244" y="453">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1519980950"/>
+          <parameter formFieldId="item_type" varName="X###188813604"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -65,7 +65,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="output_item_key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="output_item_key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="471" y="410">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -73,7 +73,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_value_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_value_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="371" y="535">
         <color b="255" g="255" r="255"/>
       </visualDescription>

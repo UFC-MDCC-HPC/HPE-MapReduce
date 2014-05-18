@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000037186b4277a7cb05a945d4e092d9600a00aa3eed192924aca11ba682c982116d799f0b3c4a2b4c9599a89faf4fd7dcc600948c70b5844e0ce55d5789ee5879247e5a2cfd38d27875a2c5fe102c9727fc1d772d1f0fa2e7303d0441ca58e51cbe0ddd73bd7c2735fd20370036a40010aa7055d7ae51c5eabb0cccea748615728d" isAbstract="false" kind="Computation" name="PartitionFunctionStringKeyDefault" packagePath="br.ufc.mdcc.mapreduce.user.impl">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000035e5ecc7d16b373723165b796bc6f704b5bb5fbcb12ad8f5cc76adce68efaefa0a78d7a40766255d60fc910b4d9f695b13948f486ebee045b23f9ae2d39f6038949b8c8a24c6f5c4d3bbd583f09669f84815db245a2627338768a12d572e10b6b062670a7e0d3e724a5d6af74321f9d98ac3b63c1d0b3c6e08025755e0c4eea7" isAbstract="false" kind="Computation" name="PartitionFunctionStringKeyDefault" packagePath="br.ufc.mdcc.mapreduce.user.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
@@ -10,7 +10,7 @@
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="input_key" varName="OMK"/>
-        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="input_key" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_key" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
           <visualDescription h="60" w="100" x="166" y="49">
             <color b="255" g="255" r="255"/>
           </visualDescription>
@@ -37,7 +37,7 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000396666ff552cef8b47d93922d08bea48616a66f5bb1517b36600a367bc44ba4d07d0a6e071654c266c6c9a5610df0716faf4c02d3ec80829b07dd597a4501ed5f8b797929cdf7b8741e09d3a0a46016e2794d9d0712676a51930c5023b2e77632780ece786f5698bb6cff738aef33508576970453db3d1657a34947ccd2568f" localRef="key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="key_type" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="166" y="49">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -62,13 +62,13 @@
           <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/BaseIPartitionFunction.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault { &#xA;&#xA;&#x9;public class IPartitionStringKeyDefaultImpl&lt;OMK> : BaseIPartitionStringKeyDefaultImpl&lt;OMK>, IPartitionFunction&lt;OMK>&#xA;&#x9;where OMK:IString&#xA;&#x9;{&#xA;&#x9;&#x9;public IPartitionStringKeyDefaultImpl() { } &#xA;&#xA;&#x9;&#x9;private int number_of_partitions;&#xA;&#x9;&#x9;public int NumberOfPartitions {&#xA;&#x9;&#x9;&#x9;get { return number_of_partitions; }&#xA;&#x9;&#x9;&#x9;set { this.number_of_partitions = value; }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IStringInstance input_string_instance = (IStringInstance) Input_key.Instance;&#xA;&#x9;&#x9;&#x9;IIntegerInstance output_string_instance = (IIntegerInstance) Output_key.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;int value = input_string_instance.Value.GetHashCode();&#xA;&#xA;&#x9;&#x9;&#x9;output_string_instance.Value = value % NumberOfPartitions;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IPartitionStringKeyDefaultImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault/bin/1.0.0.0/IPartitionStringKeyDefaultImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault { &#xA;&#xA;&#x9;public class IPartitionStringKeyDefaultImpl&lt;OMK> : BaseIPartitionStringKeyDefaultImpl&lt;OMK>, IPartitionFunction&lt;OMK>&#xA;&#x9;where OMK:IString&#xA;&#x9;{&#xA;&#x9;&#x9;public IPartitionStringKeyDefaultImpl() { } &#xA;&#xA;&#x9;&#x9;private int number_of_partitions;&#xA;&#x9;&#x9;public int NumberOfPartitions {&#xA;&#x9;&#x9;&#x9;get { return number_of_partitions; }&#xA;&#x9;&#x9;&#x9;set { this.number_of_partitions = value; }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IStringInstance input_string_instance = (IStringInstance) Input_key.Instance;&#xA;&#x9;&#x9;&#x9;IIntegerInstance output_string_instance = (IIntegerInstance) Output_key.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;int value = Math.Abs(input_string_instance.Value.GetHashCode());&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;PARTITION FUNCTION &quot; + (value % NumberOfPartitions));&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;output_string_instance.Value = value % NumberOfPartitions;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IPartitionStringKeyDefaultImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault/bin/1.0.0.0/IPartitionStringKeyDefaultImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault/bin/1.0.0.0/BaseIPartitionStringKeyDefaultImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="55" w="172" x="200" y="107">
+      <visualDescription h="55" w="172" x="178" y="108">
         <color b="0" g="0" r="255"/>
       </visualDescription>
       <port name="input_key">

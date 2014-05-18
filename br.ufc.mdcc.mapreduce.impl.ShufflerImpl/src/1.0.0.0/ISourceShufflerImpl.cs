@@ -14,7 +14,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
     public class ISourceShufflerImpl<OMK>: BaseISourceShufflerImpl<OMK>, ISourceShuffler<OMK>
     where OMK: IData {
 
-        private MPI.Intracommunicator worldcomm;
+        private MPI.Intracommunicator comm;
 		static private int TAG_SHUFFLER_OMV = 445;
 		static private int TAG_SHUFFLER_OMV_FINISH = 446;
         private int gerente = 0;
@@ -24,7 +24,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ShufflerImpl {
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
-			worldcomm = Mpi_comm.worldComm();
+			comm = this.Communicator;
 		}
 
         public override void main() 

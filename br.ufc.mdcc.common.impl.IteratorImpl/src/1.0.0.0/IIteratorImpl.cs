@@ -14,7 +14,12 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 	public class IIteratorImpl<T> : BaseIIteratorImpl<T>, IIterator<T>
 	where T:IData
 	{
-		public IIteratorImpl() { newInstance (); } 
+		public IIteratorImpl() { } 
+
+		override public void initialize()
+		{
+			newInstance(); 
+		}
 
 		public IIteratorInstance<T> newIteratorInstance ()
 		{
@@ -43,20 +48,31 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 	public class IIteratorInstanceImpl<T> : IIteratorInstance<T>
 		where T:IData
 	{
+		private bool has_finished = false;
 
 		public IIteratorInstanceImpl() { } 
 
-		private ConcurrentQueue<Option<object>> items = null;
+		private ConcurrentQueue<Option<object>> items = new ConcurrentQueue<Option<object>>();
+
+		readonly object not_empty = new object();
 
 		public void put (object item)
 		{
+			if (this.HasFinished)
+				throw new FinishedIteratorException();
+
 			items.Enqueue(new Some<object>(item));
+
+			lock (not_empty) { Monitor.Pulse(not_empty); }
 		}
 
 		public void putAll (IIteratorInstance<T> items)
 		{
-			while (!items.HasFinished)
-				put(items.fetch_next());
+			if (this.HasFinished)
+				throw new FinishedIteratorException();
+
+			object item;
+			while (items.fetch_next(out item)) put(item);
 		}
 
 		public void finish ()
@@ -65,30 +81,36 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 				throw new FinishedIteratorException();
 
 			this.items.Enqueue(new None<object>());
+
+			lock (not_empty) { Monitor.Pulse(not_empty); }
 		}
 
-		public object fetch_next ()
+		public bool fetch_next (out object result)
 		{
 			if (this.HasFinished)
 				throw new FinishedIteratorException();
+
+			result = null;
+
+			if (items.IsEmpty)
+				lock (not_empty) { Monitor.Wait(not_empty); }
 
 			Option<object> item;
 			items.TryDequeue(out item);
 
 			if (item.IsNone)
-				throw new FinishedIteratorException();
+				has_finished = true;
+			else 
+				result = item.Value;				
 
-			return item.Value;
+			return !HasFinished;
 		}
 
 		public bool HasFinished
 		{
 			get 
 			{ 
-				Option<object> item;
-				items.TryPeek(out item);
-
-				return item.IsNone; 
+				return has_finished; 
 			}
 		}
 

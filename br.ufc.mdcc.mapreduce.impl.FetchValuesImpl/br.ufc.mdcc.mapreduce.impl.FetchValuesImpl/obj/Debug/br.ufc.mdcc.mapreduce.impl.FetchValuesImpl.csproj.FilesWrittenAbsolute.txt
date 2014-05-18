@@ -1,8 +1,4 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll.mdb
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/obj/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll
-/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/obj/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/DGAC.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/MPI.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/br.ufc.mdcc.common.Data.dll
@@ -19,3 +15,7 @@
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/br.ufc.mdcc.common.Integer.dll.mdb
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/IMPIDirect.dll
 /home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/IMPIDirect.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll.mdb
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/bin/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/obj/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll
+/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/obj/Debug/br.ufc.mdcc.mapreduce.impl.FetchValuesImpl.dll.mdb

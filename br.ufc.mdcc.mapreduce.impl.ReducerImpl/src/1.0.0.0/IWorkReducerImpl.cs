@@ -29,7 +29,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl
              * 3. Pegar o resultado de Reduction_function.go() de Output_reduce (ORV) 
              *    e colocar no iterator Output.
              */
-            startThreads();
+            readPair_OMK_OMVs(); //startThreads();
         }
 
         private void readPair_OMK_OMVs() 
@@ -37,14 +37,19 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl
 			IIteratorInstance<IKVPair<OMK, IIterator<OMV>>> input_instance = (IIteratorInstance<IKVPair<OMK, IIterator<OMV>>>) Input.Instance;
 			IIteratorInstance<ORV> output_instance = (IIteratorInstance<ORV>) Output.Instance;
 
-			while (!input_instance.HasFinished) 
+			object kvpair_object;
+			int count=0;
+			while (input_instance.fetch_next(out kvpair_object)) 
 			{
-				IKVPairInstance<OMK, IIterator<OMV>> kvpair = (IKVPairInstance<OMK, IIterator<OMV>>) input_instance.fetch_next();
-
+				Console.WriteLine(WorldComm.Rank + ": REDUCER LOOP 1!" + (count++));
+				IKVPairInstance<OMK, IIterator<OMV>> kvpair = (IKVPairInstance<OMK, IIterator<OMV>>) kvpair_object;
 				Input_reduce.Instance = kvpair;
-				Reduce_function.go();
-				output_instance.put(Output_reduce.Instance);
+				Reduce_function.go();				
+				output_instance.put(Output_reduce.Instance);	
             }
+
+			output_instance.finish();
+			Console.WriteLine(WorldComm.Rank + ": FINISH REDUCER !!!");
         }
 
         private void startThreads() {

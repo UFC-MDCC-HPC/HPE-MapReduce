@@ -23,18 +23,26 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 	    public override void main() 
 		{ 
 			IIteratorInstance<IKVPair<IMK,IMV>> input_instance = (IIteratorInstance<IKVPair<IMK,IMV>>) Input.Instance;
+			IIteratorInstance<IKVPair<OMK,OMV>> output_instance = (IIteratorInstance<IKVPair<OMK,OMV>>) Output.Instance;
 
-			// 1. Ler os elementos do iterator Input, um a um;
-			while (!input_instance.HasFinished) 
+			object bin_object = null;
+
+			int count=0;
+			while (input_instance.fetch_next(out bin_object))
 			{
-				// 2. Para cada par, atribuir a chave a Map_key e o valor a Map_value;
-				IKVPairInstance<IMK,IMV> bin = (IKVPairInstance<IMK,IMV>) input_instance.fetch_next ();
+				Console.WriteLine(WorldComm.Rank + ": LOOP MAPPER !!!" + (count++));
+				IKVPairInstance<IMK,IMV> bin = (IKVPairInstance<IMK,IMV>) bin_object;
+
 				Map_key.Instance = bin.Key;
 				Map_value.Instance = bin.Value;
 
-				// 3. Chamar Map_function.go()
 				Map_function.go ();
 			}
+
+			Console.WriteLine(WorldComm.Rank + ": FINISH MAPPER !!!");
+
+			output_instance.finish();
+
     	}
     }
 }

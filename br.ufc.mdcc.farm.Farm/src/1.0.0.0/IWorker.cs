@@ -7,7 +7,7 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.farm.Farm { 
 
-public interface IWorker<S, J, C, R, W, P> : BaseIWorker<S, J, C, R, W, P>
+public interface IWorker<S, W, C, J, R, P> : BaseIWorker<S, W, C, J, R, P>
 where S:IScatterTarget<J>
 where J:IData
 where C:IGatherSource<R>

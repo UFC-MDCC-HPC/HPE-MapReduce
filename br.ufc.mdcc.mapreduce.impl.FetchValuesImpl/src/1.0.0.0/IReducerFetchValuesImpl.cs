@@ -16,46 +16,65 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 		where OMV:IData
 		{
 		// Variáveis do Ambiente MPI.
-		private MPI.Intracommunicator worldcomm = null;
+		private MPI.Intracommunicator comm = null;
 		static private int TAG_FETCHVALUES_OMV = 345;
 		static private int TAG_FETCHVALUES_OMV_FINISH = 347;
 
 
-		public IReducerFetchValuesImpl() {	} 
+		//public IReducerFetchValuesImpl() {	} 
 
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
-			worldcomm = Mpi_comm.worldComm();
+			comm = this.Communicator;
 		}
 
 		public override void main() 
 		{ 
 			MPI.CompletedStatus status;
-			IKVPairInstance<OMK,IIterator<OMV>> kv;
+			IKVPairInstance<OMK,OMV> kv;
 
 			IIteratorInstance<IKVPair<OMK,IIterator<OMV>>> reduce_job_instance = (IIteratorInstance<IKVPair<OMK,IIterator<OMV>>>) Reduce_job.Instance;
 
-			IDictionary<object,IIteratorInstance<OMV>> kv_cache = new Dictionary<object, IIteratorInstance<OMV>>();
+			IDictionary<object,IIteratorInstance<OMV>> kv_cache = new Dictionary<object,IIteratorInstance<OMV>>();
 
-			worldcomm.Receive<IKVPairInstance<OMK,IIterator<OMV>>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
+			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE 1 !");
+			comm.Receive<IKVPairInstance<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
+			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE 1  ! tag=" + status.Tag + ", source=" + status.Source);
+
+			int count=0;
 			while (status.Tag != TAG_FETCHVALUES_OMV_FINISH)
 			{
 				IIteratorInstance<OMV> iterator = null;
 				if (!kv_cache.ContainsKey(kv.Key))
 				{
+					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 1 !" + (count++) + " " + kv.Key.GetType());
 					iterator = Reduce_job_values_factory.newIteratorInstance ();
-
-					kv_cache.Add(kv.Key, (IIteratorInstance<OMV>) kv.Value);
-					reduce_job_instance.put (kv);
+					kv_cache.Add(kv.Key, iterator);
+					IKVPairInstance<OMK,IIterator<OMV>> item = (IKVPairInstance<OMK,IIterator<OMV>>) Reduce_job.createItem();
+					item.Key = kv.Key;
+					item.Value = iterator;
+					reduce_job_instance.put (item);
 				}
-				else 
+				else  {
+					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 2 !" + (count++));
 					kv_cache.TryGetValue(kv.Key, out iterator);
+				}
 								
-				iterator.putAll((IIteratorInstance<OMV>) kv.Value);
+				iterator.put(kv.Value);
 
-				worldcomm.Receive<IKVPairInstance<OMK,IIterator<OMV>>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
+				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE n !");
+				comm.Receive<IKVPairInstance<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
+				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE n ! tag=" + status.Tag + ", source=" + status.Source);
 			} 
+
+			foreach (KeyValuePair<object,IIteratorInstance<OMV>> kv_item in kv_cache)
+				kv_item.Value.finish();
+
+			reduce_job_instance.finish();
+			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - FINISH ");
+
+
 		}
 	}
 }

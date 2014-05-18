@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000371f8e50263e515cd9e24d4e32613ca8355b805b778b9e37f3801716081238effd5d03f6652f7994a199242d9bd1a4a5990e43dd48c0d34ecdbb821e4a704432b283053795a71510c23f86ac7a9e27d637cccfd5b12ab482afcdbd5e63534a8d13a8b9e4ac3441ff0c8bad584493c357b9c71d37942a0016bdbf2a71a10372b5" isAbstract="true" kind="Synchronizer" name="FetchValues" packagePath="br.ufc.mdcc.mapreduce">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000000158361d8c1ddb6c2155a3b9faddc943599d6825bf48af267ed21f7498ebe21d94d9b9b695acb812f96e5f15183722bad4af6db5184b079c9e0805f07a5fe7d39919c160ca74d4870aacc4e8e16b59792da993718213555c129823c2541a99922fb1ac06028a343766b007d3bf128ddf0da4d554f1542fa6222e34008c768b90" isAbstract="true" kind="Synchronizer" name="FetchValues" packagePath="br.ufc.mdcc.mapreduce">
     <versions field1="1" field2="0" field3="0" field4="0"/>
     <visualAttributes>
       <color b="255" g="255" r="255"/>
@@ -149,13 +149,13 @@
         <visualDescription h="10" w="10" x="20" y="0"/>
         <slice pRef="map_result" sRef="map_result"/>
       </port>
-      <port name="input_key">
-        <visualDescription h="10" w="10" x="74" y="0"/>
-        <slice pRef="input_key" sRef="partition_function"/>
-      </port>
       <port name="output_key">
         <visualDescription h="10" w="10" x="80" y="32"/>
         <slice pRef="output_key" sRef="partition_function"/>
+      </port>
+      <port name="input_key">
+        <visualDescription h="10" w="10" x="74" y="0"/>
+        <slice pRef="input_key" sRef="partition_function"/>
       </port>
       <parameter iname="IData" order="1" parid="value_type" uname="data" varid="OMV"/>
       <parameter iname="IData" order="0" parid="key_type" uname="data" varid="OMK"/>

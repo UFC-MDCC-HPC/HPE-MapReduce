@@ -25,7 +25,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 		protected IInteger Partition_key {
 			get {
 				if (this.partition_key == null)
-					this.partition_key = (IInteger) Services.getPort("partition_key");
+					this.partition_key = (IInteger) Services.getPort("output_key");
 				return this.partition_key;
 			}
 		}
@@ -47,34 +47,32 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 		protected OMK Data_key {
 			get {
 				if (this.data_key == null)
-					this.data_key = (OMK) Services.getPort("data_key");
+					this.data_key = (OMK) Services.getPort("input_key");
 				return this.data_key;
 			}
 		}
 
-
-
-	private IIterator<IKVPair<OMK,OMV>> map_result = null;
-
-	public IIterator<IKVPair<OMK,OMV>> Map_result {
-		get {
-			if (this.map_result == null)
-					this.map_result = (IIterator<IKVPair<OMK,OMV>>) Services.getPort("map_result");
-			return this.map_result;
-		}
-	}
-
-			private  IMPIDirect mpi_comm = null;
-
-			protected IMPIDirect Mpi_comm {
-				get {
-					if (this.mpi_comm == null) 
-					{
-						this.mpi_comm = (IMPIDirect) Services.getPort("mpi_comm");
-					}
-					return this.mpi_comm;
-				}
+		private IIterator<IKVPair<OMK,OMV>> map_result = null;
+	
+		public IIterator<IKVPair<OMK,OMV>> Map_result {
+			get {
+				if (this.map_result == null)
+						this.map_result = (IIterator<IKVPair<OMK,OMV>>) Services.getPort("map_result");
+				return this.map_result;
 			}
+		}
+
+		private  IMPIDirect mpi_comm = null;
+
+		protected IMPIDirect Mpi_comm {
+			get {
+				if (this.mpi_comm == null) 
+				{
+					this.mpi_comm = (IMPIDirect) Services.getPort("mpi_comm");
+				}
+				return this.mpi_comm;
+			}
+		}
 	
 
 

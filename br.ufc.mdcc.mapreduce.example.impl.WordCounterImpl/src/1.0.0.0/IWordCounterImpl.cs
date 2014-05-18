@@ -22,26 +22,36 @@ namespace br.ufc.mdcc.mapreduce.example.impl.WordCounterImpl {
 			IIteratorInstance<IKVPair<IString,IInteger>> output_value_instance = (IIteratorInstance<IKVPair<IString,IInteger>>) Output_data.Instance;
 
 			string input_string = input_value_instance.Value;
-			string[] words = input_string.Split(new char[] {' '});
+			string chars = " ;?:.!,*<>+";
+			string[] words = input_string.Split(new char[] {chars[0],chars[1],chars[2],chars[3],chars[4],chars[5],chars[6],chars[7],chars[8],chars[9], chars[10]});
+
+			
 
 			IDictionary<string, int> index = new Dictionary<string,int>();
-			foreach (string word in words) 
+			foreach (string word_ in words) 
 			{
-				int counter;
-				if (index.TryGetValue(word, out counter))
-					index.Remove(word);
-				else 
-					counter = 0;
-				index.Add(word, counter+1);
+				string word = word_.ToLower().Trim();
+				if (word!="")
+				{
+					int counter;
+					if (index.TryGetValue(word, out counter))
+						index.Remove(word);
+					else 
+						counter = 0;
+					index.Add(word, counter+1);
+				}
 			}
 
 			foreach (KeyValuePair<string,int> occurrences in index)
 			{
+				Console.WriteLine(WorldComm.Rank + ": MAP (WORD COUNTER) - " + occurrences.Key + ":" + occurrences.Value);
 				IKVPairInstance<IString,IInteger> item = (IKVPairInstance<IString,IInteger>) Output_data.createItem();
 				((IStringInstance)item.Key).Value = occurrences.Key;
 				((IIntegerInstance)item.Value).Value = occurrences.Value;
 				output_value_instance.put(item);
 			}
+			
+			
 		}
 
 	}

@@ -12,12 +12,15 @@ namespace br.ufc.mdcc.common.impl.KVPairImpl {
 	where K:IData
 	where V:IData
 	{
-		public IKVPairImpl() { } 
+		override public void initialize()
+		{
+			newInstance(); 
+		}
 
 		public IKVPairInstance<K,V> newInstance (object k, object v)
 		{
-			IKVPairInstance<K,V> instance = (IKVPairInstance<K,V>) newInstance (k,v);
-			return instance;
+			IKVPairInstance<K,V> instance = new IKVPairInstanceImpl<K,V> (k,v);
+			return ( IKVPairInstance<K,V>) (this.Instance = instance);
 		}
 
 		public object newInstance ()
@@ -35,6 +38,7 @@ namespace br.ufc.mdcc.common.impl.KVPairImpl {
 		}
 	}
 
+	[Serializable]
 	public class IKVPairInstanceImpl<K,V> : IKVPairInstance<K,V>
 		where K:IData
 		where V:IData

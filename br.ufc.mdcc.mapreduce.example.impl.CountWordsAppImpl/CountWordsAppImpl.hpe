@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000651da64daaeb7fc2770237a63093ef2e295e6d26e5b9c7e4c8210034f415c0d33ebae46d832c9e0ad1b04e61e779e8499ba5c6843d66629bb2315e21a3bc1f14b1ad1002d942bb1c47a778ee7b7559cd9bf30c15379cf4c6f529d0811eeb5b09589376d0f705a67e87d18a722e4355a5b1569cd16df7e59a1f1cd6fe2a973cdb" isAbstract="false" kind="Application" name="CountWordsAppImpl" packagePath="br.ufc.mdcc.mapreduce.example.impl">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009d9bd0a407161668c75c14fdc35b102e7ce53c8ff901b35b340e937dac63d45a13b3ae32c1683b0f00713b6a652f21c3b0e85566fdeff792e8064b0c04d394bf11d6d1410c5228c1e62071eb5b24b91fa7cfd2e410db4acea5d675de69ea85b3c4d5d408c24d2ec09da6ecb0b2b9e945c53ce509a8f4d0c2fb646273e0a94d94" isAbstract="false" kind="Application" name="CountWordsAppImpl" packagePath="br.ufc.mdcc.mapreduce.example.impl">
     <baseType>
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000006d638c9f6c0b925128b98c5a316e368c89eefeca434979c5dac769bed1e35dd8d05f5d64dee955837c87cbba023bfee2eddfca39058b3bb0b4ef94d94c2fbde3a4bb8406569fe9811cdcb7585b387c5601c8fc77796edf7bcb404e2b65701c584e9c027bc54a0c82967ef00f75ee120ab95cb4114afe1781d2b4e820694ecf8c" localRef="base" location="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe" name="CountWordsApp" package="br.ufc.mdcc.mapreduce.example" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="126" y="155">
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000005bb46e5d6375d6ca59a8c79e7eda2700caa7fe3cb0b6e7c34444e765e71b054a3e00b5ce2c602727af418605864f9af37c6bfb7cbce433a9080f6bf6ac98919007f27bc5d271794ca26a1af34247f6b05f69c0aa255815e63e6bbde57abd23ac90571d07d30778f3a9e32244d6680a2a8735aa17a25833db185d01084fd42ec5" localRef="base" location="br.ufc.mdcc.mapreduce.example.CountWordsApp/CountWordsApp.hpe" name="CountWordsApp" package="br.ufc.mdcc.mapreduce.example" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="126" y="161">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="platform" varName="PLATFORM"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="400" y="194">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="262" y="481">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###885625492"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
         <unitBounds parallel="true" uRef="word_counter_process">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -53,7 +70,7 @@
           <dependency>br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/IWordCounterProcess.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="50" w="208" x="50" y="373">
+      <visualDescription h="50" w="208" x="48" y="280">
         <color b="0" g="165" r="255"/>
       </visualDescription>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
@@ -98,7 +115,7 @@
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.CountWordsApp;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;public IMasterProcessImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{&#x9;&#x9;&#x9; &#xA;&#x9;&#x9;&#x9;((IStringInstance)Input_data.Instance).Value = readInput();&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IKVPair&lt;IString,IInteger>> output_data_instance = (IIteratorInstance&lt;IKVPair&lt;IString,IInteger>> ) Output_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;Count_words.go();&#xA;&#xA;&#x9;&#x9;&#x9;while (!output_data_instance.HasFinished) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString,IInteger> word = (IKVPairInstance&lt;IString,IInteger>) output_data_instance.fetch_next();&#xA;&#x9;&#x9;&#x9;&#x9;Console.Out.Write (((IStringInstance)word.Key).Value + &quot;:&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;Console.Out.WriteLine (((IIntegerInstance)word.Value).Value);&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;string readInput ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;throw new NotImplementedException ();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.CountWordsApp;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using System.Collections.Generic;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;public IMasterProcessImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{&#x9;&#x9;&#x9; &#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;((IStringInstance)Input_data.Instance).Value = readInput();&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IKVPair&lt;IString,IInteger>> output_data_instance = (IIteratorInstance&lt;IKVPair&lt;IString,IInteger>> ) Output_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;APP BEFORE GO !!!&quot;);&#xA;&#x9;&#x9;&#x9;Count_words.go();&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;APP AFTER GO !!!&quot;);&#xA;&#xA;&#x9;&#x9;&#x9;SortedDictionary&lt;int,IList&lt;string>> result_pairs = new SortedDictionary&lt;int,IList&lt;string>>();&#xA;&#xA;&#x9;&#x9;&#x9;int count=0;&#xA;&#x9;&#x9;&#x9;object word_object;&#xA;&#x9;&#x9;&#x9;while (output_data_instance.fetch_next(out word_object)) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString,IInteger> word = (IKVPairInstance&lt;IString,IInteger>) word_object;&#xA;&#x9;&#x9;&#x9;&#x9;int value = ((IIntegerInstance)word.Value).Value;&#xA;&#x9;&#x9;&#x9;&#x9;string key = ((IStringInstance)word.Key).Value;&#xA;&#x9;&#x9;&#x9;&#x9;IList&lt;string> list_words;&#xA;&#x9;&#x9;&#x9;&#x9;if (!result_pairs.TryGetValue(value, out list_words))&#xA;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;list_words = new List&lt;string>();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;result_pairs.Add(value, list_words);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;list_words.Add(key);&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;foreach (int count_word in result_pairs.Keys)&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;foreach (string word in result_pairs[count_word])&#xA;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;    &#x9;Console.WriteLine(&quot;RESULT - {0}: {1}&quot;, count_word, word);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;//&#x9;Console.WriteLine (&quot;RESULT - &quot; + ((IStringInstance)word.Key).Value + &quot;:&quot; + ((IIntegerInstance)word.Value).Value + &quot; count=&quot; + (count++));&#xA;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;APP FINISH !!! &quot; + count);&#xA;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;string readInput ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return System.IO.File.ReadAllText(&quot;/home/heron/contents.txt&quot;);&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.CountWordsApp/bin/1.0.0.0/IMasterProcess.dll</dependency>
@@ -107,6 +124,14 @@
       <visualDescription h="40" w="187" x="310" y="322">
         <color b="230" g="216" r="173"/>
       </visualDescription>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="53" y="4"/>
+        <slice pRef="output_data" sRef="count_words"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="36" y="0"/>
+        <slice pRef="input_data" sRef="count_words"/>
+      </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>

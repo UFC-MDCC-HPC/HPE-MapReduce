@@ -65,22 +65,22 @@ public Out Output_data {
 	}
 }
 
-		private IManager<ISourceSplitter<In, IMK, IMV, Sf, Bf>, In, ITargetPartition<OMK>, IIterator<IKVPair<OMK, IInteger>>, PLATFORM> farm_map = null;
+		private IManager<ISourceSplitter<In, IMK, IMV, Sf, Bf>, ITargetPartition<OMK>, In, IIterator<IKVPair<OMK, IInteger>>, PLATFORM> farm_map = null;
 
-		protected IManager<ISourceSplitter<In, IMK, IMV, Sf, Bf>, In, ITargetPartition<OMK>, IIterator<IKVPair<OMK, IInteger>>, PLATFORM> Farm_map {
+		protected IManager<ISourceSplitter<In, IMK, IMV, Sf, Bf>, ITargetPartition<OMK>, In, IIterator<IKVPair<OMK, IInteger>>, PLATFORM> Farm_map {
 	get {
 		if (this.farm_map == null)
-					this.farm_map = (IManager<ISourceSplitter<In, IMK, IMV, Sf, Bf>, In, ITargetPartition<OMK>, IIterator<IKVPair<OMK, IInteger>>, PLATFORM>) Services.getPort("farm_map");
+					this.farm_map = (IManager<ISourceSplitter<In, IMK, IMV, Sf, Bf>, ITargetPartition<OMK>, In, IIterator<IKVPair<OMK, IInteger>>, PLATFORM>) Services.getPort("farm_map");
 		return this.farm_map;
 	}
 }
 
-		private IManager<ISourceShuffler<OMK>, IIterator<IKVPair<OMK,IInteger>>, ITargetCombiner<ORV, Out, Cf>, Out, PLATFORM> farm_reduce = null;
+		private IManager<ISourceShuffler<OMK>, ITargetCombiner<ORV, Out, Cf>, IIterator<IKVPair<OMK,IInteger>>, Out, PLATFORM> farm_reduce = null;
 
-		protected IManager<ISourceShuffler<OMK>, IIterator<IKVPair<OMK,IInteger>>, ITargetCombiner<ORV, Out, Cf>, Out, PLATFORM> Farm_reduce {
+		protected IManager<ISourceShuffler<OMK>, ITargetCombiner<ORV, Out, Cf>, IIterator<IKVPair<OMK,IInteger>>, Out, PLATFORM> Farm_reduce {
 	get {
 		if (this.farm_reduce == null)
-					this.farm_reduce = (IManager<ISourceShuffler<OMK>, IIterator<IKVPair<OMK,IInteger>>, ITargetCombiner<ORV, Out, Cf>, Out, PLATFORM>) Services.getPort("farm_reduce");
+					this.farm_reduce = (IManager<ISourceShuffler<OMK>, ITargetCombiner<ORV, Out, Cf>, IIterator<IKVPair<OMK,IInteger>>, Out, PLATFORM>) Services.getPort("farm_reduce");
 		return this.farm_reduce;
 	}
 }

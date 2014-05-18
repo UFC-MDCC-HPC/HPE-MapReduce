@@ -34,7 +34,7 @@
         <color b="255" g="128" r="0"/>
       </visualDescription>
     </interface>
-    <unit iRef="IDouble" multiple="false" private="false" replica="0" uRef="double" visibleInterface="true">
+    <unit iRef="IDouble" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
       <super cRef="base" uRef="data"/>
       <visualDescription h="40" w="80" x="137" y="253"/>
     </unit>

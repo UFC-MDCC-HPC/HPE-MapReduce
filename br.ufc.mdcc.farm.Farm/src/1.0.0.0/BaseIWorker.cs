@@ -9,7 +9,7 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.farm.Farm { 
 
-public interface BaseIWorker<S, J, C, R, W, P> : IComputationKind 
+public interface BaseIWorker<S, W, C, J, R, P> : IComputationKind 
 where S:IScatterTarget<J>
 where J:IData
 where C:IGatherSource<R>

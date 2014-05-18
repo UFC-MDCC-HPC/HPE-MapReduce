@@ -21,13 +21,15 @@ namespace br.ufc.mdcc.mapreduce.example.impl.TallierImpl {
 			IIteratorInstance<IInteger> counts_iterator = (IIteratorInstance<IInteger>) input_values_instance.Value;
 
 			int total_count = 0;
-			while (!counts_iterator.HasFinished)						
-				total_count += ((IIntegerInstance) counts_iterator.fetch_next()).Value;
+			object integer_object;
+			while (counts_iterator.fetch_next(out integer_object))						
+				total_count += ((IIntegerInstance) integer_object).Value;
 
-			IKVPairInstance<IString,IInteger> output_value_instance = (IKVPairInstance<IString,IInteger>) Output_value.Instance;
-			                                                          			
+			IKVPairInstance<IString,IInteger> output_value_instance = (IKVPairInstance<IString,IInteger>) Output_value.newInstance();
+			             
 			((IStringInstance)output_value_instance.Key).Value = ((IStringInstance)input_values_instance.Key).Value;
 			((IIntegerInstance)output_value_instance.Value).Value = total_count;
+			Console.WriteLine ("TALLIER string=" + ((IStringInstance)output_value_instance.Key).Value + "; count=" + ((IIntegerInstance)output_value_instance.Value).Value);	
 		}
 
 	}

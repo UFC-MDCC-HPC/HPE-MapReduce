@@ -36,9 +36,9 @@ public class IMPIDirectImpl : BaseIMPIDirectImpl, IMPIDirect
    
    public Intracommunicator localComm(IUnit caller)
    {
-       Intracommunicator _localComm;   
+       Intracommunicator _localComm = null;   
        //_localComm = (Intracommunicator)Communicator.world.Create(Communicator.world.Group.IncludeOnly(caller.Ranks));
-       _localComm = (Intracommunicator)this.WorldComm.Create(this.WorldComm.Group.IncludeOnly(caller.GlobalRanks));
+//       _localComm = (Intracommunicator)this.WorldComm.Create(this.WorldComm.Group.IncludeOnly(caller.Ranks));
        return _localComm;
    }
    

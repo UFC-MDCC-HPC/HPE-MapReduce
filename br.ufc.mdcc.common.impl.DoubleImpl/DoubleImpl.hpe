@@ -9,7 +9,7 @@
         <visualDescription h="60" w="100" x="315" y="350">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <unitBounds parallel="false" uRef="double">
+        <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -25,8 +25,8 @@
         <color b="255" g="128" r="0"/>
       </visualDescription>
     </interface>
-    <unit iRef="IDoubleImpl" multiple="false" private="false" replica="0" uRef="double" visibleInterface="true">
-      <super cRef="base" uRef="double"/>
+    <unit iRef="IDoubleImpl" multiple="false" private="false" replica="0" uRef="data" visibleInterface="true">
+      <super cRef="base" uRef="data"/>
       <visualDescription h="40" w="80" x="195" y="266"/>
     </unit>
   </componentInfo>

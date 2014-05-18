@@ -9,14 +9,13 @@
         <visualDescription h="60" w="100" x="279" y="357">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="input_key_type" varName="OMK"/>
-        <parameter formFieldId="input_value_type" varName="OMV"/>
-        <parameter formFieldId="output_type" varName="ORV"/>
-        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_value" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="130" x="468" y="304">
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_value" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="174" x="594" y="259">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <unitBounds parallel="false" uRef="data">
+          <parameter formFieldId="value_type" varName="OMV"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
@@ -24,13 +23,13 @@
           <visualDescription h="60" w="129" x="48" y="390">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="value_type" varName="X###1397527746788"/>
+          <parameter formFieldId="value_type" varName="X###19942133"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="vote_reduce">
+        <unitBounds parallel="false" uRef="reduce_function">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </component>
@@ -41,61 +40,14 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="kv_value_type" location="br.ufc.mdcc.common.Double/Double.hpe" multiple="false" name="Double" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="260" x="788" y="93">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="input_value_type" location="br.ufc.mdcc.common.Double/Double.hpe" multiple="false" name="Double" package="br.ufc.mdcc.common" parameter_id="input_value_type" exposed="false">
-      <visualDescription h="60" w="254" x="326" y="41">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" parameter_id="input_key_type" exposed="false">
-      <visualDescription h="60" w="221" x="39" y="50">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="kv_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="218" x="814" y="162">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_type" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" parameter_id="output_type" exposed="false">
-      <visualDescription h="60" w="171" x="592" y="353">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <parameter formFieldId="value_type" varName="V"/>
-      <parameter formFieldId="key_type" varName="K"/>
-      <unitBounds parallel="false" uRef="kv_pair">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <supplyParameter cRef="kv_value_type" varName="V"/>
-    <supplyParameter cRef="kv_key_type" varName="K"/>
-    <parameter componentRef="input_value_type" formFieldId="input_value_type" order="0" varName="OMV"/>
-    <parameter componentRef="input_key_type" formFieldId="input_key_type" order="1" varName="OMK"/>
-    <parameter componentRef="output_type" formFieldId="output_type" order="2" varName="ORV"/>
-    <interface iRef="IVoteReduceImpl" nArgs="1">
+    <interface iRef="IVoteReduceImpl" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl { &#xA;&#xA;public abstract class BaseIVoteReduceImpl&lt;IKVPair>: Computation, BaseIVoteReduce&lt;IKVPair>&#xA;{&#xA;&#xA;private ORV output_value = null;&#xA;&#xA;public ORV Output_value {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.output_value == null)&#xA;&#x9;&#x9;&#x9;this.output_value = (ORV) Services.getPort(&quot;output_value&quot;);&#xA;&#x9;&#x9;return this.output_value;&#xA;&#x9;}&#xA;}&#xA;&#xA;private IKVPair input_values = null;&#xA;&#xA;public IKVPair Input_values {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.input_values == null)&#xA;&#x9;&#x9;&#x9;this.input_values = (IKVPair) Services.getPort(&quot;input_values&quot;);&#xA;&#x9;&#x9;return this.input_values;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIVoteReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/BaseIVoteReduceImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl { &#xA;&#x9;public abstract class BaseIVoteReduceImpl: Computation, BaseIVoteReduce{&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IInteger, IDouble> output_value = null;&#xA;&#x9;&#x9;public IKVPair&lt;IInteger, IDouble> Output_value {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_value == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_value = (IKVPair&lt;IInteger, IDouble>) Services.getPort(&quot;output_value&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_value;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IInteger,IIterator&lt;IDouble>> input_values = null;&#xA;&#x9;&#x9;public IKVPair&lt;IInteger,IIterator&lt;IDouble>> Input_values {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_values == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_values = (IKVPair&lt;IInteger,IIterator&lt;IDouble>> ) Services.getPort(&quot;input_values&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_values;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIVoteReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/BaseIVoteReduceImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/BaseIVoteReduce.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl { &#xA;&#xA;public class IVoteReduceImpl&lt;IKVPair> : BaseIVoteReduceImpl&lt;IKVPair>, IVoteReduce&lt;IKVPair>&#xA;{&#xA;&#xA;public IVoteReduceImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IVoteReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/IVoteReduceImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl { &#xA;&#xA;&#x9;public class IVoteReduceImpl: BaseIVoteReduceImpl, IVoteReduce{&#xA;&#x9;&#x9;public IVoteReduceImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;Double soma = 0.0;&#xA;&#xA;&#x9;&#x9;&#x9;while (!Input_values.Value.HasFinished){&#xA;&#x9;&#x9;&#x9;&#x9;soma = soma + Input_values.Value.fetch_next().Value;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;Output_value.Key = Input_values.Key;&#xA;&#x9;&#x9;&#x9;Output_value.Value.Value = soma;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IVoteReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/IVoteReduceImpl.dll" versionId="1.0.0.0">
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/BaseIVoteReduceImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/IVoteReduce.dll</dependency>
         </file>
@@ -103,13 +55,12 @@
       <visualDescription h="40" w="141" x="102" y="100">
         <color b="0" g="255" r="0"/>
       </visualDescription>
-      <parameter iname="IKVPair" order="0" parid="output_type" uname="kv_pair" varid="ORV"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IVoteReduceImpl" multiple="false" private="false" replica="0" uRef="vote_reduce" visibleInterface="true">
-      <super cRef="base" uRef="vote_reduce"/>
+    <unit iRef="IVoteReduceImpl" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
+      <super cRef="base" uRef="reduce_function"/>
       <visualDescription h="40" w="141" x="219" y="238"/>
     </unit>
   </componentInfo>

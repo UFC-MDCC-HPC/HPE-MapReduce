@@ -11,17 +11,17 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
     public class ISourceCombinerImpl<ORV> : BaseISourceCombinerImpl<ORV>, ISourceCombiner<ORV>
     where ORV : IData 
 {
-        private MPI.Intracommunicator worldcomm;
+        private MPI.Intracommunicator comm;
 		private int TAG_COMBINER_ORV = 547;
 		private int TAG_COMBINER_ORV_FINISH = 548;
-        private int gerente = 0;
+        private int root = 0;
 
 		public ISourceCombinerImpl() { }
 
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
-			worldcomm = Mpi_comm.worldComm();
+			comm = this.Communicator;
 		}
 
 
@@ -46,14 +46,26 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 		{
 			IIteratorInstance<ORV> source_data_instance = (IIteratorInstance<ORV>) Source_data.Instance;
 
-			while (!source_data_instance.HasFinished) 
+			root = this.UnitRanks["target"][0];
+
+			object orv,last_orv=null;
+			
+			Console.WriteLine(WorldComm.Rank + ": START COMBINER SOURCE !!!");
+
+			while (source_data_instance.fetch_next(out orv)) 
 			{
-				object orv = source_data_instance.fetch_next();
-				if (source_data_instance.HasFinished) 
-					worldcomm.Send<object>(orv, gerente, TAG_COMBINER_ORV);
-				else
-					worldcomm.Send<object>(orv, gerente, TAG_COMBINER_ORV_FINISH);
-            }            
+				last_orv = orv;
+				Console.WriteLine(WorldComm.Rank + ": BEGIN SEND COMBINER SOURCE to " + root);
+				comm.Send<object>(orv, root, TAG_COMBINER_ORV);
+				Console.WriteLine(WorldComm.Rank + ": END SEND COMBINER SOURCE to " + root);
+			}
+
+			Console.WriteLine(WorldComm.Rank + ": BEGIN SEND FINISH COMBINER SOURCE to " + root);
+			comm.Send<object>(last_orv, root, TAG_COMBINER_ORV_FINISH);
+			Console.WriteLine(WorldComm.Rank + ": END SEND FINISH COMBINER SOURCE to " + root);
+
+
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER SOURCE !!!");
         }
 
     }
