@@ -43,27 +43,11 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" parameter_id="input_key_type" exposed="false">
-      <visualDescription h="60" w="135" x="80" y="146">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="135" x="371" y="89">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="input_value_type" location="br.ufc.mdcc.common.Double/Double.hpe" multiple="false" name="Double" package="br.ufc.mdcc.common" parameter_id="input_value_type" exposed="false">
-      <visualDescription h="60" w="160" x="313" y="153">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="double">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="output_kv_value" location="br.ufc.mdcc.common.Double/Double.hpe" multiple="false" name="Double" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="141" x="476" y="391">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="double">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
