@@ -4,41 +4,43 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Data;
+using System.Collections.Generic;
 
 namespace br.ufc.mdcc.common.impl.DoubleImpl { 
+	public class IDoubleImpl : BaseIDoubleImpl, IDouble{
 
-public class IDoubleImpl : BaseIDoubleImpl, IData
-{
+		public IDoubleImpl() { } 
 
-public IDoubleImpl() { 
-
-} 
-
-		private double value_;
-
-		public double Value { 
-			get { return value_;  }
-			set { value_ = value; }
+		override public void initialize(){
+			newInstance(); 
 		}
 
-		public void loadFrom (IData o)
-		{
-			IDouble i = (IDouble)o;
-			this.Value = i.Value;
-		}
-
-		public IData newInstance()
-		{
-			return new IDoubleImpl ();
-		}
-
-		public IData clone ()
-		{
-			IData instance = newInstance();
-			instance.loadFrom(this);
+		public IDoubleInstance newInstance (double d){
+			IDoubleInstance instance = (IDoubleInstance)newInstance ();
+			instance.Value = d;
 			return instance;
 		}
 
-}
+		public object newInstance (){
+			this.instance = new IDoubleInstanceImpl ();
+			return this.Instance;
+		}
 
+		private IDoubleInstance instance;
+		public object Instance {
+			get { return instance;	}
+			set { this.instance = (IDoubleInstance) value; }
+		}
+	}
+
+	[Serializable]
+	public class IDoubleInstanceImpl : IDoubleInstance{
+		#region IDoubleInstance implementation
+		private double val;
+		public double Value {
+			get { return val; }
+			set { this.val = value;	}
+		}
+		#endregion
+	}
 }
