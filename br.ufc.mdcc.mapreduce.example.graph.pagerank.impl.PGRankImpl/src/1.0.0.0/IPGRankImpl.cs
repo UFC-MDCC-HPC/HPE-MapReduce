@@ -6,40 +6,50 @@ using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
 using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl { 
+	public class IPGRankImpl : BaseIPGRankImpl, IPGRank{
 
-public class IPGRankImpl : BaseIPGRankImpl, IPGRank
-{
-private double pgrank;
-private double error;
+		override public void initialize(){
+			newInstance(); 
+		}
 
-public IPGRankImpl() { 
+		public IPGRankInstance newInstance (double r){
+			IPGRankInstance instance = (IPGRankInstance)newInstance ();
+			instance.Value = r;
+			return instance;
+		}
+
+		public object newInstance (){
+			this.instance = new IPGRankInstanceImpl ();
+			return this.Instance;
+		}
+
+		private IPGRankInstance instance;
+		public object Instance {
+			get { return instance;	}
+			set { this.instance = (IPGRankInstance) value; }
+		}
+
+	}
+
+	[Serializable]
+	public class IPGRankInstanceImpl : IPGRankInstance{
+		#region IPGRankInstance implementation
+		public IPGRankInstanceImpl() { 
 			pgrank = 1.0;
 			error = 0.0;
-} 
-        public double Value {
-        	get { return pgrank; }
-            set {
+		}
+
+		private double pgrank;
+		public double Value {
+			get { return pgrank; }
+			set {
 				error = (value - pgrank);
 				pgrank = value;
-            }
-        }
+			}
+		}
+
+		private double error;
 		public double Error { get { return error; } }
-        
-        public void loadFrom(IData o) {
-            IPGRank i = (IPGRank)o;
-			this.Value = i.Value;
-			error = i.Error;
-        }
-        public IData newInstance() {
-            return new IPGRankImpl();
-        }
-        public IData clone() {
-            IData instance = newInstance();
-            instance.loadFrom(this);
-            return instance;
-        }
-
-
-}
-
+		#endregion
+	}
 }
