@@ -33,12 +33,12 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl {
 
 	[Serializable]
 	public class IPGRankInstanceImpl : IPGRankInstance{
-		#region IPGRankInstance implementation
 		public IPGRankInstanceImpl() { 
 			pgrank = 1.0;
 			error = 0.0;
 		}
 
+		#region IPGRankInstance implementation
 		private double pgrank;
 		public double Value {
 			get { return pgrank; }
