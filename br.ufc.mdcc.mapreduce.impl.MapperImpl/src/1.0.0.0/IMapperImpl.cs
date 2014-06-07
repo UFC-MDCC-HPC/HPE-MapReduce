@@ -30,7 +30,7 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 			int count=0;
 			while (input_instance.fetch_next(out bin_object))
 			{
-				Console.WriteLine(WorldComm.Rank + ": LOOP MAPPER !!!" + (count++));
+		//		Console.WriteLine(WorldComm.Rank + ": LOOP MAPPER !!!" + (count++));
 				IKVPairInstance<IMK,IMV> bin = (IKVPairInstance<IMK,IMV>) bin_object;
 
 				Map_key.Instance = bin.Key;
@@ -39,7 +39,7 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 				Map_function.go ();
 			}
 
-			Console.WriteLine(WorldComm.Rank + ": FINISH MAPPER !!!");
+		//	Console.WriteLine(WorldComm.Rank + ": FINISH MAPPER !!!");
 
 			output_instance.finish();
 

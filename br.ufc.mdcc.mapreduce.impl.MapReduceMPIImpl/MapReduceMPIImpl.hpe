@@ -228,8 +228,8 @@
     <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
     <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
     <supplyParameter cRef="intermediate_type_key_type" direct="true" varName="OMK"/>
-    <supplyParameter cRef="combinef" direct="true" varName="Cf"/>
     <supplyParameter cRef="input_data_key_type" direct="true" varName="IMK"/>
+    <supplyParameter cRef="combinef" direct="true" varName="Cf"/>
     <interface iRef="IManagerImpl" nArgs="10">
       <slice isRef="farm_map">
         <originRef cRef="farm_map" iRef="IManager"/>
@@ -264,13 +264,13 @@
       <visualDescription h="40" w="179" x="562" y="51">
         <color b="255" g="0" r="0"/>
       </visualDescription>
-      <port name="input">
-        <visualDescription h="10" w="10" x="72" y="82"/>
-        <slice pRef="input" sRef="farm_map"/>
-      </port>
       <port name="partition_mapping">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="farm_map"/>
+      </port>
+      <port name="input">
+        <visualDescription h="10" w="10" x="72" y="82"/>
+        <slice pRef="input" sRef="farm_map"/>
       </port>
       <port name="output">
         <visualDescription h="10" w="10" x="117" y="25"/>

@@ -41,7 +41,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl
 			int count=0;
 			while (input_instance.fetch_next(out kvpair_object)) 
 			{
-				Console.WriteLine(WorldComm.Rank + ": REDUCER LOOP 1!" + (count++));
+//				Console.WriteLine(WorldComm.Rank + ": REDUCER LOOP 1!" + (count++));
 				IKVPairInstance<OMK, IIterator<OMV>> kvpair = (IKVPairInstance<OMK, IIterator<OMV>>) kvpair_object;
 				Input_reduce.Instance = kvpair;
 				Reduce_function.go();				
@@ -49,7 +49,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerImpl
             }
 
 			output_instance.finish();
-			Console.WriteLine(WorldComm.Rank + ": FINISH REDUCER !!!");
+//			Console.WriteLine(WorldComm.Rank + ": FINISH REDUCER !!!");
         }
 
         private void startThreads() {

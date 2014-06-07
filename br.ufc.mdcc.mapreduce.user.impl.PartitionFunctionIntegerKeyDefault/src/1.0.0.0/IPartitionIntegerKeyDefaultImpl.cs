@@ -26,7 +26,7 @@ namespace br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionIntegerKeyDefault {
 
 			int value = (int) input_string_instance.Value;
 
-			Console.WriteLine("BIN FUNCTION " + (value % NumberOfPartitions) + "value=" + value + ", npart=" + NumberOfPartitions);
+//			Console.WriteLine("BIN FUNCTION " + (value % NumberOfPartitions) + "value=" + value + ", npart=" + NumberOfPartitions);
 
 			output_string_instance.Value = value % NumberOfPartitions;
 

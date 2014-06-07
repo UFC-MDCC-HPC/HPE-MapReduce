@@ -26,7 +26,7 @@ namespace br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault {
 
 			int value = Math.Abs(input_string_instance.Value.GetHashCode());
 			
-			Console.WriteLine("PARTITION FUNCTION " + (value % NumberOfPartitions));
+			// Console.WriteLine("PARTITION FUNCTION " + (value % NumberOfPartitions));
 			
 			output_string_instance.Value = value % NumberOfPartitions;
 		}

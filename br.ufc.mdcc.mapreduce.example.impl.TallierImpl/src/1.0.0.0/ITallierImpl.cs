@@ -29,7 +29,7 @@ namespace br.ufc.mdcc.mapreduce.example.impl.TallierImpl {
 			             
 			((IStringInstance)output_value_instance.Key).Value = ((IStringInstance)input_values_instance.Key).Value;
 			((IIntegerInstance)output_value_instance.Value).Value = total_count;
-			Console.WriteLine ("TALLIER string=" + ((IStringInstance)output_value_instance.Key).Value + "; count=" + ((IIntegerInstance)output_value_instance.Value).Value);	
+//			Console.WriteLine ("TALLIER string=" + ((IStringInstance)output_value_instance.Key).Value + "; count=" + ((IIntegerInstance)output_value_instance.Value).Value);	
 		}
 
 	}

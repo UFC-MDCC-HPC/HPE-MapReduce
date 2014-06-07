@@ -24,9 +24,9 @@ namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl {
 			((IStringInstance)Input_data.Instance).Value = readInput();
 			IIteratorInstance<IKVPair<IString,IInteger>> output_data_instance = (IIteratorInstance<IKVPair<IString,IInteger>> ) Output_data.Instance;
 
-			Console.WriteLine ("APP BEFORE GO !!!");
+			//Console.WriteLine ("APP BEFORE GO !!!");
 			Count_words.go();
-			Console.WriteLine ("APP AFTER GO !!!");
+			//Console.WriteLine ("APP AFTER GO !!!");
 
 			SortedDictionary<int,IList<string>> result_pairs = new SortedDictionary<int,IList<string>>();
 
@@ -55,9 +55,7 @@ namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl {
 				}
 			}
 
-			//	Console.WriteLine ("RESULT - " + ((IStringInstance)word.Key).Value + ":" + ((IIntegerInstance)word.Value).Value + " count=" + (count++));
-
-			Console.WriteLine ("APP FINISH !!! " + count);
+			// Console.WriteLine ("APP FINISH !!! " + count);
 
 		}
 

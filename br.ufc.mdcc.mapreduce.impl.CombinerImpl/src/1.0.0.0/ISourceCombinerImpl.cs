@@ -50,22 +50,22 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
 			object orv,last_orv=null;
 			
-			Console.WriteLine(WorldComm.Rank + ": START COMBINER SOURCE !!!");
+//			Console.WriteLine(WorldComm.Rank + ": START COMBINER SOURCE !!!");
 
 			while (source_data_instance.fetch_next(out orv)) 
 			{
 				last_orv = orv;
-				Console.WriteLine(WorldComm.Rank + ": BEGIN SEND COMBINER SOURCE to " + root);
+//				Console.WriteLine(WorldComm.Rank + ": BEGIN SEND COMBINER SOURCE to " + root);
 				comm.Send<object>(orv, root, TAG_COMBINER_ORV);
-				Console.WriteLine(WorldComm.Rank + ": END SEND COMBINER SOURCE to " + root);
+//				Console.WriteLine(WorldComm.Rank + ": END SEND COMBINER SOURCE to " + root);
 			}
 
-			Console.WriteLine(WorldComm.Rank + ": BEGIN SEND FINISH COMBINER SOURCE to " + root);
+//			Console.WriteLine(WorldComm.Rank + ": BEGIN SEND FINISH COMBINER SOURCE to " + root);
 			comm.Send<object>(last_orv, root, TAG_COMBINER_ORV_FINISH);
-			Console.WriteLine(WorldComm.Rank + ": END SEND FINISH COMBINER SOURCE to " + root);
+//			Console.WriteLine(WorldComm.Rank + ": END SEND FINISH COMBINER SOURCE to " + root);
 
 
-			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER SOURCE !!!");
+//			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER SOURCE !!!");
         }
 
     }

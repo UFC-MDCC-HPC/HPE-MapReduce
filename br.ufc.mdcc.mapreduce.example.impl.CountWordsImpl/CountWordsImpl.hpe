@@ -22,7 +22,7 @@
           <visualDescription h="60" w="100" x="262" y="481">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###2066021783"/>
+          <parameter formFieldId="item_type" varName="X###190302697"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -96,11 +96,11 @@
     </interface>
     <interface iRef="IWordCounterImpl" nArgs="1">
       <slice isRef="count_words">
-        <originRef cRef="count_words" iRef="IReduceWorker"/>
+        <originRef cRef="count_words" iRef="IMapWorker"/>
         <visualDescription h="10" w="10" x="94" y="38"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.Tallier;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.CountWords;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl { &#xA;&#xA;public abstract class BaseIWordCounterImpl&lt;PLATFORM>: Computation, BaseIWordCounter&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;&#x9;private IReduceWorker&lt;IString, IInteger, IKVPair&lt;IString,IInteger>, ITallier, PLATFORM> count_words = null;&#xA;&#xA;&#x9;&#x9;protected IReduceWorker&lt;IString, IInteger, IKVPair&lt;IString,IInteger>, ITallier, PLATFORM> Count_words {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.count_words == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.count_words = (IReduceWorker&lt;IString, IInteger, IKVPair&lt;IString,IInteger>, ITallier, PLATFORM>) Services.getPort(&quot;count_words&quot;);&#xA;&#x9;&#x9;return this.count_words;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIWordCounterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/bin/1.0.0.0/BaseIWordCounterImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.CountWords;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.example.WordCounter;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl { &#xA;&#xA;public abstract class BaseIWordCounterImpl&lt;PLATFORM>: Computation, BaseIWordCounter&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;private IMapWorker&lt;IInteger, IString, IString, IInteger, IPartitionFunction&lt;IString>, IWordCounter, PLATFORM> count_words = null;&#xA;&#xA;&#x9;protected IMapWorker&lt;IInteger, IString, IString, IInteger, IPartitionFunction&lt;IString>, IWordCounter, PLATFORM> Count_words {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.count_words == null)&#xA;&#x9;&#x9;&#x9;&#x9;this.count_words = (IMapWorker&lt;IInteger, IString, IString, IInteger, IPartitionFunction&lt;IString>, IWordCounter, PLATFORM>) Services.getPort(&quot;count_words&quot;);&#xA;&#x9;&#x9;return this.count_words;&#xA;&#x9;}&#xA;&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIWordCounterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/bin/1.0.0.0/BaseIWordCounterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IReduceWorker.dll</dependency>
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.Tallier/bin/1.0.0.0/ITallier.dll</dependency>
@@ -123,11 +123,11 @@
     </interface>
     <interface iRef="ITallierImpl" nArgs="1">
       <slice isRef="count_words">
-        <originRef cRef="count_words" iRef="IMapWorker"/>
+        <originRef cRef="count_words" iRef="IReduceWorker"/>
         <visualDescription h="10" w="10" x="8" y="34"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.WordCounter;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.CountWords;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl { &#xA;&#xA;public abstract class BaseITallierImpl&lt;PLATFORM>: Computation, BaseITallier&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;private IMapWorker&lt;IInteger, IString, IString, IInteger, IPartitionFunction&lt;IString>, IWordCounter, PLATFORM> count_words = null;&#xA;&#xA;&#x9;protected IMapWorker&lt;IInteger, IString, IString, IInteger, IPartitionFunction&lt;IString>, IWordCounter, PLATFORM> Count_words {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.count_words == null)&#xA;&#x9;&#x9;&#x9;&#x9;this.count_words = (IMapWorker&lt;IInteger, IString, IString, IInteger, IPartitionFunction&lt;IString>, IWordCounter, PLATFORM>) Services.getPort(&quot;count_words&quot;);&#xA;&#x9;&#x9;return this.count_words;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseITallierImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/bin/1.0.0.0/BaseITallierImpl.dll" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.CountWords;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.Tallier;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl { &#xA;&#xA;public abstract class BaseITallierImpl&lt;PLATFORM>: Computation, BaseITallier&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#x9;private IReduceWorker&lt;IString, IInteger, IKVPair&lt;IString,IInteger>, ITallier, PLATFORM> count_words = null;&#xA;&#xA;&#x9;protected IReduceWorker&lt;IString, IInteger, IKVPair&lt;IString,IInteger>, ITallier, PLATFORM> Count_words {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.count_words == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.count_words = (IReduceWorker&lt;IString, IInteger, IKVPair&lt;IString,IInteger>, ITallier, PLATFORM>) Services.getPort(&quot;count_words&quot;);&#xA;&#x9;&#x9;return this.count_words;&#xA;&#x9;}&#xA;&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseITallierImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/bin/1.0.0.0/BaseITallierImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
           <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
@@ -155,7 +155,7 @@
     </unit>
     <unit iRef="IWordCounterImpl" multiple="true" private="false" replica="0" uRef="word_counter" visibleInterface="true">
       <super cRef="base" uRef="word_counter"/>
-      <visualDescription h="58" w="118" x="26" y="282"/>
+      <visualDescription h="58" w="118" x="13" y="308"/>
     </unit>
     <unit iRef="ITallierImpl" multiple="true" private="false" replica="0" uRef="tallier" visibleInterface="true">
       <super cRef="base" uRef="tallier"/>

@@ -16,7 +16,7 @@
           <visualDescription h="60" w="100" x="633" y="229">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###308061928"/>
+          <parameter formFieldId="item_type" varName="X###481085466"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -25,7 +25,7 @@
           <visualDescription h="60" w="100" x="619" y="424">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###13750979"/>
+          <parameter formFieldId="item_type" varName="X###327496107"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -41,7 +41,7 @@
             <visualDescription h="60" w="100" x="582" y="203">
               <color b="203" g="192" r="255"/>
             </visualDescription>
-            <parameter formFieldId="item_type" varName="X###778383640"/>
+            <parameter formFieldId="item_type" varName="X###1160237532"/>
             <unitBounds parallel="false" uRef="iterator">
               <visualDescription h="20" w="20" x="63" y="14"/>
             </unitBounds>
@@ -100,8 +100,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
     <supplyParameter cRef="partition_function" direct="true" varName="P"/>
+    <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
     <supplyParameter cRef="data_key_type" direct="true" varName="OMK"/>
     <supplyParameter cRef="data_value_type" direct="true" varName="OMV"/>
     <interface iRef="ISourcePartitionerImpl" nArgs="3">

@@ -13,8 +13,12 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="example" key="selection"/>
+		<item value="MPI" key="selection"/>
 		<list key="findhistory">
+			<item value="MPI"/>
+			<item value="farm_map"/>
+			<item value="renaming"/>
+			<item value="parameterRenaming"/>
 			<item value="example"/>
 			<item value="ORED"/>
 			<item value="PI"/>

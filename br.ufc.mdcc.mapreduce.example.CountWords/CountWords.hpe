@@ -47,10 +47,10 @@
         <visualDescription h="20" w="20" x="85" y="3"/>
       </unitBounds>
       <unitBounds parallel="true" uRef="reduce_worker">
-        <visualDescription h="20" w="20" x="9" y="39"/>
+        <visualDescription h="20" w="20" x="152" y="25"/>
       </unitBounds>
       <unitBounds parallel="true" uRef="map_worker">
-        <visualDescription h="20" w="20" x="169" y="41"/>
+        <visualDescription h="20" w="20" x="15" y="36"/>
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="imk" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
@@ -233,13 +233,13 @@
       <visualDescription h="40" w="80" x="249" y="51">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="count_words"/>
-      </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="count_words"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="count_words"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
@@ -248,7 +248,7 @@
     </interface>
     <interface iRef="IWordCounter" nArgs="1">
       <slice isRef="count_words">
-        <originRef cRef="count_words" iRef="IReduceWorker"/>
+        <originRef cRef="count_words" iRef="IMapWorker"/>
         <visualDescription h="10" w="10" x="94" y="38"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
@@ -270,7 +270,7 @@
     </interface>
     <interface iRef="ITallier" nArgs="1">
       <slice isRef="count_words">
-        <originRef cRef="count_words" iRef="IMapWorker"/>
+        <originRef cRef="count_words" iRef="IReduceWorker"/>
         <visualDescription h="10" w="10" x="8" y="34"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
@@ -305,13 +305,13 @@
       <visualDescription h="40" w="80" x="251" y="148"/>
     </unit>
     <unit iRef="IWordCounter" multiple="true" private="false" replica="0" uRef="word_counter" visibleInterface="true">
-      <slices cRef="count_words" slice_replica="0" uRef="reduce_worker" sliceName="count_words" transitive="false">
+      <slices cRef="count_words" slice_replica="0" uRef="map_worker" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="94" y="38"/>
       </slices>
       <visualDescription h="58" w="118" x="13" y="274"/>
     </unit>
     <unit iRef="ITallier" multiple="true" private="false" replica="0" uRef="tallier" visibleInterface="true">
-      <slices cRef="count_words" slice_replica="0" uRef="map_worker" sliceName="count_words" transitive="false">
+      <slices cRef="count_words" slice_replica="0" uRef="reduce_worker" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="8" y="34"/>
       </slices>
       <visualDescription h="60" w="143" x="429" y="284"/>

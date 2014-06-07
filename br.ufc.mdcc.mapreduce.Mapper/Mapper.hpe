@@ -73,7 +73,7 @@
         <visualDescription h="60" w="194" x="370" y="310">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1020840414"/>
+        <parameter formFieldId="item_type" varName="X###1531619564"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -156,7 +156,7 @@
     <supplyParameter cRef="input_kv_pair" direct="true" varName="Ti"/>
     <supplyParameter cRef="output" direct="true" varName="O"/>
     <supplyParameter cRef="input" direct="true" varName="I"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1020840414" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1531619564" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="93" y="410">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -166,7 +166,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1020840414" varName="X###1020840414"/>
+    <supplyParameter cRef="C###1531619564" varName="X###1531619564"/>
     <innerRenaming cNewName="map_key" cOldName="input_key" cRef="map_function"/>
     <innerRenaming cNewName="map_value" cOldName="input_value" cRef="map_function"/>
     <innerRenaming cNewName="output" cOldName="output_data" cRef="map_function"/>
