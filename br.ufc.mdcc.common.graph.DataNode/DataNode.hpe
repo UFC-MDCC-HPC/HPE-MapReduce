@@ -34,6 +34,18 @@
         <originRef cRef="id" iRef="IData"/>
         <visualDescription h="10" w="10" x="54" y="14"/>
       </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.common.graph.DataNode { &#xA;&#x9;public interface BaseIDataNode&lt;TID> : BaseIData, IDataStructureKind &#xA;&#x9;&#x9;where TID:IData{&#xA;&#xA;&#x9;&#x9;TID Id { get; }&#xA;&#xA;&#x9;} // end main interface &#xA;} // end namespace &#xA;" fileType="library" name="BaseIDataNode.cs" srcType="base" uri="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/BaseIData.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xD;&#xA;using br.ufc.mdcc.common.Data;&#xD;&#xA;&#xD;&#xA;namespace br.ufc.mdcc.common.graph.DataNode { &#xD;&#xA;&#xD;&#xA;public interface IDataNode&lt;TID> : BaseIDataNode&lt;TID>, IData&#xD;&#xA;where TID:IData&#xD;&#xA;{&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;} // end main interface &#xD;&#xA;&#xD;&#xA;} // end namespace &#xD;&#xA;" fileType="library" name="IDataNode.cs" srcType="user" uri="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/IDataNode.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+      </sources>
       <visualDescription h="71" w="149" x="138" y="191">
         <color b="0" g="128" r="0"/>
       </visualDescription>
