@@ -3,6 +3,7 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 using br.ufc.mdcc.common.Data;
 
@@ -17,15 +18,10 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl {
 			newInstance(); 
 		}
 		public object newInstance (){
-			object id = Id.newInstance();
-			ICliqueNodeInstance<TID> cni = new ICliqueNodeInstanceImpl<TID> (id);
-			cni.Neighbors = Neighbors.newInstance ();
-			return this.Instance = cni;
-		}
-		public ICliqueNodeInstance<TID> newInstance (object id){
-			ICliqueNodeInstance<TID> instance = new ICliqueNodeInstanceImpl<TID> (id);
-			instance.Neighbors = Neighbors.newInstance ();
-			return ( ICliqueNodeInstance<TID>) (this.Instance = instance);
+			object idInstance = Id.newInstance();
+			ICliqueNodeInstance<TID> cliqueNodeInstance = new ICliqueNodeInstanceImpl<TID> (idInstance);
+			cliqueNodeInstance.NeighborsInstance = (IIteratorInstance<TID>) Neighbors.newInstance ();
+			return this.Instance = cliqueNodeInstance;
 		}
 		private ICliqueNodeInstance<TID> instance;
 		public object Instance {
@@ -37,19 +33,19 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl {
 	[Serializable]
 	public class ICliqueNodeInstanceImpl<TID> : ICliqueNodeInstance<TID>
 		where TID:IData{
-		public ICliqueNodeInstanceImpl(object id){
-			this.Id = id;
+		public ICliqueNodeInstanceImpl(object idInstance){
+			this.IdInstance = idInstance;
 		}
 		#region ICliqueNodeInstance implementation
-		private object id;
-		private object neighbors;
-		public object Id {
-			get { return id; }
-			set { this.id = value; }
+		private object idInstance;
+		private IIteratorInstance<TID> neighborsInstance;
+		public object IdInstance {
+			get { return idInstance; }
+			set { this.idInstance = value; }
 		}
-		public object Neighbors {
-			get { return neighbors; }
-			set { this.neighbors = value; }
+		public IIteratorInstance<TID> NeighborsInstance {
+			get { return neighborsInstance; }
+			set { this.neighborsInstance = value; }
 		}
 		#endregion
 	}
