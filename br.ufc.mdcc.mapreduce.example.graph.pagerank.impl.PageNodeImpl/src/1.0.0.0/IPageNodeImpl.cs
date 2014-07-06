@@ -5,6 +5,8 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
+using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl { 
 
@@ -15,17 +17,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 			newInstance(); 
 		}
 		public object newInstance (){
-			object id = Id.newInstance();
-			IPageNodeInstance<TID> cni = new IPageNodeInstanceImpl<TID> (id);
-			cni.Neighbors = Neighbors.newInstance ();
-			cni.Pgrank = Pgrank.newInstance ();
-			return this.Instance = cni;
-		}
-		public IPageNodeInstance<TID> newInstance (object id){
-			IPageNodeInstance<TID> instance = new IPageNodeInstanceImpl<TID> (id);
-			instance.Neighbors = Neighbors.newInstance ();
-			instance.Pgrank = Pgrank.newInstance ();
-			return ( IPageNodeInstance<TID>) (this.Instance = instance);
+			object idInstance = Id.newInstance();
+			IPageNodeInstance<TID> pageNodeInstance = new IPageNodeInstanceImpl<TID> (idInstance);
+			pageNodeInstance.NeighborsInstance = (IIteratorInstance<TID>) Neighbors.newInstance ();
+			pageNodeInstance.PgrankInstance = (IPGRankInstance) Pgrank.newInstance ();
+			return this.Instance = pageNodeInstance;
 		}
 		private IPageNodeInstance<TID> instance;
 		public object Instance {
@@ -37,24 +33,24 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 	[Serializable]
 	public class IPageNodeInstanceImpl<TID> : IPageNodeInstance<TID>
 		where TID:IData{
-		public IPageNodeInstanceImpl(object id){
-			this.Id = id;
+		public IPageNodeInstanceImpl(object idInstance){
+			this.IdInstance = idInstance;
 		}
 		#region IPageNodeInstance implementation
-		private object id;
-		private object pgrank;
-		private object neighbors;
-		public object Id {
-			get { return id; }
-			set { this.id = value; }
+		private object idInstance;
+		private IPGRankInstance pgrankInstance;
+		private IIteratorInstance<TID> neighborsInstance;
+		public object IdInstance {
+			get { return idInstance; }
+			set { this.idInstance = value; }
 		}
-		public object Pgrank {
-			get { return pgrank; }
-			set { this.pgrank = value; }
+		public IPGRankInstance PgrankInstance {
+			get { return pgrankInstance; }
+			set { this.pgrankInstance = value; }
 		}
-		public object Neighbors {
-			get { return neighbors; }
-			set { this.neighbors = value; }
+		public IIteratorInstance<TID> NeighborsInstance {
+			get { return neighborsInstance; }
+			set { this.neighborsInstance = value; }
 		}
 		#endregion
 	}
