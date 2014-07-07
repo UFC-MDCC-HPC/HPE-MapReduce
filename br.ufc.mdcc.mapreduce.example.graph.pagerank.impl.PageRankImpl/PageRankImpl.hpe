@@ -10,6 +10,41 @@
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="platform" varName="PLATFORM"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="140" x="329" y="135">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###29443670"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="true">
+          <visualDescription h="60" w="100" x="496" y="82">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data_pgrank">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="127" x="373" y="472">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###1846414"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="134" y="436">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###26707701"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
         <unitBounds parallel="false" uRef="master">
           <visualDescription h="20" w="20" x="81" y="7"/>
         </unitBounds>
@@ -41,16 +76,37 @@
         <originRef cRef="page_rank" iRef="IManagerMapReduce"/>
         <visualDescription h="10" w="10" x="30" y="23"/>
       </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;//using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#xA;&#x9;public abstract class BaseIMasterImpl&lt;PLATFORM>: Computation, BaseIMaster&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#xA;&#x9;&#x9;private IIterator&lt;IPageNode&lt;IInteger>> input_data = null;//private IString input_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IPageNode&lt;IInteger>> Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IIterator&lt;IPageNode&lt;IInteger>>) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IInteger,IDouble>> output_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IKVPair&lt;IInteger,IDouble>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IInteger,IDouble>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IManagerMapReduce&lt;IIterator&lt;IPageNode&lt;IInteger>>, IInteger, IPageNode&lt;IInteger>, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM> page_rank = null;&#xA;&#x9;&#x9;protected IManagerMapReduce&lt;IIterator&lt;IPageNode&lt;IInteger>>, IInteger, IPageNode&lt;IInteger>, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IManagerMapReduce&lt;IIterator&lt;IPageNode&lt;IInteger>>, IInteger, IPageNode&lt;IInteger>, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;&#xA;/*Obs: &lt;In, IMK, IMV, OMK, ORV, Out, Sf, Bf, Cf, PLATFORM>&#xA; * In, IIterator&lt;IPageNode&lt;IInteger>>&#xA; * IMK, IInteger&#xA; * IMV, IPageNode&lt;IInteger>,&#xA; * Sf, IBreakInNodes&#xA; * Bf, IPartitionFunction&lt;IInteger>,&#xA; * OMK, IInteger&#xA; * OMV, IDouble&#xA; * ORV, IKVPair&lt;IInteger, IDouble>, &#xA; * Cf, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>,&#x9;&#xA; * Out, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, &#xA; * PLATFORM> &#xA;*/&#xA;" fileType="library" name="BaseIMasterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIMasterImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes/bin/1.0.0.0/IBreakInPageNodes.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;//using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#xA;&#x9;public class IMasterImpl&lt;PLATFORM> : BaseIMasterImpl&lt;PLATFORM>, IMaster&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform {&#xA;&#xA;&#x9;&#x9;public IMasterImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;Page_rank.go();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IMasterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/IMasterImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIMasterImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IMaster.dll</dependency>
+        </file>
+      </sources>
       <visualDescription h="78" w="190" x="274" y="58">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input">
-        <visualDescription h="10" w="10" x="11" y="40"/>
-        <slice pRef="input" sRef="page_rank"/>
-      </port>
       <port name="output">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="page_rank"/>
+      </port>
+      <port name="input">
+        <visualDescription h="10" w="10" x="11" y="40"/>
+        <slice pRef="input" sRef="page_rank"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
