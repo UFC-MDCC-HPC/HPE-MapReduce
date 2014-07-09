@@ -21,6 +21,15 @@
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="platform" varName="PLATFORM"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="140" x="329" y="135">
+          <color b="203" g="192" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="X###8547641"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="false">
         <visualDescription h="60" w="100" x="496" y="82">
           <color b="255" g="255" r="255"/>
@@ -33,7 +42,16 @@
         <visualDescription h="60" w="127" x="799" y="53">
           <color b="203" g="192" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###16961372"/>
+        <parameter formFieldId="item_type" varName="X###32332543"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="134" y="436">
+          <color b="203" g="192" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="X###32580484"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -48,7 +66,26 @@
         <visualDescription h="20" w="20" x="144" y="36"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###16961372" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###13687628" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="640" y="130">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###13687628" varName="X###13687628"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" localRef="C###8547641" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe" multiple="false" name="PageNode" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="false">
+      <visualDescription h="60" w="142" x="521" y="451">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="id_type" varName="X###13687628"/>
+      <unitBounds parallel="false" uRef="page_node">
+        <visualDescription h="20" w="20" x="58" y="35"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###8547641" varName="X###8547641"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###32332543" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="66" w="138" x="335" y="127">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -56,7 +93,36 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###16961372" varName="X###16961372"/>
+    <supplyParameter cRef="C###32332543" varName="X###32332543"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="C###5424024" location="br.ufc.mdcc.common.Double/Double.hpe" multiple="false" name="Double" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="160" x="456" y="81">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###5424024" varName="X###5424024"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###27743552" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="135" x="371" y="89">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###27743552" varName="X###27743552"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###32580484" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="174" x="594" y="259">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="X###5424024"/>
+      <parameter formFieldId="key_type" varName="X###27743552"/>
+      <unitBounds parallel="false" uRef="kv_pair">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###32580484" varName="X###32580484"/>
     <interface iRef="IMasterProcess" nArgs="1">
       <slice isRef="page_rank">
         <originRef cRef="page_rank" iRef="IMaster"/>
@@ -64,6 +130,7 @@
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
         <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp { &#xA;&#xA;public interface BaseIMasterProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIMasterProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp/bin/1.0.0.0/BaseIMasterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
         </file>
         <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp { &#xA;&#xA;public interface IMasterProcess&lt;PLATFORM> : BaseIMasterProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IMasterProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp/bin/1.0.0.0/IMasterProcess.dll" versionId="1.0.0.0">
@@ -74,6 +141,14 @@
       <visualDescription h="40" w="173" x="237" y="69">
         <color b="230" g="216" r="173"/>
       </visualDescription>
+      <port name="input">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="page_rank"/>
+      </port>
+      <port name="output">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="page_rank"/>
+      </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>
@@ -124,8 +199,16 @@
       </action>
     </interface>
     <unit iRef="IMasterProcess" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <slices cRef="input" slice_replica="0" uRef="data" sliceName="input" transitive="true">
+        <visualDescription h="10" w="10" x="43" y="4"/>
+      </slices>
+      <slices cRef="output" slice_replica="0" uRef="data" sliceName="output" transitive="true">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
       <slices cRef="page_rank" slice_replica="0" uRef="master" sliceName="page_rank" transitive="false">
         <visualDescription h="10" w="10" x="133" y="20"/>
+        <port>input</port>
+        <port>output</port>
       </slices>
       <visualDescription h="40" w="173" x="237" y="149"/>
     </unit>

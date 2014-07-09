@@ -8,7 +8,7 @@
   </header>
   <componentInfo>
     <parameter componentRef="platform" formFieldId="platform" order="0" varName="PLATFORM"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input_type7282136" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input_type28205416" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="140" x="329" y="135">
         <color b="203" g="192" r="255"/>
       </visualDescription>
@@ -246,7 +246,7 @@
     </innerComponent>
     <supplyParameter cRef="split_function" direct="true" varName="Sf"/>
     <supplyParameter cRef="out" direct="true" varName="Out"/>
-    <supplyParameter cRef="T###input_type7282136" direct="false" varName="In"/>
+    <supplyParameter cRef="T###input_type28205416" direct="false" varName="In"/>
     <supplyParameter cRef="partition_function" direct="true" varName="Pf"/>
     <supplyParameter cRef="reduce_function" direct="true" varName="Rf"/>
     <supplyParameter cRef="orv" direct="true" varName="ORV"/>
@@ -293,6 +293,15 @@
         <originRef cRef="page_rank" iRef="IReduceWorker"/>
         <visualDescription h="10" w="10" x="70" y="27"/>
       </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank { &#xA;&#xA;public interface BaseIVoteMap&lt;PLATFORM> : IComputationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIVoteMap.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank { &#xA;&#xA;public interface IVoteMap&lt;PLATFORM> : BaseIVoteMap&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IVoteMap.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteMap.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll</dependency>
+        </file>
+      </sources>
       <visualDescription h="54" w="100" x="56" y="198">
         <color b="0" g="165" r="255"/>
       </visualDescription>
@@ -306,6 +315,15 @@
         <originRef cRef="page_rank" iRef="IMapWorker"/>
         <visualDescription h="10" w="10" x="13" y="37"/>
       </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank { &#xA;&#xA;public interface BaseIVoteReduce&lt;PLATFORM> : IComputationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIVoteReduce.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteReduce.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank { &#xA;&#xA;public interface IVoteReduce&lt;PLATFORM> : BaseIVoteReduce&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IVoteReduce.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteReduce.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteReduce.dll</dependency>
+        </file>
+      </sources>
       <visualDescription h="60" w="113" x="525" y="186">
         <color b="0" g="165" r="255"/>
       </visualDescription>

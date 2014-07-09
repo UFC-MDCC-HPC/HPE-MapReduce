@@ -12,6 +12,7 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp/src/1.0.0.0/BaseIMasterProcess.cs"/>
       </sources>
       <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
         <include/>
       </references>
