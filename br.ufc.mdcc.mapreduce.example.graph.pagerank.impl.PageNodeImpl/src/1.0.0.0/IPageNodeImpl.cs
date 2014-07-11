@@ -14,6 +14,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 		where TID:IInteger{
 		public IPageNodeImpl() { } 
 		override public void initialize(){
+			System.Console.WriteLine ("################################################ Initialize PageNodeImpl ###########################################");
 			newInstance(); 
 		}
 		public object newInstance (){

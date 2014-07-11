@@ -1,81 +1,106 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Iterator;
-using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;
+using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
+using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.common.String;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl { 
-	public class IBreakInPageNodesImpl: BaseIBreakInPageNodesImpl, IBreakInPageNodes{
-		public IBreakInPageNodesImpl() { 
-
-		} 
+	public class IBreakInPageNodesImpl : BaseIBreakInPageNodesImpl, IBreakInPageNodes{
+	   
+		public IBreakInPageNodesImpl() { } 
 
 		public override void main() { 
-			while (!Input_data.HasFinished) {
-				IKVPair<IInteger,IPageNode<IInteger>> pair = (IKVPair<IInteger, IPageNode<IInteger>>)Output_data.createItem ();
-				IPageNode<IInteger> v = Input_data.fetch_next ();
-				pair.Key = v.Id;
-				pair.Value = v;
-			}
-
-			/*
-			IDictionary<int, IDictionary<int,IPageNode<IInteger>>> dictionary = new Dictionary<int, IDictionary<int,IPageNode<IInteger>>>();
-			IInteger alternativeID = null;
-
-			string[] lines = Input_data.Value.Split(new char[] {'\n'});
-			foreach (string line in lines){
-
-				IPageNode<IInteger> v, n, temp = null;
-				IDictionary<int,IPageNode<IInteger>> dicRef0, dicRef1 = null;
-				string[] spl = line.Split(' ');
-
-				int[] Ids = new int[spl.Length];
-				int j = 0;
-				foreach(string i in spl){
-					Ids[j] = int.Parse(i);
-					j++;
-				}
-				if (!dictionary.TryGetValue (Ids [0], out dicRef0)) {
-					IKVPair<IInteger,IPageNode<IInteger>> pair = (IKVPair<IInteger, IPageNode<IInteger>>)Output_data.createItem ();
-					pair.Key = pair.Value.Id;
-					pair.Key.Value = Ids [0];
-
-					dicRef0 = new Dictionary<int,IPageNode<IInteger>> ();
-					dictionary [Ids [0]] = dicRef0;
-					dicRef0 [Ids [0]] = pair.Value;
-
-					if (alternativeID == null)
-						alternativeID = (IInteger)pair.Key.clone ();
-					pair.Value.Neighbors.put (alternativeID);
-				}
-				if (!dictionary.TryGetValue (Ids [1], out dicRef1)) {
-					IKVPair<IInteger,IPageNode<IInteger>> pair = (IKVPair<IInteger, IPageNode<IInteger>>)Output_data.createItem();
-					pair.Key = pair.Value.Id;
-					pair.Key.Value = Ids[1];
-
-					dicRef1 = new Dictionary<int,IPageNode<IInteger>> ();
-					dictionary [Ids [1]] = dicRef1;
-					dicRef1 [Ids [1]] = pair.Value;
-
-					if (alternativeID == null)
-						alternativeID = (IInteger)pair.Key.clone ();
-					pair.Value.Neighbors.put (alternativeID);
-				}
-				v = dicRef0[Ids[0]];
-				n = dicRef1[Ids[1]];
-				if (!dicRef0.TryGetValue (Ids [1], out temp)) {
-					dicRef0 [Ids [1]] = n;
-					v.Neighbors.put (n.Id);
-				}
-			}
-			alternativeID.Value = dictionary.Count * -1;
-			*/
+			System.Console.WriteLine ("################################################ Starting BReaklnPageNodesImpl ###########################################");
+			createPageNodes(((IStringInstance) Input_data.Instance).Value);
 		}
+
+		private void createPageNodes(string fileContent){
+
+			IIteratorInstance<IKVPair<IInteger, IPageNode<IInteger>>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, IPageNode<IInteger>>>) Output_data.Instance;
+			IDictionary<int, IDictionary<int,IPageNodeInstance<IInteger>>> dictionary = new Dictionary<int, IDictionary<int,IPageNodeInstance<IInteger>>>();
+			object alternativeID = null;//IIntegerInstance
+
+			IList<IPageNodeInstance<IInteger>> PAGENODES = new List<IPageNodeInstance<IInteger>>();
+
+			string[] lines = fileContent.Split(new char[] {System.Environment.NewLine[0]});
+			foreach (string line in lines){
+				if (!line.Trim().Equals ("")) {
+					IPageNodeInstance<IInteger> V, W, temp = null;
+					IDictionary<int,IPageNodeInstance<IInteger>> referenceV, referenceW = null;
+
+					int[] KEY = new int[2];
+					string[] vwID = line.Split (' ');
+					for (int k = 0; k < 2; k++) {
+						KEY [k] = int.Parse (vwID [k]);
+					}
+					if (!dictionary.TryGetValue (KEY [0], out referenceV)) { //verifica se node V existe
+						IKVPairInstance<IInteger,IPageNode<IInteger>> integer_pagenode_pair = (IKVPairInstance<IInteger,IPageNode<IInteger>>) Output_data.createItem() ;
+
+						V = (IPageNodeInstance<IInteger>)integer_pagenode_pair.Value;//Input_data.createItem ();
+						((IIntegerInstance)V.IdInstance).Value = KEY [0];
+						integer_pagenode_pair.Key = V.IdInstance;
+
+						referenceV = new Dictionary<int,IPageNodeInstance<IInteger>> ();
+						dictionary [KEY [0]] = referenceV;
+						referenceV [KEY [0]] = V;
+						if (alternativeID == null)
+							alternativeID = CreateClone ((IIntegerInstance)V.IdInstance);//(IIntegerInstance)V.Id.clone ();
+						V.NeighborsInstance.put (alternativeID); //insere ID_Alternativo, para, quando vizinhoSize=0, passar o voto para o ID_Alternativo
+
+						PAGENODES.Add (V);
+						output_data_instance.put(integer_pagenode_pair);//input_data_instance.put (V);
+					}
+					if (!dictionary.TryGetValue (KEY [1], out referenceW)) { //verifica se node W existe
+						IKVPairInstance<IInteger,IPageNode<IInteger>> integer_pagenode_pair = (IKVPairInstance<IInteger,IPageNode<IInteger>>) Output_data.createItem() ;
+
+						W = (IPageNodeInstance<IInteger>)integer_pagenode_pair.Value;//Input_data.createItem ();
+						((IIntegerInstance)W.IdInstance).Value = KEY [1];
+						integer_pagenode_pair.Key = W.IdInstance;
+
+						referenceW = new Dictionary<int,IPageNodeInstance<IInteger>> ();
+						dictionary [KEY [1]] = referenceW;
+						referenceW [KEY [1]] = W;
+						if (alternativeID == null)
+							alternativeID = CreateClone ((IIntegerInstance)W.IdInstance);//(IInteger)W.Id.clone ();
+						W.NeighborsInstance.put (alternativeID);
+
+						PAGENODES.Add (W);
+						output_data_instance.put(integer_pagenode_pair);//input_data_instance.put (W);
+					}
+					if (!referenceV.TryGetValue (KEY [1], out temp)) {//Verifica se existe o vizinho W
+						V = referenceV [KEY [0]];
+						W = referenceW [KEY [1]];
+						referenceV [KEY [1]] = W;
+						V.NeighborsInstance.put (W.IdInstance);
+					}
+				}
+			}
+			((IIntegerInstance)alternativeID).Value = -1 * dictionary.Count;
+			output_data_instance.finish(); //input_data_instance.finish ();
+
+			//finish iterator NeighborsInstance
+			IEnumerator<IPageNodeInstance<IInteger>> it = PAGENODES.GetEnumerator ();
+			while (it.MoveNext ()) {
+				IPageNodeInstance<IInteger> p = it.Current;
+				p.NeighborsInstance.finish ();
+			}
+		}
+		private static object CreateClone(object obj){
+			object copy;
+			Stream stream = new MemoryStream();
+			System.Runtime.Serialization.Formatters.Binary.BinaryFormatter formatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+			formatter.Serialize(stream, obj);
+			stream.Seek(0, 0);
+			copy = formatter.Deserialize(stream);
+			stream.Close();
+			return copy;
+		}	
 	}
 }

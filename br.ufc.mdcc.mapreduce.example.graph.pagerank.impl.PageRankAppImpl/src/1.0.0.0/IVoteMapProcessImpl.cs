@@ -6,13 +6,14 @@ using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl { 
-	public class IVoteMapProcessImpl<PLATFORM> : BaseIVoteMapProcessImpl<PLATFORM>, IVoteMapProcess<PLATFORM>
-		where PLATFORM:IPlatform{
+	public class IVoteMapProcessImpl<PLATFORM> : BaseIVoteMapProcessImpl<PLATFORM>, IVoteMapProcess<PLATFORM> where PLATFORM:IPlatform{
 
-		public IVoteMapProcessImpl() { } 
+		public IVoteMapProcessImpl() { 
+
+		} 
 
 		public override void main() { 
-			Page_rank.go();
+			//Page_rank.go();
 		}
 	}
 }

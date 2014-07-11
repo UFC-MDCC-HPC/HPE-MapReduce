@@ -26,23 +26,6 @@
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <parameter formFieldId="id_type" varName="IMK"/>
-          <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="true">
-            <visualDescription h="60" w="100" x="496" y="82">
-              <color b="255" g="255" r="255"/>
-            </visualDescription>
-            <unitBounds parallel="false" uRef="data_pgrank">
-              <visualDescription h="20" w="20" x="5" y="2"/>
-            </unitBounds>
-          </port>
-          <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-            <visualDescription h="60" w="127" x="799" y="53">
-              <color b="203" g="192" r="255"/>
-            </visualDescription>
-            <parameter formFieldId="item_type" varName="IMK"/>
-            <unitBounds parallel="false" uRef="iterator">
-              <visualDescription h="20" w="20" x="5" y="2"/>
-            </unitBounds>
-          </port>
           <unitBounds parallel="false" uRef="page_node">
             <visualDescription h="20" w="20" x="77" y="5"/>
           </unitBounds>
@@ -51,7 +34,7 @@
           <visualDescription h="30" w="123" x="57" y="418">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###5398186"/>
+          <parameter formFieldId="item_type" varName="X###26428256"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -96,23 +79,6 @@
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="id_type" varName="IMK"/>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="true">
-        <visualDescription h="60" w="100" x="496" y="82">
-          <color b="255" g="255" r="255"/>
-        </visualDescription>
-        <unitBounds parallel="false" uRef="data_pgrank">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="127" x="799" y="53">
-          <color b="203" g="192" r="255"/>
-        </visualDescription>
-        <parameter formFieldId="item_type" varName="IMK"/>
-        <unitBounds parallel="false" uRef="iterator">
-          <visualDescription h="20" w="20" x="5" y="2"/>
-        </unitBounds>
-      </port>
       <unitBounds parallel="false" uRef="page_node">
         <visualDescription h="20" w="20" x="77" y="5"/>
       </unitBounds>

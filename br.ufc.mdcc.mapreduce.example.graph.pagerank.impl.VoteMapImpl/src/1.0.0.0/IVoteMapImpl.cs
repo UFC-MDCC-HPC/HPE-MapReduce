@@ -17,34 +17,57 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl {
 		} 
 
 		public override void main() { 
-			//iterator.loadFrom (no.Neighbors.clone ());//neighbors.Reset(); //(IIterator<IInteger>)neighbors.clone();
-			IPageNode<IInteger> no = Input_value;
-			IIterator<IInteger> iterator = no.Neighbors;
-			Double slice = no.Pgrank.Value;
-			IDouble outvalue = null;
-			int size = 0;
-			IInteger alternativeID = iterator.fetch_next();
+			System.Console.WriteLine ("################################################ Starting VoteMapImpl map ###########################################");
+			IPageNodeInstance<IInteger> input_value_instance = (IPageNodeInstance<IInteger>)Input_value.Instance;
+			IIntegerInstance input_key_instance = (IIntegerInstance)Input_key.Instance;
+			IIteratorInstance<IKVPair<IInteger, IDouble>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, IDouble>>)Output_data.Instance;
 
-			for (; !iterator.HasFinished; ) {
-				IInteger outkey = iterator.fetch_next();
-				IKVPair<IInteger, IDouble> kvn = Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
+			//iterator.loadFrom (no.Neighbors.clone ());//neighbors.Reset(); //(IIterator<IInteger>)neighbors.clone();
+			IIteratorInstance<IInteger> neighborsInstance = input_value_instance.NeighborsInstance;
+
+			//Finished Iterator of Neighbors
+			//neighborsInstance.finish ();
+			//
+
+			Double slice = input_value_instance.PgrankInstance.Value;
+			object outvalue = null;//IDoubleInstance
+			int size = 0;
+			object outkey;
+			neighborsInstance.fetch_next (out outkey);
+			object alternativeIDInstance = outkey;//IIntegerInstance //neighborsInstance.fetch_next();
+
+			while (neighborsInstance.fetch_next (out outkey)) {//IIntegerInstance outkey = (IIntegerInstance)outkey;//neighborsInstance.fetch_next();
+				IKVPairInstance<IInteger, IDouble> kvnInstance = (IKVPairInstance<IInteger, IDouble>)Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
 				if (size == 0)
-					outvalue = kvn.Value;
-				kvn.Key = outkey;
-				kvn.Value = outvalue;
+					outvalue = kvnInstance.Value;//outvalue=IDoubleInstance
+				kvnInstance.Key = outkey;
+				kvnInstance.Value = outvalue;
 				size++;
+				output_data_instance.put (kvnInstance);
 			}
+
+			//for (; !neighborsInstance.HasFinished; ) {
+			//	IInteger outkey = neighborsInstance.fetch_next();
+			//	IKVPair<IInteger, IDouble> kvn = Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
+			//	if (size == 0)
+			//		outvalue = kvn.Value;
+			//	kvn.Key = outkey;
+			//	kvn.Value = outvalue;
+			//	size++;
+			//}
 			if (size > 0) {
-				outvalue.Value = slice / size;
+				((IDoubleInstance)outvalue).Value = slice / size;
 			}
 			else {
-				IKVPair<IInteger, IDouble> kvn = Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
-				kvn.Key = alternativeID;
-				kvn.Value.Value = slice;
+				IKVPairInstance<IInteger, IDouble> kvnInstance = (IKVPairInstance<IInteger, IDouble>)Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
+				kvnInstance.Key = alternativeIDInstance;//IIntegerInstance
+				((IDoubleInstance)kvnInstance.Value).Value = slice;
+				output_data_instance.put (kvnInstance);
 			}
-			IKVPair<IInteger, IDouble> KV = Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
-			KV.Key = no.Id;
-			KV.Value.Value = 0.0;
+			IKVPairInstance<IInteger, IDouble> KV = (IKVPairInstance<IInteger, IDouble>)Output_data.createItem(); //new IKVPairImpl<IInteger, IDouble>();
+			KV.Key = input_value_instance.IdInstance;
+			((IDoubleInstance)KV.Value).Value = 0.0;
+			output_data_instance.put (KV);
 		}
 	}
 }

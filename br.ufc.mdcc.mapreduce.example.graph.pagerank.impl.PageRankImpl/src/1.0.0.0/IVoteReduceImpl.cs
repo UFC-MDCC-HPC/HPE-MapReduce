@@ -6,15 +6,15 @@ using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { 
+	public class IVoteReduceImpl<PLATFORM> : BaseIVoteReduceImpl<PLATFORM>, IVoteReduce<PLATFORM> where PLATFORM:IPlatform{
 
-	public class IVoteReduceImpl<PLATFORM> : BaseIVoteReduceImpl<PLATFORM>, IVoteReduce<PLATFORM>
-		where PLATFORM:IPlatform{
+		public IVoteReduceImpl() { 
 
-		public IVoteReduceImpl() { } 
+		} 
 
 		public override void main() { 
+			System.Console.WriteLine ("################################################ Starting PageRankImpl VoteReduceImpl ###########################################");
 			this.Page_rank.go();
-
 		}
 	}
 }

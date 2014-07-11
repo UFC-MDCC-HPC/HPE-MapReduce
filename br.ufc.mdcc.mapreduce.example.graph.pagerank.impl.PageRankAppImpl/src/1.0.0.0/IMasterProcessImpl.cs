@@ -5,130 +5,76 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Platform;
-using br.ufc.mdcc.common.Iterator;
-using br.ufc.mdcc.common.impl.IteratorImpl;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
-using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.common.Double;
+using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.common.Double;
+using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl { 
 	public class IMasterProcessImpl<PLATFORM> : BaseIMasterProcessImpl<PLATFORM>, IMasterProcess<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private const string PATH = "pathFile";
-		private IDictionary<IInteger,IPageNode<IInteger>> PAGENODES = new Dictionary<IInteger,IPageNode<IInteger>> ();
-		private double outDegreeEmpty, sum = 0.0;
+		private const string PATH = "/home/cenez/teste";
 
-		public IMasterProcessImpl() { } 
+		public IMasterProcessImpl() { 
 
-		public override void main() {
+		} 
 
-			string fileContent = readInput();
-			createPageNodes(fileContent);
+		public override void main() { 
+			System.Console.WriteLine ("################################################ Starting PageRankAppImpl ###########################################");
+			((IStringInstance)Input_data.Instance).Value = readInput();
+			IIteratorInstance<IKVPair<IInteger,IDouble>> output_data_instance = (IIteratorInstance<IKVPair<IInteger,IDouble>>) Output_data.Instance;
 
-			Page_rank.go();
+			System.Console.WriteLine ("################################################ Starting Page_rank.go(); ###########################################");
+			//Page_rank.go();
+			System.Console.WriteLine ("################################################ Stopping Page_rank.go(); ###########################################");
 
-			while (!Output_data.HasFinished) {
-				IKVPair<IInteger,IDouble> kv = Output_data.fetch_next();
-				if (kv.Key.Value >= 0) {
-					Console.Out.Write (kv.Key.Value + ":");
-					Console.Out.WriteLine (kv.Value.Value);
-					PAGENODES [kv.Key].Pgrank.Value = kv.Value.Value;
+			/*
+
+			System.Console.WriteLine ("################################################ Iterate Output_data ################################################");
+			IDictionary<int,double> results = new Dictionary<int,double> ();
+			int count = 0;
+			double alternativeRank = 0.0, sum = 0.0, additional = 0.0;
+			object kvpair_object;
+			while (output_data_instance.fetch_next (out kvpair_object)) {
+				IKVPairInstance<IInteger,IDouble> kv = (IKVPairInstance<IInteger,IDouble>) kvpair_object;
+				int key = ((IIntegerInstance)kv.Key).Value;
+				double value = ((IDoubleInstance)kv.Value).Value;
+
+				if (key >= 0) {
+					results [key] = value; //Console.Out.Write (key + ":"); //Console.Out.WriteLine (value);
+					count++;
 				} else {
-					outDegreeEmpty = kv.Value.Value;
+					alternativeRank = value;
 				}
-				sum += kv.Value.Value;
+				sum += value;
 			}
-			if (((int)sum) == PAGENODES.Count) {
+			additional = alternativeRank / count;
+			System.Console.WriteLine ("#####################################################################################################################");
+
+			System.Console.WriteLine ("################################################### Results #########################################################");
+			IEnumerator<int> iterator = results.Keys.GetEnumerator();
+			for (;iterator.MoveNext();){
+				int K = iterator.Current;
+				results [K] += additional;
+				double V = results[K];
+				Console.Out.Write (K + ":"); 
+				Console.Out.WriteLine (V);
+			}
+			System.Console.WriteLine ("################################################ Warning ############################################################");
+			if (((int)sum) == count) {
 				System.Console.WriteLine ("Computation verify: OK");
-				System.Console.WriteLine ("Additional Pgrank.Value for all nodes: " + outDegreeEmpty / PAGENODES.Count);
+				System.Console.WriteLine ("Additional rank for all nodes: " + additional);
 			}
 			else
 				System.Console.WriteLine ("Computation verify: failed");
+			System.Console.WriteLine ("#####################################################################################################################");
+			*/
 		}
-
-		public void createPageNodes(string fileContent){
-			IDictionary<int, IDictionary<int,IPageNode<IInteger>>> dictionary = new Dictionary<int, IDictionary<int,IPageNode<IInteger>>>();
-			IInteger alternativeID = null;
-
-			string[] lines = fileContent.Split(new char[] {'\n'});
-			foreach (string line in lines){
-				IPageNode<IInteger> V, W, temp = null;
-				IDictionary<int,IPageNode<IInteger>> referenceV, referenceW = null;
-
-				int[] KEY = new int[2];
-				string[] vwID = line.Split(' ');
-				for(int k=0;k<2;k++){
-					KEY[k] = int.Parse(vwID[k]);
-				}
-				if (!dictionary.TryGetValue (KEY [0], out referenceV)) { /*verifica se node V existe*/
-					V = Input_data.createItem();
-					V.Id.Value = KEY [0];
-
-					referenceV = new Dictionary<int,IPageNode<IInteger>> ();
-					dictionary [KEY [0]] = referenceV;
-					referenceV [KEY [0]] = V;
-					if (alternativeID == null)
-						alternativeID = (IInteger)V.Id.clone ();
-					V.Neighbors.put (alternativeID); /*insere ID_Alternativo, para, quando vizinhoSize=0, passar o voto para o ID_Alternativo*/
-					PAGENODES [V.Id] = V;
-				}
-				if (!dictionary.TryGetValue (KEY [1], out referenceW)) { /*verifica se node W existe*/
-					W = Input_data.createItem();
-					W.Id.Value = KEY [1];
-
-					referenceW = new Dictionary<int,IPageNode<IInteger>> ();
-					dictionary [KEY [1]] = referenceW;
-					referenceW [KEY [1]] = W;
-					if (alternativeID == null)
-						alternativeID = (IInteger)W.Id.clone ();
-					W.Neighbors.put (alternativeID);
-					PAGENODES [W.Id] = W;
-				}
-				if (!referenceV.TryGetValue (KEY [1], out temp)) {/*Verifica se existe o vizinho W*/
-					V = referenceV[KEY[0]];
-					W = referenceW[KEY[1]];
-					referenceV [KEY [1]] = W;
-					V.Neighbors.put (W.Id);
-				}
-			}
-			alternativeID.Value = -1 * dictionary.Count;
-		}
-
 		string readInput(){
-			string str = "";
-			byte[] dataByte = readFile ();
-			foreach (byte b in dataByte) {
-				str = str+Convert.ToChar(b);
-			}
-			return str;
-		}
-
-		byte[] readFile() {
-			byte[] res = null;
-			try{
-				using (FileStream fileread = new FileStream(PATH, FileMode.Open, FileAccess.Read)){					
-					byte[] bytes = new byte[fileread.Length];
-					int bytesToRead = (int)fileread.Length-1;
-					int bytesRead = 0;
-					while (bytesToRead > 0){
-						int n = fileread.Read(bytes, bytesRead, bytesToRead);
-						if (n == 0)
-							break;
-						bytesRead += n;
-						bytesToRead -= n;
-					}
-					bytesToRead = bytes.Length;
-					res = bytes;
-				}
-			}
-			catch (FileNotFoundException e){
-				Console.WriteLine("Exception IMasterProcessImpl readFile method: "+e.Message);
-			}
-			return res;
+			return System.IO.File.ReadAllText(PATH);
 		}
 	}
 }
