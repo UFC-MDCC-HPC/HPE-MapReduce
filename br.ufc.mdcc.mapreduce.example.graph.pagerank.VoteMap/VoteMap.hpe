@@ -34,7 +34,7 @@
           <visualDescription h="30" w="123" x="57" y="418">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###26428256"/>
+          <parameter formFieldId="item_type" varName="X###9519596"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>

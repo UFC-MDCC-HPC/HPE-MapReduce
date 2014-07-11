@@ -223,13 +223,13 @@
       <visualDescription h="78" w="190" x="274" y="58">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output" sRef="page_rank"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="11" y="40"/>
         <slice pRef="input" sRef="page_rank"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="page_rank"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
