@@ -21,7 +21,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl {
 			IKVPairInstance<IInteger,IIterator<IDouble>> input_values_instance = (IKVPairInstance<IInteger,IIterator<IDouble>>)Input_values.Instance;
 			IIntegerInstance integer_instance = (IIntegerInstance) input_values_instance.Key;
 			IIteratorInstance<IDouble> doubles_iterator_instance = (IIteratorInstance<IDouble>) input_values_instance.Value;
-			IKVPairInstance<IInteger, IDouble> output_value_instance = (IKVPairInstance<IInteger, IDouble>)Output_value.Instance;
+			IKVPairInstance<IInteger, IDouble> output_value_instance = (IKVPairInstance<IInteger, IDouble>)Output_value.newInstance();
 
 			Double soma = 0.0;
 
