@@ -12,7 +12,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 		} 
 
 		public override void main() { 
-			//Page_rank.go();
+			Page_rank.go();
 		}
 	}
 }

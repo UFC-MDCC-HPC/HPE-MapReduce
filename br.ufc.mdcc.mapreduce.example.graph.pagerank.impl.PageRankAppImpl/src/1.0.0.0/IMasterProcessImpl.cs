@@ -28,10 +28,10 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 			IIteratorInstance<IKVPair<IInteger,IDouble>> output_data_instance = (IIteratorInstance<IKVPair<IInteger,IDouble>>) Output_data.Instance;
 
 			System.Console.WriteLine ("################################################ Starting Page_rank.go(); ###########################################");
-			//Page_rank.go();
+			Page_rank.go();
 			System.Console.WriteLine ("################################################ Stopping Page_rank.go(); ###########################################");
 
-			/*
+
 
 			System.Console.WriteLine ("################################################ Iterate Output_data ################################################");
 			IDictionary<int,double> results = new Dictionary<int,double> ();
@@ -71,7 +71,6 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 			else
 				System.Console.WriteLine ("Computation verify: failed");
 			System.Console.WriteLine ("#####################################################################################################################");
-			*/
 		}
 		string readInput(){
 			return System.IO.File.ReadAllText(PATH);
