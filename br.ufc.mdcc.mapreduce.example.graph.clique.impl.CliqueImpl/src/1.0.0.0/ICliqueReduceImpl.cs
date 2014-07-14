@@ -9,12 +9,12 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl {
 
 	public class ICliqueReduceImpl<PLATFORM> : BaseICliqueReduceImpl<PLATFORM>, ICliqueReduce<PLATFORM>
 		where PLATFORM:IPlatform{
+		public ICliqueReduceImpl() { 
 
-		public ICliqueReduceImpl() { } 
+		} 
 
 		public override void main() { 
 			this.Clique.go();
-
 		}
 	}
 }

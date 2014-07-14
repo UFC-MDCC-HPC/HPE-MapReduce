@@ -4,28 +4,29 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.MapReduce;
-using br.ufc.mdcc.mapreduce.user.PartitionFunction;
+using br.ufc.mdcc.common.String;
+using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.mapreduce.user.PartitionFunction;
+using br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.user.CombineFunction;
+using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;
-using br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes;
-using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl { 
 
 	public abstract class BaseIMasterImpl<PLATFORM>: Computation, BaseIMaster<PLATFORM>
 		where PLATFORM:IPlatform{
-	
-		private IIterator<ICliqueNode<IInteger>> input_data = null;
-		public IIterator<ICliqueNode<IInteger>> Input_data {
+
+		private IString input_data = null;
+		public IString Input_data {
 			get {
 				if (this.input_data == null)
-					this.input_data = (IIterator<ICliqueNode<IInteger>>) Services.getPort("input_data");
+					this.input_data = (IString) Services.getPort("input_data");
 				return this.input_data;
 			}
 		}
@@ -39,11 +40,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl {
 			}
 		}
 
-		private IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM> clique = null;
-		protected IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM> Clique {
+		private IManagerMapReduce<IString, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM> clique = null;
+		protected IManagerMapReduce<IString, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM> Clique {
 			get {
 				if (this.clique == null)
-					this.clique = (IManagerMapReduce<IIterator<ICliqueNode<IInteger>>, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM>) Services.getPort("clique");
+					this.clique = (IManagerMapReduce<IString, IInteger, ICliqueNode<IInteger>, IInteger, IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>, IBreakInCliqueNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>, IIterator<IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>>, PLATFORM>) Services.getPort("clique");
 				return this.clique;
 			}
 		}

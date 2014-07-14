@@ -17,22 +17,38 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl {
 		} 
 
 		public override void main() { 
+			IIteratorInstance<IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>>>)Output_data.Instance;
+			IIntegerInstance input_key_instance = (IIntegerInstance)Input_key.Instance;
+			ICliqueNodeInstance<IInteger> input_value_instance = (ICliqueNodeInstance<IInteger>) Input_value.Instance;
+			IKVPairInstance<IInteger, IIterator<IInteger>> VALUE = null;
 
-			IKVPair<IInteger, IIterator<IInteger>> VALUE = null;
-
-			for (; !Input_value.Neighbors.HasFinished; ) {
-				IInteger KEY = Input_value.Neighbors.fetch_next();
-				IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>> KV = Output_data.createItem ();
+			object KEY;//IIntegerInstance
+			while (input_value_instance.NeighborsInstance.fetch_next (out KEY)) {
+				IKVPairInstance<IInteger, IKVPair<IInteger, IIterator<IInteger>>> KV = (IKVPairInstance<IInteger, IKVPair<IInteger, IIterator<IInteger>>>)Output_data.createItem ();
+				output_data_instance.put (KV);
 				KV.Key = KEY;
 				if (VALUE == null)
-					VALUE = new IKVPairImpl<IInteger, IIterator<IInteger>> ();
+					VALUE = (IKVPairInstance<IInteger, IIterator<IInteger>>)KV.Value;
 				KV.Value = VALUE;
+				((IIteratorInstance<IInteger>)VALUE.Value).put (KEY);
 			}
 			if (VALUE != null) {
-				VALUE.Key = Input_key;
-				VALUE.Value = (IIterator<IInteger>)Input_value.Neighbors.clone ();
+				((IKVPairInstance<IInteger, IIterator<IInteger>>)VALUE).Key = Input_key.Instance;
+				((IIteratorInstance<IInteger>)VALUE.Value).finish ();
 			}
 
+			//for (; !Input_value.Neighbors.HasFinished; ) {
+			//	IInteger KEY = Input_value.Neighbors.fetch_next();
+			//	IKVPair<IInteger, IKVPair<IInteger, IIterator<IInteger>>> KV = Output_data.createItem ();
+			//	KV.Key = KEY;
+			//	if (VALUE == null)
+			//		VALUE = new IKVPairImpl<IInteger, IIterator<IInteger>> ();
+			//	KV.Value = VALUE;
+			//}
+			//if (VALUE != null) {
+			//	VALUE.Key = Input_key;
+			//	VALUE.Value = (IIterator<IInteger>)Input_value.Neighbors.clone ();
+			//}
 		}
 	}
 }

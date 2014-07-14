@@ -31,7 +31,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="DGAC">
-      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+      <HintPath>..\..\..\apaga\MapReduce-for-HPE\DGAC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +72,10 @@
     <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction.csproj">
       <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

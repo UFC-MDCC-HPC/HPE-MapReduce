@@ -73,5 +73,9 @@
       <Project>{E8907839-CC48-4EBD-B31F-E8FF94256450}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

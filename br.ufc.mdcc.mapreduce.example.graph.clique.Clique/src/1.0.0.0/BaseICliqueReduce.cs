@@ -5,8 +5,12 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.Clique { 
 
-	public interface BaseICliqueReduce<PLATFORM> : IComputationKind 
-		where PLATFORM:IPlatform {
+public interface BaseICliqueReduce<PLATFORM> : IComputationKind 
+where PLATFORM:IPlatform
+{
 
-	} // end main interface 
+
+
+} // end main interface 
+
 } // end namespace 

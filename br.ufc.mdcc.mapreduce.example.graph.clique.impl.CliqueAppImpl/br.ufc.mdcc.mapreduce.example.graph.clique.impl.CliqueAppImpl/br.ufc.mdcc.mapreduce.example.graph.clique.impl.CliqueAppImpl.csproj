@@ -81,5 +81,9 @@
       <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
       <Name>br.ufc.mdcc.common.graph.DataNode</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

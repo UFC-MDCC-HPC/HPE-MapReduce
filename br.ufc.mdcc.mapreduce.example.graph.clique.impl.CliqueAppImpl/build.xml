@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/cenez/hpe/cenez/cache" default="all" name="CliqueAppImpl">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="CliqueAppImpl-1.0.0.0">
+    <ifnot targetexists="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0">
+      <mkdir dir="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueMapProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/BaseICliqueMapProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/ICliqueMap.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/BaseICliqueMapProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueMapProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/ICliqueMapProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueMapProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/ICliqueMapProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueMapProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/ICliqueMapProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueMapProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueReduceProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/BaseICliqueReduceProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/ICliqueReduce.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/BaseICliqueReduceProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueReduceProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/ICliqueReduceProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueReduceProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/ICliqueReduceProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueReduceProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/ICliqueReduceProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueReduceProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/BaseIMasterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/IMaster.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/BaseIMasterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/IMasterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/IMasterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/CliqueAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/IMasterProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/IMasterProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="CliqueAppImpl-1.0.0.0" name="all"/>
+</project>

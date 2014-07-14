@@ -81,5 +81,9 @@
       <Project>{D5FF2BDE-BA64-4F4C-A2C8-12E8829170A7}</Project>
       <Name>br.ufc.mdcc.common.impl.IntegerImpl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl.csproj">
+      <Project>{9A02D2DD-0967-4810-A845-3EDE50DDE195}</Project>
+      <Name>br.ufc.mdcc.common.impl.KVPairImpl</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

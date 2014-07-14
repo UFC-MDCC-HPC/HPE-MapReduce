@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/cenez/hpe/cenez/cache" default="all" name="CliqueReduce">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="CliqueReduce-1.0.0.0">
+    <ifnot targetexists="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0">
+      <mkdir dir="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/CliqueReduce.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0/BaseICliqueReduce.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/src/1.0.0.0/BaseICliqueReduce.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/BaseIReduceFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/CliqueReduce.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0/ICliqueReduce.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/src/1.0.0.0/ICliqueReduce.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0/BaseICliqueReduce.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="CliqueReduce-1.0.0.0" name="all"/>
+</project>

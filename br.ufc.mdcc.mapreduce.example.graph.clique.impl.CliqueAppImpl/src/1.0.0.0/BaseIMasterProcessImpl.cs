@@ -6,28 +6,29 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;
-using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;
-using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 using br.ufc.mdcc.common.Platform;
+using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.common.String;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { 
-	public abstract class BaseIMasterProcessImpl<PLATFORM>: Application, BaseIMasterProcess<PLATFORM>
-		where PLATFORM:IPlatform{
 
-		private IIterator<ICliqueNode<IInteger>> input_data = null;
-		public IIterator<ICliqueNode<IInteger>> Input_data {
+	public abstract class BaseIMasterProcessImpl<PLATFORM>: Application, BaseIMasterProcess<PLATFORM>
+		where PLATFORM:IPlatform {
+
+		private IString input_data = null;
+		protected IString Input_data {
 			get {
 				if (this.input_data == null)
-					this.input_data = (IIterator<ICliqueNode<IInteger>>) Services.getPort("input_data");
+					this.input_data = (IString) Services.getPort("input_data");
 				return this.input_data;
 			}
 		}
 
 		private IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>> output_data = null;
-		public IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>> Output_data {
+		protected IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>> Output_data {
 			get {
 				if (this.output_data == null)
 					this.output_data = (IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>) Services.getPort("output_data");

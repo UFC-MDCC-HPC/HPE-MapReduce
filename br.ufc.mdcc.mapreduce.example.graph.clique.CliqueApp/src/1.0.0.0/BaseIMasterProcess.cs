@@ -6,7 +6,12 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp { 
 
-	public interface BaseIMasterProcess<PLATFORM> : IApplicationKind where PLATFORM:IPlatform {
-	
-	} // end main interface 
+public interface BaseIMasterProcess<PLATFORM> : IApplicationKind 
+where PLATFORM:IPlatform
+{
+
+
+
+} // end main interface 
+
 } // end namespace 

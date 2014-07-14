@@ -7,13 +7,18 @@ using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { 
 
-	public class ICliqueReduceProcessImpl<PLATFORM> : BaseICliqueReduceProcessImpl<PLATFORM>, ICliqueReduceProcess<PLATFORM>
-		where PLATFORM:IPlatform{
+public class ICliqueReduceProcessImpl<PLATFORM> : BaseICliqueReduceProcessImpl<PLATFORM>, ICliqueReduceProcess<PLATFORM>
+where PLATFORM:IPlatform
+{
 
-		public ICliqueReduceProcessImpl() { } 
+public ICliqueReduceProcessImpl() { 
 
-		public override void main() { 
+} 
+
+public override void main() { 
 			Clique.go();
-		}
-	}
+}
+
+}
+
 }

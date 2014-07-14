@@ -6,13 +6,16 @@ using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl { 
+
 	public class ICliqueMapImpl<PLATFORM> : BaseICliqueMapImpl<PLATFORM>, ICliqueMap<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		public ICliqueMapImpl() { } 
+		public ICliqueMapImpl() { 
+
+		} 
 
 		public override void main() { 
-			Clique.go();
+			this.Clique.go();
 		}
 	}
 }

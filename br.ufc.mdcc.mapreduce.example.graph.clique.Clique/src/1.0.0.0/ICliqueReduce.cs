@@ -3,8 +3,11 @@ using br.ufc.mdcc.common.Platform;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.Clique { 
 
-	public interface ICliqueReduce<PLATFORM> : BaseICliqueReduce<PLATFORM>
-		where PLATFORM:IPlatform {
+public interface ICliqueReduce<PLATFORM> : BaseICliqueReduce<PLATFORM>
+where PLATFORM:IPlatform
+{
 
-	} // end main interface 
+
+} // end main interface 
+
 } // end namespace 

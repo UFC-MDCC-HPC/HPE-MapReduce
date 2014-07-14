@@ -6,18 +6,35 @@
         <implements>true</implements>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000010b07281e36aff7dbce916468aff0612a0028679251fa0ce1588013adc48dd80422eccb01cac95d451b0fc01322beba64b9c799e30dcb16c3d04196843a1c996a00c89b2cce33bb4f107c6d2a5caeea8cf95c62a57d8aeb41297b2a0a7b8bbfc5a43b636c6a64ffb118d8c9f9c024f9be796a2951fe939631ec8931f77ca8a6" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/CliqueApp.hpe" name="CliqueApp" package="br.ufc.mdcc.mapreduce.example.graph.clique" version="1.0.0.0">
-        <visualDescription h="108" w="203" x="255" y="299">
+        <visualDescription h="94" w="155" x="264" y="307">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="platform" varName="PLATFORM"/>
-        <unitBounds parallel="false" uRef="master_process">
-          <visualDescription h="20" w="20" x="90" y="10"/>
-        </unitBounds>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="206" y="439">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="222" y="456">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###1353841"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
         <unitBounds parallel="true" uRef="clique_map_process">
-          <visualDescription h="20" w="20" x="19" y="43"/>
+          <visualDescription h="20" w="20" x="14" y="36"/>
         </unitBounds>
         <unitBounds parallel="true" uRef="clique_reduce_process">
-          <visualDescription h="20" w="20" x="160" y="45"/>
+          <visualDescription h="20" w="20" x="115" y="38"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="master_process">
+          <visualDescription h="20" w="20" x="51" y="2"/>
         </unitBounds>
       </component>
     </baseType>
@@ -28,7 +45,7 @@
   </header>
   <componentInfo>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="100" x="78" y="201">
+      <visualDescription h="60" w="100" x="510" y="417">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="true" uRef="platform">
@@ -36,25 +53,24 @@
       </unitBounds>
     </innerComponent>
     <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
-    <interface iRef="IMasterProcessImpl" nArgs="1">
-      <slice isRef="clique">
-        <originRef cRef="clique" iRef="IMaster"/>
-        <visualDescription h="10" w="10" x="68" y="47"/>
-      </slice>
-      <visualDescription h="67" w="152" x="263" y="51">
-        <color b="230" g="216" r="173"/>
-      </visualDescription>
-      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
-      <action id="main">
-        <protocol/>
-      </action>
-    </interface>
     <interface iRef="ICliqueMapProcessImpl" nArgs="1">
       <slice isRef="clique">
         <originRef cRef="clique" iRef="ICliqueMap"/>
-        <visualDescription h="10" w="10" x="151" y="30"/>
+        <visualDescription h="10" w="10" x="129" y="32"/>
       </slice>
-      <visualDescription h="60" w="185" x="20" y="225">
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { &#xA;&#xA;public abstract class BaseICliqueMapProcessImpl&lt;PLATFORM>: Application, BaseICliqueMapProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private ICliqueMap&lt;PLATFORM> clique = null;&#xA;&#xA;protected ICliqueMap&lt;PLATFORM> Clique {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.clique == null)&#xA;&#x9;&#x9;&#x9;this.clique = (ICliqueMap&lt;PLATFORM>) Services.getPort(&quot;clique&quot;);&#xA;&#x9;&#x9;return this.clique;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseICliqueMapProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueMapProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/ICliqueMap.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/BaseICliqueMapProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { &#xA;&#xA;public class ICliqueMapProcessImpl&lt;PLATFORM> : BaseICliqueMapProcessImpl&lt;PLATFORM>, ICliqueMapProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public ICliqueMapProcessImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;&#x9;&#x9;&#x9;Clique.go();&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ICliqueMapProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueMapProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueMapProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/ICliqueMapProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="62" w="159" x="52" y="196">
         <color b="0" g="165" r="255"/>
       </visualDescription>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
@@ -65,9 +81,21 @@
     <interface iRef="ICliqueReduceProcessImpl" nArgs="1">
       <slice isRef="clique">
         <originRef cRef="clique" iRef="ICliqueReduce"/>
-        <visualDescription h="10" w="10" x="16" y="50"/>
+        <visualDescription h="10" w="10" x="7" y="40"/>
       </slice>
-      <visualDescription h="75" w="180" x="517" y="185">
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { &#xA;&#xA;public abstract class BaseICliqueReduceProcessImpl&lt;PLATFORM>: Application, BaseICliqueReduceProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private ICliqueReduce&lt;PLATFORM> clique = null;&#xA;&#xA;protected ICliqueReduce&lt;PLATFORM> Clique {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.clique == null)&#xA;&#x9;&#x9;&#x9;this.clique = (ICliqueReduce&lt;PLATFORM>) Services.getPort(&quot;clique&quot;);&#xA;&#x9;&#x9;return this.clique;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseICliqueReduceProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueReduceProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/ICliqueReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/BaseICliqueReduceProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { &#xA;&#xA;public class ICliqueReduceProcessImpl&lt;PLATFORM> : BaseICliqueReduceProcessImpl&lt;PLATFORM>, ICliqueReduceProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public ICliqueReduceProcessImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;&#x9;&#x9;&#x9;Clique.go();&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="ICliqueReduceProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/ICliqueReduceProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseICliqueReduceProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/ICliqueReduceProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="64" w="201" x="521" y="183">
         <color b="0" g="165" r="255"/>
       </visualDescription>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
@@ -75,17 +103,51 @@
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IMasterProcessImpl" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
-      <super cRef="base" uRef="master_process"/>
-      <visualDescription h="67" w="152" x="263" y="184"/>
-    </unit>
+    <interface iRef="IMasterProcessImpl" nArgs="1">
+      <slice isRef="clique">
+        <originRef cRef="clique" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="51" y="26"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.String;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { &#xA;&#xA;&#x9;public abstract class BaseIMasterProcessImpl&lt;PLATFORM>: Application, BaseIMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform {&#xA;&#xA;&#x9;&#x9;private IString input_data = null;&#xA;&#x9;&#x9;protected IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IInteger,IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>> output_data = null;&#xA;&#x9;&#x9;protected IIterator&lt;IKVPair&lt;IInteger,IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IInteger,IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IMaster&lt;PLATFORM> clique = null;&#xA;&#x9;&#x9;protected IMaster&lt;PLATFORM> Clique {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.clique == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.clique = (IMaster&lt;PLATFORM>) Services.getPort(&quot;clique&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.clique;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;&#xA;//ICombineFunction&lt;ORV, O>&#xA;//IManagerMapReduce&lt;In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM> &#xA;//ISplitFunction&lt;I, IMK, IMV>&#xA;//IMK:IInteger&#xA;//IMV:ICliqueNode&lt;IInteger>&#xA;//OMK: IInteger&#xA;//OMV: IKVPair&lt;IInteger, IIterator&lt;IInteger>>&#xA;//ORV: IKVPair&lt;IInteger, IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>" fileType="library" name="BaseIMasterProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/IMaster.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private const string PATH = &quot;/home/cenez/teste1&quot;;&#xA;&#xA;&#x9;&#x9;public IMasterProcessImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;IStringInstance input_data_instance = (IStringInstance) Input_data.Instance;&#xA;&#x9;&#x9;&#x9;input_data_instance.Value = readInput();&#xA;&#xA;&#x9;&#x9;&#x9;Clique.go();&#xA;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IKVPair&lt;IInteger,IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>> output_data_instance = (IIteratorInstance&lt;IKVPair&lt;IInteger,IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>>) Output_data.Instance;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;int maxclique = 0;&#xA;&#x9;&#x9;&#x9;object o;&#xA;&#x9;&#x9;&#x9;while (output_data_instance.fetch_next(out o)){&#xA;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger, IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>> KMV = (IKVPairInstance&lt;IInteger, IIterator&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>>) o;&#xA;&#x9;&#x9;&#x9;&#x9;IIntegerInstance I = (IIntegerInstance)KMV.Key;&#xA;&#x9;&#x9;&#x9;&#x9;IIteratorInstance&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>> iteratorMV = (IIteratorInstance&lt;IKVPair&lt;IInteger, IIterator&lt;IInteger>>>)KMV.Value;&#xA;&#x9;&#x9;&#x9;&#x9;System.Console.Write (&quot;Pivo:&quot; + I.Value + &quot; &quot;);&#xA;&#x9;&#x9;&#x9;&#x9;while (iteratorMV.fetch_next(out o)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger, IIterator&lt;IInteger>> KV = (IKVPairInstance&lt;IInteger, IIterator&lt;IInteger>>)o;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IIteratorInstance&lt;IInteger> values = (IIteratorInstance&lt;IInteger>)KV.Value;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;System.Console.Write (&quot;&lt;&quot;+((IIntegerInstance)KV.Key).Value + &quot;,[&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (((IIntegerInstance)KV.Key).Value > maxclique)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;maxclique = ((IIntegerInstance)KV.Key).Value;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;string space = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;while (values.fetch_next(out o)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IIntegerInstance itemCLIQUE = (IIntegerInstance)o;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;System.Console.Write (space+itemCLIQUE.Value); space = &quot; &quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;System.Console.Write(&quot;]> &quot;);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;System.Console.WriteLine ();&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;Max clique include &quot;+maxclique+&quot; nodes.&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;string readInput(){&#xA;&#x9;&#x9;&#x9;return System.IO.File.ReadAllText(PATH);&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp/bin/1.0.0.0/IMasterProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="78" w="142" x="264" y="78">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="clique"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="clique"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
     <unit iRef="ICliqueMapProcessImpl" multiple="true" private="false" replica="0" uRef="clique_map_process" visibleInterface="true">
       <super cRef="base" uRef="clique_map_process"/>
-      <visualDescription h="60" w="185" x="20" y="343"/>
+      <visualDescription h="62" w="159" x="52" y="323"/>
     </unit>
     <unit iRef="ICliqueReduceProcessImpl" multiple="true" private="false" replica="0" uRef="clique_reduce_process" visibleInterface="true">
       <super cRef="base" uRef="clique_reduce_process"/>
-      <visualDescription h="75" w="180" x="517" y="339"/>
+      <visualDescription h="64" w="201" x="521" y="311"/>
+    </unit>
+    <unit iRef="IMasterProcessImpl" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <super cRef="base" uRef="master_process"/>
+      <visualDescription h="40" w="142" x="227" y="214"/>
     </unit>
   </componentInfo>
 </component:component>

@@ -30,7 +30,7 @@
   </header>
   <componentInfo>
     <parameter componentRef="id_type" formFieldId="id_type" order="0" varName="TID"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="neighbors" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="169" x="376" y="216">
         <color b="203" g="192" r="255"/>
       </visualDescription>
@@ -68,10 +68,6 @@
       <visualDescription h="71" w="149" x="86" y="91">
         <color b="0" g="128" r="0"/>
       </visualDescription>
-      <port name="neighbors">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="neighbors" sRef="neighbors"/>
-      </port>
       <parameter iname="IData" order="0" parid="id_type" uname="data" varid="TID"/>
     </interface>
     <unit iRef="ICliqueNode" multiple="false" private="false" replica="0" uRef="clique_node" visibleInterface="true">
