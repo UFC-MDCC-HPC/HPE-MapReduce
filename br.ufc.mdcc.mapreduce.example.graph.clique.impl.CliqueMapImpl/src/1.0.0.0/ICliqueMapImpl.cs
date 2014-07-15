@@ -20,7 +20,9 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl {
 			IIntegerInstance input_key_instance = (IIntegerInstance)Input_key.Instance;
 			ICliqueNodeInstance<IInteger> input_value_instance = (ICliqueNodeInstance<IInteger>) Input_value.Instance;
 			IKVPairInstance<IInteger, IIterator<IInteger>> VALUE = null;
-
+			
+			input_value_instance.NeighborsInstance.finish();
+			
 			object KEY;//IIntegerInstance
 			while (input_value_instance.NeighborsInstance.fetch_next (out KEY)) {
 				IKVPairInstance<IInteger, IKVPair<IInteger, IIterator<IInteger>>> KV = (IKVPairInstance<IInteger, IKVPair<IInteger, IIterator<IInteger>>>)Output_data.createItem ();

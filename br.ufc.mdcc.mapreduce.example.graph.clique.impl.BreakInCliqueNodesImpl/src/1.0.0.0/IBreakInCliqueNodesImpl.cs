@@ -70,6 +70,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.BreakInCliqueNodesImpl
 					}
 				}
 			}
+			output_data_instance.finish();
 		}
 	}
 }
