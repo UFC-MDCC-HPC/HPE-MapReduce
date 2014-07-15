@@ -16,7 +16,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 	public class IMasterProcessImpl<PLATFORM> : BaseIMasterProcessImpl<PLATFORM>, IMasterProcess<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private const string PATH = "/home/cenez/teste";
+		private const string PATH = "/home/cenez/pagerank.txt";
 
 		public IMasterProcessImpl() { 
 

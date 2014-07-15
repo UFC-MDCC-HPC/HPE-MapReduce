@@ -14,7 +14,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 	public class IMasterProcessImpl<PLATFORM> : BaseIMasterProcessImpl<PLATFORM>, IMasterProcess<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private const string PATH = "/home/cenez/teste1";
+		private const string PATH = "/home/cenez/clique.txt";
 
 		public IMasterProcessImpl() { 
 
