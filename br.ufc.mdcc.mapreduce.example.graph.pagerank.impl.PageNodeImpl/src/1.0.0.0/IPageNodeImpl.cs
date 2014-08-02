@@ -18,7 +18,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 			newInstance(); 
 		}
 		public object newInstance (){
-			object idInstance = Id.newInstance();
+			object idInstance = Id_node.newInstance();
 			IPageNodeInstance<TID> pageNodeInstance = new IPageNodeInstanceImpl<TID> (idInstance);
 			pageNodeInstance.NeighborsInstance = (IIteratorInstance<TID>) Neighbors.newInstance ();
 			pageNodeInstance.PgrankInstance = (IPGRankInstance) Pgrank.newInstance ();

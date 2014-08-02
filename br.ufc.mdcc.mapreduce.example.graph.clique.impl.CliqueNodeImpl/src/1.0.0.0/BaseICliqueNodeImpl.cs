@@ -15,13 +15,13 @@ public abstract class BaseICliqueNodeImpl<TID>: DataStructure, BaseICliqueNode<T
 where TID:IInteger
 {
 
-private TID id = default(TID);
+private TID id_node = default(TID);
 
-public TID Id {
+public TID Id_node {
 	get {
-		if (this.id == null)
-			this.id = (TID) Services.getPort("id");
-		return this.id;
+		if (this.id_node == null)
+			this.id_node= (TID) Services.getPort("id_node");
+		return this.id_node;
 	}
 }
 

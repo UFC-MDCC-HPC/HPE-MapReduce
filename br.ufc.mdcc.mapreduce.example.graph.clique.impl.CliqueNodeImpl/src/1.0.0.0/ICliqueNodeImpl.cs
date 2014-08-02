@@ -18,7 +18,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl {
 			newInstance(); 
 		}
 		public object newInstance (){
-			object idInstance = Id.newInstance();
+			object idInstance = Id_node.newInstance();
 			ICliqueNodeInstance<TID> cliqueNodeInstance = new ICliqueNodeInstanceImpl<TID> (idInstance);
 			cliqueNodeInstance.NeighborsInstance = (IIteratorInstance<TID>) Neighbors.newInstance ();
 			return this.Instance = cliqueNodeInstance;

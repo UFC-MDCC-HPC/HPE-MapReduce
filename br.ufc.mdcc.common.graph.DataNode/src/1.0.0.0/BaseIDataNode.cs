@@ -7,7 +7,7 @@ namespace br.ufc.mdcc.common.graph.DataNode {
 	public interface BaseIDataNode<TID> : BaseIData, IDataStructureKind 
 		where TID:IData{
 
-		TID Id { get; }
+		TID Id_node { get; }
 
 	} // end main interface 
 } // end namespace 
