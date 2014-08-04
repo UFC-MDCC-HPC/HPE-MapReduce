@@ -8,6 +8,6 @@ using br.ufc.mdcc.common.Integer;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes { 
 
-	public interface IBreakInPageNodes : BaseIBreakInPageNodes, ISplitFunction<IString, IInteger, IPageNode<IInteger>>{
+	public interface IBreakInPageNodes : BaseIBreakInPageNodes, ISplitFunction<IString, IInteger, IPageNode>{
 	} // end main interface 
 } // end namespace 

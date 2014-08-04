@@ -1,18 +1,16 @@
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.graph.DataNode;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
 using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.Integer;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode { 
 
-	public interface IPageNode<TID> : BaseIPageNode<TID>, IDataNode<TID>
-		where TID:IData{
-	}
-	public interface IPageNodeInstance<TID>
-		where TID:IData{
-		object IdInstance { get; set;} //TID Id
-		IPGRankInstance PgrankInstance { get; set;} //IPGRank Pgrank
-		IIteratorInstance<TID> NeighborsInstance { set; get; } //IIterator<TID>
+	public interface IPageNode : BaseIPageNode, IDataNode<IInteger, IPGRank, IIterator<IInteger>>{
+	} // end main interface 
+	public interface IPageNodeInstance{
+		object IdInstance { get; set;}
+		IPGRankInstance PgrankInstance { get; set;}
+		IIteratorInstance<IInteger> NeighborsInstance { set; get; }
 	}
 } // end namespace 

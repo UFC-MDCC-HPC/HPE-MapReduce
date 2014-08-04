@@ -24,11 +24,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 			}
 		}
 
-		private IIterator<IKVPair<IInteger, IPageNode<IInteger>>> output_data = null;
-		public IIterator<IKVPair<IInteger, IPageNode<IInteger>>> Output_data {
+		private IIterator<IKVPair<IInteger, IPageNode>> output_data = null;
+		public IIterator<IKVPair<IInteger, IPageNode>> Output_data {
 			get {
 				if (this.output_data == null)
-					this.output_data = (IIterator<IKVPair<IInteger, IPageNode<IInteger>>>) Services.getPort("output_data");
+					this.output_data = (IIterator<IKVPair<IInteger, IPageNode>>) Services.getPort("output_data");
 				return this.output_data;
 			}
 		}

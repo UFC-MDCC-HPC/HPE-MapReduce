@@ -49,11 +49,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 			}
 		}*/
 
-		private IManagerMapReduce<IString, IInteger, IPageNode<IInteger>, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM> page_rank = null;
-		protected IManagerMapReduce<IString, IInteger, IPageNode<IInteger>, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM> Page_rank {
+		private IManagerMapReduce<IString, IInteger, IPageNode, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM> page_rank = null;
+		protected IManagerMapReduce<IString, IInteger, IPageNode, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM> Page_rank {
 			get {
 				if (this.page_rank == null)
-					this.page_rank = (IManagerMapReduce<IString, IInteger, IPageNode<IInteger>, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM>) Services.getPort("page_rank");
+					this.page_rank = (IManagerMapReduce<IString, IInteger, IPageNode, IInteger, IKVPair<IInteger, IDouble>, IIterator<IKVPair<IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction<IInteger>, ICombineFunction<IKVPair<IInteger, IDouble>,IIterator<IKVPair<IInteger,IDouble>>>, PLATFORM>) Services.getPort("page_rank");
 				return this.page_rank;
 			}
 		}

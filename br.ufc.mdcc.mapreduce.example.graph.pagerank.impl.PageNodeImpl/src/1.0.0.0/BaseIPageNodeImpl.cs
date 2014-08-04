@@ -4,45 +4,40 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl { 
 
-public abstract class BaseIPageNodeImpl<TID>: DataStructure, BaseIPageNode<TID>
-where TID:IInteger
+public abstract class BaseIPageNodeImpl: DataStructure, BaseIPageNode
 {
 
-private TID id_node = default(TID);
-
-public TID Id_node {
+private IInteger id_node = null;
+public IInteger Id_node {
 	get {
 		if (this.id_node == null)
-			this.id_node = (TID) Services.getPort("id_node");
+			this.id_node = (IInteger) Services.getPort("id_node");
 		return this.id_node;
 	}
 }
 
-private IPGRank pgrank = null;
-
-public IPGRank Pgrank {
+private IPGRank value_node = null;
+public IPGRank Value_node {
 	get {
-		if (this.pgrank == null)
-			this.pgrank = (IPGRank) Services.getPort("pgrank");
-		return this.pgrank;
+		if (this.value_node == null)
+			this.value_node = (IPGRank) Services.getPort("value_node");
+		return this.value_node;
 	}
 }
 
-private IIterator<TID> neighbors = null;
-
-public IIterator<TID> Neighbors {
+private IIterator<IInteger> edge_node = null;
+public IIterator<IInteger> Edge_node {
 	get {
-		if (this.neighbors == null)
-			this.neighbors = (IIterator<TID>) Services.getPort("neighbors");
-		return this.neighbors;
+		if (this.edge_node == null)
+			this.edge_node = (IIterator<IInteger>) Services.getPort("edge_node");
+		return this.edge_node;
 	}
 }
 

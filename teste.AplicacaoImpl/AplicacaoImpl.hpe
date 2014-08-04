@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000037b8fe9f80756970565019acdf9457ea784cf31f7173cdada579217ca3a5d666c7e61e234fee1759635b3410604958cd3896162e9110fd3c45336718b773192b5fd0c898435900e38f39309ead1987805d9c9afff9d75cf8114f51f545a73f16d570b557e585a3818e1b44031f12823877c54bc17fdab944a71fe1311ef910e3" isAbstract="false" kind="Application" name="AplicacaoImpl" packagePath="teste">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002de6ed1681798eb6e1fc297bc447843c1658c67da9312ee5d9e2b0b3a10eaf120464ad8f42d9c4edde0cae4b96aecf7adc78a4f3b26bbae652e435b4d10f78149a8e43b8afd1664637baaa56e301aa6e5f98aad8e19ce56eb79ca531d68caaf170a929b5f8c39a0bec3b9bd4ac1dc64dde0d0a983dc3f80e28dd65fcb1c4fba0" localRef="base" location="teste.Aplicacao/Aplicacao.hpe" name="Aplicacao" package="teste" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="255" y="423">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="aplicacao">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IAplicacaoImpl" nArgs="0">
+      <slice isRef="t_string">
+        <originRef cRef="t_string" iRef="IString"/>
+        <visualDescription h="10" w="10" x="71" y="64"/>
+      </slice>
+      <slice isRef="t_integer">
+        <originRef cRef="t_integer" iRef="IInteger"/>
+        <visualDescription h="10" w="10" x="47" y="65"/>
+      </slice>
+      <slice isRef="t_pgrank">
+        <originRef cRef="t_pgrank" iRef="IPGRank"/>
+        <visualDescription h="10" w="10" x="6" y="26"/>
+      </slice>
+      <slice isRef="t_double">
+        <originRef cRef="t_double" iRef="IDouble"/>
+        <visualDescription h="10" w="10" x="8" y="61"/>
+      </slice>
+      <slice isRef="t_iterator">
+        <originRef cRef="t_iterator" iRef="IIterator"/>
+        <visualDescription h="10" w="10" x="26" y="67"/>
+      </slice>
+      <slice isRef="t_kvpair">
+        <originRef cRef="t_kvpair" iRef="IKVPair"/>
+        <visualDescription h="10" w="10" x="106" y="59"/>
+      </slice>
+      <slice isRef="t_aplicacao_node">
+        <originRef cRef="t_aplicacao_node" iRef="IPageNode"/>
+        <visualDescription h="10" w="10" x="87" y="61"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using teste.Aplicacao;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;&#xA;namespace teste.AplicacaoImpl { &#xA;&#x9;public abstract class BaseIAplicacaoImpl: Application, BaseIAplicacao{&#xA;&#x9;&#x9;private IDouble t_double = null;&#xA;&#x9;&#x9;protected IDouble T_double {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_double == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_double = (IDouble) Services.getPort(&quot;t_double&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_double;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, IDouble> t_kvpair = null;&#xA;&#x9;&#x9;protected IKVPair&lt;IString, IDouble> T_kvpair {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_kvpair == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_kvpair = (IKVPair&lt;IString, IDouble>) Services.getPort(&quot;t_kvpair&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_kvpair;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IInteger t_integer = null;&#xA;&#x9;&#x9;protected IInteger T_integer {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_integer == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_integer = (IInteger) Services.getPort(&quot;t_integer&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_integer;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IInteger> t_iterator = null;&#xA;&#x9;&#x9;protected IIterator&lt;IInteger> T_iterator {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_iterator == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_iterator = (IIterator&lt;IInteger>) Services.getPort(&quot;t_iterator&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_iterator;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IPageNode t_aplicacao_node = null;&#xA;&#x9;&#x9;protected IPageNode T_aplicacao_node {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_aplicacao_node == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_aplicacao_node = (IPageNode) Services.getPort(&quot;t_aplicacao_node&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_aplicacao_node;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;//&#x9;&#x9;private IPageNode t_page_node = null;&#xA;//&#x9;&#x9;protected IPageNode T_page_node {&#xA;//&#x9;&#x9;&#x9;get {&#xA;//&#x9;&#x9;&#x9;&#x9;if (this.t_page_node == null)&#xA;//&#x9;&#x9;&#x9;&#x9;&#x9;this.t_page_node = (IPageNode) Services.getPort(&quot;t_page_node&quot;);&#xA;//&#x9;&#x9;&#x9;&#x9;return this.t_page_node;&#xA;//&#x9;&#x9;&#x9;}&#xA;//&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IPGRank t_pgrank = null;&#xA;&#x9;&#x9;protected IPGRank T_pgrank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_pgrank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_pgrank = (IPGRank) Services.getPort(&quot;t_pgrank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_pgrank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString t_string = null;&#xA;&#x9;&#x9;protected IString T_string {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.t_string == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.t_string = (IString) Services.getPort(&quot;t_string&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.t_string;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIAplicacaoImpl.cs" srcType="base" uri="teste.AplicacaoImpl/bin/1.0.0.0/BaseIAplicacaoImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/bin/1.0.0.0/IPGRank.dll</dependency>
+          <dependency>teste.Aplicacao/bin/1.0.0.0/BaseIAplicacao.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using teste.Aplicacao;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank;&#xA;&#xA;&#xA;namespace teste.AplicacaoImpl { &#xA;&#xA;public class IAplicacaoImpl : BaseIAplicacaoImpl, IAplicacao&#xA;{&#xA;&#xA;public IAplicacaoImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;################################*IAplicacaoImpl Start ###############################&quot;);&#xA;&#x9;&#x9;&#x9;IDoubleInstance tDouble = (IDoubleInstance) T_double.Instance;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, IDouble> tKVPair = (IKVPairInstance&lt;IString, IDouble>)T_kvpair.Instance;//.newInstance ();&#xA;&#x9;&#x9;&#x9;IIntegerInstance tInteger = (IIntegerInstance) T_integer.Instance;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IInteger> tIterator = (IIteratorInstance&lt;IInteger>)T_iterator.Instance;//.newInstance ();&#xA;&#x9;&#x9;&#x9;IStringInstance tString = (IStringInstance) T_string.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;tDouble.Value = 0.8;&#xA;&#x9;&#x9;&#x9;tInteger.Value = 8;&#xA;&#x9;&#x9;&#x9;tString.Value = &quot;Tipo String&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;((IStringInstance)tKVPair.Key).Value = tString.Value;&#xA;&#x9;&#x9;&#x9;((IDoubleInstance)tKVPair.Value).Value = tDouble.Value;&#xA;&#xA;&#x9;&#x9;&#x9;tIterator.put (tInteger); &#xA;&#x9;&#x9;&#x9;tIterator.finish ();&#xA;&#xA;&#x9;&#x9;&#x9;object o; int count = 0;&#xA;&#x9;&#x9;&#x9;while (tIterator.fetch_next (out o)) {&#xA;&#x9;&#x9;&#x9;&#x9;IIntegerInstance oI = (IIntegerInstance) o;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine (&quot;Item Iterator &quot;+ (count++) + &quot;: &quot; +oI.Value);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;tDouble.Value=&quot;+tDouble.Value+&quot; : &quot;+&quot;tInteger.Value=&quot;+tInteger.Value+&quot; : &quot;+&quot;tString.Value=&quot;+tString.Value);&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;tKVPair.Key=&quot;+((IStringInstance)tKVPair.Key).Value+&quot; : &quot;+&quot;tKVPair.Value=&quot;+((IDoubleInstance)tKVPair.Value).Value);&#xA;&#xA;&#x9;&#x9;&#x9;IPageNodeInstance instance = (IPageNodeInstance) T_aplicacao_node.Instance;&#xA;&#x9;&#x9;&#x9;((IIntegerInstance)instance.IdInstance).Value = 8;&#xA;&#x9;&#x9;&#x9;IIntegerInstance item = (IIntegerInstance) T_aplicacao_node.Edge_node.createItem ();&#xA;&#x9;&#x9;&#x9;item.Value = 7;&#xA;&#xA;&#x9;&#x9;&#x9;instance.NeighborsInstance.put (item);&#xA;&#x9;&#x9;&#x9;instance.NeighborsInstance.put (((IIntegerInstance)instance.IdInstance));&#xA;&#x9;&#x9;&#x9;instance.NeighborsInstance.finish ();&#xA;&#x9;&#x9;&#x9;while (instance.NeighborsInstance.fetch_next (out o)) {&#xA;&#x9;&#x9;&#x9;&#x9;IIntegerInstance II = (IIntegerInstance)o;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine (&quot;%%%%%%%%%%%%%%%%%%%%%%%%%%%% Valor no Iterator=&quot;+II.Value);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;%%%%%%%%%%%%%%%%%%%%%%%%%%%% Resultado Id_node=&quot; + ((IIntegerInstance)instance.IdInstance).Value+&quot; PGRank=&quot;+instance.PgrankInstance.Value);&#xA;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (&quot;################################ IAplicacaoImpl End ###############################&quot;);&#xA;&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IAplicacaoImpl.cs" srcType="user" uri="teste.AplicacaoImpl/bin/1.0.0.0/IAplicacaoImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/teste.AplicacaoImpl/bin/1.0.0.0/BaseIAplicacaoImpl.dll</dependency>
+          <dependency>teste.Aplicacao/bin/1.0.0.0/IAplicacao.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="86" w="134" x="200" y="84">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="value_node">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="value_node" sRef="t_aplicacao_node"/>
+      </port>
+      <port name="edge_node">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="edge_node" sRef="t_aplicacao_node"/>
+      </port>
+      <port name="id_node">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="id_node" sRef="t_aplicacao_node"/>
+      </port>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IAplicacaoImpl" multiple="false" private="false" replica="0" uRef="aplicacao" visibleInterface="true">
+      <super cRef="base" uRef="aplicacao"/>
+      <visualDescription h="86" w="134" x="114" y="251"/>
+    </unit>
+  </componentInfo>
+</component:component>

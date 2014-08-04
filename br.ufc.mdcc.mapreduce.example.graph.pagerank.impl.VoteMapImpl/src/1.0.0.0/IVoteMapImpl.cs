@@ -18,7 +18,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl {
 
 		public override void main() { 
 			System.Console.WriteLine ("################################################ Starting VoteMapImpl map ###########################################");
-			IPageNodeInstance<IInteger> input_value_instance = (IPageNodeInstance<IInteger>)Input_value.Instance;
+			IPageNodeInstance input_value_instance = (IPageNodeInstance)Input_value.Instance;
 			IIntegerInstance input_key_instance = (IIntegerInstance)Input_key.Instance;
 			IIteratorInstance<IKVPair<IInteger, IDouble>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, IDouble>>)Output_data.Instance;
 

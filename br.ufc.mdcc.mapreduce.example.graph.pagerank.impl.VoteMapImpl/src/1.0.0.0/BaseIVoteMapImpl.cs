@@ -31,11 +31,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteMapImpl {
 			}
 		}
 
-		private IPageNode<IInteger> input_value = default(IPageNode<IInteger>);
-		public IPageNode<IInteger> Input_value {
+		private IPageNode input_value = default(IPageNode);
+		public IPageNode Input_value {
 			get {
 				if (this.input_value == null)
-					this.input_value = (IPageNode<IInteger>) Services.getPort("input_value");
+					this.input_value = (IPageNode) Services.getPort("input_value");
 				return this.input_value;
 			}
 		}

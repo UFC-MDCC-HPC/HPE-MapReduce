@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002de6ed1681798eb6e1fc297bc447843c1658c67da9312ee5d9e2b0b3a10eaf120464ad8f42d9c4edde0cae4b96aecf7adc78a4f3b26bbae652e435b4d10f78149a8e43b8afd1664637baaa56e301aa6e5f98aad8e19ce56eb79ca531d68caaf170a929b5f8c39a0bec3b9bd4ac1dc64dde0d0a983dc3f80e28dd65fcb1c4fba0" isAbstract="true" kind="Application" name="Aplicacao" packagePath="teste">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000512e1a81b2dccc5cdd582bbd4ef0bb9ffc2728f77d6b4d727504e26edb013feb55888e21a018e9d10b83af9fa70e751b04898ecf1bf882b6136b8c58d9e610c19d90a6550703d7cd63ea9481893eb3f79723aab1e79d774e036b014794011546175f593a86fe1965db51c9a8ea3c9b538b13dc0d51a52121c42f17afcc6be991" localRef="t_double" location="br.ufc.mdcc.common.Double/Double.hpe" multiple="false" name="Double" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="49" y="264">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="t_iterator" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="56" y="349">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="T"/>
+      <unitBounds parallel="false" uRef="iterator">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="t_integer" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="88" y="452">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="t_string" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="201" y="486">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="t_kvpair" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="479" y="265">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="value_type" varName="V"/>
+      <parameter formFieldId="key_type" varName="K"/>
+      <unitBounds parallel="false" uRef="kv_pair">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="t_pgrank" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="false">
+      <visualDescription h="60" w="100" x="75" y="159">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data_pgrank">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" localRef="t_aplicacao_node" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe" multiple="false" name="PageNode" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="false">
+      <visualDescription h="60" w="100" x="413" y="418">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="id_node" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="138" y="87">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a5856496f93b57821c34ef1b224f660ce1ef1ca462aaf0231ed3c04d1713f01af9cd04e199571ac493c3bbc2eb28af6f78f7010772afb0ef3560188128278f4781fbefeb9ae07d9eec51fc248c59e02dd8ce080f75841167f83f80a1032b035d61db5f05ffee311c47de00b2a2271b8b20d39ebe92096cde3252d9edf309ff94" localRef="value_node" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/PGRank.hpe" multiple="false" name="PGRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" exposed="false">
+        <visualDescription h="60" w="100" x="343" y="162">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data_pgrank">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="edge_node" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="513" y="163">
+          <color b="203" g="192" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="item_type" varName="X###841807"/>
+        <unitBounds parallel="false" uRef="iterator">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="data_node">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="t_integer" direct="true" varName="T"/>
+    <supplyParameter cRef="t_double" direct="true" varName="V"/>
+    <supplyParameter cRef="t_string" direct="true" varName="K"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###841807" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="320" y="87">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="C###841807" varName="X###841807"/>
+    <interface iRef="IAplicacao" nArgs="0">
+      <slice isRef="t_string">
+        <originRef cRef="t_string" iRef="IString"/>
+        <visualDescription h="10" w="10" x="71" y="64"/>
+      </slice>
+      <slice isRef="t_integer">
+        <originRef cRef="t_integer" iRef="IInteger"/>
+        <visualDescription h="10" w="10" x="47" y="65"/>
+      </slice>
+      <slice isRef="t_pgrank">
+        <originRef cRef="t_pgrank" iRef="IPGRank"/>
+        <visualDescription h="10" w="10" x="6" y="26"/>
+      </slice>
+      <slice isRef="t_double">
+        <originRef cRef="t_double" iRef="IDouble"/>
+        <visualDescription h="10" w="10" x="8" y="61"/>
+      </slice>
+      <slice isRef="t_iterator">
+        <originRef cRef="t_iterator" iRef="IIterator"/>
+        <visualDescription h="10" w="10" x="26" y="67"/>
+      </slice>
+      <slice isRef="t_kvpair">
+        <originRef cRef="t_kvpair" iRef="IKVPair"/>
+        <visualDescription h="10" w="10" x="106" y="59"/>
+      </slice>
+      <slice isRef="t_aplicacao_node">
+        <originRef cRef="t_aplicacao_node" iRef="IPageNode"/>
+        <visualDescription h="10" w="10" x="87" y="61"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;&#xA;namespace teste.Aplicacao { &#xA;&#xA;public interface BaseIAplicacao : IApplicationKind &#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIAplicacao.cs" srcType="base" uri="teste.Aplicacao/bin/1.0.0.0/BaseIAplicacao.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;&#xA;namespace teste.Aplicacao { &#xA;&#xA;public interface IAplicacao : BaseIAplicacao&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IAplicacao.cs" srcType="user" uri="teste.Aplicacao/bin/1.0.0.0/IAplicacao.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/teste.Aplicacao/bin/1.0.0.0/BaseIAplicacao.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="86" w="134" x="244" y="64">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="edge_node">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="edge_node" sRef="t_aplicacao_node"/>
+      </port>
+      <port name="value_node">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="value_node" sRef="t_aplicacao_node"/>
+      </port>
+      <port name="id_node">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="id_node" sRef="t_aplicacao_node"/>
+      </port>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IAplicacao" multiple="false" private="false" replica="0" uRef="aplicacao" visibleInterface="true">
+      <slices cRef="edge_node" slice_replica="0" uRef="data" sliceName="edge_node" transitive="true">
+        <visualDescription h="10" w="10" x="64" y="3"/>
+      </slices>
+      <slices cRef="value_node" slice_replica="0" uRef="data" sliceName="value_node" transitive="true">
+        <visualDescription h="10" w="10" x="52" y="26"/>
+      </slices>
+      <slices cRef="id_node" slice_replica="0" uRef="data" sliceName="id_node" transitive="true">
+        <visualDescription h="10" w="10" x="54" y="14"/>
+      </slices>
+      <slices cRef="t_string" slice_replica="0" uRef="data" sliceName="t_string" transitive="false">
+        <visualDescription h="10" w="10" x="71" y="64"/>
+      </slices>
+      <slices cRef="t_integer" slice_replica="0" uRef="data" sliceName="t_integer" transitive="false">
+        <visualDescription h="10" w="10" x="47" y="65"/>
+      </slices>
+      <slices cRef="t_pgrank" slice_replica="0" uRef="data_pgrank" sliceName="t_pgrank" transitive="false">
+        <visualDescription h="10" w="10" x="6" y="26"/>
+      </slices>
+      <slices cRef="t_double" slice_replica="0" uRef="data" sliceName="t_double" transitive="false">
+        <visualDescription h="10" w="10" x="8" y="61"/>
+      </slices>
+      <slices cRef="t_iterator" slice_replica="0" uRef="iterator" sliceName="t_iterator" transitive="false">
+        <visualDescription h="10" w="10" x="26" y="67"/>
+      </slices>
+      <slices cRef="t_kvpair" slice_replica="0" uRef="kv_pair" sliceName="t_kvpair" transitive="false">
+        <visualDescription h="10" w="10" x="118" y="60"/>
+      </slices>
+      <slices cRef="t_aplicacao_node" slice_replica="0" uRef="data_node" sliceName="t_aplicacao_node" transitive="false">
+        <visualDescription h="10" w="10" x="87" y="61"/>
+        <port>value_node</port>
+        <port>edge_node</port>
+        <port>id_node</port>
+      </slices>
+      <visualDescription h="86" w="134" x="244" y="236"/>
+    </unit>
+  </componentInfo>
+</component:component>

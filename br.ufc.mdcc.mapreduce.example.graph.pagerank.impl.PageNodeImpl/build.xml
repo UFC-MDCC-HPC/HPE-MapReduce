@@ -13,9 +13,6 @@
       </sources>
       <references>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
-        <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank/bin/1.0.0.0/IPGRank.dll"/>
-        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
-        <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/BaseIPageNode.dll"/>
         <include/>
       </references>
@@ -25,7 +22,6 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl/src/1.0.0.0/IPageNodeImpl.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
         <include name="/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl/bin/1.0.0.0/BaseIPageNodeImpl.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll"/>
         <include/>

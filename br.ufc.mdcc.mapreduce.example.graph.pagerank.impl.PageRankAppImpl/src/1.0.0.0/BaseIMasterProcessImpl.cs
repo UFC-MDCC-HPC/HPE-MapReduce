@@ -4,15 +4,14 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
 using br.ufc.mdcc.common.Platform;
-using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
-using br.ufc.mdcc.common.String;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Double;
+using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.common.Integer;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
+using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl { 
 	public abstract class BaseIMasterProcessImpl<PLATFORM>: Application, BaseIMasterProcess<PLATFORM> where PLATFORM:IPlatform{

@@ -23,17 +23,17 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 
 		private void createPageNodes(string fileContent){
 
-			IIteratorInstance<IKVPair<IInteger, IPageNode<IInteger>>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, IPageNode<IInteger>>>) Output_data.Instance;
-			IDictionary<int, IDictionary<int,IPageNodeInstance<IInteger>>> dictionary = new Dictionary<int, IDictionary<int,IPageNodeInstance<IInteger>>>();
+			IIteratorInstance<IKVPair<IInteger, IPageNode>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, IPageNode>>) Output_data.Instance;
+			IDictionary<int, IDictionary<int,IPageNodeInstance>> dictionary = new Dictionary<int, IDictionary<int,IPageNodeInstance>>();
 			object alternativeID = null;//IIntegerInstance
 
-			IList<IPageNodeInstance<IInteger>> PAGENODES = new List<IPageNodeInstance<IInteger>>();
+			IList<IPageNodeInstance> PAGENODES = new List<IPageNodeInstance>();
 
 			string[] lines = fileContent.Split(new char[] {System.Environment.NewLine[0]});
 			foreach (string line in lines){
 				if (!line.Trim().Equals ("")) {
-					IPageNodeInstance<IInteger> V, W, temp = null;
-					IDictionary<int,IPageNodeInstance<IInteger>> referenceV, referenceW = null;
+					IPageNodeInstance V, W, temp = null;
+					IDictionary<int,IPageNodeInstance> referenceV, referenceW = null;
 
 					int[] KEY = new int[2];
 					string[] vwID = line.Split (' ');
@@ -41,13 +41,13 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 						KEY [k] = int.Parse (vwID [k]);
 					}
 					if (!dictionary.TryGetValue (KEY [0], out referenceV)) { //verifica se node V existe
-						IKVPairInstance<IInteger,IPageNode<IInteger>> integer_pagenode_pair = (IKVPairInstance<IInteger,IPageNode<IInteger>>) Output_data.createItem() ;
+						IKVPairInstance<IInteger,IPageNode> integer_pagenode_pair = (IKVPairInstance<IInteger,IPageNode>) Output_data.createItem() ;
 
-						V = (IPageNodeInstance<IInteger>)integer_pagenode_pair.Value;//Input_data.createItem ();
+						V = (IPageNodeInstance)integer_pagenode_pair.Value;//Input_data.createItem ();
 						((IIntegerInstance)V.IdInstance).Value = KEY [0];
 						integer_pagenode_pair.Key = V.IdInstance;
 
-						referenceV = new Dictionary<int,IPageNodeInstance<IInteger>> ();
+						referenceV = new Dictionary<int,IPageNodeInstance> ();
 						dictionary [KEY [0]] = referenceV;
 						referenceV [KEY [0]] = V;
 						if (alternativeID == null)
@@ -58,13 +58,13 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 						output_data_instance.put(integer_pagenode_pair);//input_data_instance.put (V);
 					}
 					if (!dictionary.TryGetValue (KEY [1], out referenceW)) { //verifica se node W existe
-						IKVPairInstance<IInteger,IPageNode<IInteger>> integer_pagenode_pair = (IKVPairInstance<IInteger,IPageNode<IInteger>>) Output_data.createItem() ;
+						IKVPairInstance<IInteger,IPageNode> integer_pagenode_pair = (IKVPairInstance<IInteger,IPageNode>) Output_data.createItem() ;
 
-						W = (IPageNodeInstance<IInteger>)integer_pagenode_pair.Value;//Input_data.createItem ();
+						W = (IPageNodeInstance)integer_pagenode_pair.Value;//Input_data.createItem ();
 						((IIntegerInstance)W.IdInstance).Value = KEY [1];
 						integer_pagenode_pair.Key = W.IdInstance;
 
-						referenceW = new Dictionary<int,IPageNodeInstance<IInteger>> ();
+						referenceW = new Dictionary<int,IPageNodeInstance> ();
 						dictionary [KEY [1]] = referenceW;
 						referenceW [KEY [1]] = W;
 						if (alternativeID == null)
@@ -86,9 +86,9 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 			output_data_instance.finish(); //input_data_instance.finish ();
 
 			//finish iterator NeighborsInstance
-			IEnumerator<IPageNodeInstance<IInteger>> it = PAGENODES.GetEnumerator ();
+			IEnumerator<IPageNodeInstance> it = PAGENODES.GetEnumerator ();
 			while (it.MoveNext ()) {
-				IPageNodeInstance<IInteger> p = it.Current;
+				IPageNodeInstance p = it.Current;
 				p.NeighborsInstance.finish ();
 			}
 		}

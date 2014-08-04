@@ -5,13 +5,13 @@
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000b502ba763f70fc76fd9f4992aea38a6cf415f57771d881d1e4be223b851feb1b721feb345d4459833bc2f8d83945415e0d482dc664fa76c710d5199c027bc0b651a952624c7463b74114aefffcf655ae4db1c914e7e42fbff33a72f762dc54fd91bfc1c51aec8e4145566475218b37b9eeabd09cd9959b7bbff1b220b3dd3884" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.hpe" name="PageRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
-        <visualDescription h="95" w="200" x="209" y="336">
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f31dba6364125f1892c73946f5894c0eb7af1127e56b03468429635d6b6a2f4d386baeaf7ad2a684bf315928cbd7120a8d1a7b9de343fb7e1562e3c3f9115ea49519180a506206fa78a6fcdf733ecfbb4da1627c9028b906e53fa1a221dbc653279dd0a4b3db2b2f809da0ea6aa5933ce5aae0a392e6b843b3f3e4b2f1b6ded0" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.hpe" name="PageRank" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
+        <visualDescription h="83" w="133" x="241" y="348">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="platform" varName="PLATFORM"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="406" y="430">
+          <visualDescription h="60" w="100" x="551" y="91">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -19,22 +19,22 @@
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="220" y="436">
+          <visualDescription h="60" w="100" x="145" y="47">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###25079027"/>
+          <parameter formFieldId="item_type" varName="X###33265920"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
-        <unitBounds parallel="false" uRef="master">
-          <visualDescription h="20" w="20" x="80" y="8"/>
+        <unitBounds parallel="true" uRef="vote_map">
+          <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
         <unitBounds parallel="true" uRef="vote_reduce">
-          <visualDescription h="20" w="20" x="160" y="31"/>
+          <visualDescription h="20" w="20" x="28" y="2"/>
         </unitBounds>
-        <unitBounds parallel="true" uRef="vote_map">
-          <visualDescription h="20" w="20" x="9" y="40"/>
+        <unitBounds parallel="false" uRef="master">
+          <visualDescription h="20" w="20" x="51" y="2"/>
         </unitBounds>
       </component>
     </baseType>
@@ -45,7 +45,7 @@
   </header>
   <componentInfo>
     <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="100" x="353" y="221">
+      <visualDescription h="60" w="100" x="490" y="110">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="true" uRef="platform">
@@ -53,44 +53,31 @@
       </unitBounds>
     </innerComponent>
     <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
-    <interface iRef="IMasterImpl" nArgs="1">
+    <interface iRef="IVoteMapImpl" nArgs="1">
       <slice isRef="page_rank">
-        <originRef cRef="page_rank" iRef="IManagerMapReduce"/>
-        <visualDescription h="10" w="10" x="30" y="23"/>
+        <originRef cRef="page_rank" iRef="IMapWorker"/>
+        <visualDescription h="10" w="10" x="53" y="14"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public abstract class BaseIMasterImpl&lt;PLATFORM>: Computation, BaseIMaster&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IInteger,IDouble>> output_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IKVPair&lt;IInteger,IDouble>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IInteger,IDouble>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString input_data = null;//private IData input_data = null;&#xA;&#x9;&#x9;public IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;/*private IManagerMapReduce&lt;IString, IPageNode&lt;IInteger>, IInteger, IPartitionFunction&lt;IInteger>, IBreakInPageNodes, IInteger, PLATFORM, IIterator&lt;IKVPair&lt;IDouble, IInteger>>, IKVPair&lt;IDouble, IInteger>, IDouble, ICombineFunction&lt;IKVPair&lt;IDouble, IInteger>, IIterator&lt;IKVPair&lt;IDouble, IInteger>>>> page_rank = null;&#xA;&#x9;&#x9;protected IManagerMapReduce&lt;IString, IPageNode&lt;IInteger>, IInteger, IPartitionFunction&lt;IInteger>, IBreakInPageNodes, IInteger, PLATFORM, IIterator&lt;IKVPair&lt;IDouble, IInteger>>, IKVPair&lt;IDouble, IInteger>, IDouble, ICombineFunction&lt;IKVPair&lt;IDouble, IInteger>, IIterator&lt;IKVPair&lt;IDouble, IInteger>>>> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IManagerMapReduce&lt;IString, IPageNode&lt;IInteger>, IInteger, IPartitionFunction&lt;IInteger>, IBreakInPageNodes, IInteger, PLATFORM, IIterator&lt;IKVPair&lt;IDouble, IInteger>>, IKVPair&lt;IDouble, IInteger>, IDouble, ICombineFunction&lt;IKVPair&lt;IDouble, IInteger>, IIterator&lt;IKVPair&lt;IDouble, IInteger>>>>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}*/&#xA;&#xA;&#x9;&#x9;private IManagerMapReduce&lt;IString, IInteger, IPageNode&lt;IInteger>, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM> page_rank = null;&#xA;&#x9;&#x9;protected IManagerMapReduce&lt;IString, IInteger, IPageNode&lt;IInteger>, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IManagerMapReduce&lt;IString, IInteger, IPageNode&lt;IInteger>, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIMasterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIMasterImpl.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll</dependency>
-          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public abstract class BaseIVoteMapImpl&lt;PLATFORM>: Computation, BaseIVoteMap&lt;PLATFORM> where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IMapWorker&lt;IInteger, IPageNode, IInteger, IDouble, IPartitionFunction&lt;IInteger>, IVoteMap, PLATFORM> page_rank = null;&#xA;&#x9;&#x9;protected IMapWorker&lt;IInteger, IPageNode, IInteger, IDouble, IPartitionFunction&lt;IInteger>, IVoteMap, PLATFORM> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IMapWorker&lt;IInteger, IPageNode, IInteger, IDouble, IPartitionFunction&lt;IInteger>, IVoteMap, PLATFORM>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIVoteMapImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIVoteMapImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll</dependency>
           <dependency>br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes/bin/1.0.0.0/IBreakInPageNodes.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
-          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
           <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll</dependency>
-        </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#xA;&#x9;public class IMasterImpl&lt;PLATFORM> : BaseIMasterImpl&lt;PLATFORM>, IMaster&lt;PLATFORM> where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IMasterImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;################################################ Starting PageRankImpl Master ###########################################&quot;);&#xA;&#x9;&#x9;&#x9;this.Page_rank.go();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IMasterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/IMasterImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/bin/1.0.0.0/IVoteMap.dll</dependency>
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
-          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIMasterImpl.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IMaster.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public class IVoteMapImpl&lt;PLATFORM> : BaseIVoteMapImpl&lt;PLATFORM>, IVoteMap&lt;PLATFORM> where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IVoteMapImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;################################################ Starting PageRankImpl VoteMapImpl ###########################################&quot;);&#xA;&#x9;&#x9;&#x9;this.Page_rank.go();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IVoteMapImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/IVoteMapImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIVoteMapImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteMap.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="78" w="190" x="234" y="84">
-        <color b="230" g="216" r="173"/>
+      <visualDescription h="40" w="80" x="24" y="261">
+        <color b="0" g="165" r="255"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output" sRef="page_rank"/>
-      </port>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="11" y="40"/>
-        <slice pRef="input" sRef="page_rank"/>
-      </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>
@@ -99,7 +86,7 @@
     <interface iRef="IVoteReduceImpl" nArgs="1">
       <slice isRef="page_rank">
         <originRef cRef="page_rank" iRef="IReduceWorker"/>
-        <visualDescription h="10" w="10" x="70" y="27"/>
+        <visualDescription h="10" w="10" x="8" y="19"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
         <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public abstract class BaseIVoteReduceImpl&lt;PLATFORM>: Computation, BaseIVoteReduce&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IReduceWorker&lt;IInteger, IDouble, IKVPair&lt;IInteger, IDouble>, IVoteReduce, PLATFORM> page_rank = null;&#xA;&#x9;&#x9;protected IReduceWorker&lt;IInteger, IDouble, IKVPair&lt;IInteger, IDouble>, IVoteReduce, PLATFORM> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IReduceWorker&lt;IInteger, IDouble, IKVPair&lt;IInteger, IDouble>, IVoteReduce, PLATFORM>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIVoteReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIVoteReduceImpl.dll" versionId="1.0.0.0">
@@ -117,7 +104,7 @@
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteReduce.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="54" w="121" x="446" y="227">
+      <visualDescription h="40" w="110" x="404" y="256">
         <color b="0" g="165" r="255"/>
       </visualDescription>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
@@ -125,47 +112,60 @@
         <protocol/>
       </action>
     </interface>
-    <interface iRef="IVoteMapImpl" nArgs="1">
+    <interface iRef="IMasterImpl" nArgs="1">
       <slice isRef="page_rank">
-        <originRef cRef="page_rank" iRef="IMapWorker"/>
-        <visualDescription h="10" w="10" x="13" y="37"/>
+        <originRef cRef="page_rank" iRef="IManagerMapReduce"/>
+        <visualDescription h="10" w="10" x="21" y="27"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public abstract class BaseIVoteMapImpl&lt;PLATFORM>: Computation, BaseIVoteMap&lt;PLATFORM> where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IMapWorker&lt;IInteger, IPageNode&lt;IInteger>, IInteger, IDouble, IPartitionFunction&lt;IInteger>, IVoteMap, PLATFORM> page_rank = null;&#xA;&#x9;&#x9;protected IMapWorker&lt;IInteger, IPageNode&lt;IInteger>, IInteger, IDouble, IPartitionFunction&lt;IInteger>, IVoteMap, PLATFORM> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IMapWorker&lt;IInteger, IPageNode&lt;IInteger>, IInteger, IDouble, IPartitionFunction&lt;IInteger>, IVoteMap, PLATFORM>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIVoteMapImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIVoteMapImpl.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll</dependency>
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public abstract class BaseIMasterImpl&lt;PLATFORM>: Computation, BaseIMaster&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IInteger,IDouble>> output_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IKVPair&lt;IInteger,IDouble>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IInteger,IDouble>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString input_data = null;//private IData input_data = null;&#xA;&#x9;&#x9;public IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;/*private IManagerMapReduce&lt;IString, IPageNode&lt;IInteger>, IInteger, IPartitionFunction&lt;IInteger>, IBreakInPageNodes, IInteger, PLATFORM, IIterator&lt;IKVPair&lt;IDouble, IInteger>>, IKVPair&lt;IDouble, IInteger>, IDouble, ICombineFunction&lt;IKVPair&lt;IDouble, IInteger>, IIterator&lt;IKVPair&lt;IDouble, IInteger>>>> page_rank = null;&#xA;&#x9;&#x9;protected IManagerMapReduce&lt;IString, IPageNode&lt;IInteger>, IInteger, IPartitionFunction&lt;IInteger>, IBreakInPageNodes, IInteger, PLATFORM, IIterator&lt;IKVPair&lt;IDouble, IInteger>>, IKVPair&lt;IDouble, IInteger>, IDouble, ICombineFunction&lt;IKVPair&lt;IDouble, IInteger>, IIterator&lt;IKVPair&lt;IDouble, IInteger>>>> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IManagerMapReduce&lt;IString, IPageNode&lt;IInteger>, IInteger, IPartitionFunction&lt;IInteger>, IBreakInPageNodes, IInteger, PLATFORM, IIterator&lt;IKVPair&lt;IDouble, IInteger>>, IKVPair&lt;IDouble, IInteger>, IDouble, ICombineFunction&lt;IKVPair&lt;IDouble, IInteger>, IIterator&lt;IKVPair&lt;IDouble, IInteger>>>>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}*/&#xA;&#xA;&#x9;&#x9;private IManagerMapReduce&lt;IString, IInteger, IPageNode, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM> page_rank = null;&#xA;&#x9;&#x9;protected IManagerMapReduce&lt;IString, IInteger, IPageNode, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM> Page_rank {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.page_rank == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.page_rank = (IManagerMapReduce&lt;IString, IInteger, IPageNode, IInteger, IKVPair&lt;IInteger, IDouble>, IIterator&lt;IKVPair&lt;IInteger, IDouble>>, IBreakInPageNodes, IPartitionFunction&lt;IInteger>, ICombineFunction&lt;IKVPair&lt;IInteger, IDouble>,IIterator&lt;IKVPair&lt;IInteger,IDouble>>>, PLATFORM>) Services.getPort(&quot;page_rank&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.page_rank;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIMasterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIMasterImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll</dependency>
           <dependency>br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/bin/1.0.0.0/IVoteMap.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes/bin/1.0.0.0/IBreakInPageNodes.dll</dependency>
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#x9;public class IVoteMapImpl&lt;PLATFORM> : BaseIVoteMapImpl&lt;PLATFORM>, IVoteMap&lt;PLATFORM> where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IVoteMapImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;################################################ Starting PageRankImpl VoteMapImpl ###########################################&quot;);&#xA;&#x9;&#x9;&#x9;this.Page_rank.go();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IVoteMapImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/IVoteMapImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { &#xA;&#xA;&#x9;public class IMasterImpl&lt;PLATFORM> : BaseIMasterImpl&lt;PLATFORM>, IMaster&lt;PLATFORM> where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IMasterImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;################################################ Starting PageRankImpl Master ###########################################&quot;);&#xA;&#x9;&#x9;&#x9;this.Page_rank.go();&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IMasterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/IMasterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
-          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIVoteMapImpl.dll</dependency>
-          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteMap.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/bin/1.0.0.0/BaseIMasterImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IMaster.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="60" w="113" x="37" y="213">
-        <color b="0" g="165" r="255"/>
+      <visualDescription h="40" w="80" x="225" y="123">
+        <color b="230" g="216" r="173"/>
       </visualDescription>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="page_rank"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="page_rank"/>
+      </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
         <protocol/>
       </action>
     </interface>
-    <unit iRef="IMasterImpl" multiple="false" private="false" replica="0" uRef="master" visibleInterface="true">
-      <super cRef="base" uRef="master"/>
-      <visualDescription h="40" w="80" x="286" y="225"/>
+    <unit iRef="IVoteMapImpl" multiple="true" private="false" replica="0" uRef="vote_map" visibleInterface="true">
+      <super cRef="base" uRef="vote_map"/>
+      <visualDescription h="40" w="80" x="24" y="333"/>
     </unit>
     <unit iRef="IVoteReduceImpl" multiple="true" private="false" replica="0" uRef="vote_reduce" visibleInterface="true">
       <super cRef="base" uRef="vote_reduce"/>
-      <visualDescription h="54" w="100" x="439" y="335"/>
+      <visualDescription h="40" w="80" x="419" y="336"/>
     </unit>
-    <unit iRef="IVoteMapImpl" multiple="true" private="false" replica="0" uRef="vote_map" visibleInterface="true">
-      <super cRef="base" uRef="vote_map"/>
-      <visualDescription h="60" w="113" x="46" y="336"/>
+    <unit iRef="IMasterImpl" multiple="false" private="false" replica="0" uRef="master" visibleInterface="true">
+      <super cRef="base" uRef="master"/>
+      <visualDescription h="40" w="80" x="225" y="203"/>
     </unit>
   </componentInfo>
 </component:component>

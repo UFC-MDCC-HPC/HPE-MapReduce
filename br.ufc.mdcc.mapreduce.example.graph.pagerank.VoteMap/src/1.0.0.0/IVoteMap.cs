@@ -8,9 +8,9 @@ using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap { 
 
-	public interface IVoteMap: BaseIVoteMap, IMapFunction<IInteger, IPageNode<IInteger>, IInteger, IDouble>
+	public interface IVoteMap: BaseIVoteMap, IMapFunction<IInteger, IPageNode, IInteger, IDouble>
 	//where IMK: IInteger
-	//where IMV: IPageNode<IInteger>
+	//where IMV: IPageNode
 	//where OMK: IInteger
 	//where OMV: IDouble
 {

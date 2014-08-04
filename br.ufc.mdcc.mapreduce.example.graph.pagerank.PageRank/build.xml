@@ -7,23 +7,22 @@
     <ifnot targetexists="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0">
       <mkdir dir="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0"/>
     </ifnot>
-    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll" target="library" unsafe="false">
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll" target="library" unsafe="false">
       <sources>
-        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/BaseIMaster.cs"/>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/BaseIVoteMap.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
         <include/>
       </references>
     </csc>
-    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IMaster.dll" target="library" unsafe="false">
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteMap.dll" target="library" unsafe="false">
       <sources>
-        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/IMaster.cs"/>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/IVoteMap.cs"/>
       </sources>
       <references>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
-        <include name="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll"/>
         <include/>
       </references>
     </csc>
@@ -46,22 +45,23 @@
         <include/>
       </references>
     </csc>
-    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll" target="library" unsafe="false">
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll" target="library" unsafe="false">
       <sources>
-        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/BaseIVoteMap.cs"/>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/BaseIMaster.cs"/>
       </sources>
       <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
         <include/>
       </references>
     </csc>
-    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IVoteMap.dll" target="library" unsafe="false">
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/PageRank.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/IMaster.dll" target="library" unsafe="false">
       <sources>
-        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/IVoteMap.cs"/>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/src/1.0.0.0/IMaster.cs"/>
       </sources>
       <references>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
-        <include name="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIVoteMap.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll"/>
         <include/>
       </references>
     </csc>

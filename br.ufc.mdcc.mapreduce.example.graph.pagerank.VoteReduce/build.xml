@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/cenez/hpe/cenez/cache" default="all" name="VoteReduce">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="VoteReduce-1.0.0.0">
+    <ifnot targetexists="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0">
+      <mkdir dir="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/BaseIVoteReduce.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/src/1.0.0.0/BaseIVoteReduce.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/BaseIReduceFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/IVoteReduce.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/src/1.0.0.0/IVoteReduce.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/BaseIVoteReduce.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="VoteReduce-1.0.0.0" name="all"/>
+</project>

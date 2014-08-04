@@ -6,11 +6,11 @@
         <implements>true</implements>
       </extensionType>
       <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007d8f5c2ef35a0ffa3dcc26e84c3ba4b56e2bcf261c4e3b1efcdbd85ad98db8c6db5233b70884ed6c08b9c88f82edccc4582c1455ac976ad19beae9df847644395b9df7c986435502760af105cc556ee170b84ee62b70629c59f650aee340d1edf9b3301493a4f1216548a1283af98faf9eb573b699309603ce314e943cf1ce8f" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/VoteReduce.hpe" name="VoteReduce" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="279" y="357">
+        <visualDescription h="60" w="100" x="236" y="332">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_value" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="174" x="594" y="259">
+          <visualDescription h="60" w="100" x="372" y="156">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <parameter formFieldId="value_type" varName="OMV"/>
@@ -20,10 +20,10 @@
           </unitBounds>
         </port>
         <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="129" x="48" y="390">
+          <visualDescription h="60" w="100" x="87" y="411">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="value_type" varName="X###25889484"/>
+          <parameter formFieldId="value_type" varName="X###8548094"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>
@@ -50,12 +50,12 @@
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/BaseIVoteReduce.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl { &#xA;&#xA;&#x9;public class IVoteReduceImpl: BaseIVoteReduceImpl, IVoteReduce{&#xA;&#x9;&#x9;public IVoteReduceImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;################################################ Starting VoteReduceImpl reduce ###########################################&quot;);&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger,IIterator&lt;IDouble>> input_values_instance = (IKVPairInstance&lt;IInteger,IIterator&lt;IDouble>>)Input_values.Instance;&#xA;&#x9;&#x9;&#x9;IIntegerInstance integer_instance = (IIntegerInstance) input_values_instance.Key;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IDouble> doubles_iterator_instance = (IIteratorInstance&lt;IDouble>) input_values_instance.Value;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger, IDouble> output_value_instance = (IKVPairInstance&lt;IInteger, IDouble>)Output_value.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;Double soma = 0.0;&#xA;&#xA;&#x9;&#x9;&#x9;object double_object;&#xA;&#x9;&#x9;&#x9;while (doubles_iterator_instance.fetch_next(out double_object))&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;soma = soma + ((IDoubleInstance) double_object).Value;&#xA;&#x9;&#x9;&#x9;output_value_instance.Key = integer_instance;&#xA;&#x9;&#x9;&#x9;((IDoubleInstance)output_value_instance.Value).Value = soma;&#xA;&#x9;&#x9;&#x9;//while (!Input_values.Value.HasFinished){&#xA;&#x9;&#x9;&#x9;//&#x9;soma = soma + Input_values.Value.fetch_next().Value;&#xA;&#x9;&#x9;&#x9;//}&#xA;&#x9;&#x9;&#x9;//Output_value.Key = Input_values.Key;&#xA;&#x9;&#x9;&#x9;//Output_value.Value.Value = soma;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IVoteReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/IVoteReduceImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Double;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl { &#xA;&#xA;&#x9;public class IVoteReduceImpl: BaseIVoteReduceImpl, IVoteReduce{&#xA;&#x9;&#x9;public IVoteReduceImpl() { &#xA;&#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;System.Console.WriteLine (&quot;################################################ Starting VoteReduceImpl reduce ###########################################&quot;);&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger,IIterator&lt;IDouble>> input_values_instance = (IKVPairInstance&lt;IInteger,IIterator&lt;IDouble>>)Input_values.Instance;&#xA;&#x9;&#x9;&#x9;IIntegerInstance integer_instance = (IIntegerInstance) input_values_instance.Key;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IDouble> doubles_iterator_instance = (IIteratorInstance&lt;IDouble>) input_values_instance.Value;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger, IDouble> output_value_instance = (IKVPairInstance&lt;IInteger, IDouble>)Output_value.newInstance();&#xA;&#xA;&#x9;&#x9;&#x9;Double soma = 0.0;&#xA;&#xA;&#x9;&#x9;&#x9;object double_object;&#xA;&#x9;&#x9;&#x9;while (doubles_iterator_instance.fetch_next(out double_object))&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;soma = soma + ((IDoubleInstance) double_object).Value;&#xA;&#x9;&#x9;&#x9;output_value_instance.Key = integer_instance;&#xA;&#x9;&#x9;&#x9;((IDoubleInstance)output_value_instance.Value).Value = soma;&#xA;&#x9;&#x9;&#x9;//while (!Input_values.Value.HasFinished){&#xA;&#x9;&#x9;&#x9;//&#x9;soma = soma + Input_values.Value.fetch_next().Value;&#xA;&#x9;&#x9;&#x9;//}&#xA;&#x9;&#x9;&#x9;//Output_value.Key = Input_values.Key;&#xA;&#x9;&#x9;&#x9;//Output_value.Value.Value = soma;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IVoteReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/IVoteReduceImpl.dll" versionId="1.0.0.0">
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl/bin/1.0.0.0/BaseIVoteReduceImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/IVoteReduce.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="141" x="102" y="100">
+      <visualDescription h="40" w="141" x="95" y="135">
         <color b="0" g="255" r="0"/>
       </visualDescription>
       <action id="main">
@@ -64,7 +64,7 @@
     </interface>
     <unit iRef="IVoteReduceImpl" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
       <super cRef="base" uRef="reduce_function"/>
-      <visualDescription h="40" w="141" x="219" y="238"/>
+      <visualDescription h="40" w="141" x="151" y="224"/>
     </unit>
   </componentInfo>
 </component:component>

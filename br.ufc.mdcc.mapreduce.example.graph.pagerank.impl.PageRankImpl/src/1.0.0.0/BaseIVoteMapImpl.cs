@@ -16,11 +16,11 @@ using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { 
 	public abstract class BaseIVoteMapImpl<PLATFORM>: Computation, BaseIVoteMap<PLATFORM> where PLATFORM:IPlatform{
 
-		private IMapWorker<IInteger, IPageNode<IInteger>, IInteger, IDouble, IPartitionFunction<IInteger>, IVoteMap, PLATFORM> page_rank = null;
-		protected IMapWorker<IInteger, IPageNode<IInteger>, IInteger, IDouble, IPartitionFunction<IInteger>, IVoteMap, PLATFORM> Page_rank {
+		private IMapWorker<IInteger, IPageNode, IInteger, IDouble, IPartitionFunction<IInteger>, IVoteMap, PLATFORM> page_rank = null;
+		protected IMapWorker<IInteger, IPageNode, IInteger, IDouble, IPartitionFunction<IInteger>, IVoteMap, PLATFORM> Page_rank {
 			get {
 				if (this.page_rank == null)
-					this.page_rank = (IMapWorker<IInteger, IPageNode<IInteger>, IInteger, IDouble, IPartitionFunction<IInteger>, IVoteMap, PLATFORM>) Services.getPort("page_rank");
+					this.page_rank = (IMapWorker<IInteger, IPageNode, IInteger, IDouble, IPartitionFunction<IInteger>, IVoteMap, PLATFORM>) Services.getPort("page_rank");
 				return this.page_rank;
 			}
 		}
