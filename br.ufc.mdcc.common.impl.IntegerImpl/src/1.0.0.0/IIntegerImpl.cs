@@ -53,6 +53,26 @@ namespace br.ufc.mdcc.common.impl.IntegerImpl
 			set { this.val = value;	}
 		}
 
+		public override int GetHashCode ()
+		{
+			return Value.GetHashCode();	
+		}
+
+		public override string ToString ()
+		{
+			return Value.ToString();
+		}
+
+		public override bool Equals (object obj)
+		{
+			if (obj is IIntegerInstanceImpl)
+				return Value==(((IIntegerInstanceImpl) obj).Value);
+			else if (obj is int)
+				return Value==(int)obj;
+			else
+				return false;
+		}
+
 		#endregion
 
 

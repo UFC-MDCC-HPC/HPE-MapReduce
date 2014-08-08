@@ -81,5 +81,9 @@
       <Project>{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

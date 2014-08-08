@@ -16,7 +16,7 @@
         <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
         <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
         <include name="br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll"/>
-        <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/bin/1.0.0.0/BaseIVoteMap.dll"/>
         <include/>
       </references>

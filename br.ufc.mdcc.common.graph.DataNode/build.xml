@@ -12,10 +12,6 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.common.graph.DataNode/src/1.0.0.0/BaseIDataNode.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/BaseIData.dll"/>
         <include/>
       </references>
@@ -25,7 +21,6 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.common.graph.DataNode/src/1.0.0.0/IDataNode.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="/br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll"/>
         <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include/>

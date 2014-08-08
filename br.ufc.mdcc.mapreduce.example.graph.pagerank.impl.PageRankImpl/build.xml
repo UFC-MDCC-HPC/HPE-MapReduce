@@ -16,6 +16,7 @@
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll"/>
         <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
         <include name="br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap/bin/1.0.0.0/IVoteMap.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
@@ -41,7 +42,7 @@
       <references>
         <include name="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IReduceWorker.dll"/>
         <include name="br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll"/>
-        <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce/bin/1.0.0.0/IVoteReduce.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
@@ -65,6 +66,7 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl/src/1.0.0.0/BaseIMasterImpl.cs"/>
       </sources>
       <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll"/>
         <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/IPageNode.dll"/>
@@ -76,7 +78,6 @@
         <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
         <include name="br.ufc.mdcc.common.Double/bin/1.0.0.0/IDouble.dll"/>
         <include name="br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll"/>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank/bin/1.0.0.0/BaseIMaster.dll"/>
         <include/>
       </references>

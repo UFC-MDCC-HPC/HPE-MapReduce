@@ -5,15 +5,8 @@ using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.common.graph.DataNode { 
 
-public interface BaseIDataNode<TID, VAL, EDG> : BaseIData, IDataStructureKind 
-where TID:IData
-where VAL:IData
-where EDG:IData
+public interface BaseIDataNode : BaseIData, IDataStructureKind 
 {
-
-	TID Id_node {get;}
-	VAL Value_node {get;}
-	EDG Edge_node {get;}
 
 
 } // end main interface 
