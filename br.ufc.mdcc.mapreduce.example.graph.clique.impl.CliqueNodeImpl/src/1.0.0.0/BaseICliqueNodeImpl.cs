@@ -4,37 +4,29 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.common.Iterator;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl { 
 
-public abstract class BaseICliqueNodeImpl<TID>: DataStructure, BaseICliqueNode<TID>
-where TID:IInteger
+public abstract class BaseICliqueNodeImpl: DataStructure, BaseICliqueNode
 {
 
-private TID id_node = default(TID);
-
-public TID Id_node {
-	get {
-		if (this.id_node == null)
-			this.id_node= (TID) Services.getPort("id_node");
-		return this.id_node;
-	}
-}
-
-private IIterator<TID> neighbors = null;
-
-public IIterator<TID> Neighbors {
-	get {
-		if (this.neighbors == null)
-			this.neighbors = (IIterator<TID>) Services.getPort("neighbors");
-		return this.neighbors;
-	}
-}
-
+//private IInteger id_node = null;
+//public IInteger Id_node {
+//	get {
+//		if (this.id_node == null)
+//			this.id_node = (IInteger) Services.getPort("id_node");
+//		return this.id_node;
+//	}
+//}
+//private IIterator<IInteger> edge_node = null;
+//public IIterator<IInteger> Edge_node {
+//	get {
+//		if (this.edge_node == null)
+//			this.edge_node = (IIterator<IInteger>) Services.getPort("edge_node");
+//		return this.edge_node;
+//	}
+//}
 
 
 }

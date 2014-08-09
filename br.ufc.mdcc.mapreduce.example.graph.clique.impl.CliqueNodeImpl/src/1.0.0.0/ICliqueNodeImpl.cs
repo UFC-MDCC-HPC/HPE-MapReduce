@@ -1,49 +1,48 @@
 using System;
+using System.Collections.Generic;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Integer;
-using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
-using br.ufc.mdcc.common.Data;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl { 
 
-	public class ICliqueNodeImpl<TID> : BaseICliqueNodeImpl<TID>, ICliqueNode<TID>
-		where TID:IInteger {
-		public ICliqueNodeImpl() { 
-
-		} 
+	public class ICliqueNodeImpl : BaseICliqueNodeImpl, ICliqueNode{
+		public ICliqueNodeImpl() { } 
 		override public void initialize(){
 			newInstance(); 
 		}
 		public object newInstance (){
-			object idInstance = Id_node.newInstance();
-			ICliqueNodeInstance<TID> cliqueNodeInstance = new ICliqueNodeInstanceImpl<TID> (idInstance);
-			cliqueNodeInstance.NeighborsInstance = (IIteratorInstance<TID>) Neighbors.newInstance ();
-			return this.Instance = cliqueNodeInstance;
+			ICliqueNodeInstance page = new ICliqueNodeInstanceImpl();
+			return this.Instance = page;
 		}
-		private ICliqueNodeInstance<TID> instance;
+		public object newInstance (int _id){
+			object o = newInstance ();
+			ICliqueNodeInstance page = (ICliqueNodeInstance)o;
+			page.IdInstance = _id;
+			return this.Instance = page;
+		}
+		private ICliqueNodeInstance instance;
 		public object Instance {
 			get { return instance;	}
-			set { this.instance = (ICliqueNodeInstance<TID>) value;	}
+			set { this.instance = (ICliqueNodeInstance) value;	}
 		}
 	}
 
 	[Serializable]
-	public class ICliqueNodeInstanceImpl<TID> : ICliqueNodeInstance<TID>
-		where TID:IData{
-		public ICliqueNodeInstanceImpl(object idInstance){
-			this.IdInstance = idInstance;
-		}
+	public class ICliqueNodeInstanceImpl : ICliqueNodeInstance{
 		#region ICliqueNodeInstance implementation
-		private object idInstance;
-		private IIteratorInstance<TID> neighborsInstance;
-		public object IdInstance {
+		public ICliqueNodeInstanceImpl(){
+			NeighborsInstance = new List<int> ();
+			IdInstance = -1;
+		}
+		private int idInstance;
+		public int IdInstance {
 			get { return idInstance; }
 			set { this.idInstance = value; }
 		}
-		public IIteratorInstance<TID> NeighborsInstance {
+		private IList<int> neighborsInstance;
+		public IList<int> NeighborsInstance {
 			get { return neighborsInstance; }
 			set { this.neighborsInstance = value; }
 		}

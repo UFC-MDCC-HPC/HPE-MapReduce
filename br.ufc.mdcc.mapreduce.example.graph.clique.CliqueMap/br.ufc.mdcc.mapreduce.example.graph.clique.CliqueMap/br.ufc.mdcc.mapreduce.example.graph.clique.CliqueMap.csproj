@@ -69,5 +69,9 @@
       <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,137 +1,110 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Collections.Generic;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
+using br.ufc.mdcc.common.String;
+using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
+using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl { 
 
 	public class ICliqueReduceImpl : BaseICliqueReduceImpl, ICliqueReduce{
 
-		public ICliqueReduceImpl() { 
-
-		} 
-		private IDictionary<int, IList<IIntegerInstance>> bigCliques = null;
+		private IList<IList<int>> bigCliques = null;
 		private int bigger=0;
-		private IDictionary<int, IList<IIntegerInstance>> iterators = new Dictionary<int, IList<IIntegerInstance>> ();
 
 		public override void main() { 
-			//# Starting vars #
-			IKVPairInstance<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>> input_instance = (IKVPairInstance<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>) Input_values.Instance;
-			IKVPairInstance<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>> output_instance = (IKVPairInstance<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>)Output_value.newInstance ();//.Instance;
+			IKVPairInstance<IString, IIterator<ICliqueNode>> input = (IKVPairInstance<IString, IIterator<ICliqueNode>>) Input_values.Instance;
+			IStringInstance pivot = (IStringInstance)input.Key;
+			IIteratorInstance<ICliqueNode> input_value = (IIteratorInstance<ICliqueNode>)input.Value;
 
-			IIntegerInstance input_instance_key = (IIntegerInstance) input_instance.Key;
-			IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>> input_instance_value = (IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>>) input_instance.Value;
+			bigCliques = new List<IList<int>> ();
+			bigger=0;
 
-			IIntegerInstance output_instance_key = (IIntegerInstance) output_instance.Key;
-			IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>> output_instance_value = (IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>>) output_instance.Value;
+			HashSet<int> upper = new HashSet<int>();
+			HashSet<int> lower = new HashSet<int>();
 
-			IDictionary<int, IIntegerInstance> P = new Dictionary<int, IIntegerInstance>();
-			IDictionary<int, IIntegerInstance> X = new Dictionary<int, IIntegerInstance>();
-			IDictionary<int, IIteratorInstance<IInteger>> dicValues = pivotKEY(input_instance_value, input_instance_key, P, X);//pivotKEY(Input_values.Value, Input_values.Key, P, X);
+			IDictionary<int, IList<int>> dicValues = splitting_In_Left_Pivot_Right(input_value, pivot.Value, upper, lower);
 
-			bigCliques = new Dictionary<int, IList<IIntegerInstance>>();
-			bigger = 0;
+			IList<int> R = new List<int>();
+			R.Add(int.Parse(pivot.Value));
 
-			IList<IIntegerInstance> R = new List<IIntegerInstance>();
-			R.Add(input_instance_key);
-			//#
+			bronKerboschAlgorithm(1, dicValues, upper, R, lower);
 
-			bronKerboschAlgorithm(1, dicValues, P, R, X);//IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>> orv_value = (IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>>)Orv_value_factory.Instance;
-
-			IEnumerator<int> iterator = bigCliques.Keys.GetEnumerator ();
+//OBS: bigCliques possui zero ou um elemento, caso não sejam computadas bigCliques de tamanho iguais (Linha 72*), (bigCliques.Count==0|1)
+			IEnumerator<IList<int>> iterator = bigCliques.GetEnumerator ();
 			while (iterator.MoveNext ()) {
-				IKVPairInstance<IInteger, IIterator<IInteger>> kv = (IKVPairInstance<IInteger, IIterator<IInteger>>)Orv_value_factory.createItem ();
-				IIntegerInstance kv_key = ((IIntegerInstance)kv.Key);
-				IIteratorInstance<IInteger> kv_value = ((IIteratorInstance<IInteger>)kv.Value);
-				kv_key.Value = iterator.Current;
-				IEnumerator<IIntegerInstance> enumerator = bigCliques [kv_key.Value].GetEnumerator();
-				while (enumerator.MoveNext())
-					kv_value.put (enumerator.Current);
-				kv_value.finish ();
-				output_instance_value.put (kv);
+				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>) Output_value.newInstance();
+				((IStringInstance)kvpair.Key).Value = pivot.Value;
+				((ICliqueNodeInstance)kvpair.Value).IdInstance = iterator.Current.Count;
+				((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = iterator.Current;
 			}
-			output_instance_value.finish(); //if (!output_value_instance_value.HasFinished) {//}
-			output_instance_key = input_instance_key;//Output_value.Key = Input_values.Key; //output_value_instance.Value = output_value_instance_value;//Output_value.Value = outputIteratorValues;
 		}
 
-		private IDictionary<int, IIteratorInstance<IInteger>> pivotKEY(IIteratorInstance<IKVPair<IInteger, IIterator<IInteger>>> input_instance_value, IIntegerInstance pivot, IDictionary<int, IIntegerInstance> P, IDictionary<int, IIntegerInstance> X) {
-			IDictionary<int, IIteratorInstance<IInteger>> res = new Dictionary<int, IIteratorInstance<IInteger>>();
-			object object_kv;
-			while(input_instance_value.fetch_next(out object_kv)){
-				IKVPairInstance<IInteger, IIterator<IInteger>> kv = (IKVPairInstance<IInteger, IIterator<IInteger>>) object_kv;
-				if (pivot.Value < ((IIntegerInstance)kv.Key).Value)
-					P.Add(((IIntegerInstance)kv.Key).Value, ((IIntegerInstance)kv.Key));
-				if (pivot.Value > ((IIntegerInstance)kv.Key).Value)
-					X.Add(((IIntegerInstance)kv.Key).Value, ((IIntegerInstance)kv.Key));
-				res [((IIntegerInstance)kv.Key).Value] = ((IIteratorInstance<IInteger>) kv.Value);
+		private IDictionary<int, IList<int>> splitting_In_Left_Pivot_Right(IIteratorInstance<ICliqueNode> input_instance_value, string pivot, HashSet<int> P, HashSet<int> X) {
+			IDictionary<int, IList<int>> res = new Dictionary<int, IList<int>>();
+			int pivot_number = int.Parse (pivot);
+			object o;
+			while(input_instance_value.fetch_next(out o)){
+				ICliqueNodeInstance node_instance = (ICliqueNodeInstance)o;
+				if (pivot_number < node_instance.IdInstance)
+					P.Add (node_instance.IdInstance);
+				if (pivot_number > node_instance.IdInstance)
+					X.Add (node_instance.IdInstance);
+				res [node_instance.IdInstance] = node_instance.NeighborsInstance;
 			}
 			return res;
 		}
-		public void bronKerboschAlgorithm(int SIZE, IDictionary<int, IIteratorInstance<IInteger>> dicValues, IDictionary<int, IIntegerInstance> P, IList<IIntegerInstance> R, IDictionary<int, IIntegerInstance> X) {
+
+		public void bronKerboschAlgorithm(int SIZE, IDictionary<int, IList<int>> dicValues, HashSet<int> P, IList<int> R, HashSet<int> X) {
 			if (P.Count == 0 && X.Count == 0) {
-				if (SIZE >= bigger) {
-					if (SIZE > bigger)
-						bigCliques.Clear ();
-					bigCliques [SIZE] = R;
+				if (SIZE > bigger) { 
+//*OBS: Opção para caso de computar várias bigCliques de mesmo tamanho, 
+//      a saída ORV deve ser trocada para IIterator<KVPair<IString, ICliqueNode>>
+//			if (SIZE >= bigger) { 
+//				if(SIZE>bigger) 
+//					bigCliques.Clear ();
+//				bigCliques.Add (R);
+//				bigger = SIZE;}}
+					bigCliques.Clear ();
+									bigCliques.Add (R);
 					bigger = SIZE;
-				} 
+				}
 			}
 			while (P.Count>0){
-				IEnumerator<IIntegerInstance> iteratorPValues = P.Values.GetEnumerator();
+				IEnumerator<int> iteratorPValues = P.GetEnumerator();
 				iteratorPValues.MoveNext();
-				IIntegerInstance v = iteratorPValues.Current;
+				int v = iteratorPValues.Current;
 
-				IDictionary<int, IIntegerInstance> p = new Dictionary<int, IIntegerInstance>();
-				IDictionary<int, IIntegerInstance> x = new Dictionary<int, IIntegerInstance>();
+				HashSet<int> p = new HashSet<int>();
+				HashSet<int> x = new HashSet<int>();
 
-				IList<IIntegerInstance> r = new List<IIntegerInstance>(R);//CreateClone (R);//R.clone();
+				IList<int> r = new List<int>(R);
 				r.Add(v);
 
-				IList<IIntegerInstance> iterator;
-				if (!iterators.TryGetValue (v.Value, out iterator)) {
-					IIteratorInstance<IInteger> value = dicValues [v.Value];
-					iterator = new List<IIntegerInstance> ();
-					intersect (ref iterator, value, P, X, ref p, ref x);
-					iterators [v.Value] = iterator;
-				} else {
-					intersect2 (iterator, P, X, ref p, ref x);
-				}
+				intersect (dicValues [v], P, X, ref p, ref x);
 
 				bronKerboschAlgorithm(SIZE + 1, dicValues, p, r, x);
 
-				P.Remove(v.Value);
-				X.Add(v.Value, v);
+				P.Remove(v);
+				X.Add(v);
 			}
 		}
-		private void intersect(ref IList<IIntegerInstance> neighbors2, IIteratorInstance<IInteger> neighbors, IDictionary<int, IIntegerInstance> P, IDictionary<int, IIntegerInstance> X, ref IDictionary<int, IIntegerInstance> p, ref IDictionary<int, IIntegerInstance> x) {
-			IIteratorInstance<IInteger> iterator = neighbors;
-			object o;
-			while(iterator.fetch_next(out o)){
-				IIntegerInstance n = (IIntegerInstance)o;
-				if (P.ContainsKey(n.Value)){
-					p.Add(n.Value, n);
-				}
-				if (X.ContainsKey(n.Value)){
-					x.Add(n.Value, n);
-				}
-				neighbors2.Add (n);
-			}
-		}
-		private void intersect2(IList<IIntegerInstance> neighbors, IDictionary<int, IIntegerInstance> P, IDictionary<int, IIntegerInstance> X, ref IDictionary<int, IIntegerInstance> p, ref IDictionary<int, IIntegerInstance> x) {
-			IEnumerator<IIntegerInstance> iterator = neighbors.GetEnumerator();
+
+		private void intersect(IList<int> neighbors, HashSet<int> P, HashSet<int> X, ref HashSet<int> p, ref HashSet<int> x) {
+			IEnumerator<int> iterator = neighbors.GetEnumerator();
 			while (iterator.MoveNext()) {
-				IIntegerInstance n = iterator.Current;
-				if (P.ContainsKey(n.Value)){
-					p.Add(n.Value, n);
+				int n = iterator.Current;
+				if (P.Contains(n)){
+					p.Add(n);
 				}
-				if (X.ContainsKey(n.Value)){
-					x.Add(n.Value, n);
+				if (X.Contains(n)){
+					x.Add(n);
 				}
 			}
 		}

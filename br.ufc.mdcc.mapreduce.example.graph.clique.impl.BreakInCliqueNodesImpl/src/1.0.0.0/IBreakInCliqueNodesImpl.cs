@@ -13,64 +13,68 @@ using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.BreakInCliqueNodesImpl { 
 
 	public class IBreakInCliqueNodesImpl : BaseIBreakInCliqueNodesImpl, IBreakInCliqueNodes{
-		public IBreakInCliqueNodesImpl() { 
-
-		} 
+		public IBreakInCliqueNodesImpl() { } 
 
 		public override void main() { 
-			string fileContent = ((IStringInstance)this.Input_data.Instance).Value;
-			createCliqueNodes(fileContent);
-
+			createCliqueNodes(((IStringInstance) Input_data.Instance).Value);
 		}
-		public void createCliqueNodes(string fileContent){
-			IIteratorInstance<IKVPair<IInteger, ICliqueNode<IInteger>>> output_data_instance = (IIteratorInstance<IKVPair<IInteger, ICliqueNode<IInteger>>>) Output_data.Instance;
+		private void createCliqueNodes(string fileContent){
+			IIteratorInstance<IKVPair<IInteger, ICliqueNode>> output = (IIteratorInstance<IKVPair<IInteger, ICliqueNode>>) Output_data.Instance;
+			IDictionary<int, IDictionary<int,ICliqueNodeInstance>> dictionary = new Dictionary<int, IDictionary<int,ICliqueNodeInstance>>();
 
-			IDictionary<int, IDictionary<int,ICliqueNodeInstance<IInteger>>> dictionary = new Dictionary<int, IDictionary<int,ICliqueNodeInstance<IInteger>>>();
+			IList<IKVPairInstance<IInteger,ICliqueNode>> PAGENODES = new List<IKVPairInstance<IInteger,ICliqueNode>>();
 
 			string[] lines = fileContent.Split(new char[] {System.Environment.NewLine[0]});
 			foreach (string line in lines){
-				if (!line.Trim ().Equals ("")) {
-					ICliqueNodeInstance<IInteger> V, W, temp = null;
-					IDictionary<int,ICliqueNodeInstance<IInteger>> referenceV, referenceW = null;
+				if (!line.Trim().Equals ("")) {
+					ICliqueNodeInstance V, W, temp = null;
+					IDictionary<int,ICliqueNodeInstance> referenceV, referenceW = null;
 
 					int[] KEY = new int[2];
 					string[] vwID = line.Split (' ');
 					for (int k = 0; k < 2; k++) {
 						KEY [k] = int.Parse (vwID [k]);
 					}
-					if (!dictionary.TryGetValue (KEY [0], out referenceV)) { /*verifica se node V existe*/
-						IKVPairInstance<IInteger, ICliqueNode<IInteger>> kv = (IKVPairInstance<IInteger, ICliqueNode<IInteger>>)Output_data.createItem (); 
-						V = (ICliqueNodeInstance<IInteger>)kv.Value;
-						V.IdInstance = kv.Key;
-						((IIntegerInstance)V.IdInstance).Value = KEY [0];
-						referenceV = new Dictionary<int,ICliqueNodeInstance<IInteger>> ();
+					if (!dictionary.TryGetValue (KEY [0], out referenceV)) {
+						IKVPairInstance<IInteger,ICliqueNode> kvpair = (IKVPairInstance<IInteger,ICliqueNode>) Output_data.createItem() ;
+
+						V = (ICliqueNodeInstance)kvpair.Value;
+						V.IdInstance = KEY [0];
+						((IIntegerInstance)kvpair.Key).Value = V.IdInstance;
+
+						referenceV = new Dictionary<int,ICliqueNodeInstance> ();
 						dictionary [KEY [0]] = referenceV;
 						referenceV [KEY [0]] = V;
 
-						output_data_instance.put (kv);
+						PAGENODES.Add (kvpair);
 					}
-					if (!dictionary.TryGetValue (KEY [1], out referenceW)) { /*verifica se node W existe*/
-						IKVPairInstance<IInteger, ICliqueNode<IInteger>> kv = (IKVPairInstance<IInteger, ICliqueNode<IInteger>>)Output_data.createItem (); 
-						W = (ICliqueNodeInstance<IInteger>)kv.Value;
-						W.IdInstance = kv.Key;
-						((IIntegerInstance)W.IdInstance).Value = KEY [1];
-						referenceW = new Dictionary<int,ICliqueNodeInstance<IInteger>> ();
+					if (!dictionary.TryGetValue (KEY [1], out referenceW)) {
+						IKVPairInstance<IInteger,ICliqueNode> kvpair = (IKVPairInstance<IInteger,ICliqueNode>) Output_data.createItem() ;
+
+						W = (ICliqueNodeInstance)kvpair.Value;
+						W.IdInstance = KEY [1];
+						((IIntegerInstance)kvpair.Key).Value = W.IdInstance;
+
+						referenceW = new Dictionary<int,ICliqueNodeInstance> ();
 						dictionary [KEY [1]] = referenceW;
 						referenceW [KEY [1]] = W;
 
-						output_data_instance.put (kv);
+						PAGENODES.Add (kvpair);
 					}
-					if (!referenceV.TryGetValue (KEY [1], out temp)) {/*Verifica se existe o vizinho W*/
+					if (!referenceV.TryGetValue (KEY [1], out temp)) {
 						V = referenceV [KEY [0]];
 						W = referenceW [KEY [1]];
 						referenceV [KEY [1]] = W;
-						V.NeighborsInstance.put (W.IdInstance);
-						referenceW [KEY [0]] = V;
-						W.NeighborsInstance.put (V.IdInstance);
+						V.NeighborsInstance.Add (W.IdInstance);
 					}
 				}
 			}
-			output_data_instance.finish();
+			IEnumerator<IKVPairInstance<IInteger,ICliqueNode>> iterator = PAGENODES.GetEnumerator();
+			while (iterator.MoveNext()) {
+				IKVPairInstance<IInteger,ICliqueNode> kvpair = iterator.Current;
+				output.put (kvpair);
+			}
+			output.finish();
 		}
 	}
 }
