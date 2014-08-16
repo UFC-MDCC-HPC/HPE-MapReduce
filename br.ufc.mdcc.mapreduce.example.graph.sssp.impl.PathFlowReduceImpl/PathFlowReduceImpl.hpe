@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000c3614c76ef950a45ec08fabac6d8a19069b35027657bda099835ea971bc86c76b426c4f6330f652a697980fdaf65e56d228963604bca374963d76b639d01045f9621e2ec5140cc659bda166749b97b38dd038d57ccffbd70e0c063857ee50ab121d8773f7b6e188348e9f91111c92d3292ea1e7eeeb8b741372d4ef4fdeba284" isAbstract="false" kind="Computation" name="PathFlowReduceImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000001de95829e72e147a1f6a5ace4abd19fbd2de1005bf71b60083afb773bc7fc2200a53679abddd7e5b94399e06d9c9c686e7e61fa02d5c19b89a77db6af1d7904ad84e1dc498207aa4b661591807c2af2de8e283c30ca30947abadeaa65a8ac9c76570db33830ed54f53ba98d0b5348f6bf258f797e497f2c8d715a857a891c4c1" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce/PathFlowReduce.hpe" name="PathFlowReduce" package="br.ufc.mdcc.mapreduce.example.graph.sssp" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="223" y="317">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_value" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="123" x="162" y="76">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="value_type" varName="OMV"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="94" y="443">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="value_type" varName="X###1210817"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="reduce_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IPathFlowReduceImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.sssp.DataPath;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl { &#xA;&#xA;&#x9;public abstract class BaseIPathFlowReduceImpl: Computation, BaseIPathFlowReduce{&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, IIterator&lt;IString>> input_values = null;&#xA;&#x9;&#x9;public IKVPair&lt;IString, IIterator&lt;IString>> Input_values {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_values == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_values = (IKVPair&lt;IString, IIterator&lt;IString>>) Services.getPort(&quot;input_values&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_values;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, IString> output_value = null;&#xA;&#x9;&#x9;public IKVPair&lt;IString, IString> Output_value {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_value == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_value = (IKVPair&lt;IString, IString>) Services.getPort(&quot;output_value&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_value;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIPathFlowReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl/bin/1.0.0.0/BaseIPathFlowReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce/bin/1.0.0.0/BaseIPathFlowReduce.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using System.Collections.Generic;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl { &#xA;&#xA;&#x9;public class IPathFlowReduceImpl : BaseIPathFlowReduceImpl, IPathFlowReduce{&#xA;&#x9;&#x9;public IPathFlowReduceImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;IList&lt;double> c = new List&lt;double>();&#xA;&#x9;&#x9;&#x9;IDictionary&lt;int, double> neibours = new Dictionary&lt;int, double> ();&#xA;&#x9;&#x9;&#x9;double di = int.MaxValue;&#xA;&#x9;&#x9;&#x9;double dmin = 0.0;&#xA;&#x9;&#x9;&#x9;int done = 1;&#xA;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, IIterator&lt;IString>> input = (IKVPairInstance&lt;IString, IIterator&lt;IString>>)Input_values.Instance;&#xA;&#x9;&#x9;&#x9;IStringInstance k = (IStringInstance)input.Key;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IString> v = (IIteratorInstance&lt;IString>)input.Value;&#xA;&#xA;&#x9;&#x9;&#x9;string buffer = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;object o;&#xA;&#x9;&#x9;&#x9;while (v.fetch_next (out o)) {&#xA;&#x9;&#x9;&#x9;&#x9;IStringInstance item = (IStringInstance)o;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;string[] values = item.Value.Split (' ');&#xA;&#x9;&#x9;&#x9;&#x9;if (values [0].Equals (&quot;c&quot;))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;c.Add (double.Parse (values [1]));&#xA;&#x9;&#x9;&#x9;&#x9;else if (values [0].Equals (&quot;d&quot;)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;di = double.Parse (values [1]);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;neibours[int.Parse(values[0])]=double.Parse(values[1]);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;dmin = min (c,di);&#xA;&#x9;&#x9;&#x9;if(dmin!=di){&#xA;&#x9;&#x9;&#x9;&#x9;di = dmin;&#xA;&#x9;&#x9;&#x9;&#x9;IList&lt;string> lista = new List&lt;string> ();&#xA;&#x9;&#x9;&#x9;&#x9;foreach (KeyValuePair&lt;int, double> kv in neibours) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;buffer = buffer + kv.Key+&quot; c &quot;+ (kv.Value+dmin) + System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;done = 0;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;buffer = buffer + k.Value + &quot; d &quot; + di + &quot; &quot; + System.Environment.NewLine;&#xA;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, IString> orv = (IKVPairInstance&lt;IString, IString>) Output_value.newInstance();&#xA;&#x9;&#x9;&#x9;((IStringInstance)orv.Key).Value = done.ToString ();&#xA;&#x9;&#x9;&#x9;((IStringInstance)orv.Value).Value = buffer;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;public double min (IList&lt;double> c, double di){&#xA;&#x9;&#x9;&#x9;double min = double.MaxValue;&#xA;&#x9;&#x9;&#x9;foreach (double d in c) {&#xA;&#x9;&#x9;&#x9;&#x9;min = d &lt; min ? d : min;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;return min&lt;di?min:di;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IPathFlowReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl/bin/1.0.0.0/IPathFlowReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl/bin/1.0.0.0/BaseIPathFlowReduceImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce/bin/1.0.0.0/IPathFlowReduce.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="141" x="152" y="137">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IPathFlowReduceImpl" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
+      <super cRef="base" uRef="reduce_function"/>
+      <visualDescription h="40" w="141" x="183" y="228"/>
+    </unit>
+  </componentInfo>
+</component:component>
