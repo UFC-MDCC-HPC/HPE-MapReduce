@@ -36,13 +36,16 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 
 			bronKerboschAlgorithm(1, dicValues, upper, R, lower);
 
-//OBS: bigCliques possui zero ou um elemento, caso não sejam computadas bigCliques de tamanho iguais (Linha 72*), (bigCliques.Count==0|1)
-			IEnumerator<IList<int>> iterator = bigCliques.GetEnumerator ();
-			while (iterator.MoveNext ()) {
-				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>) Output_value.newInstance();
+			if (bigCliques.Count > 0) {
+				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>)Output_value.newInstance ();
 				((IStringInstance)kvpair.Key).Value = pivot.Value;
-				((ICliqueNodeInstance)kvpair.Value).IdInstance = iterator.Current.Count;
-				((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = iterator.Current;
+				((ICliqueNodeInstance)kvpair.Value).IdInstance = bigCliques [0].Count;
+				((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = bigCliques [0];
+			} else {
+				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>)Output_value.newInstance ();
+				((IStringInstance)kvpair.Key).Value = pivot.Value;
+				((ICliqueNodeInstance)kvpair.Value).IdInstance = 0;
+				//((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = new List<int>();
 			}
 		}
 
@@ -64,15 +67,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 		public void bronKerboschAlgorithm(int SIZE, IDictionary<int, IList<int>> dicValues, HashSet<int> P, IList<int> R, HashSet<int> X) {
 			if (P.Count == 0 && X.Count == 0) {
 				if (SIZE > bigger) { 
-//*OBS: Opção para caso de computar várias bigCliques de mesmo tamanho, 
-//      a saída ORV deve ser trocada para IIterator<KVPair<IString, ICliqueNode>>
-//			if (SIZE >= bigger) { 
-//				if(SIZE>bigger) 
-//					bigCliques.Clear ();
-//				bigCliques.Add (R);
-//				bigger = SIZE;}}
 					bigCliques.Clear ();
-									bigCliques.Add (R);
+					bigCliques.Add (R);
 					bigger = SIZE;
 				}
 			}
