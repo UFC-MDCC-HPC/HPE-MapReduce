@@ -15,11 +15,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 		public IMasterProcessImpl() { } 
 
 		private const string PATH = "/home/cenez/path.txt";
-		private bool done = true;
+		private bool done = false;
 		public override void main() { 
 			string fileContent = readInput (PATH);
 			((IStringInstance)Input_data.Instance).Value = "1 c 0" + System.Environment.NewLine + fileContent;
-			while (done) {
+			while (!done) {
 				this.Path_flow.go ();
 				this.Path_flow.destroySlice ();
 				//System.Threading.Thread.Sleep (3000);
@@ -27,7 +27,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 				IIteratorInstance<IKVPair<IString,IString>> output = (IIteratorInstance<IKVPair<IString, IString>>)Output_data.Instance;
 
 				string buffer = "";
-				done = false;
+				done = true;
 				object o;
 				while (output.fetch_next (out o)) {
 					IKVPairInstance<IString,IString> kv = (IKVPairInstance<IString, IString>)o;
@@ -36,11 +36,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 					Console.WriteLine (v.Value);
 					buffer = buffer + v.Value + System.Environment.NewLine;
 
-				    if (!done && k.Value.Equals ("0"))
-						done = true;
+				    if (done && k.Value.Equals ("0"))
+						done = false;
 				}
 				((IStringInstance)Input_data.Instance).Value = buffer + fileContent;
-				done = false;
+				//done = true;
 			}
 		}
 		string readInput(string PATH){
