@@ -36,7 +36,7 @@
     </interface>
     <unit iRef="IPGRank" multiple="false" private="false" replica="0" uRef="data_pgrank" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <visualDescription h="40" w="127" x="88" y="268"/>
+      <visualDescription h="40" w="127" x="91" y="251"/>
     </unit>
   </componentInfo>
 </component:component>

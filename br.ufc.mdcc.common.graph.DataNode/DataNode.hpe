@@ -20,41 +20,14 @@
     </visualAttributes>
   </header>
   <componentInfo>
-    <parameter componentRef="id_node" formFieldId="id_type" order="0" varName="TID"/>
-    <parameter componentRef="value_node" formFieldId="value_type" order="1" varName="VAL"/>
-    <parameter componentRef="edge_node" formFieldId="edge_type" order="2" varName="EDG"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="id_node" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="id_type" exposed="true">
-      <visualDescription h="60" w="100" x="423" y="419">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="15" y="11"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="value_node" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="value_type" exposed="true">
-      <visualDescription h="60" w="100" x="279" y="476">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="edge_node" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" parameter_id="edge_type" exposed="true">
-      <visualDescription h="60" w="100" x="379" y="289">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
     <interface iRef="IDataNode" nArgs="3">
-      <slice isRef="edge_node">
-        <originRef cRef="edge_node" iRef="IData"/>
-        <visualDescription h="10" w="10" x="64" y="3"/>
-      </slice>
       <slice isRef="value_node">
         <originRef cRef="value_node" iRef="IData"/>
         <visualDescription h="10" w="10" x="52" y="26"/>
+      </slice>
+      <slice isRef="edge_node">
+        <originRef cRef="edge_node" iRef="IData"/>
+        <visualDescription h="10" w="10" x="64" y="3"/>
       </slice>
       <slice isRef="id_node">
         <originRef cRef="id_node" iRef="IData"/>
@@ -72,29 +45,29 @@
       <visualDescription h="71" w="149" x="138" y="191">
         <color b="0" g="128" r="0"/>
       </visualDescription>
-      <port name="edge_node">
-        <visualDescription h="10" w="10" x="5" y="12"/>
-        <slice pRef="edge_node" sRef="edge_node"/>
-      </port>
       <port name="value_node">
         <visualDescription h="10" w="10" x="103" y="11"/>
         <slice pRef="value_node" sRef="value_node"/>
+      </port>
+      <port name="edge_node">
+        <visualDescription h="10" w="10" x="5" y="12"/>
+        <slice pRef="edge_node" sRef="edge_node"/>
       </port>
       <port name="id_node">
         <visualDescription h="10" w="10" x="2" y="40"/>
         <slice pRef="id_node" sRef="id_node"/>
       </port>
-      <parameter iname="IData" order="2" parid="edge_type" uname="data" varid="EDG"/>
       <parameter iname="IData" order="1" parid="value_type" uname="data" varid="VAL"/>
+      <parameter iname="IData" order="2" parid="edge_type" uname="data" varid="EDG"/>
       <parameter iname="IData" order="0" parid="id_type" uname="data" varid="TID"/>
     </interface>
     <unit iRef="IDataNode" multiple="false" private="false" replica="0" uRef="data_node" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <slices cRef="value_node" slice_replica="0" uRef="data" sliceName="value_node" transitive="false">
-        <visualDescription h="10" w="10" x="52" y="26"/>
-      </slices>
       <slices cRef="edge_node" slice_replica="0" uRef="data" sliceName="edge_node" transitive="false">
         <visualDescription h="10" w="10" x="64" y="3"/>
+      </slices>
+      <slices cRef="value_node" slice_replica="0" uRef="data" sliceName="value_node" transitive="false">
+        <visualDescription h="10" w="10" x="52" y="26"/>
       </slices>
       <slices cRef="id_node" slice_replica="0" uRef="data" sliceName="id_node" transitive="false">
         <visualDescription h="10" w="10" x="54" y="14"/>

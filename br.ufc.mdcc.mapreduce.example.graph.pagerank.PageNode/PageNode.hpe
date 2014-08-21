@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" isAbstract="true" kind="Data" name="PageNode" packagePath="br.ufc.mdcc.mapreduce.example.graph.pagerank">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000b7f65ffb24d39e0705387194d3228d8b8a2db183b278924599e32b1340ea28e31eb6f18f8bef8de0df924a0209992c96b14ee7f8dbc644cc703dc801636c61114f1125bca9a1fa05ac213380f26efa1fb345f450eaaa1a8f80b796969775ed1c4b2bcb96366184760f86ec8382e2831d6a1eaba87635f43df10e08c5e2e84ea6" isAbstract="true" kind="Data" name="PageNode" packagePath="br.ufc.mdcc.mapreduce.example.graph.pagerank">
     <baseType>
       <extensionType>
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000177c1959f3cad21c0e4ecb98af6a5c0f964455ba63cdd5ff6852cfec06139d05257b95d9eb43d9c481556aed366f2ee4f6d16dbd08f2477579e41e08966192992b5b2a6829def56724fdd7a484072d053a8a5139338e12d4515210e1f3f832b2c4ebc66c2588ba84a97094193e69a3ac69ddc9775be082efa5a3632f680844c6" localRef="base" location="br.ufc.mdcc.common.graph.DataNode/DataNode.hpe" name="DataNode" package="br.ufc.mdcc.common.graph" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="146" y="467">
+        <visualDescription h="60" w="100" x="134" y="446">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data_node">
@@ -30,7 +30,7 @@
           <dependency>br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/IDataNode.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="71" w="149" x="84" y="204">
+      <visualDescription h="71" w="149" x="96" y="190">
         <color b="0" g="128" r="0"/>
       </visualDescription>
     </interface>

@@ -5,7 +5,7 @@
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000075351f6417bbfadbbfc4537b98a866f21cf8e7628e7d24f47537ee9b83e24b187cc01a9a9bda40f22dc2dae6515e3d02b1e056712e30fadccb82b3e8248cf06d8791d662d26c6f7634fdc20be88f5fdc87b80fe81b8c632d11dd3413a68108467f511a1e685c702049f503388dda230a29bf71b08e289b7860a91d2eceb4f97" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe" name="PageNode" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000b7f65ffb24d39e0705387194d3228d8b8a2db183b278924599e32b1340ea28e31eb6f18f8bef8de0df924a0209992c96b14ee7f8dbc644cc703dc801636c61114f1125bca9a1fa05ac213380f26efa1fb345f450eaaa1a8f80b796969775ed1c4b2bcb96366184760f86ec8382e2831d6a1eaba87635f43df10e08c5e2e84ea6" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/PageNode.hpe" name="PageNode" package="br.ufc.mdcc.mapreduce.example.graph.pagerank" version="1.0.0.0">
         <visualDescription h="60" w="100" x="51" y="460">
           <color b="255" g="255" r="255"/>
         </visualDescription>
@@ -36,7 +36,7 @@
     </interface>
     <unit iRef="IPageNodeImpl" multiple="false" private="false" replica="0" uRef="data_node" visibleInterface="true">
       <super cRef="base" uRef="data_node"/>
-      <visualDescription h="40" w="80" x="122" y="347"/>
+      <visualDescription h="40" w="80" x="129" y="340"/>
     </unit>
   </componentInfo>
 </component:component>

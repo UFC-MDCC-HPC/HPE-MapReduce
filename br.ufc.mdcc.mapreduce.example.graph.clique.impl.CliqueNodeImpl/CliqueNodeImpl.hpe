@@ -30,7 +30,7 @@
           <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="71" w="149" x="144" y="124">
+      <visualDescription h="71" w="149" x="161" y="118">
         <color b="0" g="128" r="0"/>
       </visualDescription>
     </interface>
