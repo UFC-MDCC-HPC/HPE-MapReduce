@@ -244,13 +244,13 @@
         <visualDescription h="10" w="10" x="88" y="66"/>
         <slice pRef="source_data" sRef="gather"/>
       </port>
-      <port name="job">
-        <visualDescription h="10" w="10" x="97" y="13"/>
-        <slice pRef="input" sRef="work"/>
-      </port>
       <port name="result">
         <visualDescription h="10" w="10" x="88" y="66"/>
         <slice pRef="output" sRef="work"/>
+      </port>
+      <port name="job">
+        <visualDescription h="10" w="10" x="97" y="13"/>
+        <slice pRef="input" sRef="work"/>
       </port>
       <parameter iname="IScatterTarget" order="0" parid="scatter_strategy" uname="target" varid="S"/>
       <parameter iname="IData" order="3" parid="job_type" uname="data" varid="J"/>

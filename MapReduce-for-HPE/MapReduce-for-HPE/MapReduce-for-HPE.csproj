@@ -66,5 +66,13 @@
       <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
       <Name>br.ufc.mdcc.common.Integer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl.csproj">
+      <Project>{BCB96804-B787-4ED7-BB0F-127F3649E5D7}</Project>
+      <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

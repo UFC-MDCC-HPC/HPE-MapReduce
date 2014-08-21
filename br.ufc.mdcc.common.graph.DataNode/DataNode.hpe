@@ -48,13 +48,13 @@
       </unitBounds>
     </innerComponent>
     <interface iRef="IDataNode" nArgs="3">
-      <slice isRef="value_node">
-        <originRef cRef="value_node" iRef="IData"/>
-        <visualDescription h="10" w="10" x="52" y="26"/>
-      </slice>
       <slice isRef="edge_node">
         <originRef cRef="edge_node" iRef="IData"/>
         <visualDescription h="10" w="10" x="64" y="3"/>
+      </slice>
+      <slice isRef="value_node">
+        <originRef cRef="value_node" iRef="IData"/>
+        <visualDescription h="10" w="10" x="52" y="26"/>
       </slice>
       <slice isRef="id_node">
         <originRef cRef="id_node" iRef="IData"/>
@@ -77,29 +77,29 @@
       <visualDescription h="71" w="149" x="138" y="191">
         <color b="0" g="128" r="0"/>
       </visualDescription>
-      <port name="value_node">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="value_node" sRef="value_node"/>
-      </port>
       <port name="edge_node">
-        <visualDescription h="10" w="10" x="0" y="0"/>
+        <visualDescription h="10" w="10" x="5" y="12"/>
         <slice pRef="edge_node" sRef="edge_node"/>
       </port>
+      <port name="value_node">
+        <visualDescription h="10" w="10" x="103" y="11"/>
+        <slice pRef="value_node" sRef="value_node"/>
+      </port>
       <port name="id_node">
-        <visualDescription h="10" w="10" x="0" y="0"/>
+        <visualDescription h="10" w="10" x="2" y="40"/>
         <slice pRef="id_node" sRef="id_node"/>
       </port>
-      <parameter iname="IData" order="1" parid="value_type" uname="data" varid="VAL"/>
       <parameter iname="IData" order="2" parid="edge_type" uname="data" varid="EDG"/>
+      <parameter iname="IData" order="1" parid="value_type" uname="data" varid="VAL"/>
       <parameter iname="IData" order="0" parid="id_type" uname="data" varid="TID"/>
     </interface>
     <unit iRef="IDataNode" multiple="false" private="false" replica="0" uRef="data_node" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <slices cRef="edge_node" slice_replica="0" uRef="data" sliceName="edge_node" transitive="false">
-        <visualDescription h="10" w="10" x="64" y="3"/>
-      </slices>
       <slices cRef="value_node" slice_replica="0" uRef="data" sliceName="value_node" transitive="false">
         <visualDescription h="10" w="10" x="52" y="26"/>
+      </slices>
+      <slices cRef="edge_node" slice_replica="0" uRef="data" sliceName="edge_node" transitive="false">
+        <visualDescription h="10" w="10" x="64" y="3"/>
       </slices>
       <slices cRef="id_node" slice_replica="0" uRef="data" sliceName="id_node" transitive="false">
         <visualDescription h="10" w="10" x="54" y="14"/>
