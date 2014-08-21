@@ -12,7 +12,6 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/src/1.0.0.0/BaseICliqueNode.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll"/>
         <include/>
       </references>
@@ -22,7 +21,6 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/src/1.0.0.0/ICliqueNode.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="/br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/BaseICliqueNode.dll"/>
         <include name="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/IDataNode.dll"/>
         <include/>

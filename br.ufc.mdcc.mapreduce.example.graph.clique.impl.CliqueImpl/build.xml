@@ -12,6 +12,7 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueImpl/src/1.0.0.0/BaseIMasterImpl.cs"/>
       </sources>
       <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll"/>
         <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll"/>
@@ -22,7 +23,6 @@
         <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
         <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
         <include name="br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll"/>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/BaseIMaster.dll"/>
         <include/>
       </references>
@@ -44,9 +44,9 @@
       </sources>
       <references>
         <include name="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IReduceWorker.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
-        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
-        <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0/ICliqueReduce.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.clique.Clique/bin/1.0.0.0/BaseICliqueReduce.dll"/>
@@ -72,8 +72,7 @@
         <include name="br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll"/>
         <include name="br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll"/>
-        <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
-        <include name="br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
         <include name="br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/bin/1.0.0.0/ICliqueMap.dll"/>
         <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>

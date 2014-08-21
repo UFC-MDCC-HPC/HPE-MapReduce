@@ -12,7 +12,6 @@
         <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl/src/1.0.0.0/BaseIPageNodeImpl.cs"/>
       </sources>
       <references>
-        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
         <include name="br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode/bin/1.0.0.0/BaseIPageNode.dll"/>
         <include/>
       </references>

@@ -41,6 +41,22 @@ namespace br.ufc.mdcc.common.impl.DoubleImpl {
 			get { return val; }
 			set { this.val = value;	}
 		}
+		public override int GetHashCode (){
+			return Value.GetHashCode();	
+		}
+
+		public override string ToString (){
+			return Value.ToString();
+		}
+
+		public override bool Equals (object obj){
+			if (obj is IDoubleInstanceImpl)
+				return Value==(((IDoubleInstanceImpl) obj).Value);
+			else if (obj is double)
+				return Value==(double)obj;
+			else
+				return false;
+		}
 		#endregion
 	}
 }

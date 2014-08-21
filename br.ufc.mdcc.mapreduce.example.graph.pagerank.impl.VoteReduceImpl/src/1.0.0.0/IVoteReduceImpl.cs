@@ -1,11 +1,9 @@
-using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Iterator;
+using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteReduce;
 
@@ -17,24 +15,22 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.VoteReduceImpl {
 		} 
 
 		public override void main() { 
-			System.Console.WriteLine ("################################################ Starting VoteReduceImpl reduce ###########################################");
-			IKVPairInstance<IInteger,IIterator<IDouble>> input_values_instance = (IKVPairInstance<IInteger,IIterator<IDouble>>)Input_values.Instance;
-			IIntegerInstance integer_instance = (IIntegerInstance) input_values_instance.Key;
-			IIteratorInstance<IDouble> doubles_iterator_instance = (IIteratorInstance<IDouble>) input_values_instance.Value;
-			IKVPairInstance<IInteger, IDouble> output_value_instance = (IKVPairInstance<IInteger, IDouble>)Output_value.newInstance();
+			IKVPairInstance<IString,IIterator<IDouble>> input = (IKVPairInstance<IString,IIterator<IDouble>>) Input_values.Instance;
+			IIteratorInstance<IDouble> doubles = (IIteratorInstance<IDouble>) input.Value;
 
-			Double soma = 0.0;
+			double soma = 0.0;
+			object o;
+			while (doubles.fetch_next(out o))						
+				soma += ((IDoubleInstance) o).Value;
 
-			object double_object;
-			while (doubles_iterator_instance.fetch_next(out double_object))	
-				soma = soma + ((IDoubleInstance) double_object).Value;
-			output_value_instance.Key = integer_instance;
-			((IDoubleInstance)output_value_instance.Value).Value = soma;
-			//while (!Input_values.Value.HasFinished){
-			//	soma = soma + Input_values.Value.fetch_next().Value;
+			IKVPairInstance<IString,IDouble> kvpair = (IKVPairInstance<IString,IDouble>) Output_value.newInstance();
+
+			((IStringInstance)kvpair.Key).Value = ((IStringInstance)input.Key).Value;
+			((IDoubleInstance)kvpair.Value).Value = soma;
+
+			//using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/workspace/java/hash-programming-environment-read-only/HPE_BackEnd/logReduce", true)){
+			//	file.WriteLine("key="+((IStringInstance)kvpair.Key).Value+" : value="+((IDoubleInstance)kvpair.Value).Value);
 			//}
-			//Output_value.Key = Input_values.Key;
-			//Output_value.Value.Value = soma;
 		}
 	}
 }

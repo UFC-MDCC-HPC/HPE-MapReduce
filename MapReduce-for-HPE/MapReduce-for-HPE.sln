@@ -172,6 +172,22 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl", "..\br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl\br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl\br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl.csproj", "{75B4AFB4-2DD1-42F5-BE6D-D502E83F2F13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce.csproj", "{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap.csproj", "{C8A6EA1D-4E0F-484E-9431-81CF1B39E217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow.csproj", "{3246FD2B-7E31-4F97-8878-B0D98B4AA068}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp.csproj", "{5DCA5249-0C5D-44CE-8B36-91A102E7CA1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl.csproj", "{60E0E53F-B158-4898-AAE6-46B16D11B89F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowMapImpl", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowMapImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowMapImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowMapImpl.csproj", "{E6E74038-9A00-404E-B6FC-86C545A5715F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl.csproj", "{B30B2700-2E26-4F91-ABCE-8843C8C9BF63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl.csproj", "{C8CDD14B-6DAA-4822-86F4-7D85660D27E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -238,6 +254,10 @@ Global
 		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Debug|x86.Build.0 = Debug|Any CPU
 		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Release|x86.ActiveCfg = Release|Any CPU
 		{2CFC22C2-D614-4F83-BFE8-B387454386F5}.Release|x86.Build.0 = Release|Any CPU
+		{3246FD2B-7E31-4F97-8878-B0D98B4AA068}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3246FD2B-7E31-4F97-8878-B0D98B4AA068}.Debug|x86.Build.0 = Debug|Any CPU
+		{3246FD2B-7E31-4F97-8878-B0D98B4AA068}.Release|x86.ActiveCfg = Release|Any CPU
+		{3246FD2B-7E31-4F97-8878-B0D98B4AA068}.Release|x86.Build.0 = Release|Any CPU
 		{33EFECF4-F0AF-4B9F-A2D7-96664950DCF9}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{33EFECF4-F0AF-4B9F-A2D7-96664950DCF9}.Debug|x86.Build.0 = Debug|Any CPU
 		{33EFECF4-F0AF-4B9F-A2D7-96664950DCF9}.Release|x86.ActiveCfg = Release|Any CPU
@@ -290,6 +310,10 @@ Global
 		{5A92B566-5783-44E5-A395-03CB4BFB9DA1}.Debug|x86.Build.0 = Debug|Any CPU
 		{5A92B566-5783-44E5-A395-03CB4BFB9DA1}.Release|x86.ActiveCfg = Release|Any CPU
 		{5A92B566-5783-44E5-A395-03CB4BFB9DA1}.Release|x86.Build.0 = Release|Any CPU
+		{5DCA5249-0C5D-44CE-8B36-91A102E7CA1A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5DCA5249-0C5D-44CE-8B36-91A102E7CA1A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5DCA5249-0C5D-44CE-8B36-91A102E7CA1A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5DCA5249-0C5D-44CE-8B36-91A102E7CA1A}.Release|x86.Build.0 = Release|Any CPU
 		{5E472423-2B58-4E49-AB15-4C13ABEEEF19}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{5E472423-2B58-4E49-AB15-4C13ABEEEF19}.Debug|x86.Build.0 = Debug|Any CPU
 		{5E472423-2B58-4E49-AB15-4C13ABEEEF19}.Release|x86.ActiveCfg = Release|Any CPU
@@ -298,6 +322,10 @@ Global
 		{5F99AAE7-BB0A-4DFF-93DD-54EB8347B149}.Debug|x86.Build.0 = Debug|Any CPU
 		{5F99AAE7-BB0A-4DFF-93DD-54EB8347B149}.Release|x86.ActiveCfg = Release|Any CPU
 		{5F99AAE7-BB0A-4DFF-93DD-54EB8347B149}.Release|x86.Build.0 = Release|Any CPU
+		{60E0E53F-B158-4898-AAE6-46B16D11B89F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{60E0E53F-B158-4898-AAE6-46B16D11B89F}.Debug|x86.Build.0 = Debug|Any CPU
+		{60E0E53F-B158-4898-AAE6-46B16D11B89F}.Release|x86.ActiveCfg = Release|Any CPU
+		{60E0E53F-B158-4898-AAE6-46B16D11B89F}.Release|x86.Build.0 = Release|Any CPU
 		{61329410-AB74-45B2-839E-0B490AC499A6}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{61329410-AB74-45B2-839E-0B490AC499A6}.Debug|x86.Build.0 = Debug|Any CPU
 		{61329410-AB74-45B2-839E-0B490AC499A6}.Release|x86.ActiveCfg = Release|Any CPU
@@ -414,6 +442,10 @@ Global
 		{ADBC203E-3234-489B-B8D3-57D8484C99E3}.Debug|x86.Build.0 = Debug|Any CPU
 		{ADBC203E-3234-489B-B8D3-57D8484C99E3}.Release|x86.ActiveCfg = Release|Any CPU
 		{ADBC203E-3234-489B-B8D3-57D8484C99E3}.Release|x86.Build.0 = Release|Any CPU
+		{B30B2700-2E26-4F91-ABCE-8843C8C9BF63}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B30B2700-2E26-4F91-ABCE-8843C8C9BF63}.Debug|x86.Build.0 = Debug|Any CPU
+		{B30B2700-2E26-4F91-ABCE-8843C8C9BF63}.Release|x86.ActiveCfg = Release|Any CPU
+		{B30B2700-2E26-4F91-ABCE-8843C8C9BF63}.Release|x86.Build.0 = Release|Any CPU
 		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Debug|x86.Build.0 = Debug|Any CPU
 		{B41A0F39-E6EE-477C-9A8D-2E12BF3FC4D9}.Release|x86.ActiveCfg = Release|Any CPU
@@ -442,6 +474,14 @@ Global
 		{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}.Debug|x86.Build.0 = Debug|Any CPU
 		{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}.Release|x86.ActiveCfg = Release|Any CPU
 		{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}.Release|x86.Build.0 = Release|Any CPU
+		{C8A6EA1D-4E0F-484E-9431-81CF1B39E217}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8A6EA1D-4E0F-484E-9431-81CF1B39E217}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8A6EA1D-4E0F-484E-9431-81CF1B39E217}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8A6EA1D-4E0F-484E-9431-81CF1B39E217}.Release|x86.Build.0 = Release|Any CPU
+		{C8CDD14B-6DAA-4822-86F4-7D85660D27E4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8CDD14B-6DAA-4822-86F4-7D85660D27E4}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8CDD14B-6DAA-4822-86F4-7D85660D27E4}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8CDD14B-6DAA-4822-86F4-7D85660D27E4}.Release|x86.Build.0 = Release|Any CPU
 		{C95BA7E0-8C6A-460F-99AB-288939D2E2F8}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{C95BA7E0-8C6A-460F-99AB-288939D2E2F8}.Debug|x86.Build.0 = Debug|Any CPU
 		{C95BA7E0-8C6A-460F-99AB-288939D2E2F8}.Release|x86.ActiveCfg = Release|Any CPU
@@ -470,6 +510,10 @@ Global
 		{DE0E927C-B15F-4C8C-B26F-BC618F85F4C6}.Debug|x86.Build.0 = Debug|Any CPU
 		{DE0E927C-B15F-4C8C-B26F-BC618F85F4C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE0E927C-B15F-4C8C-B26F-BC618F85F4C6}.Release|x86.Build.0 = Release|Any CPU
+		{E6E74038-9A00-404E-B6FC-86C545A5715F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E6E74038-9A00-404E-B6FC-86C545A5715F}.Debug|x86.Build.0 = Debug|Any CPU
+		{E6E74038-9A00-404E-B6FC-86C545A5715F}.Release|x86.ActiveCfg = Release|Any CPU
+		{E6E74038-9A00-404E-B6FC-86C545A5715F}.Release|x86.Build.0 = Release|Any CPU
 		{E7A8C1A8-33A9-466A-8964-C9935E8776BF}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{E7A8C1A8-33A9-466A-8964-C9935E8776BF}.Debug|x86.Build.0 = Debug|Any CPU
 		{E7A8C1A8-33A9-466A-8964-C9935E8776BF}.Release|x86.ActiveCfg = Release|Any CPU
@@ -510,6 +554,10 @@ Global
 		{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}.Debug|x86.Build.0 = Debug|Any CPU
 		{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}.Release|x86.ActiveCfg = Release|Any CPU
 		{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}.Release|x86.Build.0 = Release|Any CPU
+		{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}.Debug|x86.Build.0 = Debug|Any CPU
+		{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

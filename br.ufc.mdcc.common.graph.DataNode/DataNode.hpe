@@ -6,7 +6,7 @@
         <extends>true</extends>
       </extensionType>
       <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="base" location="br.ufc.mdcc.common.Data/Data.hpe" name="Data" package="br.ufc.mdcc.common" version="1.0.0.0">
-        <visualDescription h="60" w="100" x="133" y="429">
+        <visualDescription h="60" w="100" x="224" y="432">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -61,15 +61,10 @@
         <visualDescription h="10" w="10" x="54" y="14"/>
       </slice>
       <sources sourceType="C# Language" versionId="1.0.0.0">
-        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.common.graph.DataNode { &#xA;&#xA;public interface BaseIDataNode&lt;TID, VAL, EDG> : BaseIData, IDataStructureKind &#xA;where TID:IData&#xA;where VAL:IData&#xA;where EDG:IData&#xA;{&#xA;&#xA;&#x9;TID Id_node {get;}&#xA;&#x9;VAL Value_node {get;}&#xA;&#x9;EDG Edge_node {get;}&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIDataNode.cs" srcType="base" uri="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.common.graph.DataNode { &#xA;&#xA;public interface BaseIDataNode : BaseIData, IDataStructureKind &#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIDataNode.cs" srcType="base" uri="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/BaseIData.dll</dependency>
         </file>
-        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.common.graph.DataNode { &#xA;&#xA;public interface IDataNode&lt;TID, VAL, EDG> : BaseIDataNode&lt;TID, VAL, EDG>, IData&#xA;where TID:IData&#xA;where VAL:IData&#xA;where EDG:IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IDataNode.cs" srcType="user" uri="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/IDataNode.dll" versionId="1.0.0.0">
-          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;&#xA;namespace br.ufc.mdcc.common.graph.DataNode { &#xA;&#xA;public interface IDataNode : BaseIDataNode, IData&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IDataNode.cs" srcType="user" uri="br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/IDataNode.dll" versionId="1.0.0.0">
           <dependency>%WORKSPACE/br.ufc.mdcc.common.graph.DataNode/bin/1.0.0.0/BaseIDataNode.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
         </file>

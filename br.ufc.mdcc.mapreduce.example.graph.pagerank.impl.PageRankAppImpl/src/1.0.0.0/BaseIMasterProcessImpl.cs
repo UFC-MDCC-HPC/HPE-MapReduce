@@ -5,7 +5,7 @@ using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Platform;
-using br.ufc.mdcc.common.Integer;
+//using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Iterator;
@@ -24,11 +24,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 			}
 		}
 
-		private IIterator<IKVPair<IInteger,IDouble>> output_data = null;
-		public IIterator<IKVPair<IInteger,IDouble>> Output_data {
+		private IIterator<IKVPair<IString,IDouble>> output_data = null;
+		public IIterator<IKVPair<IString,IDouble>> Output_data {
 			get {
 				if (this.output_data == null)
-					this.output_data = (IIterator<IKVPair<IInteger,IDouble>>) Services.getPort("output_data");
+					this.output_data = (IIterator<IKVPair<IString,IDouble>>) Services.getPort("output_data");
 				return this.output_data;
 			}
 		}

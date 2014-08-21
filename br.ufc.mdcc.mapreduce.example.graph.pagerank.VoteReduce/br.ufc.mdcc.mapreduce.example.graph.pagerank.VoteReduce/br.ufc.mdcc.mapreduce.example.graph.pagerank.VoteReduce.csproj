@@ -61,5 +61,9 @@
       <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
       <Name>br.ufc.mdcc.common.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

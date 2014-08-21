@@ -6,7 +6,6 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.common.String;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
@@ -23,54 +22,20 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 		} 
 
 		public override void main() { 
-			System.Console.WriteLine ("################################################ Starting PageRankAppImpl ###########################################");
 			((IStringInstance)Input_data.Instance).Value = readInput();
-			IIteratorInstance<IKVPair<IInteger,IDouble>> output_data_instance = (IIteratorInstance<IKVPair<IInteger,IDouble>>) Output_data.Instance;
-
-			System.Console.WriteLine ("################################################ Starting Page_rank.go(); ###########################################");
+			IIteratorInstance<IKVPair<IString,IDouble>> output_data_instance = (IIteratorInstance<IKVPair<IString,IDouble>>) Output_data.Instance;
 			Page_rank.go();
-			System.Console.WriteLine ("################################################ Stopping Page_rank.go(); ###########################################");
-
-
-
-			System.Console.WriteLine ("################################################ Iterate Output_data ################################################");
-			IDictionary<int,double> results = new Dictionary<int,double> ();
-			int count = 0;
-			double alternativeRank = 0.0, sum = 0.0, additional = 0.0;
-			object kvpair_object;
-			while (output_data_instance.fetch_next (out kvpair_object)) {
-				IKVPairInstance<IInteger,IDouble> kv = (IKVPairInstance<IInteger,IDouble>) kvpair_object;
-				int key = ((IIntegerInstance)kv.Key).Value;
-				double value = ((IDoubleInstance)kv.Value).Value;
-
-				if (key >= 0) {
-					results [key] = value; //Console.Out.Write (key + ":"); //Console.Out.WriteLine (value);
-					count++;
-				} else {
-					alternativeRank = value;
-				}
-				sum += value;
+			object o;
+			while (output_data_instance.fetch_next (out o)) {
+				IKVPairInstance<IString,IDouble> kvp = (IKVPairInstance<IString,IDouble>)o;
+				IStringInstance k = (IStringInstance)kvp.Key;
+				IDoubleInstance v = (IDoubleInstance)kvp.Value;
+				string saida = "Key=" + k.Value + " Value=" + v.Value;
+				Console.WriteLine (saida);
+				//using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/workspace/java/hash-programming-environment-read-only/HPE_BackEnd/logMaster", true)){
+				//	file.WriteLine(saida);
+				//}
 			}
-			additional = alternativeRank / count;
-			System.Console.WriteLine ("#####################################################################################################################");
-
-			System.Console.WriteLine ("################################################### Results #########################################################");
-			IEnumerator<int> iterator = results.Keys.GetEnumerator();
-			for (;iterator.MoveNext();){
-				int K = iterator.Current;
-				results [K] += additional;
-				double V = results[K];
-				Console.Out.Write (K + ":"); 
-				Console.Out.WriteLine (V);
-			}
-			System.Console.WriteLine ("################################################ Warning ############################################################");
-			if (((int)sum) == count) {
-				System.Console.WriteLine ("Computation verify: OK");
-				System.Console.WriteLine ("Additional rank for all nodes: " + additional);
-			}
-			else
-				System.Console.WriteLine ("Computation verify: failed");
-			System.Console.WriteLine ("#####################################################################################################################");
 		}
 		string readInput(){
 			return System.IO.File.ReadAllText(PATH);

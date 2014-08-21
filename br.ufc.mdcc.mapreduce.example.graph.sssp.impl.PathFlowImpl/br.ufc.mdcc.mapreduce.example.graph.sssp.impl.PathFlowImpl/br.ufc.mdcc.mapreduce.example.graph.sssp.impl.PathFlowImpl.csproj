@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B30B2700-2E26-4F91-ABCE-8843C8C9BF63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl</RootNamespace>
+    <AssemblyName>br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="DGAC">
+      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\1.0.0.0\IMasterImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIMasterImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\IPathFlowReduceImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIPathFlowReduceImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\IPathFlowMapImpl.cs" />
+    <Compile Include="..\src\1.0.0.0\BaseIPathFlowMapImpl.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data\br.ufc.mdcc.common.Data.csproj">
+      <Project>{7CEA4BF7-37CD-4F93-B603-CF5FB9239B1F}</Project>
+      <Name>br.ufc.mdcc.common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
+      <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
+      <Name>br.ufc.mdcc.common.KVPair</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform\br.ufc.mdcc.common.Platform.csproj">
+      <Project>{64735B4D-4D79-4F10-A191-6A3A9F9D54EB}</Project>
+      <Name>br.ufc.mdcc.common.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.MapReduce\br.ufc.mdcc.mapreduce.MapReduce\br.ufc.mdcc.mapreduce.MapReduce.csproj">
+      <Project>{DE0E927C-B15F-4C8C-B26F-BC618F85F4C6}</Project>
+      <Name>br.ufc.mdcc.mapreduce.MapReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow.csproj">
+      <Project>{3246FD2B-7E31-4F97-8878-B0D98B4AA068}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
+      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
+      <Name>br.ufc.mdcc.common.Integer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.BreakInLines\br.ufc.mdcc.mapreduce.example.BreakInLines\br.ufc.mdcc.mapreduce.example.BreakInLines.csproj">
+      <Project>{4B301646-384F-4CAB-AC51-88C108657382}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.BreakInLines</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap.csproj">
+      <Project>{C8A6EA1D-4E0F-484E-9431-81CF1B39E217}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce.csproj">
+      <Project>{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction\br.ufc.mdcc.mapreduce.user.CombineFunction.csproj">
+      <Project>{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.CombineFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction\br.ufc.mdcc.mapreduce.user.MapFunction.csproj">
+      <Project>{D3459919-33DE-4C10-AFA7-2C49056E6F2D}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.MapFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction\br.ufc.mdcc.mapreduce.user.PartitionFunction.csproj">
+      <Project>{21CB6D51-9815-487F-8691-DD74F3AB81C1}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.PartitionFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.ReduceFunction\br.ufc.mdcc.mapreduce.user.ReduceFunction\br.ufc.mdcc.mapreduce.user.ReduceFunction.csproj">
+      <Project>{F5906E26-64FC-4968-9A30-8C57BF44A4D7}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.ReduceFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction\br.ufc.mdcc.mapreduce.user.SplitFunction.csproj">
+      <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
+      <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

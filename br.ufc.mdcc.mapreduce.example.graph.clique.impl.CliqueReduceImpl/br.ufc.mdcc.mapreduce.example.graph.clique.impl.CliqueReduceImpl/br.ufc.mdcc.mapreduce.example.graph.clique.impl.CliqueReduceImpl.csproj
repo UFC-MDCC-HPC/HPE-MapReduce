@@ -49,14 +49,6 @@
       <Project>{F10237D5-98B7-4904-991B-F522EBACEF55}</Project>
       <Name>br.ufc.mdcc.common.graph.DataNode</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer\br.ufc.mdcc.common.Integer.csproj">
-      <Project>{97B35E58-AC6B-44A6-A536-90FA39076265}</Project>
-      <Name>br.ufc.mdcc.common.Integer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
-      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
-      <Name>br.ufc.mdcc.common.Iterator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair\br.ufc.mdcc.common.KVPair.csproj">
       <Project>{9B499C49-DA84-475A-B783-2A3D2DEAAA97}</Project>
       <Name>br.ufc.mdcc.common.KVPair</Name>
@@ -73,17 +65,13 @@
       <Project>{5F99AAE7-BB0A-4DFF-93DD-54EB8347B149}</Project>
       <Name>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl\br.ufc.mdcc.common.impl.IteratorImpl.csproj">
-      <Project>{BCB96804-B787-4ED7-BB0F-127F3649E5D7}</Project>
-      <Name>br.ufc.mdcc.common.impl.IteratorImpl</Name>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String\br.ufc.mdcc.common.String.csproj">
+      <Project>{C2214D73-6F59-4DF5-96B4-3E48DF98B90B}</Project>
+      <Name>br.ufc.mdcc.common.String</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.IntegerImpl\br.ufc.mdcc.common.impl.IntegerImpl\br.ufc.mdcc.common.impl.IntegerImpl.csproj">
-      <Project>{D5FF2BDE-BA64-4F4C-A2C8-12E8829170A7}</Project>
-      <Name>br.ufc.mdcc.common.impl.IntegerImpl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl\br.ufc.mdcc.common.impl.KVPairImpl.csproj">
-      <Project>{9A02D2DD-0967-4810-A845-3EDE50DDE195}</Project>
-      <Name>br.ufc.mdcc.common.impl.KVPairImpl</Name>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator\br.ufc.mdcc.common.Iterator.csproj">
+      <Project>{807A087E-123C-4745-B029-C31FC9458A61}</Project>
+      <Name>br.ufc.mdcc.common.Iterator</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

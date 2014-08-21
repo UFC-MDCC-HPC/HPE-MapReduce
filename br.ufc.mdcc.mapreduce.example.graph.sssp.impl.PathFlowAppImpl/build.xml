@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/cenez/hpe/cenez/cache" default="all" name="PathFlowAppImpl">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="PathFlowAppImpl-1.0.0.0">
+    <ifnot targetexists="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0">
+      <mkdir dir="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowMapProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/BaseIPathFlowMapProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/bin/1.0.0.0/IPathFlowMap.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/BaseIPathFlowMapProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowMapProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IPathFlowMapProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowMapProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/IPathFlowMapProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowMapProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IPathFlowMapProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowMapProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowReduceProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/BaseIPathFlowReduceProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/bin/1.0.0.0/IPathFlowReduce.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/BaseIPathFlowReduceProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowReduceProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IPathFlowReduceProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowReduceProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/IPathFlowReduceProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowReduceProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IPathFlowReduceProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowReduceProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/BaseIMasterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/bin/1.0.0.0/IMaster.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/BaseIMasterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IMasterProcessImpl.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/IMasterProcess.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/PathFlowAppImpl.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IMasterProcessImplMain.exe" target="exe" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IMasterProcessImplMain.cs"/>
+      </sources>
+      <references>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll"/>
+        <include name="br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="PathFlowAppImpl-1.0.0.0" name="all"/>
+</project>

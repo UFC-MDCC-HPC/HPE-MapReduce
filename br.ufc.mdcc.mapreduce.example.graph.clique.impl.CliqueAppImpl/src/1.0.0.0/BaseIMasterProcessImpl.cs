@@ -4,14 +4,13 @@ using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
-using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;
 using br.ufc.mdcc.common.Platform;
+using br.ufc.mdcc.mapreduce.example.graph.clique.Clique;
 using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueApp;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.String;
+using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { 
 
@@ -27,11 +26,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 			}
 		}
 
-		private IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>> output_data = null;
-		protected IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>> Output_data {
+		private IIterator<IKVPair<IString,ICliqueNode>> output_data = null;
+		protected IIterator<IKVPair<IString,ICliqueNode>> Output_data {
 			get {
 				if (this.output_data == null)
-					this.output_data = (IIterator<IKVPair<IInteger,IIterator<IKVPair<IInteger, IIterator<IInteger>>>>>) Services.getPort("output_data");
+					this.output_data = (IIterator<IKVPair<IString,ICliqueNode>>) Services.getPort("output_data");
 				return this.output_data;
 			}
 		}
@@ -46,12 +45,3 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 		}
 	}
 }
-
-//ICombineFunction<ORV, O>
-//IManagerMapReduce<In, IMK, IMV, Sf, Bf, OMK, ORV, Cf, Out, PLATFORM> 
-//ISplitFunction<I, IMK, IMV>
-//IMK:IInteger
-//IMV:ICliqueNode<IInteger>
-//OMK: IInteger
-//OMV: IKVPair<IInteger, IIterator<IInteger>>
-//ORV: IKVPair<IInteger, IIterator<IKVPair<IInteger, IIterator<IInteger>>>>

@@ -1,15 +1,13 @@
 /* Automatically Generated Code */
 
-using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
-using br.ufc.mdcc.common.Data;
+using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode;
-using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl { 

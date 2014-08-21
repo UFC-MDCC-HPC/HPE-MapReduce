@@ -1,0 +1,41 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MapReduce-for-HPE/Program.cs">
+    <Files>
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl/src/1.0.0.0/IMasterProcessImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.TallierImpl/src/1.0.0.0/ITallierImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/IWorkReducerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ISourceCombinerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ITargetCombinerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/ISourceScatterSplitDataImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IReducerFetchValuesImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.impl.StringImpl/src/1.0.0.0/IStringImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity/src/1.0.0.0/ICombineIdentityImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.common.impl.KVPairImpl/src/1.0.0.0/IKVPairImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.WordCounterImpl/src/1.0.0.0/IWordCounterImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionIntegerKeyDefault/src/1.0.0.0/IPartitionIntegerKeyDefaultImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.impl.PartitionFunctionStringKeyDefault/src/1.0.0.0/IPartitionStringKeyDefaultImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.SplitterImpl/src/1.0.0.0/ISourceSplitterImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/src/1.0.0.0/IBreakInLinesImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ITargetShufflerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ISourceShufflerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ISourcePartitionerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.PartitionerImpl/src/1.0.0.0/ITargetPartitionerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/src/1.0.0.0/ITallierImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/src/1.0.0.0/BaseITallierImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.CountWordsImpl/src/1.0.0.0/BaseIWordCounterImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/IMapperImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/BaseITargetCombinerImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/ITargetScatterSplitDataImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.SplitterImpl/src/1.0.0.0/ITargetSplitterImpl.cs" Line="1" Column="1" />
+      <File FileName="MapReduce-for-HPE/Program.cs" Line="22" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/MapReduce-for-HPE/MapReduce-for-HPE/Program.cs" line="20" column="16" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
