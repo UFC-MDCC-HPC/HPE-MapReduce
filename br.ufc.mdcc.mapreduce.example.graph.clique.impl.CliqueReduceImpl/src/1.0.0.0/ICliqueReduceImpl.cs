@@ -45,7 +45,6 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>)Output_value.newInstance ();
 				((IStringInstance)kvpair.Key).Value = pivot.Value;
 				((ICliqueNodeInstance)kvpair.Value).IdInstance = 0;
-				//((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = new List<int>();
 			}
 		}
 
@@ -53,6 +52,12 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 			IDictionary<int, IList<int>> res = new Dictionary<int, IList<int>>();
 			int pivot_number = int.Parse (pivot);
 			object o;
+
+			//Debug Block start
+				string[] data_tempo = System.IO.File.ReadAllText("/home/cenez/data.txt").Split(' ');
+			string saida = "TaskRank="+this.Rank+" Chave="+pivot+" {"+System.Environment.NewLine;
+			//Debug Block end
+
 			while(input_instance_value.fetch_next(out o)){
 				ICliqueNodeInstance node_instance = (ICliqueNodeInstance)o;
 				if (pivot_number < node_instance.IdInstance)
@@ -60,6 +65,19 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				if (pivot_number > node_instance.IdInstance)
 					X.Add (node_instance.IdInstance);
 				res [node_instance.IdInstance] = node_instance.NeighborsInstance;
+
+				//Debug Block start
+					saida = saida+"<"+node_instance.IdInstance+", [";
+					IEnumerator<int> neighbor = node_instance.NeighborsInstance.GetEnumerator ();
+					while (neighbor.MoveNext ()) {
+						saida = saida + neighbor.Current + " ";
+					}
+					saida = saida + "]>"+System.Environment.NewLine;
+				//Debug Block end
+			}
+			saida = saida + "}"+System.Environment.NewLine;
+			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/logInputCliqueReduce"+data_tempo[0], true)){
+				file.WriteLine(saida);
 			}
 			return res;
 		}

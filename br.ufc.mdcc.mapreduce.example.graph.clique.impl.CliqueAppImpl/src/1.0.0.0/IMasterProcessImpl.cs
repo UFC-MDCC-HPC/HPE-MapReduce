@@ -22,13 +22,19 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 		} 
 
 		public override void main() { 
+
+			//Debug
+			string data_tempo = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Local).ToLocalTime().ToString(@"M-d-yyyy_hh.mm.ss.tt");
+			string[] data_file_common = { data_tempo };
+			System.IO.File.WriteAllLines(@"/home/cenez/data.txt", data_file_common);
+			//Debug
+
 			IStringInstance input_data_instance = (IStringInstance) Input_data.Instance;
 			input_data_instance.Value = readInput();
 
 			Clique.go();
 
 			IIteratorInstance<IKVPair<IString,ICliqueNode>> output_data_instance = (IIteratorInstance<IKVPair<IString,ICliqueNode>>) Output_data.Instance;
-
 
 			int maxclique = -1;
 			object o;
