@@ -18,7 +18,7 @@
           <visualDescription h="60" w="100" x="80" y="218">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###810133853"/>
+          <parameter formFieldId="item_type" varName="X###1844757380"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -134,13 +134,13 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="bins" sRef="send_bins"/>
       </port>
-      <port name="source_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_data" sRef="split_function"/>
-      </port>
       <port name="bins">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output_data" sRef="split_function"/>
+      </port>
+      <port name="source_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="split_function"/>
       </port>
       <parameter iname="IData" order="0" parid="input_type" uname="data" varid="I"/>
       <parameter iname="IData" order="2" parid="output_value_item_type" uname="data" varid="IMV"/>

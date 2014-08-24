@@ -16,7 +16,7 @@
           <visualDescription h="91" w="152" x="121" y="389">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1082065643"/>
+          <parameter formFieldId="item_type" varName="X###1289903803"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="63" y="14"/>
           </unitBounds>
@@ -25,7 +25,7 @@
           <visualDescription h="98" w="137" x="498" y="344">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###656986020"/>
+          <parameter formFieldId="item_type" varName="X###352355776"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="56" y="14"/>
           </unitBounds>
