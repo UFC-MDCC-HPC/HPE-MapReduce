@@ -118,8 +118,8 @@
         <visualDescription h="20" w="20" x="95" y="14"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="source_data_item_type" direct="true" varName="Ts"/>
     <supplyParameter cRef="target_key_values" direct="true" varName="V"/>
+    <supplyParameter cRef="source_data_item_type" direct="true" varName="Ts"/>
     <supplyParameter cRef="target_data_item_type" direct="true" varName="Tt"/>
     <interface iRef="IFetchValuesMapper" nArgs="3">
       <slice isRef="map_result">

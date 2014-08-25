@@ -142,20 +142,20 @@
         <visualDescription h="20" w="20" x="112" y="20"/>
       </unitBounds>
     </innerComponent>
+    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
+    <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
+    <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
     <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
     <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
-    <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
     <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
-    <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
-    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
     <fusion>
-      <cRefs>work</cRefs>
       <cRefs>gather</cRefs>
+      <cRefs>work</cRefs>
       <pRef>result</pRef>
     </fusion>
     <fusion>
-      <cRefs>scatter</cRefs>
       <cRefs>work</cRefs>
+      <cRefs>scatter</cRefs>
       <pRef>job</pRef>
     </fusion>
     <interface iRef="IManager" nArgs="5">

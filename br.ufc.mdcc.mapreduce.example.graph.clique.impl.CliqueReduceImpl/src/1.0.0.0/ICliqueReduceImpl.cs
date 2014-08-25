@@ -54,7 +54,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 			object o;
 
 			//Debug Block start
-				string[] data_tempo = System.IO.File.ReadAllText("/home/cenez/data.txt").Split(' ');
+			string[] data_tempo = System.IO.File.ReadAllText("/home/cenez/data.txt").Split(' ');
 			string saida = "TaskRank="+this.Rank+" Chave="+pivot+" {"+System.Environment.NewLine;
 			//Debug Block end
 

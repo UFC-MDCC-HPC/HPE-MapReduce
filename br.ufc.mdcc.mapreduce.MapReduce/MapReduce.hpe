@@ -21,43 +21,43 @@
     <parameter componentRef="bin_function" formFieldId="bin_function" order="8" varName="Bf"/>
     <parameter componentRef="combine_function" formFieldId="combine_function" order="9" varName="Cf"/>
     <parameter componentRef="output_type" formFieldId="output_type" order="6" varName="Out"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###output52677160" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###output1076628477" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="619" y="424">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="item_type" varName="X###31277277"/>
+      <parameter formFieldId="item_type" varName="X###281862286"/>
       <unitBounds parallel="false" uRef="iterator">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input1271711976" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input116341047" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="3" y="59">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="item_type" varName="X###1794697452"/>
+      <parameter formFieldId="item_type" varName="X###1420381187"/>
       <unitBounds parallel="false" uRef="iterator">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input601919060" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input1690443314" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="633" y="229">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="item_type" varName="X###2072253649"/>
+      <parameter formFieldId="item_type" varName="X###918389857"/>
       <unitBounds parallel="false" uRef="iterator">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input778382714" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###input906059744" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="101" y="79">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="item_type" varName="X###477291697"/>
+      <parameter formFieldId="item_type" varName="X###1413355610"/>
       <unitBounds parallel="false" uRef="iterator">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###output744945821" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="T###output1656657592" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="100" x="408" y="87">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -79,7 +79,7 @@
       <parameter formFieldId="output_type" varName="OMAP"/>
       <parameter formFieldId="gather_strategy" varName="CMAP"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="125" x="44" y="102">
+        <visualDescription h="60" w="100" x="46" y="101">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -90,7 +90,7 @@
         <visualDescription h="60" w="100" x="619" y="424">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1058063419"/>
+        <parameter formFieldId="item_type" varName="X###1716130400"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -132,7 +132,7 @@
         <visualDescription h="60" w="100" x="80" y="245">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1323437137"/>
+        <parameter formFieldId="item_type" varName="X###2107212188"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -142,7 +142,7 @@
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="value_type" varName="OMV"/>
-        <parameter formFieldId="partition_function" varName="X###1605253642"/>
+        <parameter formFieldId="partition_function" varName="X###768459402"/>
         <parameter formFieldId="key_type" varName="OMK"/>
         <unitBounds parallel="true" uRef="mapper">
           <visualDescription h="20" w="20" x="40" y="66"/>
@@ -152,7 +152,7 @@
         </unitBounds>
       </port>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="458" y="310">
+        <visualDescription h="60" w="100" x="457" y="375">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -185,7 +185,7 @@
         <visualDescription h="60" w="100" x="135" y="535">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="value_type" varName="X###1025298947"/>
+        <parameter formFieldId="value_type" varName="X###530516356"/>
         <parameter formFieldId="key_type" varName="OMK"/>
         <unitBounds parallel="false" uRef="kv_pair">
           <visualDescription h="20" w="20" x="5" y="2"/>
@@ -248,7 +248,7 @@
         <visualDescription h="69" w="188" x="287" y="440">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###790618701"/>
+        <parameter formFieldId="item_type" varName="X###36292948"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -296,7 +296,7 @@
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+          <visualDescription h="20" w="20" x="41" y="53"/>
         </unitBounds>
       </port>
       <unitBounds parallel="false" uRef="source">
@@ -317,7 +317,7 @@
         <visualDescription h="60" w="100" x="619" y="424">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1447183718"/>
+        <parameter formFieldId="item_type" varName="X###90221288"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -353,7 +353,7 @@
         <visualDescription h="60" w="100" x="80" y="245">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###649664567"/>
+        <parameter formFieldId="item_type" varName="X###1432259036"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -363,7 +363,7 @@
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <parameter formFieldId="value_type" varName="OMV"/>
-        <parameter formFieldId="partition_function" varName="X###382612503"/>
+        <parameter formFieldId="partition_function" varName="X###1381913269"/>
         <parameter formFieldId="key_type" varName="OMK"/>
         <unitBounds parallel="true" uRef="mapper">
           <visualDescription h="20" w="20" x="40" y="66"/>
@@ -476,7 +476,7 @@
         <visualDescription h="60" w="169" x="323" y="434">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1002298803"/>
+        <parameter formFieldId="item_type" varName="X###780669778"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -547,16 +547,16 @@
     </innerComponent>
     <supplyParameter cRef="partitioner" direct="true" varName="CMAP"/>
     <supplyParameter cRef="mapper" direct="true" varName="WMAP"/>
-    <supplyParameter cRef="T###output52677160" direct="false" varName="OMAP"/>
+    <supplyParameter cRef="T###output1076628477" direct="false" varName="OMAP"/>
     <supplyParameter cRef="reducer" direct="true" varName="WRED"/>
-    <supplyParameter cRef="T###input1271711976" direct="false" varName="JMAP"/>
-    <supplyParameter cRef="T###input601919060" direct="false" varName="RMAP"/>
+    <supplyParameter cRef="T###input116341047" direct="false" varName="JMAP"/>
+    <supplyParameter cRef="T###input1690443314" direct="false" varName="RMAP"/>
     <supplyParameter cRef="shuffler" direct="true" varName="SRED"/>
     <supplyParameter cRef="collector" direct="true" varName="CRED"/>
     <supplyParameter cRef="splitter" direct="true" varName="SMAP"/>
-    <supplyParameter cRef="T###input778382714" direct="false" varName="JRED"/>
-    <supplyParameter cRef="T###output744945821" direct="false" varName="RRED"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###1691184671" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="T###input906059744" direct="false" varName="JRED"/>
+    <supplyParameter cRef="T###output1656657592" direct="false" varName="RRED"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###2057999167" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="59" y="503">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -564,19 +564,19 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1691184671" varName="X###1691184671"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###31277277" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###2057999167" varName="X###2057999167"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###281862286" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="149" y="486">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###1691184671"/>
+      <parameter formFieldId="value_type" varName="X###2057999167"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###31277277" varName="X###31277277"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1794697452" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###281862286" varName="X###281862286"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1420381187" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="50" y="240">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -586,8 +586,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1794697452" varName="X###1794697452"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###2072253649" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1420381187" varName="X###1420381187"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###918389857" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="240" y="484">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -597,8 +597,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###2072253649" varName="X###2072253649"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###990129934" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###918389857" varName="X###918389857"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###951117803" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="54" y="342">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -607,19 +607,19 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###990129934" varName="X###990129934"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###477291697" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###951117803" varName="X###951117803"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1413355610" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="50" y="443">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###990129934"/>
+      <parameter formFieldId="value_type" varName="X###951117803"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###477291697" varName="X###477291697"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###1707285973" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1413355610" varName="X###1413355610"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###150769943" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="59" y="503">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -627,19 +627,19 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1707285973" varName="X###1707285973"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1058063419" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###150769943" varName="X###150769943"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1716130400" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="149" y="486">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###1707285973"/>
+      <parameter formFieldId="value_type" varName="X###150769943"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1058063419" varName="X###1058063419"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###1519829580" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1716130400" varName="X###1716130400"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###1762421039" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="55" y="390">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -647,19 +647,19 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1519829580" varName="X###1519829580"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1323437137" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1762421039" varName="X###1762421039"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###2107212188" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="282" y="495">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###1519829580"/>
+      <parameter formFieldId="value_type" varName="X###1762421039"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1323437137" varName="X###1323437137"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="C###1605253642" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
+    <supplyParameter cRef="C###2107212188" varName="X###2107212188"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="C###768459402" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
       <visualDescription h="60" w="100" x="191" y="186">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -668,8 +668,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1605253642" varName="X###1605253642"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1025298947" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###768459402" varName="X###768459402"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###530516356" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="104" y="364">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -678,8 +678,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1025298947" varName="X###1025298947"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###790618701" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###530516356" varName="X###530516356"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###36292948" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="93" y="410">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -689,8 +689,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###790618701" varName="X###790618701"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###416962504" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###36292948" varName="X###36292948"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###225732634" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="59" y="503">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -698,19 +698,19 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###416962504" varName="X###416962504"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1447183718" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###225732634" varName="X###225732634"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###90221288" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="149" y="486">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###416962504"/>
+      <parameter formFieldId="value_type" varName="X###225732634"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1447183718" varName="X###1447183718"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###1105516221" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###90221288" varName="X###90221288"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="C###833418829" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="55" y="390">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -718,19 +718,19 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1105516221" varName="X###1105516221"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###649664567" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###833418829" varName="X###833418829"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1432259036" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="282" y="495">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###1105516221"/>
+      <parameter formFieldId="value_type" varName="X###833418829"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###649664567" varName="X###649664567"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="C###382612503" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
+    <supplyParameter cRef="C###1432259036" varName="X###1432259036"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000259d9a37452122fc0092cfaf338c10fa02e9f7f2d148e7058277ee248a978751d8c2cef057ac95b56b0b8819a43755332807595e583f17df01ee3adb7025c7fb80d47f84d19350ba4e2fb2fafb3c3e33d9d93839eaa430659a4b73f37f1983e60b6589bf6cb2327b1da27fe26756b22a36afe2e1b32208fb52bc5c0249a63e82" localRef="C###1381913269" location="br.ufc.mdcc.mapreduce.user.PartitionFunction/PartitionFunction.hpe" multiple="false" name="PartitionFunction" package="br.ufc.mdcc.mapreduce.user" exposed="false">
       <visualDescription h="60" w="100" x="191" y="186">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -739,8 +739,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###382612503" varName="X###382612503"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1002298803" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1381913269" varName="X###1381913269"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###780669778" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="69" w="126" x="362" y="160">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -750,17 +750,17 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1002298803" varName="X###1002298803"/>
-    <innerRenaming cNewName="partition_mapping" cOldName="output" cRef="farm_map"/>
+    <supplyParameter cRef="C###780669778" varName="X###780669778"/>
     <innerRenaming cNewName="partition_mapping" cOldName="input" cRef="farm_reduce"/>
+    <innerRenaming cNewName="partition_mapping" cOldName="output" cRef="farm_map"/>
     <fusion>
-      <cRefs>shuffler</cRefs>
       <cRefs>partitioner</cRefs>
+      <cRefs>shuffler</cRefs>
       <pRef>fetch_values</pRef>
     </fusion>
     <fusion>
-      <cRefs>shuffler</cRefs>
       <cRefs>partitioner</cRefs>
+      <cRefs>shuffler</cRefs>
       <pRef>partition_mapping</pRef>
     </fusion>
     <interface iRef="IManagerMapReduce" nArgs="10">
@@ -794,7 +794,7 @@
       </port>
       <port name="partition_mapping">
         <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="farm_reduce"/>
+        <slice pRef="output" sRef="farm_map"/>
       </port>
       <port name="output">
         <visualDescription h="10" w="10" x="117" y="25"/>

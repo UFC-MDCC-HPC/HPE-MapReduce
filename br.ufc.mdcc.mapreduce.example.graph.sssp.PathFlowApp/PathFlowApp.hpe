@@ -25,7 +25,7 @@
         <visualDescription h="60" w="100" x="416" y="106">
           <color b="203" g="192" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###932329937"/>
+        <parameter formFieldId="item_type" varName="X###398545003"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
@@ -48,7 +48,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###1628562647" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###344370428" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="484" y="106">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -56,8 +56,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1628562647" varName="X###1628562647"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###1573327114" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###344370428" varName="X###344370428"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###365354731" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="83" y="71">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -65,18 +65,18 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1573327114" varName="X###1573327114"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###932329937" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+    <supplyParameter cRef="C###365354731" varName="X###365354731"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###398545003" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
       <visualDescription h="60" w="123" x="162" y="76">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###1628562647"/>
-      <parameter formFieldId="key_type" varName="X###1573327114"/>
+      <parameter formFieldId="value_type" varName="X###344370428"/>
+      <parameter formFieldId="key_type" varName="X###365354731"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###932329937" varName="X###932329937"/>
+    <supplyParameter cRef="C###398545003" varName="X###398545003"/>
     <interface iRef="IPathFlowMapProcess" nArgs="1">
       <slice isRef="path_flow">
         <originRef cRef="path_flow" iRef="IPathFlowMap"/>
@@ -139,13 +139,13 @@
       <visualDescription h="40" w="101" x="222" y="113">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output_data" sRef="path_flow"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_data" sRef="path_flow"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="path_flow"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

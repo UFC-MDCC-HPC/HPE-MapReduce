@@ -63,7 +63,7 @@
         <visualDescription h="60" w="123" x="21" y="301">
           <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="value_type" varName="X###1668675199"/>
+        <parameter formFieldId="value_type" varName="X###460985224"/>
         <parameter formFieldId="key_type" varName="OMK"/>
         <unitBounds parallel="false" uRef="kv_pair">
           <visualDescription h="20" w="20" x="5" y="2"/>
@@ -138,7 +138,7 @@
     <supplyParameter cRef="value_input" direct="true" varName="OOOO"/>
     <supplyParameter cRef="output" direct="true" varName="O"/>
     <supplyParameter cRef="input" direct="true" varName="I"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1668675199" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###460985224" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="104" y="364">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -147,9 +147,9 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1668675199" varName="X###1668675199"/>
-    <innerRenaming cNewName="output_reduce" cOldName="output_value" cRef="reduce_function"/>
+    <supplyParameter cRef="C###460985224" varName="X###460985224"/>
     <innerRenaming cNewName="input_reduce" cOldName="input_values" cRef="reduce_function"/>
+    <innerRenaming cNewName="output_reduce" cOldName="output_value" cRef="reduce_function"/>
     <interface iRef="IReducer" nArgs="4">
       <slice isRef="reduce_function">
         <originRef cRef="reduce_function" iRef="IReduceFunction"/>

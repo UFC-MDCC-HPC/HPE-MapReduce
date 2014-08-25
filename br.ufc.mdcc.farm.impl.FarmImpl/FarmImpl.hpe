@@ -142,8 +142,8 @@
     <supplyParameter cRef="work" direct="true" varName="W"/>
     <supplyParameter cRef="platform" direct="true" varName="P"/>
     <supplyParameter cRef="scatter_strategy" direct="true" varName="S"/>
-    <supplyParameter cRef="result_type" direct="true" varName="R"/>
     <supplyParameter cRef="gather_strategy" direct="true" varName="C"/>
+    <supplyParameter cRef="result_type" direct="true" varName="R"/>
     <supplyParameter cRef="output_type" direct="true" varName="O"/>
     <supplyParameter cRef="input_type" direct="true" varName="I"/>
     <supplyParameter cRef="job_type" direct="true" varName="J"/>

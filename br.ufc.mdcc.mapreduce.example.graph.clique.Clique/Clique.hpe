@@ -202,8 +202,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="input_data" cOldName="input" cRef="clique"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="clique"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="clique"/>
     <interface iRef="IMaster" nArgs="1">
       <slice isRef="clique">
         <originRef cRef="clique" iRef="IManagerMapReduce"/>
@@ -222,13 +222,13 @@
       <visualDescription h="56" w="108" x="252" y="91">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="clique"/>
-      </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="clique"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="clique"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

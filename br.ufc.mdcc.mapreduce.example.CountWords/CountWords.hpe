@@ -213,8 +213,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="input_data" cOldName="input" cRef="count_words"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="count_words"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="count_words"/>
     <interface iRef="IMaster" nArgs="1">
       <slice isRef="count_words">
         <originRef cRef="count_words" iRef="IManagerMapReduce"/>
@@ -233,13 +233,13 @@
       <visualDescription h="40" w="80" x="249" y="51">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output" sRef="count_words"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input" sRef="count_words"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="count_words"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

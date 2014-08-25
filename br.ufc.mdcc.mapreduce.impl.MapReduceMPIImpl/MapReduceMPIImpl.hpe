@@ -225,11 +225,11 @@
     <supplyParameter cRef="input_data_value_type" direct="true" varName="IMV"/>
     <supplyParameter cRef="map_function" direct="true" varName="Mf"/>
     <supplyParameter cRef="binf" direct="true" varName="Bf"/>
-    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
     <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
     <supplyParameter cRef="intermediate_type_key_type" direct="true" varName="OMK"/>
-    <supplyParameter cRef="input_data_key_type" direct="true" varName="IMK"/>
     <supplyParameter cRef="combinef" direct="true" varName="Cf"/>
+    <supplyParameter cRef="input_data_key_type" direct="true" varName="IMK"/>
     <interface iRef="IManagerImpl" nArgs="10">
       <slice isRef="farm_map">
         <originRef cRef="farm_map" iRef="IManager"/>

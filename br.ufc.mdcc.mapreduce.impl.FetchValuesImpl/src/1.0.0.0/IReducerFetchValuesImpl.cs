@@ -1,4 +1,4 @@
-using System;
+	using System;
 using br.ufc.pargo.hpe.backend.DGAC;
 using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
@@ -34,45 +34,66 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 			MPI.CompletedStatus status;
 			IKVPairInstance<OMK,OMV> kv;
 
+			int senders_size = this.UnitSize ["mapper"];
+
 			IIteratorInstance<IKVPair<OMK,IIterator<OMV>>> reduce_job_instance = (IIteratorInstance<IKVPair<OMK,IIterator<OMV>>>) Reduce_job.Instance;
 
 			IDictionary<object,IIteratorInstance<OMV>> kv_cache = new Dictionary<object,IIteratorInstance<OMV>>();
 
-//			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE 1 !");
+			int finished_senders = 0;
+
+	//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE 1 !");
 			comm.Receive<IKVPairInstance<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
-//			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE 1  ! tag=" + status.Tag + ", source=" + status.Source);
+	//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE 1  ! tag=" + status.Tag + ", source=" + status.Source);
 
 			int count=0;
-			while (status.Tag != TAG_FETCHVALUES_OMV_FINISH)
+			bool last_finished = false;
+			if (status.Tag == TAG_FETCHVALUES_OMV_FINISH) 
 			{
-				IIteratorInstance<OMV> iterator = null;
-				if (!kv_cache.ContainsKey(kv.Key))
-				{
-//					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 1 !" + (count++) + " " + kv.Key.GetType());
-					iterator = Reduce_job_values_factory.newIteratorInstance ();
-					kv_cache.Add(kv.Key, iterator);
-					IKVPairInstance<OMK,IIterator<OMV>> item = (IKVPairInstance<OMK,IIterator<OMV>>) Reduce_job.createItem();
-					item.Key = kv.Key;
-					item.Value = iterator;
-					reduce_job_instance.put (item);
-				}
-				else  {
-//					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 2 !" + (count++));
-					kv_cache.TryGetValue(kv.Key, out iterator);
-				}
-								
-				iterator.put(kv.Value);
+				finished_senders ++;
+				last_finished = true;
+			}
 
-//				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE n !");
+			while (finished_senders < senders_size)
+			{
+				if (!last_finished) {
+					IIteratorInstance<OMV> iterator = null;
+					if (!kv_cache.ContainsKey (kv.Key)) {
+		//				Console.WriteLine (WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 1 !" + (count++) + " " + kv.Key.GetType ());
+						iterator = Reduce_job_values_factory.newIteratorInstance ();
+						kv_cache.Add (kv.Key, iterator);
+						IKVPairInstance<OMK,IIterator<OMV>> item = (IKVPairInstance<OMK,IIterator<OMV>>)Reduce_job.createItem ();
+						item.Key = kv.Key;
+						item.Value = iterator;
+						reduce_job_instance.put (item);
+					} else {
+		//				Console.WriteLine (WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 2 !" + (count++));
+						kv_cache.TryGetValue (kv.Key, out iterator);
+					}								
+					iterator.put (kv.Value);
+				} 
+				else 
+				{
+					last_finished = false;
+		//			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - FINISH DETECTED ");
+				}
+
+		//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE n !");
 				comm.Receive<IKVPairInstance<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
-//				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE n ! tag=" + status.Tag + ", source=" + status.Source);
+		//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE n ! tag=" + status.Tag + ", source=" + status.Source);
+
+				if (status.Tag == TAG_FETCHVALUES_OMV_FINISH) 
+				{
+					finished_senders ++;
+					last_finished = true;
+				}
 			} 
 
 			foreach (KeyValuePair<object,IIteratorInstance<OMV>> kv_item in kv_cache)
 				kv_item.Value.finish();
 
 			reduce_job_instance.finish();
-//			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - FINISH ");
+		//	Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - CLOSING OUTPUT STREAM ");
 
 
 		}

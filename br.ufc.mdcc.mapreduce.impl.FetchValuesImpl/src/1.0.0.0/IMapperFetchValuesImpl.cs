@@ -65,7 +65,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 
 					int i = (int) ((IIntegerInstance)Partition_key.Instance).Value;					
 					
-//					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) LOOP - SEND TO " + reducer_ranks[i] + ", source rank is " + comm.Rank + ", count=" + (count++) + "i=" + i); 
+					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) LOOP - SEND TO " + reducer_ranks[i] + ", source rank is " + comm.Rank + ", count=" + (count++) + "i=" + i); 
 
 					comm.Send<IKVPairInstance<OMK,OMV>>(item, reducer_ranks[i], TAG_FETCHVALUES_OMV);
 				}
@@ -73,7 +73,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 				for (int i=0; i < nr; i++)
 					comm.Send<IKVPairInstance<OMK,OMV>>(last_item, reducer_ranks[i], TAG_FETCHVALUES_OMV_FINISH);
 
-//				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
+				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
 			}
 
 

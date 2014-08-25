@@ -102,8 +102,8 @@
     </innerComponent>
     <supplyParameter cRef="bin_type" direct="true" varName="B"/>
     <supplyParameter cRef="kv_pair" direct="true" varName="T2"/>
-    <innerRenaming cNewName="rank" cOldName="output_key" cRef="bin_function"/>
     <innerRenaming cNewName="key" cOldName="input_key" cRef="bin_function"/>
+    <innerRenaming cNewName="rank" cOldName="output_key" cRef="bin_function"/>
     <interface iRef="ISourceScatterSplitData" nArgs="3">
       <slice isRef="bins">
         <originRef cRef="bins" iRef="IIterator"/>
