@@ -19,10 +19,9 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 		public override void main() { 
 			string fileContent = readInput (PATH);
 			((IStringInstance)Input_data.Instance).Value = "1 c 0" + System.Environment.NewLine + fileContent;
+
 			while (!done) {
 				this.Path_flow.go ();
-				this.Path_flow.destroySlice ();
-				//System.Threading.Thread.Sleep (3000);
 
 				IIteratorInstance<IKVPair<IString,IString>> output = (IIteratorInstance<IKVPair<IString, IString>>)Output_data.Instance;
 
@@ -33,14 +32,18 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 					IKVPairInstance<IString,IString> kv = (IKVPairInstance<IString, IString>)o;
 					IStringInstance k = (IStringInstance)kv.Key;
 					IStringInstance v = (IStringInstance)kv.Value;
-					Console.WriteLine (v.Value);
-					buffer = buffer + v.Value + System.Environment.NewLine;
+					Console.WriteLine ("done:"+k.Value+" {"+System.Environment.NewLine+v.Value+"}");
+					buffer = buffer + v.Value;// + System.Environment.NewLine;
 
 				    if (done && k.Value.Equals ("0"))
 						done = false;
 				}
 				((IStringInstance)Input_data.Instance).Value = buffer + fileContent;
-				//done = true;
+
+				//Start Debug
+				done = true;
+				//End Debug
+
 			}
 		}
 		string readInput(string PATH){

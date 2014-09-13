@@ -14,10 +14,9 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 		public IPathFlowReduceImpl() { } 
 
 		public override void main() { 
-			IList<double> c = new List<double>();
 			IDictionary<int, double> neibours = new Dictionary<int, double> ();
 			double di = int.MaxValue;
-			double dmin = 0.0;
+			double dmin = int.MaxValue;
 			int done = 1;
 
 			IKVPairInstance<IString, IIterator<IString>> input = (IKVPairInstance<IString, IIterator<IString>>)Input_values.Instance;
@@ -30,35 +29,32 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 				IStringInstance item = (IStringInstance)o;
 
 				string[] values = item.Value.Split (' ');
-				if (values [0].Equals ("c"))
-					c.Add (double.Parse (values [1]));
+				if (values [0].Equals ("c")) {
+					double tmp = double.Parse (values [1]);
+					dmin = min (dmin, tmp);
+				}
 				else if (values [0].Equals ("d")) {
 					di = double.Parse (values [1]);
 				}
 				else 
 					neibours[int.Parse(values[0])]=double.Parse(values[1]);
 			}
-			dmin = min (c,di);
+			dmin = min (dmin,di);
 			if(dmin!=di){
-				di = dmin;
 				IList<string> lista = new List<string> ();
 				foreach (KeyValuePair<int, double> kv in neibours) {
 					buffer = buffer + kv.Key+" c "+ (kv.Value+dmin) + System.Environment.NewLine;
 				}
 				done = 0;
 			}
-			buffer = buffer + k.Value + " d " + di + " " + System.Environment.NewLine;
+			buffer = buffer + k.Value + " d " + dmin + " " + System.Environment.NewLine;
 
 			IKVPairInstance<IString, IString> orv = (IKVPairInstance<IString, IString>) Output_value.newInstance();
 			((IStringInstance)orv.Key).Value = done.ToString ();
 			((IStringInstance)orv.Value).Value = buffer;
 		}
-		public double min (IList<double> c, double di){
-			double min = double.MaxValue;
-			foreach (double d in c) {
-				min = d < min ? d : min;
-			}
-			return min<di?min:di;
+		public double min (double d1, double d2){
+			return d1<d2?d1:d2;
 		}
 	}
 }
