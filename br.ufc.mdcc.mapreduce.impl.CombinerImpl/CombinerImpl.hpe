@@ -132,13 +132,13 @@
       <visualDescription h="40" w="182" x="315" y="60">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="combine_input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_data" sRef="combine_function"/>
-      </port>
       <port name="target_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output_data" sRef="combine_function"/>
+      </port>
+      <port name="combine_input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="combine_function"/>
       </port>
       <externalReferences>MPI</externalReferences>
       <parameter iname="IData" order="1" parid="output_type" uname="data" varid="O"/>

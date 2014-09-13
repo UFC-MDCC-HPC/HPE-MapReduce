@@ -16,7 +16,7 @@
           <visualDescription h="60" w="130" x="317" y="489">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###898713977"/>
+          <parameter formFieldId="item_type" varName="X###1588670699"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="62" y="16"/>
           </unitBounds>
@@ -25,7 +25,7 @@
           <visualDescription h="99" w="176" x="86" y="346">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1520264617"/>
+          <parameter formFieldId="item_type" varName="X###1791683888"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="75" y="13"/>
           </unitBounds>
@@ -123,13 +123,13 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="bins" sRef="bins"/>
       </port>
-      <port name="rank">
-        <visualDescription h="10" w="10" x="8" y="22"/>
-        <slice pRef="output_key" sRef="bin_function"/>
-      </port>
       <port name="key">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_key" sRef="bin_function"/>
+      </port>
+      <port name="rank">
+        <visualDescription h="10" w="10" x="8" y="22"/>
+        <slice pRef="output_key" sRef="bin_function"/>
       </port>
       <externalReferences>MPI</externalReferences>
       <parameter iname="IData" order="1" parid="item_value_type" uname="data" varid="IMV"/>
