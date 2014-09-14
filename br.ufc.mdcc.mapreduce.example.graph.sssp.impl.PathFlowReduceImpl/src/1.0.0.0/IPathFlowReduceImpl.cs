@@ -10,10 +10,12 @@ using br.ufc.mdcc.common.Iterator;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl { 
 
-	public class IPathFlowReduceImpl : BaseIPathFlowReduceImpl, IPathFlowReduce{
+	public class IPathFlowReduceImpl : BaseIPathFlowReduceImpl, IPathFlowReduce
+	{
 		public IPathFlowReduceImpl() { } 
 
-		public override void main() { 
+		public override void main() 
+		{ 
 			IDictionary<int, double> neibours = new Dictionary<int, double> ();
 			double di = int.MaxValue;
 			double dmin = int.MaxValue;
@@ -25,7 +27,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 
 			string buffer = "";
 			object o;
-			while (v.fetch_next (out o)) {
+			while (v.fetch_next (out o)) 
+			{
 				IStringInstance item = (IStringInstance)o;
 
 				string[] values = item.Value.Split (' ');

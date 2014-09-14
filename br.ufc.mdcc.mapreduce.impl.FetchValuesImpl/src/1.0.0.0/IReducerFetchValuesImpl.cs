@@ -42,9 +42,9 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 
 			int finished_senders = 0;
 
-	//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE 1 !");
+			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE 1 !");
 			comm.Receive<IKVPairInstance<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
-	//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE 1  ! tag=" + status.Tag + ", source=" + status.Source);
+			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE 1  ! tag=" + status.Tag + ", source=" + status.Source);
 
 			int count=0;
 			bool last_finished = false;
@@ -59,7 +59,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 				if (!last_finished) {
 					IIteratorInstance<OMV> iterator = null;
 					if (!kv_cache.ContainsKey (kv.Key)) {
-		//				Console.WriteLine (WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 1 !" + (count++) + " " + kv.Key.GetType ());
+						Console.WriteLine (WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 1 !" + (count++) + " " + kv.Key.GetType ());
 						iterator = Reduce_job_values_factory.newIteratorInstance ();
 						kv_cache.Add (kv.Key, iterator);
 						IKVPairInstance<OMK,IIterator<OMV>> item = (IKVPairInstance<OMK,IIterator<OMV>>)Reduce_job.createItem ();
@@ -67,7 +67,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 						item.Value = iterator;
 						reduce_job_instance.put (item);
 					} else {
-		//				Console.WriteLine (WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 2 !" + (count++));
+						Console.WriteLine (WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) LOOP RECV 2 !" + (count++));
 						kv_cache.TryGetValue (kv.Key, out iterator);
 					}								
 					iterator.put (kv.Value);
@@ -75,12 +75,12 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 				else 
 				{
 					last_finished = false;
-		//			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - FINISH DETECTED ");
+					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - FINISH DETECTED ");
 				}
 
-		//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE n !");
+				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) BEGIN RECEIVE n !");
 				comm.Receive<IKVPairInstance<OMK,OMV>>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out kv, out status);
-		//		Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE n ! tag=" + status.Tag + ", source=" + status.Source);
+				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) END RECEIVE n ! tag=" + status.Tag + ", source=" + status.Source);
 
 				if (status.Tag == TAG_FETCHVALUES_OMV_FINISH) 
 				{
@@ -93,7 +93,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 				kv_item.Value.finish();
 
 			reduce_job_instance.finish();
-		//	Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - CLOSING OUTPUT STREAM ");
+			Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES TARGET) - CLOSING OUTPUT STREAM ");
 
 
 		}

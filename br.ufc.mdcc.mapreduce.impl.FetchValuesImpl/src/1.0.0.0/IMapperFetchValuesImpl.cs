@@ -73,6 +73,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 				for (int i=0; i < nr; i++)
 					comm.Send<IKVPairInstance<OMK,OMV>>(last_item, reducer_ranks[i], TAG_FETCHVALUES_OMV_FINISH);
 
+
 				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
 			}
 

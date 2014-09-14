@@ -22,7 +22,7 @@
           <visualDescription h="60" w="100" x="262" y="481">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1988650288"/>
+          <parameter formFieldId="item_type" varName="X###245291785"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>

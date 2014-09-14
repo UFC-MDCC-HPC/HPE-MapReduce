@@ -19,18 +19,21 @@ namespace br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity {
 			IIteratorInstance<ORV> input_data_instance = (IIteratorInstance<ORV>) Input_data.Instance;
 			IIteratorInstance<ORV> output_data_instance = (IIteratorInstance<ORV>) Output_data.Instance;
 			
-//			Console.WriteLine(WorldComm.Rank + ": START COMBINE FUNCTION !!! ");
+			Console.WriteLine(WorldComm.Rank + ": START COMBINE FUNCTION !!! ");
 
 			object item_object;
 			int count=0;
 			while (input_data_instance.fetch_next(out item_object))
 			{
-//				Console.WriteLine(WorldComm.Rank + ": COMBINE_FUNCTION_LOOP 1" + (count++) + " " + item_object.GetType());
+				Console.WriteLine(WorldComm.Rank + ": COMBINE_FUNCTION_LOOP 1 " + (count++) + " " + item_object.GetType());
 				output_data_instance.put(item_object);
 			}
 
+			Console.WriteLine(WorldComm.Rank + ": OUT LOOP COMBINE FUNCTION !!!");
+
 			output_data_instance.finish();
-//			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINE FUNCTION !!!");
+				
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINE FUNCTION !!!");
 		}
 	}
 

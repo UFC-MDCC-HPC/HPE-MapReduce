@@ -15,7 +15,9 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
 		public override void main() 
 		{ 
 			// Executar Send_bins.go()
+			Console.WriteLine(Rank + ": STARTING SPLITER TARGET");
 			Send_bins.go ();
+			Console.WriteLine(Rank + ": FINISHING SPLITER TARGET");
 		}
 	}
 }

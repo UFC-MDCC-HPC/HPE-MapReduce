@@ -35,8 +35,11 @@ namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl {
 			farm_map_task.Start();
 			farm_reduce_task.Start();
 
+			Console.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #1!");
 			farm_reduce_task.Wait();
+			Console.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #2!");
 			farm_map_task.Wait();	
+			Console.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #3!");
 	}
 
 }

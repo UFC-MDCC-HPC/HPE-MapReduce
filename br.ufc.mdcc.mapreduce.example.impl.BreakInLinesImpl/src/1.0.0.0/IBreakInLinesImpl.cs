@@ -28,16 +28,17 @@ namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl {
 			foreach (string line in lines) 
 			{
 				if (!line.Trim().Equals ("")) {
-					//	Console.WriteLine(WorldComm.Rank + ": LINE = " + line);
+					Console.WriteLine(WorldComm.Rank + ": LINE = " + line);
 					IKVPairInstance<IInteger,IString> line_pair = (IKVPairInstance<IInteger,IString>)Output_data.createItem ();
 					((IIntegerInstance)line_pair.Key).Value = line_counter++;
 					((IStringInstance)line_pair.Value).Value = line;
 					output_data_instance.put (line_pair);
 				}
 			}
-			
+
+			Console.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES #1 !!! " + output_data_instance.GetHashCode());
 			output_data_instance.finish();
-			//Console.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES !!!");
+			Console.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES #2 !!!");
 		}
 
 	}

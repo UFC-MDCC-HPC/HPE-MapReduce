@@ -55,11 +55,13 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 		private ConcurrentQueue<Option<object>> items = new ConcurrentQueue<Option<object>>();
 
 		readonly object not_empty = new object();
+		readonly Semaphore finished_iterator_1 = new Semaphore (0, int.MaxValue);
+		readonly Semaphore finished_iterator_2 = new Semaphore (0, int.MaxValue);
 
 		public void put (object item)
 		{
-			if (this.HasFinished)
-				throw new FinishedIteratorException();
+			//if (this.HasFinished)
+			//	throw new FinishedIteratorException();
 
 			items.Enqueue(new Some<object>(item));
 
@@ -68,8 +70,8 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 
 		public void putAll (IIteratorInstance<T> items)
 		{
-			if (this.HasFinished)
-				throw new FinishedIteratorException();
+			//if (this.HasFinished)
+			//	throw new FinishedIteratorException();
 
 			object item;
 			while (items.fetch_next(out item)) put(item);
@@ -77,18 +79,28 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 
 		public void finish ()
 		{
-			if (this.HasFinished)
-				throw new FinishedIteratorException();
+			//if (this.HasFinished)
+			//	throw new FinishedIteratorException();
 
 			this.items.Enqueue(new None<object>());
 
 			lock (not_empty) { Monitor.Pulse(not_empty); }
+
+			Console.Out.WriteLine ("FINISH - BEGIN WAIT " + finished_iterator_1.GetHashCode());
+		//	finished_iterator_1.WaitOne ();
+			Console.Out.WriteLine ("FINISH - END WAIT " + finished_iterator_1.GetHashCode() + 
+			                             " : BEGIN RELEASE " + finished_iterator_2.GetHashCode());
+		//	finished_iterator_2.Release ();
+			Console.Out.WriteLine ("FINISH - END RELEASE " + finished_iterator_2.GetHashCode());
+
 		}
 
 		public bool fetch_next (out object result)
 		{
-			if (this.HasFinished)
-				throw new FinishedIteratorException();
+			bool has_finished = false; //this.HasFinished;
+
+			//if (has_finished)
+			//	throw new FinishedIteratorException();
 
 			result = null;
 
@@ -98,29 +110,29 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 			Option<object> item;
 			items.TryDequeue(out item);
 
-			if (item.IsNone)
-				has_finished = true;
+			if (item.IsNone) 
+			{
+				Console.Out.WriteLine ("FETCH_NEXT - BEGIN RELEASE " + finished_iterator_1.GetHashCode());
+			//	finished_iterator_1.Release ();
+				Console.Out.WriteLine ("FETCH_NEXT - END RELEASE " + finished_iterator_1.GetHashCode() 
+				                               + " : BEGIN WAIT " + finished_iterator_2.GetHashCode());
+			//	finished_iterator_2.WaitOne ();
+				Console.Out.WriteLine ("FETCH_NEXT - END WAIT " + finished_iterator_2.GetHashCode());
+				/*this.has_finished =*/ has_finished = true;
+		}
 			else 
 				result = item.Value;				
 
-			return !HasFinished;
+			return !has_finished;
 		}
 
-		public bool HasFinished
-		{
-			get 
-			{ 
-				return has_finished; 
-			}
-		}
+	}
 
-		}
-
-		public class FinishedIteratorException : Exception
+	public class FinishedIteratorException : Exception
 		{
 		}
 
-		public class NonRestartableIteratorException : Exception
+	public class NonRestartableIteratorException : Exception
 		{
 		}
 

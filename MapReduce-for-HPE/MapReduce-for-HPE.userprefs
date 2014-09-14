@@ -1,11 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/IMasterProcessImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.common.impl.IteratorImpl/src/1.0.0.0/IIteratorImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl/src/1.0.0.0/IBreakInPageNodesImpl.cs" Line="18" Column="33" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.clique.BreakInCliqueNodes/src/1.0.0.0/IBreakInCliqueNodes.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.clique.impl.BreakInCliqueNodesImpl/src/1.0.0.0/IBreakInCliqueNodesImpl.cs" Line="12" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/IMasterProcessImpl.cs" Line="18" Column="41" />
+      <File FileName="../br.ufc.mdcc.common.impl.IteratorImpl/src/1.0.0.0/IIteratorImpl.cs" Line="138" Column="2" />
+      <File FileName="../br.ufc.mdcc.common.Iterator/src/1.0.0.0/IIterator.cs" Line="32" Column="2" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ITargetCombinerImpl.cs" Line="92" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.user.impl.CombineFunctionDefaultIdentity/src/1.0.0.0/ICombineIdentityImpl.cs" Line="35" Column="4" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/IMapperImpl.cs" Line="45" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IMapperFetchValuesImpl.cs" Line="76" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ReducerImpl/src/1.0.0.0/IWorkReducerImpl.cs" Line="52" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ISourceCombinerImpl.cs" Line="67" Column="2" />
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/ISourceScatterSplitDataImpl.cs" Line="77" Column="3" />
+      <File FileName="../br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl/src/1.0.0.0/ITargetScatterSplitDataImpl.cs" Line="64" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl/src/1.0.0.0/IBreakInPageNodesImpl.cs" Line="78" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.clique.impl.BreakInCliqueNodesImpl/src/1.0.0.0/IBreakInCliqueNodesImpl.cs" Line="78" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl/src/1.0.0.0/IBreakInLinesImpl.cs" Line="35" Column="5" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl/src/1.0.0.0/IMasterProcessImpl.cs" Line="63" Column="15" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/src/1.0.0.0/IMasterProcessImpl.cs" Line="52" Column="5" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.FetchValuesImpl/src/1.0.0.0/IReducerFetchValuesImpl.cs" Line="96" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.ShufflerImpl/src/1.0.0.0/ISourceShufflerImpl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

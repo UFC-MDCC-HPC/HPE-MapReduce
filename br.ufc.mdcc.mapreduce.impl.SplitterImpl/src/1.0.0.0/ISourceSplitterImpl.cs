@@ -36,8 +36,11 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
 			split_function_task.Start ();
 			send_bins_task.Start ();
 
-			split_function_task.Wait ();
+			Console.WriteLine (Rank + ": SPLITTER FINISH #1");
 			send_bins_task.Wait ();
+			Console.WriteLine (Rank + ": SPLITTER FINISH #2");
+			split_function_task.Wait ();
+			Console.WriteLine (Rank + ": SPLITTER FINISH #3");
         }
     }
 }

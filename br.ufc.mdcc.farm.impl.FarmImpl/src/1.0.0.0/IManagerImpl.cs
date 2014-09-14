@@ -29,8 +29,11 @@ public override void main()
 	scatter_task.Start();
 	gather_task.Start();
 
+	Console.WriteLine (Rank + ": FARM FINISH #1");
 	gather_task.Wait();
+	Console.WriteLine (Rank + ": FARM FINISH #2");
 	scatter_task.Wait();
+	Console.WriteLine (Rank + ": FARM FINISH #3");
 }
 
 

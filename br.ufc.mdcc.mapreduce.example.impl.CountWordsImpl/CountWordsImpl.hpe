@@ -22,7 +22,7 @@
           <visualDescription h="60" w="100" x="262" y="481">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1447787449"/>
+          <parameter formFieldId="item_type" varName="X###238223975"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -81,13 +81,13 @@
       <visualDescription h="40" w="80" x="155" y="51">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="count_words"/>
-      </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="count_words"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="count_words"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

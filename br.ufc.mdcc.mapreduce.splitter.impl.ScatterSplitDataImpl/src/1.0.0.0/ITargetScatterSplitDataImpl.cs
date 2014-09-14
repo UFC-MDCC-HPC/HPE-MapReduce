@@ -32,7 +32,7 @@ public class ITargetScatterSplitDataImpl<IMK, IMV> : BaseITargetScatterSplitData
 			// 1. recebe os bins enviados pelo gerente (unidade source),
 			//    através do MPI, e os insere no Target_data.
 
-	//		Console.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA TARGET");
+			Console.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA TARGET");
 
 			MPI.CompletedStatus status;
 			int source_rank = this.UnitRanks["source"][0];
@@ -41,26 +41,27 @@ public class ITargetScatterSplitDataImpl<IMK, IMV> : BaseITargetScatterSplitData
 
 			IIteratorInstance<IKVPair<IMK, IMV>> target_data_instance = (IIteratorInstance<IKVPair<IMK, IMV>>) Target_data.Instance;
 
-	//		Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE BIN KEY from " + source_rank + "count=" + (count++));
+			Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE BIN KEY from " + source_rank + "count=" + (count++));
 			comm.Receive<object> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
-	//		Console.WriteLine(WorldComm.Rank + ": END RECEIVE BIN KEY from " + source_rank);
+			Console.WriteLine(WorldComm.Rank + ": END RECEIVE BIN KEY from " + source_rank);
 			while (status.Tag != TAG_SPLITTER_IMK_FINISH)
 			{
-	//			Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE BIN VALUE from " + source_rank);
+				Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE BIN VALUE from " + source_rank);
 				comm.Receive<object> (source_rank, TAG_SPLITTER_IMV, out bin_value, out status);
-	//			Console.WriteLine(WorldComm.Rank + ": END RECEIVE BIN VALUE from " + source_rank);
+				Console.WriteLine(WorldComm.Rank + ": END RECEIVE BIN VALUE from " + source_rank);
 				IKVPairInstance<IMK, IMV> pair = (IKVPairInstance<IMK, IMV>) Target_data.createItem();
 				pair.Key = bin_key;
 				pair.Value = bin_value;
 				target_data_instance.put(pair);
-	//			Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE BIN KEY from " + source_rank + "count=" + (count++));
+				Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE BIN KEY from " + source_rank + "count=" + (count++));
 				comm.Receive<object> (source_rank, MPI.Unsafe.MPI_ANY_TAG, out bin_key, out status);
-	//			Console.WriteLine(WorldComm.Rank + ": END RECEIVE BIN KEY from " + source_rank);
+			Console.WriteLine(WorldComm.Rank + ": END RECEIVE BIN KEY from " + source_rank);
 
 			}
 
-	//		Console.WriteLine(WorldComm.Rank + ": FINISH ALL BIN KEYs !!!");
+			Console.WriteLine(WorldComm.Rank + ": FINISH ALL BIN KEYs #1 !!!");
 			target_data_instance.finish();
+			Console.WriteLine(WorldComm.Rank + ": FINISH ALL BIN KEYs #2 !!!");
 
 		}
 	}

@@ -202,8 +202,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="input_data" cOldName="input" cRef="clique"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="clique"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="clique"/>
     <interface iRef="IMaster" nArgs="1">
       <slice isRef="clique">
         <originRef cRef="clique" iRef="IManagerMapReduce"/>

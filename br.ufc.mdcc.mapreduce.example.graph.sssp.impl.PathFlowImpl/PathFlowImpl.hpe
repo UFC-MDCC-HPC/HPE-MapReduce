@@ -22,7 +22,7 @@
           <visualDescription h="60" w="100" x="416" y="106">
             <color b="203" g="192" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###1367353410"/>
+          <parameter formFieldId="item_type" varName="X###716368820"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -72,7 +72,7 @@
           <dependency>br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/bin/1.0.0.0/BaseIMaster.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl { &#xA;&#xA;public class IMasterImpl&lt;PLATFORM> : BaseIMasterImpl&lt;PLATFORM>, IMaster&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public IMasterImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;this.Path_flow.go ();&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IMasterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/bin/1.0.0.0/IMasterImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl { &#xA;&#xA;public class IMasterImpl&lt;PLATFORM> : BaseIMasterImpl&lt;PLATFORM>, IMaster&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public IMasterImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() &#xA;{ &#xA;    this.Path_flow.go ();&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: --- FINISH PATH_FLOW.GO !&quot;);&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IMasterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/bin/1.0.0.0/IMasterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/bin/1.0.0.0/BaseIMasterImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/bin/1.0.0.0/IMaster.dll</dependency>
@@ -81,13 +81,13 @@
       <visualDescription h="63" w="139" x="203" y="90">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output" sRef="path_flow"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input" sRef="path_flow"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="path_flow"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

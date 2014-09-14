@@ -7,6 +7,7 @@ using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
+using System.Threading;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl { 
 
@@ -20,15 +21,21 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 			string fileContent = readInput (PATH);
 			((IStringInstance)Input_data.Instance).Value = "1 c 0" + System.Environment.NewLine + fileContent;
 
-			while (!done) {
-				this.Path_flow.go ();
+			int iteration = 0;
+
+			while (!done) 
+			{
+				Console.WriteLine (Rank + ": SSSP - GO START !!! iteration=" + iteration);
+				Thread tGo = new Thread(new ThreadStart(Go));
+				tGo.Start();
 
 				IIteratorInstance<IKVPair<IString,IString>> output = (IIteratorInstance<IKVPair<IString, IString>>)Output_data.Instance;
 
 				string buffer = "";
 				done = true;
 				object o;
-				while (output.fetch_next (out o)) {
+				while (output.fetch_next (out o)) 
+				{
 					IKVPairInstance<IString,IString> kv = (IKVPairInstance<IString, IString>)o;
 					IStringInstance k = (IStringInstance)kv.Key;
 					IStringInstance v = (IStringInstance)kv.Value;
@@ -38,10 +45,16 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 				    if (done && k.Value.Equals ("0"))
 						done = false;
 				}
+
+				Console.WriteLine (Rank + ": SSSP - GO BEGIN JOIN !!! iteration=" + iteration);
+				tGo.Join ();
+				Console.WriteLine (Rank + ": SSSP - GO END JOIN !!! iteration=" + iteration++);
+
 				((IStringInstance)Input_data.Instance).Value = buffer + fileContent;
 
+	
 				//Start Debug
-				done = true;
+				//done = true;
 				//End Debug
 
 			}
@@ -49,5 +62,9 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 		string readInput(string PATH){
 			return System.IO.File.ReadAllText(PATH);
 		}
-	}
+		public void Go ()
+		{
+			Path_flow.go ();
+		}
+}
 }

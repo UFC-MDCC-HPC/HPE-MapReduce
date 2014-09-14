@@ -37,20 +37,20 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
             startThreads(); 
         }
 
-        /* Recebimento de ORVs das unidades source */
-        public void receiveCombineORVs() 
-		{
-			IIteratorInstance<ORV> combine_input_data_instance = (IIteratorInstance<ORV>) Combine_input_data.Instance;
+		private IIteratorInstance<ORV> combine_input_data_instance;
 
-//			Console.WriteLine(WorldComm.Rank + ": START COMBINER TARGET !!!");
+        /* Recebimento de ORVs das unidades source */
+		public void receiveCombineORVs() 
+		{
+			Console.WriteLine(WorldComm.Rank + ": START COMBINER TARGET !!!");
 
 			object orv;
             MPI.CompletedStatus status;
             while (listenFinishedObject < size_reducers) 
 			{
-//				Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE COMBINER TARGET to ");
+				Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE COMBINER TARGET to ");
 				comm.Receive<object>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out orv, out status);
-//				Console.WriteLine(WorldComm.Rank + ": END RECEIVE COMBINER TARGET to " + (status.Source));
+				Console.WriteLine(WorldComm.Rank + ": END RECEIVE COMBINER TARGET to " + (status.Source));
 
 				if (status.Tag == TAG_COMBINER_ORV_FINISH) 
 					listenFinishedObject = listenFinishedObject + 1;
@@ -58,10 +58,9 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 					combine_input_data_instance.put(orv);
             }
 
-			combine_input_data_instance.finish();
-			
+			combine_input_data_instance.finish  ();
             
-//			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER TARGET !!!");
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER TARGET !!!");
         }
 
         /* Método da Thread que chama o CombineFunction */
@@ -71,8 +70,11 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         }
 
         /* Threads start */
-        private void startThreads() {
-            /*Instancias*/
+        private void startThreads() 
+		{
+			combine_input_data_instance = (IIteratorInstance<ORV>) Combine_input_data.Instance;
+
+			/*Instancias*/
             Thread tReceive = new Thread(new ThreadStart(receiveCombineORVs));
             Thread tperformCombine = new Thread(new ThreadStart(performCombineFunction));
 
@@ -81,11 +83,12 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
             tperformCombine.Start();
 
             /* Joins*/
-	//		Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #0 !!!");
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #0 !!!");
             tReceive.Join();
-	//		Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #1 !!!");
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #1 !!!");
             tperformCombine.Join();
-	//		Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #2 !!!");
-        }
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #2 !!!");
+
+      }
     }
 }

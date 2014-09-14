@@ -15,8 +15,10 @@ public IMasterImpl() {
 
 } 
 
-public override void main() { 
-this.Path_flow.go ();
+public override void main() 
+{ 
+    this.Path_flow.go ();
+			Console.WriteLine (Rank + ": --- FINISH PATH_FLOW.GO !");
 }
 
 }
