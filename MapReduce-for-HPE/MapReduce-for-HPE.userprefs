@@ -1,13 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/IPathFlowReduceImpl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl/src/1.0.0.0/IPathFlowReduceImpl.cs">
     <Files>
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/IMasterImpl.cs" Line="52" Column="35" />
-      <File FileName="../br.ufc.mdcc.common.communication.impl.BroadcastImpl/src/1.0.0.0/IBroadcastImpl.cs" Line="31" Column="17" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/IPathFlowMapImpl.cs" Line="24" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/IMasterImpl.cs" Line="59" Column="37" />
+      <File FileName="../br.ufc.mdcc.common.communication.impl.BroadcastImpl/src/1.0.0.0/IBroadcastImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/IPathFlowMapImpl.cs" Line="1" Column="1" />
       <File FileName="../br.ufc.mdcc.common.impl.IntegerImpl/src/1.0.0.0/IIntegerImpl.cs" Line="1" Column="1" />
       <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/IPathFlowReduceImpl.cs" Line="23" Column="1" />
       <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl/src/1.0.0.0/BaseIPathFlowMapImpl.cs" Line="1" Column="1" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowMapImpl/src/1.0.0.0/IPathFlowMapImpl.cs" Line="17" Column="22" />
+      <File FileName="../br.ufc.mdcc.mapreduce.impl.MapperImpl/src/1.0.0.0/IMapperImpl.cs" Line="42" Column="22" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl/src/1.0.0.0/IPathFlowReduceImpl.cs" Line="39" Column="9" />
+      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce/src/1.0.0.0/IPathFlowReduce.cs" Line="11" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,12 +19,10 @@
           <Node name="br.ufc.mdcc.common.communication.Broadcast" expanded="True" />
           <Node name="br.ufc.mdcc.common.communication.impl.BroadcastImpl" expanded="True" />
           <Node name="br.ufc.mdcc.common.impl.IntegerImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl" expanded="True">
-            <Node name="IPathFlowReduceImpl.cs" selected="True" />
-          </Node>
-          <Node name="br.ufc.mdcc.mapreduce.impl.CombinerImpl" expanded="True" />
+          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl" expanded="True" />
+          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl" expanded="True" selected="True" />
+          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowReduce" expanded="True" />
+          <Node name="br.ufc.mdcc.mapreduce.impl.MapperImpl" expanded="True" />
         </State>
       </Pad>
     </Pads>

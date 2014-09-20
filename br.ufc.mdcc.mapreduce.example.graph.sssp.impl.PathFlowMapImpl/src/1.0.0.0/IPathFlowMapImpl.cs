@@ -14,8 +14,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowMapImpl {
 
 		public override void main() { 
 			IStringInstance input = (IStringInstance) Input_value.Instance;
-
 			IIteratorInstance<IKVPair<IString, IString>> output = (IIteratorInstance<IKVPair<IString, IString>>)Output_data.Instance;
+
 			if (!input.Value.Equals ("")) {
 				string[] words = input.Value.Split (' ');
 				IKVPairInstance<IString, IString> kvpair = (IKVPairInstance<IString, IString>) Output_data.createItem ();

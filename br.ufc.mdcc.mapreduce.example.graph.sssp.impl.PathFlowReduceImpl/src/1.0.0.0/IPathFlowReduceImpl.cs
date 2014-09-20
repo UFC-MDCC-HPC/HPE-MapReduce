@@ -12,11 +12,21 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 
 	public class IPathFlowReduceImpl : BaseIPathFlowReduceImpl, IPathFlowReduce
 	{
+		IDictionary<int,IDictionary<int, double>> neighbours = new Dictionary<int, IDictionary<int,double>> ();
+
 		public IPathFlowReduceImpl() { } 
+
+		#region IPathFlowReduce implementation
+
+		public void clearNeighbours ()
+		{
+			neighbours.Clear ();
+		}
+
+		#endregion
 
 		public override void main() 
 		{ 
-			IDictionary<int, double> neighbours = new Dictionary<int, double> ();
 			double di = int.MaxValue;
 			double dmin = int.MaxValue;
 			int done = 1;
@@ -24,6 +34,10 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 			IKVPairInstance<IString, IIterator<IString>> input = (IKVPairInstance<IString, IIterator<IString>>)Input_values.Instance;
 			IStringInstance k = (IStringInstance)input.Key;
 			IIteratorInstance<IString> v = (IIteratorInstance<IString>)input.Value;
+
+			int k_int = int.Parse (k.Value);
+			if (!neighbours.ContainsKey (k_int))
+				neighbours [k_int] = new Dictionary<int,double> ();
 
 			string buffer = "";
 			object o;
@@ -42,14 +56,13 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 					di = double.Parse (values [1]);
 				}
 				else 
-					neighbours[int.Parse(values[0])] = double.Parse(values[1]);
+					neighbours[k_int][int.Parse(values[0])] = double.Parse(values[1]);
 			}
 
 			dmin = min (dmin,di);
 			if(dmin != di)
 			{
-				IList<string> lista = new List<string> ();
-				foreach (KeyValuePair<int, double> kv in neighbours) 
+				foreach (KeyValuePair<int, double> kv in neighbours[k_int]) 
 						buffer = buffer + kv.Key + " c "+ (kv.Value + dmin) + System.Environment.NewLine;
 				done = 0;
 			}

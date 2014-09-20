@@ -36,11 +36,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl {
 				}
 			}
 
+			input_data_instance.Value = setV + System.Environment.NewLine + setE;
 
 			int count = 0;
 			while (done == 0) 
 			{
-				input_data_instance.Value = setV + System.Environment.NewLine + setE;
 
 				Console.WriteLine (Rank + ": --- BEGIN ITERATION PATH_FLOW.GO ! - " + (++count)  + System.Environment.NewLine + setV + " ----- "+  setE );
 				this.Path_flow.go ();
@@ -55,6 +55,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl {
 				setV = setV.Remove (setV.IndexOf (done == 1 ? "True" : "False") - 2);
 
 				Console.WriteLine (Rank + ": --- END ITERATION PATH_FLOW.GO ! - " + count);
+
+				input_data_instance.Value = setV;
 			}
 			
 
