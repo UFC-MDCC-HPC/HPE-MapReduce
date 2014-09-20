@@ -64,7 +64,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 			comm.Send<object>(last_orv, root, TAG_COMBINER_ORV_FINISH);
 			Console.WriteLine(WorldComm.Rank + ": END SEND FINISH COMBINER SOURCE to " + root);
 
-				Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER SOURCE !!!");
+			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER SOURCE !!!");
         }
 
     }

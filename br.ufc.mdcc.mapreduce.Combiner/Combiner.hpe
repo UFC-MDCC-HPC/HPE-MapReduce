@@ -12,7 +12,7 @@
         <parameter formFieldId="input_type" varName="T"/>
         <parameter formFieldId="output_type" varName="O"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="source_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="133" x="228" y="448">
+          <visualDescription h="60" w="133" x="68" y="309">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <parameter formFieldId="item_type" varName="ORV"/>
@@ -21,7 +21,7 @@
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="target_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="458" y="310">
+          <visualDescription h="60" w="100" x="392" y="268">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -46,7 +46,7 @@
     <parameter componentRef="combine_function" formFieldId="combine_function" order="2" varName="Cf"/>
     <parameter componentRef="output_type" formFieldId="output_type" order="1" varName="O"/>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_output_type" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="60" w="133" x="228" y="448">
+      <visualDescription h="60" w="133" x="68" y="309">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <parameter formFieldId="item_type" varName="ORV"/>
@@ -69,7 +69,7 @@
       <parameter formFieldId="input_item_type" varName="ORV"/>
       <parameter formFieldId="output_type" varName="O"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="output_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="458" y="310">
+        <visualDescription h="60" w="100" x="392" y="268">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -98,11 +98,11 @@
       </unitBounds>
     </innerComponent>
     <supplyParameter cRef="input_output_type" direct="true" varName="T"/>
-    <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
     <innerRenaming cNewName="combine_input_data" cOldName="input_data" cRef="combine_function"/>
+    <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
     <fusion>
-      <cRefs>combine_function</cRefs>
       <cRefs>base</cRefs>
+      <cRefs>combine_function</cRefs>
       <pRef>target_data</pRef>
     </fusion>
     <interface iRef="ISourceCombiner" nArgs="1">
