@@ -93,10 +93,10 @@
       </action>
     </interface>
     <unit iRef="IReduceFunction" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
-      <slices cRef="output_value" slice_replica="0" uRef="data" sliceName="output_value" transitive="false">
+      <slices cRef="output_value" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_value" transitive="false">
         <visualDescription h="10" w="10" x="112" y="26"/>
       </slices>
-      <slices cRef="input_values" slice_replica="0" uRef="kv_pair" sliceName="input_values" transitive="false">
+      <slices cRef="input_values" inner_replica="0" slice_replica="0" uRef="kv_pair" sliceName="input_values" transitive="false">
         <visualDescription h="10" w="10" x="33" y="0"/>
       </slices>
       <visualDescription h="40" w="141" x="310" y="329"/>

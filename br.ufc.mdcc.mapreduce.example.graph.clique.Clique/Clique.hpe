@@ -202,8 +202,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="output_data" cOldName="output" cRef="clique"/>
     <innerRenaming cNewName="input_data" cOldName="input" cRef="clique"/>
+    <innerRenaming cNewName="output_data" cOldName="output" cRef="clique"/>
     <interface iRef="IMaster" nArgs="1">
       <slice isRef="clique">
         <originRef cRef="clique" iRef="IManagerMapReduce"/>
@@ -222,13 +222,13 @@
       <visualDescription h="56" w="108" x="252" y="91">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="clique"/>
-      </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output" sRef="clique"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="clique"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
@@ -280,13 +280,13 @@
       </action>
     </interface>
     <unit iRef="IMaster" multiple="false" private="false" replica="0" uRef="master" visibleInterface="true">
-      <slices cRef="input_data" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
+      <slices cRef="input_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="output_data" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="clique" slice_replica="0" uRef="manager" sliceName="clique" transitive="false">
+      <slices cRef="clique" inner_replica="0" slice_replica="0" uRef="manager" sliceName="clique" transitive="false">
         <visualDescription h="10" w="10" x="36" y="24"/>
         <port>input_data</port>
         <port>output_data</port>
@@ -294,13 +294,13 @@
       <visualDescription h="40" w="80" x="252" y="187"/>
     </unit>
     <unit iRef="ICliqueReduce" multiple="true" private="false" replica="0" uRef="clique_reduce" visibleInterface="true">
-      <slices cRef="clique" slice_replica="0" uRef="reduce_worker" sliceName="clique" transitive="false">
+      <slices cRef="clique" inner_replica="0" slice_replica="0" uRef="reduce_worker" sliceName="clique" transitive="false">
         <visualDescription h="10" w="10" x="6" y="20"/>
       </slices>
       <visualDescription h="40" w="115" x="436" y="282"/>
     </unit>
     <unit iRef="ICliqueMap" multiple="true" private="false" replica="0" uRef="clique_map" visibleInterface="true">
-      <slices cRef="clique" slice_replica="0" uRef="map_worker" sliceName="clique" transitive="false">
+      <slices cRef="clique" inner_replica="0" slice_replica="0" uRef="map_worker" sliceName="clique" transitive="false">
         <visualDescription h="10" w="10" x="109" y="15"/>
       </slices>
       <visualDescription h="40" w="137" x="43" y="294"/>

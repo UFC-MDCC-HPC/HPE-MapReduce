@@ -113,13 +113,13 @@
       </action>
     </interface>
     <unit iRef="IMapFunction" multiple="false" private="false" replica="0" uRef="map_function" visibleInterface="true">
-      <slices cRef="input_key" slice_replica="0" uRef="data" sliceName="input_key" transitive="false">
+      <slices cRef="input_key" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_key" transitive="false">
         <visualDescription h="10" w="10" x="5" y="6"/>
       </slices>
-      <slices cRef="input_value" slice_replica="0" uRef="data" sliceName="input_value" transitive="false">
+      <slices cRef="input_value" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_value" transitive="false">
         <visualDescription h="10" w="10" x="13" y="19"/>
       </slices>
-      <slices cRef="output_data" slice_replica="0" uRef="iterator" sliceName="output_data" transitive="false">
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="output_data" transitive="false">
         <visualDescription h="10" w="10" x="121" y="19"/>
       </slices>
       <visualDescription h="40" w="141" x="265" y="300"/>

@@ -142,12 +142,12 @@
         <visualDescription h="20" w="20" x="112" y="20"/>
       </unitBounds>
     </innerComponent>
-    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
-    <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
-    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
     <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
+    <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
     <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
+    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
     <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
+    <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
     <fusion>
       <cRefs>gather</cRefs>
       <cRefs>work</cRefs>
@@ -268,46 +268,46 @@
       </action>
     </interface>
     <unit iRef="IManager" multiple="false" private="false" replica="0" uRef="manager" visibleInterface="true">
-      <slices cRef="input" slice_replica="0" uRef="data" sliceName="input" transitive="true">
+      <slices cRef="input" inner_replica="0" slice_replica="0" uRef="data" sliceName="input" transitive="true">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="output" slice_replica="0" uRef="data" sliceName="output" transitive="true">
+      <slices cRef="output" inner_replica="0" slice_replica="0" uRef="data" sliceName="output" transitive="true">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="scatter" slice_replica="0" uRef="source" sliceName="scatter" transitive="false">
+      <slices cRef="scatter" inner_replica="0" slice_replica="0" uRef="source" sliceName="scatter" transitive="false">
         <visualDescription h="10" w="10" x="94" y="14"/>
         <port>input</port>
       </slices>
-      <slices cRef="gather" slice_replica="0" uRef="target" sliceName="gather" transitive="false">
+      <slices cRef="gather" inner_replica="0" slice_replica="0" uRef="target" sliceName="gather" transitive="false">
         <visualDescription h="10" w="10" x="102" y="39"/>
         <port>output</port>
       </slices>
-      <slices cRef="platform" slice_replica="0" uRef="platform" sliceName="platform" transitive="false">
+      <slices cRef="platform" inner_replica="0" slice_replica="0" uRef="platform" sliceName="platform" transitive="false">
         <visualDescription h="10" w="10" x="97" y="23"/>
       </slices>
       <visualDescription h="58" w="118" x="16" y="199"/>
     </unit>
     <unit iRef="IWorker" multiple="true" private="false" replica="0" uRef="worker" visibleInterface="true">
-      <slices cRef="result" slice_replica="0" uRef="data" sliceName="result" transitive="true">
+      <slices cRef="result" inner_replica="0" slice_replica="0" uRef="data" sliceName="result" transitive="true">
         <visualDescription h="10" w="10" x="9" y="22"/>
       </slices>
-      <slices cRef="job" slice_replica="0" uRef="data" sliceName="job" transitive="true">
+      <slices cRef="job" inner_replica="0" slice_replica="0" uRef="data" sliceName="job" transitive="true">
         <visualDescription h="10" w="10" x="6" y="8"/>
       </slices>
-      <slices cRef="scatter" slice_replica="0" uRef="target" sliceName="scatter" transitive="false">
+      <slices cRef="scatter" inner_replica="0" slice_replica="0" uRef="target" sliceName="scatter" transitive="false">
         <visualDescription h="10" w="10" x="8" y="12"/>
         <port>job</port>
       </slices>
-      <slices cRef="gather" slice_replica="0" uRef="source" sliceName="gather" transitive="false">
+      <slices cRef="gather" inner_replica="0" slice_replica="0" uRef="source" sliceName="gather" transitive="false">
         <visualDescription h="10" w="10" x="13" y="38"/>
         <port>result</port>
       </slices>
-      <slices cRef="work" slice_replica="0" uRef="work" sliceName="work" transitive="false">
+      <slices cRef="work" inner_replica="0" slice_replica="0" uRef="work" sliceName="work" transitive="false">
         <visualDescription h="10" w="10" x="99" y="25"/>
         <port>result</port>
         <port>job</port>
       </slices>
-      <slices cRef="platform" slice_replica="1" uRef="platform" sliceName="platform" transitive="false">
+      <slices cRef="platform" inner_replica="0" slice_replica="1" uRef="platform" sliceName="platform" transitive="false">
         <visualDescription h="10" w="10" x="12" y="28"/>
       </slices>
       <visualDescription h="55" w="123" x="414" y="201"/>

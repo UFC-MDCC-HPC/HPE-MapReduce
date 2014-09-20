@@ -66,10 +66,10 @@
     </interface>
     <unit iRef="IKVPair" multiple="false" private="false" replica="0" uRef="kv_pair" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <slices cRef="value_type" slice_replica="0" uRef="data" sliceName="value_type" transitive="false">
+      <slices cRef="value_type" inner_replica="0" slice_replica="0" uRef="data" sliceName="value_type" transitive="false">
         <visualDescription h="10" w="10" x="63" y="17"/>
       </slices>
-      <slices cRef="key_type" slice_replica="0" uRef="data" sliceName="key_type" transitive="false">
+      <slices cRef="key_type" inner_replica="0" slice_replica="0" uRef="data" sliceName="key_type" transitive="false">
         <visualDescription h="10" w="10" x="9" y="25"/>
       </slices>
       <visualDescription h="40" w="80" x="412" y="333"/>

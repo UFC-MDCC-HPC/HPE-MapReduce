@@ -13,6 +13,7 @@
 	</section>
 	<section name="ResourceNavigator">
 		<item value="Aggregate for window 1395372491311" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="true" key="LINK_NAVIGATOR_TO_EDITOR"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
 	</section>
 	<section name="NewWizardAction">

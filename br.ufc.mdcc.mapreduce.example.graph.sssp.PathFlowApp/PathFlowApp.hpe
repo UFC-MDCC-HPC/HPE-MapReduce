@@ -21,12 +21,11 @@
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
-      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-        <visualDescription h="60" w="100" x="416" y="106">
-          <color b="203" g="192" r="255"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="output_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="100" w="100" x="0" y="0">
+          <color b="255" g="255" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1002285842"/>
-        <unitBounds parallel="false" uRef="iterator">
+        <unitBounds parallel="false" uRef="data">
           <visualDescription h="20" w="20" x="5" y="2"/>
         </unitBounds>
       </port>
@@ -48,35 +47,6 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###556419426" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="100" x="484" y="106">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <supplyParameter cRef="C###556419426" varName="X###556419426"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="C###1597493744" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
-      <visualDescription h="60" w="100" x="83" y="71">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <unitBounds parallel="false" uRef="data">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <supplyParameter cRef="C###1597493744" varName="X###1597493744"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1002285842" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="60" w="123" x="162" y="76">
-        <color b="255" g="255" r="255"/>
-      </visualDescription>
-      <parameter formFieldId="value_type" varName="X###556419426"/>
-      <parameter formFieldId="key_type" varName="X###1597493744"/>
-      <unitBounds parallel="false" uRef="kv_pair">
-        <visualDescription h="20" w="20" x="5" y="2"/>
-      </unitBounds>
-    </innerComponent>
-    <supplyParameter cRef="C###1002285842" varName="X###1002285842"/>
     <interface iRef="IPathFlowMapProcess" nArgs="1">
       <slice isRef="path_flow">
         <originRef cRef="path_flow" iRef="IPathFlowMap"/>
@@ -139,13 +109,13 @@
       <visualDescription h="40" w="101" x="222" y="113">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output_data" sRef="path_flow"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_data" sRef="path_flow"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="path_flow"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
@@ -153,25 +123,25 @@
       </action>
     </interface>
     <unit iRef="IPathFlowMapProcess" multiple="true" private="false" replica="0" uRef="path_flow_map_process" visibleInterface="true">
-      <slices cRef="path_flow" slice_replica="0" uRef="path_flow_map" sliceName="path_flow" transitive="false">
+      <slices cRef="path_flow" inner_replica="0" slice_replica="0" uRef="path_flow_map" sliceName="path_flow" transitive="false">
         <visualDescription h="10" w="10" x="109" y="33"/>
       </slices>
       <visualDescription h="66" w="147" x="6" y="276"/>
     </unit>
     <unit iRef="IPathFlowReduceProcess" multiple="true" private="false" replica="0" uRef="path_flow_reduce_process" visibleInterface="true">
-      <slices cRef="path_flow" slice_replica="0" uRef="path_flow_reduce" sliceName="path_flow" transitive="false">
+      <slices cRef="path_flow" inner_replica="0" slice_replica="0" uRef="path_flow_reduce" sliceName="path_flow" transitive="false">
         <visualDescription h="10" w="10" x="19" y="52"/>
       </slices>
       <visualDescription h="68" w="142" x="379" y="257"/>
     </unit>
     <unit iRef="IMasterProcess" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
-      <slices cRef="input_data" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
+      <slices cRef="input_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="output_data" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="path_flow" slice_replica="0" uRef="master" sliceName="path_flow" transitive="false">
+      <slices cRef="path_flow" inner_replica="0" slice_replica="0" uRef="master" sliceName="path_flow" transitive="false">
         <visualDescription h="10" w="10" x="32" y="22"/>
         <port>input_data</port>
         <port>output_data</port>

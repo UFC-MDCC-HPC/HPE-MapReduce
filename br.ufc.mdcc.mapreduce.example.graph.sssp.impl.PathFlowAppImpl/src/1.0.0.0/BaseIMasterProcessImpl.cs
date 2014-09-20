@@ -27,11 +27,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 			}
 		}
 
-		private IIterator<IKVPair<IString,IString>> output_data = null;
-		protected IIterator<IKVPair<IString,IString>> Output_data {
+		private IString output_data = null;
+		protected IString Output_data {
 			get {
 				if (this.output_data == null)
-					this.output_data = (IIterator<IKVPair<IString,IString>>) Services.getPort("output_data");
+					this.output_data = (IString) Services.getPort("output_data");
 				return this.output_data;
 			}
 		}

@@ -102,8 +102,8 @@
     </innerComponent>
     <supplyParameter cRef="bin_type" direct="true" varName="B"/>
     <supplyParameter cRef="kv_pair" direct="true" varName="T2"/>
-    <innerRenaming cNewName="key" cOldName="input_key" cRef="bin_function"/>
     <innerRenaming cNewName="rank" cOldName="output_key" cRef="bin_function"/>
+    <innerRenaming cNewName="key" cOldName="input_key" cRef="bin_function"/>
     <interface iRef="ISourceScatterSplitData" nArgs="3">
       <slice isRef="bins">
         <originRef cRef="bins" iRef="IIterator"/>
@@ -135,13 +135,13 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="bins" sRef="bins"/>
       </port>
-      <port name="key">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_key" sRef="bin_function"/>
-      </port>
       <port name="rank">
         <visualDescription h="10" w="10" x="8" y="22"/>
         <slice pRef="output_key" sRef="bin_function"/>
+      </port>
+      <port name="key">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_key" sRef="bin_function"/>
       </port>
       <parameter iname="IData" order="1" parid="item_value_type" uname="data" varid="IMV"/>
       <parameter iname="IData" order="0" parid="item_key_type" uname="data" varid="IMK"/>
@@ -182,19 +182,19 @@
       </action>
     </interface>
     <unit iRef="ISourceScatterSplitData" multiple="false" private="false" replica="0" uRef="source" visibleInterface="true">
-      <slices cRef="rank" slice_replica="0" uRef="data" sliceName="rank" transitive="true">
+      <slices cRef="rank" inner_replica="0" slice_replica="0" uRef="data" sliceName="rank" transitive="true">
         <visualDescription h="10" w="10" x="147" y="28"/>
       </slices>
-      <slices cRef="bins" slice_replica="0" uRef="iterator" sliceName="bins" transitive="false">
+      <slices cRef="bins" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="bins" transitive="false">
         <visualDescription h="10" w="10" x="69" y="21"/>
       </slices>
-      <slices cRef="key" slice_replica="0" uRef="data" sliceName="key" transitive="true">
+      <slices cRef="key" inner_replica="0" slice_replica="0" uRef="data" sliceName="key" transitive="true">
         <visualDescription h="10" w="10" x="12" y="6"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="43" y="22"/>
       </slices>
-      <slices cRef="bin_function" slice_replica="0" uRef="partition_function" sliceName="bin_function" transitive="false">
+      <slices cRef="bin_function" inner_replica="0" slice_replica="0" uRef="partition_function" sliceName="bin_function" transitive="false">
         <visualDescription h="10" w="10" x="62" y="6"/>
         <port>rank</port>
         <port>key</port>
@@ -202,10 +202,10 @@
       <visualDescription h="40" w="80" x="62" y="233"/>
     </unit>
     <unit iRef="ITargetScatterSplitData" multiple="true" private="false" replica="0" uRef="target" visibleInterface="true">
-      <slices cRef="target_data" slice_replica="0" uRef="iterator" sliceName="target_data" transitive="false">
+      <slices cRef="target_data" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="target_data" transitive="false">
         <visualDescription h="10" w="10" x="23" y="27"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="3" y="20"/>
       </slices>
       <visualDescription h="40" w="80" x="421" y="203"/>

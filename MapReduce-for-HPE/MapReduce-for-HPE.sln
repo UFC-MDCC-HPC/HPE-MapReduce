@@ -188,12 +188,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl.csproj", "{C8CDD14B-6DAA-4822-86F4-7D85660D27E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction.csproj", "{7B751529-2AB6-48C2-8952-DC2706649FEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl", "..\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl\br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl.csproj", "{0096CF1B-E4DF-4990-A9B3-BFE1FA4783F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.communication.Broadcast", "..\br.ufc.mdcc.common.communication.Broadcast\br.ufc.mdcc.common.communication.Broadcast\br.ufc.mdcc.common.communication.Broadcast.csproj", "{0F21EF28-D947-453F-B426-896C26096F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.common.communication.impl.BroadcastImpl", "..\br.ufc.mdcc.common.communication.impl.BroadcastImpl\br.ufc.mdcc.common.communication.impl.BroadcastImpl\br.ufc.mdcc.common.communication.impl.BroadcastImpl.csproj", "{A1DE4860-4BA0-4BBC-AECA-17760F163BDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0096CF1B-E4DF-4990-A9B3-BFE1FA4783F5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0096CF1B-E4DF-4990-A9B3-BFE1FA4783F5}.Debug|x86.Build.0 = Debug|Any CPU
+		{0096CF1B-E4DF-4990-A9B3-BFE1FA4783F5}.Release|x86.ActiveCfg = Release|Any CPU
+		{0096CF1B-E4DF-4990-A9B3-BFE1FA4783F5}.Release|x86.Build.0 = Release|Any CPU
 		{011FBE44-332B-4394-958F-F0CFFF8DDF57}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{011FBE44-332B-4394-958F-F0CFFF8DDF57}.Debug|x86.Build.0 = Debug|Any CPU
 		{011FBE44-332B-4394-958F-F0CFFF8DDF57}.Release|x86.ActiveCfg = Release|Any CPU
@@ -210,6 +222,10 @@ Global
 		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Debug|x86.Build.0 = Debug|Any CPU
 		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Release|x86.ActiveCfg = Release|Any CPU
 		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Release|x86.Build.0 = Release|Any CPU
+		{0F21EF28-D947-453F-B426-896C26096F92}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0F21EF28-D947-453F-B426-896C26096F92}.Debug|x86.Build.0 = Debug|Any CPU
+		{0F21EF28-D947-453F-B426-896C26096F92}.Release|x86.ActiveCfg = Release|Any CPU
+		{0F21EF28-D947-453F-B426-896C26096F92}.Release|x86.Build.0 = Release|Any CPU
 		{133DC369-9996-4F82-8363-7CCBC5C2FE06}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{133DC369-9996-4F82-8363-7CCBC5C2FE06}.Debug|x86.Build.0 = Debug|Any CPU
 		{133DC369-9996-4F82-8363-7CCBC5C2FE06}.Release|x86.ActiveCfg = Release|Any CPU
@@ -362,6 +378,10 @@ Global
 		{7AE08D52-2EA4-48E4-B7B9-379C3789B2B5}.Debug|x86.Build.0 = Debug|x86
 		{7AE08D52-2EA4-48E4-B7B9-379C3789B2B5}.Release|x86.ActiveCfg = Release|x86
 		{7AE08D52-2EA4-48E4-B7B9-379C3789B2B5}.Release|x86.Build.0 = Release|x86
+		{7B751529-2AB6-48C2-8952-DC2706649FEB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7B751529-2AB6-48C2-8952-DC2706649FEB}.Debug|x86.Build.0 = Debug|Any CPU
+		{7B751529-2AB6-48C2-8952-DC2706649FEB}.Release|x86.ActiveCfg = Release|Any CPU
+		{7B751529-2AB6-48C2-8952-DC2706649FEB}.Release|x86.Build.0 = Release|Any CPU
 		{7C5D2876-4BB1-4888-82E3-EED6C5720131}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{7C5D2876-4BB1-4888-82E3-EED6C5720131}.Debug|x86.Build.0 = Debug|Any CPU
 		{7C5D2876-4BB1-4888-82E3-EED6C5720131}.Release|x86.ActiveCfg = Release|Any CPU
@@ -434,6 +454,10 @@ Global
 		{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}.Debug|x86.Build.0 = Debug|Any CPU
 		{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}.Release|x86.Build.0 = Release|Any CPU
+		{A1DE4860-4BA0-4BBC-AECA-17760F163BDF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1DE4860-4BA0-4BBC-AECA-17760F163BDF}.Debug|x86.Build.0 = Debug|Any CPU
+		{A1DE4860-4BA0-4BBC-AECA-17760F163BDF}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1DE4860-4BA0-4BBC-AECA-17760F163BDF}.Release|x86.Build.0 = Release|Any CPU
 		{A6BFDAF0-41FD-4CB9-B477-722F8275E8D1}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{A6BFDAF0-41FD-4CB9-B477-722F8275E8D1}.Debug|x86.Build.0 = Debug|Any CPU
 		{A6BFDAF0-41FD-4CB9-B477-722F8275E8D1}.Release|x86.ActiveCfg = Release|Any CPU

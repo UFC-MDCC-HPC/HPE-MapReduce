@@ -99,19 +99,19 @@
       </action>
     </interface>
     <unit iRef="IGatherSource" multiple="true" private="false" replica="0" uRef="source" visibleInterface="true">
-      <slices cRef="source_data" slice_replica="0" uRef="data" sliceName="source_data" transitive="false">
+      <slices cRef="source_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="source_data" transitive="false">
         <visualDescription h="10" w="10" x="9" y="22"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="63" y="20"/>
       </slices>
       <visualDescription h="40" w="80" x="21" y="191"/>
     </unit>
     <unit iRef="IGatherTarget" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
-      <slices cRef="target_data" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
+      <slices cRef="target_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="59" y="6"/>
       </slices>
       <visualDescription h="40" w="80" x="476" y="186"/>

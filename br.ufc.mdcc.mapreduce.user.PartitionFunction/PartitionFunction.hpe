@@ -61,10 +61,10 @@
       </action>
     </interface>
     <unit iRef="IPartitionFunction" multiple="false" private="false" replica="0" uRef="partition_function" visibleInterface="true">
-      <slices cRef="input_key" slice_replica="0" uRef="data" sliceName="input_key" transitive="false">
+      <slices cRef="input_key" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_key" transitive="false">
         <visualDescription h="10" w="10" x="12" y="6"/>
       </slices>
-      <slices cRef="output_key" slice_replica="0" uRef="data" sliceName="output_key" transitive="false">
+      <slices cRef="output_key" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_key" transitive="false">
         <visualDescription h="10" w="10" x="147" y="28"/>
       </slices>
       <visualDescription h="55" w="172" x="190" y="293"/>

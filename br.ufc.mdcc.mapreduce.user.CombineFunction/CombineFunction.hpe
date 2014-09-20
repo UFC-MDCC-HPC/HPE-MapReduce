@@ -73,10 +73,10 @@
       </action>
     </interface>
     <unit iRef="ICombineFunction" multiple="false" private="false" replica="0" uRef="combine_function" visibleInterface="true">
-      <slices cRef="input_data" slice_replica="0" uRef="iterator" sliceName="input_data" transitive="false">
+      <slices cRef="input_data" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="input_data" transitive="false">
         <visualDescription h="10" w="10" x="14" y="61"/>
       </slices>
-      <slices cRef="output_data" slice_replica="0" uRef="data" sliceName="output_data" transitive="false">
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_data" transitive="false">
         <visualDescription h="10" w="10" x="131" y="60"/>
       </slices>
       <visualDescription h="79" w="151" x="179" y="255"/>

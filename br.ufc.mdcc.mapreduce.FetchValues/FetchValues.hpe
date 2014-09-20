@@ -199,33 +199,33 @@
       </action>
     </interface>
     <unit iRef="IFetchValuesMapper" multiple="true" private="false" replica="0" uRef="mapper" visibleInterface="true">
-      <slices cRef="input_key" slice_replica="0" uRef="data" sliceName="input_key" transitive="true">
+      <slices cRef="input_key" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_key" transitive="true">
         <visualDescription h="10" w="10" x="12" y="6"/>
       </slices>
-      <slices cRef="map_result" slice_replica="0" uRef="iterator" sliceName="map_result" transitive="false">
+      <slices cRef="map_result" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="map_result" transitive="false">
         <visualDescription h="10" w="10" x="52" y="42"/>
       </slices>
-      <slices cRef="output_key" slice_replica="0" uRef="data" sliceName="output_key" transitive="true">
+      <slices cRef="output_key" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_key" transitive="true">
         <visualDescription h="10" w="10" x="147" y="28"/>
       </slices>
-      <slices cRef="partition_function" slice_replica="0" uRef="partition_function" sliceName="partition_function" transitive="false">
+      <slices cRef="partition_function" inner_replica="0" slice_replica="0" uRef="partition_function" sliceName="partition_function" transitive="false">
         <visualDescription h="10" w="10" x="7" y="38"/>
         <port>input_key</port>
         <port>output_key</port>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="84" y="39"/>
       </slices>
       <visualDescription h="58" w="106" x="24" y="166"/>
     </unit>
     <unit iRef="IFetchValuesReducer" multiple="true" private="false" replica="0" uRef="reducer" visibleInterface="true">
-      <slices cRef="reduce_job" slice_replica="0" uRef="iterator" sliceName="reduce_job" transitive="false">
+      <slices cRef="reduce_job" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="reduce_job" transitive="false">
         <visualDescription h="10" w="10" x="61" y="33"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="16" y="31"/>
       </slices>
-      <slices cRef="reduce_job_values_factory" slice_replica="0" uRef="iterator" sliceName="reduce_job_values_factory" transitive="false">
+      <slices cRef="reduce_job_values_factory" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="reduce_job_values_factory" transitive="false">
         <visualDescription h="10" w="10" x="77" y="20"/>
       </slices>
       <visualDescription h="52" w="102" x="477" y="185"/>

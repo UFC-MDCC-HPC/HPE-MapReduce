@@ -109,5 +109,13 @@
       <Project>{FD95AF1A-F8EF-4FB2-A648-2558D083E29E}</Project>
       <Name>br.ufc.mdcc.mapreduce.user.SplitFunction</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction\br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction.csproj">
+      <Project>{7B751529-2AB6-48C2-8952-DC2706649FEB}</Project>
+      <Name>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\br.ufc.mdcc.common.communication.Broadcast\br.ufc.mdcc.common.communication.Broadcast\br.ufc.mdcc.common.communication.Broadcast.csproj">
+      <Project>{0F21EF28-D947-453F-B426-896C26096F92}</Project>
+      <Name>br.ufc.mdcc.common.communication.Broadcast</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

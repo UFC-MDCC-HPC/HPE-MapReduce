@@ -18,8 +18,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         private MPI.Intracommunicator comm;
         private int size_reducers = 0;
 		private int[] rank_reducers = null;
-        private int listenFinishedObject = 0;
-		private int TAG_COMBINER_ORV = 547;
+ 		private int TAG_COMBINER_ORV = 547;
 		private int TAG_COMBINER_ORV_FINISH = 548;
 
 		public ITargetCombinerImpl() { }
@@ -42,6 +41,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
         /* Recebimento de ORVs das unidades source */
 		public void receiveCombineORVs() 
 		{
+			int listenFinishedObject = 0;
 			Console.WriteLine(WorldComm.Rank + ": START COMBINER TARGET !!!");
 
 			object orv;

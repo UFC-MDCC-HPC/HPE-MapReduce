@@ -291,13 +291,13 @@
       </action>
     </interface>
     <unit iRef="IMaster" multiple="false" private="false" replica="0" uRef="master" visibleInterface="true">
-      <slices cRef="input_data" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
+      <slices cRef="input_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="output_data" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="count_words" slice_replica="0" uRef="manager" sliceName="count_words" transitive="false">
+      <slices cRef="count_words" inner_replica="0" slice_replica="0" uRef="manager" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="6" y="28"/>
         <port>input_data</port>
         <port>output_data</port>
@@ -305,13 +305,13 @@
       <visualDescription h="40" w="80" x="251" y="148"/>
     </unit>
     <unit iRef="IWordCounter" multiple="true" private="false" replica="0" uRef="word_counter" visibleInterface="true">
-      <slices cRef="count_words" slice_replica="0" uRef="map_worker" sliceName="count_words" transitive="false">
+      <slices cRef="count_words" inner_replica="0" slice_replica="0" uRef="map_worker" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="94" y="38"/>
       </slices>
       <visualDescription h="58" w="118" x="13" y="274"/>
     </unit>
     <unit iRef="ITallier" multiple="true" private="false" replica="0" uRef="tallier" visibleInterface="true">
-      <slices cRef="count_words" slice_replica="0" uRef="reduce_worker" sliceName="count_words" transitive="false">
+      <slices cRef="count_words" inner_replica="0" slice_replica="0" uRef="reduce_worker" sliceName="count_words" transitive="false">
         <visualDescription h="10" w="10" x="8" y="34"/>
       </slices>
       <visualDescription h="60" w="143" x="429" y="284"/>

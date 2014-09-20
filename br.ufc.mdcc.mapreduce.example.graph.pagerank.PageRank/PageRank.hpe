@@ -202,8 +202,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="input_data" cOldName="input" cRef="page_rank"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="page_rank"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="page_rank"/>
     <interface iRef="IVoteMap" nArgs="1">
       <slice isRef="page_rank">
         <originRef cRef="page_rank" iRef="IMapWorker"/>
@@ -280,25 +280,25 @@
       </action>
     </interface>
     <unit iRef="IVoteMap" multiple="true" private="false" replica="0" uRef="vote_map" visibleInterface="true">
-      <slices cRef="page_rank" slice_replica="0" uRef="map_worker" sliceName="page_rank" transitive="false">
+      <slices cRef="page_rank" inner_replica="0" slice_replica="0" uRef="map_worker" sliceName="page_rank" transitive="false">
         <visualDescription h="10" w="10" x="53" y="14"/>
       </slices>
       <visualDescription h="40" w="80" x="24" y="333"/>
     </unit>
     <unit iRef="IVoteReduce" multiple="true" private="false" replica="0" uRef="vote_reduce" visibleInterface="true">
-      <slices cRef="page_rank" slice_replica="0" uRef="reduce_worker" sliceName="page_rank" transitive="false">
+      <slices cRef="page_rank" inner_replica="0" slice_replica="0" uRef="reduce_worker" sliceName="page_rank" transitive="false">
         <visualDescription h="10" w="10" x="8" y="19"/>
       </slices>
       <visualDescription h="40" w="80" x="419" y="336"/>
     </unit>
     <unit iRef="IMaster" multiple="false" private="false" replica="0" uRef="master" visibleInterface="true">
-      <slices cRef="input_data" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
+      <slices cRef="input_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="output_data" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="page_rank" slice_replica="0" uRef="manager" sliceName="page_rank" transitive="false">
+      <slices cRef="page_rank" inner_replica="0" slice_replica="0" uRef="manager" sliceName="page_rank" transitive="false">
         <visualDescription h="10" w="10" x="21" y="27"/>
         <port>input_data</port>
         <port>output_data</port>

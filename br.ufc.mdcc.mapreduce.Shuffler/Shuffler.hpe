@@ -127,7 +127,7 @@
         <visualDescription h="91" w="152" x="70" y="365">
           <color b="203" g="192" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###468139722"/>
+        <parameter formFieldId="item_type" varName="X###1558062984"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="63" y="14"/>
         </unitBounds>
@@ -136,7 +136,7 @@
         <visualDescription h="60" w="100" x="345" y="473">
           <color b="203" g="192" r="255"/>
         </visualDescription>
-        <parameter formFieldId="item_type" varName="X###1791708693"/>
+        <parameter formFieldId="item_type" varName="X###2096464217"/>
         <unitBounds parallel="false" uRef="iterator">
           <visualDescription h="20" w="20" x="56" y="14"/>
         </unitBounds>
@@ -164,7 +164,7 @@
     <supplyParameter cRef="source_data_type" direct="true" varName="I"/>
     <supplyParameter cRef="value_target_data" direct="true" varName="OOO"/>
     <supplyParameter cRef="kv_pair_target" direct="true" varName="T2"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###468139722" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1558062984" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="173" y="537">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -174,8 +174,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###468139722" varName="X###468139722"/>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1232305017" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1558062984" varName="X###1558062984"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="C###1509898790" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="100" x="579" y="537">
         <color b="203" g="192" r="255"/>
       </visualDescription>
@@ -184,18 +184,18 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1232305017" varName="X###1232305017"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###1791708693" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
+    <supplyParameter cRef="C###1509898790" varName="X###1509898790"/>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="C###2096464217" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="false">
       <visualDescription h="60" w="129" x="394" y="536">
         <color b="255" g="255" r="255"/>
       </visualDescription>
-      <parameter formFieldId="value_type" varName="X###1232305017"/>
+      <parameter formFieldId="value_type" varName="X###1509898790"/>
       <parameter formFieldId="key_type" varName="OMK"/>
       <unitBounds parallel="false" uRef="kv_pair">
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="C###1791708693" varName="X###1791708693"/>
+    <supplyParameter cRef="C###2096464217" varName="X###2096464217"/>
     <innerRenaming cNewName="target_data" cOldName="reduce_job" cRef="fetch_values"/>
     <fusion>
       <cRefs>base</cRefs>
@@ -257,11 +257,11 @@
     </unit>
     <unit iRef="ITargetShuffler" multiple="true" private="false" replica="0" uRef="target" visibleInterface="true">
       <super cRef="base" uRef="target"/>
-      <slices cRef="fetch_values" slice_replica="0" uRef="reducer" sliceName="fetch_values" transitive="false">
+      <slices cRef="fetch_values" inner_replica="0" slice_replica="0" uRef="reducer" sliceName="fetch_values" transitive="false">
         <visualDescription h="10" w="10" x="18" y="26"/>
         <port>target_data</port>
       </slices>
-      <slices cRef="target_data" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
+      <slices cRef="target_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
         <visualDescription h="10" w="10" x="6" y="8"/>
       </slices>
       <visualDescription h="40" w="80" x="418" y="332"/>

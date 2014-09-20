@@ -8,6 +8,7 @@ using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl { 
 
@@ -16,55 +17,25 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 		public IMasterProcessImpl() { } 
 
 		private const string PATH = "/home/cenez/path.txt";
-		private bool done = false;
-		public override void main() { 
-			string fileContent = readInput (PATH);
-			((IStringInstance)Input_data.Instance).Value = "1 c 0" + System.Environment.NewLine + fileContent;
+		public override void main() 
+		{ 
+			IStringInstance input = (IStringInstance)Input_data.Instance;
 
-			int iteration = 0;
+			string setE = readInput (PATH);
 
-			while (!done) 
-			{
-				Console.WriteLine (Rank + ": SSSP - GO START !!! iteration=" + iteration);
-				Thread tGo = new Thread(new ThreadStart(Go));
-				tGo.Start();
+			input.Value =  setE;
 
-				IIteratorInstance<IKVPair<IString,IString>> output = (IIteratorInstance<IKVPair<IString, IString>>)Output_data.Instance;
-
-				string buffer = "";
-				done = true;
-				object o;
-				while (output.fetch_next (out o)) 
-				{
-					IKVPairInstance<IString,IString> kv = (IKVPairInstance<IString, IString>)o;
-					IStringInstance k = (IStringInstance)kv.Key;
-					IStringInstance v = (IStringInstance)kv.Value;
-					Console.WriteLine ("done:"+k.Value+" {"+System.Environment.NewLine+v.Value+"}");
-					buffer = buffer + v.Value;// + System.Environment.NewLine;
-
-				    if (done && k.Value.Equals ("0"))
-						done = false;
-				}
-
-				Console.WriteLine (Rank + ": SSSP - GO BEGIN JOIN !!! iteration=" + iteration);
-				tGo.Join ();
-				Console.WriteLine (Rank + ": SSSP - GO END JOIN !!! iteration=" + iteration++);
-
-				((IStringInstance)Input_data.Instance).Value = buffer + fileContent;
-
-	
-				//Start Debug
-				//done = true;
-				//End Debug
-
-			}
-		}
-		string readInput(string PATH){
-			return System.IO.File.ReadAllText(PATH);
-		}
-		public void Go ()
-		{
+			Console.WriteLine (Rank + ": SSSP APP - GO START !!!");
 			Path_flow.go ();
+			Console.WriteLine (Rank + ": SSSP APP - GO END JOIN !!!");
+
+			IStringInstance output = (IStringInstance) Output_data.Instance;
+			Console.WriteLine (Rank + " END SSSP (output = " + output.Value + ")");
+		}
+
+		string readInput(string PATH)
+		{
+			return System.IO.File.ReadAllText(PATH);
 		}
 }
 }

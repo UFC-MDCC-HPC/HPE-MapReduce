@@ -99,19 +99,19 @@
       </action>
     </interface>
     <unit iRef="IScatterSource" multiple="false" private="false" replica="0" uRef="source" visibleInterface="true">
-      <slices cRef="source_data" slice_replica="0" uRef="data" sliceName="source_data" transitive="false">
+      <slices cRef="source_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="source_data" transitive="false">
         <visualDescription h="10" w="10" x="43" y="4"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="0" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="51" y="28"/>
       </slices>
       <visualDescription h="40" w="80" x="57" y="286"/>
     </unit>
     <unit iRef="IScatterTarget" multiple="true" private="false" replica="0" uRef="target" visibleInterface="true">
-      <slices cRef="target_data" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
+      <slices cRef="target_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
         <visualDescription h="10" w="10" x="6" y="8"/>
       </slices>
-      <slices cRef="mpi_comm" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
+      <slices cRef="mpi_comm" inner_replica="0" slice_replica="1" uRef="mpi" sliceName="mpi_comm" transitive="false">
         <visualDescription h="10" w="10" x="9" y="27"/>
       </slices>
       <visualDescription h="40" w="80" x="421" y="203"/>

@@ -14,7 +14,7 @@ public interface BaseIMaster<PLATFORM> : IComputationKind
 where PLATFORM:IPlatform
 {
 
-	IIterator<IKVPair<IString, IString>> Output_data {get;}
+	IString Output_data {get;}
 	IString Input_data {get;}
 
 

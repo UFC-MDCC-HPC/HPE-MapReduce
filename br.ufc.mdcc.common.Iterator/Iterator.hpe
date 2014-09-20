@@ -47,7 +47,7 @@
     </interface>
     <unit iRef="IIterator" multiple="false" private="false" replica="0" uRef="iterator" visibleInterface="true">
       <super cRef="base" uRef="data"/>
-      <slices cRef="item_factory" slice_replica="0" uRef="data" sliceName="item_factory" transitive="false">
+      <slices cRef="item_factory" inner_replica="0" slice_replica="0" uRef="data" sliceName="item_factory" transitive="false">
         <visualDescription h="10" w="10" x="22" y="26"/>
       </slices>
       <visualDescription h="40" w="80" x="320" y="450"/>

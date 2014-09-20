@@ -161,13 +161,13 @@
     </unit>
     <unit iRef="ITargetCombiner" multiple="false" private="false" replica="0" uRef="target" visibleInterface="true">
       <super cRef="base" uRef="target"/>
-      <slices cRef="combine_input_data" slice_replica="0" uRef="iterator" sliceName="combine_input_data" transitive="true">
+      <slices cRef="combine_input_data" inner_replica="0" slice_replica="0" uRef="iterator" sliceName="combine_input_data" transitive="true">
         <visualDescription h="10" w="10" x="14" y="61"/>
       </slices>
-      <slices cRef="target_data" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
+      <slices cRef="target_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="target_data" transitive="false">
         <visualDescription h="10" w="10" x="10" y="18"/>
       </slices>
-      <slices cRef="combine_function" slice_replica="0" uRef="combine_function" sliceName="combine_function" transitive="false">
+      <slices cRef="combine_function" inner_replica="0" slice_replica="0" uRef="combine_function" sliceName="combine_function" transitive="false">
         <visualDescription h="10" w="10" x="14" y="18"/>
         <port>combine_input_data</port>
         <port>target_data</port>

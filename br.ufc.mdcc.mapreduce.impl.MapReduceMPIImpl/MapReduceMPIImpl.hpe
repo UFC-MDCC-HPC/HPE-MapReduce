@@ -225,11 +225,11 @@
     <supplyParameter cRef="input_data_value_type" direct="true" varName="IMV"/>
     <supplyParameter cRef="map_function" direct="true" varName="Mf"/>
     <supplyParameter cRef="binf" direct="true" varName="Bf"/>
-    <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
     <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <supplyParameter cRef="partition_key_type" direct="true" varName="OPK"/>
     <supplyParameter cRef="intermediate_type_key_type" direct="true" varName="OMK"/>
-    <supplyParameter cRef="combinef" direct="true" varName="Cf"/>
     <supplyParameter cRef="input_data_key_type" direct="true" varName="IMK"/>
+    <supplyParameter cRef="combinef" direct="true" varName="Cf"/>
     <interface iRef="IManagerImpl" nArgs="10">
       <slice isRef="farm_map">
         <originRef cRef="farm_map" iRef="IManager"/>
@@ -270,7 +270,7 @@
       </port>
       <port name="partition_mapping">
         <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input" sRef="farm_reduce"/>
+        <slice pRef="output" sRef="farm_map"/>
       </port>
       <port name="output">
         <visualDescription h="10" w="10" x="117" y="25"/>
@@ -356,7 +356,7 @@
           <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="120" w="177" x="16" y="326">
+      <visualDescription h="120" w="177" x="139" y="305">
         <color b="0" g="0" r="255"/>
       </visualDescription>
       <parameter iname="IData" order="1" parid="input_data_value_type" uname="data" varid="IMV"/>
@@ -372,7 +372,7 @@
     </interface>
     <unit iRef="IManagerImpl" multiple="false" private="false" replica="0" uRef="manager" visibleInterface="true">
       <super cRef="base" uRef="manager"/>
-      <visualDescription h="55" w="103" x="276" y="54"/>
+      <visualDescription h="55" w="103" x="42" y="130"/>
     </unit>
     <unit iRef="IReduceWorkerImpl" multiple="true" private="false" replica="0" uRef="reduce_worker" visibleInterface="true">
       <super cRef="base" uRef="reduce_worker"/>
@@ -380,7 +380,7 @@
     </unit>
     <unit iRef="IMapWorkerImpl" multiple="true" private="false" replica="0" uRef="map_worker" visibleInterface="true">
       <super cRef="base" uRef="map_worker"/>
-      <visualDescription h="53" w="121" x="19" y="223"/>
+      <visualDescription h="53" w="121" x="429" y="174"/>
     </unit>
   </componentInfo>
 </component:component>
