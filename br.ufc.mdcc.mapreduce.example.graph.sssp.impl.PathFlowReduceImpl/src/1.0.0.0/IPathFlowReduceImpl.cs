@@ -31,6 +31,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 			double dmin = int.MaxValue;
 			int done = 1;
 
+//			var t = Tuple.Create<string,int>("dd",333);
+
 			IKVPairInstance<IString, IIterator<IString>> input = (IKVPairInstance<IString, IIterator<IString>>)Input_values.Instance;
 			IStringInstance k = (IStringInstance)input.Key;
 			IIteratorInstance<IString> v = (IIteratorInstance<IString>)input.Value;
@@ -46,17 +48,20 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 				IStringInstance item = (IStringInstance) o;
 
 				string[] values = item.Value.Split (' ');
-				if (values [0].Equals ("c")) 
+				switch (values[0][0])
 				{
-					double tmp = double.Parse (values [1]);
-					dmin = min (dmin, tmp);
+					case 'c':
+						double tmp = double.Parse (values [1]);
+						dmin = min (dmin, tmp);
+						break;
+					case 'd':
+						di = double.Parse (values [1]);
+						break;
+					default:
+						neighbours [k_int] [int.Parse (values [0])] = double.Parse (values [1]);
+						break;
 				}
-				else if (values [0].Equals ("d")) 
-				{
-					di = double.Parse (values [1]);
-				}
-				else 
-					neighbours[k_int][int.Parse(values[0])] = double.Parse(values[1]);
+
 			}
 
 			dmin = min (dmin,di);
