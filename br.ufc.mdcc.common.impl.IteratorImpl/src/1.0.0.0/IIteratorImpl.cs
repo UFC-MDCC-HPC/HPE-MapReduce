@@ -82,16 +82,19 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 
 			result = null;
 
-			if (items.IsEmpty)
-				lock (not_empty) { Monitor.Wait(not_empty); }
+			while (items.IsEmpty)
+				lock (not_empty) { Console.WriteLine ("ITERATOR WAIT !!! " + this.GetHashCode()); Monitor.Wait(not_empty); }
 
 			Option<object> item;
 			items.TryDequeue(out item);
 
+			if (item == null)
+				Console.WriteLine ("ITEM NULL - ITERATOR !!!!!! ****************************** " + this.GetHashCode());
+
 			if (item.IsNone) 
 			{
 				has_finished = true;
-		}
+		    }
 			else 
 				result = item.Value;				
 

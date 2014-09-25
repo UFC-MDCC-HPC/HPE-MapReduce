@@ -232,8 +232,8 @@
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
     <supplyParameter cRef="termination_flag_type" direct="true" varName="TFT"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="path_flow"/>
-    <innerRenaming cNewName="termination_flag" cOldName="data" cRef="set_termination_flag"/>
     <innerRenaming cNewName="input_data" cOldName="input" cRef="path_flow"/>
+    <innerRenaming cNewName="termination_flag" cOldName="data" cRef="set_termination_flag"/>
     <interface iRef="IMaster" nArgs="1">
       <slice isRef="path_flow">
         <originRef cRef="path_flow" iRef="IManagerMapReduce"/>
