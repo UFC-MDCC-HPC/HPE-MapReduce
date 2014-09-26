@@ -13,6 +13,7 @@ using System.Collections.Concurrent;
 using System.Threading;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.Integer;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl { 
 
@@ -65,7 +66,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 
 					int i = (int) ((IIntegerInstance)Partition_key.Instance).Value;					
 					
-					Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) LOOP - SEND TO " + reducer_ranks[i] + ", source rank is " + comm.Rank + ", count=" + (count++) + "i=" + i); 
+					Trace.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) LOOP - SEND TO " + reducer_ranks[i] + ", source rank is " + comm.Rank + ", count=" + (count++) + "i=" + i); 
 
 					comm.Send<IKVPairInstance<OMK,OMV>>(item, reducer_ranks[i], TAG_FETCHVALUES_OMV);
 				}
@@ -74,7 +75,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 					comm.Send<IKVPairInstance<OMK,OMV>>(last_item, reducer_ranks[i], TAG_FETCHVALUES_OMV_FINISH);
 
 
-				Console.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
+				Trace.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
 			}
 
 

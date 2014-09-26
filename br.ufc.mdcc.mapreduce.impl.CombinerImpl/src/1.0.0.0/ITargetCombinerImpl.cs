@@ -7,6 +7,7 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.Combiner;
 using br.ufc.mdcc.mapreduce.user.CombineFunction;
 using br.ufc.mdcc.common.Iterator;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 	public class ITargetCombinerImpl<ORV, O, Cf> : BaseITargetCombinerImpl<ORV, O, Cf>, ITargetCombiner<ORV, O, Cf>
@@ -42,15 +43,15 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 		public void receiveCombineORVs() 
 		{
 			int listenFinishedObject = 0;
-			Console.WriteLine(WorldComm.Rank + ": START COMBINER TARGET !!!");
+			Trace.WriteLine(WorldComm.Rank + ": START COMBINER TARGET !!!");
 
 			object orv;
             MPI.CompletedStatus status;
             while (listenFinishedObject < size_reducers) 
 			{
-				Console.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE COMBINER TARGET to ");
+				Trace.WriteLine(WorldComm.Rank + ": BEGIN RECEIVE COMBINER TARGET to ");
 				comm.Receive<object>(MPI.Unsafe.MPI_ANY_SOURCE, MPI.Unsafe.MPI_ANY_TAG, out orv, out status);
-				Console.WriteLine(WorldComm.Rank + ": END RECEIVE COMBINER TARGET to " + (status.Source));
+				Trace.WriteLine(WorldComm.Rank + ": END RECEIVE COMBINER TARGET to " + (status.Source));
 
 				if (status.Tag == TAG_COMBINER_ORV_FINISH) 
 					listenFinishedObject = listenFinishedObject + 1;
@@ -60,7 +61,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
 			combine_input_data_instance.finish  ();
             
-			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER TARGET !!!");
+			Trace.WriteLine(WorldComm.Rank + ": FINISH COMBINER TARGET !!!");
         }
 
         /* Método da Thread que chama o CombineFunction */
@@ -83,11 +84,11 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
             tperformCombine.Start();
 
             /* Joins*/
-			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #0 !!!");
+			Trace.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #0 !!!");
             tReceive.Join();
-			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #1 !!!");
+			Trace.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #1 !!!");
             tperformCombine.Join();
-			Console.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #2 !!!");
+			Trace.WriteLine(WorldComm.Rank + ": FINISH COMBINER THREADS #2 !!!");
 
       }
     }

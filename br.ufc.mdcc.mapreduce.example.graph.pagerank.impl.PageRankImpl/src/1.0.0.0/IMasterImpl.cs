@@ -4,6 +4,7 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRank;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl { 
 
@@ -11,7 +12,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankImpl {
 		public IMasterImpl() { } 
 
 		public override void main() { 
-			System.Console.WriteLine ("################################################ Starting PageRankImpl Master ###########################################");
+			Trace.WriteLine ("################################################ Starting PageRankImpl Master ###########################################");
 			this.Page_rank.go();
 		}
 	}

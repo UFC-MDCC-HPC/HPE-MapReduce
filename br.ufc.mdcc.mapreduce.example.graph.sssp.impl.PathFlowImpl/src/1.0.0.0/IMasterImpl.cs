@@ -7,6 +7,7 @@ using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Integer;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl { 
 
@@ -42,11 +43,13 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl {
 			while (done == 0) 
 			{
 
-				Console.WriteLine (Rank + ": --- BEGIN ITERATION PATH_FLOW.GO ! - " + (++count)  + System.Environment.NewLine + setV + " ----- "+  setE );
+				Console.WriteLine (Rank + ": --- BEGIN ITERATION PATH_FLOW.GO ! - " + (++count)  + System.Environment.NewLine + setV);
+				Console.WriteLine (Rank + ": iteration = " + count);
+
 				this.Path_flow.go ();
 
 				setV = output_data_instance.Value;
-				Console.WriteLine (Rank + ": --- setV = " + setV);
+				Trace.WriteLine (Rank + ": --- setV = " + setV);
 
 				done = setV.EndsWith ("True") ? 1 : 0;
 				termination_flag.Value = done;
@@ -54,7 +57,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl {
 
 				setV = setV.Remove (setV.IndexOf (done == 1 ? "True" : "False") - 2);
 
-				Console.WriteLine (Rank + ": --- END ITERATION PATH_FLOW.GO ! - " + count);
+				Trace.WriteLine (Rank + ": --- END ITERATION PATH_FLOW.GO ! - " + count);
 
 				input_data_instance.Value = setV;
 			}

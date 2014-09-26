@@ -7,6 +7,7 @@ using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Iterator;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl { 
 
@@ -17,7 +18,7 @@ namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl {
 
 		public override void main() 
 		{
-			//Console.WriteLine(WorldComm.Rank + ": STARTING BREAK IN LINE  (SPLIT FUNCTION)");
+			//Trace.WriteLine(WorldComm.Rank + ": STARTING BREAK IN LINE  (SPLIT FUNCTION)");
 			IStringInstance input_data_instance =  (IStringInstance) Input_data.Instance;
 			IIteratorInstance<IKVPair<IInteger,IString>> output_data_instance = (IIteratorInstance<IKVPair<IInteger,IString>>) Output_data.Instance;
 
@@ -28,7 +29,7 @@ namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl {
 			foreach (string line in lines) 
 			{
 				if (!line.Trim().Equals ("")) {
-					Console.WriteLine(WorldComm.Rank + ": LINE = " + line);
+					Trace.WriteLine(WorldComm.Rank + ": LINE = " + line);
 					IKVPairInstance<IInteger,IString> line_pair = (IKVPairInstance<IInteger,IString>)Output_data.createItem ();
 					((IIntegerInstance)line_pair.Key).Value = line_counter++;
 					((IStringInstance)line_pair.Value).Value = line;
@@ -36,9 +37,9 @@ namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl {
 				}
 			}
 
-			Console.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES #1 !!! " + output_data_instance.GetHashCode());
+			Trace.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES #1 !!! " + output_data_instance.GetHashCode());
 			output_data_instance.finish();
-			Console.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES #2 !!!");
+			Trace.WriteLine(WorldComm.Rank + ": FINISH BREAK IN LINES #2 !!!");
 		}
 
 	}

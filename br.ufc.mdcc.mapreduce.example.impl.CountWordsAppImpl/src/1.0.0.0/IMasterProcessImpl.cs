@@ -9,6 +9,7 @@ using br.ufc.mdcc.common.String;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.common.Iterator;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl { 
 
@@ -24,9 +25,9 @@ namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl {
 			((IStringInstance)Input_data.Instance).Value = readInput();
 			IIteratorInstance<IKVPair<IString,IInteger>> output_data_instance = (IIteratorInstance<IKVPair<IString,IInteger>> ) Output_data.Instance;
 
-			//Console.WriteLine ("APP BEFORE GO !!!");
+			//Trace.WriteLine ("APP BEFORE GO !!!");
 			Count_words.go();
-			//Console.WriteLine ("APP AFTER GO !!!");
+			//Trace.WriteLine ("APP AFTER GO !!!");
 
 			SortedDictionary<int,IList<string>> result_pairs = new SortedDictionary<int,IList<string>>();
 
@@ -51,11 +52,11 @@ namespace br.ufc.mdcc.mapreduce.example.impl.CountWordsAppImpl {
 			{
 				foreach (string word in result_pairs[count_word])
 				{
-			    	Console.WriteLine("RESULT - {0}: {1}", count_word, word);
+					Trace.WriteLine("RESULT - " + count_word + " : " + word);
 				}
 			}
 
-			// Console.WriteLine ("APP FINISH !!! " + count);
+			// Trace.WriteLine ("APP FINISH !!! " + count);
 
 		}
 

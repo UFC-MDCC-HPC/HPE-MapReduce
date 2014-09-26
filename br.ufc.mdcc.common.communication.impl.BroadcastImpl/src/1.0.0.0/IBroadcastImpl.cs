@@ -4,6 +4,7 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.common.communication.Broadcast;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.common.communication.impl.BroadcastImpl 
 { 
@@ -24,9 +25,9 @@ namespace br.ufc.mdcc.common.communication.impl.BroadcastImpl
 		{ 
 			object value = Data.Instance;
 
-			Console.WriteLine (Rank + ": BEGIN BROADCAST RECV");
+			Trace.WriteLine (Rank + ": BEGIN BROADCAST RECV");
 			comm.Broadcast(ref value, root);
-			Console.WriteLine (Rank + ": END BROADCAST RECV - " + value + " --- "+ Data.Instance.GetHashCode());
+			Trace.WriteLine (Rank + ": END BROADCAST RECV - " + value + " --- "+ Data.Instance.GetHashCode());
 
 			Data.Instance = value;
 		}

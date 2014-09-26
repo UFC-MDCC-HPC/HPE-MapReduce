@@ -8,6 +8,7 @@ using br.ufc.mdcc.mapreduce.Mapper;
 using br.ufc.mdcc.common.KVPair;
 using System.Threading.Tasks;
 using br.ufc.mdcc.common.Iterator;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapperImpl { 
 
@@ -30,7 +31,7 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 			int count=0;
 			while (input_instance.fetch_next(out bin_object))
 			{
-				Console.WriteLine(Rank + ": LOOP MAPPER !!!" + (count++));
+				Trace.WriteLine(Rank + ": LOOP MAPPER !!!" + (count++));
 				IKVPairInstance<IMK,IMV> bin = (IKVPairInstance<IMK,IMV>) bin_object;
 
 				Map_key.Instance = bin.Key;
@@ -39,7 +40,7 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 				Map_function.go ();
 			}
 
-			Console.WriteLine(Rank + ": FINISH MAPPER !!!");
+			Trace.WriteLine(Rank + ": FINISH MAPPER !!!");
 
 			output_instance.finish();
 

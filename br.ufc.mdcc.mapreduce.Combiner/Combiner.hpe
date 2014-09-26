@@ -98,8 +98,8 @@
       </unitBounds>
     </innerComponent>
     <supplyParameter cRef="input_output_type" direct="true" varName="T"/>
-    <innerRenaming cNewName="combine_input_data" cOldName="input_data" cRef="combine_function"/>
     <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
+    <innerRenaming cNewName="combine_input_data" cOldName="input_data" cRef="combine_function"/>
     <fusion>
       <cRefs>base</cRefs>
       <cRefs>combine_function</cRefs>

@@ -8,6 +8,7 @@ using System;
 using System.Runtime.Remoting;
 //using br.ufc.mdcc.common.Integer;
 using br.ufc.pargo.hpe.basic;
+using System.Diagnostics;
 
 namespace MapReduceforHPE
 {
@@ -27,7 +28,7 @@ namespace MapReduceforHPE
 
 			//IMapperFetchValuesImpl<IString,IInteger,IPartitionFunction<IString>> vv = (IMapperFetchValuesImpl<IString,IInteger,IPartitionFunction<IString>>) obj.Unwrap();
 
-			Console.WriteLine ("Hello World!");
+			Trace.WriteLine ("Hello World!");
 		}
 	}
 }

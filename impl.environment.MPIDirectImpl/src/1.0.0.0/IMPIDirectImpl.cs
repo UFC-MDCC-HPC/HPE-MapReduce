@@ -4,6 +4,7 @@ using br.ufc.pargo.hpe.basic;
 using br.ufc.pargo.hpe.kinds;
 using environment.MPIDirect;
 using MPI;
+using System.Diagnostics;
 
 namespace impl.environment.MPIDirectImpl { 
 
@@ -21,7 +22,7 @@ public class IMPIDirectImpl : BaseIMPIDirectImpl, IMPIDirect
       // string[] args = System.Environment.GetCommandLineArgs();
    	  // mpi = new MPI.Environment(ref args);
    	
-   	   Console.WriteLine("MPI.NET Init for process #" + this.WorldComm.Rank);
+   	   Trace.WriteLine("MPI.NET Init for process #" + this.WorldComm.Rank);
    }
 
    public MPI.Environment MPI {
@@ -60,7 +61,7 @@ public class IMPIDirectImpl : BaseIMPIDirectImpl, IMPIDirect
    override public void destroySlice() {
        Console.Write("Finalizing MPI ...");
        //mpi.Dispose();
-       Console.WriteLine(" finished");
+       Trace.WriteLine(" finished");
    }
 
    public void listen() {}

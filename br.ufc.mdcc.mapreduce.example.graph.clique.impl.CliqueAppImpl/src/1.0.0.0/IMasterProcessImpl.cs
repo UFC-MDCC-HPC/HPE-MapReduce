@@ -10,6 +10,7 @@ using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 using System.Threading;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl { 
 
@@ -55,14 +56,14 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 				while (iterator.MoveNext ()) {
 					System.Console.Write (iterator.Current+" ");
 				}
-				System.Console.WriteLine ("]");
+				Trace.WriteLine ("]");
 				if (maxclique < size)
 					maxclique = size;
 			}
 			
 			tGo.Join();
 
-			System.Console.WriteLine ("Max clique include "+maxclique+" nodes.");
+			Trace.WriteLine ("Max clique include "+maxclique+" nodes.");
 		}
 		string readInput(){
 			return System.IO.File.ReadAllText(PATH);

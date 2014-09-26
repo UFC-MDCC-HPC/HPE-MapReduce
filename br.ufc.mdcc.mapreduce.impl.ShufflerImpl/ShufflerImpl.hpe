@@ -15,7 +15,7 @@
           <visualDescription h="60" w="100" x="266" y="409">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###916156556"/>
+          <parameter formFieldId="item_type" varName="X###1296134063"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -24,7 +24,7 @@
           <visualDescription h="60" w="100" x="80" y="245">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###2081128162"/>
+          <parameter formFieldId="item_type" varName="X###1683702958"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
@@ -34,13 +34,13 @@
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <parameter formFieldId="value_type" varName="OMV"/>
-          <parameter formFieldId="partition_function" varName="X###583971573"/>
+          <parameter formFieldId="partition_function" varName="X###2116186928"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="reduce_job" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="true" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
             <visualDescription h="60" w="100" x="345" y="473">
               <color b="203" g="192" r="255"/>
             </visualDescription>
-            <parameter formFieldId="item_type" varName="X###809960621"/>
+            <parameter formFieldId="item_type" varName="X###129537282"/>
             <unitBounds parallel="false" uRef="iterator">
               <visualDescription h="20" w="20" x="56" y="14"/>
             </unitBounds>

@@ -5,6 +5,7 @@ using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow;
 using br.ufc.mdcc.common.Integer;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl { 
 
@@ -22,7 +23,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl {
 				this.Set_termination_flag.go ();
 				IIntegerInstance termination_flag = (IIntegerInstance) Termination_flag.Instance;
 				done = termination_flag.Value;
-				Console.WriteLine (Rank + "AFTER PATH ROW MAP LOOP " + done + " --- " + Termination_flag.Instance.GetHashCode());
+				Trace.WriteLine (Rank + "AFTER PATH ROW MAP LOOP " + done + " --- " + Termination_flag.Instance.GetHashCode());
 			}
 		}
 

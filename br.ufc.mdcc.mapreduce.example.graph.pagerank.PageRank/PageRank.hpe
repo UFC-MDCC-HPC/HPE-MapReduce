@@ -202,8 +202,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="output_data" cOldName="output" cRef="page_rank"/>
     <innerRenaming cNewName="input_data" cOldName="input" cRef="page_rank"/>
+    <innerRenaming cNewName="output_data" cOldName="output" cRef="page_rank"/>
     <interface iRef="IVoteMap" nArgs="1">
       <slice isRef="page_rank">
         <originRef cRef="page_rank" iRef="IMapWorker"/>

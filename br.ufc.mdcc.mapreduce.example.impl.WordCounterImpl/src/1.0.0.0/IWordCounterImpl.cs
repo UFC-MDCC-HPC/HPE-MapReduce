@@ -42,7 +42,7 @@ namespace br.ufc.mdcc.mapreduce.example.impl.WordCounterImpl {
 
 			foreach (KeyValuePair<string,int> occurrences in index)
 			{
-			//	Console.WriteLine(WorldComm.Rank + ": MAP (WORD COUNTER) - " + occurrences.Key + ":" + occurrences.Value);
+			//	Trace.WriteLine(WorldComm.Rank + ": MAP (WORD COUNTER) - " + occurrences.Key + ":" + occurrences.Value);
 				IKVPairInstance<IString,IInteger> item = (IKVPairInstance<IString,IInteger>) Output_data.createItem();
 				((IStringInstance)item.Key).Value = occurrences.Key;
 				((IIntegerInstance)item.Value).Value = occurrences.Value;

@@ -142,12 +142,12 @@
         <visualDescription h="20" w="20" x="112" y="20"/>
       </unitBounds>
     </innerComponent>
-    <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
-    <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
     <innerRenaming cNewName="output" cOldName="target_data" cRef="gather"/>
-    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
     <innerRenaming cNewName="job" cOldName="target_data" cRef="scatter"/>
+    <innerRenaming cNewName="result" cOldName="source_data" cRef="gather"/>
+    <innerRenaming cNewName="result" cOldName="output" cRef="work"/>
     <innerRenaming cNewName="job" cOldName="input" cRef="work"/>
+    <innerRenaming cNewName="input" cOldName="source_data" cRef="scatter"/>
     <fusion>
       <cRefs>gather</cRefs>
       <cRefs>work</cRefs>

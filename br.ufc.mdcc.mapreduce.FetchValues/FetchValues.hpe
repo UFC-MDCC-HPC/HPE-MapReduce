@@ -149,13 +149,13 @@
         <visualDescription h="10" w="10" x="20" y="0"/>
         <slice pRef="map_result" sRef="map_result"/>
       </port>
-      <port name="output_key">
-        <visualDescription h="10" w="10" x="80" y="32"/>
-        <slice pRef="output_key" sRef="partition_function"/>
-      </port>
       <port name="input_key">
         <visualDescription h="10" w="10" x="74" y="0"/>
         <slice pRef="input_key" sRef="partition_function"/>
+      </port>
+      <port name="output_key">
+        <visualDescription h="10" w="10" x="80" y="32"/>
+        <slice pRef="output_key" sRef="partition_function"/>
       </port>
       <parameter iname="IData" order="1" parid="value_type" uname="data" varid="OMV"/>
       <parameter iname="IData" order="0" parid="key_type" uname="data" varid="OMK"/>

@@ -9,6 +9,7 @@ using br.ufc.mdcc.common.Iterator;
 using System.Collections.Generic;
 using br.ufc.mdcc.common.Integer;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl { 
 
@@ -40,7 +41,7 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 		public override void main() 
 		{ int count = 0;
 
-			Console.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA SOURCE");
+			Trace.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA SOURCE");
 
 			Bin_function.NumberOfPartitions = this.UnitSize["target"];
 
@@ -51,7 +52,7 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 			object bins_object;
 			while (bins_instance.fetch_next(out bins_object)) 
 			{
-				Console.WriteLine(WorldComm.Rank + ": LOOP BIN " + (bins_object == null));
+				Trace.WriteLine(WorldComm.Rank + ": LOOP BIN " + (bins_object == null));
 
 				// Ler um bin. 
 				IKVPairInstance<IMK, IMV> bin = (IKVPairInstance<IMK, IMV>) bins_object;
@@ -60,36 +61,36 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 				Key.Instance = bin.Key;
 
 				// Descobre o rank do Mapper.
-				Console.WriteLine(WorldComm.Rank + ": BEFORE BIN FUNCTION " + bins_instance.GetHashCode());
+				Trace.WriteLine(WorldComm.Rank + ": BEFORE BIN FUNCTION " + bins_instance.GetHashCode());
 				Bin_function.go ();
-				Console.WriteLine(WorldComm.Rank + ": AFTER BIN FUNCTION");
+				Trace.WriteLine(WorldComm.Rank + ": AFTER BIN FUNCTION");
 
 				int i = (int) ((IIntegerInstance)Rank.Instance).Value;
 				int rank = rank_workers[i];
 
 				// Inicia o envio do bin para o Mapper.
-				Console.WriteLine(WorldComm.Rank + ": BEGIN SEND BIN KEY/VALUE to " + rank + "cont=" + (count++));
-				comm.Send<object> (bin.Key, rank, TAG_SPLITTER_IMK);  //Console.WriteLine(WorldComm.Rank + ": SEND BIN KEY OK to " + rank);
-				comm.Send<object> (bin.Value, rank, TAG_SPLITTER_IMV); //Console.WriteLine(WorldComm.Rank + ": SEND BIN VALUE OK to " + rank);
-				Console.WriteLine(WorldComm.Rank + ": END SEND BIN KEY/VALUE to " + rank + "cont=" + (count++));
+				Trace.WriteLine(WorldComm.Rank + ": BEGIN SEND BIN KEY/VALUE to " + rank + "cont=" + (count++));
+				comm.Send<object> (bin.Key, rank, TAG_SPLITTER_IMK);  //Trace.WriteLine(WorldComm.Rank + ": SEND BIN KEY OK to " + rank);
+				comm.Send<object> (bin.Value, rank, TAG_SPLITTER_IMV); //Trace.WriteLine(WorldComm.Rank + ": SEND BIN VALUE OK to " + rank);
+				Trace.WriteLine(WorldComm.Rank + ": END SEND BIN KEY/VALUE to " + rank + "cont=" + (count++));
 			}
 
-			Console.WriteLine (Rank + ": FINISH LOOP SEND BINS !!!");
+			Trace.WriteLine (Rank + ": FINISH LOOP SEND BINS !!!");
 
 			// send "finish" message
 			MPI.RequestList requests = new MPI.RequestList();
 			
 			foreach (int i in rank_workers)
 			{
-				Console.WriteLine(WorldComm.Rank + ": BEGIN SEND BIN FINISH OK to " + i);
+				Trace.WriteLine(WorldComm.Rank + ": BEGIN SEND BIN FINISH OK to " + i);
 				MPI.Request request = comm.ImmediateSend<object> (0, i, TAG_SPLITTER_IMK_FINISH);
-				Console.WriteLine(WorldComm.Rank + ": END SEND BIN FINISH OK to " + i);
+				Trace.WriteLine(WorldComm.Rank + ": END SEND BIN FINISH OK to " + i);
 				
 				requests.Add(request);
 			}
 
 			requests.WaitAll();
-//			Console.WriteLine(WorldComm.Rank + ": SEND BIN FINISH OK ALL ");
+//			Trace.WriteLine(WorldComm.Rank + ": SEND BIN FINISH OK ALL ");
 
 			//requestList.WaitAll();
 		}

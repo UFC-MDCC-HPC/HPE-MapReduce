@@ -7,6 +7,7 @@ using br.ufc.mdcc.common.Iterator;
 using System.Collections.Generic;
 using System.Threading;
 using System.Collections.Concurrent;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.common.impl.IteratorImpl 
 { 
@@ -83,13 +84,12 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 			result = null;
 
 			while (items.IsEmpty)
-				lock (not_empty) { Console.WriteLine ("ITERATOR WAIT !!! " + this.GetHashCode()); Monitor.Wait(not_empty); }
+				lock (not_empty) { Monitor.Wait(not_empty); }
 
 			Option<object> item;
 			items.TryDequeue(out item);
 
-			if (item == null)
-				Console.WriteLine ("ITEM NULL - ITERATOR !!!!!! ****************************** " + this.GetHashCode());
+			Trace.WriteLineIf(item == null, "Item is NULL " + this.GetHashCode());
 
 			if (item.IsNone) 
 			{

@@ -23,7 +23,7 @@
           <visualDescription h="60" w="100" x="87" y="411">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="value_type" varName="X###874251486"/>
+          <parameter formFieldId="value_type" varName="X###168505659"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>

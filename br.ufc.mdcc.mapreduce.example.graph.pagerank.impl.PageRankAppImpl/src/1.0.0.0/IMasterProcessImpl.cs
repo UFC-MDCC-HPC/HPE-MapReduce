@@ -10,6 +10,7 @@ using br.ufc.mdcc.common.Double;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.mapreduce.example.graph.pagerank.PageRankApp;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl { 
 	public class IMasterProcessImpl<PLATFORM> : BaseIMasterProcessImpl<PLATFORM>, IMasterProcess<PLATFORM>
@@ -31,7 +32,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageRankAppImpl {
 				IStringInstance k = (IStringInstance)kvp.Key;
 				IDoubleInstance v = (IDoubleInstance)kvp.Value;
 				string saida = "Key=" + k.Value + " Value=" + v.Value;
-				Console.WriteLine (saida);
+				Trace.WriteLine (saida);
 				//using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/workspace/java/hash-programming-environment-read-only/HPE_BackEnd/logMaster", true)){
 				//	file.WriteLine(saida);
 				//}

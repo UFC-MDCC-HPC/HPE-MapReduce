@@ -9,6 +9,7 @@ using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.Iterator;
 using System.Threading;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl { 
 

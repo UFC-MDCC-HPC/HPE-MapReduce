@@ -6,6 +6,7 @@ using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction;
 using br.ufc.mdcc.common.Iterator;
 using br.ufc.mdcc.common.KVPair;
 using br.ufc.mdcc.common.String;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl { 
 
@@ -27,7 +28,7 @@ public class IPathFlowCombineFunctionImpl<ORV, Out> : BaseIPathFlowCombineFuncti
 			IKVPairInstance<IString, IString> kv = (IKVPairInstance<IString, IString>)o;
 			IStringInstance k = (IStringInstance)kv.Key;
 			IStringInstance v = (IStringInstance)kv.Value;
-			Console.WriteLine (Rank + ": COMBINE FUNCTION - done:" + k.Value + " {" + System.Environment.NewLine + v.Value + "}");
+			Trace.WriteLine (Rank + ": COMBINE FUNCTION - done:" + k.Value + " {" + System.Environment.NewLine + v.Value + "}");
 			setV = setV + v.Value;// + System.Environment.NewLine;
 
             done = done && k.Value.Equals ("1");

@@ -7,6 +7,7 @@ using br.ufc.mdcc.common.Data;
 using br.ufc.mdcc.mapreduce.user.SplitFunction;
 using br.ufc.mdcc.mapreduce.Splitter;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { 
 
@@ -36,11 +37,11 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
 			split_function_task.Start ();
 			send_bins_task.Start ();
 
-			Console.WriteLine (Rank + ": SPLITTER FINISH #1");
+			Trace.WriteLine (Rank + ": SPLITTER FINISH #1");
 			send_bins_task.Wait ();
-			Console.WriteLine (Rank + ": SPLITTER FINISH #2");
+			Trace.WriteLine (Rank + ": SPLITTER FINISH #2");
 			split_function_task.Wait ();
-			Console.WriteLine (Rank + ": SPLITTER FINISH #3");
+			Trace.WriteLine (Rank + ": SPLITTER FINISH #3");
         }
     }
 }

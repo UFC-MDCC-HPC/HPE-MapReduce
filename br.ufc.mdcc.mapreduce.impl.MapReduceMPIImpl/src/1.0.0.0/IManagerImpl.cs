@@ -9,6 +9,7 @@ using br.ufc.mdcc.mapreduce.MapReduce;
 using br.ufc.mdcc.mapreduce.user.PartitionFunction;
 using br.ufc.mdcc.mapreduce.user.CombineFunction;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl { 
 
@@ -35,11 +36,11 @@ namespace br.ufc.mdcc.mapreduce.impl.MapReduceMPIImpl {
 			farm_map_task.Start();
 			farm_reduce_task.Start();
 
-			Console.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #1!");
+			Trace.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #1!");
 			farm_reduce_task.Wait();
-			Console.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #2!");
+			Trace.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #2!");
 			farm_map_task.Wait();	
-			Console.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #3!");
+			Trace.WriteLine (Rank + ": --- FINISH MAP REDUCE MANAGER #3!");
 	}
 
 }

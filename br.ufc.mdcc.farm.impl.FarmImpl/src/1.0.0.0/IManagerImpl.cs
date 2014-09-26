@@ -8,6 +8,7 @@ using br.ufc.mdcc.farm.Gather;
 using br.ufc.mdcc.common.Platform;
 using br.ufc.mdcc.farm.Farm;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace br.ufc.mdcc.farm.impl.FarmImpl { 
 
@@ -29,11 +30,11 @@ public override void main()
 	scatter_task.Start();
 	gather_task.Start();
 
-	Console.WriteLine (Rank + ": FARM FINISH #1");
+	Trace.WriteLine (Rank + ": FARM FINISH #1");
 	gather_task.Wait();
-	Console.WriteLine (Rank + ": FARM FINISH #2");
+	Trace.WriteLine (Rank + ": FARM FINISH #2");
 	scatter_task.Wait();
-	Console.WriteLine (Rank + ": FARM FINISH #3");
+	Trace.WriteLine (Rank + ": FARM FINISH #3");
 }
 
 

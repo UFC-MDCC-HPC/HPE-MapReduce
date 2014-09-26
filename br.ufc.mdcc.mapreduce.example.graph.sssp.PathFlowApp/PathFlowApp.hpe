@@ -109,13 +109,13 @@
       <visualDescription h="40" w="101" x="222" y="113">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_data" sRef="path_flow"/>
-      </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output_data" sRef="path_flow"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="path_flow"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">
