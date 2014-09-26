@@ -59,16 +59,16 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 						break;
 					default:
 						//neighbours [k_int] [int.Parse (values [0])] = double.Parse (values [1]);
-						IDictionary<int, double> output_neibours = neighbours [k_int];
+						IDictionary<int, double> output_neibours = neighbours[k_int];
 						int n = int.Parse (values [0]);
 						double d = 0.0;
 						if (!output_neibours.TryGetValue (n, out d))
-							output_neibours [n] = double.Parse (values [1]);
+							output_neibours[n] = double.Parse (values [1]);
 						else 
 							if (double.Parse (values [1]) < d) 
 							{
-								output_neibours.Remove (n);
-								output_neibours [n] = double.Parse (values [1]);
+								//output_neibours.Remove(n);
+								output_neibours[n] = double.Parse (values [1]);
 							}
 						break;
 				}

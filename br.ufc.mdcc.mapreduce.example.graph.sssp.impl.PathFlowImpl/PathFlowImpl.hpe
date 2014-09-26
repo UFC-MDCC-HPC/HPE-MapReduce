@@ -83,13 +83,13 @@
       <visualDescription h="63" w="139" x="110" y="63">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output" sRef="path_flow"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input" sRef="path_flow"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="path_flow"/>
       </port>
       <port name="termination_flag">
         <visualDescription h="10" w="10" x="0" y="0"/>
