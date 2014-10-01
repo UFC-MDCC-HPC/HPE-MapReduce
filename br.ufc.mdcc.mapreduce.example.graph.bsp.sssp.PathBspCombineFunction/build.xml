@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" basedir="/home/cenez/hpe/cenez/cache" default="all" name="PathBspCombineFunction">
+  <property name="nant.settings.currentframework" value="mono-2.0"/>
+  <property name="build" value="bin"/>
+  <property name="src" value="src"/>
+  <target name="PathBspCombineFunction-1.0.0.0">
+    <ifnot targetexists="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/bin/1.0.0.0">
+      <mkdir dir="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/bin/1.0.0.0"/>
+    </ifnot>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/PathBspCombineFunction.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/bin/1.0.0.0/BaseIPathBspCombineFunction.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/src/1.0.0.0/BaseIPathBspCombineFunction.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/BaseICombineFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+    <csc debug="true" keyfile="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/PathBspCombineFunction.snk" optimize="true" output="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/bin/1.0.0.0/IPathBspCombineFunction.dll" target="library" unsafe="false">
+      <sources>
+        <include name="/home/cenez/workspace/gitsource/Map-Reduce-in-HPE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/src/1.0.0.0/IPathBspCombineFunction.cs"/>
+      </sources>
+      <references>
+        <include name="br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll"/>
+        <include name="br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll"/>
+        <include name="/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspCombineFunction/bin/1.0.0.0/BaseIPathBspCombineFunction.dll"/>
+        <include name="br.ufc.mdcc.mapreduce.user.CombineFunction/bin/1.0.0.0/ICombineFunction.dll"/>
+        <include/>
+      </references>
+    </csc>
+  </target>
+  <target depends="PathBspCombineFunction-1.0.0.0" name="all"/>
+</project>

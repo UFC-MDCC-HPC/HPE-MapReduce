@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000df9818b2b3bc450cb0fcc4c287691dfa30acd14b3b4f8b4cb2573a93c4a71c71091b3d667071144d3312cc18a64ca505379290f0ef838547fb41c5c3b65c09443d0e67fa36c12e06007edec2e11450d9970dc9226dcbed100a1fcee49725d9f0cb5aa30b4f195f59f095bbe6082fd311be078394f79ae343c19ccd3d7122a0b0" isAbstract="false" kind="Computation" name="PathBspReduceImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000fbfbf4f4bf4c73091d2caaa48ac588e8b12b0c7b483b9f4dac8f3101bf91bc9575cc25057237e5222f3bf22095e8c634c0f5b1297e41831f6c3ba6ea7ddbde5f4887f4b58244e11fc33b1f5206b4fa24dcebd853f0dcfdba170f9d0f9fa98ccd0aa6db21f4e667fa5af6ac070f306fb0b9e406bcb7d37bdcbe65bd1086265a92" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspReduce/PathBspReduce.hpe" name="PathBspReduce" package="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="223" y="317">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_value" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="123" x="256" y="456">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="value_type" varName="OMV"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="94" y="443">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="value_type" varName="X###850830768"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="reduce_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IPathBspReduceImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspReduce;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.DataPath;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspReduceImpl { &#xA;&#xA;&#x9;public abstract class BaseIPathBspReduceImpl: Computation, BaseIPathBspReduce{&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, IIterator&lt;IString>> input_values = null;&#xA;&#x9;&#x9;public IKVPair&lt;IString, IIterator&lt;IString>> Input_values {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_values == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_values = (IKVPair&lt;IString, IIterator&lt;IString>>) Services.getPort(&quot;input_values&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_values;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, IString> output_value = null;&#xA;&#x9;&#x9;public IKVPair&lt;IString, IString> Output_value {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_value == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_value = (IKVPair&lt;IString, IString>) Services.getPort(&quot;output_value&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_value;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIPathBspReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspReduceImpl/bin/1.0.0.0/BaseIPathBspReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspReduce/bin/1.0.0.0/BaseIPathBspReduce.dll</dependency>
+          <externalDependency>MPI</externalDependency>
+        </file>
+        <file contents="using System;&#xA;using System.Collections.Generic;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspReduce;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspReduceImpl { &#xA;&#xA;&#x9;public class IPathBspReduceImpl : BaseIPathBspReduceImpl, IPathBspReduce&#xA;&#x9;{&#xA;&#x9;&#x9;IDictionary&lt;int,IDictionary&lt;int, double>> neighbours = new Dictionary&lt;int, IDictionary&lt;int,double>> ();&#xA;&#x9;&#x9;IDictionary&lt;int, double> Dmin = new Dictionary&lt;int,double>();&#xA;&#xA;&#x9;&#x9;private IDictionary&lt;int, string> candidates_buffer = null;&#xA;&#x9;&#x9;public IDictionary&lt;int, string> CandidatesBuffer{&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.candidates_buffer == null) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.candidates_buffer = new Dictionary&lt;int, string> ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;for(int i=0;i&lt;this.Communicator.Size;i++)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CandidatesBuffer [i] = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;return this.candidates_buffer;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;private IList&lt;int> vertexs = null;&#xA;&#x9;&#x9;public IList&lt;int> Vertexs {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.vertexs == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.vertexs = new List&lt;int> ();&#xA;&#x9;&#x9;&#x9;&#x9;return this.vertexs;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;private int active = 0;&#xA;&#x9;&#x9;public int Active {&#xA;&#x9;&#x9;&#x9;get { return this.active; }&#xA;&#x9;&#x9;&#x9;set { this.active = value; }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IDictionary&lt;int, double> _di = new Dictionary&lt;int, double>();&#xA;&#x9;&#x9;public IDictionary&lt;int, double> Di {&#xA;&#x9;&#x9;&#x9;get { return this._di; }&#xA;&#x9;&#x9;&#x9;set { this._di = value; }&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;public void clearCandidatesBuffer(){&#xA;&#x9;&#x9;&#x9;for(int i=0;i&lt;this.Communicator.Size;i++)&#xA;&#x9;&#x9;&#x9;CandidatesBuffer[i] = &quot;&quot;;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public IPathBspReduceImpl() { } &#xA;&#xA;&#x9;&#x9;#region IPathBspReduce implementation&#xA;&#xA;&#x9;&#x9;public void clearNeighbours ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;neighbours.Clear ();&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#endregion&#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, IIterator&lt;IString>> input = (IKVPairInstance&lt;IString, IIterator&lt;IString>>)Input_values.Instance;&#xA;&#x9;&#x9;&#x9;IStringInstance k = (IStringInstance)input.Key;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IString> v = (IIteratorInstance&lt;IString>)input.Value;&#xA;&#xA;&#x9;&#x9;&#x9;int k_int = int.Parse (k.Value);&#xA;&#x9;&#x9;&#x9;if (!neighbours.ContainsKey (k_int)) {&#xA;&#x9;&#x9;&#x9;&#x9;neighbours [k_int] = new Dictionary&lt;int,double> ();&#xA;&#x9;&#x9;&#x9;&#x9;Di[k_int] = int.MaxValue;&#xA;&#x9;&#x9;&#x9;&#x9;Dmin[k_int] = int.MaxValue;&#xA;&#x9;&#x9;&#x9;&#x9;Vertexs.Add (k_int);&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;double di = Di[k_int];&#xA;&#x9;&#x9;&#x9;double dmin = Dmin[k_int];&#xA;&#x9;&#x9;&#x9;int done = 1;&#xA;&#xA;&#x9;&#x9;&#x9;object o;&#xA;&#x9;&#x9;&#x9;while (v.fetch_next (out o)) {&#xA;&#x9;&#x9;&#x9;&#x9;IStringInstance item = (IStringInstance) o;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;string[] values = item.Value.Split (' ');&#xA;&#x9;&#x9;&#x9;&#x9;switch (values[0][0]){&#xA;&#x9;&#x9;&#x9;&#x9;case 'c':&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;double tmp = double.Parse (values [1]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dmin = min (dmin, tmp);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;case 'i':&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;case 'd':&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;di = double.Parse (values [1]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;default:&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IDictionary&lt;int, double> output_neibours = neighbours [k_int];&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;int n = int.Parse (values [0]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;double d = 0.0;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (!output_neibours.TryGetValue (n, out d)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;output_neibours [n] = double.Parse (values [1]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;if (double.Parse (values [1]) &lt; d) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;output_neibours[n] = double.Parse (values [1]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;dmin = min (dmin,di);&#xA;&#x9;&#x9;&#x9;if(dmin != di){&#xA;&#x9;&#x9;&#x9;&#x9;di = dmin;&#xA;&#x9;&#x9;&#x9;&#x9;foreach (KeyValuePair&lt;int, double> kv in neighbours[k_int]) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;int dest = Math.Abs ((kv.Key+&quot;&quot;).GetHashCode ()) % this.Communicator.Size;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;CandidatesBuffer[dest] = CandidatesBuffer[dest] + kv.Key + &quot; &quot; + (kv.Value + dmin) + System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;done = 0;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;Active = done;&#xA;&#xA;&#x9;&#x9;&#x9;Di[k_int] = di;&#xA;&#x9;&#x9;&#x9;Dmin [k_int]=dmin;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public void step(int k_int, double valor){&#xA;&#x9;&#x9;&#x9;double di = Di[k_int];&#xA;&#x9;&#x9;&#x9;double dmin = Dmin[k_int];&#xA;&#xA;&#x9;&#x9;&#x9;dmin = min (dmin, valor);&#xA;&#x9;&#x9;&#x9;int done = 1;&#xA;&#xA;&#x9;&#x9;&#x9;dmin = min (dmin,di);&#xA;&#x9;&#x9;&#x9;if(dmin != di){&#xA;&#x9;&#x9;&#x9;&#x9;di = dmin;&#xA;&#x9;&#x9;&#x9;&#x9;foreach (KeyValuePair&lt;int, double> kv in neighbours[k_int]) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;int dest = Math.Abs ((kv.Key+&quot;&quot;).GetHashCode ()) % this.Communicator.Size;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;CandidatesBuffer[dest] = CandidatesBuffer[dest] + kv.Key + &quot; &quot; + (kv.Value + dmin) + System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;done = 0;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;Active = done;&#xA;&#xA;&#x9;&#x9;&#x9;Di[k_int] = di;&#xA;&#x9;&#x9;&#x9;Dmin [k_int]=dmin;&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;public void apply(){&#xA;&#x9;&#x9;&#x9;string buffer = &quot;&quot;;&#xA;&#xA;&#x9;&#x9;&#x9;foreach (KeyValuePair&lt;int, double> kv in Di)&#xA;&#x9;&#x9;&#x9;&#x9;buffer = buffer + kv.Key + &quot; d &quot; + kv.Value + System.Environment.NewLine;&#xA;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, IString> orv = (IKVPairInstance&lt;IString, IString>) Output_value.newInstance();&#xA;&#x9;&#x9;&#x9;((IStringInstance)orv.Key).Value = &quot;1&quot;;&#xA;&#x9;&#x9;&#x9;((IStringInstance)orv.Value).Value = buffer;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public double min (double d1, double d2)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return d1 &lt; d2 ? d1 : d2;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="IPathBspReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspReduceImpl/bin/1.0.0.0/IPathBspReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspReduceImpl/bin/1.0.0.0/BaseIPathBspReduceImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspReduce/bin/1.0.0.0/IPathBspReduce.dll</dependency>
+          <externalDependency>MPI</externalDependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="141" x="152" y="137">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+      <externalReferences>MPI</externalReferences>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IPathBspReduceImpl" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
+      <super cRef="base" uRef="reduce_function"/>
+      <visualDescription h="40" w="141" x="183" y="228"/>
+    </unit>
+  </componentInfo>
+</component:component>

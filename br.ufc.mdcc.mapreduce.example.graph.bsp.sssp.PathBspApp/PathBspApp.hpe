@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007fcb0265df84f593a2757aa837787b4245dc7b86e7ced6e776561f88287191b1b9ebaf3692e9174c17c794aaff6042a9730236940090ffd3e71eecd8b85cfa44f37086687cba9dd52c9c70b6cbb877a82fda13b0e3539fa72c97107ba4b19ca82bf53af6cb8274aba67312e828550199a61ff19c6d6806c922d26a56587f1a8b" isAbstract="true" kind="Application" name="PathBspApp" packagePath="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp">
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <parameter componentRef="platform" formFieldId="platform" order="0" varName="PLATFORM"/>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000d57156c17e7f9ec3adc0011f9714667b4966a1b9846d21babeaf824b876eda531434935234f97025fcdd448e896621822f202e8b8cc3dd70ef12e7a68a8b52d7cc9c779c3f67111326a6cf6fc185e07cd67277f582f23bb598b40d67568b1f315de24a73a6c92480df5202406c2e2d8b6f8c958d7077794f834c22e59a2e2082" localRef="path_bsp" location="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp/PathBsp.hpe" multiple="false" name="PathBsp" package="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp" exposed="false">
+      <visualDescription h="95" w="141" x="188" y="267">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="platform" varName="PLATFORM"/>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="60" w="100" x="400" y="194">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="output_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+        <visualDescription h="100" w="100" x="123" y="406">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="data">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </port>
+      <unitBounds parallel="false" uRef="master">
+        <visualDescription h="20" w="20" x="61" y="7"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="path_bsp_map">
+        <visualDescription h="20" w="20" x="11" y="37"/>
+      </unitBounds>
+      <unitBounds parallel="true" uRef="path_bsp_reduce">
+        <visualDescription h="20" w="20" x="109" y="37"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" parameter_id="platform" exposed="false">
+      <visualDescription h="60" w="100" x="613" y="201">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <interface iRef="IPathBspMapProcess" nArgs="1">
+      <slice isRef="path_bsp">
+        <originRef cRef="path_bsp" iRef="IPathBspMap"/>
+        <visualDescription h="10" w="10" x="109" y="33"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp { &#xA;&#xA;public interface BaseIPathBspMapProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIPathBspMapProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIPathBspMapProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp { &#xA;&#xA;public interface IPathBspMapProcess&lt;PLATFORM> : BaseIPathBspMapProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IPathBspMapProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/IPathBspMapProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIPathBspMapProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="66" w="147" x="6" y="144">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IPathBspReduceProcess" nArgs="1">
+      <slice isRef="path_bsp">
+        <originRef cRef="path_bsp" iRef="IPathBspReduce"/>
+        <visualDescription h="10" w="10" x="19" y="52"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp { &#xA;&#xA;public interface BaseIPathBspReduceProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIPathBspReduceProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIPathBspReduceProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp { &#xA;&#xA;public interface IPathBspReduceProcess&lt;PLATFORM> : BaseIPathBspReduceProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IPathBspReduceProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/IPathBspReduceProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIPathBspReduceProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="68" w="142" x="379" y="144">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IMasterProcess" nArgs="1">
+      <slice isRef="path_bsp">
+        <originRef cRef="path_bsp" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="32" y="22"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp { &#xA;&#xA;public interface BaseIMasterProcess&lt;PLATFORM> : IApplicationKind &#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseIMasterProcess.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIMasterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+        </file>
+        <file contents="using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp { &#xA;&#xA;public interface IMasterProcess&lt;PLATFORM> : BaseIMasterProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="IMasterProcess.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/IMasterProcess.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="101" x="222" y="113">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="path_bsp"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="path_bsp"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IPathBspMapProcess" multiple="true" private="false" replica="0" uRef="path_bsp_map_process" visibleInterface="true">
+      <slices cRef="path_bsp" inner_replica="0" slice_replica="0" uRef="path_bsp_map" sliceName="path_bsp" transitive="false">
+        <visualDescription h="10" w="10" x="109" y="33"/>
+      </slices>
+      <visualDescription h="66" w="147" x="6" y="276"/>
+    </unit>
+    <unit iRef="IPathBspReduceProcess" multiple="true" private="false" replica="0" uRef="path_bsp_reduce_process" visibleInterface="true">
+      <slices cRef="path_bsp" inner_replica="0" slice_replica="0" uRef="path_bsp_reduce" sliceName="path_bsp" transitive="false">
+        <visualDescription h="10" w="10" x="19" y="52"/>
+      </slices>
+      <visualDescription h="68" w="142" x="379" y="257"/>
+    </unit>
+    <unit iRef="IMasterProcess" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <slices cRef="input_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="input_data" transitive="true">
+        <visualDescription h="10" w="10" x="43" y="4"/>
+      </slices>
+      <slices cRef="output_data" inner_replica="0" slice_replica="0" uRef="data" sliceName="output_data" transitive="true">
+        <visualDescription h="10" w="10" x="10" y="18"/>
+      </slices>
+      <slices cRef="path_bsp" inner_replica="0" slice_replica="0" uRef="master" sliceName="path_bsp" transitive="false">
+        <visualDescription h="10" w="10" x="32" y="22"/>
+        <port>input_data</port>
+        <port>output_data</port>
+      </slices>
+      <visualDescription h="40" w="101" x="222" y="194"/>
+    </unit>
+  </componentInfo>
+</component:component>

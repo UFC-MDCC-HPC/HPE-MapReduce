@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000f1719d4328242e7d8d4a21fd3cfa41c447c951d5caf4b2b9d93a48a20208e20c5eeff121c51c44bde5f1e73354586c5d35cf79232c33d6c71ff1cf20e6200bb645664925c0dfaf4df115ae687bbfe6d87709c043425c1092d16fcb7dc5c0356c3cf47c6bf11fdcc9b00449e4efe8f2d6165c86a12d50aa36c5af7e00eb9108ca" isAbstract="false" kind="Application" name="PathBspAppImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007fcb0265df84f593a2757aa837787b4245dc7b86e7ced6e776561f88287191b1b9ebaf3692e9174c17c794aaff6042a9730236940090ffd3e71eecd8b85cfa44f37086687cba9dd52c9c70b6cbb877a82fda13b0e3539fa72c97107ba4b19ca82bf53af6cb8274aba67312e828550199a61ff19c6d6806c922d26a56587f1a8b" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/PathBspApp.hpe" name="PathBspApp" package="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="238" y="290">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="platform" varName="PLATFORM"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="60" w="100" x="296" y="469">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="output_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="false">
+          <visualDescription h="100" w="100" x="85" y="479">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="true" uRef="path_bsp_map_process">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="path_bsp_reduce_process">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="master_process">
+          <visualDescription h="20" w="20" x="51" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="278" y="423">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <interface iRef="IPathBspMapProcessImpl" nArgs="1">
+      <slice isRef="path_bsp">
+        <originRef cRef="path_bsp" iRef="IPathBspMap"/>
+        <visualDescription h="10" w="10" x="109" y="33"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl { &#xA;&#xA;public abstract class BaseIPathBspMapProcessImpl&lt;PLATFORM>: Application, BaseIPathBspMapProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private IPathBspMap&lt;PLATFORM> path_bsp = null;&#xA;&#xA;protected IPathBspMap&lt;PLATFORM> Path_bsp {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.path_bsp == null)&#xA;&#x9;&#x9;&#x9;this.path_bsp = (IPathBspMap&lt;PLATFORM>) Services.getPort(&quot;path_bsp&quot;);&#xA;&#x9;&#x9;return this.path_bsp;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPathBspMapProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/BaseIPathBspMapProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp/bin/1.0.0.0/IPathBspMap.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIPathBspMapProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl { &#xA;&#xA;public class IPathBspMapProcessImpl&lt;PLATFORM> : BaseIPathBspMapProcessImpl&lt;PLATFORM>, IPathBspMapProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public IPathBspMapProcessImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;this.Path_bsp.go();&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IPathBspMapProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/IPathBspMapProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/BaseIPathBspMapProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/IPathBspMapProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="66" w="147" x="15" y="139">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IPathBspReduceProcessImpl" nArgs="1">
+      <slice isRef="path_bsp">
+        <originRef cRef="path_bsp" iRef="IPathBspReduce"/>
+        <visualDescription h="10" w="10" x="19" y="52"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl { &#xA;&#xA;public abstract class BaseIPathBspReduceProcessImpl&lt;PLATFORM>: Application, BaseIPathBspReduceProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private IPathBspReduce&lt;PLATFORM> path_bsp = null;&#xA;&#xA;protected IPathBspReduce&lt;PLATFORM> Path_bsp {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.path_bsp == null)&#xA;&#x9;&#x9;&#x9;this.path_bsp = (IPathBspReduce&lt;PLATFORM>) Services.getPort(&quot;path_bsp&quot;);&#xA;&#x9;&#x9;return this.path_bsp;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPathBspReduceProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/BaseIPathBspReduceProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp/bin/1.0.0.0/IPathBspReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIPathBspReduceProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl { &#xA;&#xA;public class IPathBspReduceProcessImpl&lt;PLATFORM> : BaseIPathBspReduceProcessImpl&lt;PLATFORM>, IPathBspReduceProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;public IPathBspReduceProcessImpl() { &#xA;&#xA;} &#xA;&#xA;public override void main() { &#xA;this.Path_bsp.go();&#xA;}&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IPathBspReduceProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/IPathBspReduceProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/BaseIPathBspReduceProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/IPathBspReduceProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="68" w="142" x="379" y="144">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IMasterProcessImpl" nArgs="1">
+      <slice isRef="path_bsp">
+        <originRef cRef="path_bsp" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="32" y="22"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.DataPath;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl { &#xA;&#xA;&#x9;public abstract class BaseIMasterProcessImpl&lt;PLATFORM>: Application, BaseIMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IString input_data = null;&#xA;&#x9;&#x9;protected IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString output_data = null;&#xA;&#x9;&#x9;protected IString Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IString) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IMaster&lt;PLATFORM> path_bsp = null;&#xA;&#x9;&#x9;protected IMaster&lt;PLATFORM> Path_bsp {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.path_bsp == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.path_bsp = (IMaster&lt;PLATFORM>) Services.getPort(&quot;path_bsp&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.path_bsp;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIMasterProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBsp/bin/1.0.0.0/IMaster.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using System.Threading;&#xA;using System.Collections.Generic;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IMasterProcessImpl() { } &#xA;&#xA;&#x9;&#x9;private const string PATH = &quot;/home/cenez/path.txt&quot;;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IStringInstance input = (IStringInstance)Input_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;string setE = readInput (PATH);&#xA;&#xA;&#x9;&#x9;&#x9;input.Value =  setE;&#xA;&#xA;&#x9;&#x9;&#x9;////Console.WriteLine (Rank + &quot;: SSSP APP - GO START !!!&quot;);&#xA;&#x9;&#x9;&#x9;long t0 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds; &#xA;&#x9;&#x9;&#x9;Path_bsp.go ();&#xA;&#x9;&#x9;&#x9;long t1 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds;&#xA;&#x9;&#x9;&#x9;////Console.WriteLine (Rank + &quot;: SSSP APP - GO END JOIN !!!&quot;);&#xA;&#xA;&#x9;&#x9;&#x9;IStringInstance output = (IStringInstance) Output_data.Instance;&#xA;&#x9;&#x9;&#x9;////Console.WriteLine (Rank + &quot; END SSSP (output = &quot; + output.Value + &quot;)&quot;);&#xA;&#x9;&#x9;&#x9;clearWriteFile (&quot;./outPathBspApp&quot;,output.Value+System.Environment.NewLine+&quot;TIME: &quot;+(t1 - t0)+&quot;ms&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;public static void clearWriteFile(string PATH, string saida)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){&#xA;&#x9;&#x9;&#x9;&#x9;file.WriteLine(saida);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;string readInput(string PATH)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return System.IO.File.ReadAllText(PATH);&#xA;&#x9;&#x9;}&#xA;}&#xA;}" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.PathBspApp/bin/1.0.0.0/IMasterProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="101" x="222" y="113">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="path_bsp"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="path_bsp"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IPathBspMapProcessImpl" multiple="true" private="false" replica="0" uRef="path_bsp_map_process" visibleInterface="true">
+      <super cRef="base" uRef="path_bsp_map_process"/>
+      <visualDescription h="66" w="147" x="6" y="276"/>
+    </unit>
+    <unit iRef="IPathBspReduceProcessImpl" multiple="true" private="false" replica="0" uRef="path_bsp_reduce_process" visibleInterface="true">
+      <super cRef="base" uRef="path_bsp_reduce_process"/>
+      <visualDescription h="68" w="142" x="379" y="257"/>
+    </unit>
+    <unit iRef="IMasterProcessImpl" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <super cRef="base" uRef="master_process"/>
+      <visualDescription h="40" w="101" x="222" y="194"/>
+    </unit>
+  </componentInfo>
+</component:component>
