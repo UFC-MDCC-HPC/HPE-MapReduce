@@ -18,7 +18,7 @@ namespace graph {
 		protected MPI.RequestList rlist = new RequestList();
 		public static string Buffer = "";
 
-		private const string INPUT_FILE_PATH = "/home/cenez/path.txt";
+		private const string INPUT_FILE_PATH = "/home/hpe/path.txt";
 		private const string TEMP_FILE_PATH = INPUT_FILE_PATH+".parallel";
 		private const string OUTPUT_FILE_PATH = "./output";
 
