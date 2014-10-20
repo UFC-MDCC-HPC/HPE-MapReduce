@@ -31,7 +31,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl {
 			long t1 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds;
 
 			IStringInstance output = (IStringInstance) Output_data.Instance;//output.Value
-			clearWriteFile ("./outPathBspApp-"+getDateTime(),""+(t1 - t0));
+			//clearWriteFile ("./outPathBspApp-"+getDateTime(),""+(t1 - t0));
 		}
 		public static void clearWriteFile(string PATH, string saida)
 		{
