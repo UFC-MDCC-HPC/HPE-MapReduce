@@ -37,7 +37,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="MPI">
-      <HintPath>..\..\..\..\Dropbox\Cenez - Doutorado\Implementacao-EmAndamento\Map-Reduce-in-HPE-Modelo-BSP\MapReduce-for-HPE\MPI.dll</HintPath>
+      <HintPath>..\..\bin\MPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

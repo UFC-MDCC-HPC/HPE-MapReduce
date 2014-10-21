@@ -37,7 +37,7 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerBspImpl
 			IIteratorInstance<IKVPair<OMK, IIterator<OMV>>> input_instance = (IIteratorInstance<IKVPair<OMK, IIterator<OMV>>>) Input.Instance;
 			IIteratorInstance<ORV> output_instance = (IIteratorInstance<ORV>) Output.Instance;
 			
-			long t0 = (long)(DateTime.UtcNow - (new DateTime (1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds;
+			//long t0 = (long)(DateTime.UtcNow - (new DateTime (1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds;
 
 			object kvpair_object;
 			while (input_instance.fetch_next(out kvpair_object)) {
@@ -67,8 +67,8 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerBspImpl
 
 			output_instance.finish ();
 
-			long t1 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds; 
-			clearWriteFile ("./logTIME-REDUCE", "TIME: " + (t1 - t0) + " ms."+System.Environment.NewLine+"BSP");
+			//long t1 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds; 
+			//writeFile ("./logTIME-REDUCE", "TIME: " + (t1 - t0) + " ms."+System.Environment.NewLine+"BSP");
         }
         
 		public string sincronize()
@@ -98,11 +98,19 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerBspImpl
 			
 			return candidates_buffer;
 		}
+<<<<<<< HEAD
 		
 		public static void clearWriteFile(string PATH, string saida){
 			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){
 				file.WriteLine(saida);
 			}
 		}
+=======
+//		public static void writeFile(string PATH, string saida){
+//			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){
+//				file.WriteLine(saida);
+//			}
+//		}
+>>>>>>> f9b138758bf27f697181bf0b58c94783eced21af
     }
 }

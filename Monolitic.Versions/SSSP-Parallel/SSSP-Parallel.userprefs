@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="graph.MapReduce/graph.MapReduce/Program.cs">
     <Files>
-      <File FileName="graph.MapReduce/graph.MapReduce/Program.cs" Line="11" Column="38" />
+      <File FileName="graph.MapReduce/graph.MapReduce/Program.cs" Line="5" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
