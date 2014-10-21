@@ -135,13 +135,13 @@
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="bins" sRef="bins"/>
       </port>
-      <port name="rank">
-        <visualDescription h="10" w="10" x="8" y="22"/>
-        <slice pRef="output_key" sRef="bin_function"/>
-      </port>
       <port name="key">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input_key" sRef="bin_function"/>
+      </port>
+      <port name="rank">
+        <visualDescription h="10" w="10" x="8" y="22"/>
+        <slice pRef="output_key" sRef="bin_function"/>
       </port>
       <parameter iname="IData" order="1" parid="item_value_type" uname="data" varid="IMV"/>
       <parameter iname="IData" order="0" parid="item_key_type" uname="data" varid="IMK"/>

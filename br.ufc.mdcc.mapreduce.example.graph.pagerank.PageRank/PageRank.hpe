@@ -191,8 +191,92 @@
     </innerComponent>
     <supplyParameter cRef="out" direct="true" varName="Out"/>
     <supplyParameter cRef="split_function" direct="true" varName="Sf"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
     <supplyParameter cRef="partition_function" direct="true" varName="Pf"/>
     <supplyParameter cRef="reduce_function" direct="true" varName="Rf"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
     <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
     <supplyParameter cRef="orv" direct="true" varName="ORV"/>
     <supplyParameter cRef="omv" direct="true" varName="OMV"/>
@@ -202,8 +286,8 @@
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
-    <innerRenaming cNewName="input_data" cOldName="input" cRef="page_rank"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="page_rank"/>
+    <innerRenaming cNewName="input_data" cOldName="input" cRef="page_rank"/>
     <interface iRef="IVoteMap" nArgs="1">
       <slice isRef="page_rank">
         <originRef cRef="page_rank" iRef="IMapWorker"/>
@@ -266,13 +350,13 @@
       <visualDescription h="40" w="80" x="225" y="123">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="output" sRef="page_rank"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="input" sRef="page_rank"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="page_rank"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

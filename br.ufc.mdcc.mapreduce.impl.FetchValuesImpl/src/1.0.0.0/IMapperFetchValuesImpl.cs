@@ -37,6 +37,8 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 			public override void main() 
 			{ 
 
+			Trace.WriteLine(Rank + ": PARTITIONER (FETCH VALUES SOURCE) - START ");
+
 				/* 1. Ler os elementos de Source_data, um a um, e copiar a chave (OMK) em Data_key.
 				 * 2. A cada chave de Source_data, chamar Partition_function.go();
 				 * 3. Enviar o resultado de Partition_function.go(), via MPI, para o gerente (unidade target).
@@ -66,7 +68,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 
 					int i = (int) ((IIntegerInstance)Partition_key.Instance).Value;					
 					
-					Trace.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) LOOP - SEND TO " + reducer_ranks[i] + ", source rank is " + comm.Rank + ", count=" + (count++) + "i=" + i); 
+					Trace.WriteLine(Rank + ": PARTITIONER (FETCH VALUES SOURCE) LOOP - SEND TO " + reducer_ranks[i] + ", source rank is " + comm.Rank + ", count=" + (count++) + "i=" + i); 
 
 					comm.Send<IKVPairInstance<OMK,OMV>>(item, reducer_ranks[i], TAG_FETCHVALUES_OMV);
 				}
@@ -75,7 +77,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 					comm.Send<IKVPairInstance<OMK,OMV>>(last_item, reducer_ranks[i], TAG_FETCHVALUES_OMV_FINISH);
 
 
-				Trace.WriteLine(WorldComm.Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
+				Trace.WriteLine(Rank + ": PARTITIONER (FETCH VALUES SOURCE) - FINISH ");
 			}
 
 

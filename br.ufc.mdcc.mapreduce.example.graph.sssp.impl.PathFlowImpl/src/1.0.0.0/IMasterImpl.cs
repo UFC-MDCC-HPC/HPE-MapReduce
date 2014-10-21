@@ -43,8 +43,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowImpl {
 			while (done == 0) 
 			{
 
-				Console.WriteLine (Rank + ": --- BEGIN ITERATION PATH_FLOW.GO ! - " + (++count)  + System.Environment.NewLine + setV);
-				Console.WriteLine (Rank + ": iteration = " + count);
+				Console.WriteLine (Rank + ": ITERATION PATH_FLOW.GO ! - " + (++count) );
 
 				this.Path_flow.go ();
 

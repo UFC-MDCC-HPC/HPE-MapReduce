@@ -13,12 +13,9 @@ namespace br.ufc.mdcc.mapreduce.example.impl.BreakInLinesImpl {
 
 	public class IBreakInLinesImpl : BaseIBreakInLinesImpl, IBreakInLines
 	{
-
-		public IBreakInLinesImpl() { } 
-
 		public override void main() 
 		{
-			//Trace.WriteLine(WorldComm.Rank + ": STARTING BREAK IN LINE  (SPLIT FUNCTION)");
+			Trace.WriteLine(WorldComm.Rank + ": STARTING BREAK IN LINE  (SPLIT FUNCTION)");
 			IStringInstance input_data_instance =  (IStringInstance) Input_data.Instance;
 			IIteratorInstance<IKVPair<IInteger,IString>> output_data_instance = (IIteratorInstance<IKVPair<IInteger,IString>>) Output_data.Instance;
 

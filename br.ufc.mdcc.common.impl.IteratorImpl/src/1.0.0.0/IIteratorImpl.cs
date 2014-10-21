@@ -8,10 +8,10 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Runtime.Serialization;
 
 namespace br.ufc.mdcc.common.impl.IteratorImpl 
-{ 
-	
+{ 	
 	public class IIteratorImpl<T> : BaseIIteratorImpl<T>, IIterator<T>
 	where T:IData
 	{
@@ -29,7 +29,7 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 
 		public object newInstance ()
 		{
-			return this.Instance = new IIteratorInstanceImpl<T>();
+			return this.Instance = new IIteratorInstanceImpl<T>((ICloneable)this.Item_factory.Instance);
 		}
 
 		private IIteratorInstance<T> instance;
@@ -45,13 +45,53 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 		}
 	}
 
-
-	public class IIteratorInstanceImpl<T> : IIteratorInstance<T>
+	[Serializable]
+	public class IIteratorInstanceImpl<T> : IIteratorInstance<T>, ISerializable
 		where T:IData
 	{
+		#region ICloneable implementation
 
-		public IIteratorInstanceImpl() { } 
+		public object Clone ()
+		{
+			IIteratorInstanceImpl<T> clone = new IIteratorInstanceImpl<T> (item_factory);
+			Option<object>[] items_array = this.items.ToArray ();
+			foreach (Option<object> c in items_array) 
+				clone.items.Enqueue (c);
+			return clone;
+		}
 
+		#endregion
+
+		#region ISerializable implementation
+
+		protected IIteratorInstanceImpl(SerializationInfo si, StreamingContext context)  
+		{
+			Option<object>[] cs = (Option<object>[]) si.GetValue("elements", (new Option<object>[0]).GetType());
+
+			foreach (Option<object> c in cs) 
+				items.Enqueue (c);
+		}
+
+		public void GetObjectData (SerializationInfo info, StreamingContext context)  
+		{
+			Option<object>[] items_array = items.ToArray ();
+			info.AddValue ("elements", items_array, items_array.GetType ());
+		}
+
+		#endregion
+
+		private ICloneable item_factory;
+
+		public IIteratorInstanceImpl(ICloneable item_factory) { this.item_factory = item_factory; } 
+
+		public ICloneable createItem() 
+		{
+			ICloneable r = (ICloneable) item_factory.Clone();
+			Trace.WriteLine ("CREATE ITEM " + r.GetType());
+			return r;  
+		}
+
+		[NonSerialized]
 		private ConcurrentQueue<Option<object>> items = new ConcurrentQueue<Option<object>>();
 
 		readonly object not_empty = new object();
@@ -105,6 +145,7 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 
 
 // Used as return type from method
+	[Serializable]
 	public abstract class Option<T>
 	{
 		// Could contain the value if Some, but not if None
@@ -114,7 +155,8 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 
 		public abstract bool IsNone { get; }
 	}
-
+	
+	[Serializable]
 	public sealed class Some<T> : Option<T>
 	{
 		private T value;
@@ -136,6 +178,7 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 		public override bool IsNone { get { return false; } }
 	}
 
+	[Serializable]
 	public sealed class None<T> : Option<T>
 	{
 		public override T Value

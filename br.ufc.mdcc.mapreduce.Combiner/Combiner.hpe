@@ -101,8 +101,8 @@
     <innerRenaming cNewName="target_data" cOldName="output_data" cRef="combine_function"/>
     <innerRenaming cNewName="combine_input_data" cOldName="input_data" cRef="combine_function"/>
     <fusion>
-      <cRefs>base</cRefs>
       <cRefs>combine_function</cRefs>
+      <cRefs>base</cRefs>
       <pRef>target_data</pRef>
     </fusion>
     <interface iRef="ISourceCombiner" nArgs="1">

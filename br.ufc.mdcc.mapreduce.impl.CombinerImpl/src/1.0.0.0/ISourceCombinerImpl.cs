@@ -49,7 +49,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
 			root = this.UnitRanks["target"][0];
 
-			object orv,last_orv=null;
+			object orv, last_orv=null;
 			
 			Trace.WriteLine(WorldComm.Rank + ": START COMBINER SOURCE !!!");
 

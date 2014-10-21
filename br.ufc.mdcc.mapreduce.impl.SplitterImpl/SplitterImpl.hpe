@@ -15,16 +15,16 @@
         <parameter formFieldId="split_function" varName="Sf"/>
         <parameter formFieldId="output_value_item_type" varName="IMV"/>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="target_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="false">
-          <visualDescription h="60" w="100" x="80" y="218">
+          <visualDescription h="60" w="100" x="70" y="251">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="item_type" varName="X###635860266"/>
+          <parameter formFieldId="item_type" varName="X###1402601724"/>
           <unitBounds parallel="false" uRef="iterator">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
         <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="source_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-          <visualDescription h="60" w="100" x="249" y="256">
+          <visualDescription h="60" w="100" x="234" y="162">
             <color b="255" g="255" r="255"/>
           </visualDescription>
           <unitBounds parallel="false" uRef="data">
@@ -32,10 +32,10 @@
           </unitBounds>
         </port>
         <unitBounds parallel="false" uRef="source">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+          <visualDescription h="20" w="20" x="13" y="20"/>
         </unitBounds>
         <unitBounds parallel="true" uRef="target">
-          <visualDescription h="20" w="20" x="28" y="2"/>
+          <visualDescription h="20" w="20" x="72" y="19"/>
         </unitBounds>
       </component>
     </baseType>
@@ -53,7 +53,7 @@
       <parameter formFieldId="input_type" varName="IMAP"/>
       <parameter formFieldId="key_type" varName="IMK"/>
       <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_data" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-        <visualDescription h="60" w="100" x="249" y="256">
+        <visualDescription h="60" w="100" x="234" y="162">
           <color b="255" g="255" r="255"/>
         </visualDescription>
         <unitBounds parallel="false" uRef="data">
@@ -81,7 +81,7 @@
       </unitBounds>
     </innerComponent>
     <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000372d83aaa123858a97a353cd956eea59b526f3524a0b69ca51d23c6b5e50c14721ee4166d87e7e9f451ee95352730aef34e9cb849e6b5ea13671a9b755f9613ba945240437226e4e67762b01435f8463578849f4af6d6de0f843be1f2709a38edbeeb542483818886b9fcbf40c442db2d79060d42dd605ee7983b06ebf973d85" localRef="input_type" location="br.ufc.mdcc.common.Data/Data.hpe" multiple="false" name="Data" package="br.ufc.mdcc.common" exposed="true">
-      <visualDescription h="60" w="100" x="249" y="256">
+      <visualDescription h="60" w="100" x="234" y="162">
         <color b="255" g="255" r="255"/>
       </visualDescription>
       <unitBounds parallel="false" uRef="data">
@@ -120,7 +120,7 @@
           <dependency>br.ufc.mdcc.mapreduce.splitter.ScatterSplitData/bin/1.0.0.0/ISourceScatterSplitData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/BaseISourceSplitter.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using System.Threading.Tasks;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;&#x9;public class ISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf> : BaseISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf>, ISourceSplitter&lt;I, IMK, IMV, Sf, Bf>&#xA;    where I:IData&#xA;    where IMK:IData&#xA;    where IMV:IData&#xA;&#x9;where Sf:ISplitFunction&lt;I, IMK, IMV>  &#xA;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;&#x9;   &#xA;&#x9;{&#xA;&#x9;&#x9;public ISourceSplitterImpl() { } &#xA;&#xA;        public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;// 1. Criar uma thread para executar Split_function.go();&#xA;&#x9;&#x9;&#x9;Task split_function_task = new Task (delegate {&#xA;&#x9;&#x9;&#x9;&#x9;Split_function.go ();&#xA;&#x9;&#x9;&#x9;});&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;// 2. Criar uma thread para executar Send_bins.go()&#xA;&#x9;&#x9;&#x9;Task send_bins_task = new Task (delegate {&#xA;&#x9;&#x9;&#x9;&#x9;Send_bins.go();&#xA;&#x9;&#x9;&#x9;});&#xA;&#xA;&#x9;&#x9;&#x9;split_function_task.Start ();&#xA;&#x9;&#x9;&#x9;send_bins_task.Start ();&#xA;&#xA;&#x9;&#x9;&#x9;Debug.WriteLine (Rank + &quot;: SPLITTER FINISH #1&quot;);&#xA;&#x9;&#x9;&#x9;send_bins_task.Wait ();&#xA;&#x9;&#x9;&#x9;Debug.WriteLine (Rank + &quot;: SPLITTER FINISH #2&quot;);&#xA;&#x9;&#x9;&#x9;split_function_task.Wait ();&#xA;&#x9;&#x9;&#x9;Debug.WriteLine (Rank + &quot;: SPLITTER FINISH #3&quot;);&#xA;        }&#xA;    }&#xA;}&#xA;" fileType="library" name="ISourceSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ISourceSplitterImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using System.Threading.Tasks;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#xA;&#x9;public class ISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf> : BaseISourceSplitterImpl&lt;I, IMK, IMV, Sf, Bf>, ISourceSplitter&lt;I, IMK, IMV, Sf, Bf>&#xA;    where I:IData&#xA;    where IMK:IData&#xA;    where IMV:IData&#xA;&#x9;where Sf:ISplitFunction&lt;I, IMK, IMV>  &#xA;&#x9;where Bf:IPartitionFunction&lt;IMK>&#xA;&#x9;   &#xA;&#x9;{&#xA;        public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;// 2. Criar uma thread para executar Send_bins.go()&#xA;&#x9;&#x9;&#x9;Task send_bins_task = new Task (delegate {&#xA;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine(&quot;BEFORE SEND BINS TASK&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;Send_bins.go();&#xA;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine(&quot;AFTER SEND BINS TASK&quot;);&#xA;&#x9;&#x9;&#x9;});&#xA;&#xA;&#x9;&#x9;&#x9;// 1. Criar uma thread para executar Split_function.go();&#xA;&#x9;&#x9;&#x9;//Task split_function_task = new Task (delegate {&#xA;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine(&quot;BEFORE SPLIT FUNCTION TASK&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;Split_function.go();&#xA;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine(&quot;AFTER SPLIT FUNCTION TASK&quot;);&#xA;&#x9;&#x9;&#x9;//});&#xA;&#xA;&#x9;&#x9;&#x9;//split_function_task.Start ();&#xA;&#x9;&#x9;&#x9;send_bins_task.Start ();&#xA;&#xA;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: SPLITTER FINISH #1&quot;);&#xA;&#x9;&#x9;&#x9;send_bins_task.Wait ();&#xA;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: SPLITTER FINISH #2&quot;);&#xA;&#x9;&#x9;&#x9;//split_function_task.Wait ();&#xA;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: SPLITTER FINISH #3&quot;);&#xA;        }&#xA;    }&#xA;}&#xA;" fileType="library" name="ISourceSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ISourceSplitterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseISourceSplitterImpl.dll</dependency>
@@ -164,7 +164,7 @@
           <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/BaseITargetSplitter.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#x9;public class ITargetSplitterImpl&lt;IMK, IMV> : BaseITargetSplitterImpl&lt;IMK, IMV>, ITargetSplitter&lt;IMK, IMV>&#xA;&#x9;where IMK:IData&#xA;&#x9;where IMV:IData &#xA;&#x9;{&#xA;&#x9;&#x9;public ITargetSplitterImpl() { } &#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;// Executar Send_bins.go()&#xA;&#x9;&#x9;&#x9;Debug.WriteLine(Rank + &quot;: STARTING SPLITER TARGET&quot;);&#xA;&#x9;&#x9;&#x9;Send_bins.go ();&#xA;&#x9;&#x9;&#x9;Debug.WriteLine(Rank + &quot;: FINISHING SPLITER TARGET&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="ITargetSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ITargetSplitterImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.Splitter;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl { &#xA;&#x9;public class ITargetSplitterImpl&lt;IMK, IMV> : BaseITargetSplitterImpl&lt;IMK, IMV>, ITargetSplitter&lt;IMK, IMV>&#xA;&#x9;where IMK:IData&#xA;&#x9;where IMV:IData &#xA;&#x9;{&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;// Executar Send_bins.go()&#xA;&#x9;&#x9;&#x9;Trace.WriteLine(Rank + &quot;: STARTING SPLITER TARGET&quot;);&#xA;&#x9;&#x9;&#x9;Send_bins.go ();&#xA;&#x9;&#x9;&#x9;Trace.WriteLine(Rank + &quot;: FINISHING SPLITER TARGET&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="ITargetSplitterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/ITargetSplitterImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.impl.SplitterImpl/bin/1.0.0.0/BaseITargetSplitterImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.Splitter/bin/1.0.0.0/ITargetSplitter.dll</dependency>

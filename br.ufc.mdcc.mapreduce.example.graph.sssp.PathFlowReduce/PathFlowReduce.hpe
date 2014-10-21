@@ -26,14 +26,14 @@
           <visualDescription h="60" w="100" x="143" y="479">
             <color b="255" g="255" r="255"/>
           </visualDescription>
-          <parameter formFieldId="value_type" varName="X###1361238767"/>
+          <parameter formFieldId="value_type" varName="X###2132080310"/>
           <parameter formFieldId="key_type" varName="OMK"/>
           <unitBounds parallel="false" uRef="kv_pair">
             <visualDescription h="20" w="20" x="5" y="2"/>
           </unitBounds>
         </port>
         <unitBounds parallel="false" uRef="reduce_function">
-          <visualDescription h="20" w="20" x="5" y="2"/>
+          <visualDescription h="20" w="20" x="45" y="3"/>
         </unitBounds>
       </component>
     </baseType>
@@ -69,8 +69,8 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
     <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
     <supplyParameter cRef="omv" direct="true" varName="OMV"/>
     <interface iRef="IPathFlowReduce" nArgs="0">
       <sources sourceType="C# Language" versionId="1.0.0.0">
@@ -82,7 +82,7 @@
           <dependency>br.ufc.mdcc.mapreduce.user.ReduceFunction/bin/1.0.0.0/IReduceFunction.dll</dependency>
         </file>
       </sources>
-      <visualDescription h="40" w="141" x="198" y="186">
+      <visualDescription h="40" w="141" x="419" y="123">
         <color b="0" g="255" r="0"/>
       </visualDescription>
       <action id="main">
@@ -91,7 +91,7 @@
     </interface>
     <unit iRef="IPathFlowReduce" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
       <super cRef="base" uRef="reduce_function"/>
-      <visualDescription h="40" w="141" x="194" y="275"/>
+      <visualDescription h="40" w="141" x="299" y="200"/>
     </unit>
   </componentInfo>
 </component:component>

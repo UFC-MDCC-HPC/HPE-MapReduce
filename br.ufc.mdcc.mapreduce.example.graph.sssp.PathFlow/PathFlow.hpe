@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009d4973e79cafeac9dd81d9a017d67b142154ac649154686a7ed7d537d7a7c1405a99143c47fd656e020e5a1df20cd9afa28be24dfa427c5b12b584a9391cf73324c605c20ba7ab636cb834ddf18b981bcd55ec01f7585eb8148b07b16e939f1429d390a9e5422ea24bd08af91d25de05de1ee1051cf0595bfa14633bcc72a3af" isAbstract="true" kind="Computation" name="PathFlow" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000059aa1f6531d656e00d011e9a81273663cab095a3a7acc1aa64c5a2c327a7b007def0c6e2068c0d8e584e04847f48edc8fa6cd76d1e8e68cdb62a0c73e2402067edea67555973639e273aba1a3363b5104dbd25c2628b1e67ca02295481c08ebf94ab6d9857a2856f0e8c0530ed159bb9728133811dfb66c1c93cdd22260a81a6" isAbstract="true" kind="Computation" name="PathFlow" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp">
     <versions field1="1" field2="0" field3="0" field4="0"/>
     <visualAttributes>
       <color b="255" g="255" r="255"/>
@@ -128,7 +128,7 @@
         <visualDescription h="20" w="20" x="5" y="2"/>
       </unitBounds>
     </innerComponent>
-    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000b55a7d11ba519fff55da0bb849dbb420f90f04dbc6582740cbb0785db4861a790e7b6c4911785ff5ff11a363612adb8e3136a9d14205510f17ef374e9caac2716c8bbd43b4463242cfeb48a67fef38058114bf7b43b64850a0f041977fe3830f929ed4d03176fc4d9183cb2cd245b34f488ea30f75aac29c1f8a09f1519a1d8d" localRef="combine_function" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction/PathFlowCombineFunction.hpe" multiple="false" name="PathFlowCombineFunction" package="br.ufc.mdcc.mapreduce.example.graph.sssp" exposed="false">
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cf8bfe78b8d064e9da552d5d3c86a8280adfaf9bbd1d9dc03cb5e3f95cfec577d4127a1e0b9064c780f990f872133eec22ea5e1371913c0f6f595d47ae92e70c1cd64f485bea7d29864c8578145895101b918f105d10c87a75092c474b02d2a130530dfed5ea91e4f54360043b92016e4a29f5e50a675edd4cf754756e366f91" localRef="combine_function" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowCombineFunction/PathFlowCombineFunction.hpe" multiple="false" name="PathFlowCombineFunction" package="br.ufc.mdcc.mapreduce.example.graph.sssp" exposed="false">
       <visualDescription h="100" w="100" x="0" y="0">
         <color b="255" g="255" r="255"/>
       </visualDescription>
@@ -219,8 +219,86 @@
     </innerComponent>
     <supplyParameter cRef="out" direct="true" varName="Out"/>
     <supplyParameter cRef="split_function" direct="true" varName="Sf"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
+    <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="imk" direct="true" varName="IMK"/>
+    <supplyParameter cRef="imv" direct="true" varName="IMV"/>
     <supplyParameter cRef="partition_function" direct="true" varName="Pf"/>
     <supplyParameter cRef="reduce_function" direct="true" varName="Rf"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
+    <supplyParameter cRef="orv" direct="true" varName="ORV"/>
+    <supplyParameter cRef="omk" direct="true" varName="OMK"/>
+    <supplyParameter cRef="omv" direct="true" varName="OMV"/>
     <supplyParameter cRef="imap" direct="true" varName="IMAP"/>
     <supplyParameter cRef="orv" direct="true" varName="ORV"/>
     <supplyParameter cRef="omv" direct="true" varName="OMV"/>
@@ -231,9 +309,9 @@
     <supplyParameter cRef="combine_function" direct="true" varName="Cf"/>
     <supplyParameter cRef="imk" direct="true" varName="IMK"/>
     <supplyParameter cRef="termination_flag_type" direct="true" varName="TFT"/>
-    <innerRenaming cNewName="termination_flag" cOldName="data" cRef="set_termination_flag"/>
     <innerRenaming cNewName="output_data" cOldName="output" cRef="path_flow"/>
     <innerRenaming cNewName="input_data" cOldName="input" cRef="path_flow"/>
+    <innerRenaming cNewName="termination_flag" cOldName="data" cRef="set_termination_flag"/>
     <interface iRef="IMaster" nArgs="1">
       <slice isRef="path_flow">
         <originRef cRef="path_flow" iRef="IManagerMapReduce"/>
@@ -256,13 +334,13 @@
       <visualDescription h="63" w="139" x="441" y="101">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="output_data">
-        <visualDescription h="10" w="10" x="26" y="3"/>
-        <slice pRef="output" sRef="path_flow"/>
-      </port>
       <port name="input_data">
         <visualDescription h="10" w="10" x="56" y="0"/>
         <slice pRef="input" sRef="path_flow"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="26" y="3"/>
+        <slice pRef="output" sRef="path_flow"/>
       </port>
       <port name="termination_flag">
         <visualDescription h="10" w="10" x="15" y="36"/>

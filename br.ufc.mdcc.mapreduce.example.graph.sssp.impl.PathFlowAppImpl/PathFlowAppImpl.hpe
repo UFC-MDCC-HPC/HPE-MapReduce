@@ -5,7 +5,7 @@
       <extensionType>
         <implements>true</implements>
       </extensionType>
-      <component hash_component_UID="002400000480000094000000060200000024000052534131000400001100000051df39aec106005c70891334e1c06799dfb663030db22e705b03489553c8e175d37abd4b13daf9c4cf9a28bb1d2258f254f8b4ae561b62308aac380af1aada054c942d9e230aaf93250dc0ae9e92ef309b529ed1bb21337e19f9e0bfc6144c0072b9350d2a2364b5c2e413a3223d0e546e3578094d623acbe6e48ab3340fc8b5" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/PathFlowApp.hpe" name="PathFlowApp" package="br.ufc.mdcc.mapreduce.example.graph.sssp" version="1.0.0.0">
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000001feee3318bf8bf04f4847488c61ea9dd808d62bc36b3a5a58d8f6fc75449b88492849842f0b3b4b5a6d8ca4e0b6f910b8fc6b5a30639fcdba2a45c161837a9c12f83e9c4e16160c260fd8c2f749b4cdfaf09ed48eed63223cde23ee46a35f58dd66db3e09011f143f333edc16ad6e47f864d656afcc13994e88666d4432da0d2" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/PathFlowApp.hpe" name="PathFlowApp" package="br.ufc.mdcc.mapreduce.example.graph.sssp" version="1.0.0.0">
         <visualDescription h="60" w="100" x="238" y="290">
           <color b="255" g="255" r="255"/>
         </visualDescription>
@@ -114,7 +114,7 @@
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using System.Threading;&#xA;using System.Collections.Generic;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IMasterProcessImpl() { } &#xA;&#xA;&#x9;&#x9;private const string PATH = &quot;/home/cenez/path.txt&quot;;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IStringInstance input = (IStringInstance)Input_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;string setE = readInput (PATH);&#xA;&#xA;&#x9;&#x9;&#x9;input.Value =  setE;&#xA;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: SSSP APP - GO START !!!&quot;);&#xA;&#x9;&#x9;&#x9;Path_flow.go ();&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: SSSP APP - GO END JOIN !!!&quot;);&#xA;&#xA;&#x9;&#x9;&#x9;IStringInstance output = (IStringInstance) Output_data.Instance;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot; END SSSP (output = &quot; + output.Value + &quot;)&quot;);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;string readInput(string PATH)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return System.IO.File.ReadAllText(PATH);&#xA;&#x9;&#x9;}&#xA;}&#xA;}" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using System.Threading;&#xA;using System.Collections.Generic;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IMasterProcessImpl() { } &#xA;&#xA;&#x9;&#x9;private const string PATH = &quot;/home/cenez/path.txt&quot;;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;IStringInstance input = (IStringInstance)Input_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;string setE = readInput (PATH);&#xA;&#xA;&#x9;&#x9;&#x9;input.Value =  setE;&#xA;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: SSSP APP - GO START !!!&quot;);&#xA;&#x9;&#x9;&#x9;var watch = Stopwatch.StartNew ();&#xA;&#x9;&#x9;&#x9;Path_flow.go ();&#xA;&#x9;&#x9;&#x9;watch.Stop ();&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: SSSP APP - GO END JOIN !!! &quot;+ watch.ElapsedMilliseconds + &quot;ms&quot;);&#xA;&#xA;&#x9;&#x9;&#x9;IStringInstance output = (IStringInstance) Output_data.Instance;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot; END SSSP (output = &quot; + output.Value + &quot;)&quot;);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;string readInput(string PATH)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return System.IO.File.ReadAllText(PATH);&#xA;&#x9;&#x9;}&#xA;}&#xA;}" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
           <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll</dependency>
           <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlowApp/bin/1.0.0.0/IMasterProcess.dll</dependency>
@@ -123,13 +123,13 @@
       <visualDescription h="40" w="101" x="222" y="113">
         <color b="230" g="216" r="173"/>
       </visualDescription>
-      <port name="input_data">
-        <visualDescription h="10" w="10" x="0" y="0"/>
-        <slice pRef="input_data" sRef="path_flow"/>
-      </port>
       <port name="output_data">
         <visualDescription h="10" w="10" x="0" y="0"/>
         <slice pRef="output_data" sRef="path_flow"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="path_flow"/>
       </port>
       <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
       <action id="main">

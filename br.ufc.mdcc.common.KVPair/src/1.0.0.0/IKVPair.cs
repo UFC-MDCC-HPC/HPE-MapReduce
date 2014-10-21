@@ -1,6 +1,7 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
 using System.Collections.Generic;
+using System;
 
 namespace br.ufc.mdcc.common.KVPair { 
 
@@ -8,10 +9,10 @@ namespace br.ufc.mdcc.common.KVPair {
 		where K:IData
 		where V:IData
 	{
-		IKVPairInstance<K,V> newInstance(object key, object value);
+	//	IKVPairInstance<K,V> newInstance(object key, object value);
 	} // end main interface 
 
-	public interface IKVPairInstance<K,V>
+	public interface IKVPairInstance<K,V> : ICloneable
 		where K:IData
 		where V:IData
 	{

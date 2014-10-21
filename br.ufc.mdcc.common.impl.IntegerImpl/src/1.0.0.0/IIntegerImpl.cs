@@ -75,6 +75,16 @@ namespace br.ufc.mdcc.common.impl.IntegerImpl
 
 		#endregion
 
+		#region ICloneable implementation
+
+		public object Clone ()
+		{
+			IIntegerInstance clone = new IIntegerInstanceImpl();
+			clone.Value = this.Value;
+			return clone;
+		}
+
+		#endregion
 
 	}
 

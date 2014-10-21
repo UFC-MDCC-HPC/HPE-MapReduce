@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000b55a7d11ba519fff55da0bb849dbb420f90f04dbc6582740cbb0785db4861a790e7b6c4911785ff5ff11a363612adb8e3136a9d14205510f17ef374e9caac2716c8bbd43b4463242cfeb48a67fef38058114bf7b43b64850a0f041977fe3830f929ed4d03176fc4d9183cb2cd245b34f488ea30f75aac29c1f8a09f1519a1d8d" isAbstract="true" kind="Computation" name="PathFlowCombineFunction" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000cf8bfe78b8d064e9da552d5d3c86a8280adfaf9bbd1d9dc03cb5e3f95cfec577d4127a1e0b9064c780f990f872133eec22ea5e1371913c0f6f595d47ae92e70c1cd64f485bea7d29864c8578145895101b918f105d10c87a75092c474b02d2a130530dfed5ea91e4f54360043b92016e4a29f5e50a675edd4cf754756e366f91" isAbstract="true" kind="Computation" name="PathFlowCombineFunction" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp">
     <baseType>
       <extensionType>
         <extends>true</extends>

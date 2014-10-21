@@ -26,9 +26,6 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 		//MPI.RequestList requestList;
 		//List<MPI.Request> requests;
 
-		public ISourceScatterSplitDataImpl() { 
-        } 
-
 		override public void initialize()
 		{
 			// Inicializar o comunicador MPI. 
@@ -41,12 +38,14 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 		public override void main() 
 		{ int count = 0;
 
-			Trace.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA SOURCE");
+			Trace.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA SOURCE #1");
 
 			Bin_function.NumberOfPartitions = this.UnitSize["target"];
 
 			IIteratorInstance<IKVPair<IMK, IMV>> bins_instance = (IIteratorInstance<IKVPair<IMK, IMV>> ) Bins.Instance;
 			int[] rank_workers = this.UnitRanks["target"];		
+
+			Trace.WriteLine(WorldComm.Rank + ": STARTING SCATTER SPLIT DATA SOURCE #2");
 
 			// 1. Ler os bins, um a um, do iterator, e enviá-los a cada mapper (unidades target) usando MPI.
 			object bins_object;
@@ -57,9 +56,12 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 				// Ler um bin. 
 				IKVPairInstance<IMK, IMV> bin = (IKVPairInstance<IMK, IMV>) bins_object;
 
+
+				Trace.WriteLine (bin.Key.GetType() + " +++++ "+  Key.Instance.GetType());
+
 				// Recuperar a chave do bin.
 				Key.Instance = bin.Key;
-
+					
 				// Descobre o rank do Mapper.
 				Trace.WriteLine(WorldComm.Rank + ": BEFORE BIN FUNCTION " + bins_instance.GetHashCode());
 				Bin_function.go ();

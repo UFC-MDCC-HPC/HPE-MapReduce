@@ -59,12 +59,12 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 					combine_input_data_instance.put(orv);
             }
 
-			combine_input_data_instance.finish  ();
+			combine_input_data_instance.finish();
             
 			Trace.WriteLine(WorldComm.Rank + ": FINISH COMBINER TARGET !!!");
         }
 
-        /* Método da Thread que chama o CombineFunction */
+        /* Mï¿½todo da Thread que chama o CombineFunction */
         public void performCombineFunction() 
 		{
              Combine_function.go();            

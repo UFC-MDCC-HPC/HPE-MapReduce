@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <component:component xmlns:component="http://www.example.org/HashComponent">
-  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000051df39aec106005c70891334e1c06799dfb663030db22e705b03489553c8e175d37abd4b13daf9c4cf9a28bb1d2258f254f8b4ae561b62308aac380af1aada054c942d9e230aaf93250dc0ae9e92ef309b529ed1bb21337e19f9e0bfc6144c0072b9350d2a2364b5c2e413a3223d0e546e3578094d623acbe6e48ab3340fc8b5" isAbstract="true" kind="Application" name="PathFlowApp" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000001feee3318bf8bf04f4847488c61ea9dd808d62bc36b3a5a58d8f6fc75449b88492849842f0b3b4b5a6d8ca4e0b6f910b8fc6b5a30639fcdba2a45c161837a9c12f83e9c4e16160c260fd8c2f749b4cdfaf09ed48eed63223cde23ee46a35f58dd66db3e09011f143f333edc16ad6e47f864d656afcc13994e88666d4432da0d2" isAbstract="true" kind="Application" name="PathFlowApp" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp">
     <versions field1="1" field2="0" field3="0" field4="0"/>
     <visualAttributes>
       <color b="255" g="255" r="255"/>
@@ -8,7 +8,7 @@
   </header>
   <componentInfo>
     <parameter componentRef="platform" formFieldId="platform" order="0" varName="PLATFORM"/>
-    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009d4973e79cafeac9dd81d9a017d67b142154ac649154686a7ed7d537d7a7c1405a99143c47fd656e020e5a1df20cd9afa28be24dfa427c5b12b584a9391cf73324c605c20ba7ab636cb834ddf18b981bcd55ec01f7585eb8148b07b16e939f1429d390a9e5422ea24bd08af91d25de05de1ee1051cf0595bfa14633bcc72a3af" localRef="path_flow" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/PathFlow.hpe" multiple="false" name="PathFlow" package="br.ufc.mdcc.mapreduce.example.graph.sssp" exposed="false">
+    <innerComponent hash_component_UID="002400000480000094000000060200000024000052534131000400001100000059aa1f6531d656e00d011e9a81273663cab095a3a7acc1aa64c5a2c327a7b007def0c6e2068c0d8e584e04847f48edc8fa6cd76d1e8e68cdb62a0c73e2402067edea67555973639e273aba1a3363b5104dbd25c2628b1e67ca02295481c08ebf94ab6d9857a2856f0e8c0530ed159bb9728133811dfb66c1c93cdd22260a81a6" localRef="path_flow" location="br.ufc.mdcc.mapreduce.example.graph.sssp.PathFlow/PathFlow.hpe" multiple="false" name="PathFlow" package="br.ufc.mdcc.mapreduce.example.graph.sssp" exposed="false">
       <visualDescription h="95" w="141" x="188" y="267">
         <color b="255" g="255" r="255"/>
       </visualDescription>

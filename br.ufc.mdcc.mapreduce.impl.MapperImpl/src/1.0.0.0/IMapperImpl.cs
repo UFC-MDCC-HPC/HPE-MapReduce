@@ -33,6 +33,7 @@ public class IMapperImpl<IMK, IMV, OMK, OMV, M> : BaseIMapperImpl<IMK, IMV, OMK,
 			{
 				Trace.WriteLine(Rank + ": LOOP MAPPER !!!" + (count++));
 				IKVPairInstance<IMK,IMV> bin = (IKVPairInstance<IMK,IMV>) bin_object;
+				Trace.WriteLine (Rank + ": " + (Map_value.Instance == null) + " $$$$ " +  bin.Value.GetType());
 
 				Map_key.Instance = bin.Key;
 				Map_value.Instance = bin.Value;

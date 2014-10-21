@@ -70,25 +70,35 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerBspImpl
 			long t1 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds; 
 			clearWriteFile ("./logTIME-REDUCE", "TIME: " + (t1 - t0) + " ms."+System.Environment.NewLine+"BSP");
         }
-		public string sincronize(){
+        
+		public string sincronize()
+		{
 			string candidates_buffer = "";
-			for (int i = 0; i < this.Communicator.Size; i++) {
-				if (i != this.Communicator.Rank) {
+			
+			for (int i = 0; i < this.Communicator.Size; i++) 
+			{
+				if (i != this.Communicator.Rank) 
+				{
 					request.Add (this.Communicator.ImmediateSend<string> (Reduce_function.CandidatesBuffer [i], i, 0));
 					Reduce_function.CandidatesBuffer [i] = "";
 				}
 			}
-			for (int i = 0; i < this.Communicator.Size; i++) {
+			
+			for (int i = 0; i < this.Communicator.Size; i++) 
+			{
 				if (i != this.Communicator.Rank)
 					Reduce_function.CandidatesBuffer[this.Communicator.Rank] = 
 						Reduce_function.CandidatesBuffer[this.Communicator.Rank] + this.Communicator.Receive<string> (i, 0);
 			}
+			
 			request.WaitAll ();
 			candidates_buffer = Reduce_function.CandidatesBuffer[this.Communicator.Rank];
 			active = this.Communicator.Allreduce<int> (active, MPI.Operation<int>.Max);
 			Reduce_function.clearCandidatesBuffer ();
+			
 			return candidates_buffer;
 		}
+		
 		public static void clearWriteFile(string PATH, string saida){
 			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){
 				file.WriteLine(saida);

@@ -58,5 +58,16 @@ namespace br.ufc.mdcc.common.impl.DoubleImpl {
 				return false;
 		}
 		#endregion
+
+		#region ICloneable implementation
+
+		public object Clone ()
+		{
+			IDoubleInstance clone = new IDoubleInstanceImpl();
+			clone.Value = this.Value;
+			return clone;
+		}
+
+		#endregion
 	}
 }

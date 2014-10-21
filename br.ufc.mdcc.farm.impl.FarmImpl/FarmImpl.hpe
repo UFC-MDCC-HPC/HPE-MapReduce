@@ -168,7 +168,7 @@
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherTarget.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Farm/bin/1.0.0.0/BaseIManager.dll</dependency>
         </file>
-        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using System.Threading.Tasks;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IManagerImpl&lt;S, C, I, O, P> : BaseIManagerImpl&lt;S, C, I, O, P>, IManager&lt;S, C, I, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;public IManagerImpl() {} &#xA;&#xA;public override void main() &#xA;{ &#xA;&#x9;Task scatter_task = new Task(delegate {this.Scatter.go();});&#xA;&#x9;Task gather_task = new Task(delegate {this.Gather.go();});&#xA;&#xA;&#x9;scatter_task.Start();&#xA;&#x9;gather_task.Start();&#xA;&#xA;&#x9;Debug.WriteLine (Rank + &quot;: FARM FINISH #1&quot;);&#xA;&#x9;gather_task.Wait();&#xA;&#x9;Debug.WriteLine (Rank + &quot;: FARM FINISH #2&quot;);&#xA;&#x9;scatter_task.Wait();&#xA;&#x9;Debug.WriteLine (Rank + &quot;: FARM FINISH #3&quot;);&#xA;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.farm.Scatter;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.farm.Gather;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.farm.Farm;&#xA;using System.Threading.Tasks;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.farm.impl.FarmImpl { &#xA;&#xA;public class IManagerImpl&lt;S, C, I, O, P> : BaseIManagerImpl&lt;S, C, I, O, P>, IManager&lt;S, C, I, O, P>&#xA;where S:IScatterSource&lt;I>&#xA;where I:IData&#xA;where C:IGatherTarget&lt;O>&#xA;where O:IData&#xA;where P:IPlatform&#xA;{&#xA;&#xA;public IManagerImpl() {} &#xA;&#xA;public override void main() &#xA;{ &#xA;&#x9;Task scatter_task = new Task(delegate {this.Scatter.go();});&#xA;&#x9;Task gather_task = new Task(delegate {this.Gather.go();});&#xA;&#xA;&#x9;scatter_task.Start();&#xA;&#x9;gather_task.Start();&#xA;&#xA;&#x9;Trace.WriteLine (Rank + &quot;: FARM FINISH #1&quot;);&#xA;&#x9;gather_task.Wait();&#xA;&#x9;Trace.WriteLine (Rank + &quot;: FARM FINISH #2&quot;);&#xA;&#x9;scatter_task.Wait();&#xA;&#x9;Trace.WriteLine (Rank + &quot;: FARM FINISH #3&quot;);&#xA;}&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="IManagerImpl.cs" srcType="user" uri="br.ufc.mdcc.farm.impl.FarmImpl/bin/1.0.0.0/IManagerImpl.dll" versionId="1.0.0.0">
           <dependency>br.ufc.mdcc.farm.Scatter/bin/1.0.0.0/IScatterSource.dll</dependency>
           <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
           <dependency>br.ufc.mdcc.farm.Gather/bin/1.0.0.0/IGatherTarget.dll</dependency>
@@ -244,13 +244,13 @@
         <visualDescription h="10" w="10" x="88" y="66"/>
         <slice pRef="source_data" sRef="gather"/>
       </port>
-      <port name="job">
-        <visualDescription h="10" w="10" x="97" y="13"/>
-        <slice pRef="input" sRef="work"/>
-      </port>
       <port name="result">
         <visualDescription h="10" w="10" x="88" y="66"/>
         <slice pRef="output" sRef="work"/>
+      </port>
+      <port name="job">
+        <visualDescription h="10" w="10" x="97" y="13"/>
+        <slice pRef="input" sRef="work"/>
       </port>
       <parameter iname="IScatterTarget" order="0" parid="scatter_strategy" uname="target" varid="S"/>
       <parameter iname="IData" order="3" parid="job_type" uname="data" varid="J"/>

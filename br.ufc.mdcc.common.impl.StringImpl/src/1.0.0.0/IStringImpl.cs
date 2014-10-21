@@ -72,6 +72,16 @@ namespace br.ufc.mdcc.common.impl.StringImpl {
 
 		#endregion
 
+		#region ICloneable implementation
+
+		public object Clone ()
+		{
+			IStringInstance clone = new IStringInstanceImpl();
+			clone.Value = this.Value;
+			return clone;
+		}
+
+		#endregion
 
 	}
 

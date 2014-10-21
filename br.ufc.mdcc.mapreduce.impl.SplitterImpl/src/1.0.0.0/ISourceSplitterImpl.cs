@@ -19,28 +19,29 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
 	where Bf:IPartitionFunction<IMK>
 	   
 	{
-		public ISourceSplitterImpl() { } 
-
         public override void main() 
 		{ 
-			// 1. Criar uma thread para executar Split_function.go();
-			Task split_function_task = new Task (delegate {
-				Split_function.go ();
-			});
-
-
 			// 2. Criar uma thread para executar Send_bins.go()
 			Task send_bins_task = new Task (delegate {
+				Trace.WriteLine("BEFORE SEND BINS TASK");
 				Send_bins.go();
+				Trace.WriteLine("AFTER SEND BINS TASK");
 			});
 
-			split_function_task.Start ();
+			// 1. Criar uma thread para executar Split_function.go();
+			//Task split_function_task = new Task (delegate {
+				Trace.WriteLine("BEFORE SPLIT FUNCTION TASK");
+				Split_function.go();
+				Trace.WriteLine("AFTER SPLIT FUNCTION TASK");
+			//});
+
+			//split_function_task.Start ();
 			send_bins_task.Start ();
 
 			Trace.WriteLine (Rank + ": SPLITTER FINISH #1");
 			send_bins_task.Wait ();
 			Trace.WriteLine (Rank + ": SPLITTER FINISH #2");
-			split_function_task.Wait ();
+			//split_function_task.Wait ();
 			Trace.WriteLine (Rank + ": SPLITTER FINISH #3");
         }
     }

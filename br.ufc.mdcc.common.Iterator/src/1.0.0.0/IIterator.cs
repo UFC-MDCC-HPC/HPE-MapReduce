@@ -1,5 +1,6 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
+using System;
 
 namespace br.ufc.mdcc.common.Iterator { 
 	
@@ -11,11 +12,11 @@ namespace br.ufc.mdcc.common.Iterator {
 
 	} // end main interface 
 
-	public interface IIteratorInstance<T>
+	public interface IIteratorInstance<T> : ICloneable
 		where T:IData
 	{
 		// consumer:
-
+		ICloneable createItem ();
 
 		// - raises exception if has finished
 		void put(object item);

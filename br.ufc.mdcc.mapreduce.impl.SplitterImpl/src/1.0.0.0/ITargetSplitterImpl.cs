@@ -11,8 +11,6 @@ namespace br.ufc.mdcc.mapreduce.impl.SplitterImpl {
 	where IMK:IData
 	where IMV:IData 
 	{
-		public ITargetSplitterImpl() { } 
-
 		public override void main() 
 		{ 
 			// Executar Send_bins.go()

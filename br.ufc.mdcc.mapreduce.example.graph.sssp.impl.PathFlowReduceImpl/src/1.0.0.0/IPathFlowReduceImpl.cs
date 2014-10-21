@@ -66,10 +66,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl {
 							output_neibours[n] = double.Parse (values [1]);
 						else 
 							if (double.Parse (values [1]) < d) 
-							{
-								//output_neibours.Remove(n);
 								output_neibours[n] = double.Parse (values [1]);
-							}
 						break;
 				}
 

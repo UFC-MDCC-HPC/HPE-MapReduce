@@ -1,5 +1,6 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
+using System;
 
 namespace br.ufc.mdcc.common.String { 
 
@@ -8,7 +9,7 @@ namespace br.ufc.mdcc.common.String {
 		IStringInstance newInstance(string i);
 	} // end main interface 
 
-	public interface IStringInstance
+	public interface IStringInstance : ICloneable
 	{
 		string Value { set; get; }
 	}

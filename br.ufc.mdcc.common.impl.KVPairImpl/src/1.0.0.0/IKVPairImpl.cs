@@ -17,11 +17,11 @@ namespace br.ufc.mdcc.common.impl.KVPairImpl {
 			newInstance(); 
 		}
 
-		public IKVPairInstance<K,V> newInstance (object k, object v)
-		{
-			IKVPairInstance<K,V> instance = new IKVPairInstanceImpl<K,V> (k,v);
-			return ( IKVPairInstance<K,V>) (this.Instance = instance);
-		}
+	//	public IKVPairInstance<K,V> newInstance (object k, object v)
+	//	{
+	//		IKVPairInstance<K,V> instance = new IKVPairInstanceImpl<K,V> (k,v);
+	//		return ( IKVPairInstance<K,V>) (this.Instance = instance);
+	//	}
 
 		public object newInstance ()
 		{
@@ -66,6 +66,16 @@ namespace br.ufc.mdcc.common.impl.KVPairImpl {
 
 		#endregion
 
+		#region ICloneable implementation
+
+		public object Clone ()
+		{
+			IKVPairInstance<K,V> clone = new IKVPairInstanceImpl<K,V>(((ICloneable)this.Key).Clone(), ((ICloneable)this.Value).Clone());
+
+			return clone;
+		}
+
+		#endregion
 
 	}
 

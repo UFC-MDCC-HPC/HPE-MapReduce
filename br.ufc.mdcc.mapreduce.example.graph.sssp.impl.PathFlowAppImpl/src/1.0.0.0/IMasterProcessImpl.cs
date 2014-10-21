@@ -27,8 +27,10 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowAppImpl {
 			input.Value =  setE;
 
 			Console.WriteLine (Rank + ": SSSP APP - GO START !!!");
+			var watch = Stopwatch.StartNew ();
 			Path_flow.go ();
-			Console.WriteLine (Rank + ": SSSP APP - GO END JOIN !!!");
+			watch.Stop ();
+			Console.WriteLine (Rank + ": SSSP APP - GO END JOIN !!! "+ watch.ElapsedMilliseconds + "ms");
 
 			IStringInstance output = (IStringInstance) Output_data.Instance;
 			Console.WriteLine (Rank + " END SSSP (output = " + output.Value + ")");

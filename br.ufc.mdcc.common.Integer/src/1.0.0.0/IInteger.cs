@@ -1,5 +1,6 @@
 using br.ufc.pargo.hpe.kinds;
 using br.ufc.mdcc.common.Data;
+using System;
 
 namespace br.ufc.mdcc.common.Integer { 
 
@@ -8,7 +9,7 @@ namespace br.ufc.mdcc.common.Integer {
 		IIntegerInstance newInstance(int i);
 	} // end main interface 
 
-	public interface IIntegerInstance
+	public interface IIntegerInstance : ICloneable
 	{
 		int Value { set; get; }
 	}
