@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000029908eb8fec945c6406489207b1b6034a3e1489f20bcdfda2415bf96d61425275d84a4da4aacf85d70d1ac057ca4e1890ad20dcca1424de4ad8ea8fb558d5db8db136d35bfeffe615790e4e4b217fcba8cb4e1ef144da0c14287757eb8bbf2083b518dc3b71f106dbed9a5facdda9abc2101c6552eafcbcf20c9ba2b1cc6cf8e" isAbstract="false" kind="Computation" name="PathFlowImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003d0dd3da228c8784d7fe46ecd4a233a580ac0442db85fd69b0b14f0061b5a1dc90fc2deafd2c51e47bd7b4d9f100a87790c78cdcb693ee628a15799b25f48fa959f93a6fdbaf17c5e8e0fabd46883d89560fd26691d9e90503a7eb39979dce004ab27b963befb6ea9d56e2c38fb993183f5445f70f2a6389e446431a3a3f8597" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/PathFlow.hpe" name="PathFlow" package="br.ufc.mdcc.mapreduce.example.graph.sssp.fast" version="1.0.0.0">
+        <visualDescription h="101" w="187" x="169" y="302">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="platform" varName="PLATFORM"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="input_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="116" y="484">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e5873a44b23e0e36b62bd4462cf4f01fc4b03ce7b0922141e389cf2291aacd898d054a1e2147ce8c1c563b7a410cefef0e8d5b9b941643a09a5bdd0bd24eeeec082e8bd8fdf285fa51fe1c78d5351d970ba67e30fceb6575df115ce2b235b62d8fb560a1546371508d8a1aa133a213323d80aacd148883ae2fa6225f4d678cec" localRef="output_data" location="br.ufc.mdcc.common.String/String.hpe" multiple="false" name="String" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="100" w="100" x="388" y="469">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="master">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="path_flow_map">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="path_flow_reduce">
+          <visualDescription h="20" w="20" x="51" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="587" y="136">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <interface iRef="IMasterImpl" nArgs="1">
+      <slice isRef="input_data">
+        <originRef cRef="input_data" iRef="IString"/>
+        <visualDescription h="10" w="10" x="1" y="20"/>
+      </slice>
+      <slice isRef="output_data">
+        <originRef cRef="output_data" iRef="IString"/>
+        <visualDescription h="10" w="10" x="47" y="26"/>
+      </slice>
+      <slice isRef="path_flow">
+        <originRef cRef="path_flow" iRef="IManagerMapReduce"/>
+        <visualDescription h="10" w="10" x="32" y="23"/>
+      </slice>
+      <slice isRef="set_termination_flag">
+        <originRef cRef="set_termination_flag" iRef="IBroadcast"/>
+        <visualDescription h="10" w="10" x="6" y="9"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.user.CombineFunction;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.DataPath;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowCombineFunction;&#xA;using br.ufc.mdcc.common.communication.Broadcast;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.SplitPathInfo;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl { &#xA;&#xA;&#x9;public abstract class BaseIMasterImpl&lt;PLATFORM>: Computation, BaseIMaster&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IString output_data = null;&#xA;&#x9;&#x9;public IString Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IString) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString input_data = null;&#xA;&#x9;&#x9;public IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IPathInfo> initial_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IPathInfo> Initial_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.initial_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.initial_data = (IIterator&lt;IPathInfo>) Services.getPort(&quot;initial_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.initial_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IInteger, IIterator&lt;IPathInfo>> final_distances = null;&#xA;&#x9;&#x9;public IKVPair&lt;IInteger, IIterator&lt;IPathInfo>> Final_distances {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.final_distances == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.final_distances = (IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>) Services.getPort(&quot;final_distances&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.final_distances;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;//IManagerMapReduce      &lt;In,                   IMK,      IMV,       OMK,      ORV,                                     Out,                                    Sf,             Bf,                           Cf&lt;ORV,Out>,                                                                                                PLATFORM>&#xA;&#x9;&#x9;private IManagerMapReduce&lt;IIterator&lt;IPathInfo>, IInteger, IPathInfo, IInteger, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IKVPair&lt;IInteger,IIterator&lt;IPathInfo>>, ISplitPathInfo, IPartitionFunction&lt;IInteger>, IPathFlowCombineFunction&lt;IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>>, PLATFORM> path_flow = null;&#xA;&#x9;&#x9;protected IManagerMapReduce&lt;IIterator&lt;IPathInfo>, IInteger, IPathInfo, IInteger, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IKVPair&lt;IInteger,IIterator&lt;IPathInfo>>, ISplitPathInfo, IPartitionFunction&lt;IInteger>, IPathFlowCombineFunction&lt;IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>>, PLATFORM> Path_flow {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.path_flow == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.path_flow = (IManagerMapReduce&lt;IIterator&lt;IPathInfo>, IInteger, IPathInfo, IInteger, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IKVPair&lt;IInteger,IIterator&lt;IPathInfo>>, ISplitPathInfo, IPartitionFunction&lt;IInteger>, IPathFlowCombineFunction&lt;IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>>, PLATFORM>) Services.getPort(&quot;path_flow&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.path_flow;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;private IBroadcast&lt;IInteger> set_termination_flag = null;&#xA;&#x9;&#x9;protected IBroadcast&lt;IInteger> Set_termination_flag {&#xA;&#x9;&#x9;   get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.set_termination_flag == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.set_termination_flag = (IBroadcast&lt;IInteger>) Services.getPort(&quot;set_termination_flag&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.set_termination_flag;&#xA;&#x9;&#x9;   }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IInteger termination_flag = null;&#xA;&#x9;&#x9;protected IInteger Termination_flag {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.termination_flag == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.termination_flag = (IInteger) Services.getPort(&quot;termination_flag&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.termination_flag;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIMasterImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/BaseIMasterImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IManagerMapReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.BreakInLines/bin/1.0.0.0/IBreakInLines.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowCombineFunction/bin/1.0.0.0/IPathFlowCombineFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/BaseIMaster.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.String;&#xA;using System.Collections.Generic;&#xA;using System.Diagnostics;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl { &#xA;&#xA;&#x9;public class IMasterImpl&lt;PLATFORM> : BaseIMasterImpl&lt;PLATFORM>, IMaster&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;int done = 0;&#xA;&#x9;&#x9;&#x9;IStringInstance input_data_instance = (IStringInstance)Input_data.Instance;&#xA;&#x9;&#x9;&#x9;IStringInstance output_data_instance = (IStringInstance)Output_data.Instance;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IPathInfo> initial_data_instance = (IIteratorInstance&lt;IPathInfo>) Initial_data.Instance;&#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IInteger,IIterator&lt;IPathInfo>> final_distances_instance = (IKVPairInstance&lt;IInteger,IIterator&lt;IPathInfo>>) Final_distances.Instance;&#xA;&#x9;&#x9;&#x9;IIntegerInstance termination_flag = (IIntegerInstance) Termination_flag.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;string setE = input_data_instance.Value;&#xA;&#x9;&#x9;&#x9;string setV = &quot;1 c 0&quot; + System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;IDictionary&lt;int,int> vertices = new Dictionary&lt;int,int>();&#xA;&#x9;&#x9;&#x9;foreach (string edge in setE.Split(System.Environment.NewLine.ToCharArray())) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;if (edge.Length > 0) &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;int vertex = edge [0];&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;if (!vertices.ContainsKey (vertex)) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;setV += edge [0] + &quot; d &quot; + int.MaxValue + System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;vertices.Add (vertex, vertex);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;feedInitialData (setV + System.Environment.NewLine + setE, initial_data_instance);&#xA;&#xA;&#x9;&#x9;&#x9;int count = 0;&#xA;&#x9;&#x9;&#x9;while (done == 0) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: ITERATION PATH_FLOW FAST GO ! - &quot; + (++count));&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;this.Path_flow.go ();&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;done = ((IIntegerInstance)final_distances_instance.Key).Value;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;termination_flag.Value = done;&#xA;&#x9;&#x9;&#x9;&#x9;Set_termination_flag.go ();&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;if (done == 0) &#xA;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: Exchange #1&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;initial_data_instance.putAll ((IIteratorInstance&lt;IPathInfo>)final_distances_instance.Value);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;initial_data_instance.finish ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: Exchange #2&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;outputFinalDistances((IIteratorInstance&lt;IPathInfo>)final_distances_instance.Value, output_data_instance);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: --- FINISH PATH_FLOW.GO !&quot;);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;void feedInitialData (string setE, IIteratorInstance&lt;IPathInfo> initial_data_instance)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;string[] lines = setE.Split(new char[] {System.Environment.NewLine[0]});&#xA;&#xA;&#x9;&#x9;&#x9;foreach (string line in lines) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;if (!line.Trim().Equals (&quot;&quot;)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine(Rank + &quot;: LINE = &quot; + line);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;string[] edge_info_items = line.Split (' ');&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IPathInfoInstance edge = (IPathInfoInstance)Initial_data.createItem ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;char item_type = edge_info_items [1] [0];&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;switch (item_type) &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;case 'c':&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DistanceInfo dist_instance_c = new DistanceInfo ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dist_instance_c.info_type = Info.PATH_INFO_TYPE_DISTANCE_TRIAL;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dist_instance_c.vertex = int.Parse (edge_info_items [0]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dist_instance_c.distance = int.Parse (edge_info_items [2]);&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge.Value = dist_instance_c;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: c &quot; + dist_instance_c.info_type + &quot; &quot; + dist_instance_c.vertex + &quot; &quot; + dist_instance_c.distance);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;case 'd':&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DistanceInfo dist_instance_d = new DistanceInfo ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dist_instance_d.info_type = Info.PATH_INFO_TYPE_DISTANCE_TRIAL;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dist_instance_d.vertex = int.Parse (edge_info_items [0]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dist_instance_d.distance = int.Parse (edge_info_items [2]);&#x9;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge.Value = dist_instance_d;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: d &quot; + dist_instance_d.info_type + &quot; &quot; + dist_instance_d.vertex + &quot; &quot; + dist_instance_d.distance);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;default:&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;EdgeInfo edge_info = new EdgeInfo ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge_info.info_type = Info.PATH_INFO_TYPE_EDGE;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge_info.vertex = int.Parse(edge_info_items[0]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge_info.vertex_other = int.Parse(edge_info_items[1]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge_info.weight = int.Parse(edge_info_items[2]);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;edge.Value = edge_info;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;: edge &quot; + edge_info.info_type + &quot; &quot; + edge_info.vertex + &quot; &quot; + edge_info.vertex_other + &quot; &quot; + edge_info.weight);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;break;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;initial_data_instance.put (edge);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;initial_data_instance.finish ();&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;void outputFinalDistances (IIteratorInstance&lt;IPathInfo> final_distances_instance, IStringInstance output_data_instance)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;string output_string = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;object o;&#xA;&#x9;&#x9;&#x9;while (final_distances_instance.fetch_next(out o))&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;IPathInfoInstance path_info = (IPathInfoInstance) o;&#xA;&#x9;&#x9;&#x9;&#x9;DistanceInfo distance_info = (DistanceInfo) path_info.Value;&#xA;&#x9;&#x9;&#x9;&#x9;if (distance_info.info_type.Equals(Info.PATH_INFO_TYPE_DISTANCE_PARTIAL)) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;Console.WriteLine (&quot;OUTPUT : &quot; + path_info.Value);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;output_string += distance_info.vertex + &quot; d &quot; + distance_info.distance + System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;throw new Exception (&quot;PathFlowImpl.IMasterImpl.outputFinalDistances: something goes wrong when reading output distances (unexpected result : &quot; + distance_info + &quot;)&quot; &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;                     + distance_info.info_type + &quot; --- &quot; + Info.PATH_INFO_TYPE_DISTANCE_PARTIAL);&#xA;&#x9;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;&#x9;output_data_instance.Value = output_string;&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IMasterImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/IMasterImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/BaseIMasterImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/IMaster.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="63" w="139" x="110" y="63">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="input_data"/>
+      </port>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="output_data"/>
+      </port>
+      <port name="initial_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input" sRef="path_flow"/>
+      </port>
+      <port name="final_distances">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output" sRef="path_flow"/>
+      </port>
+      <port name="termination_flag">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="data" sRef="set_termination_flag"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IPathFlowMapImpl" nArgs="1">
+      <slice isRef="path_flow">
+        <originRef cRef="path_flow" iRef="IMapWorker"/>
+        <visualDescription h="10" w="10" x="93" y="14"/>
+      </slice>
+      <slice isRef="set_termination_flag">
+        <originRef cRef="set_termination_flag" iRef="IBroadcast"/>
+        <visualDescription h="10" w="10" x="11" y="17"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.mapreduce.user.PartitionFunction;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.DataPath;&#xA;using br.ufc.mdcc.common.communication.Broadcast;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;using br.ufc.mdcc.mapreduce.user.MapFunction;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl { &#xA;&#xA;&#x9;public abstract class BaseIPathFlowMapImpl&lt;PLATFORM>: Computation, BaseIPathFlowMap&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#x9;//      &lt;          IMK,      IMV,     OMK,      OMV,         Pf,                           Mf,        PLATFORM>&#xA;&#x9;&#x9;private IMapWorker&lt;IInteger, IPathInfo, IInteger, IPathInfo, IPartitionFunction&lt;IInteger>, IMapFunction&lt;IInteger,IPathInfo,IInteger,IPathInfo>, PLATFORM> path_flow = null;&#xA;&#x9;&#x9;protected IMapWorker&lt;IInteger, IPathInfo, IInteger, IPathInfo, IPartitionFunction&lt;IInteger>, IMapFunction&lt;IInteger,IPathInfo,IInteger,IPathInfo>, PLATFORM> Path_flow {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.path_flow == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.path_flow = (IMapWorker&lt;IInteger, IPathInfo, IInteger, IPathInfo, IPartitionFunction&lt;IInteger>, IMapFunction&lt;IInteger,IPathInfo,IInteger,IPathInfo>, PLATFORM>) Services.getPort(&quot;path_flow&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.path_flow;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;private IBroadcast&lt;IInteger> set_termination_flag = null;&#xA;&#x9;&#x9;protected IBroadcast&lt;IInteger> Set_termination_flag {&#xA;&#x9;&#x9;   get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.set_termination_flag == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.set_termination_flag = (IBroadcast&lt;IInteger>) Services.getPort(&quot;set_termination_flag&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.set_termination_flag;&#xA;&#x9;&#x9;   }&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;private IInteger termination_flag = null;&#xA;&#x9;&#x9;protected IInteger Termination_flag {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.termination_flag == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.termination_flag = (IInteger) Services.getPort(&quot;termination_flag&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.termination_flag;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIPathFlowMapImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/BaseIPathFlowMapImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IMapWorker.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Integer/bin/1.0.0.0/IInteger.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.PartitionFunction/bin/1.0.0.0/IPartitionFunction.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowMap/bin/1.0.0.0/IPathFlowMap.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/BaseIPathFlowMap.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl { &#xA;&#xA;&#x9;public class IPathFlowMapImpl&lt;PLATFORM> : BaseIPathFlowMapImpl&lt;PLATFORM>, IPathFlowMap&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;int done = 0;&#xA;&#xA;&#x9;&#x9;&#x9;while (done == 0) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;this.Path_flow.go ();&#xA;&#x9;&#x9;&#x9;&#x9;this.Set_termination_flag.go ();&#xA;&#x9;&#x9;&#x9;&#x9;IIntegerInstance termination_flag = (IIntegerInstance) Termination_flag.Instance;&#xA;&#x9;&#x9;&#x9;&#x9;done = termination_flag.Value;&#xA;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;AFTER PATH ROW MAP LOOP &quot; + done + &quot; --- &quot; + Termination_flag.Instance.GetHashCode());&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IPathFlowMapImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/IPathFlowMapImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/BaseIPathFlowMapImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/IPathFlowMap.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="117" x="26" y="224">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <port name="termination_flag">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="data" sRef="set_termination_flag"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IPathFlowReduceImpl" nArgs="1">
+      <slice isRef="path_flow">
+        <originRef cRef="path_flow" iRef="IReduceWorker"/>
+        <visualDescription h="10" w="10" x="14" y="24"/>
+      </slice>
+      <slice isRef="set_termination_flag">
+        <originRef cRef="set_termination_flag" iRef="IBroadcast"/>
+        <visualDescription h="10" w="10" x="57" y="7"/>
+      </slice>
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.MapReduce;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowReduce;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.communication.Broadcast;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.DataPath;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl { &#xA;&#xA;&#x9;public abstract class BaseIPathFlowReduceImpl&lt;PLATFORM>: Computation, BaseIPathFlowReduce&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#x9;//&lt;                   OMK,      OMV,          ORV,                                Rf,             PLATFORM>&#xA;&#x9;&#x9;private IReduceWorker&lt;IInteger, IPathInfo, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IPathFlowReduce, PLATFORM> path_flow = null;&#xA;&#x9;&#x9;protected IReduceWorker&lt;IInteger, IPathInfo, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IPathFlowReduce, PLATFORM> Path_flow {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.path_flow == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.path_flow = (IReduceWorker&lt;IInteger, IPathInfo, IKVPair&lt;IInteger, IIterator&lt;IPathInfo>>, IPathFlowReduce, PLATFORM>) Services.getPort(&quot;path_flow&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.path_flow;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;private IBroadcast&lt;IInteger> set_termination_flag = null;&#xA;&#x9;&#x9;protected IBroadcast&lt;IInteger> Set_termination_flag {&#xA;&#x9;&#x9;   get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.set_termination_flag == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.set_termination_flag = (IBroadcast&lt;IInteger>) Services.getPort(&quot;set_termination_flag&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.set_termination_flag;&#xA;&#x9;&#x9;   }&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;private IInteger termination_flag = null;&#xA;&#x9;&#x9;protected IInteger Termination_flag {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.termination_flag == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.termination_flag = (IInteger) Services.getPort(&quot;termination_flag&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.termination_flag;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIPathFlowReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/BaseIPathFlowReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.MapReduce/bin/1.0.0.0/IReduceWorker.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowReduce/bin/1.0.0.0/IPathFlowReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/BaseIPathFlowReduce.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl { &#xA;&#xA;&#x9;public class IPathFlowReduceImpl&lt;PLATFORM> : BaseIPathFlowReduceImpl&lt;PLATFORM>, IPathFlowReduce&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;&#x9;int done = 0;&#xA;&#xA;&#x9;&#x9;&#x9;while (done == 0) &#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;this.Path_flow.go ();&#xA;&#x9;&#x9;&#x9;&#x9;this.Set_termination_flag.go ();&#xA;&#x9;&#x9;&#x9;&#x9;IIntegerInstance termination_flag = (IIntegerInstance) Termination_flag.Instance;&#xA;&#x9;&#x9;&#x9;&#x9;done = termination_flag.Value;&#xA;&#x9;&#x9;&#x9;&#x9;Trace.WriteLine (Rank + &quot;AFTER PATH ROW REDUCE LOOP &quot; + done);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;" fileType="library" name="IPathFlowReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/IPathFlowReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/bin/1.0.0.0/BaseIPathFlowReduceImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/IPathFlowReduce.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="145" x="322" y="255">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <port name="termination_flag">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="data" sRef="set_termination_flag"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IMasterImpl" multiple="false" private="false" replica="0" uRef="master" visibleInterface="true">
+      <super cRef="base" uRef="master"/>
+      <visualDescription h="40" w="80" x="233" y="195"/>
+    </unit>
+    <unit iRef="IPathFlowMapImpl" multiple="true" private="false" replica="0" uRef="path_flow_map" visibleInterface="true">
+      <super cRef="base" uRef="path_flow_map"/>
+      <visualDescription h="40" w="117" x="26" y="304"/>
+    </unit>
+    <unit iRef="IPathFlowReduceImpl" multiple="true" private="false" replica="0" uRef="path_flow_reduce" visibleInterface="true">
+      <super cRef="base" uRef="path_flow_reduce"/>
+      <visualDescription h="40" w="145" x="433" y="293"/>
+    </unit>
+  </componentInfo>
+</component:component>

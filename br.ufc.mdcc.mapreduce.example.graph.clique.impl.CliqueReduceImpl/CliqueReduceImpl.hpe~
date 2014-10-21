@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000130c90af458c2b30a93133bb7da7f7d13eecc8b64a3a2c5a7e5a59a13a306acc04f146dedb84abad2a0073f8b8c203cc52c78fad486ae0f7184d47f5fdfb21ea91fd94a801701c7a5ba7ab32eb8ce725d3c1ce9ebc94537f85b771310ad9d6bf410121324b8990cb5a0cf6c628d54452c6679e5bbbf3042dc27e7949dfa4f387" isAbstract="false" kind="Computation" name="CliqueReduceImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.clique.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007dacec7c168b46e9fa92e46244a75aac426de31d16a7577422bafadf3dafe1575e7203ee501ce6ac984a6c74afd6d897f29366d4b07773c4becaaa9fc0da1b05752f5bef608a2af6843c56d9afc21c8b8b369a2780c0f4891fc33b439e82d363b1e7bd58fbefd815821071406d09c7c2a56cfab06bfc0100eb4658e421cb1891" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/CliqueReduce.hpe" name="CliqueReduce" package="br.ufc.mdcc.mapreduce.example.graph.clique" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="263" y="330">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="output_value" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="59" w="134" x="36" y="228">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="value_type" varName="OMV"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000009f0e4059bac90dbd773452b6ebbd798d7673d1cf0db03eb04b60b32098534b66525ece6ae96847b6a664f3d0a11033b983b98dbcf737dde8ae6cfbd8f09ba1ea62bf49d5da735b99512c0ba27fd2d2ee2ec11f6a143956f11bffba007421f7b46a10ee568ea7e23e0e62d2171f97f0efe4f5b4c9cf8eeb851ea528187c0bd382" localRef="input_values" location="br.ufc.mdcc.common.KVPair/KVPair.hpe" multiple="false" name="KVPair" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="141" x="46" y="405">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <pa	rameter formFieldId="value_type" varName="X###14535878"/>
+          <parameter formFieldId="key_type" varName="OMK"/>
+          <unitBounds parallel="false" uRef="kv_pair">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="reduce_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="ICliqueReduceImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl { &#xA;&#x9;public abstract class BaseICliqueReduceImpl: Computation, BaseICliqueReduce{&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, IIterator&lt;ICliqueNode>> input_values = null;&#xA;&#x9;&#x9;public IKVPair&lt;IString, IIterator&lt;ICliqueNode>> Input_values {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_values == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_values = (IKVPair&lt;IString, IIterator&lt;ICliqueNode>>) Services.getPort(&quot;input_values&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_values;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IKVPair&lt;IString, ICliqueNode> output_value = null;&#xA;&#x9;&#x9;public IKVPair&lt;IString, ICliqueNode> Output_value {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_value == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_value = (IKVPair&lt;IString, ICliqueNode>) Services.getPort(&quot;output_value&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_value;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;// BaseIReduceFunction&lt;OMK, OMV, ORV>:&#xA;&#x9;&#x9;//&#x9;  IKVPair&lt;OMK,IIterator&lt;OMV>> Input_values {get;}&#xA;&#x9;&#x9;//    ORV Output_value {get;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseICliqueReduceImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl/bin/1.0.0.0/BaseICliqueReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0/BaseICliqueReduce.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using System.Collections.Generic;&#xA;using System.IO;&#xA;using System.Collections.Generic;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl { &#xA;&#xA;&#x9;public class ICliqueReduceImpl : BaseICliqueReduceImpl, ICliqueReduce{&#xA;&#xA;&#x9;&#x9;private IList&lt;IList&lt;int>> bigCliques = null;&#xA;&#x9;&#x9;private int bigger=0;&#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, IIterator&lt;ICliqueNode>> input = (IKVPairInstance&lt;IString, IIterator&lt;ICliqueNode>>) Input_values.Instance;&#xA;&#x9;&#x9;&#x9;IStringInstance pivot = (IStringInstance)input.Key;&#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;ICliqueNode> input_value = (IIteratorInstance&lt;ICliqueNode>)input.Value;&#xA;&#xA;&#x9;&#x9;&#x9;bigCliques = new List&lt;IList&lt;int>> ();&#xA;&#x9;&#x9;&#x9;bigger=0;&#xA;&#xA;&#x9;&#x9;&#x9;HashSet&lt;int> upper = new HashSet&lt;int>();&#xA;&#x9;&#x9;&#x9;HashSet&lt;int> lower = new HashSet&lt;int>();&#xA;&#xA;&#x9;&#x9;&#x9;IDictionary&lt;int, IList&lt;int>> dicValues = splitting_In_Left_Pivot_Right(input_value, pivot.Value, upper, lower);&#xA;&#xA;&#x9;&#x9;&#x9;IList&lt;int> R = new List&lt;int>();&#xA;&#x9;&#x9;&#x9;R.Add(int.Parse(pivot.Value));&#xA;&#xA;&#x9;&#x9;&#x9;bronKerboschAlgorithm(1, dicValues, upper, R, lower);&#xA;&#xA;&#x9;&#x9;&#x9;if (bigCliques.Count > 0) {&#xA;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString,ICliqueNode> kvpair = (IKVPairInstance&lt;IString,ICliqueNode>)Output_value.newInstance ();&#xA;&#x9;&#x9;&#x9;&#x9;((IStringInstance)kvpair.Key).Value = pivot.Value;&#xA;&#x9;&#x9;&#x9;&#x9;((ICliqueNodeInstance)kvpair.Value).IdInstance = bigCliques [0].Count;&#xA;&#x9;&#x9;&#x9;&#x9;((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = bigCliques [0];&#xA;&#x9;&#x9;&#x9;} else {&#xA;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString,ICliqueNode> kvpair = (IKVPairInstance&lt;IString,ICliqueNode>)Output_value.newInstance ();&#xA;&#x9;&#x9;&#x9;&#x9;((IStringInstance)kvpair.Key).Value = pivot.Value;&#xA;&#x9;&#x9;&#x9;&#x9;((ICliqueNodeInstance)kvpair.Value).IdInstance = 0;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IDictionary&lt;int, IList&lt;int>> splitting_In_Left_Pivot_Right(IIteratorInstance&lt;ICliqueNode> input_instance_value, string pivot, HashSet&lt;int> P, HashSet&lt;int> X) {&#xA;&#x9;&#x9;&#x9;IDictionary&lt;int, IList&lt;int>> res = new Dictionary&lt;int, IList&lt;int>>();&#xA;&#x9;&#x9;&#x9;int pivot_number = int.Parse (pivot);&#xA;&#x9;&#x9;&#x9;object o;&#xA;&#xA;&#x9;&#x9;&#x9;//Debug Block start&#xA;&#x9;&#x9;&#x9;&#x9;string[] data_tempo = System.IO.File.ReadAllText(&quot;/home/cenez/data.txt&quot;).Split(' ');&#xA;&#x9;&#x9;&#x9;string saida = &quot;TaskRank=&quot;+this.Rank+&quot; Chave=&quot;+pivot+&quot; {&quot;+System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;//Debug Block end&#xA;&#xA;&#x9;&#x9;&#x9;while(input_instance_value.fetch_next(out o)){&#xA;&#x9;&#x9;&#x9;&#x9;ICliqueNodeInstance node_instance = (ICliqueNodeInstance)o;&#xA;&#x9;&#x9;&#x9;&#x9;if (pivot_number &lt; node_instance.IdInstance)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;P.Add (node_instance.IdInstance);&#xA;&#x9;&#x9;&#x9;&#x9;if (pivot_number > node_instance.IdInstance)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;X.Add (node_instance.IdInstance);&#xA;&#x9;&#x9;&#x9;&#x9;res [node_instance.IdInstance] = node_instance.NeighborsInstance;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;//Debug Block start&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;saida = saida+&quot;&lt;&quot;+node_instance.IdInstance+&quot;, [&quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;IEnumerator&lt;int> neighbor = node_instance.NeighborsInstance.GetEnumerator ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;while (neighbor.MoveNext ()) {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;saida = saida + neighbor.Current + &quot; &quot;;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;saida = saida + &quot;]>&quot;+System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;&#x9;//Debug Block end&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;saida = saida + &quot;}&quot;+System.Environment.NewLine;&#xA;&#x9;&#x9;&#x9;using (System.IO.StreamWriter file = new System.IO.StreamWriter(@&quot;/home/cenez/logInputCliqueReduce&quot;+data_tempo[0], true)){&#xA;&#x9;&#x9;&#x9;&#x9;file.WriteLine(saida);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;return res;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public void bronKerboschAlgorithm(int SIZE, IDictionary&lt;int, IList&lt;int>> dicValues, HashSet&lt;int> P, IList&lt;int> R, HashSet&lt;int> X) {&#xA;&#x9;&#x9;&#x9;if (P.Count == 0 &amp;&amp; X.Count == 0) {&#xA;&#x9;&#x9;&#x9;&#x9;if (SIZE > bigger) { &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;bigCliques.Clear ();&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;bigCliques.Add (R);&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;bigger = SIZE;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;while (P.Count>0){&#xA;&#x9;&#x9;&#x9;&#x9;IEnumerator&lt;int> iteratorPValues = P.GetEnumerator();&#xA;&#x9;&#x9;&#x9;&#x9;iteratorPValues.MoveNext();&#xA;&#x9;&#x9;&#x9;&#x9;int v = iteratorPValues.Current;&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;HashSet&lt;int> p = new HashSet&lt;int>();&#xA;&#x9;&#x9;&#x9;&#x9;HashSet&lt;int> x = new HashSet&lt;int>();&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;IList&lt;int> r = new List&lt;int>(R);&#xA;&#x9;&#x9;&#x9;&#x9;r.Add(v);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;intersect (dicValues [v], P, X, ref p, ref x);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;bronKerboschAlgorithm(SIZE + 1, dicValues, p, r, x);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;P.Remove(v);&#xA;&#x9;&#x9;&#x9;&#x9;X.Add(v);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private void intersect(IList&lt;int> neighbors, HashSet&lt;int> P, HashSet&lt;int> X, ref HashSet&lt;int> p, ref HashSet&lt;int> x) {&#xA;&#x9;&#x9;&#x9;IEnumerator&lt;int> iterator = neighbors.GetEnumerator();&#xA;&#x9;&#x9;&#x9;while (iterator.MoveNext()) {&#xA;&#x9;&#x9;&#x9;&#x9;int n = iterator.Current;&#xA;&#x9;&#x9;&#x9;&#x9;if (P.Contains(n)){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;p.Add(n);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#x9;if (X.Contains(n)){&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;x.Add(n);&#xA;&#x9;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="ICliqueReduceImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl/bin/1.0.0.0/ICliqueReduceImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl/bin/1.0.0.0/BaseICliqueReduceImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueReduce/bin/1.0.0.0/ICliqueReduce.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="95" w="175" x="190" y="98">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ICliqueReduceImpl" multiple="false" private="false" replica="0" uRef="reduce_function" visibleInterface="true">
+      <super cRef="base" uRef="reduce_function"/>
+      <visualDescription h="40" w="141" x="207" y="246"/>
+    </unit>
+  </componentInfo>
+</component:component>

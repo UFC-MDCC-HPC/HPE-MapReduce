@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002bb5af344796c2cfcec0eeb9d2606f41d598d50535ed29d31234031d10103998e2dab984cb161155e0d0181eb5533afe8a3dea1ba4626f70e7211592c19cdae73aa6af7b9ab481764856c264e78eea293038746b45389be2d8941be11552f565fc5e535a030df3a0d5dc790e2410222d6502918a71625815fa3dfc144044cd84" isAbstract="false" kind="Application" name="PathFlowAppImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="002400000480000094000000060200000024000052534131000400001100000027a727647ff4fb4817941bb7ebcf671bce97e47629d3838c04ca7c9544210ca06a859d73b8f34814e61938c6b5ce02c9bb51ba31744ca9b294aa0d287016598ccf385aed9cdd4653e6dca3bec3a52bb5f98918ba241be1666ad2bde36ec65d11882a872eec980fae058b5368a61682297ece6fbafe3e79ff266754982e735182" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/PathFlowApp.hpe" name="PathFlowApp" package="br.ufc.mdcc.mapreduce.example.graph.sssp.fast" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="238" y="290">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="platform" varName="PLATFORM"/>
+        <unitBounds parallel="true" uRef="path_flow_map_process">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="true" uRef="path_flow_reduce_process">
+          <visualDescription h="20" w="20" x="28" y="2"/>
+        </unitBounds>
+        <unitBounds parallel="false" uRef="master_process">
+          <visualDescription h="20" w="20" x="51" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="00240000048000009400000006020000002400005253413100040000110000002daa6036a855c7bc3d7e31b468df7e1c4a5024f928159b0aed7b676b3bf093a624a39271a8382e7845e7430ebe579aa86c74e11387c63be02d5cbccfe09ef1f07fa9fbbeeec7b2085a1e35d4058556977655c6af5ce36e9cb062bd273b4d46970315f1680dc4d121054a9a8c598111a3544da87e71a232422b9661ffb0d318a8" localRef="platform" location="br.ufc.mdcc.common.Platform/Platform.hpe" multiple="false" name="Platform" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="278" y="423">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="true" uRef="platform">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="platform" direct="true" varName="PLATFORM"/>
+    <interface iRef="IPathFlowMapProcessImpl" nArgs="1">
+      <slice isRef="path_flow">
+        <originRef cRef="path_flow" iRef="IPathFlowMap"/>
+        <visualDescription h="10" w="10" x="109" y="33"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl { &#xA;&#xA;public abstract class BaseIPathFlowMapProcessImpl&lt;PLATFORM>: Application, BaseIPathFlowMapProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private IPathFlowMap&lt;PLATFORM> path_flow = null;&#xA;&#xA;protected IPathFlowMap&lt;PLATFORM> Path_flow {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.path_flow == null)&#xA;&#x9;&#x9;&#x9;this.path_flow = (IPathFlowMap&lt;PLATFORM>) Services.getPort(&quot;path_flow&quot;);&#xA;&#x9;&#x9;return this.path_flow;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPathFlowMapProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowMapProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/IPathFlowMap.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/bin/1.0.0.0/BaseIPathFlowMapProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl { &#xA;&#xA;&#x9;public class IPathFlowMapProcessImpl&lt;PLATFORM> : BaseIPathFlowMapProcessImpl&lt;PLATFORM>, IPathFlowMapProcess&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;//&#x9;TextWriterTraceListener writer = new TextWriterTraceListener(System.Console.Out);&#xA;&#x9;&#x9;//&#x9;Trace.Listeners.Add(writer);&#xA;&#x9;&#x9;&#x9;this.Path_flow.go();&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IPathFlowMapProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowMapProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowMapProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/bin/1.0.0.0/IPathFlowMapProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="66" w="147" x="5" y="124">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IPathFlowReduceProcessImpl" nArgs="1">
+      <slice isRef="path_flow">
+        <originRef cRef="path_flow" iRef="IPathFlowReduce"/>
+        <visualDescription h="10" w="10" x="19" y="52"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl { &#xA;&#xA;public abstract class BaseIPathFlowReduceProcessImpl&lt;PLATFORM>: Application, BaseIPathFlowReduceProcess&lt;PLATFORM>&#xA;where PLATFORM:IPlatform&#xA;{&#xA;&#xA;private IPathFlowReduce&lt;PLATFORM> path_flow = null;&#xA;&#xA;protected IPathFlowReduce&lt;PLATFORM> Path_flow {&#xA;&#x9;get {&#xA;&#x9;&#x9;if (this.path_flow == null)&#xA;&#x9;&#x9;&#x9;this.path_flow = (IPathFlowReduce&lt;PLATFORM>) Services.getPort(&quot;path_flow&quot;);&#xA;&#x9;&#x9;return this.path_flow;&#xA;&#x9;}&#xA;}&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPathFlowReduceProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowReduceProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/IPathFlowReduce.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/bin/1.0.0.0/BaseIPathFlowReduceProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl { &#xA;&#xA;&#x9;public class IPathFlowReduceProcessImpl&lt;PLATFORM> : BaseIPathFlowReduceProcessImpl&lt;PLATFORM>, IPathFlowReduceProcess&lt;PLATFORM>&#xA;&#x9;where PLATFORM:IPlatform&#xA;&#x9;{&#xA;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;//&#x9;TextWriterTraceListener writer = new TextWriterTraceListener(System.Console.Out);&#xA;&#x9;&#x9;//&#x9;Trace.Listeners.Add(writer);&#xA;&#x9;&#x9;&#x9;this.Path_flow.go();&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;&#xA;}&#xA;" fileType="library" name="IPathFlowReduceProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/IPathFlowReduceProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIPathFlowReduceProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/bin/1.0.0.0/IPathFlowReduceProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="68" w="142" x="379" y="144">
+        <color b="0" g="165" r="255"/>
+      </visualDescription>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <interface iRef="IMasterProcessImpl" nArgs="1">
+      <slice isRef="path_flow">
+        <originRef cRef="path_flow" iRef="IMaster"/>
+        <visualDescription h="10" w="10" x="32" y="22"/>
+      </slice>
+      <sources sourceType="C# Executable" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;//using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.DataPath;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl { &#xA;&#xA;&#x9;public abstract class BaseIMasterProcessImpl&lt;PLATFORM>: Application, BaseIMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#xA;&#x9;&#x9;private IString input_data = null;&#xA;&#x9;&#x9;protected IString Input_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_data = (IString) Services.getPort(&quot;input_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IString output_data = null;&#xA;&#x9;&#x9;protected IString Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IString) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IMaster&lt;PLATFORM> path_flow = null;&#xA;&#x9;&#x9;protected IMaster&lt;PLATFORM> Path_flow {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.path_flow == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.path_flow = (IMaster&lt;PLATFORM>) Services.getPort(&quot;path_flow&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.path_flow;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseIMasterProcessImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlow/bin/1.0.0.0/IMaster.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/bin/1.0.0.0/BaseIMasterProcess.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Platform;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using System.Threading;&#xA;using System.Collections.Generic;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl { &#xA;&#xA;&#x9;public class IMasterProcessImpl&lt;PLATFORM> : BaseIMasterProcessImpl&lt;PLATFORM>, IMasterProcess&lt;PLATFORM>&#xA;&#x9;&#x9;where PLATFORM:IPlatform{&#xA;&#x9;&#x9;public IMasterProcessImpl() { } &#xA;&#xA;&#x9;&#x9;private const string PATH = &quot;/home/cenez/path.txt&quot;;&#xA;&#x9;&#x9;public override void main() &#xA;&#x9;&#x9;{ &#xA;&#x9;&#x9;//&#x9;TextWriterTraceListener writer = new TextWriterTraceListener(System.Console.Out);&#xA;&#x9;&#x9;//&#x9;Trace.Listeners.Add(writer);&#xA;&#xA;&#x9;&#x9;&#x9;IStringInstance input = (IStringInstance)Input_data.Instance;&#xA;&#xA;&#x9;&#x9;&#x9;string setE = readInput (PATH);&#xA;&#xA;&#x9;&#x9;&#x9;input.Value =  setE;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: SSSP APP FAST - GO START !!!&quot;);&#xA;&#x9;&#x9;&#x9;var watch = Stopwatch.StartNew ();&#xA;&#x9;&#x9;&#x9;Path_flow.go ();&#xA;&#x9;&#x9;&#x9;watch.Stop ();&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot;: SSSP APP FAST - GO END JOIN !!! &quot; + watch.ElapsedMilliseconds + &quot;ms&quot;);&#xA;&#xA;&#x9;&#x9;&#x9;IStringInstance output = (IStringInstance) Output_data.Instance;&#xA;&#x9;&#x9;&#x9;Console.WriteLine (Rank + &quot; END SSSP (output = &quot; + output.Value + &quot;)&quot;);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;string readInput(string PATH)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return System.IO.File.ReadAllText(PATH);&#xA;&#x9;&#x9;}&#xA;}&#xA;}" fileType="library" name="IMasterProcessImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/IMasterProcessImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Platform/bin/1.0.0.0/IPlatform.dll</dependency>
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/bin/1.0.0.0/BaseIMasterProcessImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathFlowApp/bin/1.0.0.0/IMasterProcess.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="101" x="222" y="113">
+        <color b="230" g="216" r="173"/>
+      </visualDescription>
+      <port name="output_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="output_data" sRef="path_flow"/>
+      </port>
+      <port name="input_data">
+        <visualDescription h="10" w="10" x="0" y="0"/>
+        <slice pRef="input_data" sRef="path_flow"/>
+      </port>
+      <parameter iname="IPlatform" order="0" parid="platform" uname="platform" varid="PLATFORM"/>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="IPathFlowMapProcessImpl" multiple="true" private="false" replica="0" uRef="path_flow_map_process" visibleInterface="true">
+      <super cRef="base" uRef="path_flow_map_process"/>
+      <visualDescription h="66" w="147" x="6" y="276"/>
+    </unit>
+    <unit iRef="IPathFlowReduceProcessImpl" multiple="true" private="false" replica="0" uRef="path_flow_reduce_process" visibleInterface="true">
+      <super cRef="base" uRef="path_flow_reduce_process"/>
+      <visualDescription h="68" w="142" x="379" y="257"/>
+    </unit>
+    <unit iRef="IMasterProcessImpl" multiple="false" private="false" replica="0" uRef="master_process" visibleInterface="true">
+      <super cRef="base" uRef="master_process"/>
+      <visualDescription h="40" w="101" x="222" y="194"/>
+    </unit>
+  </componentInfo>
+</component:component>

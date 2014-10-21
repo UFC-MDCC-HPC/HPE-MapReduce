@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="00240000048000009400000006020000002400005253413100040000110000008be12a1b3ee2c3600489aef13c37d61511f99f807bc6ea1bc3ff774e799cf771935ebdb9c38a7ccbb9b7fe3c0e1991d17c35f6be1f1ed4241071ca50df2a0320931eba6f54f4395b533fb5bf088ac2671a02569abed96d12aace13e5d9897b572cd79cbbb18b87bf318388a0205d9dc61f7228115dbd4bb4253d4564f81d2aa7" isAbstract="false" kind="Data" name="PathInfoImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e7079bbf989461d79fa2299049902d0c50c3493d87faaae9a906140b5b29a7eaddb09fae37c7d320ac98f76ca4ffbab008219b71caccb86a9a74a66e375e6b28789a8aecadd867f7c8672c68be521cbb3754cdc3fe48adb34fa861f1c86475af2fc80f269488bac7e47fb330646f026ca55adcec7c7a758d10945c9a160f95c4" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo/PathInfo.hpe" name="PathInfo" package="br.ufc.mdcc.mapreduce.example.graph.sssp.fast" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="202" y="420">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <unitBounds parallel="false" uRef="path_info">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="IPathInfoImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* Automatically Generated Code */&#xA;&#xA;using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathInfoImpl { &#xA;&#xA;public abstract class BaseIPathInfoImpl: DataStructure, BaseIData&#xA;{&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;}&#xA;" fileType="library" name="BaseIPathInfoImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathInfoImpl/bin/1.0.0.0/BaseIPathInfoImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo/bin/1.0.0.0/BaseIData.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Data;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;using System.Diagnostics;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathInfoImpl { &#xA;&#xA;&#x9;public class IPathInfoImpl : BaseIPathInfoImpl, IPathInfo&#xA;&#x9;{&#xA;&#x9;&#x9;private IPathInfoImplInstance instance;&#xA;&#xA;&#x9;&#x9;override public void initialize()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;newInstance(); &#xA;&#x9;&#x9;&#x9;Trace.WriteLine (&quot;********* INITIALIZE PATH INFO IMPL : &quot; + (this.Instance == null) + &quot; --- &quot;+ this.CID);&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#region IData implementation&#xA;&#x9;&#x9;public object newInstance ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;this.instance = new IPathInfoImplInstance ();&#xA;&#x9;&#x9;&#x9;return this.instance;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public object Instance {&#xA;&#x9;&#x9;&#x9;get { return this.instance; }&#xA;&#x9;&#x9;&#x9;set { this.instance = (IPathInfoImplInstance) value; }&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;#endregion&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;[Serializable]&#xA;&#x9;public class IPathInfoImplInstance : IPathInfoInstance&#xA;&#x9;{&#xA;&#x9;&#x9;private Info info;&#xA;&#xA;&#x9;&#x9;public IPathInfoImplInstance()&#xA;&#x9;&#x9;{&#xA;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#region IPathInfoInstance implementation&#xA;&#xA;&#x9;&#x9;public Info Value {&#xA;&#x9;&#x9;&#x9;get { return info;&#x9;}&#xA;&#x9;&#x9;&#x9;set { this.info = value; }&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#endregion&#xA;&#xA;&#x9;&#x9;#region ICloneable implementation&#xA;&#xA;&#x9;&#x9;public object Clone ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;IPathInfoInstance clone = new IPathInfoImplInstance();&#xA;&#x9;&#x9;&#x9;clone.Value = this.Value;&#xA;&#x9;&#x9;&#x9;return clone;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#endregion&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/*[Serializable]&#xA;&#x9;public class IPathInxxxfoImplInstance : IPathInfoInstance&#xA;&#x9;{&#xA;&#x9;&#x9;#region IPathInfoInstance implementation&#xA;&#xA;&#xA;&#x9;&#x9;public override int GetHashCode ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return Value.GetHashCode();&#x9;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public override string ToString ()&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;return Value.ToString();&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;public override bool Equals (object obj)&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;if (obj is IPathInfoInstance)&#xA;&#x9;&#x9;&#x9;&#x9;return Value==(((IPathInfoInstance) obj).Value);&#xA;&#x9;&#x9;&#x9;else if (obj is int)&#xA;&#x9;&#x9;&#x9;&#x9;return Value==(int)obj;&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;return false;&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;#endregion&#xA;&#x9;}*/&#xA;}&#xA;" fileType="library" name="IPathInfoImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathInfoImpl/bin/1.0.0.0/IPathInfoImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathInfoImpl/bin/1.0.0.0/BaseIPathInfoImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo/bin/1.0.0.0/IData.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="147" x="67" y="84">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+    </interface>
+    <unit iRef="IPathInfoImpl" multiple="false" private="false" replica="0" uRef="path_info" visibleInterface="true">
+      <super cRef="base" uRef="path_info"/>
+      <visualDescription h="40" w="111" x="96" y="182"/>
+    </unit>
+  </componentInfo>
+</component:component>

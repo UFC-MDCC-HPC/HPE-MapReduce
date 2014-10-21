@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="002400000480000094000000060200000024000052534131000400001100000097ffa2804f7a0574a67c29ee3955641d5303a0891f6398847e6d1260d212239964998f641e707f21e62714b0f7d1b941a7815ffb86ecfd2f49f662473076e09b0a09fcdf78300655978209f690353b247d2f4f0e6e554843514dccbc9a99884122ac807f6a7ddfbb3f2138f9b89192c857b9d199c11126a6adc1989a7dbce88e" isAbstract="true" kind="Computation" name="SplitPathInfo" packagePath="br.ufc.mdcc.mapreduce.example.graph.sssp.fast">
+    <baseType>
+      <extensionType>
+        <extends>true</extends>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000007931dc9275a2f81d350920c3d07f09350893cc79f24924a02452fce0ea251e36e79b7de37606055b0e2e925c1391848635f7ed158b01dcf53e0ce6a742eb48facfe9c046e97fdacf1fa3601e77f7726984494fbc09011093d6e6fcd47affdcbf92c7fd66fbee6e86a832d71ea710e03ee31e8e7dcba49e884348159ee5ec89ac" localRef="base" location="br.ufc.mdcc.mapreduce.user.SplitFunction/SplitFunction.hpe" name="SplitFunction" package="br.ufc.mdcc.mapreduce.user" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="151" y="169">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <parameter formFieldId="value_type" varName="IMV"/>
+        <parameter formFieldId="input_type" varName="IMAP"/>
+        <parameter formFieldId="key_type" varName="IMK"/>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="100" x="136" y="428">
+            <color b="203" g="192" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="IMAP_T"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="60" w="169" x="325" y="402">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <parameter formFieldId="item_type" varName="X###1041007692"/>
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="split_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="input_type" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+      <visualDescription h="60" w="100" x="136" y="428">
+        <color b="203" g="192" r="255"/>
+      </visualDescription>
+      <parameter formFieldId="item_type" varName="IMAP_T"/>
+      <unitBounds parallel="false" uRef="iterator">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e7079bbf989461d79fa2299049902d0c50c3493d87faaae9a906140b5b29a7eaddb09fae37c7d320ac98f76ca4ffbab008219b71caccb86a9a74a66e375e6b28789a8aecadd867f7c8672c68be521cbb3754cdc3fe48adb34fa861f1c86475af2fc80f269488bac7e47fb330646f026ca55adcec7c7a758d10945c9a160f95c4" localRef="input_type_item" location="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo/PathInfo.hpe" multiple="false" name="PathInfo" package="br.ufc.mdcc.mapreduce.example.graph.sssp.fast" exposed="false">
+      <visualDescription h="60" w="100" x="263" y="91">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="path_info">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000e7079bbf989461d79fa2299049902d0c50c3493d87faaae9a906140b5b29a7eaddb09fae37c7d320ac98f76ca4ffbab008219b71caccb86a9a74a66e375e6b28789a8aecadd867f7c8672c68be521cbb3754cdc3fe48adb34fa861f1c86475af2fc80f269488bac7e47fb330646f026ca55adcec7c7a758d10945c9a160f95c4" localRef="value_type" location="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo/PathInfo.hpe" multiple="false" name="PathInfo" package="br.ufc.mdcc.mapreduce.example.graph.sssp.fast" exposed="false">
+      <visualDescription h="60" w="100" x="334" y="138">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="path_info">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <innerComponent hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="key_type" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="false">
+      <visualDescription h="60" w="100" x="326" y="201">
+        <color b="255" g="255" r="255"/>
+      </visualDescription>
+      <unitBounds parallel="false" uRef="data">
+        <visualDescription h="20" w="20" x="5" y="2"/>
+      </unitBounds>
+    </innerComponent>
+    <supplyParameter cRef="input_type_item" direct="true" varName="IMAP_T"/>
+    <supplyParameter cRef="input_type" direct="true" varName="IMAP"/>
+    <supplyParameter cRef="key_type" direct="true" varName="IMK"/>
+    <supplyParameter cRef="value_type" direct="true" varName="IMV"/>
+    <interface iRef="ISplitPathInfo" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="/* AUTOMATICALLY GENERATE CODE */&#xA;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.SplitPathInfo { &#xA;&#xA;public interface BaseISplitPathInfo : BaseISplitFunction&lt;IIterator&lt;IPathInfo>,IInteger,IPathInfo>, IComputationKind &#xA;{&#xA;&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="BaseISplitPathInfo.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.SplitPathInfo/bin/1.0.0.0/BaseISplitPathInfo.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/BaseISplitFunction.dll</dependency>
+        </file>
+        <file contents="&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.mapreduce.user.SplitFunction;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo;&#xA;using br.ufc.mdcc.common.Integer;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.SplitPathInfo { &#xA;&#xA;&#x9;public interface ISplitPathInfo : BaseISplitPathInfo, ISplitFunction&lt;IIterator&lt;IPathInfo>,IInteger,IPathInfo>&#xA;{&#xA;&#xA;&#xA;} // end main interface &#xA;&#xA;} // end namespace &#xA;" fileType="library" name="ISplitPathInfo.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.SplitPathInfo/bin/1.0.0.0/ISplitPathInfo.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.sssp.fast.SplitPathInfo/bin/1.0.0.0/BaseISplitPathInfo.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.user.SplitFunction/bin/1.0.0.0/ISplitFunction.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="151" x="252" y="132">
+        <color b="0" g="255" r="255"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ISplitPathInfo" multiple="false" private="false" replica="0" uRef="split_path_info" visibleInterface="true">
+      <super cRef="base" uRef="split_function"/>
+      <visualDescription h="40" w="151" x="296" y="237"/>
+    </unit>
+  </componentInfo>
+</component:component>

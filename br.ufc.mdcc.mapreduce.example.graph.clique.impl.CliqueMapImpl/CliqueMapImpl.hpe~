@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ASCII"?>
+<component:component xmlns:component="http://www.example.org/HashComponent">
+  <header hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000fdc2f66b907126ff6307b897db80edc6e3f6f1ee410a4f32bde2ee8a44766ac4d324c14fd14fb8a2f7486556e398f71cf6ef06c47e3b7677ca71ceabbc88675e2654a816bff92f8e3030de43531e17c9c819813b49c70814792de31b62c800bd6b2249c29f05cbe735bc70478fcee7b95ba2429e840d7140c331df0b35af7dbf" isAbstract="false" kind="Computation" name="CliqueMapImpl" packagePath="br.ufc.mdcc.mapreduce.example.graph.clique.impl">
+    <baseType>
+      <extensionType>
+        <implements>true</implements>
+      </extensionType>
+      <component hash_component_UID="00240000048000009400000006020000002400005253413100040000110000001b2ed000bff97b5938b171a54aa341ff7e05435ff2fdfe31d76797e3eb6f2c7f08819a08ae2e207d25a70d62fa724c6d87a2a079d5169b207d38eef555da70219bc4076b83d26af1d3ac724381b6b3bb456cb77470b0b79705f76d3e77429986a262b6378a11bea044f882712f752dcc3bfd31fc4e3de7a1509dd925c75e5ec0" localRef="base" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/CliqueMap.hpe" name="CliqueMap" package="br.ufc.mdcc.mapreduce.example.graph.clique" version="1.0.0.0">
+        <visualDescription h="60" w="100" x="299" y="322">
+          <color b="255" g="255" r="255"/>
+        </visualDescription>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000856221c6e60ff0c4ed3fb6226a0dc47e0d08669f122897225dc4c261dd9bb4e5e8186777ebd747933adb3ddaf3a101ed6b3c10b28685af9bcb3c307be4224d1e5eb317bb936f47a12b6d859bc89cddcf762cc79d16cc17b5d470bf6a55d2b5bf5859ada5b8af1a66163ebb01de4dbb395c11a7850b2e7a24726938565a56b589" localRef="input_key" location="br.ufc.mdcc.common.Integer/Integer.hpe" multiple="false" name="Integer" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="61" w="147" x="620" y="67">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="00240000048000009400000006020000002400005253413100040000110000003de45bf4c318dc3dd39282d2976e2277450bfe09d7c9c18096aa63e36d1902a1dbc5c3397f465bf2f80045565c08aa4b4c1540f05bbb891a258185ba3142533c1e22da7bb549a35684af27c0a8d30bd51be53a4948ab7cdc8e28eeea0c39377290602f9c2dddcb4611b10f7ab8ebd7579ca75a2c040cdd5f631a2dae22b9fd97" localRef="input_value" location="br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/CliqueNode.hpe" multiple="false" name="CliqueNode" package="br.ufc.mdcc.mapreduce.example.graph.clique" exposed="true">
+          <visualDescription h="60" w="100" x="128" y="116">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+          <unitBounds parallel="false" uRef="data_node">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <port hash_component_UID="0024000004800000940000000602000000240000525341310004000011000000a1d2d4f2ea9f962479f5322ab4d1b509fc8c95e67ad710c6bb2bc57522c8c96bb02c9f6dd000e20cf3098ef39cfffcb5af08f7fe86f5a1e1d0172e5578904f3160047cc21cbc9660df9c536444ce9e025fc3ca5bea6941da4aa0c6f38995d31933743052835857938e9f4726c55a065b54c9cd331a30361384b29cc34db7e285" localRef="output_data" location="br.ufc.mdcc.common.Iterator/Iterator.hpe" multiple="false" name="Iterator" package="br.ufc.mdcc.common" exposed="true">
+          <visualDescription h="69" w="188" x="455" y="351">
+            <color b="255" g="255" r="255"/>
+          </visualDescription>
+<<<<<<< HEAD
+          <parameter formFieldId="item_type" varName="X###1604402916"/>
+=======
+          <parameter formFieldId="item_type" varName="X###9274135"/>
+>>>>>>> c6d543cb0bf0f560355985c9ae6cf7ceab5b9fa8
+          <unitBounds parallel="false" uRef="iterator">
+            <visualDescription h="20" w="20" x="5" y="2"/>
+          </unitBounds>
+        </port>
+        <unitBounds parallel="false" uRef="map_function">
+          <visualDescription h="20" w="20" x="5" y="2"/>
+        </unitBounds>
+      </component>
+    </baseType>
+    <versions field1="1" field2="0" field3="0" field4="0"/>
+    <visualAttributes>
+      <color b="255" g="255" r="255"/>
+    </visualAttributes>
+  </header>
+  <componentInfo>
+    <interface iRef="ICliqueMapImpl" nArgs="0">
+      <sources sourceType="C# Language" versionId="1.0.0.0">
+        <file contents="using System;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl { &#xA;&#xA;&#x9;public abstract class BaseICliqueMapImpl: Computation, BaseICliqueMap{&#xA;&#xA;&#x9;&#x9;private IIterator&lt;IKVPair&lt;IString, ICliqueNode>> output_data = null;&#xA;&#x9;&#x9;public IIterator&lt;IKVPair&lt;IString, ICliqueNode>> Output_data {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.output_data == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.output_data = (IIterator&lt;IKVPair&lt;IString, ICliqueNode>>) Services.getPort(&quot;output_data&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.output_data;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private IInteger input_key = null;&#xA;&#x9;&#x9;public IInteger Input_key {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_key == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_key = (IInteger) Services.getPort(&quot;input_key&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_key;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;private ICliqueNode input_value = null;&#xA;&#x9;&#x9;public ICliqueNode Input_value {&#xA;&#x9;&#x9;&#x9;get {&#xA;&#x9;&#x9;&#x9;&#x9;if (this.input_value == null)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.input_value = (ICliqueNode) Services.getPort(&quot;input_value&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;return this.input_value;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="BaseICliqueMapImpl.cs" srcType="base" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl/bin/1.0.0.0/BaseICliqueMapImpl.dll" versionId="1.0.0.0">
+          <dependency>br.ufc.mdcc.common.Data/bin/1.0.0.0/IData.dll</dependency>
+          <dependency>br.ufc.mdcc.common.Iterator/bin/1.0.0.0/IIterator.dll</dependency>
+          <dependency>br.ufc.mdcc.common.KVPair/bin/1.0.0.0/IKVPair.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode/bin/1.0.0.0/ICliqueNode.dll</dependency>
+          <dependency>br.ufc.mdcc.common.String/bin/1.0.0.0/IString.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/bin/1.0.0.0/BaseICliqueMap.dll</dependency>
+        </file>
+        <file contents="using System;&#xA;using System.Collections.Generic;&#xA;using br.ufc.pargo.hpe.backend.DGAC;&#xA;using br.ufc.pargo.hpe.basic;&#xA;using br.ufc.pargo.hpe.kinds;&#xA;using br.ufc.mdcc.common.Iterator;&#xA;using br.ufc.mdcc.common.KVPair;&#xA;using br.ufc.mdcc.common.Integer;&#xA;using br.ufc.mdcc.common.String;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueNode;&#xA;using br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap;&#xA;&#xA;namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl { &#xA;&#xA;&#x9;public class ICliqueMapImpl: BaseICliqueMapImpl, ICliqueMap{&#xA;&#x9;&#x9;public ICliqueMapImpl() { &#xA;&#x9;&#x9;} &#xA;&#xA;&#x9;&#x9;public override void main() { &#xA;&#x9;&#x9;&#x9;IIteratorInstance&lt;IKVPair&lt;IString, ICliqueNode>> output = (IIteratorInstance&lt;IKVPair&lt;IString, ICliqueNode>>)Output_data.Instance;&#xA;&#x9;&#x9;&#x9;IIntegerInstance input_key = (IIntegerInstance)Input_key.Instance;&#xA;&#x9;&#x9;&#x9;ICliqueNodeInstance input_value = (ICliqueNodeInstance)Input_value.Instance;&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;//Debug Start&#xA;&#x9;&#x9;&#x9;string[] data_tempo = System.IO.File.ReadAllText(&quot;/home/cenez/data.txt&quot;).Split(' ');&#xA;&#x9;&#x9;&#x9;string saida = &quot;&quot;;&#xA;&#x9;&#x9;&#x9;IIntegerInstance I = input_key;&#xA;&#x9;&#x9;&#x9;ICliqueNodeInstance N = input_value;&#xA;&#x9;&#x9;&#x9;saida = &quot;TaskRank=&quot;+this.Rank+&quot; &lt;&quot; + I.Value + &quot;, [&quot;;&#xA;&#x9;&#x9;&#x9;IEnumerator&lt;int> neighbor = N.NeighborsInstance.GetEnumerator ();&#xA;&#x9;&#x9;&#x9;while (neighbor.MoveNext ()) {&#xA;&#x9;&#x9;&#x9;&#x9;saida = saida + neighbor.Current + &quot; &quot;;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;saida = saida + &quot;]>&quot;;&#xA;&#x9;&#x9;&#x9;using (System.IO.StreamWriter file = new System.IO.StreamWriter(@&quot;/home/cenez/logInputCliqueMap&quot;+data_tempo[0], true)){&#xA;&#x9;&#x9;&#x9;&#x9;file.WriteLine(saida);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;//Debug End&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;IEnumerator&lt;int> iterator = input_value.NeighborsInstance.GetEnumerator();&#xA;&#x9;&#x9;&#x9;while (iterator.MoveNext()) {&#xA;&#x9;&#x9;&#x9;&#x9;IKVPairInstance&lt;IString, ICliqueNode> KV = (IKVPairInstance&lt;IString, ICliqueNode>)Output_data.createItem ();&#xA;&#x9;&#x9;&#x9;&#x9;((IStringInstance)KV.Key).Value = iterator.Current.ToString ();&#xA;&#x9;&#x9;&#x9;&#x9;((ICliqueNodeInstance)KV.Value).IdInstance = input_value.IdInstance;&#xA;&#x9;&#x9;&#x9;&#x9;((ICliqueNodeInstance)KV.Value).NeighborsInstance = input_value.NeighborsInstance;&#xA;&#x9;&#x9;&#x9;&#x9;output.put (KV);&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;}&#xA;}&#xA;" fileType="library" name="ICliqueMapImpl.cs" srcType="user" uri="br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl/bin/1.0.0.0/ICliqueMapImpl.dll" versionId="1.0.0.0">
+          <dependency>%WORKSPACE/br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl/bin/1.0.0.0/BaseICliqueMapImpl.dll</dependency>
+          <dependency>br.ufc.mdcc.mapreduce.example.graph.clique.CliqueMap/bin/1.0.0.0/ICliqueMap.dll</dependency>
+        </file>
+      </sources>
+      <visualDescription h="40" w="141" x="130" y="88">
+        <color b="0" g="255" r="0"/>
+      </visualDescription>
+      <action id="main">
+        <protocol/>
+      </action>
+    </interface>
+    <unit iRef="ICliqueMapImpl" multiple="false" private="false" replica="0" uRef="map_function" visibleInterface="true">
+      <super cRef="base" uRef="map_function"/>
+      <visualDescription h="40" w="141" x="198" y="220"/>
+    </unit>
+  </componentInfo>
+</component:component>
