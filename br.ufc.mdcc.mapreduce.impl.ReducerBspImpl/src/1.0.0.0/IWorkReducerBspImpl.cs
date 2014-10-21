@@ -98,19 +98,11 @@ namespace br.ufc.mdcc.mapreduce.impl.ReducerBspImpl
 			
 			return candidates_buffer;
 		}
-<<<<<<< HEAD
 		
 		public static void clearWriteFile(string PATH, string saida){
 			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){
 				file.WriteLine(saida);
 			}
 		}
-=======
-//		public static void writeFile(string PATH, string saida){
-//			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){
-//				file.WriteLine(saida);
-//			}
-//		}
->>>>>>> f9b138758bf27f697181bf0b58c94783eced21af
     }
 }
