@@ -47,5 +47,15 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl {
 			set { this.neighborsInstance = value; }
 		}
 		#endregion
+
+		#region ICloneable implementation
+
+		public object Clone (){
+			ICliqueNodeInstance clone = new ICliqueNodeInstanceImpl();
+			clone.IdInstance = this.IdInstance;
+			clone.NeighborsInstance = new List<int>(this.NeighborsInstance);
+			return clone;
+		}
+		#endregion
 	}
 }

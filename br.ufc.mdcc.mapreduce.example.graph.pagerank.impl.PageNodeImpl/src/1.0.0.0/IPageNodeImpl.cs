@@ -53,6 +53,16 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 			set { this.neighborsInstance = value; }
 		}
 		#endregion
+		#region ICloneable implementation
+
+		public object Clone (){
+			IPageNodeInstance clone = new IPageNodeInstanceImpl();
+			clone.IdInstance = this.IdInstance;
+			clone.PgrankInstance = this.PgrankInstance;
+			clone.NeighborsInstance = new List<int>(this.NeighborsInstance);
+			return clone;
+		}
+		#endregion
 	}
 }
 
