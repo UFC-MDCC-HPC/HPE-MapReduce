@@ -89,23 +89,22 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 
 			double X = 0.0;
 			string[] lines = saida.Split(new char[] {System.Environment.NewLine[0]});
-			foreach (string line in lines) {
-				string[] prank = line.Split (' ');
-				if (prank[0].Equals ("X")) {
-					X = double.Parse(prank [1])/dic.Count;
-					break;
-				}
-			}
+			string[] pr = lines[0].Split (' ');
+			if (pr [0].Equals ("X"))
+				X = double.Parse (pr [1]) / dic.Count;
+			else
+				System.Console.WriteLine ("Error of index to X");
+			lines [0] = "";
 
 			foreach (string line in lines) {
 				if (!line.Trim ().Equals ("")) {
 					string[] prank = line.Split (' ');
-					if (!prank [0].Equals ("X")) {
+					//if (b && !prank [0].Equals ("X")) {
 						IKVPairInstance<IInteger,IPageNode> kvpair = dic [int.Parse (prank [0])];
 						IPageNodeInstance no = (IPageNodeInstance)kvpair.Value;
 						no.PgrankInstance = double.Parse (prank [1])+X;
 						output.put (kvpair);
-					}
+					//}
 				}
 			}
 			output.finish();
