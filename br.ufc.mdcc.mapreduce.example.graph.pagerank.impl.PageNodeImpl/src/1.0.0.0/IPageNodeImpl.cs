@@ -59,7 +59,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 			IPageNodeInstance clone = new IPageNodeInstanceImpl();
 			clone.IdInstance = this.IdInstance;
 			clone.PgrankInstance = this.PgrankInstance;
-			clone.NeighborsInstance = new List<int>(this.NeighborsInstance);
+			clone.NeighborsInstance = this.NeighborsInstance;
 			return clone;
 		}
 		#endregion

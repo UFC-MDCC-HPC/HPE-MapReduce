@@ -10,7 +10,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl {
 	public class IPGRankImpl : BaseIPGRankImpl, IPGRank{
 
 		override public void initialize(){
-			Trace.WriteLine ("################################################ Starting PGRankImpl initialize ###########################################");
+			//Trace.WriteLine ("################################################ Starting PGRankImpl initialize ###########################################");
 			newInstance(); 
 		}
 

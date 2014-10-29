@@ -12,11 +12,15 @@ using br.ufc.mdcc.mapreduce.example.graph.pagerank.BreakInPageNodes;
 
 namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl { 
 	public class IBreakInPageNodesImpl : BaseIBreakInPageNodesImpl, IBreakInPageNodes{
-	   
+		IDictionary<int, IKVPairInstance<IInteger,IPageNode>> dic = new Dictionary<int, IKVPairInstance<IInteger,IPageNode>>();
+
 		public IBreakInPageNodesImpl() { } 
 
 		public override void main() { 
-			createPageNodes(((IStringInstance) Input_data.Instance).Value);
+			if (dic.Count == 0)
+				createPageNodes (((IStringInstance)Input_data.Instance).Value);
+			else
+				emite ();
 		}
 		private void createPageNodes(string fileContent){
 			IIteratorInstance<IKVPair<IInteger, IPageNode>> output = (IIteratorInstance<IKVPair<IInteger, IPageNode>>) Output_data.Instance;
@@ -72,7 +76,37 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.BreakInPageNodesImpl
 			IEnumerator<IKVPairInstance<IInteger,IPageNode>> iterator = PAGENODES.GetEnumerator();
 			while (iterator.MoveNext()) {
 				IKVPairInstance<IInteger,IPageNode> kvpair = iterator.Current;
+				IIntegerInstance k = (IIntegerInstance) kvpair.Key;
 				output.put (kvpair);
+				dic [k.Value] = kvpair;
+			}
+			output.finish();
+
+		}
+		public void emite(){
+			string saida = ((IStringInstance)Input_data.Instance).Value;
+			IIteratorInstance<IKVPair<IInteger, IPageNode>> output = (IIteratorInstance<IKVPair<IInteger, IPageNode>>) Output_data.Instance;
+
+			double X = 0.0;
+			string[] lines = saida.Split(new char[] {System.Environment.NewLine[0]});
+			foreach (string line in lines) {
+				string[] prank = line.Split (' ');
+				if (prank[0].Equals ("X")) {
+					X = double.Parse(prank [1])/dic.Count;
+					break;
+				}
+			}
+
+			foreach (string line in lines) {
+				if (!line.Trim ().Equals ("")) {
+					string[] prank = line.Split (' ');
+					if (!prank [0].Equals ("X")) {
+						IKVPairInstance<IInteger,IPageNode> kvpair = dic [int.Parse (prank [0])];
+						IPageNodeInstance no = (IPageNodeInstance)kvpair.Value;
+						no.PgrankInstance = double.Parse (prank [1])+X;
+						output.put (kvpair);
+					}
+				}
 			}
 			output.finish();
 		}
