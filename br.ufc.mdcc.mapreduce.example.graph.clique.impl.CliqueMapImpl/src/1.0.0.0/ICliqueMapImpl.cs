@@ -23,19 +23,18 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueMapImpl {
 
 
 			//Debug Start
-			string[] data_tempo = System.IO.File.ReadAllText("/home/cenez/data.txt").Split(' ');
-			string saida = "";
-			IIntegerInstance I = input_key;
-			ICliqueNodeInstance N = input_value;
-			saida = "TaskRank="+this.Rank+" <" + I.Value + ", [";
-			IEnumerator<int> neighbor = N.NeighborsInstance.GetEnumerator ();
-			while (neighbor.MoveNext ()) {
-				saida = saida + neighbor.Current + " ";
-			}
-			saida = saida + "]>";
-			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/logInputCliqueMap"+data_tempo[0], true)){
-				file.WriteLine(saida);
-			}
+//			string saida = "";
+//			IIntegerInstance I = input_key;
+//			ICliqueNodeInstance N = input_value;
+//			saida = "TaskRank="+this.Rank+" <" + I.Value + ", [";
+//			IEnumerator<int> neighbor = N.NeighborsInstance.GetEnumerator ();
+//			while (neighbor.MoveNext ()) {
+//				saida = saida + neighbor.Current + " ";
+//			}
+//			saida = saida + "]>";
+//			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./logCliqueMap"+Rank, true)){
+//				file.WriteLine(saida);
+//			}
 			//Debug End
 
 

@@ -17,7 +17,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 	public class IMasterProcessImpl<PLATFORM> : BaseIMasterProcessImpl<PLATFORM>, IMasterProcess<PLATFORM>
 		where PLATFORM:IPlatform{
 
-		private const string PATH = "/home/cenez/clique.txt";
+		private const string PATH = "/home/hpe/clique.txt";
 
 		public IMasterProcessImpl() { 
 
@@ -29,44 +29,32 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueAppImpl {
 		}
 
 		public override void main() { 
-
-			//Debug
-			string data_tempo = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Local).ToLocalTime().ToString(@"M-d-yyyy_hh.mm.ss.tt");
-			string[] data_file_common = { data_tempo };
-			System.IO.File.WriteAllLines(@"/home/cenez/data.txt", data_file_common);
-			//Debug
-
 			IStringInstance input_data_instance = (IStringInstance) Input_data.Instance;
 			input_data_instance.Value = readInput();
 
-			Thread tGo = new Thread(new ThreadStart(Go));
-			tGo.Start();
+			long t0 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds; 
+			Clique.go ();
+			long t1 = (long)(DateTime.UtcNow - (new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds; 
 
 			IIteratorInstance<IKVPair<IString,ICliqueNode>> output_data_instance = (IIteratorInstance<IKVPair<IString,ICliqueNode>>) Output_data.Instance;
-
-			int maxclique = -1;
+			int sum = 0;
 			object o;
 			while (output_data_instance.fetch_next(out o)){
 				IKVPairInstance<IString,ICliqueNode> KMV = (IKVPairInstance<IString,ICliqueNode>) o;
 				IStringInstance pivo = (IStringInstance)KMV.Key;
 				ICliqueNodeInstance cliqueNode = (ICliqueNodeInstance)KMV.Value;
-				int size = cliqueNode.NeighborsInstance.Count;
-				System.Console.Write ("Pivo:" + pivo.Value + " size:"+ size +"[");
-				IEnumerator<int> iterator = cliqueNode.NeighborsInstance.GetEnumerator ();
-				while (iterator.MoveNext ()) {
-					System.Console.Write (iterator.Current+" ");
-				}
-				Trace.WriteLine ("]");
-				if (maxclique < size)
-					maxclique = size;
+				sum += cliqueNode.IdInstance;
 			}
-			
-			tGo.Join();
-
-			Trace.WriteLine ("Max clique include "+maxclique+" nodes.");
+			clearWriteFile ("./outCliqueApp", "Soma:" + sum+ "Tempo:" +(t1-t0));
 		}
 		string readInput(){
 			return System.IO.File.ReadAllText(PATH);
+		}
+		public static void clearWriteFile(string PATH, string saida)
+		{
+			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, false)){
+				file.WriteLine(saida);
+			}
 		}
 	}
 }

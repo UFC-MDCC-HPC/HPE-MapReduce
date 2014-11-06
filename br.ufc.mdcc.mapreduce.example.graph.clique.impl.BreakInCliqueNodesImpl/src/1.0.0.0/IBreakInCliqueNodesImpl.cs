@@ -66,6 +66,8 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.BreakInCliqueNodesImpl
 						W = referenceW [KEY [1]];
 						referenceV [KEY [1]] = W;
 						V.NeighborsInstance.Add (W.IdInstance);
+						referenceW [KEY [0]] = V;
+						W.NeighborsInstance.Add(V.IdInstance);
 					}
 				}
 			}
@@ -75,26 +77,6 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.BreakInCliqueNodesImpl
 				output.put (kvpair);
 			}
 			output.finish();
-
-			//Debug Start
-			string[] data_tempo = System.IO.File.ReadAllText("/home/cenez/data.txt").Split(' ');
-			iterator = PAGENODES.GetEnumerator();
-			while (iterator.MoveNext()) {
-				string saida = "";
-				IKVPairInstance<IInteger,ICliqueNode> kvpair = iterator.Current;
-				IIntegerInstance I = ((IIntegerInstance) kvpair.Key);
-				ICliqueNodeInstance N = ((ICliqueNodeInstance) kvpair.Value);
-				saida = "TaskRank="+this.Rank+" <" + I.Value + ", [";
-				IEnumerator<int> neighbor = N.NeighborsInstance.GetEnumerator ();
-				while (neighbor.MoveNext ()) {
-					saida = saida + neighbor.Current + " ";
-				}
-				saida = saida + "]>";
-				using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/logOutCliqueBreakInCliqueNodes"+data_tempo[0], true)){
-					file.WriteLine(saida);
-				}
-			}
-			//Debug End
 		}
 	}
 }

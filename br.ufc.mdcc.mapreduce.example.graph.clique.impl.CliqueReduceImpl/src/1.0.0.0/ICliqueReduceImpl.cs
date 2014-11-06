@@ -17,8 +17,10 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 
 		private IList<IList<int>> bigCliques = null;
 		private int bigger=0;
+		private int count = 0;
 
-		public override void main() { 
+		public override void main() {
+			count = 0;
 			IKVPairInstance<IString, IIterator<ICliqueNode>> input = (IKVPairInstance<IString, IIterator<ICliqueNode>>) Input_values.Instance;
 			IStringInstance pivot = (IStringInstance)input.Key;
 			IIteratorInstance<ICliqueNode> input_value = (IIteratorInstance<ICliqueNode>)input.Value;
@@ -36,16 +38,16 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 
 			bronKerboschAlgorithm(1, dicValues, upper, R, lower);
 
-			if (bigCliques.Count > 0) {
+			//if (count > 0) {
 				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>)Output_value.newInstance ();
 				((IStringInstance)kvpair.Key).Value = pivot.Value;
-				((ICliqueNodeInstance)kvpair.Value).IdInstance = bigCliques [0].Count;
-				((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = bigCliques [0];
-			} else {
-				IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>)Output_value.newInstance ();
-				((IStringInstance)kvpair.Key).Value = pivot.Value;
-				((ICliqueNodeInstance)kvpair.Value).IdInstance = 0;
-			}
+				((ICliqueNodeInstance)kvpair.Value).IdInstance = count; //bigCliques [0].Count;
+				//((ICliqueNodeInstance)kvpair.Value).NeighborsInstance = bigCliques [0];
+			//} else {
+			//	IKVPairInstance<IString,ICliqueNode> kvpair = (IKVPairInstance<IString,ICliqueNode>)Output_value.newInstance ();
+			//	((IStringInstance)kvpair.Key).Value = pivot.Value;
+			//	((ICliqueNodeInstance)kvpair.Value).IdInstance = 0;
+			//}
 		}
 
 		private IDictionary<int, IList<int>> splitting_In_Left_Pivot_Right(IIteratorInstance<ICliqueNode> input_instance_value, string pivot, HashSet<int> P, HashSet<int> X) {
@@ -54,8 +56,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 			object o;
 
 			//Debug Block start
-			string[] data_tempo = System.IO.File.ReadAllText("/home/cenez/data.txt").Split(' ');
-			string saida = "TaskRank="+this.Rank+" Chave="+pivot+" {"+System.Environment.NewLine;
+//			string saida = "TaskRank="+this.Rank+" Chave="+pivot+" {"+System.Environment.NewLine;
 			//Debug Block end
 
 			while(input_instance_value.fetch_next(out o)){
@@ -67,28 +68,29 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				res [node_instance.IdInstance] = node_instance.NeighborsInstance;
 
 				//Debug Block start
-					saida = saida+"<"+node_instance.IdInstance+", [";
-					IEnumerator<int> neighbor = node_instance.NeighborsInstance.GetEnumerator ();
-					while (neighbor.MoveNext ()) {
-						saida = saida + neighbor.Current + " ";
-					}
-					saida = saida + "]>"+System.Environment.NewLine;
+//					saida = saida+"<"+node_instance.IdInstance+", [";
+//					IEnumerator<int> neighbor = node_instance.NeighborsInstance.GetEnumerator ();
+//					while (neighbor.MoveNext ()) {
+//						saida = saida + neighbor.Current + " ";
+//					}
+//					saida = saida + "]>"+System.Environment.NewLine;
 				//Debug Block end
 			}
-			saida = saida + "}"+System.Environment.NewLine;
-			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"/home/cenez/logInputCliqueReduce"+data_tempo[0], true)){
-				file.WriteLine(saida);
-			}
+//			saida = saida + "}"+System.Environment.NewLine;
+//			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"./logCliqueReduce"+Rank, true)){
+//				file.WriteLine(saida);
+//			}
 			return res;
 		}
 
 		public void bronKerboschAlgorithm(int SIZE, IDictionary<int, IList<int>> dicValues, HashSet<int> P, IList<int> R, HashSet<int> X) {
 			if (P.Count == 0 && X.Count == 0) {
-				if (SIZE > bigger) { 
-					bigCliques.Clear ();
-					bigCliques.Add (R);
-					bigger = SIZE;
-				}
+				string saida = "";
+				foreach (int i in R)
+					saida = saida + i + " ";
+				writeFile ("./logCliques"+Rank, saida);
+				count++;
+				//bigCliques.Add (R);
 			}
 			while (P.Count>0){
 				IEnumerator<int> iteratorPValues = P.GetEnumerator();
@@ -120,6 +122,11 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueReduceImpl {
 				if (X.Contains(n)){
 					x.Add(n);
 				}
+			}
+		}
+		public static void writeFile(string PATH, string saida){
+			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@PATH, true)){
+				file.WriteLine(saida);
 			}
 		}
 	}
