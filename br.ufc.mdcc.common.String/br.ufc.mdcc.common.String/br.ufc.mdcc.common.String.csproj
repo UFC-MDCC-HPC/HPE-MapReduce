@@ -10,7 +10,7 @@
     <RootNamespace>br.ufc.mdcc.common.String</RootNamespace>
     <AssemblyName>br.ufc.mdcc.common.String</AssemblyName>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\..\br.ufc.mdcc.common.impl.StringImpl\StringImpl.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\br.ufc.mdcc.common.String\String.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
