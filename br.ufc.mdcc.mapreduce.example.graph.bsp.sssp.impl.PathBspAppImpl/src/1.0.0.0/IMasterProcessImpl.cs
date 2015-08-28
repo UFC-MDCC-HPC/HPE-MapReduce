@@ -32,6 +32,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.bsp.sssp.impl.PathBspAppImpl {
 
 			IStringInstance output = (IStringInstance) Output_data.Instance;//output.Value
 			//clearWriteFile ("./outPathBspApp-"+getDateTime(),""+(t1 - t0));
+			clearWriteFile ("./outPathBspApp", "TIME: " + (t1 - t0) + " ms."+System.Environment.NewLine+output.Value);
 		}
 		public static void clearWriteFile(string PATH, string saida)
 		{
