@@ -1,37 +1,6 @@
-﻿<Properties>
+﻿<Properties StartupItem="MapReduce-for-HPE/MapReduce-for-HPE.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/src/1.0.0.0/IMasterProcessImpl.cs">
-    <Files>
-      <File FileName="../br.ufc.mdcc.common.impl.IteratorImpl/src/1.0.0.0/IIteratorImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ISourceCombinerImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.impl.CombinerImpl/src/1.0.0.0/ITargetCombinerImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowReduceImpl/src/1.0.0.0/IPathFlowReduceImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl/src/1.0.0.0/IMasterImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.PathInfo/src/1.0.0.0/IPathInfo.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowCombineFunctionImpl/src/1.0.0.0/IPathFlowCombineFunctionImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.common.impl.KVPairImpl/src/1.0.0.0/IKVPairImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.common.impl.IntegerImpl/src/1.0.0.0/IIntegerImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.SplitPathInfoImpl/src/1.0.0.0/ISplitPathInfoImpl.cs" Line="1" Column="1" />
-      <File FileName="../br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl/src/1.0.0.0/IMasterProcessImpl.cs" Line="37" Column="11" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="br.ufc.mdcc.common.impl.IteratorImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowAppImpl" expanded="True">
-            <Node name="IMasterProcessImpl.cs" selected="True" />
-          </Node>
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathFlowImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.SplitPathInfoImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowCombineFunctionImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.example.graph.sssp.impl.PathFlowReduceImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.impl.CombinerImpl" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.user.impl.MapFunctionDefaultIdentity" expanded="True" />
-          <Node name="br.ufc.mdcc.mapreduce.user.MapFunction" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/home/heron/Dropbox/Artigos/IEEEE TPDS - HTS/first revision/workspace/MapReduce-for-HPE/MapReduce-for-HPE/Program.cs" line="24" column="16" />
