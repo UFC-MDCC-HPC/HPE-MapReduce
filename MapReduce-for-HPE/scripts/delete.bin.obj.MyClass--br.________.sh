@@ -32,4 +32,3 @@ do
         rm -rf $pacote/obj
 done;
 
-

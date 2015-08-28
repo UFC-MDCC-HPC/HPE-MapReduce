@@ -6,6 +6,8 @@
 
 #Delete
 ./MapReduce-for-HPE/scripts/delete.bin.obj.MyClass--br.________.sh
+rm -rf MapReduce-for-HPE/MapReduce-for-HPE/bin
+rm -rf MapReduce-for-HPE/MapReduce-for-HPE/obj
 
 #sn create/update
 #./MapReduce-for-HPE/scripts/create.sn--br._____.sh
