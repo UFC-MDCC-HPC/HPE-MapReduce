@@ -19,7 +19,7 @@ public class ITargetScatterSplitDataImpl<IMK, IMV> : BaseITargetScatterSplitData
 		private int TAG_SPLITTER_IMV = 246;
 		private int TAG_SPLITTER_IMK_FINISH = 247;
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			comm = this.Communicator;
 		}

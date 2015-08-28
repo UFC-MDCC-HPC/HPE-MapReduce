@@ -12,7 +12,7 @@ namespace br.ufc.mdcc.common.impl.StringImpl {
 
 		public IStringImpl() { 	} 
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			newInstance(); 
 		}

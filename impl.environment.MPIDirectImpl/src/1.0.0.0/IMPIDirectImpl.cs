@@ -17,7 +17,7 @@ public class IMPIDirectImpl : BaseIMPIDirectImpl, IMPIDirect
 
    } 
    
-   override public void initialize()
+		override public void after_initialize()
    {   
       // string[] args = System.Environment.GetCommandLineArgs();
    	  // mpi = new MPI.Environment(ref args);

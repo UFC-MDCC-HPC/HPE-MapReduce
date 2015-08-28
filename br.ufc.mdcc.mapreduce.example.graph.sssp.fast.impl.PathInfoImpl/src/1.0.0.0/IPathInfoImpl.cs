@@ -12,7 +12,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.sssp.fast.impl.PathInfoImpl {
 	{
 		private IPathInfoImplInstance instance;
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			newInstance(); 
 			Trace.WriteLine ("********* INITIALIZE PATH INFO IMPL : " + (this.Instance == null) + " --- "+ this.CID);

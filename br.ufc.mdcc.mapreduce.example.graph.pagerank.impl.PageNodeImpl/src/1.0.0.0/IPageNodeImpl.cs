@@ -9,7 +9,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl {
 
 	public class IPageNodeImpl : BaseIPageNodeImpl, IPageNode{
 		public IPageNodeImpl() { } 
-		override public void initialize(){
+		override public void after_initialize(){
 			newInstance(); 
 		}
 		public object newInstance (){

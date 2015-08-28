@@ -9,7 +9,7 @@ namespace br.ufc.mdcc.mapreduce.example.graph.clique.impl.CliqueNodeImpl {
 
 	public class ICliqueNodeImpl : BaseICliqueNodeImpl, ICliqueNode{
 		public ICliqueNodeImpl() { } 
-		override public void initialize(){
+		override public void after_initialize(){
 			newInstance(); 
 		}
 		public object newInstance (){

@@ -11,7 +11,7 @@ namespace br.ufc.mdcc.common.impl.DoubleImpl {
 
 		public IDoubleImpl() { } 
 
-		override public void initialize(){
+		override public void after_initialize(){
 			newInstance(); 
 		}
 

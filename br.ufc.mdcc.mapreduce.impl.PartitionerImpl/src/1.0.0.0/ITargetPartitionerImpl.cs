@@ -22,7 +22,7 @@ namespace br.ufc.mdcc.mapreduce.impl.PartitionerImpl
 
 		public ITargetPartitionerImpl() { } 
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			// Inicializar o comunicador MPI. 
 			comm = this.Communicator;

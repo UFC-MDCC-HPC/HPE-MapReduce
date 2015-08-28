@@ -12,7 +12,7 @@ namespace br.ufc.mdcc.common.impl.KVPairImpl {
 	where K:IData
 	where V:IData
 	{
-		override public void initialize()
+		override public void after_initialize()
 		{
 			newInstance(); 
 		}

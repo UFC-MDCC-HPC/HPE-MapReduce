@@ -26,7 +26,7 @@ namespace br.ufc.mdcc.mapreduce.splitter.impl.ScatterSplitDataImpl {
 		//MPI.RequestList requestList;
 		//List<MPI.Request> requests;
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			// Inicializar o comunicador MPI. 
 			comm = this.Communicator;

@@ -24,7 +24,7 @@ namespace br.ufc.mdcc.mapreduce.impl.FetchValuesImpl {
 
 		//public IReducerFetchValuesImpl() {	} 
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			// Inicializar o comunicador MPI. 
 			comm = this.Communicator;

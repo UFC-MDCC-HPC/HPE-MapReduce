@@ -24,7 +24,7 @@ namespace br.ufc.mdcc.mapreduce.impl.CombinerImpl {
 
 		public ITargetCombinerImpl() { }
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			// Inicializar o comunicador MPI. 
 			comm = this.Communicator;

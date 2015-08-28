@@ -17,7 +17,7 @@ namespace br.ufc.mdcc.common.impl.IteratorImpl
 	{
 		public IIteratorImpl() { } 
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			newInstance(); 
 		}

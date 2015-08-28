@@ -15,7 +15,7 @@ namespace br.ufc.mdcc.common.communication.impl.BroadcastImpl
 		private int root = 0;
 		private MPI.Intracommunicator comm = null;
 
-		override public void initialize()
+		override public void after_initialize()
 		{
 			// Inicializar o comunicador MPI. 
 			comm = this.Communicator;
