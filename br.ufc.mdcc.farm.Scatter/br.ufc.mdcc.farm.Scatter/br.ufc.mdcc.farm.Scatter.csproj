@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{2AE129B3-F4A5-4FD3-8993-E509EA33B483}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="DGAC">
-      <HintPath>..\..\MapReduce-for-HPE\DGAC.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\lib\DGAC.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{64D5EDB6-C44D-42D9-910C-7178560725C2}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -33,10 +33,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="DGAC">
-      <HintPath>..\..\..\..\..\..\..\..\..\usr\lib\mono\DGAC\DGAC.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\lib\DGAC.dll</HintPath>
     </Reference>
     <Reference Include="MPI">
-      <HintPath>..\..\MapReduce-for-HPE\MPI.dll</HintPath>
+      <HintPath>..\..\MapReduce-for-HPE\lib\MPI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
