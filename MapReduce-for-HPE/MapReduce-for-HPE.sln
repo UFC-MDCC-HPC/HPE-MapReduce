@@ -126,11 +126,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.examp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PageNodeImpl.csproj", "{21235990-D9C7-4E4A-9B0B-758CAB4B5210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank\br.ufc.mdcc.mapreduce.example.graph.pagerank.PGRank.csproj", "{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode\br.ufc.mdcc.mapreduce.example.graph.pagerank.PageNode.csproj", "{9F49F3E6-C291-4A72-AE7B-F497BF424A9A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl\br.ufc.mdcc.mapreduce.example.graph.pagerank.impl.PGRankImpl.csproj", "{3B597424-3ED3-4F7A-BF72-B19BA74AF732}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap", "..\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap\br.ufc.mdcc.mapreduce.example.graph.pagerank.VoteMap.csproj", "{8B65570E-CE32-4A41-959D-ADCB36356972}"
 EndProject
@@ -266,10 +262,6 @@ Global
 		{0A3C9F15-DFF2-43DD-96F2-89169FB5190C}.Debug|x86.Build.0 = Debug|Any CPU
 		{0A3C9F15-DFF2-43DD-96F2-89169FB5190C}.Release|x86.ActiveCfg = Release|Any CPU
 		{0A3C9F15-DFF2-43DD-96F2-89169FB5190C}.Release|x86.Build.0 = Release|Any CPU
-		{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}.Debug|x86.Build.0 = Debug|Any CPU
-		{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}.Release|x86.ActiveCfg = Release|Any CPU
-		{0B3AD75F-DEDD-49D7-94C2-54DFE5B19293}.Release|x86.Build.0 = Release|Any CPU
 		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Debug|x86.Build.0 = Debug|Any CPU
 		{0D693C58-97FA-4F3F-A3F7-C5CCB105ECEA}.Release|x86.ActiveCfg = Release|Any CPU
@@ -354,10 +346,6 @@ Global
 		{3996D3F9-0379-44F1-9021-82C278567837}.Debug|x86.Build.0 = Debug|Any CPU
 		{3996D3F9-0379-44F1-9021-82C278567837}.Release|x86.ActiveCfg = Release|Any CPU
 		{3996D3F9-0379-44F1-9021-82C278567837}.Release|x86.Build.0 = Release|Any CPU
-		{3B597424-3ED3-4F7A-BF72-B19BA74AF732}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3B597424-3ED3-4F7A-BF72-B19BA74AF732}.Debug|x86.Build.0 = Debug|Any CPU
-		{3B597424-3ED3-4F7A-BF72-B19BA74AF732}.Release|x86.ActiveCfg = Release|Any CPU
-		{3B597424-3ED3-4F7A-BF72-B19BA74AF732}.Release|x86.Build.0 = Release|Any CPU
 		{41298EA4-B55A-4984-AC89-3F6C2E8B3923}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{41298EA4-B55A-4984-AC89-3F6C2E8B3923}.Debug|x86.Build.0 = Debug|Any CPU
 		{41298EA4-B55A-4984-AC89-3F6C2E8B3923}.Release|x86.ActiveCfg = Release|Any CPU
@@ -728,8 +716,5 @@ Global
 		{FDA5244D-3A1D-4552-98E4-9D6A1FA08D98}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MapReduce-for-HPE\MapReduce-for-HPE.csproj
 	EndGlobalSection
 EndGlobal
